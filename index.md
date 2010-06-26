@@ -1,5 +1,6 @@
 ---
 title: Something by Stig
+layout: simple
 ---
 
 Here be something by Stig. Eventually. For now, try:
