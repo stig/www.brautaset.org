@@ -1,7 +1,12 @@
 ---
-title: Code by Stig
+title: Something by Stig
 ---
 
-Here be code by stig. Eventually.
+Here be something by Stig. Eventually. For now, try:
 
-* [[Desdemona]] is an implementation of the classic Reversi (aka Othello) game for OS X.
+* [My CV](http://dl.dropbox.com/u/6478115/stig_brautaset.pdf)
+* [My public LinkedIn profile](http://uk.linkedin.com/in/stigbrautaset)
+* [My lifestream](http://stig.brautaset.org)
+* [My Dev blog](http://devblog.brautaset.org)
+* [My Twitter](http://twitter.com/skugg)
+
