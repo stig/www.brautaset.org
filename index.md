@@ -9,4 +9,3 @@ Here be something by Stig. Eventually. For now, try:
 * [My lifestream](http://stig.brautaset.org)
 * [My Dev blog](http://devblog.brautaset.org)
 * [My Twitter](http://twitter.com/skugg)
-
