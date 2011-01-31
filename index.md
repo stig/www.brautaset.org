@@ -17,9 +17,10 @@ Some day there might be something here.
 
 * My [lifestream](http://stig.brautaset.org)
 * My [Dev blog](http://devblog.brautaset.org)
-* My [Twitter](http://twitter.com/skugg)
+* My [Twitter](http://twitter.com/stigbra)
 
-# Resume
+# Resume / CV
 
-* My [CV](http://dl.dropbox.com/u/6478115/stig_brautaset.pdf)
-* My [LinkedIn profile](http://uk.linkedin.com/in/stigbrautaset)
+* [LinkedIn profile](http://uk.linkedin.com/in/stigbrautaset)
+* [Ohloh profile](https://www.ohloh.net/accounts/stigbra)
+* [Masterbranch profile](http://www.masterbranch.com/developer/stig.brautaset)
