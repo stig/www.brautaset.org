@@ -27,8 +27,8 @@ body {
 }
 
 .container {
-  width: 700px;
-  margin: 0px auto 0px 150px;
+  width: 70%;
+  margin: 0px auto 0px auto;
 }
 
 .clear {
@@ -142,7 +142,7 @@ article li {
 }
 
 article p, article pre {
-  margin: 0.75em 0em;  
+  margin: 0.75em 0em;
 }
 
 pre, code {
@@ -195,7 +195,7 @@ blockquote {
 hr {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  
+
   border: 0px;
   color: #ddd;
   background-color: #ddd;
