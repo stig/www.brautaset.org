@@ -58,8 +58,9 @@ header .container {
 header h1 {
   color:  #555;
   font-weight: normal;
-  font-size: 6.5em;
+  font-size: 4.5em;
   font-family: "League Gothic", "Helvetica Neue", sans-serif;
+  text-align: center;
 }
 
 header:hover h1 {
@@ -84,22 +85,13 @@ a:hover {
 
 
 article {
-  padding: 0em 0em 1em;
+  padding: 0;
   margin-bottom: 0.7em;
 }
 
 article h1 {
-  padding-left: 15px;
-  margin-left: -15px;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
   font-weight: bold;
   font-size: 1.5em;
-  background-color: #f8f8f8;
-  border-top: #555 solid 5px;
-  border-bottom: #ddd solid 5px;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 
 article h1 #date {
@@ -120,29 +112,22 @@ article h1 a:hover {
 }
 
 article h2 {
-  margin-top: 1.5em;
-  font-weight: normal;
-  font-size: 1.25em;
-  background-color: #fcfcfc;
   border-bottom: #ddd solid 3px;
 }
 
-article p {
+article p, article ul, article pre {
   color: #333;
   line-height: 1.5em;
+  margin: 0.75em 0em;
 }
 
 article ul {
   color: #333;
   list-style-type: circle;
+  margin-left: 1.2em;
 }
 
 article li {
-  margin: 0em 1.2em;
-}
-
-article p, article pre {
-  margin: 0.75em 0em;
 }
 
 pre, code {
