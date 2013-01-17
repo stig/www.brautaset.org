@@ -80,6 +80,10 @@ article {
   margin-bottom: 0.7em;
 }
 
+article h1, h2, h3 {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
 article h1 {
   margin-top: 1em;
   font-size: 1.4em;
@@ -88,7 +92,6 @@ article h1 {
 
 article h2 {
   font-size: 1.2em;
-  font-weight: bold;
 }
 
 article #related {
@@ -133,8 +136,11 @@ article #pagination p {
     text-align: center;
 }
 
-article .meta p {
-    display: inline;
+article #meta p {
+    text-size: 80%;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
 }
 
 article #pagination ul {

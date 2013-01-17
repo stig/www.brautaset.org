@@ -3,8 +3,6 @@ layout: post
 title: Playing at the Edge of AI
 ---
 
-*The article below is old, and rife with broken links. Sorry about that. Maybe I'll get around to cleaning those up one day.*
-
 Reading <a href="http://www.amazon.co.uk/dp/1558607838">Blondie24</a>, where I got the title of this post from, got me exited about <a href="http://en.wikipedia.org/wiki/Neural_network">neural nets</a> and <a href="http://en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a> again. I always did found them fascinating, but I didn't really have any practical use for them myself&mdash;until now.
 
 

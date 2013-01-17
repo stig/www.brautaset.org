@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Internet on the South Pole
+published: false
 ---
 
 I've occasionally wondered how they manage to get Internet to research bases at the North or South pole. You migth think they'd use satellites, but to communicate with a satellite you need direct line of sight; communications satellites in <a href="http://en.wikipedia.org/wiki/Geostationary">geostationary orbits</a>, due to the curvaceous nature of our planet, are under the horizon and cannot be seen from the poles.
