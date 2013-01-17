@@ -209,16 +209,16 @@ hr {
   height: 1px;
 }
 
-@media print, screen and (max-width: 740px) {
+@media print, screen and (max-width: 900px) {
     .container {
         width: 90%;
         margin: 0px auto 0px auto;
     }
 }
 
-@media print, screen and (max-width:580px) {
+@media print, screen and (max-width:700px) {
     .container {
         width: 100%;
-        margin: 5px;
+        margin: 0 5px;
     }
 }
