@@ -214,7 +214,7 @@ hr {
         width: 90%;
     }
 }
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {  
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {  
     .container {
         width: 100%;
         margin: 0 5px;
