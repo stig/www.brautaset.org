@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 800px;
   margin: 0px auto 0px auto;
 }
 
@@ -212,7 +212,6 @@ hr {
 @media print, screen and (max-width: 900px) {
     .container {
         width: 90%;
-        margin: 0px auto 0px auto;
     }
 }
 
