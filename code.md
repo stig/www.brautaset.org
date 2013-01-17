@@ -1,12 +1,12 @@
 ---
-title: Code
+title: Code by Stig
 layout: default
 ---
 
-My [GitHub profile](http://github.com/stig) lists many software projects; some of which
-may be useful to you. (Though most probably are not.) You are welcome to make use of
-these, for free, as long as you adhere to their respective licenses. For the ones provided
-under a BSD, this means that you have to attribute me in your application.
+My [GitHub profile][github] lists many software projects, some of which may be useful to
+you. (Though most probably are not.) You are welcome to make use of these, for free, as
+long as you adhere to their respective licenses. For the ones provided under a BSD, this
+means that you have to attribute me in your application.
 
 # Using code without attribution
 
@@ -17,3 +17,4 @@ without attribution.
 
 [online store]: http://sites.fastspring.com/stig/product/sourcecode
 
+[github]: http://github.com/stig
