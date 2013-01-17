@@ -2,7 +2,6 @@
 title: Introducing Statistics for Objective-C
 layout: post
 tags: [Objective-C]
-published: false
 ---
 
 [Statistics]: https://github.com/stig/Statistics
@@ -18,7 +17,4 @@ harmonic, and geometric mean; and frequency distribution, optionally cumulative.
 addition you can return a new statistics object seeded with the same data **but with
 outliers discarded**. Perfect if you're interested in the trimmed mean.
 
-The code is released under the BSD license. If this sounds interesting you
-really should head over to the [Statistics][] site and check
-out the online API docs. Said API docs, by the way, even integrates into
-Xcode 3 (curtsy of Doxygen). What more could you want?
+The code is released under the BSD license.
