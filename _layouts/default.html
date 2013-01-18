@@ -2,12 +2,25 @@
 
 <html>
 <head>
-	<title>{{ page.title | strip_html }} // Stig Brautaset</title>
-	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{{ page.title | strip_html }}{% unless page.title == "Stig Brautaset" %} by Stig Brautaset{% endunless %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="author" content="Stig Brautaset" />
+	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1" />
 
 	<!-- Homepage CSS -->
-	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/default.css" type="text/css" media="screen, projection" />
+	<link rel="self" type="application/atom+xml" href="/atom.xml"/>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4113456-6']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 
 </head>
 <body>
@@ -16,7 +29,14 @@
 		<header>
 			<div class="container">
 				<hgroup>
-					<h1><a href="/">{{ page.title }}</a></h1>
+				    <ul>
+				        <li><a href="/">Home</a></li>
+    				    <li><a href="/articles.html">Articles</a></li>
+    				    <li><a href="/code.html">Code</a></li>
+    				    <li><a href="/contact.html">Contact</a></li>
+    				</ul>
+				    <hr/>
+					<h1>{{ page.title }}</h1>
 				</hgroup>
 			</div>
 		</header>
@@ -29,7 +49,7 @@
 
 		<footer>
 			<div class="container">
-				<p>Copyright &copy; Stig Brautaset</p>
+				<p>Copyright &copy; 2013 Stig Brautaset</p>
 			</div>
 		</footer>
 	</div>

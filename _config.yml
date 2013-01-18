@@ -1,2 +1,5 @@
 auto: true
 server: true
+permalink: /articles/:year/:title.html
+url: http://superloopy.io
+name: SuperLoopy Article Feed
