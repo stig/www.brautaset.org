@@ -1,9 +1,10 @@
-stig.github.com
-===============
+http://superloopy.io
+====================
 
-My personal site: superloopy.io
+This is my personal site.
 
 License
+-------
 
 The following directories and their contents are Copyright Stig Brautaset.
 You may not reuse anything therein without my permission:
