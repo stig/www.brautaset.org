@@ -1,33 +1,34 @@
 ---
 title: MiniMax and AlphaBeta Search
 layout: post
-published: false
 ---
 
+[zero sum]: http://en.wikipedia.org/wiki/Zero-sum
+[perfect information]: http://en.wikipedia.org/wiki/Perfect_information
+
 Though they are quite different from each other Chess, Checkers, Go, Othello, Connect-4
-and Tic-Tac-Toe also have similarities. They are all two-player <a
-href="http://en.wikipedia.org/wiki/Zero-sum">zero sum</a> <a
-href="http://en.wikipedia.org/wiki/Perfect_information">perfect information</a> games. The
-term <em>two-player</em> just means that there must be two opposing sides (football is
-considered two-player, for example). A <em>zero sum</em> game is one where an advantage
-for one player is an equally large disadvantage for the other. <em>Perfect
-information</em> basically rules out any game that has an element of chance. Yatzee? Right
-out the window. Poker? Forget about it. Jenga? Not even <em>close</em>.
+and Tic-Tac-Toe also have similarities. They are all two-player [zero sum][]
+[perfect information][] games. The
+term *two-player* just means that there must be two opposing sides (football is
+considered two-player, for example). A *zero sum* game is one where an advantage
+for one player is an equally large disadvantage for the other. *Perfect
+information* basically rules out any game that has an element of chance. Yatzee? Right
+out the window. Poker? Forget about it. Jenga? Not even *close*.
 
 For games that have these properties it is possible to set up a game tree to aid in the
 selection of the next move. For simplicity, consider the starting state of Tic-Tac-Toe to
 be the root of a tree. The root has nine branches, each leading to a successor state. Each
-of these has 8 branches leading to <em>its</em> successor states and so on. Some of the
+of these has 8 branches leading to *its* successor states and so on. Some of the
 paths through the tree will end before others (a winning state is reached before all the
-slots have been filled) but some paths continue until depth 9 (or <em>ply</em> 9 in
+slots have been filled) but some paths continue until depth 9 (or *ply* 9 in
 game-tree terminology), when all the slots have been filled.
 
 After having exhausted the search space of the game, it is easy to find the paths that
 will lead to victory for either player. Knowing the path that X can take to the fastest
 victory is generally of little use, however, because O can thwart X's plans of a swift
 victory any time it is her turn to move. Instead of traversing the path leading to the
-fastest possible victory, X's best aim is to pick a path where her <em>worst</em> outcome
-will be victory (the <em>best worst-case</em> path). The Minimax game-tree search
+fastest possible victory, X's best aim is to pick a path where her *worst* outcome
+will be victory (the *best worst-case* path). The Minimax game-tree search
 algorithm is designed to do just this, and alpha-beta pruning improves on it. This article
 tries to explain how both works.
 
@@ -70,7 +71,7 @@ algorithm is normally implemented.
         for (id m; m = [enumerator nextObjnextObject]; ) {
             id s2 = [state successorStateWithMove:m];
             int sc = -[self minimaxWithState:s2 player:3 - player];
-            if (sc &gt; score)
+            if (sc > score)
                 score = sc;
         }
         return score;
@@ -90,7 +91,7 @@ completeness.
         for (id m; m = [enumerator nextObject]; ) {
             id s2 = [state successorStateWithMove:m];
             int sc = -[self minimaxWithState:s2 player:3 - player];
-            if (sc &gt; score) {
+            if (sc > score) {
                 bestmove = m;
                 score = sc;
             }
@@ -122,7 +123,7 @@ certain depth. Notice that the initial value for score has changed.
         for (id m; m = [enumerator nextObject]; ) {
             id s2 = [state successorStateWithMove:m];
             int sc = -[self minimaxWithState:s2 player:3 - player];
-            if (sc &gt; score)
+            if (sc > score)
                 score = sc;
         }
         return score;
@@ -171,9 +172,9 @@ Here's an example:
                                            ply:ply-1
                                          alpha:-beta
                                           beta:-alpha];
-            if (sc &gt; alpha)
+            if (sc > alpha)
                 alpha = sc;
-            if (alpha &gt;= beta)
+            if (alpha >= beta)
                 break;  // prune branch.
         }
         return alpha;
