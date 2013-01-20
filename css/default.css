@@ -176,6 +176,10 @@ pre, code {
   padding: 0.2em;
 }
 
+article img {
+    margin: 0 0.5em;
+}
+
 .quiet {
   color: #bdbdbd;
 }
