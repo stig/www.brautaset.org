@@ -4,9 +4,7 @@ layout: post
 tags: [Objective-C]
 ---
 
-<img src="http://skuggdev.files.wordpress.com/2008/08/dictionary.png"
-alt="dictionary.png" border="0" width="133" height="131" align="right"
-/>
+<img src="/images/dictionary.jpg" alt="dictionary icon" width="266" height="262" align="right" />
 
 Objective-C, particularly after it became 2.0, is my favourite language.
 It's partly because of the language itself, but I guess mostly because of
