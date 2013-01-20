@@ -176,14 +176,17 @@ pre, code {
   padding: 0.2em;
 }
 
-article img {
-    margin: 0 0.5em;
+article .right img {
+    float: right;
+    clear: left;
+    margin-left: 0.5em;
 }
 
-.quiet {
-  color: #bdbdbd;
+article .left img {
+    float: left;
+    clear: right;
+    margin-right: 0.5em;
 }
-
 
 footer {
   border-top: #ddd solid 1px;

@@ -4,7 +4,9 @@ layout: post
 tags: [Objective-C]
 ---
 
-<img src="/images/dictionary.jpg" alt="dictionary icon" width="266" height="262" align="right" />
+<div class="right">
+<img src="/images/dictionary.jpg" alt="dictionary icon" width="266" height="262" />
+</div>
 
 Objective-C, particularly after it became 2.0, is my favourite language.
 It's partly because of the language itself, but I guess mostly because of
