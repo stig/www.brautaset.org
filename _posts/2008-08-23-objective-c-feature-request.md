@@ -47,9 +47,9 @@ Doesn't that make a lot more sense like this?
         nil];
 
 
-This has confused me so many times now that I have filed a feature request
-with Apple (rdar://problem/6171269) to have a new method with the arguments
-in the "right" order. (Wondering if that url is broken? See <a
-href="http://rentzsch.com/notes/rdarUrls">here</a>.) Here's to hoping that
-they honour it and put it in Snow Leopard...
+This has confused me so many times now that I have filed a feature request with Apple
+(<rdar://problem/6171269>) to have a new method with the arguments in the "right" order.
+(Wondering if that url is broken? Read about [rdar
+URLs](http://iphonedevelopment.blogspot.co.uk/2008/10/radar-urls-bug-reporting.html) only
+work for Apple.) Here's to hoping that they honour it and put it in Snow Leopard...
 

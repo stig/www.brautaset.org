@@ -34,14 +34,12 @@ syntax would be something like this:
         @"true", [NSNumber numberWithBool:YES],
     };
 
-(Note that for the dictionary I took the liberty of <a
-href="http://devblog.brautaset.org/2008/08/23/objective-c-feature-request/">
-fixing the argument order</a> so that it makes sense to me.)
+(Note that for the dictionary I took the liberty of [fixing the argument order](/articles/2008/objective-c-feature-request.html) so that it makes sense to me.)
 
 Creation of NSNumbers is another area that could benefit from the same
 trick. Although NSNumber instances can be initialised in lots of different
 ways, I think this new syntax sugar should concern itself with just three:
-<code>NSInteger</code>, <code>double</code> and <code>BOOL</code>. We would
+`NSInteger`, `double` and `BOOL`. We would
 then get this syntax:
 
     @234    // equivalent to [NSNumber numberWithInteger:234]
@@ -59,6 +57,9 @@ The initial dictionary creation example would then simply become:
         @"true", @YES,
     };
 
-I've filed a feature request with Apple, rdar://problem/6171253, I don't
+I've filed a feature request with Apple, <rdar://problem/6171253>, I don't
 expect, much, that this wish is heeded. A man can dream, though; a man can
 dream...
+
+**Update: in 2012, Apple *did* heed this request and implemented static initialisers for
+many different types. I only had to wait 4 years :-)**

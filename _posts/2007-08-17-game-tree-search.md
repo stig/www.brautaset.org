@@ -180,6 +180,11 @@ Here's an example:
         return alpha;
     }
 
-In a worst-ordered tree (where the paths are ordered so that no pruning occurs) the Alpha-Beta algorithm visits the same number of leaf nodes as Minimax. On average it performs a lot better. Given a perfectly ordered tree, where the branches are pruned as early as possible, the Alpha-Beta algorithm can search twice as deep as the Minimax algorithm in the same timespan.
+In a worst-ordered tree (where the paths are ordered so that no pruning occurs) the
+Alpha-Beta algorithm visits the same number of leaf nodes as Minimax. On average it
+performs a lot better. Given a perfectly ordered tree, where the branches are pruned as
+early as possible, the Alpha-Beta algorithm can search twice as deep as the Minimax
+algorithm in the same timespan.
 
-*This post has been adapted from a section of my 2003 BSc Artificial Intelligence report on Generalised Game-Tree Search at the University of Westminster.*
+*This post has been adapted from a section of my 2003 BSc Artificial Intelligence report
+on Generalised Game-Tree Search at the University of Westminster.*
