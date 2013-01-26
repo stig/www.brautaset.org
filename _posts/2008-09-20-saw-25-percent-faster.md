@@ -1,5 +1,5 @@
 ---
-default: post
+layout: post
 title: Saw 25% faster!
 ---
 Today I bought a new saw at the local hardware store. It's an [Irwin Universal 880 Triple
