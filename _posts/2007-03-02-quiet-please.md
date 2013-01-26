@@ -1,0 +1,26 @@
+---
+layout: post
+title: Quiet Please
+---
+
+In January I bought a guitar and a small practice amp. As I noted back then the amp has
+lots of effects which saves me buying an array of pedals. It has one problem though: it is
+very loud. And by that I don't mean that it [goes to
+11](http://en.wikipedia.org/wiki/Up_to_eleven), but that it goes from zero to hero already
+around 2: below is too quiet, above too high, and the optimal setting in the middle is too
+hard to find.
+
+There's simply not enough (useable) dynamic range. I could turn down the input volume from
+my guitar, but that changes the sound unfavourably (I get lower signal-to-noise ratio, and
+many of the effects rely on high input level to work satisfactorily).
+
+To solve the problem I measured the resistance through the speaker to 6.2 Ohms, hooked a
+57.4 Ohm resistor in series with it (for a total of 63.6 Ohms) and a 8.2 Ohm resistor in
+parallel with that. Substituting 63.6 and 8.2 for R1 and R2 in `1/R1 + 1/R2 = 1/R`, the
+formula for calculating the combined resistance in a parallel circuit, and solving for R
+gives a combined resistance of about 7.3&mdash;close enough for my purposes.
+
+The result? Most of the output from the amp now bypass the actual speaker, shunted off
+into a resistor where it is converted to heat rather than sound; the volume dial has a
+much greater effective range, making it much easier to adjust to a sensible level; and my
+neighbours are much happier.
