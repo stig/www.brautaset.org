@@ -14,5 +14,3 @@ pretty good nowadays.
   {% endfor %}
 </ul>
 
-*Some of the articles, especially the older ones, are rife with broken links. Sorry about
-that. Maybe I'll get around to cleaning those up one day.*
