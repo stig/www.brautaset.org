@@ -5,7 +5,7 @@ tags: [Objective-C]
 ---
 
 <div class="right">
-<img src="/images/dictionary.jpg" alt="dictionary icon" width="266" height="262" />
+<img src="/images/2008/08/dictionary.jpg" alt="dictionary icon" width="266" height="262" />
 </div>
 
 Objective-C, particularly after it became 2.0, is my favourite language.
