@@ -8,8 +8,7 @@ article, aside, details, footer, header, hgroup, nav, section {
   padding: 0px; }
 
 body {
-  font-family: Georgia, serif;
-  background-color: #fefefe; }
+  font-family: Georgia, serif; }
 
 .container {
   width: 800px;
@@ -165,7 +164,7 @@ footer a {
 
 footer a:hover {
   text-decoration: none;
-  color: #eee; }
+  color: #eeeeee; }
 
 blockquote {
   padding-left: 1.25em;

@@ -1,4 +1,4 @@
-$offwhite: #fefefe;
+$lightgray: #eee;
 
 article, aside, details, footer, header, hgroup, nav, section {
   display: block;
@@ -12,7 +12,6 @@ article, aside, details, footer, header, hgroup, nav, section {
 
 body {
   font-family: Georgia, serif;
-  background-color: $offwhite;
 }
 
 .container {
@@ -206,13 +205,13 @@ footer a {
 
 footer a:hover {
   text-decoration: none;
-  color: #eee;
+  color: $lightgray;
 }
 
 blockquote {
   padding-left: 1.25em;
   font-style: italic;
-  border-left: 0.75em solid #eee;
+  border-left: 0.75em solid $lightgray;
 }
 
 table {
