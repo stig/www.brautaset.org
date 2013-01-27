@@ -1,0 +1,242 @@
+$offwhite: #fefefe;
+
+article, aside, details, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: $offwhite;
+}
+
+.container {
+  width: 800px;
+  margin: 0px auto 0px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  color: inherit;
+}
+
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li + li {
+    padding-left: 0.7em;
+}
+
+header {
+  margin-top: 2.0em;
+}
+
+header hgroup {
+  clear: both;
+}
+
+header .container {
+  position: relative;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 3em;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: #f8f8ff;
+  color: #222;
+}
+
+
+article {
+  font-size: 1.2em;
+  padding: 0;
+  margin-bottom: 0.7em;
+}
+
+article h1, h2, h3 {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+article h1 {
+  margin-top: 1em;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+article h2 {
+  font-size: 1.2em;
+}
+
+article #related {
+    margin-top: 1.5em;
+}
+
+article h1 #date {
+  color: #ccc;
+  text-align: right;
+  padding-right: 20px;
+  text-transform: lowercase;
+}
+
+article h1 a:hover {
+  background: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+article h1 a:hover {
+  display: inline;
+}
+
+article p, article ul, article pre {
+  color: #333;
+  line-height: 1.5em;
+  margin: 0.75em 0em;
+}
+
+article ul {
+  color: #333;
+  list-style-type: circle;
+  margin-left: 1.2em;
+}
+
+article #pagination {
+    margin: 0;
+    padding: 0;
+}
+
+article #pagination p {
+    text-align: center;
+}
+
+article #meta p {
+    text-size: 80%;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+article #pagination ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+article #pagination ul li { display: inline; }
+
+article #pagination ul li a {
+    text-decoration: none;
+    padding: .2em 1em;
+}
+
+/* Dates in archive listings... */
+ul.posts span {
+    color: #aaa;
+    font-family: Menlo, Monaco, Courier, monospace;
+    font-size: 80%;
+  }
+
+pre {
+    border: 1px solid #ddd;
+}
+
+pre, code {
+  background-color: #eef;
+  font-family: Menlo, Monaco, Courier, monospace;
+  font-size: 0.9em;
+  padding: 0.2em;
+}
+
+article .right img {
+    float: right;
+    clear: left;
+    margin-left: 0.5em;
+}
+
+article .left img {
+    float: left;
+    clear: right;
+    margin-right: 0.5em;
+}
+
+footer {
+  border-top: #ddd solid 1px;
+  font-size: 0.8em;
+}
+
+footer p {
+  text-align: center;
+  margin: 0.6em 0em;
+}
+
+footer a {
+  color: #999;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #eee;
+}
+
+blockquote {
+  padding-left: 1.25em;
+  font-style: italic;
+  border-left: 0.75em solid #eee;
+}
+
+table {
+    margin: 0 auto 0 auto;
+}
+
+hr {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+
+  border: 0px;
+  color: #ddd;
+  background-color: #ddd;
+  height: 1px;
+}
+
+@media print, screen and (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {  
+    .container {
+        width: 100%;
+        margin: 0 5px;
+    }
+}
