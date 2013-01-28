@@ -24,21 +24,26 @@ a {
 
 nav {
     text-align: center;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline;
+            padding-right: 0.5em;
+        }
+
+        li + li {
+            padding-left: 0.5em;
+            border-left: 1px $lightgray solid;
+        }
+
+        li:last-child {
+            padding-right: 0;
+        }
+    }
 }
 
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    padding-right: 0.5em;
-}
-
-nav ul li + li {
-    padding-left: 0.5em;
-    border-left: 1px $lightgray solid;
-}
 
 header {
   margin-top: 2.0em;

@@ -18,17 +18,16 @@ a {
 
 nav {
   text-align: center; }
-
-nav ul {
-  list-style-type: none; }
-
-nav ul li {
-  display: inline;
-  padding-right: 0.5em; }
-
-nav ul li + li {
-  padding-left: 0.5em;
-  border-left: 1px #eeeeee solid; }
+  nav ul {
+    list-style-type: none; }
+    nav ul li {
+      display: inline;
+      padding-right: 0.5em; }
+    nav ul li + li {
+      padding-left: 0.5em;
+      border-left: 1px #eeeeee solid; }
+    nav ul li:last-child {
+      padding-right: 0; }
 
 header {
   margin-top: 2.0em; }
