@@ -137,36 +137,35 @@ article {
         margin: 0 auto 0 auto;
     }
 
-}
+    pre {
+        border: 1px solid #ccd;
+    }
 
-/* Dates in archive listings... */
-ul.posts span {
-    color: $aaa;
-    font-family: Menlo, Monaco, Courier, monospace;
-    font-size: 80%;
-}
+    pre, code {
+        background-color: #eef;
+        font-family: Menlo, Monaco, Courier, monospace;
+        font-size: 0.9em;
+        padding: 0.2em;
+    }
 
-pre {
-    border: 1px solid #ccd;
-}
+    .right img {
+        float: right;
+        clear: left;
+        margin-left: 0.5em;
+    }
 
-pre, code {
-    background-color: #eef;
-    font-family: Menlo, Monaco, Courier, monospace;
-    font-size: 0.9em;
-    padding: 0.2em;
-}
+    .left img {
+        float: left;
+        clear: right;
+        margin-right: 0.5em;
+    }
 
-article .right img {
-    float: right;
-    clear: left;
-    margin-left: 0.5em;
-}
+    ul.posts span {
+        color: $aaa;
+        font-family: Menlo, Monaco, Courier, monospace;
+        font-size: 80%;
+    }
 
-article .left img {
-    float: left;
-    clear: right;
-    margin-right: 0.5em;
 }
 
 footer {
