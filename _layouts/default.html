@@ -25,34 +25,26 @@
 </head>
 <body>
 
-	<div class="site">
-		<header>
-			<div class="container">
-				<hgroup>
-				    <ul>
-				        <li><a href="/">Home</a></li>
-    				    <li><a href="/articles.html">Articles</a></li>
-    				    <li><a href="/code.html">Code</a></li>
-    				    <li><a href="/contact.html">Contact</a></li>
-    				</ul>
-				    <hr/>
-					<h1>{{ page.title }}</h1>
-				</hgroup>
-			</div>
-		</header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/articles.html">Articles</a></li>
+            <li><a href="/code.html">Code</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <hr/>
+    <h1>{{ page.title }}</h1>
+</header>
 
-		<div id="container" class="container">
-		    <article>
-				{{ content }}
-			</article>
-		</div>
+<article>
+    {{ content }}
+</article>
 
-		<footer>
-			<div class="container">
-				<p>Copyright &copy; 2013 Stig Brautaset</p>
-			</div>
-		</footer>
-	</div>
+<footer>
+    <p>Copyright &copy; 2013 Stig Brautaset</p>
+</footer>
 
 </body>
 </html>
