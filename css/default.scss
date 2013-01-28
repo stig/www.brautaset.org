@@ -1,5 +1,7 @@
 $lightgray: #eee;
 $darkgray: #333;
+$lightblue: #f8f8ff;
+$aaa: #aaa;
 
 article, aside, details, footer, header, hgroup, nav, section {
   display: block;
@@ -23,8 +25,6 @@ a {
 }
 
 nav {
-    text-align: center;
-
     ul {
         list-style-type: none;
 
@@ -53,15 +53,15 @@ nav {
 header {
     margin-top: 2.0em;
 
-    hgroup {
-        clear: both;
-    }
-
     h1 {
         font-weight: normal;
         font-size: 3em;
         font-family: "Helvetica Neue", sans-serif;
-        text-align: center;
+    }
+
+    p {
+        text-size: 80%;
+        color: $aaa;
     }
 }
 
@@ -71,7 +71,7 @@ a {
 }
 
 a:hover {
-  background-color: #f8f8ff;
+  background-color: $lightblue;
   color: #222;
 }
 
@@ -131,11 +131,6 @@ article {
         text-align: center;
     }
 
-    #meta p {
-        text-size: 80%;
-        color: #aaa;
-    }
-
     table {
         margin: 0 auto 0 auto;
     }
@@ -144,7 +139,7 @@ article {
 
 /* Dates in archive listings... */
 ul.posts span {
-    color: #aaa;
+    color: $aaa;
     font-family: Menlo, Monaco, Courier, monospace;
     font-size: 80%;
 }
