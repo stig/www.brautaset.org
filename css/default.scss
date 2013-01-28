@@ -160,12 +160,16 @@ article {
         margin-right: 0.5em;
     }
 
-    ul.posts span {
-        color: $aaa;
-        font-family: Menlo, Monaco, Courier, monospace;
-        font-size: 80%;
-    }
+    ul.posts {
+        list-style: none;
+        margin: 0.5em;
 
+        span {
+            color: $aaa;
+            font-family: Menlo, Monaco, Courier, monospace;
+            font-size: 80%;
+        }
+    }
 }
 
 footer {

@@ -100,10 +100,13 @@ article {
     float: left;
     clear: right;
     margin-right: 0.5em; }
-  article ul.posts span {
-    color: #aaaaaa;
-    font-family: Menlo, Monaco, Courier, monospace;
-    font-size: 80%; }
+  article ul.posts {
+    list-style: none;
+    margin: 0.5em; }
+    article ul.posts span {
+      color: #aaaaaa;
+      font-family: Menlo, Monaco, Courier, monospace;
+      font-size: 80%; }
 
 footer {
   border-top: #dddddd solid 1px;
