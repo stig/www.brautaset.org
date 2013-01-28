@@ -70,8 +70,8 @@ article {
       display: inline; }
   article h2 {
     font-size: 1.2em; }
-  article #related {
-    margin-top: 1.5em; }
+  article h3 {
+    font-size: 1em; }
   article p, article pre, article ul {
     color: #333333;
     line-height: 1.5em; }
