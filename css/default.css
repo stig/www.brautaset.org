@@ -15,16 +15,20 @@ body {
 a {
   color: inherit; }
 
-header ul {
+nav {
   margin: 0;
-  padding: 0;
+  padding: 0; }
+
+nav ul {
   list-style-type: none; }
 
-header ul li {
-  display: inline; }
+nav ul li {
+  display: inline;
+  padding-right: 0.5em; }
 
-header ul li + li {
-  padding-left: 0.7em; }
+nav ul li + li {
+  padding-left: 0.5em;
+  border-left: 1px #eeeeee solid; }
 
 header {
   margin-top: 2.0em; }
@@ -32,15 +36,12 @@ header {
 header hgroup {
   clear: both; }
 
-header .container {
-  position: relative; }
-
 header h1 {
   font-weight: normal;
   font-size: 3em;
   font-family: "Helvetica Neue", sans-serif; }
 
-header a {
+nav a {
   color: inherit;
   text-decoration: none; }
 
@@ -95,11 +96,7 @@ article ul {
   list-style-type: circle;
   margin-left: 1.2em; }
 
-article #pagination {
-  margin: 0;
-  padding: 0; }
-
-article #pagination p {
+article nav {
   text-align: center; }
 
 article #meta p {
@@ -107,19 +104,6 @@ article #meta p {
   color: #aaa;
   margin: 0;
   padding: 0; }
-
-article #pagination ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center; }
-
-article #pagination ul li {
-  display: inline; }
-
-article #pagination ul li a {
-  text-decoration: none;
-  padding: 0.2em 1em; }
 
 /* Dates in archive listings... */
 ul.posts span {
