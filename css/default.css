@@ -10,14 +10,14 @@ article, aside, details, footer, header, hgroup, nav, section {
 body {
   font-family: Georgia, serif;
   width: 800px;
-  margin: 0px auto 0px auto; }
+  margin: 0px auto 0px auto;
+  padding: 0; }
 
 a {
   color: inherit; }
 
 nav {
-  margin: 0;
-  padding: 0; }
+  text-align: center; }
 
 nav ul {
   list-style-type: none; }
@@ -39,7 +39,8 @@ header hgroup {
 header h1 {
   font-weight: normal;
   font-size: 3em;
-  font-family: "Helvetica Neue", sans-serif; }
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center; }
 
 nav a {
   color: inherit;
@@ -86,24 +87,20 @@ article h1 a:hover {
 article h1 a:hover {
   display: inline; }
 
-article p, article ul, article pre {
-  color: #333;
-  line-height: 1.5em;
-  margin: 0.75em 0em; }
-
+article p, article pre, article ul {
+  color: #333333;
+  line-height: 1.5em; }
+article p, article pre {
+  margin: 0.75em 0; }
 article ul {
-  color: #333;
-  list-style-type: circle;
-  margin-left: 1.2em; }
+  margin: 0 1.2em; }
 
 article nav {
   text-align: center; }
 
 article #meta p {
   text-size: 80%;
-  color: #aaa;
-  margin: 0;
-  padding: 0; }
+  color: #aaa; }
 
 /* Dates in archive listings... */
 ul.posts span {
