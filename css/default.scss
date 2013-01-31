@@ -116,7 +116,7 @@ article {
         font-size: 1em;
     }
 
-    p, pre, ul {
+    p, pre, ul, ol {
         color: $darkgray;
         line-height: 1.5em;
     }
@@ -127,6 +127,10 @@ article {
 
     ul {
         margin: 0 1.2em;
+    }
+
+    ol {
+        margin: 0 2em;
     }
 
     nav {

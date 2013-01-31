@@ -1,0 +1,34 @@
+---
+layout: post
+title: Can I have some Water please?
+imported: 31/01/2013
+---
+
+Today we've been without water, more or less. I was roused from my bed at about midnight
+last night, just after falling asleep. I can't remember much of it though, I was so groggy
+I probably had to be told five times why I was being woken up.
+
+Nadia's sister had taken a shower and was at a loss at turning off the water afterwards.
+The shower's mixer battery had broken down and didn't allow the waterflow to stop.
+Obviously we could not have the shower running all night, so we sorely needed to find a
+way to turn the water off.
+
+We opted for trying to find the flat's main water valve, turn all the water off, and deal
+with the problem in the morning. Problems tend to look less daunting after a good night's
+sleep.
+
+We tried to find the main water valve in all the "usual" places. Under the sink in both
+the bathrooms, under the sink in the kitchen, and so forth. I've already mentioned we live
+in a stupid flat, so I feared that the main valve might just not be in the flat, but in
+one of the suspicious-looking cupboards out in the hallway. These are, of course, locked.
+And we don't have a key.
+
+By now I was preparing to go down to the underground parking lot. I've been down there
+just once before, just after we moved in, and I dimly recalled quite a few pipes. Our
+water supply might just be one of them. Luckily, before I got that far, it turned out that
+the valve was in our flat after all. High up on the wall in the airing cupboard. Who'd
+have thought?
+
+So, today we've been mostly without running water. Occasionally I've turned the water back
+on for a little while to enable us to flush the toilets again and for a shower. Luckily we
+can still adjust the temperature...
