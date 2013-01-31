@@ -2,6 +2,7 @@
 layout: post
 title: Rise of the Machine
 imported: 31/01/2013
+featured: true
 ---
 
 Last week <a href="http://www.google.com/search?q=Norman+Nunley">Norman Nunley</a> got me
