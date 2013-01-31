@@ -1,0 +1,52 @@
+---
+layout: post
+title: Money Transfer
+imported: 31/01/2013
+featured: false
+---
+
+Why, why, *why* do the banks in this country insist on staying put in the dark ages?
+
+I make regular payment from my Norwegian bank account (student loan installments and misc
+other tidbits). I have to occasionally top that account up to avoid them coming after me
+with crowbars and bicycle chains. Visiting an HSBC branch in Clerkenwell today I asked
+about arranging a money transfer to Norway at regular intervals. This wasn't possible,
+they said, because Norway was not on the list they had of countries you could set up
+standing orders to (and by the way, this would have costed me 9 pounds a time).
+
+What can I do instead then? Ah, each time I want to make a transfer I could call their
+phone banking service and give them all the details necessary to set up the transfer. All
+the necessary information. *Each time I wanted to do a transfer*. No thanks. Well,
+actually I could live with this if I could do it over Internet. Adding insult to injury
+however I *can't* arrange to do this over the Internet, nor at a branch but *only by
+phone*. The least secure option. Oh, and by the way this costs 21 pounds per transfer.
+
+That sucks, I say (in a slightly more polite wording). Why can't I at least record the
+information of the transfer with you *once* and just phone up, authenticate myself and say
+"Go" whenever I want a transfer to go ahead? "That wouldn't work", they say. And why not?
+"Because you wouldn't need to transfer the same amount of money each time."
+
+I'm sorry? You've seen me for the first time in your life 2 minutes ago, you don't know
+*anything* about me, not even my name! This is not how service works, you see. I'm the
+customer, so *I* tell you what I want to do and *you* tell me if it can be done or how I
+can best accomplish something similar.
+
+Up until now the best way around British banks' stupidity on this matter I've found is to
+withdraw a sizeable amount of money at an ATM when I happen to find myself in Norway, then
+walking directly into a branch and paying it into my account. This works. I find myself
+making fewer and fewer trips there, though, so this is not going to be a workable
+solution. It also relies on me having a healthy balance at the time I'm over there, which
+is a bad assumption to make about vacation time. Airline tickets tend to strain the
+budget.
+
+I guess I get so worked up about these things because I know it doesn't *have* to be this
+way: having money transferred here *from* my Norwegian account (with
+[Nordea](http://nordea.no) if anybody's interested) was a breeze. When my student loan
+arrived I just logged into my online banking account and set up the transfer to my UK
+account. Ok, so there was an additional fee. Oh, and I needed some extra codes to identify
+the foreign bank and country, but all that information was available on their site. The
+important bit is that *I didn't have to talk to any humans* and I could set it up in my
+own home at any hour I was comfortable with. This has been possible for at least 4 years,
+so it's nothing new; maybe in 6-7 years British banks will follow. They will of course
+claim that they are the [among the early
+adopters](/articles/2004/chip-and-pin.html).
