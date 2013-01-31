@@ -1,0 +1,43 @@
+---
+layout: post
+title: Test Driven Development
+imported: 31/01/2013
+featured: false
+---
+
+* *Author:* Kent Beck
+* *ISBN:*   0-321-14653-0
+
+The book is made up of three parts. The first 17 chapters, roughly half the book, is
+devoted to an extremely detailed example of implementing multi-currency arithmetic using
+TDD (Test-Driven Development). This part is enormously repetitive; you can probably get
+away with reading only every other page.
+
+The second part is an example of how to implement the xUnit test framework using TDD.
+Beck switches from Java, which he uses in the first part, to Python for this bootstrapping
+exercise. There are comments for Python newbies along the way, so this part doubles as a
+Python tutorial. While not as repetitive and detailed as the first part, this part is not
+much easier to follow. Maybe I missed something on the way, but I found this part a bit
+contrived.
+
+The last part of the book is devoted to patterns for test-driven development. Beck covers
+techniques for dealing with broken tests, refactorings and design patterns particularly
+suited for TDD and more. I was getting bored by now, so I must admit to skimming this part
+of the book.
+
+This book is not an easy read. The first part in particular is so repetitive and focuses
+so much on the details that it pretty much fails to paint the big picture. Luckily for us,
+Beck decided to add some appendices. The second of these, despite being just over two
+pages, the book on its own. It shows how one could arrive at an implementation of a
+Fibonacci routine using TDD. In contrast to the rest of the book, this example is short
+and straight to the point.  Halfway through part 1, when your brain starts seeping through
+your ears and ruins your favourite cardigan, turn to the Fibonacci example on page 211.
+It's a vital complement to the rest of the book, showing in broad strokes how TDD works.
+
+This might sound like a terribly negative review. However, I believe the ideas and
+principles introduced in this book are so important that they can easily rise above my
+bashing of their presentation.
+
+TDD is quite possibly the most influential concept I have come across. I wish I came
+across these ideas several years ago, as I believe it would have saved me an awful lot of
+grief. I strongly suggest you give this book a chance.

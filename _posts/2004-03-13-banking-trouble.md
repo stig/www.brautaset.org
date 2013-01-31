@@ -1,0 +1,71 @@
+---
+layout: post
+title: Banking Trouble
+imported: 31/01/2013
+---
+
+And here I was thinking the people I currently bank with are incompetent. Turns out that
+the [Co-operative bank](http://www.co-operativebank.co.uk/) aren't much better. Okay, so
+they have have a website that works in non-IE browsers, and you can call them 24/7 and
+talk to a person. However, because of their absolutely hopeless processing of my
+application for an account, I won't be banking with them.
+
+I started out in late January, going to their branch in Islington High street to apply for
+an account (I went into the branch so I could show them my proofs of address and identity
+in person -- I don't feel comfortable sending away original documents). The first problem
+I had was that the branch *wasn't there*. I called them up again, and they confirmed that
+the branch was at 1 Islington High street, which was obviously not true. I later found the
+branch a few hundred yards down the road.
+
+Anyway, I wasn't going to let details like that to stop me. I went in to apply for an
+account and was taken care of by a pleasant clerk. After keying in my application he took
+copies of my details which we both signed. Then he went to fax them over to the head
+office, and when he returned I headed off to a GLLUG meeting, quite pleased with how
+painless it had been.
+
+I didn't hear anything from the bank for weeks, so I called them up to get a status
+report. They said they were waiting for my proof of address and identity. I don't know how
+it happened, but somehow the head office never got my details. Or so they said, and blamed
+the branch for losing them.
+
+I'm not easily put off, so I decided to give them another chance. By now my application
+had timed out, so they had to duplicate it. This was easy enough; they could do that on
+the phone. Now I only had to go and flash my details again. For this I went to their
+branch in Watford. First impression was better than for the Islington one; at least it's
+located where they say it is.
+
+The lady I met there was very apologetic, was understanding when I said that this time I
+wanted to wait until I got the confirmation that the fax were sent before I left. She
+understood that I wanted this, she said, but then she said that their fax service wasn't
+operational on weekends. This struck me as incredibly weird, but who am I to argue. I got
+her personal number so I could call on if there was any trouble.
+
+This far so good; when I called their telephone service on the following Tuesday they had
+received the fax with my details. They were currently waiting to be processed by the team
+that did that kind of thing. Fine.
+
+Then, yesterday I got a letter saying this (errors and all):
+
+> We still need to see confirmation of your proof of identity. Please send us 1 original
+> documents issued within the last three months, from different companies, from the list
+> below.
+> >
+> a Bank, building society, credit union, credit card statements<br> b Payslip from
+> current employer
+>
+By now I was really annoyed. This wasn't lessened when I called them up to query them
+about it; turned out the application number they had quoted me on this last letter *was
+not my application number* but belonged to someone else. Ok, I thought, this was the drop;
+now I'm furious. Mixing up my details with someone else's is not to be taken lightly when
+done by a bank. I decided to not bank with them.
+
+However, being royally pissed off I still wanted to find out what on earth they thought
+was wrong with my details, as I had brought much more information than they asked for in
+the first place, including (but not limited to): Passport, payslips, bank statements,
+drivers license, utility bill &amp; letter from the tax office. They said that because my
+passport was Norwegian, they couldn't use it, and they therefore had only three pieces of
+id. They were adamant that they'd only received four pieces, so I can only assume that the
+female clerk got tired of feeding my copies through the fax and omitted ones she thought
+were not important.
+
+Phew. I really needed to blow off a bit of steam; this ordeal really got me worked up.
