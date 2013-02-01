@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Piping to -
+title: Piping to sh -
 imported: 31/01/2013
 tags: ['Shell Hacks']
 ---
 
 So, in my previous hack I showed how to [rename lots of
-files](/articles/2007/06/11/renaming-lots-of-files.html) with little effort. Let's remind
+files](/articles/2007/renaming-lots-of-files.html) with little effort. Let's remind
 ourselves how the one-liner looks:
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
