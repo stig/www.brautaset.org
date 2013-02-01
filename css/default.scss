@@ -14,8 +14,8 @@ article, aside, details, footer, header, hgroup, nav, section {
 }
 
 body {
+    width: 90%;
     font-family: Georgia, serif;
-    width: 800px;
     margin: 0px auto 0px auto;
     padding: 0;
 }
@@ -210,13 +210,13 @@ hr {
     height: 1px;
 }
 
-@media print, screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) {
     body {
-        width: 90%;
+        width: 800px;
     }
 }
 
-@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {  
+@media only screen and (max-width: 700px) {
     body {
         width: 100%;
         margin: 0 5px;
