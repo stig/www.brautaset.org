@@ -2,6 +2,7 @@
 layout: post
 title: Blade Trinity
 imported: 31/01/2013
+tags: [Reviews]
 ---
 
 Though Snipe's character was one-dimensional and dull as ever, [Blade

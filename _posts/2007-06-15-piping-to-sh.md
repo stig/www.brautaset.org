@@ -2,7 +2,7 @@
 layout: post
 title: Piping to sh -
 imported: 31/01/2013
-tags: [Shell]
+tags: [Hacks]
 ---
 
 So, in my previous hack I showed how to [rename lots of

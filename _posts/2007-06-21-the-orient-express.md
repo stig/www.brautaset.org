@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Orient Express
+tags: [Reviews]
 ---
 
 <div class="right">

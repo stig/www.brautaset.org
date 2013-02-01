@@ -2,6 +2,7 @@
 layout: post
 title: Banking Trouble
 imported: 31/01/2013
+tags: [Rants]
 ---
 
 And here I was thinking the people I currently bank with are incompetent. Turns out that

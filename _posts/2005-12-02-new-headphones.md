@@ -3,6 +3,7 @@ layout: post
 title: New Headphones
 imported: 31/01/2013
 featured: false
+tags: [Reviews]
 ---
 
 Earlier when I've griped about the iPod Shuffle, saying it needed a dynamic compressor,

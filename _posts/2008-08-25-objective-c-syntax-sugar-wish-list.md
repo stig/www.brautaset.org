@@ -1,7 +1,6 @@
 ---
 title: Objective-C syntax sugar wish list
 layout: post
-tags: [Objective-C]
 ---
 
 As I mentioned in my previous post Objective-C is my (current) favourite

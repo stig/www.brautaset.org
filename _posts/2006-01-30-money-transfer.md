@@ -3,6 +3,7 @@ layout: post
 title: Money Transfer
 imported: 31/01/2013
 featured: false
+tags: [Rants]
 ---
 
 Why, why, *why* do the banks in this country insist on staying put in the dark ages?

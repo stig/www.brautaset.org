@@ -1,6 +1,7 @@
 ---
 title: Avenue Que?
 layout: post
+tags: [Reviews]
 ---
 
 [Dean](http://blog.unixdaemon.net/) and I went to see Avenue Q last night, having heard

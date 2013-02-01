@@ -1,7 +1,6 @@
 ---
 title: Objective-C Feature Request
 layout: post
-tags: [Objective-C]
 ---
 
 <div class="right">

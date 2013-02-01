@@ -1,13 +1,14 @@
 ---
 layout: post
 title: CityLink is teh suck!
+tags: [Reviews]
 ---
 
-Never, ever, deal with <a href="http://www.city-link.co.uk/">ShittyLink</a> if you can
-avoid it. They were supposed to deliver my new TV on Saturday, but failed to do so.
-Yesterday I got a card from them in my mailbox, saying they attempted delivery and can I
-please call this 0870 number to arrange re-delivery (this was odd, since I'd asked the
-merchant to arrange redelivery for next Saturday, but that's another rant)?
+Never, ever, deal with [ShittyLink](http://www.city-link.co.uk/) if you can avoid it. They
+were supposed to deliver my new TV on Saturday, but failed to do so. Yesterday I got a
+card from them in my mailbox, saying they attempted delivery and can I please call this
+0870 number to arrange re-delivery (this was odd, since I'd asked the merchant to arrange
+redelivery for next Saturday, but that's another rant)?
 
 I call the number. It's, surprise surprise, an automatic phone service. They offer me
 three options&mdash;none of which involves any hope of speaking to a human&mdash;in a

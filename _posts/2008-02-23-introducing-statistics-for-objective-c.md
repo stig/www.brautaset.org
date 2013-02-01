@@ -1,8 +1,6 @@
 ---
 title: Introducing Statistics for Objective-C
 layout: post
-tags: [Objective-C]
-featured: true
 ---
 
 [Statistics]: https://github.com/stig/Statistics

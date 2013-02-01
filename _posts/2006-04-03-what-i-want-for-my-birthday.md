@@ -2,6 +2,7 @@
 layout: post
 title: What I want for my Birthday
 imported: 31/01/2013
+featured: true
 ---
 
 According to the [World Land Trust](http://worldlandtrust.org), citing [The
@@ -19,5 +20,3 @@ If you were thinking of buying me a present for my birthday (hint hint, it's the
 April) then I suggest you [save an acre of
 Rainforest](http://www.worldlandtrust.org/supporting/gift.htm). It's only £25, so buy
 someone else one too. And maybe one for yourself.
-
-Ok, rant over.

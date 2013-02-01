@@ -3,10 +3,11 @@ layout: post
 title: Rise of the Machine
 imported: 31/01/2013
 featured: true
+tags: [Hacks]
 ---
 
-Last week <a href="http://www.google.com/search?q=Norman+Nunley">Norman Nunley</a> got me
-interested in the <a href="http://icfpcontest.org/">ICFP challenge 2006</a>, despite it
+Last week [Norman Nunley](http://www.google.com/search?q=Norman+Nunley) got me
+interested in the [ICFP challenge 2006](http://icfpcontest.org/), despite it
 being over. It involved implementing a Universal Machine following a (hilarious) spec.
 This was needed to run a program that you were given; this program would then give you
 instructions on what to do from there.
@@ -19,9 +20,9 @@ of the spec and in some debugging.
 
 I was amazed when it turned out this "huge scary thing", which I'd imagined a VM to be,
 clocked in at less than 300 lines of C. It wasn't fast though. A self-test and
-benchmarking program for the UM was available from the <a
-href="http://icfpcontest.org/">ICFP</a> website. Norman's UM ran this benchmark in minutes
-but mine, distressingly, took over 10 hours.
+benchmarking program for the UM was available from the [ICFP](http://icfpcontest.org/)
+website. Norman's UM ran this benchmark in minutes but mine, distressingly, took over 10
+hours.
 
 Last Saturday, after eliminating a few variables and assignments in the hotpath and using
 macroes instead, I managed to get the time for the benchmark program down to just over two

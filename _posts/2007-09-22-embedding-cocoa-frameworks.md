@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Embedding Cocoa Frameworks
+tags: [Hacks]
 ---
 
 Cocoa has a really neat feature that allows you to embed a framework inside your
