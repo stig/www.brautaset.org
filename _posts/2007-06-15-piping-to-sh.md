@@ -2,7 +2,7 @@
 layout: post
 title: Piping to sh -
 imported: 31/01/2013
-tags: ['Shell Hacks']
+tags: [Shell]
 ---
 
 So, in my previous hack I showed how to [rename lots of
@@ -11,9 +11,9 @@ ourselves how the one-liner looks:
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
 
-Imagine that you <em>haven't</em> done that kind of transformation <em>a thousand
-times</em> and so feel a bit apprehensive about diving right in. The standard way to get
-around that is to pre-pend the command with echo:
+Imagine that you *haven't* done that kind of transformation *a thousand times* and so feel
+a bit apprehensive about diving right in. The standard way to get around that is to
+pre-pend the command with echo:
 
     for f in *.doc ; do echo mv $f ${f%.doc}.txt ; done
 

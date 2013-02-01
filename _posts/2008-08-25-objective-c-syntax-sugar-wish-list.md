@@ -34,12 +34,12 @@ syntax would be something like this:
         @"true", [NSNumber numberWithBool:YES],
     };
 
-(Note that for the dictionary I took the liberty of [fixing the argument order](/articles/2008/objective-c-feature-request.html) so that it makes sense to me.)
+(Note that for the dictionary I took the liberty of [fixing the argument
+order](/articles/2008/objective-c-feature-request.html) so that it makes sense to me.)
 
-Creation of NSNumbers is another area that could benefit from the same
-trick. Although NSNumber instances can be initialised in lots of different
-ways, I think this new syntax sugar should concern itself with just three:
-`NSInteger`, `double` and `BOOL`. We would
+Creation of NSNumbers is another area that could benefit from the same trick. Although
+NSNumber instances can be initialised in lots of different ways, I think this new syntax
+sugar should concern itself with just three: `NSInteger`, `double` and `BOOL`. We would
 then get this syntax:
 
     @234    // equivalent to [NSNumber numberWithInteger:234]

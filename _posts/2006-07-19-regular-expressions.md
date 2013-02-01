@@ -2,7 +2,8 @@
 layout: post
 title: Regular Expressions
 imported: 31/01/2013
-tags: ['Perl', 'Regular Expressions']
+tags: [Perl, Regular Expressions]
+
 ---
 
 Yesterday a friend mentioned that the word "bookkeeping" was (apparently) the only English

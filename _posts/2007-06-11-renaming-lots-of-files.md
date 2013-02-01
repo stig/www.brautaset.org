@@ -2,7 +2,7 @@
 layout: post
 title: Renaming lots of files
 imported: 31/01/2013
-tags: ['Shell Hacks']
+tags: [Shell]
 ---
 
 I was astounded to find out a couple of days ago that one of my colleagues was not aware
