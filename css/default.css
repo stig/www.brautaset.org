@@ -137,14 +137,11 @@ hr {
 @media print, screen and (max-width: 900px) {
   body {
     width: 90%; } }
-@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
    
   body {
     width: 100%;
     margin: 0 5px; }
-     
-    body ul.posts {
-      list-style-type: circle; }
      
     body ul.posts span {
       display: none; } }
