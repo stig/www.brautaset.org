@@ -221,6 +221,10 @@ hr {
         width: 100%;
         margin: 0 5px;
 
+        ul.posts {
+            list-style-type: circle;
+        }
+
         ul.posts span {
             display: none
         }

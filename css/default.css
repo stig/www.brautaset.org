@@ -143,5 +143,8 @@ hr {
     width: 100%;
     margin: 0 5px; }
      
+    body ul.posts {
+      list-style-type: circle; }
+     
     body ul.posts span {
       display: none; } }
