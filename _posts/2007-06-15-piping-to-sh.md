@@ -6,12 +6,12 @@ tags: [Hacks]
 ---
 
 So, in my previous hack I showed how to [rename lots of
-files](/articles/2007/renaming-lots-of-files.html) with little effort. Let's remind
+files]({{ post_url 2007-06-11-renaming-lots-of-files }}) with little effort. Let's remind
 ourselves how the one-liner looks:
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
 
-Imagine that you *haven't* done that kind of transformation *a thousand times* and so feel
+Imagine that you *haven't* done that kind of transformation a thousand times and so feel
 a bit apprehensive about diving right in. The standard way to get around that is to
 pre-pend the command with echo:
 
