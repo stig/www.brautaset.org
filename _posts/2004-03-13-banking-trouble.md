@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Banking Trouble
+title: Co-operative Banking Trouble
 imported: 31/01/2013
-tags: [Rants]
+tags: [Reviews]
 ---
 
 And here I was thinking the people I currently bank with are incompetent. Turns out that
@@ -50,10 +50,10 @@ Then, yesterday I got a letter saying this (errors and all):
 > We still need to see confirmation of your proof of identity. Please send us 1 original
 > documents issued within the last three months, from different companies, from the list
 > below.
-> >
-> a Bank, building society, credit union, credit card statements<br> b Payslip from
-> current employer
 >
+> a Bank, building society, credit union, credit card statements<br>
+> b Payslip from current employer
+
 By now I was really annoyed. This wasn't lessened when I called them up to query them
 about it; turned out the application number they had quoted me on this last letter *was
 not my application number* but belonged to someone else. Ok, I thought, this was the drop;
