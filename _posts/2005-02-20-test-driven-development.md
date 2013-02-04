@@ -3,10 +3,11 @@ layout: post
 title: Test Driven Development
 imported: 31/01/2013
 tags: [Reviews]
+featured: true
 ---
 
-* *Author:* Kent Beck
-* *ISBN:*   0-321-14653-0
+* Author: Kent Beck
+* ISBN: 0-321-14653-0
 
 The book is made up of three parts. The first 17 chapters, roughly half the book, is
 devoted to an extremely detailed example of implementing multi-currency arithmetic using

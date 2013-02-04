@@ -119,18 +119,15 @@ article {
     p, pre, ul, ol {
         color: $darkgray;
         line-height: 1.5em;
-    }
-
-    p, pre {
         margin: 0.75em 0;
     }
 
     ul {
-        margin: 0 1.2em;
+        margin-left: 1.2em;
     }
 
     ol {
-        margin: 0 2em;
+        margin-left: 2em;
     }
 
     nav {

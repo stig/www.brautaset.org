@@ -6,8 +6,8 @@ featured: true
 tags: [Reviews]
 ---
 
-* *Author:* Kent Beck
-* *ISBN:*   0-201-61641-6
+* Author: Kent Beck
+* ISBN:   0-201-61641-6
 
 > Software development projects can be fun, productive, and even daring. Yet they can
 > consistently deliver value to a business and remain under control.

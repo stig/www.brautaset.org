@@ -75,13 +75,12 @@ article {
     font-size: 1em; }
   article p, article pre, article ul, article ol {
     color: #333333;
-    line-height: 1.5em; }
-  article p, article pre {
+    line-height: 1.5em;
     margin: 0.75em 0; }
   article ul {
-    margin: 0 1.2em; }
+    margin-left: 1.2em; }
   article ol {
-    margin: 0 2em; }
+    margin-left: 2em; }
   article nav {
     text-align: center; }
   article table {
