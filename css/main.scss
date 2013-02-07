@@ -136,8 +136,7 @@ nav {
 }
 
 header {
-    margin-top: 2.0em;
-
+    margin-top: 1em;
     h1 {
         font-weight: normal;
         font-size: 3em;
@@ -148,6 +147,11 @@ header {
         text-size: 80%;
         color: $aaa;
     }
+
+    nav {
+        border-bottom: #ddd solid 1px;
+    }
+
 }
 
 article {
@@ -251,6 +255,7 @@ footer {
         text-decoration: none;
         color: $lightgray;
     }
+
 }
 
 

@@ -100,7 +100,7 @@ nav {
     text-decoration: none; }
 
 header {
-  margin-top: 2.0em; }
+  margin-top: 1em; }
   header h1 {
     font-weight: normal;
     font-size: 3em;
@@ -108,6 +108,8 @@ header {
   header p {
     text-size: 80%;
     color: #aaaaaa; }
+  header nav {
+    border-bottom: #dddddd solid 1px; }
 
 article {
   font-size: 1.2em;
