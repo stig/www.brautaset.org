@@ -104,10 +104,12 @@ header {
   header h1 {
     font-weight: normal;
     font-size: 3em;
-    font-family: "Helvetica Neue", sans-serif; }
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0; }
   header p {
     text-size: 80%;
-    color: #aaaaaa; }
+    color: #aaaaaa;
+    margin: 0; }
   header nav {
     border-bottom: #dddddd solid 1px; }
 
@@ -131,10 +133,6 @@ article {
       color: inherit;
       text-decoration: none;
       display: inline; }
-  article h2 {
-    font-size: 1.2em; }
-  article h3 {
-    font-size: 1em; }
   article p, article pre, article ul, article ol {
     color: #333333;
     line-height: 1.5em;

@@ -137,15 +137,18 @@ nav {
 
 header {
     margin-top: 1em;
+
     h1 {
         font-weight: normal;
         font-size: 3em;
         font-family: "Helvetica Neue", sans-serif;
+        margin: 0;
     }
 
     p {
         text-size: 80%;
         color: $aaa;
+        margin: 0;
     }
 
     nav {
@@ -182,14 +185,6 @@ article {
             display: inline;
         }
 
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    h3 {
-        font-size: 1em;
     }
 
     p, pre, ul, ol {
