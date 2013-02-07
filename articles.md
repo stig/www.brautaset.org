@@ -15,7 +15,10 @@ A few of my personal favourites.
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.featured %}
-      <li><span>{{ post.date | date_to_string }} </span>&raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <div class="meta">Posted: {{ post.date | date_to_string }}</div>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -31,7 +34,10 @@ A few of my personal favourites.
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.tags contains tag.first %}
-      <li><span>{{ post.date | date_to_string }} </span>&raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <div class="meta">Posted: {{ post.date | date_to_string }}</div>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -44,6 +50,9 @@ Full list of articles available on this site. (Includes featured and tagged arti
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }} </span>&raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <div class="meta">Posted: {{ post.date | date_to_string }}</div>
+      </li>
   {% endfor %}
 </ul>
