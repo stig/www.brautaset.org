@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stig Brautaset
+title: About me
 ---
 
 I make software for fun and profit. 2013 will mark my ten year anniversary for writing
