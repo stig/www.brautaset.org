@@ -18,10 +18,7 @@ Some posts may be listed more than once under different tags.
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.tags contains tag.first %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <div class="meta">Posted: {{ post.date | date_to_string }}</div>
-      </li>
+      {% include post_li.html %}
     {% endif %}
   {% endfor %}
 </ul>
