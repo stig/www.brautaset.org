@@ -29,7 +29,7 @@ A few of my personal favourites.
 
 {% for tag in site.tags %}
 
-**{{ tag.first }}:**
+<h3>{{ tag.first }}</h3>
 
 <ul class="posts">
   {% for post in site.posts %}

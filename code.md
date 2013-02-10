@@ -8,7 +8,7 @@ you. (Though most probably are not.) You are welcome to make use of these, for f
 long as you adhere to their respective licenses. For the ones provided under a BSD, this
 means that you have to attribute me in your application.
 
-# Using code without attribution
+## Using code without attribution
 
 I understand that putting an attribution in your application can sometimes be a problem.
 I've set up an [online store][] where you can buy a Non-Attribution License for selected
