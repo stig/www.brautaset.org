@@ -33,7 +33,7 @@ will be victory (the *best worst-case* path). The Minimax game-tree search
 algorithm is designed to do just this, and alpha-beta pruning improves on it. This article
 tries to explain how both works.
 
-# The Minimax algorithm
+## The Minimax algorithm
 
 Let us use Tic-Tac-Toe as an example when explaining how the Minimax algorithm works. The
 player whose turn it is to move at the root is called Max, and all even plies in the
@@ -100,7 +100,7 @@ completeness.
         return bestmove;
     }
 
-# Depth-limited Minimax
+## Depth-limited Minimax
 
 Only when the search space is sufficiently small, like in our Tic-Tac-Toe example, is it
 possible to exhaust it fully using the Minimax algorithm. For practical applications this
@@ -138,7 +138,7 @@ evaluation function must now return a value in a certain range (say, -1000 to 10
 indicating how good the state is. Performance of depth-limited Minimax algorithms greatly
 depends on how well the evaluation function identifies strong states.
 
-# Alpha-Beta pruning
+## Alpha-Beta pruning
 
 In the late 50s it was realised that it was not necessary to visit all the nodes in a
 game-tree to correctly deduce its Minimax value. Uninteresting branches of the tree can be
