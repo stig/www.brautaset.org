@@ -23,30 +23,9 @@ A few of my personal favourites.
   {% endfor %}
 </ul>
 
-## Articles by tag
-
-(Some posts may be listed more than once under different tags.)
-
-{% for tag in site.tags %}
-
-<h3>{{ tag.first }}</h3>
-
-<ul class="posts">
-  {% for post in site.posts %}
-    {% if post.tags contains tag.first %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <div class="meta">Posted: {{ post.date | date_to_string }}</div>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-{% endfor %}
-
 ## All Articles
 
-Full list of articles available on this site. (Includes featured and tagged articles.)
+Full list of articles available on this site.
 
 <ul class="posts">
   {% for post in site.posts %}

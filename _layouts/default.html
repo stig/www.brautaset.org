@@ -35,7 +35,12 @@
             </nav>
             <h1>{{ page.title }}</h1>
             {% if page.date %}
-            <p>Posted {{ page.date | date_to_string }}.</p>
+            <p>Posted {{ page.date | date_to_string }}.
+            {% if page.tags.size > 0 %}
+            Tagged
+            {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+            {% endif %}
+            </p>
             {% endif %}
         </header>
 
