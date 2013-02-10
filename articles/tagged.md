@@ -1,6 +1,6 @@
 ---
 title: Articles by Tag
-layout: default
+layout: page
 ---
 
 Some posts may be listed more than once under different tags.

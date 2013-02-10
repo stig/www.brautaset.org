@@ -48,7 +48,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 0.2em 0;
     padding: 0;
 }
 
@@ -152,11 +152,6 @@ header {
         color: $aaa;
         margin: 0;
     }
-
-    nav {
-        border-bottom: #ddd solid 1px;
-    }
-
 }
 
 article {
@@ -168,10 +163,6 @@ article {
         color: $darkgray;
         line-height: 1.5em;
         margin: 0.75em 0;
-    }
-
-    nav {
-        text-align: center;
     }
 
     table {
@@ -211,10 +202,14 @@ article {
 }
 
 footer {
-    border-top: #ddd solid 1px;
-    font-size: 0.8em;
+    clear: both;
+
+    nav {
+        text-align: center;
+    }
 
     p {
+        font-size: 0.8em;
         text-align: center;
         margin: 0.6em 0em;
     }

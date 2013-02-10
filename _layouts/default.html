@@ -24,33 +24,7 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/articles.html">Articles</a></li>
-                    <li><a href="/code.html">Code</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>{{ page.title }}</h1>
-            {% if page.date %}
-            <p>Posted {{ page.date | date_to_string }}.
-            {% if page.tags.size > 0 %}
-            Tagged
-            {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-            {% endif %}
-            </p>
-            {% endif %}
-        </header>
-
-        <article>
-            {{ content }}
-        </article>
-
-        <footer>
-            <p>Copyright &copy; Stig Brautaset</p>
-        </footer>
+        {{ content }}
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

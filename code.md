@@ -1,6 +1,6 @@
 ---
 title: Code by me
-layout: default
+layout: page
 ---
 
 My [GitHub profile][github] lists many software projects, some of which may be useful to

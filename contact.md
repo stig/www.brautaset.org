@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Contact me
+layout: page
 ---
 
 Unless you already have my phone number, I suggest trying one of:

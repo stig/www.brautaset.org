@@ -1,6 +1,6 @@
 ---
 title: Articles
-layout: default
+layout: page
 ---
 
 Some of these articles used to be available on&mdash;now discontinued&mdash;blogs I used
