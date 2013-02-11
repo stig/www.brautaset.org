@@ -62,6 +62,7 @@ noticeable difference from the description above is that the Minimax value is ne
 return from the recursive call instead of before the return; this is how the Minimax
 algorithm is normally implemented.
 
+{% highlight objc %}
     -(int)minimaxWithState:(id)state player:(int)player
     {
         if ([state isEndOfGame])
@@ -77,12 +78,14 @@ algorithm is normally implemented.
         }
         return score;
     }
+{% endhighlight %}
 
 The next listing shows the special Minimax function applied to the root of the tree (i.e.
 the position for which a move is sought). In discussions of the algorithm the notion of
 any special treatment of the root is often omitted; it is included here for the sake of
 completeness.
 
+{% highlight objc %}
     -(id)minimaxRootWithState:(id)state player:(int)player
     {
         id bestmove = nil;
@@ -99,6 +102,7 @@ completeness.
         }
         return bestmove;
     }
+{% endhighlight %}
 
 ## Depth-limited Minimax
 
@@ -114,6 +118,7 @@ a maximum limit on the depth of the search. The following method shows how the M
 algorithm presented earlier can be amended to unconditionally stop after reaching a
 certain depth. Notice that the initial value for score has changed.
 
+{% highlight objc %}
     -(int)minimaxWithState:(id)state player:(int)player ply:(int)ply
     {
         if (!ply || [state isEndOfGame])
@@ -129,6 +134,7 @@ certain depth. Notice that the initial value for score has changed.
         }
         return score;
     }
+{% endhighlight %}
 
 Since the search may be terminated before it has reached the leaf nodes, the end states of
 many paths are lost. Thus the evaluation function will have to be enhanced: it must now be
@@ -156,6 +162,7 @@ and their states switched as they are passed on to the next level. If the Minima
 returned from a path is greater than or equal to the high bound, the path is pruned.
 Here's an example:
 
+{% highlight objc %}
     -(int)alphaBetaWithState:(id)state
                       player:(int)player
                          ply:(int)ply
@@ -180,6 +187,8 @@ Here's an example:
         }
         return alpha;
     }
+{% endhighlight %}
+
 
 In a worst-ordered tree (where the paths are ordered so that no pruning occurs) the
 Alpha-Beta algorithm visits the same number of leaf nodes as Minimax. On average it
