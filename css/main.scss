@@ -336,15 +336,15 @@ footer {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
     body {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 55em) {
     /* Style adjustments for viewports that meet the condition */
     body {
-        width: 800px;
+        width: 50em;
         margin: 0 auto;
     }
 }
