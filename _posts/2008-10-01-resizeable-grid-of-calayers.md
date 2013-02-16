@@ -24,7 +24,7 @@ any cell.
 
 [caconstraintlayoutmanager]: http://developer.apple.com/documentation/GraphicsImaging/Reference/CAConstraintLayoutManager_class/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004498-CH1
 
-Then I discovered the scale-argument form of the <code>NSConstraint</code>. With this I
+Then I discovered the scale-argument form of the `NSConstraint`. With this I
 can specify the size of a cell and its position in the grid only in terms of the super
 layer. This is *much* simpler. Have a look at the example code below. Paste it into a
 custom view, and it should display a gray grid on a pleasant blue background:
@@ -40,8 +40,8 @@ custom view, and it should display a gray grid on a pleasant blue background:
     int rows = 8;
     int columns = 8;
 
-    for (int r = 0; r &lt; rows; r++) {
-        for (int c = 0; c &lt; columns; c++) {
+    for (int r = 0; r < rows; r++) {
+        for (int c = 0; c < columns; c++) {
             CALayer *cell = [CALayer layer];
             cell.borderColor = CGColorCreateGenericGray(0.8, 0.8);
             cell.borderWidth = 1;
@@ -108,14 +108,14 @@ adding the 0.5 to c & r in the scale:
                                 offset: -2]];
 
 [cell addConstraint:
- [CAConstraint constraintWithAttribute: <strong>kCAConstraintMidX</strong>
+ [CAConstraint constraintWithAttribute: kCAConstraintMidX
                             relativeTo: @"superlayer"
                              attribute: kCAConstraintMaxX
                                  scale: (c + 0.5) / (float)columns
                                 offset: 0]];
 
 [cell addConstraint:
- [CAConstraint constraintWithAttribute: <strong>kCAConstraintMidY</strong>
+ [CAConstraint constraintWithAttribute: kCAConstraintMidY
                             relativeTo: @"superlayer"
                              attribute: kCAConstraintMaxY
                                  scale: (r + 0.5) / (float)rows
