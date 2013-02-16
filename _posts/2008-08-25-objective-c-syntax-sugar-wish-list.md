@@ -34,7 +34,7 @@ syntax would be something like this:
     };
 
 (Note that for the dictionary I took the liberty of [fixing the argument
-order]({{ post_url 2008-08-23-objective-c-feature-request }}) so that it makes sense to me.)
+order]({% post_url 2008-08-23-objective-c-feature-request %}) so that it makes sense to me.)
 
 Creation of NSNumbers is another area that could benefit from the same trick. Although
 NSNumber instances can be initialised in lots of different ways, I think this new syntax

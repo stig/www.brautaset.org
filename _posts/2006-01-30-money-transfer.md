@@ -47,4 +47,4 @@ the foreign bank and country, but all that information was available on their si
 important bit is that *I didn't have to talk to any humans* and I could set it up in my
 own home at any hour I was comfortable with. This has been possible for at least 4 years,
 so it's nothing new; maybe in 6-7 years British banks will follow. They will of course
-claim that they are the [among the early adopters]({{ post_url 2004-08-28-chip-and-pin}}).
+claim that they are the [among the early adopters]({% post_url 2004-08-28-chip-and-pin %}).

@@ -6,7 +6,7 @@ tags: [Hacks]
 ---
 
 So, in my previous hack I showed how to [rename lots of
-files]({{ post_url 2007-06-11-renaming-lots-of-files }}) with little effort. Let's remind
+files]({% post_url 2007-06-11-renaming-lots-of-files %}) with little effort. Let's remind
 ourselves how the one-liner looks:
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
