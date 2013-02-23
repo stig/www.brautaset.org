@@ -1,0 +1,64 @@
+---
+layout: post
+title: Real custom rank keys
+tags: [Hacks]
+---
+
+Let me guess: you have, at some point in your career, implemented a database table with a
+"rank" field, for user-defined ordering of items in a collection. In my experience this
+rank is usually of type INT. Moving an item to the end is easy: just add (or subtract) 1
+from the rank of the item that was at the end.
+
+However, this approach is problematic if you want to allow reordering of *internal* items.
+The two ways I've seen people usually solve this is:
+
+1. Update all the elements' ranks each time you move an item.
+2. Space out the numbers so there's some room in between.
+
+The first is obviously not ideal if the collections can grow large. If you're dealing with
+user defined collections you have to assume they will. The second, AKA The BASIC approach,
+will allow you to move any item to anywhere else by setting its rank to be the average of
+its new neighbours---assuming there's a gap wide enough.
+
+So how big a gap do you chose? 1000? That gives you fewer re-orders than you first might
+think, as each re-order halves the gap: *log*(1000) gives you roughly 6.9 operations.
+Since it's a logarithmic function it means that we're seeing diminishing returns as we
+grow the gap: *log*(10000) is about 9.2, and even going to *log*(1e6) gives us just
+13.8---and unless we're dealing with BigInts we might start to get concerned about the
+ranks we can deal with at this point.
+
+But what if we use floating-point numbers for the rank instead? Something like this:
+
+1. First entry gets assigned 0.
+2. Items added at the front gets old max + 1.
+3. Items added at the end gets old min - 1.
+4. Items added elsewhere gets the average of its neighbours.
+
+The positive range of Float is roughly 3e38 and Double is 1e308. These both far exceed the
+number of items a (curated) collection is likely to hold. So if our main concern is adding
+to either end, either one would do and using a float takes less space. (This is probably
+more relevant for indices than for actual storage.)
+
+Where Float vs Double matter is how many re-order (averaging) operations they can handle
+before the difference between one number and the next is less than the smallest
+representable number. The worst-case, assuming an initial gap of 1, is:
+
+- Float: 150
+- Double: 1075
+
+There's probably a fancy mathematical way of determining this, but I brute-forced it using
+the following Scala program:
+
+{% highlight scala %}
+def g(n: Int, r:Double, lim: Double): Int
+    = if (r < lim) n else g(n+1, r / 2, lim)
+g(0, 1, Float.MinPositiveValue)
+g(0, 1, Double.MinPositiveValue)
+{% endhighlight %}
+
+Of course, there's a chance that number of re-orderings will exceed even this scheme.
+(Although, if they are user-initiated, it is quite unlikely.) In that case you may have to
+enumerate the whole collection again. Or maybe you can be smart and distribute ranks of
+neighbours as you go. This is left as an exercise to the reader.
+
+*Disclaimer: I have only theorised about this technique; I have not used it in anger yet.*
