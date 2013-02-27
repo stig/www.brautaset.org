@@ -112,6 +112,8 @@ header {
     text-size: 80%;
     color: #aaaaaa;
     margin: 0; }
+  header nav {
+    border-bottom: 1px solid #cccccc; }
 
 article {
   font-size: 1.2em;
@@ -148,8 +150,10 @@ footer {
     text-align: center; }
   footer p {
     font-size: 0.8em;
-    text-align: center;
-    margin: 0.6em 0em; }
+    text-align: center; }
+  footer .copyright {
+    border-top: 1px solid #cccccc;
+    margin: 0.2em 0; }
   footer a {
     color: #999; }
   footer a:hover {
