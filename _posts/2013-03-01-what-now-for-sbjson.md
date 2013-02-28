@@ -4,28 +4,24 @@ title: What now for SBJson?
 published: false
 ---
 
-The Story of SBJson - achievements & some things I have learnt.
-
-
-
-In the middle of 2007 I was given six months notice that I would be made redundant from
-Fotango as the company was to be shut down and projects transferred elsewhere. Around the
-same time CouchDB started to emerge, and caught my interest. Given I had some spare time
-on my hands, I set out to try and write some Objective-C CouchDB bindings.
+In the middle of 2007 I was given roughly six months notice that I would be made redundant
+from Fotango as the company was to be shut down. Around the same time CouchDB started to
+emerge and caught my interest. Given I had some spare time on my hands, I set out to try
+and write some Objective-C CouchDB bindings.
 
 Fairly soon I was hindered by the lack of a suitable Objective-C JSON library. I decided
-to write one. How much work could it *be*? I temporarily shelved the CouchDB bindings and
-started working on what would become SBJson. The first version was just a category on
-`NSScanner`, of all things. However, for the first public release (v0.1) it had changed to
+to write one. How much work could it really *be*? I temporarily shelved the CouchDB
+bindings and started working on what would become SBJson. The first version was just a
+category on `NSScanner`; however, for the first public release (v0.1) it had changed to
 the category methods on `NSArray`, `NSDictionary`, and `NSString` that people know and
 love today.
 
 Version 2 added an OO interface, the single SBJSON class. Version 2.2 extracted separate
-SBJsonParser & SBJsonWriter classes from that, and deprecated the (now) SBJSON facade. (It
-was a mess.) Each step of the way the existing APIs were re-defined in terms of the new,
-lower-level APIs to keep backwards compatibility. I did a booboo with the v2.3 release and
-removed the aforementioned SBJSON class in a minor release. (In retrospect I should simply
-have called this version 3.)
+SBJsonParser & SBJsonWriter classes from that, and deprecated it. (It was a mess.) Each
+step of the way the existing APIs were re-defined in terms of the new, lower-level APIs to
+keep backwards compatibility. I did a booboo with the v2.3 release and removed the
+aforementioned `SBJSON` class in a minor release. In retrospect I should simply have
+called this version 3.
 
 Starting in 2008 people were able to write their own apps for the iPhone. It turns out the
 iOS SDK was lacking was JSON support, and many *many* people started using SBJson. Over
@@ -40,16 +36,22 @@ the years:
 
 In June 2011 I released SBJson version 3. This release saw streaming support, an even
 lower level API than the regular OO one. This time the OO API was re-defined in terms of
-the streaming API, so yet again we kept compatibility. Actually I ended two streaming
-Apis, one low-level and one high-level. So now we had four levels of Apis.
+the streaming API, so yet again we kept compatibility. Actually I added two streaming
+APIs, one low-level and one high-level. So now we have *four* levels of APIs.
 
-Things, as they say, they are a-changing. iOS 5 was released (at the time of writing) 15
-months ago and has native JSON support. I would neither expect nor recommend anyone to use
-SBJson if `NSJSONSerialisation` covers their need, so there really is only two cases where
-I see SBJson still providing value:
+------
 
-a. You need streaming support.
-b. You're adding JSON support to an app that needs to support iOS version 4.x or below.
+*There is more than way to do it* is [...] but I have come to prefer the Pythonic way:
+there should be one _defined best_ way to do it. This simplifies documentation, and
+testing (if you don't support more than one way, at least.)
+
+March 2013. Things, as they say, they are a-changing. iOS 5 was released nearly a year and
+a half ago and added native JSON support in the iOS SDK. I would neither expect nor
+recommend anyone to use SBJson if `NSJSONSerialisation` covers their need, so there really
+is only two cases where I see SBJson providing value:
+
+1. You need streaming support.
+2. You're adding JSON support to an app that needs to support iOS version 4.x or below.
 
 If you're adding JSON support to an iOS 4.x (or lower) app at this point, I think having
 to call `[[SBJsonParser new] objectWithString:foo]` rather than `[foo JSONValue]` is
@@ -93,7 +95,8 @@ return nil, and have people check an error flag? Fine, but be prepared for suppo
 requests asking along the lines of “WHY IS THIS RETURNING NULL?!?!?” :-)
 
 
----
+----
 
-2013: I still maintain SBJson, aka json-framework. I never really got around to play with CouchDB, let alone finish those bindings...
+2013: I still maintain SBJson, aka json-framework. I never really got around to play with
+CouchDB, let alone finish those bindings...
 
