@@ -2,7 +2,7 @@
 layout: post
 title: Rise of the Machine
 imported: 31/01/2013
-tags: [Hacks, Featured]
+tags: [Development, Featured]
 ---
 
 Last week [Norman Nunley](http://www.google.com/search?q=Norman+Nunley) got me

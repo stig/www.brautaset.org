@@ -11,9 +11,9 @@ of shell parameter expansion. He'd been confronted with the following problem:
 > Given a directory full of files, write a shell one-liner to rename all the ones ending
 > in .doc such that they now end in .txt.
 
-I almost choked on my drink as I heard suggestions involving Perl. No need to complicate
-things. Here's how to solve the task using parameter expansion (both Bash and Zsh
-certainly have these):
+I almost choked on my drink as I heard suggestions involving Perl. There's no need to
+complicate things! Here's how to solve the task using parameter expansion (both Bash and
+Zsh certainly have these):
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
 
