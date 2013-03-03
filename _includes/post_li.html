@@ -1,8 +1,4 @@
-{% if post.featured %}
-<li class="featured">
-{% else %}
 <li>
-{% endif %}
     <a href="{{ post.url }}">{{ post.title }}</a>
     <div class="meta">Posted: {{ post.date | date_to_string }}</div>
 </li>

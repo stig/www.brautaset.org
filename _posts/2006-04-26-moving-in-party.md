@@ -2,7 +2,6 @@
 layout: post
 title: Moving-in Party
 imported: 31/01/2013
-featured: false
 ---
 
 [Stein](http://www.sem-jacobsen.no/) came over from Norway Sunday morning. We spent a few

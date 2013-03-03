@@ -13,10 +13,8 @@ pretty good nowadays.
 A few of my personal favourites.
 
 <ul class="posts">
-  {% for post in site.posts %}
-    {% if post.featured %}
-      {% include post_li.html %}
-    {% endif %}
+  {% for post in site.tags.Featured %}
+    {% include post_li.html %}
   {% endfor %}
 </ul>
 

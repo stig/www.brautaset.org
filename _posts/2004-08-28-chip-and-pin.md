@@ -2,7 +2,6 @@
 layout: post
 title: Chip And Pin
 imported: 31/01/2013
-featured: false
 ---
 
 I'm getting sick of the British banks' self-gratification. They're saying that Britain is

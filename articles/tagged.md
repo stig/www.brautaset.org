@@ -3,7 +3,7 @@ title: Articles by Tag
 layout: page
 ---
 
-Some posts may be listed more than once under different tags.
+Some posts may be listed under more than on tag. The unique tags are:
 
 <ul>
 {% for tag in site.tags %}

@@ -2,7 +2,6 @@
 layout: post
 title: Extreme Programming Explained
 imported: 31/01/2013
-featured: true
 tags: [Reviews]
 ---
 

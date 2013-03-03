@@ -2,7 +2,6 @@
 layout: post
 title: Connected!
 imported: 31/01/2013
-featured: false
 ---
 
 We finally have a network connection at the new place. Though we don't have ADSL yet

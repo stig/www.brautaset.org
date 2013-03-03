@@ -3,7 +3,6 @@ layout: post
 title: Test Driven Development
 imported: 31/01/2013
 tags: [Reviews]
-featured: true
 ---
 
 * Author: Kent Beck
