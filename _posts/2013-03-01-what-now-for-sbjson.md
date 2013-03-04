@@ -39,12 +39,11 @@ lower level API than the regular OO one. This time the OO API was re-defined in 
 the streaming API, so yet again we kept compatibility. Actually I added two streaming
 APIs, one low-level and one high-level. So now we have *four* levels of APIs.
 
-------
-
 March 2013. Things, as they say, they are a-changing. iOS 5 was released nearly a year and
-a half ago and added native JSON support in the iOS SDK. I would neither expect nor
-recommend anyone to use SBJson if NSJSONSerialisation covers their need, so there really
-is only two cases where I see SBJson providing value:
+a half ago and added native JSON support in the iOS SDK, in the form of the
+NSJSONSerialisation class. I would neither expect nor recommend anyone to use SBJson if
+NSJSONSerialisation covers their need, so there really is only two cases where I see
+SBJson providing value:
 
 1. You need streaming support.
 2. You're adding JSON support to an app that needs to support iOS version 4.x or below.
@@ -61,17 +60,17 @@ SBJson's streaming API doesn't use NSStream, but you can feed it parts of a larg
 will receive various parts of the document as soon as they are parsed. *You never **have**
 to hold the entire structure in memory.* It also means that if you're downloading a long
 array over a slow link, you can *start showing results before the entire array has
-finished downloading*.
-
-I chose the NSData chunks interface rather than a NSStream one because it plays better
-with NSURLConnection and other HTTP libraries. It was also simpler to implement and test.
-(I experimented with using NSStream for a while, but made a real hash of it.)
+finished downloading*. I chose the NSData chunks interface rather than a NSStream one
+because it plays better with NSURLConnection and other HTTP libraries. It was also simpler
+to implement and test.
 
 If you're adding JSON support to an iOS 4.x (or lower) app at this point, I think having
 to call `[[SBJsonParser new] objectWithString:foo]` rather than `[foo JSONValue]` is
 probably going to be the least of your problems. Thus, version 3.2 saw the category
 methods deprecated, and will be removed in V4. This will allow me to keep focusing on
-keeping SBJson relevant. (More and more, this will be the streaming support.)
+keeping SBJson relevant.
+
+---
 
 The main reasons for cutting the category methods are:
 
