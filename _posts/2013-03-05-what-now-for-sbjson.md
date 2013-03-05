@@ -1,7 +1,6 @@
 ---
 layout: post
 title: What now for SBJson?
-published: false
 tags: [Objective-C, Featured]
 ---
 
@@ -83,16 +82,19 @@ exceptions either.
 
 Regarding the removal of the methods that return errors through a parameter: it is
 difficult to say how many use those successfully, since I don't instrument the library in
-any way. But I can say from empirical observations on
-[StackOverflow](http://stackoverflow.com) that people don't use those methods in any
-meaningful way. People generally prefer the methods with error parameters to the
-equivalent ones without, *but they almost always pass NULL as the error argument*. I think
-people simply don't understand how these error pointers work.
+any way. But I can say from empirical observation (mainly in questions on
+[StackOverflow](http://stackoverflow.com)) that people don't use those methods in any
+meaningful way. People generally prefer them to the equivalent ones without the error
+parameter, *but they almost always pass NULL as the error argument*. I think people simply
+don't understand how these error pointers work.
 
-March 2013: I still maintain SBJson, aka json-framework; I never really got around to play
-with CouchDB, let alone finish those bindings... I haven't received a single pence,
-directly, from this development. But I did land a job in part due to being the author of
-this library. So I consider myself well rewarded.
+So this is where we are in March 2013: I still maintain SBJson, aka json-framework---I
+never really got around to play with CouchDB, let alone finish those bindings. I was never
+paid a single pence, directly, for this development; however, I did land a job in part due
+to being its author. Also, I had a couple of free beers at a London iOS developers meeting
+that ended up in a pub. So I consider myself well rewarded.
+
+---
 
 *Note that the removal of features described above have already landed on SBJson's master
 branch. This is what will become version 4.0, eventually. If you want to stay on tried and
