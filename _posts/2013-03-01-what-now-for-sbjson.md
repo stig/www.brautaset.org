@@ -48,12 +48,12 @@ SBJson providing value:
 1. You need streaming support.
 2. You're adding JSON support to an app that needs to support iOS version 4.x or below.
 
-What do I mean when I say that SBJson supports streaming? Doesn't NSJSONSerialisation
-support streaming? Well, yes; NSJSONSerialisation supports NSStream, but it still will
-only give you the document after it is finished parsing it. This means if you download a
-document over a slow link you will never get any of the results until the entire document
-has been downloaded. And it has to hold the entire finished document in memory, which
-could be a waste if you're only interested in parts of it.
+But doesn't NSJSONSerialisation support streaming too? Well, yes; in a sense.
+NSJSONSerialisation supports NSStream, but it still will only give you the document after
+it is finished parsing it. This means if you download a document over a slow link you will
+never get any of the results until the entire document has been downloaded. And it has to
+hold the entire finished document in memory, which could be a waste if you're only
+interested in parts of it.
 
 SBJson's streaming API doesn't use NSStream, but you can feed it parts of a large
 (potentially endless) document in bite-sized NSData chunks, and register a delegate that
@@ -64,15 +64,15 @@ finished downloading*. I chose the NSData chunks interface rather than a NSStrea
 because it plays better with NSURLConnection and other HTTP libraries. It was also simpler
 to implement and test.
 
-If you're adding JSON support to an iOS 4.x (or lower) app at this point, I think having
-to call `[[SBJsonParser new] objectWithString:foo]` rather than `[foo JSONValue]` is
-probably going to be the least of your problems. Thus, version 3.2 saw the category
-methods deprecated, and will be removed in V4. This will allow me to keep focusing on
-keeping SBJson relevant.
+Regarding the latter point: if you're having to add JSON support to an iOS 4.x (or lower)
+app at this point, I think having to call `[[SBJsonParser new] objectWithString:foo]`
+rather than `[foo JSONValue]` is probably going to be the least of your problems. Thus
+version 3.2 saw the category methods, and the methods returning NSErrors through a
+pointer, deprecated, and these will be removed in V4. I'm hoping this will allow me to
+focus on keeping SBJson relevant.
 
----
-
-The main reasons for cutting the category methods are:
+It might seem such a small amount of code, so why not just keep them in? The main reasons
+for cutting the the category methods are:
 
 1. Support. Failing to specify the correct flags to get categories working on iOS is the
 biggest issue people currently have with the library. (Except perhaps imagined memory
@@ -81,35 +81,19 @@ leaks, from people compiling SBJson without ARC.)
 the error. In 3.x the methods NSLog the error, but it's not ideal. I don't want to throw
 exceptions either.
 
-This change is to allow me to focus on what makes this library stand out, which now really
-is streaming support. It is important to note that the coding master, which you've just
-pulled, is what will become 4.0. I do not change backward compatibility in minor releases.
-(Intentionally.)
+Regarding the removal of the methods that return errors through a parameter: it is
+difficult to say how many use those successfully, since I don't instrument the library in
+any way. But I can say from empirical observations on
+[StackOverflow](http://stackoverflow.com) that people don't use those methods in any
+meaningful way. People generally prefer the methods with error parameters to the
+equivalent ones without, *but they almost always pass NULL as the error argument*. I think
+people simply don't understand how these error pointers work.
 
-It is difficult to say how many use that second argument, of course, since I don't
-instrument the library in any way. But I can say with certainty that nobody who have had a
-problem and posted on stack overflow showed that they used it in any meaningful way. I
-think people simply don't understand how to use these error pointers.
+March 2013: I still maintain SBJson, aka json-framework; I never really got around to play
+with CouchDB, let alone finish those bindings... I haven't received a single pence,
+directly, from this development. But I did land a job in part due to being the author of
+this library. So I consider myself well rewarded.
 
-And, by the way, now that Objective-C has blocks I think it would be much nicer to provide
-a block based interface. This also ties in with the idea of an event-based/streaming
-interface.
-
-Lessons:
-
-- People don't bother reporting bugs to the maintainers, as a whole. They rather will
-bitch on forums, or in comment threads on random blogs that happen to mention usage of the
-software.
-- People just can't/won't read documentation shipped with the software, but will spend
-countless hours spreading lies/misunderstandings about the software they failed to use.
-- throwing exceptions is the only way you're going to get your users to read error
-messages. And many will ignore even those. Want your library to be a good citizen and
-return nil, and have people check an error flag? Fine, but be prepared for support
-requests asking along the lines of “WHY IS THIS RETURNING NULL?!?!?” :-)
-
-
-----
-
-2013: I still maintain SBJson, aka json-framework. I never really got around to play with
-CouchDB, let alone finish those bindings...
-
+*Note that the removal of features described above have already landed on SBJson's master
+branch. This is what will become version 4.0, eventually. If you want to stay on tried and
+tested interface I suggest sticking to the 3.2 branch for now.*
