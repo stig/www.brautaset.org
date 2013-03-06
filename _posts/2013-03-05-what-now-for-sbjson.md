@@ -56,7 +56,7 @@ interested in parts of it.
 
 SBJson's streaming API doesn't use NSStream, but you can feed it parts of a large
 (potentially endless) document in bite-sized NSData chunks, and register a delegate that
-will receive various parts of the document as soon as they are parsed. *You never **have**
+will receive various parts of the document as soon as they are parsed. *You never have
 to hold the entire structure in memory.* It also means that if you're downloading a long
 array over a slow link, you can *start showing results before the entire array has
 finished downloading*. I chose the NSData chunks interface rather than a NSStream one
