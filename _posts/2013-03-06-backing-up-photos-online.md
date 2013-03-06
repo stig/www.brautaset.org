@@ -1,0 +1,88 @@
+---
+title: Backing Up Photos Online
+layout: post
+---
+
+We use Time Machine to back up our main computer. We have two 1GB USB drives that we
+rotate. Every so often I take the drive currently plugged into the computer to work and
+swap it with an HD I store there. (Order is important; I *never* take both backup disks
+home at the same time for any length of time, not even just to swap them around.) I plug
+this in when I get home and continue backing up. This means we have three copies of our
+data, in two different locations. So if my flat burns down, or someone steals both
+computer and backup drive, I should still have a moderately up-to-date complete set of
+data in the office.
+
+Until recently we also used a dedicated "whole disk" backup service called Backblaze. It
+has a trickle backup agent, a bit like Dropbox, that sits and watches the disk for any
+changes and copy them up to their servers. Unfortunately we found it to adversely affect
+performance of the machine. I have no hard data for this, it was just a gut-feeling.
+Backblaze certainly had good points, like backing up USB drives permanently attached to
+the machine, so I'm sad it didn't work out but we decided to give it up.
+
+I'm nothing if not paranoid, so to help me sleep better at night I have been thinking
+about online backups, and *what I really want to back up* a lot. Any writing & source code
+is already on GitHub or in Dropbox. Apps I use are either free, or purchased through
+AppStore, so can be freely re-downloaded. Music is backed up in iTunes Match. Films? I
+don't have a lot, and iTunes may let me re-download purchased ones; but I rarely re-watch
+films anyway so it's no great loss. In the worst case they can be re-purchased as there's
+nothing personal about them.
+
+So it all boils down to photos, really. They're annoyingly big, there's a lot of them, and
+they're *impossible to replace* by throwing money at the problem. I decided to look into a
+number of different services for backing up photos online. We use iPhoto on a Mac to
+manage our photos, so we wanted something that integrate with that.
+
+## Contenders
+
+The ones we looked at were:
+
+### Flickr
+
+* Cheap: US $25/year.
+* Has been around for a long time & has an established business model with actual paying users so will hopefully stick around for a while yet.
+* Powerful privacy controls.
+* **Doesn't delete your photos even if your pro subscription lapses.**
+* It is a specialist photo site, allowing tagging and organisation into albums, etc.
+* iPhoto integration.
+* Flickr iPhone app could upload photos taken on our iPhones straight to the account without having to go via the computer.
+* We both already have Flickr accounts, so we have some history with them.
+* Main drawback: affiliated with Yahoo!
+
+### Dropbox
+
+* Expensive! We have about 140GB of photos currently, so would have to go for their $200/year plan. That's 8 times the cost of Flickr.
+* Has some special handling for photos, but just for sharing (as far as I can see).
+* We'd end up with two copies of each photo on disk, unless we moved the entire iPhoto library to be inside the Dropbox folder. (Not entirely sure if that would actually work? I worry about metadata corruption.)
+* No iPhoto integration; very low-tech files-in-a-folder solution.
+* Supports uploading of photos directly from iPhone, using the Dropbox iPhone app. But they would not be added to the main collection automatically.
+
+### Picasa
+
+Apparently dying. [Users are being migrated to Google+
+Photos](http://techcrunch.com/2013/03/05/picasa-web-albums-are-officially-dead-now-
+redirect-to-google-photos/), which has too much integration with the Google ecosystem for
+what we want. We are looking for a *backup solution that understands photos*, not a
+plethora of ways to accidentally share pictures with all our contacts. So that's a no.
+
+### iCloud
+
+From what I can see just offers a rolling 30 day / 1000 latest photos photo stream, so not
+suitable for what we need.
+
+### SmugMug
+
+* $60/year [because we also want video uploads](http://help.smugmug.com/customer/portal/articles/695839-which-account-is-right-for-me-). This is cheap-ish, but still 2.5x the cost of Flickr.
+* Appear to offer most of what we want.
+* We don't have prior experience with it.
+* Standalone business, not affiliated with Yahoo!
+* Exclusively paying customers, which makes them more likely to stay around for the long haul.
+* I hate the name.
+
+## Conclusion
+
+Flickr came out on top due to them being cheapest, their iPhoto integration, and their "we
+won't delete your photos even if your subscription lapses" feature. (I can vouch for this;
+I have experienced it a couple of times already.) If we didn't already have some
+experience with Flickr, though, we would probably have been tempted to try SmugMug. It's a
+bit more expensive, but it's a stand-alone company and they are not burdened with Yahoo!
+accounts; these are infuriating, and one of Flickr's weak points.
