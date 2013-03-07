@@ -1,6 +1,7 @@
 ---
 title: Backing Up Photos Online
 layout: post
+updated: 2013-03-07
 ---
 
 We use Time Machine to back up our main computer. We have two 1GB USB drives that we
@@ -8,9 +9,9 @@ rotate. Every so often I take the drive currently plugged into the computer to w
 swap it with an HD I store there. (Order is important; I *never* take both backup disks
 home at the same time for any length of time, not even just to swap them around.) I plug
 this in when I get home and continue backing up. This means we have three copies of our
-data, in two different locations. So if my flat burns down, or someone steals both
-computer and backup drive, I should still have a moderately up-to-date complete set of
-data in the office.
+data, in two different locations. So if our flat burns down, or someone steals both
+computer and backup drive, we should still have a moderately up-to-date complete set of
+data at my office.
 
 Until recently we also used a dedicated "whole disk" backup service called Backblaze. It
 has a trickle backup agent, a bit like Dropbox, that sits and watches the disk for any
@@ -30,7 +31,7 @@ nothing personal about them.
 So it all boils down to photos, really. They're annoyingly big, there's a lot of them, and
 they're *impossible to replace* by throwing money at the problem. I decided to look into a
 number of different services for backing up photos online. We use iPhoto on a Mac to
-manage our photos, so we wanted something that integrate with that.
+manage our photos, and we wanted something that integrates with that setup.
 
 ## Contenders
 
@@ -85,4 +86,4 @@ won't delete your photos even if your subscription lapses" feature. (I can vouch
 I have experienced it a couple of times already.) If we didn't already have some
 experience with Flickr, though, we would probably have been tempted to try SmugMug. It's a
 bit more expensive, but it's a stand-alone company and they are not burdened with Yahoo!
-accounts; these are infuriating, and one of Flickr's weak points.
+accounts; these are infuriating and in my opinion counts against Flickr.
