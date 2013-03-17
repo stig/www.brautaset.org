@@ -184,6 +184,11 @@ article {
         padding: 0.2em;
     }
 
+    .fullwidth img {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .right img {
         float: right;
         clear: left;

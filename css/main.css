@@ -132,6 +132,9 @@ article {
     font-family: Menlo, Monaco, Courier, monospace;
     font-size: 0.9em;
     padding: 0.2em; }
+  article .fullwidth img {
+    width: 100%;
+    max-width: 100%; }
   article .right img {
     float: right;
     clear: left;
