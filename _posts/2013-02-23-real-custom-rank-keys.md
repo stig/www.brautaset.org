@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Real custom rank keys
-tags: [Development,Popular]
+tags: [Development, Popular]
 ---
 
 Let me guess: you have, at some point in your career, implemented a database table with a
