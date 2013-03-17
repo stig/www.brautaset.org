@@ -16,7 +16,7 @@ Ingredients:
 * 75g raisins
 * 37\.5g caster sugar
 * 5-6 slices of bread
-* 100g non-dairy margarine
+* 50g non-dairy margarine
 * 1 tbsp demerara sugar for sprinkling
 * 350ml Oatley
 * 2 eggs
