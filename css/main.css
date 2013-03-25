@@ -149,17 +149,18 @@ article {
 
 footer {
   clear: both;
-  color: #666; }
-  footer .colophon {
-    border-top: 1px solid #cccccc;
-    margin: 0.2em 0; }
+  color: #666;
+  text-align: center; }
   footer nav {
-    margin: 1.5em 0;
-    text-align: center; }
+    margin: 1.5em 0; }
+  footer .colophon,
   footer .copyright {
-    text-align: center;
     border-top: 1px solid #cccccc;
     margin: 0.2em 0; }
+  footer .colophon {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #cccccc; }
   footer a:hover {
     text-decoration: none; }
 

@@ -213,21 +213,22 @@ article {
 footer {
     clear: both;
     color: #666;
-
-    .colophon {
-        border-top: 1px solid #ccc;
-        margin: 0.2em 0;
-    }
+    text-align: center;
 
     nav {
         margin: 1.5em 0;
-        text-align: center;
     }
 
+    .colophon,
     .copyright {
-        text-align: center;
         border-top: 1px solid #ccc;
         margin: 0.2em 0;
+    }
+
+    .colophon {
+        width: 80%;
+        margin: 0 auto;
+        border-bottom: 1px solid #ccc;
     }
 
     a:hover {
