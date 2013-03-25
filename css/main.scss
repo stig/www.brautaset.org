@@ -212,28 +212,26 @@ article {
 
 footer {
     clear: both;
+    color: #666;
 
-    nav {
-        text-align: center;
-    }
-
-    p {
-        font-size: 0.8em;
-        text-align: center;
-    }
-
-    .copyright {
+    .colophon {
         border-top: 1px solid #ccc;
         margin: 0.2em 0;
     }
 
-    a {
-        color: #999;
+    nav {
+        margin: 1.5em 0;
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+        border-top: 1px solid #ccc;
+        margin: 0.2em 0;
     }
 
     a:hover {
         text-decoration: none;
-        color: $lightgray;
     }
 
 }

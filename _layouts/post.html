@@ -24,6 +24,18 @@ layout: default
             <li><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
         </ul>
     </nav>
+
+    <div class="colophon">
+
+    <p>If you want to comment on this article, please email <a
+    href="mailto:stig@brautaset.org?subject=Re:%20{{ page.title | urlencode}}"
+    >stig@brautaset.org</a> with your comments. Please state whether you want to be left
+    anonymous; otherwise I'll use your sender details for attribution. Alternatively, send
+    me a pull-request to the relevant post <a
+    href="https://github.com/stig/stig.github.com/tree/master/_posts" >here</a>.</p>
+
+    </div>
+
     {% include copy.html %}
 </footer>
 

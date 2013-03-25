@@ -148,20 +148,20 @@ article {
     font-size: 90%; }
 
 footer {
-  clear: both; }
-  footer nav {
-    text-align: center; }
-  footer p {
-    font-size: 0.8em;
-    text-align: center; }
-  footer .copyright {
+  clear: both;
+  color: #666; }
+  footer .colophon {
     border-top: 1px solid #cccccc;
     margin: 0.2em 0; }
-  footer a {
-    color: #999; }
+  footer nav {
+    margin: 1.5em 0;
+    text-align: center; }
+  footer .copyright {
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    margin: 0.2em 0; }
   footer a:hover {
-    text-decoration: none;
-    color: #eeeeee; }
+    text-decoration: none; }
 
 /* ==========================================================================
    Helper classes
