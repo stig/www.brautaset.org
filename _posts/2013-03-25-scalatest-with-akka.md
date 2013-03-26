@@ -46,21 +46,19 @@ class BarSpec extends TestKitSpec("BarSpec") {
   import BarSpec._
 
   trait TestCase {
-      val probe = TestProbe()
-      trait TestChildrenProvider extends ChildrenProvider {
-          def newBar = new Wrapper(probe.ref)
-      }
-      val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
+    val probe = TestProbe()
+    trait TestChildrenProvider extends ChildrenProvider {
+      def newBar = new Wrapper(probe.ref)
+    }
+    val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
   }
 
   "Bar" should {
-    "involve child in doing something" in {
-      new TestCase {
-        actor ! "SomeMessage"
-        probe.expectMsg("MessageToChild")
-        probe.reply("ReplyFromChild")
-        expectMsg("ReplyFromParent")
-      }
+    "involve child in doing something" in new TestCase {
+      actor ! "SomeMessage"
+      probe.expectMsg("MessageToChild")
+      probe.reply("ReplyFromChild")
+      expectMsg("ReplyFromParent")
     }
   }
 }

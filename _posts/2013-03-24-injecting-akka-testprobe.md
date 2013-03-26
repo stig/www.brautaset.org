@@ -58,19 +58,17 @@ TestProbe's `ref` as a constructor parameter:
 
 {% highlight scala %}
 class Wrapper(target: ActorRef) extends Actor {
-    def receive = {
-        case x => target forward x
-    }
+  def receive = {
+    case x => target forward x
+  }
 }
 
 trait TestCase {
-    val probe = TestProbe()
-
-    trait TestChildrenProvider extends ChildrenProvider {
-        def newFoo = new Wrapper(probe.ref)
-    }
-
-    val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
+  val probe = TestProbe()
+  trait TestChildrenProvider extends ChildrenProvider {
+    def newFoo = new Wrapper(probe.ref)
+  }
+  val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
 }
 {% endhighlight %}
 
@@ -78,13 +76,11 @@ This TestCase trait can then be wrapped around your code under test like so:
 
 {% highlight scala %}
 "Bar" should {
-  "involve child in doing something" in {
-    new TestCase {
-      actor ! "SomeMessage"
-      probe.expectMsg("MessageToChild")
-      probe.reply("ReplyFromChild")
-      expectMsg("ReplyFromParent")
-    }
+  "involve child in doing something" in new TestCase {
+    actor ! "SomeMessage"
+    probe.expectMsg("MessageToChild")
+    probe.reply("ReplyFromChild")
+    expectMsg("ReplyFromParent")
   }
 }
 {% endhighlight %}
