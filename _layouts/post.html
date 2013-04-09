@@ -19,6 +19,22 @@ layout: default
 <footer>
     <div class="colophon">
 
+    <nav>
+        <p>
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a> was the previous article.
+        {% endif %}
+        {% if page.next %}
+        The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
+        {% endif %}
+        </p>
+
+        <p>
+        You can browse <a href="/articles/tagged.html">articles by tag</a> or view
+        <a href="/articles.html">all articles</a> in a chronological list.
+        </p>
+    </nav>
+
     <p>If you have comments on this article please email <a
     href="mailto:stig@brautaset.org?subject=Re:%20{{ page.title | urlencode}}"
     >stig@brautaset.org</a>. Be sure to let me know if you want to be anonymous.
@@ -26,14 +42,6 @@ layout: default
     href="https://github.com/stig/stig.github.com/tree/master/_posts" >this repo</a>.</p>
 
     </div>
-
-    <nav>
-        <ul>
-            <li><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-            <li><a href="/articles.html">Archive</a></li>
-            <li><a href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-        </ul>
-    </nav>
 
     {% include copy.html %}
 </footer>

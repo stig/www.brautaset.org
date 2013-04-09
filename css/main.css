@@ -79,7 +79,8 @@ a {
   color: inherit; }
 
 body {
-  margin: 0 5px; }
+  margin: 0 5px;
+  padding-bottom: 5em; }
 
 h1, h2, h3 {
   font-family: "Helvetica Neue", sans-serif;
@@ -100,9 +101,6 @@ nav {
       border-left: 1px #eeeeee solid; }
     nav ul li:last-child {
       padding-right: 0; }
-  nav a {
-    color: inherit;
-    text-decoration: none; }
 
 header {
   margin-top: 0.5em; }
@@ -151,18 +149,11 @@ footer {
   clear: both;
   color: #666;
   text-align: center; }
-  footer nav {
-    margin: 1.5em 0; }
-  footer .colophon,
-  footer .copyright {
-    border-top: 1px solid #cccccc;
-    margin: 0.2em 0; }
+  footer .copyright,
   footer .colophon {
-    width: 80%;
-    margin: 0 auto;
-    border-bottom: 1px solid #cccccc; }
-  footer a:hover {
-    text-decoration: none; }
+    border-top: 1px solid #cccccc; }
+  footer .copyright {
+    margin: 0.2em 0; }
 
 /* ==========================================================================
    Helper classes
@@ -259,6 +250,10 @@ footer {
   /* Style adjustments for viewports that meet the condition */
   body {
     width: 95%;
+    margin: 0 auto; }
+
+  footer .colophon {
+    width: 80%;
     margin: 0 auto; } }
 @media only screen and (min-width: 55em) {
   /* Style adjustments for viewports that meet the condition */
