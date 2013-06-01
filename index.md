@@ -1,20 +1,18 @@
 ---
-title: Stig Brautaset
 layout: page
 ---
 
-I make software for fun and profit. 2013 will mark my ten year anniversary for writing
-software for a living. I'm a recovering C and Perl developer. In my current job I write
-Java, Scala & Objective-C; and think about architecture and APIs a lot.
+{% for post in site.posts limit: 10 %}
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-I am Norwegian but also consider myself a Londoner. I have lived here since September
-2000, except for a short stint in Hong Kong.
+<div class="meta">Posted {{ post.date | date_to_string }}.
+    {% if post.tags != empty %}
+        {% for tag in post.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+    {% endif %}
+</div>
 
-I have profiles on various sites all over the web, in various states of lacking attention,
-including these:
 
-* [Twitter](http://twitter.com/stigbra)
-* [Github](http://github.com/stig)
-* [LinkedIn](http://uk.linkedin.com/in/stigbrautaset)
-* [Ohloh](https://www.ohloh.net/accounts/stigbra)
-* [Masterbranch](http://www.masterbranch.com/developer/stig.brautaset)
+<p>{{ post.excerpt }}</p>
+
+<p><a href="{{ post.url }}">More...</a></p>
+{% endfor %}

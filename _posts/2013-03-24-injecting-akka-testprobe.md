@@ -2,6 +2,7 @@
 layout: post
 title: Injecting Akka's TestProbe in place of child actors
 tags: [Development]
+excerpt: You have an actor that uses one or more child actors. You want to inject a TestProbe in place of the child(ren) to test the behaviour of the parent in isolation. This post shows you how.
 ---
 
 The problem:
