@@ -88,9 +88,9 @@ h1, h2, h3 {
   margin: 0.5em 0; }
 
 nav {
-  font-size: 1em; }
+  font-size: 1.2em; }
   nav ul {
-    padding: 0;
+    padding: 0.5em 0 0 0;
     margin: 0;
     list-style-type: none; }
     nav ul li {
@@ -104,14 +104,18 @@ nav {
 
 header {
   margin-top: 0.5em; }
+  header a {
+    text-decoration: none; }
   header h1 {
-    margin: 0.2em 0 0 0; }
-  header .meta {
-    text-size: 80%;
-    color: #aaaaaa;
-    margin: 0; }
+    margin: 0.2em 0 0 0;
+    border-bottom: 2px solid black; }
   header nav {
-    border-bottom: 1px solid #cccccc; }
+    margin-bottom: 2em; }
+
+.meta {
+  text-size: 80%;
+  color: #aaaaaa;
+  margin: 0; }
 
 article {
   font-size: 1.2em;
@@ -149,11 +153,16 @@ footer {
   clear: both;
   color: #666;
   text-align: center; }
-  footer .copyright,
-  footer .colophon {
+  footer .copyright {
     border-top: 1px solid #cccccc; }
   footer .copyright {
     margin: 0.2em 0; }
+
+.colophon {
+  clear: both;
+  color: #666;
+  text-align: center;
+  border-top: 1px solid #cccccc; }
 
 /* ==========================================================================
    Helper classes
@@ -252,7 +261,7 @@ footer {
     width: 95%;
     margin: 0 auto; }
 
-  footer .colophon {
+  .colophon {
     width: 80%;
     margin: 0 auto; } }
 @media only screen and (min-width: 55em) {

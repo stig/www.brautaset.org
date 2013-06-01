@@ -114,10 +114,10 @@ h1, h2, h3 {
 }
 
 nav {
-    font-size: 1em;
+    font-size: 1.2em;
 
     ul {
-        padding: 0;
+        padding: 0.5em 0 0 0;
         margin: 0;
         list-style-type: none;
 
@@ -139,20 +139,27 @@ nav {
 }
 
 header {
-    margin-top: 0.5em;
-    h1 {
-        margin: 0.2em 0 0 0;
+    a {
+        text-decoration: none;
     }
 
-    .meta {
-        text-size: 80%;
-        color: $aaa;
-        margin: 0;
+    margin-top: 0.5em;
+
+    h1 {
+        margin: 0.2em 0 0 0;
+        border-bottom: 2px solid black;
     }
 
     nav {
-        border-bottom: 1px solid #ccc;
+        margin-bottom: 2em;
     }
+
+}
+
+.meta {
+    text-size: 80%;
+    color: $aaa;
+    margin: 0;
 }
 
 article {
@@ -212,8 +219,7 @@ footer {
     color: #666;
     text-align: center;
 
-    .copyright,
-    .colophon {
+    .copyright {
         border-top: 1px solid #ccc;
     }
 
@@ -222,6 +228,14 @@ footer {
     }
 
 }
+
+.colophon {
+    clear: both;
+    color: #666;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
 
 
 /* ==========================================================================
@@ -338,14 +352,10 @@ footer {
         margin: 0 auto;
     }
 
-    footer {
-        .colophon {
-            width: 80%;
-            margin: 0 auto;
-        }
+    .colophon {
+        width: 80%;
+        margin: 0 auto;
     }
-
-
 
 }
 
