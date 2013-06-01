@@ -5,9 +5,10 @@ imported: 31/01/2013
 tags: [Hacks]
 ---
 
-So, in a previous post I showed how to [rename lots of
-files]({% post_url 2007-06-11-renaming-lots-of-files %}) with little effort. Let's remind
-ourselves how the one-liner looks:
+So, in a [previous post][previous] I showed how to rename lots of files with little
+effort. Let's remind ourselves how the one-liner looks:
+
+[previous]: {% post_url 2007-06-11-renaming-lots-of-files %}
 
     for f in *.doc ; do mv $f ${f%.doc}.txt ; done
 

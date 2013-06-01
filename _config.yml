@@ -1,5 +1,3 @@
-auto: true
-server: true
 permalink: /articles/:year/:title.html
 feed:
  url: http://superloopy.io
