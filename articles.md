@@ -8,8 +8,7 @@ to have but I wanted to consolidate them in one place so now they are here. It u
 that cool URLs never changed, but these did---and I'm OK with that.
 
 This page lists all the available articles in reverse chronological order. You can also
-browse the [articles by tag](/articles/tagged.html), or go straight to
-[popular](/articles/tagged.html#Popular) or [my
+browse the [articles by tag](/articles/tagged.html), or go straight to [my
 favourite](/articles/tagged.html#Featured) articles.
 
 
