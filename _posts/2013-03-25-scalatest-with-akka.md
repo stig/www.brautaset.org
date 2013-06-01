@@ -2,12 +2,13 @@
 layout: post
 title: Using ScalaTest with Akka
 lead: Using ALL THE TRAITS
-tags: [Development]
+tags: [Development, Scala]
 ---
 
 To test Actor code with ScalaTest you have to mix in a lot of traits; sometimes it can be
-difficult to remember them all. Thus I have made this abstract class (it cannot be a trait
-because it takes constructor parameters) that you can drop into a project:
+difficult to remember them all. Inspired by a course led by [Heiko
+Seebergen](http://www.heikoseeberger.name) I made this abstract class (it cannot be a
+trait because it takes constructor parameters) that you can drop into a project.
 
 {% highlight scala %}
 import akka.actor.ActorSystem
