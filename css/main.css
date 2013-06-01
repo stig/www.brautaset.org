@@ -102,6 +102,9 @@ nav {
     nav ul li:last-child {
       padding-right: 0; }
 
+h2 a {
+  text-decoration: none; }
+
 header {
   margin-top: 0.5em; }
   header a {
