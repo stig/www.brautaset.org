@@ -2,7 +2,7 @@
 layout: post
 title: A lesson in testing
 imported: 30/01/2013
-tags: [Featured]
+tags: [Development]
 ---
 
 A while back I wrote a basic Neural Net class in Objective-C, and tested it pretty well.

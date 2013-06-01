@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a resizable grid of CALayers
-tags: [Development, Objective-C, Featured, Popular]
+tags: [Development, Objective-C]
 ---
 
 The last few days I've been poring over the [Core Animation Programming
