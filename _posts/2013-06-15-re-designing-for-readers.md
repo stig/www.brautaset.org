@@ -1,0 +1,31 @@
+---
+title: Re-designing for readers
+layout: post
+---
+
+I enjoyed reading Matt Gemmell's post on [designing blogs for
+readers](http://mattgemmell.com/2013/05/22/designing-blogs-for-readers/) the other week. I
+decided to see how well my own blog "complies" to his advice.
+
+I have had blogs on wordpress, tumblr and writing my own (terrible) blog software on a
+rented VM in the past. This site is a clean break from those. Content & code both lives in
+a [git repository](http://github.com/stig/superloopy.io), which appeals immensely to me as
+a programmer, and the site is statically generated and hosted on Github. I don't get the
+statistics that Wordpress gives you, and I don't have the seamless posting from tumblr,
+but I have full control of the templates & content, and free custom domains.
+
+A lot of blogs seems to focus on style over substance---or at least they make it seem that
+way---with themes that make it very hard to read the text. Garish background colours; a
+dazzle of columns; tiny fonts; or, my current pet peeve, light gray text on white
+background. These all amount to punching your readers in the face, and I wanted to avoid
+that. Thus this site has a single-column layout, high-contrast theme with fairly large font
+size. But my front page wasn't quite right.
+
+Instead of the "about me" blurb I used to have I followed Matt's advice and created a new
+front page that contains excerpts of the ten most recent posts. This was made possible by
+upgrading Jekyll (my blogging platform) to a new version that automatically grabs the
+first paragraph of each post to use for the excerpt. The old front page became the
+[About](/about.html) page instead. Better!
+
+The font was already "big enough", I feel, but I followed Matt's advice here too and
+shrank the line length slightly.
