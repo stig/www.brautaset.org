@@ -266,10 +266,10 @@ footer {
   .colophon {
     width: 80%;
     margin: 0 auto; } }
-@media only screen and (min-width: 55em) {
+@media only screen and (min-width: 50em) {
   /* Style adjustments for viewports that meet the condition */
   body {
-    width: 50em;
+    width: 45em;
     margin: 0 auto; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
