@@ -2,10 +2,9 @@
 layout: default
 ---
 
-<div class="meta">Posted {{ page.date | date_to_string }}.
-    {% if page.tags != empty %}
-        {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-    {% endif %}
+<div class="meta">Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
+{% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+{% endif %}
 </div>
 
 <article>
