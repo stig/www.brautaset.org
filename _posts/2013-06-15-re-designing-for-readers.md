@@ -30,4 +30,4 @@ first paragraph of each post to use for the excerpt. The old front page became t
 
 The font was already "big enough", I feel, but I shrank the line length slightly.
 
-*Update 2013-06-17:* According to Google Analytics the bounce rate dropped by 15--20% when the change to the homepage went out. Not a bad result at all!
+*Update 2013-06-17:* According to Google Analytics the bounce rate dropped by 15--20% when the change to the homepage went out. Average visitor duration went up by about 50%, and average number of pages per visit went up from below 3 to nearly 4. Not a bad result at all!
