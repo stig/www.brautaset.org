@@ -1,6 +1,7 @@
 ---
 title: Re-designing for readers
 layout: post
+updated: 2013-06-17
 ---
 
 I enjoyed reading Matt Gemmell's post on [designing blogs for
@@ -27,5 +28,6 @@ upgrading Jekyll (my blogging platform) to a new version that automatically grab
 first paragraph of each post to use for the excerpt. The old front page became the
 [About](/about.html) page instead. Better!
 
-The font was already "big enough", I feel, but I followed Matt's advice here too and
-shrank the line length slightly.
+The font was already "big enough", I feel, but I shrank the line length slightly.
+
+*Update 2013-06-17:* According to Google Analytics the bounce rate dropped by 15--20% when the change to the homepage went out. Not a bad result at all!
