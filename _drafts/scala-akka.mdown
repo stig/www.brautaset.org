@@ -1,0 +1,84 @@
+---
+layout: post
+title: Scala Akka
+tags: [Development, Scala]
+---
+
+I wrote a post for the NET-A-PORTER [Technical Blog](http://techblog.net-a-porter.com) about an epiphany I recently had while working with Akka's actor model in Scala. You can read the original post [over there](XXX) or read the *executive summary* here.
+
+{% comment %}
+I started using Akka about a year ago. Its Actor Model, with its mandatory parental supervision, is a big change from how I have been used to structuring my code. This post will attempt to explore some of the things I've learnt.
+
+Previously, whenever I wrote Actors that wrapped some blocking operations such as a database call, I wrote something like this (code examples have been simplified for clarity; real code would use mixins to facilitate testing):
+
+    class Products extends Actor {
+        val router = context.actorOf(
+            Props[ProductWorker].withRouter(FromConfig()))
+
+        def receive {
+            case x ⇒
+                router forward x
+        }
+    }
+
+I would then have a ProductWorker:
+
+    class ProductWorker extends Actor {
+        val db = Database.fromURL("jdbc:postgres:test")
+        def receive {
+            case Create(product) ⇒
+                sender ! db withSession { ??? }
+            case FindById(id) ⇒
+                sender ! db withSession { ??? }
+        }
+    }
+
+If the services of the Products actor was required from several other actors, I would create it somewhere higher in the hieararchy and pass it in as a constructor param:
+
+    class Designer(Products: ActorRef) extends Actor {
+        def receive { ??? }
+    }
+
+I was doing this for several reasons:
+
+1. Each instance of the Products actor would create *N* connections to the DB, controlled by the router config. Passing a single Products ActorRef around would allow me to control the total number of connections I made to the db by changing a single router configuration.
+2. I felt that I had to have the 2 layers so that the Products parent could monitor and restart its children.
+
+
+More recently I had a bit of a brainwave:
+
+1. Rather than rely on the number of `ProductWorker` actors (i.e. the router configuration) to control the number of database connections we should use a connection pool.
+2. Code like the above bypasses the default supervision hierarchy. Because the Designer  actor is not Product's parent, it is no longer the one that gets notified if there is a problem.
+3. By default actors restart their children on failure, which is all I was doing in my Products actor.
+
+It might not be immediately obvious why a connection pool would be useful in this simple example. However if you consider a larger system with many different actors sharing a pooled data source it starts to make sense. (Perhaps different parts of your applications uses the connections at different times?)
+
+Note that while a connection pool does give you some benefits, it also adds some complexity. You will have to make sure that the connection pool's configuration is appropriate for the number of concurrent connections you want (or need) to support.
+
+Putting the observations above together we can merge the Products and ProductWorker actors into one and move the router up a level to Designer:
+
+    object DataSourceHolder {
+        lazy val ds = new PooledDataSource(???)
+    }
+
+    class Products extends Actor {
+        val db = Database.fromDatasource(DataSourceHolder.ds)
+        def receive {
+            case Create(product) ⇒
+                sender ! db withSession { ??? }
+            case FindById(id) ⇒
+                sender ! db withSession { ??? }
+        }
+    }
+
+    class Designer extends Actor {
+        val Products = context.actorOf(
+            Props[Products].withRouter(FromConfig()))
+
+        def receive { ??? }
+    }
+
+
+There is certainly less boilerplate in the above code. Also, it means that Designer gets to make the decision of what to do if Products throws an exception. I think that makes more sense than ProductWorker's always just being restarted. In the above example the Designer actor doesn't handle failures of its children more intelligently than just restarting, but at least now it gets the option to.
+
+{% endcomment %}
