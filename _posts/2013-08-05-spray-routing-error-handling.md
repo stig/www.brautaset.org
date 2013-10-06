@@ -4,7 +4,7 @@ title: Spray Routing Error Handling
 tags: [Development, Scala]
 ---
 
-I've recently taken a lot of inspiration from a blog post titled [Akka and Spray](http://blog.eigengo.com/blog_posts/akka-spray) over at the Eigengo blog. It covers a lot of ground and comes highly recommended if you are learning Scala, Akka &amp; Spray. The only thing I didn't like was how it handled marshalling of errors, and I intend to show a better way here.
+I've recently taken a lot of inspiration from a blog post titled [Akka and Spray](http://blog.eigengo.com/blog_posts/akka-spray) over at the Eigengo blog. It covers a lot of ground and comes highly recommended if you are learning Scala, Akka & Spray. The only thing I didn't like was how it handled marshalling of errors, and I intend to show a better way here.
 
 Imagine an endpoint to register a user. It should either return the user or a failure. If the user already exist, we want to return a 400 error, otherwise a 500 will do. Here's my exceptionHandler:
 
