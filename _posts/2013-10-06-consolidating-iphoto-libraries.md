@@ -4,9 +4,11 @@ title: Consolidating &amp; de-duplicating iPhoto libraries
 tags: [Hacks]
 ---
 
-This explains how I consolidated & de-duped about 45,000 pictures and movies from four iPhoto libraries on two different machines and various directories full of images on USB drives into one 33,000 file library. iPhoto has a menu item for finding duplicates, but I was not been able to make it work; it would just hang trying to find duplicates in one of the smaller libraries. And even if I could get that to work I didn't have the space to copy all the images into one giant library and let iPhoto sort it out. So I wrote a program to help me.
+This explains how I consolidated & de-duped about 45,000 pictures and movies from four iPhoto libraries on two different machines and various directories full of images on USB drives into one 33,000 file library.
 
 We had about 25,000 photos in one library from a previous (unsuccessful) attempt at consolidating libraries. We had two further libraries containing about 13,000 and 10,000 images each, and a fourth iPhoto library on a separate machine, plus the aforementioned random grab-bag of directories full of images. (I didn't count how many these were, but they numbered in the thousands.) After consolidation we ended up with 33,000 images and movies in one iPhoto library.
+
+iPhoto has a menu item for finding duplicates, but I was not been able to make it work; it would just hang trying to find duplicates in one of the smaller libraries. And even if I could get that to work I didn't have the space to copy all the images into one giant library and let iPhoto sort it out. So I wrote a program to help me.
 
 One problem was that the same picture would exist with different file names, probably due to being imported from devices into multiple different iPhoto libraries or to being exported & then imported again in the aforementioned failed consolidation attempt. We also had different images existing with the same name, due to the counter on the camera looping around. This was OK since iPhoto stores images from different imports in different directories, but it meant that we couldn't just copy all the files into one directory and use the names to de-duplicate them.
 
