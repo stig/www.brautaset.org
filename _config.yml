@@ -1,5 +1,2 @@
 permalink: /articles/:year/:title.html
-feed:
- url: http://superloopy.io
- name: SuperLoopy
 pygments: true
