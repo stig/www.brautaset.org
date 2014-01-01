@@ -4,7 +4,7 @@ title: Real custom rank keys
 tags: [Development]
 ---
 
-Let me guess: you have, at some point in your career, implemented a database table with a
+Let me guess\: you have, at some point in your career, implemented a database table with a
 "rank" field, for user-defined ordering of items in a collection. In my experience this
 rank is usually of type INT. Moving an item to the end is easy: just add (or subtract) 1
 from the rank of the item that was at the end.
