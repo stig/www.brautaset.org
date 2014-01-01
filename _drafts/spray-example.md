@@ -12,9 +12,10 @@ example](https://github.com/stig/spray-example/) that goes a bit beyond the
 routing layer to document my current understanding of best practices in that
 regard. It is the topic of this article.
 
-This example shows how to wire together a REST API using Spray Routing (1.2)
-that uses a separate service and (toy) actor-based model. It also shows off a
-few things I consider good practice:
+The main goal of this example (and this article) is to show how to wire
+together a REST API using Spray Routing (v1.2) that uses a model-actor from
+the spray routing layer. It also shows off a few things I consider good
+practice:
 
 * Custom `Cache-Control` header generation. Achieve optimal caching by
 tailoring a resource's `max-age` to avoid over- or under-caching individual
@@ -37,14 +38,37 @@ plugin by the Spray guys to simplify and speed up the dev/build/test cycle.
 Pattern*. See the `TopLevelConfig` trait and its corresponding
 `ProductionTopLevelConfig` implementation for more details.
 
-Let's start with the Model. This particular one is just a toy, because the
+Let's start with the [ModelActor][]. It is really just a toy, because the
 purpose of this example is to show how you plug an actor-based model into
-spray routing. However, there's one thing I want to point out: the Model trait
-has a method `get(id: Int)` returning `Option[Item]`. However, we don't want
-to send `Some[Item]` messages from our `ActorModel`. (Because of type
-erasure.) Luckily, an actor is not limited to responding with messages
-extending a particular supertype so in the ModelActor we transform the
-response into `Item` or `ItemNotFound` as appropriate.
+spray routing. There's just one thing I want to point out: the [Model][] has a
+method `get(id: Int): Option[Item]`, but it is considered bad practice to send
+`Some[Item]` and `None` messages between actors. Actors have much more freedom
+when it comes to the types of messages it responds with so we transform the
+response from the model into `Item` or `ItemNotFound` as appropriate.
+
+[modelactor]: https://github.com/stig/spray-example/blob/master/src/main/scala/example/ModelActor.scala
+[model]: https://github.com/stig/spray-example/blob/master/src/main/scala/example/Model.scala
+
+Next, let's look at the [Service][] in more detail.
+
+[service]: https://github.com/stig/spray-example/blob/master/src/main/scala/example/Service.scala
+
+To avoid leaking exact
+stock levels via the Cache-Control header's max-age we use a formula to
+obfuscate the levels a bit.
+
+The `onSuccess` directive allows us to handle two different success cases (or one success and one expected error, depending on how you look at it) in stride:
+
+{% highlight scala %}
+onSuccess(model ? id) {
+    case item: Item =>
+        complete(OK, scaledCacheHeader(item.stock + 1), toPublicItem(item))
+
+    // Cache 404 for 60 seconds
+    case ItemNotFound =>
+        complete(StatusCodes.NotFound, cacheHeader(60), "Not Found")
+}
+{% endhighlight %}
 
 
 The counter-argument to a separate on-the-wire protocol I've usually heard is
