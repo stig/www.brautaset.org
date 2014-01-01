@@ -39,7 +39,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 0.2em 0;
   padding: 0; }
 
@@ -108,11 +108,9 @@ header {
   margin-top: 0.5em; }
   header a {
     text-decoration: none; }
-  header h1 {
-    margin: 0.2em 0 0 0;
-    border-bottom: 2px solid black; }
   header nav {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    border-bottom: 1px; }
 
 .meta {
   text-size: 80%;
@@ -130,7 +128,7 @@ article {
   article table {
     margin: 0 auto 0 auto; }
   article pre {
-    border: 1px solid #ccccdd; }
+    border: 1px solid #ccd; }
   article pre, article code {
     background-color: #eef;
     font-family: Menlo, Monaco, Courier, monospace;
@@ -152,19 +150,12 @@ article {
     font-size: 90%; }
 
 footer {
+  border-top: 1px solid #ccc;
   clear: both;
   color: #666;
   text-align: center; }
   footer .copyright {
-    border-top: 1px solid #cccccc; }
-  footer .copyright {
     margin: 0.2em 0; }
-
-.colophon {
-  clear: both;
-  color: #666;
-  text-align: center;
-  border-top: 1px solid #cccccc; }
 
 /* ==========================================================================
    Helper classes
@@ -261,10 +252,6 @@ footer {
   /* Style adjustments for viewports that meet the condition */
   body {
     width: 95%;
-    margin: 0 auto; }
-
-  .colophon {
-    width: 80%;
     margin: 0 auto; } }
 @media only screen and (min-width: 50em) {
   /* Style adjustments for viewports that meet the condition */
@@ -280,7 +267,7 @@ footer {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -305,7 +292,7 @@ footer {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {

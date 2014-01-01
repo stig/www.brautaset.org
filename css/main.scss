@@ -150,13 +150,9 @@ header {
 
     margin-top: 0.5em;
 
-    h1 {
-        margin: 0.2em 0 0 0;
-        border-bottom: 2px solid black;
-    }
-
     nav {
         margin-bottom: 2em;
+        border-bottom: 1px;
     }
 
 }
@@ -220,28 +216,17 @@ article {
 }
 
 footer {
+    border-top: 1px solid #ccc;
+
     clear: both;
     color: #666;
     text-align: center;
-
-    .copyright {
-        border-top: 1px solid #ccc;
-    }
 
     .copyright {
         margin: 0.2em 0;
     }
 
 }
-
-.colophon {
-    clear: both;
-    color: #666;
-    text-align: center;
-    border-top: 1px solid #ccc;
-}
-
-
 
 /* ==========================================================================
    Helper classes
@@ -354,11 +339,6 @@ footer {
     /* Style adjustments for viewports that meet the condition */
     body {
         width: 95%;
-        margin: 0 auto;
-    }
-
-    .colophon {
-        width: 80%;
         margin: 0 auto;
     }
 

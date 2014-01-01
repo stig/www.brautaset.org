@@ -2,32 +2,20 @@
 layout: default
 ---
 
-<div class="meta">Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
-{% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-{% endif %}
-</div>
+<header>
+    {% include nav.html %}
+    <h1>{{ page.title }}</h1>
+    <div class="meta">Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
+    {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+    {% endif %}
+    </div>
+</header>
 
 <article>
     {{ content }}
 </article>
 
-<div class="colophon">
-
-    <nav>
-        <p>
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a> was the previous article.
-        {% endif %}
-        {% if page.next %}
-        The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
-        {% endif %}
-        </p>
-
-        <p>
-        You can browse <a href="/articles/tagged.html">articles by tag</a> or view
-        <a href="/articles.html">all articles</a> in a chronological list.
-        </p>
-    </nav>
+<footer>
 
     <p>If you have comments on this article please email <a
     href="mailto:stig@brautaset.org?subject=Re:%20{{ page.title | urlencode}}"
@@ -35,4 +23,21 @@ layout: default
     Alternatively send a pull request against <a
     href="https://github.com/stig/stig.github.com/tree/master/_posts" >this repo</a>.</p>
 
-</div>
+    <nav>
+
+        <p>
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a> was the previous article.
+        {% endif %}
+        {% if page.next %}
+        The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
+        {% endif %}
+        You can browse <a href="/articles/tagged.html">articles by tag</a> or view
+        <a href="/articles.html">all articles</a> in a chronological list.
+        </p>
+    </nav>
+
+    {% include copy.html %}
+
+</footer>
+

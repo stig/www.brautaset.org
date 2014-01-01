@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Summary of recent output
 ---
 
 {% for post in site.posts limit: 10 %}
