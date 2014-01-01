@@ -4,7 +4,11 @@ layout: default
 
 <header>
     {% include nav.html %}
-    <h1>{{ page.title }}</h1>
+    <a name="top">
+    <h1>
+    <a href="#top">{{ page.title }}</a>
+    </h1>
+    </a>
     <div class="meta">Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
     {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
     {% endif %}
@@ -16,6 +20,8 @@ layout: default
 </article>
 
 <footer>
+
+    {% include copy.html %}
 
     <p>If you have comments on this article please email <a
     href="mailto:stig@brautaset.org?subject=Re:%20{{ page.title | urlencode}}"
@@ -36,8 +42,6 @@ layout: default
         <a href="/articles.html">all articles</a> in a chronological list.
         </p>
     </nav>
-
-    {% include copy.html %}
 
 </footer>
 
