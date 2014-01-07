@@ -112,11 +112,6 @@ header {
     margin-bottom: 2em;
     border-bottom: 1px; }
 
-.meta {
-  text-size: 80%;
-  color: #aaaaaa;
-  margin: 0; }
-
 article {
   font-size: 1.25em;
   padding: 0;
@@ -154,8 +149,6 @@ footer {
   clear: both;
   color: #666;
   text-align: center; }
-  footer .copyright {
-    margin: 0.2em 0; }
 
 /* ==========================================================================
    Helper classes

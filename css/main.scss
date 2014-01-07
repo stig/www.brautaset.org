@@ -157,12 +157,6 @@ header {
 
 }
 
-.meta {
-    text-size: 80%;
-    color: $aaa;
-    margin: 0;
-}
-
 article {
     font-size: $fontsize;
     padding: 0;
@@ -221,10 +215,6 @@ footer {
     clear: both;
     color: #666;
     text-align: center;
-
-    .copyright {
-        margin: 0.2em 0;
-    }
 
 }
 
