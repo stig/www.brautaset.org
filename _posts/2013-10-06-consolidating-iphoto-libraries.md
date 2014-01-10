@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Consolidating &amp; de-duplicating iPhoto libraries
+title: Consolidating and de-duplicating iPhoto libraries
 tags: [Hacks]
 ---
 
