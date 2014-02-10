@@ -67,9 +67,7 @@ My idea was to keep a set containing prime multiples for fast checking, and a ma
     (cons 2 (next-prime {} #{} 3))))
 {% endhighlight %}
 
-It is a moderate improvement on my naive solutions, but it's still damn slow! However, at this point I have learnt enough Clojure to actually understand Christophe's version. And it is sublime! It accomplishes exactly my goals, but so much more elegantly and efficiently I hardly know where to start. So I won't!
-
-Now, there's not much I can do to improve the efficiency or elegance of his algorithm, but I *can* improve the run speed by making the map [transient](http://clojure.org/transients). By that minimal change Christophe's algorithm was speeded up by a hefty factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
+It is a moderate improvement on my naive solutions, but it's still damn slow! However, at this point I have learnt enough Clojure to actually understand Christophe's version. And it is sublime! It accomplishes exactly my goals, but so much more elegantly and efficiently I hardly know where to start. So I won't! Now, there's not much I can do to improve the efficiency or elegance of his algorithm, but I *can* improve the run speed by making the map [transient](http://clojure.org/transients). By that minimal change Christophe's algorithm was speeded up by a hefty factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
 
 {% highlight clojure %}
 user=> (time (doall (take 1 (drop 1000000 (grand-lazy-primes)))))
