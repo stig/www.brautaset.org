@@ -5,7 +5,7 @@ title: Learning Clojure by Solving Euler Problems
 
 I'm always interested in new technologies and languages. We're using Scala at work, and I really quite like the language. I really do like static (inferred) types. But on the other hand, as an AI graduate Lisp holds a certain allure and is a language I've wanted to learn for a long time but somehow never really gotten around to. One (for me) silly roadblock has been the stupid names of functions like `cdr` and `car` rather than `first` and `rest`. Clojure actually fixes this deficiency in Lisp, so I decided to give it a go.
 
-Since I didn't have a particular project in mind I started out by trying to solve projects from [Project Euler](https://projecteuler.net). The first 2 were simple, but for the third I needed a pretty fast prime generator. My first attempt was very simple and produced a correct sequence, but it is incredibly slow. Here it is:
+Since I didn't have a particular project in mind I started out by trying to solve problems from [Project Euler](https://projecteuler.net). The first 2 were simple, but for the third I needed a pretty fast prime generator. My first attempt was very simple and produced a correct sequence, but it is incredibly slow. Here it is:
 
 {% highlight clojure %}
 (defn naive-primes-seq
