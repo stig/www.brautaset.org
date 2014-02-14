@@ -3,23 +3,18 @@ title: Delighting users with SBJson 4
 layout: post
 ---
 
-How many here have written an app that downloads a list of records? Raise your hands please! Do you cut page size to reduce latency, at cost of connection overhead more times?
+I was asked to speak about SBJson at [Cocoa Kucha 2](http://blog.cocoapods.org/Cocoa-Kucha-2/) on the 16th of January 2014. I used the opportunity to try to explain why I think SBJson is still relevant, even after Apple added native JSON support to iOS in iOS 5 (2011). This post summarises the main points of my talk.
 
-Slide 3: Red arrows is “download one record”, blue is “parse one record”. With the traditional approach, your app won’t get hold of any of the result until all has been downloaded & parsed.
+* [Video of the talk](https://vimeo.com/86478323)
+* [Slides](https://speakerdeck.com/stig/delighting-your-users-with-sbjson-4)
 
-Slide 4: Notice there’s no difference in when we get the last record; only in how early we get the first one. I’ve called it “chunked delivery” because it resonates with HTTP Chunks. Twitter, for example, lets your subscribe to a HTTP chunked stream of JSON documents.
+Have you written an app that downloads a list of records? I believe this is a common theme in many apps. My assertion is that users usually care about time to first record, not time to last.
 
-Slide 5: Because downloads are multi-core we actually continue downloading without waiting for the parser to do its thing. Thus, at the end of the complete download you only have to wait for the parser to parse the last record.
+One work-around for downloading long lists on slow connections is to use pagination (download part of the list at a time) to avoid your users having to wait too long before they see anything. This chopping up of the data can introduce inconsistencies in fast-moving data, because you can either have the same item in two pages, or you may miss items. And connection overhead means it will be ultimately slower to assemble the full list this way.
 
-Slide 10-11: Note that the input contains multiple top-level JSON documents concatenated together. (Assume the `data` function just creates an NSData instance containing UTF8 encoded data of the characters we pass it.) We can call the parse: method multiple times Twitter uses this style of streaming. Essentially each HTTP Chunk contains a complete JSON document.
+I believe it may not always be necessary to do these tradeoffs. Instead, with SBJson 4 you can get all records in one big list, but start parsing the stream and feeding records to your users *before the download of the full list has finished*. SBJson supports two different ways to do this:
 
-Slide 14-15: In contrast to the previous example this input contains a single top-level document. The outer array is gray here.
+1. By downloading a stream of not one, but many stand-alone JSON documents. (Twitter provides stream of this type.) See [+multiRootParserWithBlock:errorHandler:](http://cocoadocs.org/docsets/SBJson/4.0.0/Classes/SBJson4Parser.html#//api/name/multiRootParserWithBlock:errorHandler:).
+2. By *unwrapping a root array* and feed every top-level element inside the root to your application, one by one. See [+unwrapRootArrayParserWithBlock:errorHandler:](http://cocoadocs.org/docsets/SBJson/4.0.0/Classes/SBJson4Parser.html#//api/name/unwrapRootArrayParserWithBlock:errorHandler:).
 
-Slide 16: In version 3 I supported unwrapping of objects as well, but it leaked keys. I also supported arbitrary-depth documents, but I removed it in the interest of clarity.
-
-Slide 17: Normally a JSON parser would parse and validate a complete document, and would refuse to parse the above. However, that forces you to have seen the entire document before parsing so when parsing streams we have to relax that requirement.
-The multi-root parser would still balk at the above, but the root unwrapping parser will call your value block twice, then call your error handler saying the next bit cannot be parsed.
-
-Slide 18: The value block will be called once for each “chunk” of JSON we encounter. This will either be a top-level document (multi-root) or a first-level sub-document (unwrapping root array).
-
-Slide 19: The -parse: method returns a status, which can be handy. An unwrap-root array parser will return …Complete when its root array is closed, for example. Or any parser will return …Stopped if you set the \*stop argument in the value block to YES.
+There are some caveats to parsing a stream of documents, particularly when unwrapping  root arrays. Normally a JSON parser would parse and validate a complete document; however, that forces you to have seen the entire document before parsing so when parsing streams we have to relax that requirement.
