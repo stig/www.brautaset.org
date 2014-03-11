@@ -35,7 +35,7 @@ download of the full list has finished*.
 SBJson supports streaming of two different types of input:
 
 1. By downloading a stream of not one, but many stand-alone JSON
-   documents. (Twitter provides stream of this type.) See
+   documents. (Twitter provides streams of this type.) See
    [+multiRootParserWithBlock:errorHandler:][].
 2. By *unwrapping a root array* and feed every top-level element
    inside the root to your application, one by one. See
