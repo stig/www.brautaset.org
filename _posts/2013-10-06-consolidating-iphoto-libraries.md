@@ -54,4 +54,23 @@ In the end I had 255 directories with on average 130 files in each. I imported t
 
 We are really happy with the result :-)
 
+**Update 2014/05/08:** A few days ago I received a question to this post from Jeff Ruth. Because it, and its answer, may be useful to more people I asked if I could reproduce it here.
+
+> Hello and thanks for the post about your iPhoto consolidation and de-duping. I’d love to do something similar. We have three Apple laptops (two MacBooks from 2008 and 2009) and a new Macbook Pro Retina. In all, about 3-5 iPHoto libraries, I think. Your project seems to be what we’d like to do. However, I’m not sure how to do it. If you have a minute, could you please tell me how I can use your code, or do this a different way, without the program? I am not a programmer, but have used Terminal now and then and am not afraid to experiment if necessary. Thanks a lot, in advance.
+>
+> Jeff Ruth
+
+My response:
+
+> Do your libraries contain duplicates? If not, I wouldn’t bother with this approach. We only needed to because we had imported the same photos into multiple photo albums.
+>
+> The script was intended for developers, but if you want to try you have to copy the file (dedupe-media.sh) to your local disk, then make it executable. In Terminal, you do that with ‘chmod +x dedupe-media.sh’. (Without the quotes.) You then run the script like so:
+
+> `/path/to/dedupe-media.sh /path/to/iPhotoLibrary/Masters /destination/path`
+>
+> If you want to run this on multiple laptops you may want to make the destination a single USB disk (or something) so probably /Volumes/My\_USB\_Disk\_Name. This disk will accumulate unique photos. The product is just a big folder of files, which will have to imported into a new library. All metadata (faces, etc) will have to attached again.
+>
+> Please note this script comes with NO WARRANTY OF ANY KIND. You must take adequate backup of your libraries before running the above. Although I have made my best attempt at making the script work (and it does for me!), I take no responsibility for any data loss you may experience.
+
+
 [md5 hash]: http://en.wikipedia.org/wiki/MD5
