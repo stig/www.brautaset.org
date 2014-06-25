@@ -99,9 +99,13 @@ offer fruits and berries liberally. As long as he's healthy &
 developing well we're happy to let him have a bit of control over his
 food.
 
-**********
 
-Note: There is also [BabyCalm](http://babycalm.co.uk), for "calmer
-babies and happier parents". I haven't read that, but based on my
-experience with ToddlerCalm I will definitively snap it up once we
-have a baby in the house again.
+*Note: There is also a book
+[BabyCalm: A Guide for Calmer Babies and Happier Parents][babybook]
+and accompanying [BabyCalm website](http://babycalm.co.uk) for parents
+of children that haven't reached toddlerhood yet. I haven't read that,
+but based on my experience with ToddlerCalm I will definitively snap
+it up once we have a baby in the house again.*
+
+[babybook]: http://www.amazon.co.uk/BabyCalm-Calmer-Babies-Happier-Parents-ebook/dp/B008IQY7PW/ref=sr_1_1?ie=UTF8&qid=1403733078&sr=8-1&keywords=babycalm
+
