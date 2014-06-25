@@ -21,7 +21,7 @@ layout: default
         <p>Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
         {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
         {% endif %}
-        <a href="https://twitter.com/intent/tweet?text=@stigbra&url=http://superloopy.io{{ page.url }}">Comment</a> or <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }} @&url=http://superloopy.io{{ page.url }}">Share</a> it on Twitter.</p>
+        <a href="https://twitter.com/intent/tweet?text=@stigbra&url=http://superloopy.io{{ page.url }}">Comment</a> or <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }} @&url=http://superloopy.io{{ page.url }}">Share</a> it on Twitter.
 
         {% if page.previous %}
         <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
@@ -32,8 +32,9 @@ layout: default
         The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
         {% endif %}
 
-        You can browse <a href="/articles/tagged.html">articles by tag</a> or view
-        <a href="/articles.html">all articles</a> in a chronological list.
+        You can also browse <a href="/articles/tagged.html">articles
+        by tag</a> or view
+        <a href="/articles.html">all articles</a> in a chronological list.</p>
 
     </nav>
 
