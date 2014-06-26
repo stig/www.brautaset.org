@@ -1,5 +1,5 @@
 ---
-title: Toddlercalm
+title: ToddlerCalm
 layout: post
 ---
 
@@ -7,10 +7,10 @@ layout: post
 are from a book called "ToddlerCalm: A guide for calmer toddlers and
 happier parents" by Sarah Ockwell-Smith. It is available for
 [Kindle][] and [paperback][].  In the UK there's also a
-[ToddlerCalm 3-hour workshop][workshop]. We have found what we learnt
+[ToddlerCalm 3-hour workshop][workshop]. We have found what we learned
 invaluable in helping us understand what our son is going through
 growing up. (And thus how to deal with him.)  This post is about what
-we learnt from reading the book and attending the workshop.
+we learned from reading the book and attending the workshop.
 
 [Kindle]: http://www.amazon.co.uk/ToddlerCalm-calmer-toddlers-happier-parents-ebook/dp/B00CQ5R186/ref=sr_1_1?s=books&ie=UTF8&qid=1394282509&sr=1-1&keywords=toddlercalm
 [paperback]: http://www.amazon.co.uk/ToddlerCalm-calmer-toddlers-happier-parents/dp/0349401055/ref=tmm_pap_title_0?ie=UTF8&qid=1394282509&sr=1-1
@@ -33,19 +33,19 @@ I was getting stressed out by him failing to do so. We tried
 everything: carrying him around for hours in a dark room, singing to
 him or playing calming music. It didn't help much, and we were getting
 exhausted. The course taught us that it is entirely normal for
-toddlers to sleep irregularly until about 4, and as soon as we learnt
+toddlers to sleep irregularly until about 4, and as soon as we learned
 that this was normal it became a lot easier to cope with. He's not
 abnormal: he just doesn't sleep as much *as we would like*. He doesn't
 go to sleep much earlier now, but it doesn't bother us much. Bedtimes
 are much less stressful.
 
-One of the most important things I learnt about was the
+One of the most important things I learned about was the
 [Theory of Mind](http://en.wikipedia.org/wiki/Theory_of_mind) and its
 importance on social interaction. This is what allows us to see things
 from another person's perspective. Until toddlers develop this they
 simply won't understand the importance of sharing, for example, or why
 it's bad to hit other kids. They don't have the mental development for
-it. And the real kincher is how late Theory of Mind develops---much
+it. And the real clincher is how late Theory of Mind develops---much
 later than I would have thought. According to Victoria only 10% of
 kids develop it as early as 4 years, and *10% still haven't developed
 it at age 6*.
@@ -59,7 +59,7 @@ do in this situation is punishing your child, for example by calling a
 time-out and sending the kid to the naughty step. They simply won't
 understand why you're being so mean to them. Victoria underlined this
 with a thought experiment: try to imagine you've had a bad day and
-you're crying & hugging your parter when she or he comes home. But
+you're crying & hugging your partner when she or he comes home. But
 instead of asking you what's up and giving you their full attention,
 your partner drag you off to a corner and insists you sit there until
 you "have calmed down and stopped crying". *How would it make you
@@ -69,10 +69,10 @@ child, with their much more immature brain development, would?
 
 Meal times also used to be stressful for us. Again, a lot of that
 stress came from wrong expectations: that he would eat a balanced meal
-every mealtime, and that he would eat at a time of our chosing.  We
+every mealtime, and that he would eat at a time of our choosing.  We
 knew that we didn't want to force him to eat, so we had to learn to
 let him eat what he wants at meal times. Within limits, of course, as
-he choses his food from a selection of foods we provide. One
+he chooses his food from a selection of foods we provide. One
 interesting thing we've found is that our son goes through phases
 exploring certain types of food. For example he refused anything green
 for a while, but at the moment broccoli is one of his favourites. He
@@ -87,7 +87,7 @@ fairly varied; even if every *meal* is not.
 As an aside, it could be that the whole concept of a "balanced diet"
 is flawed. If you look around a bit it turns out lots of tribal
 societies eat incredibly unvaried diets. Eskimos, for example, eat
-fish and sealfat almost exclusively: no vegetables at all. (Iceberg
+fish and seal fat almost exclusively: no vegetables at all. (Iceberg
 lettuce doesn't take its name from its growing conditions, after all.)
 The [Maasai diet](http://en.wikipedia.org/wiki/Maasai_people#Diet) is
 also predominantly meat.
@@ -95,7 +95,7 @@ also predominantly meat.
 *Note: There is also a book
 [BabyCalm: A Guide for Calmer Babies and Happier Parents][babybook]
 and accompanying [BabyCalm website](http://babycalm.co.uk) for parents
-of children that haven't reached toddlerhood yet. I haven't read that,
+of children that haven't reached toddler-hood yet. I haven't read that,
 but based on my experience with ToddlerCalm I will definitively snap
 it up once we have a baby in the house again.*
 
