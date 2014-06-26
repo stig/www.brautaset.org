@@ -36,18 +36,19 @@ exhausted. The course taught us that it is entirely normal for
 toddlers to sleep irregularly until about 4, and as soon as we learnt
 that this was normal it became a lot easier to cope with. He's not
 abnormal: he just doesn't sleep as much *as we would like*. He doesn't
-go to sleep much earlier now, but it doesn't bother us so much now.
+go to sleep much earlier now, but it doesn't bother us much. Bedtimes
+are much less stressful.
 
-One of the most important thing I learnt was about the
+One of the most important things I learnt about was the
 [Theory of Mind](http://en.wikipedia.org/wiki/Theory_of_mind) and its
 importance on social interaction. This is what allows us to see things
 from another person's perspective. Until toddlers develop this they
 simply won't understand the importance of sharing, for example, or why
-it's bad to hit other kids---they don't have the mental development to
-support it. And the real kincher is how late this Theory of Mind
-develops---much later than I would have thought. According to Victoria
-only 10% of kids develop it as early as 4 years, and *10% still haven't
-developed it at age 6*.
+it's bad to hit other kids. They don't have the mental development for
+it. And the real kincher is how late Theory of Mind develops---much
+later than I would have thought. According to Victoria only 10% of
+kids develop it as early as 4 years, and *10% still haven't developed
+it at age 6*.
 
 Another point Victoria was keen to stress was how kids' limited brain
 development makes them prone to be overcome by emotion. Their animal
@@ -67,21 +68,21 @@ don't think you would learn anything positive from it, do you think a
 child, with their much more immature brain development, would?
 
 Meal times also used to be stressful for us. Again, a lot of that
-stresss came from wrong expectations: that he would eat a balanced
-meal every mealtime, and that he would eat at a time of our chosing.
-We knew that we didn't want to force him to eat. Over time we learnt
-to just let him eat what he wants at meal times. Within limits, of
-course, as he choses his food from a selection of foods we
-provide. One interesting thing we've found is that our son goes
-through phases exploring certain types of food. For example he refused
-anything green for a while, but at the moment broccoli is one of his
-favourites. He also will sometimes not eat things if they are mixed
-together, but will wolf them down separately. We also reasoned that we
-have evolved to graze---we doubt stone-age man had three square meals
-a day, with no snack in between---so we offer fruits and berries
-liberally. As long as he's healthy & developing well we're happy to
-let him have a bit of control over his food.  In hindsight his diet is
-actually fairly varied; even if every *meal* is not.
+stress came from wrong expectations: that he would eat a balanced meal
+every mealtime, and that he would eat at a time of our chosing.  We
+knew that we didn't want to force him to eat, so we had to learn to
+let him eat what he wants at meal times. Within limits, of course, as
+he choses his food from a selection of foods we provide. One
+interesting thing we've found is that our son goes through phases
+exploring certain types of food. For example he refused anything green
+for a while, but at the moment broccoli is one of his favourites. He
+also will sometimes not eat things if they are mixed together, but
+will wolf them down separately. We also reasoned that we have evolved
+to graze---we doubt stone-age man had three square meals a day, with
+no snack in between---so we offer fruits and berries liberally. As
+long as he's healthy & developing well we're happy to let him have a
+bit of control over his food.  In hindsight his diet is actually
+fairly varied; even if every *meal* is not.
 
 As an aside, it could be that the whole concept of a "balanced diet"
 is flawed. If you look around a bit it turns out lots of tribal
