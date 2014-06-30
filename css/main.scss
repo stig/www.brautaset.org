@@ -144,6 +144,10 @@ h2 a {
 }
 
 header {
+    h1 {
+       text-align: center;
+    }
+
     font-size: $fontsize;
 
     a {
@@ -153,8 +157,8 @@ header {
     margin-top: 0.5em;
 
     nav {
-        margin-bottom: 2em;
-        border-bottom: 1px;
+        text-align: center;
+        border-bottom: 1px solid black;
     }
 
 }
