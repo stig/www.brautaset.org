@@ -88,9 +88,9 @@ As an aside, it could be that the whole concept of a "balanced diet"
 is flawed. If you look around a bit it turns out lots of tribal
 societies eat incredibly unvaried diets. Eskimos, for example, eat
 fish and seal fat almost exclusively: no vegetables at all. (Iceberg
-lettuce doesn't take its name from its growing conditions, after all.)
-The [Maasai diet](http://en.wikipedia.org/wiki/Maasai_people#Diet) is
-also predominantly meat.
+lettuce is not named after its growing conditions, after all.) The
+[Maasai diet](http://en.wikipedia.org/wiki/Maasai_people#Diet) is also
+predominantly meat.
 
 *Note: There is also a book
 [BabyCalm: A Guide for Calmer Babies and Happier Parents][babybook]
