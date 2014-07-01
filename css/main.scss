@@ -1,4 +1,4 @@
-        /*
+/*
  * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -94,13 +94,15 @@ textarea {
    ========================================================================== */
 $fontsize: 1.25em;
 
+$lightyellow: #ffffe0;
+$whitesmoke: #f0f0ff;
 $lightgray: #eee;
 $darkgray: #333;
 $lightblue: #f8f8ff;
 $aaa: #aaa;
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 body {
@@ -161,10 +163,25 @@ header {
 
 }
 
+
+article, footer > nav {
+    a:link {
+        background-color: $lightyellow;
+    }
+
+    a:visited {
+        background-color: $whitesmoke;
+    }
+}
+
+
+
+
 article {
     font-size: $fontsize;
     padding: 0;
     margin-bottom: 0.7em;
+
 
     p, pre, ul, ol {
         color: $darkgray;

@@ -114,6 +114,11 @@ header {
     text-align: center;
     border-bottom: 1px solid black; }
 
+article a:link, footer > nav a:link {
+  background-color: lightyellow; }
+article a:visited, footer > nav a:visited {
+  background-color: #f0f0ff; }
+
 article {
   font-size: 1.25em;
   padding: 0;
