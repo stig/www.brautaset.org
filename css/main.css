@@ -118,6 +118,8 @@ article a:link, footer > nav a:link {
   background-color: lightyellow; }
 article a:visited, footer > nav a:visited {
   background-color: #f0f0ff; }
+article h1 a, article h2 a, article h3 a, article h4 a, footer > nav h1 a, footer > nav h2 a, footer > nav h3 a, footer > nav h4 a {
+  background-color: white; }
 
 article {
   font-size: 1.25em;

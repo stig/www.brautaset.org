@@ -172,6 +172,12 @@ article, footer > nav {
     a:visited {
         background-color: $whitesmoke;
     }
+
+    h1, h2, h3, h4 {
+        a {
+          background-color: white;
+        }
+    }
 }
 
 
