@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quiet Please
+tags: [Hacks]
 ---
 
 In January I bought a guitar and a small practice amp. As I noted back then the amp has

@@ -2,6 +2,7 @@
 layout: post
 title: Money Transfer
 imported: 31/01/2013
+tags: [Reviews]
 ---
 
 Why, why, *why* do the banks in this country insist on staying put in the dark ages?

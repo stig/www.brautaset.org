@@ -1,6 +1,7 @@
 ---
 title: Delighting your users with SBJson 4
 layout: post
+tags: [Development, Objective-C]
 ---
 
 I was asked to speak about SBJson at

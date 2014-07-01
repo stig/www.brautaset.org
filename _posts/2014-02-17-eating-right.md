@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Losing weight by eating right
+tags: [Resolutions]
 ---
 
 Losing weight is one of my new year [resolutions][]. I started on a

@@ -1,6 +1,7 @@
 ---
 title: MiniMax and AlphaBeta Search
 layout: post
+tags: [Development]
 ---
 
 [zero sum]: http://en.wikipedia.org/wiki/Zero-sum

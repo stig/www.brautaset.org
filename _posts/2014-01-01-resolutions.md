@@ -1,6 +1,7 @@
 ---
 title: Resolutions
 layout: post
+tags: [Resolutions]
 ---
 
 The Brautasets stayed in London again this year. We do not like to travel at

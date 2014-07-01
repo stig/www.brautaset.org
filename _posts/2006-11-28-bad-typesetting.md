@@ -2,6 +2,7 @@
 layout: post
 title: Bad Typesetting
 imported: 2013-01-30
+tags: [Reviews]
 ---
 
 While I'm on the subject of writing, I thought I'd sneak in a note about typesetting. I'm

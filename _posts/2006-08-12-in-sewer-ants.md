@@ -5,7 +5,7 @@ imported: 31/01/2013
 ---
 
 I remember laughing very hard at a comic-book joke as a kid. A red indian with horrific
-injuries goes to visit his doctor:
+injuries goes to visit his witch-doctor:
 
 >  ---What brought this on? <br />
 >  ---I was out hunting when an eagle attacked me, but luckily it dropped me in front of a flock of runaway buffallo! <br />

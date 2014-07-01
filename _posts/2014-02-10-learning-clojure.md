@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning Clojure by Solving Euler Problems
+tags: [Development, Clojure]
 ---
 
 I'm always interested in new technologies and languages. We're using Scala at work, and I really quite like the language. I really do like static (inferred) types. But on the other hand, as an AI graduate Lisp holds a certain allure and is a language I've wanted to learn for a long time but somehow never really gotten around to. One (for me) silly roadblock has been the stupid names of functions like `cdr` and `car` rather than `first` and `rest`. Clojure actually fixes this deficiency in Lisp, so I decided to give it a go.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What now for SBJson?
-tags: [Objective-C, Featured]
+tags: [Objective-C, Development]
 ---
 
 In the middle of 2007 I was given roughly six months notice that I would be made redundant

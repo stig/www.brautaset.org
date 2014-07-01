@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Goodbye GPL, hello BSD?
+tags: [Development]
 ---
 
 Here's a question that's been on my mind lately:

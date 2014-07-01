@@ -2,7 +2,6 @@
 layout: post
 title: What I want for my Birthday
 imported: 31/01/2013
-tags: [Featured]
 ---
 
 According to the [World Land Trust](http://worldlandtrust.org), citing [The

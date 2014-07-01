@@ -2,6 +2,7 @@
 layout: post
 title: Untraditional Refactoring Technique
 imported: 31/01/2013
+tags: [Development]
 ---
 
 Bizzarely, today I found myself deleting a test script preparing to refactor the code it
@@ -14,7 +15,7 @@ by the consumers of the API it provides, but only of its own tests.
 
 The particular test I deleted was checking to see whether all the Perl modules in the
 project actually compiles. By removing it we can simply prune modules that are not even
-loaded off disk. The test coverage report I'm going is produced by running the project's
+loaded off disk. The test coverage report I'm going by is produced by running the project's
 unit-tests as well as running all the other individual projects against it. Our build
 system checks all of these out of subversion for the builds, hence I could not simply omit
 to run the offending test.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Embedding Cocoa Frameworks
-tags: [Objective-C]
+tags: [Objective-C, Development]
 ---
 
 Cocoa has a really neat feature that allows you to embed a framework inside your
