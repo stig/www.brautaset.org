@@ -75,15 +75,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-a {
-  color: inherit; }
-
 body {
-  margin: 0 5px;
-  padding-bottom: 5em; }
+  font-family: "Helvetica Neue", sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
 
 h1, h2, h3 {
-  font-family: "Helvetica Neue", sans-serif;
   font-weight: normal;
   margin: 0.5em 0; }
 
@@ -100,26 +99,19 @@ nav ul {
   nav ul li:last-child {
     padding-right: 0; }
 
-h2 a {
-  text-decoration: none; }
+.meta {
+  color: #aaaaaa;
+  font-size: 90%; }
 
 header {
   font-size: 1.4em;
-  margin-top: 0.5em; }
-  header h1 {
-    text-align: center; }
-  header a {
-    text-decoration: none; }
-  header nav {
-    text-align: center;
-    border-bottom: 1px solid black; }
+  text-align: center;
+  border-bottom: 1px solid black; }
 
-article a:link, footer > nav a:link {
+article a:link, footer a:link {
   background-color: lightyellow; }
-article a:visited, footer > nav a:visited {
+article a:visited, footer a:visited {
   background-color: #f0f0ff; }
-article h1 a, article h2 a, article h3 a, article h4 a, footer > nav h1 a, footer > nav h2 a, footer > nav h3 a, footer > nav h4 a {
-  background-color: white; }
 
 article {
   font-size: 1.4em;
@@ -127,7 +119,7 @@ article {
   margin-bottom: 0.7em; }
   article p, article pre, article ul, article ol {
     color: #333333;
-    line-height: 1.5em;
+    line-height: 1.5;
     margin: 0.75em 0; }
   article table {
     margin: 0 auto 0 auto; }
@@ -149,9 +141,6 @@ article {
     float: left;
     clear: right;
     margin-right: 0.5em; }
-  article .meta {
-    color: #aaaaaa;
-    font-size: 90%; }
 
 footer {
   border-top: 1px solid #ccc;

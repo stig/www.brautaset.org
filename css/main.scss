@@ -101,17 +101,16 @@ $darkgray: #333;
 $lightblue: #f8f8ff;
 $aaa: #aaa;
 
-a {
-  color: inherit;
+body {
+    font-family: "Helvetica Neue", sans-serif;
 }
 
-body {
-    margin: 0 5px;
-    padding-bottom: 5em;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
-    font-family: "Helvetica Neue", sans-serif;
     font-weight: normal;
     margin: 0.5em 0;
 }
@@ -139,32 +138,21 @@ nav {
 
 }
 
-h2 a {
-    text-decoration: none;
+
+.meta {
+    color: $aaa;
+    font-size: 90%;
 }
+
 
 header {
-    h1 {
-       text-align: center;
-    }
-
     font-size: $fontsize;
-
-    a {
-        text-decoration: none;
-    }
-
-    margin-top: 0.5em;
-
-    nav {
-        text-align: center;
-        border-bottom: 1px solid black;
-    }
-
+    text-align: center;
+    border-bottom: 1px solid black;
 }
 
 
-article, footer > nav {
+article, footer {
     a:link {
         background-color: $lightyellow;
     }
@@ -172,26 +160,16 @@ article, footer > nav {
     a:visited {
         background-color: $whitesmoke;
     }
-
-    h1, h2, h3, h4 {
-        a {
-          background-color: white;
-        }
-    }
 }
-
-
-
 
 article {
     font-size: $fontsize;
     padding: 0;
     margin-bottom: 0.7em;
 
-
     p, pre, ul, ol {
         color: $darkgray;
-        line-height: 1.5em;
+        line-height: 1.5;
         margin: 0.75em 0;
     }
 
@@ -226,12 +204,6 @@ article {
         clear: right;
         margin-right: 0.5em;
     }
-
-    .meta {
-        color: $aaa;
-        font-size: 90%;
-    }
-
 }
 
 footer {
