@@ -23,7 +23,10 @@ A full chronological list of posts is available on the <a href="/articles.html">
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.tags contains tag.first %}
-      {% include post_li.html %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="meta">({{ post.date | date_to_string }})</span>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
