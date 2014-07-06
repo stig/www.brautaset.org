@@ -206,7 +206,7 @@ article {
     pre, code {
         background-color: #eef;
         font-family: Menlo, Monaco, Courier, monospace;
-        font-size: 0.9em;
+        font-size: 90%;
         padding: 0.2em;
     }
 
@@ -227,11 +227,9 @@ article {
         margin-right: 0.5em;
     }
 
-    ul.posts {
-        div.meta {
-            color: $aaa;
-            font-size: 90%;
-        }
+    .meta {
+        color: $aaa;
+        font-size: 90%;
     }
 
 }

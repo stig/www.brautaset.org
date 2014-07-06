@@ -136,7 +136,7 @@ article {
   article pre, article code {
     background-color: #eef;
     font-family: Menlo, Monaco, Courier, monospace;
-    font-size: 0.9em;
+    font-size: 90%;
     padding: 0.2em; }
   article .fullwidth img {
     width: 100%;
@@ -149,7 +149,7 @@ article {
     float: left;
     clear: right;
     margin-right: 0.5em; }
-  article ul.posts div.meta {
+  article .meta {
     color: #aaaaaa;
     font-size: 90%; }
 
