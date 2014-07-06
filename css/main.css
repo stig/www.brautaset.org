@@ -16,7 +16,7 @@ textarea {
   color: #222; }
 
 body {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.4; }
 
 /*
@@ -104,7 +104,7 @@ h2 a {
   text-decoration: none; }
 
 header {
-  font-size: 1.25em;
+  font-size: 1.4em;
   margin-top: 0.5em; }
   header h1 {
     text-align: center; }
@@ -122,7 +122,7 @@ article h1 a, article h2 a, article h3 a, article h4 a, footer > nav h1 a, foote
   background-color: white; }
 
 article {
-  font-size: 1.25em;
+  font-size: 1.4em;
   padding: 0;
   margin-bottom: 0.7em; }
   article p, article pre, article ul, article ol {
