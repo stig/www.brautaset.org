@@ -94,7 +94,6 @@ textarea {
    ========================================================================== */
 $fontsize: 1.4em;
 
-$lightyellow: #ffffe0;
 $whitesmoke: #f0f0ff;
 $lightgray: #eee;
 $darkgray: #333;
@@ -154,7 +153,7 @@ header {
 
 article, footer {
     a:link {
-        background-color: $lightyellow;
+        background-color: lightyellow;
     }
 
     a:visited {
