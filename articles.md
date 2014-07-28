@@ -3,16 +3,23 @@ title: Articles
 layout: page
 ---
 
-This page lists all articles available on this this site in reverse chronological order.
-Alternatively the [front page](/) now contains the ten most recent posts with an excerpt
-of each. You can also browse the [articles by tag](/articles/tagged.html).
-
-Some of these articles used to be available on---now discontinued---blogs I used
-to have but I wanted to consolidate them in one place so now they are here. It used to be
-that cool URLs never changed, but these did---and I'm OK with that.
+All available articles; most recent first. (Alternatively, browse
+[by tag](/articles/tagged.html).) Some of these used to be elsewhere,
+but I wanted to collect them all together & now they are here. (It
+used to be that cool URLs never changed, but these did---and I'm OK
+with that.)
 
 <ul class="posts">
   {% for post in site.posts %}
-    {% include post_li.html %}
+
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <div class="meta">Posted {{ post.date | date_to_string }}.
+    {% if post.tags != empty %}In 
+        {% for tag in post.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+    {% endif %}
+    </div>
+  </li>
+
   {% endfor %}
 </ul>

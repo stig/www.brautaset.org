@@ -106,7 +106,7 @@ nav ul {
 header {
   font-size: 1.4em;
   text-align: center;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #ccc; }
 
 article a:link, footer a:link {
   background-color: lightyellow; }
