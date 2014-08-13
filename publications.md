@@ -3,8 +3,7 @@ title: Publications
 layout: page
 ---
 
-This is a list of talk & articles published elsewhere that I am aware
-of.
+This is a list of some of my talks & articles hosted elsewhere:
 
 * [Delighting your users with SBJson 4](https://vimeo.com/86478323)<br/>Pecha Kucha style talk at NSLondon meetup.
 * [Overcoming U-turns and Dead Ends: Lessons of using Scala, Akka & Spray on Heroku](http://skillsmatter.com/podcast/scala/overcoming-u-turns-and-dead-ends-lessons-of-using-scala-akka-spray-on-heroku)<br/>Presentation at Scala eXchange 2013 with Sam Dean.
