@@ -21,9 +21,12 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.4em;
+    line-height: 1.4m;
 }
+
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -94,7 +97,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-$fontsize: 1.4em;
 
 $whitesmoke: #f0f0ff;
 $lightgray: #eee;
@@ -103,7 +105,7 @@ $lightblue: #f8f8ff;
 $aaa: #aaa;
 
 body {
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Helvetica Neue", "Verdana", "Arial", sans-serif;
 }
 
 a {
@@ -147,9 +149,9 @@ nav {
 
 
 header {
-    font-size: $fontsize;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
+    h1 {
+        padding-top: 48px;
+    }
 }
 
 
@@ -164,8 +166,8 @@ article, footer {
 }
 
 article {
-    font-size: $fontsize;
     padding: 0;
+
     margin-bottom: 0.7em;
 
     p, pre, ul, ol {
@@ -335,7 +337,7 @@ footer {
 @media only screen and (min-width: 50em) {
     /* Style adjustments for viewports that meet the condition */
     body {
-        width: 45em;
+        width: 35em;
         margin: 0 auto;
     }
 }
