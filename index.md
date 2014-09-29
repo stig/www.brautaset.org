@@ -1,23 +1,44 @@
 ---
 layout: page
-title: Summary of recent output
+title: I'm Stig
 ---
 
-Here's what I've been writing most recently:
+I'm a polyglot software developer, making software for fun and profit. I've
+released toys and free software projects in C, Prolog, Perl, Objective-C, Java
+and Scala. Employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
+Objective-C, Scala and English.
 
-{% for post in site.posts limit: 5 %}
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+This is my website. As part of it I maintain [a blog](/articles.html),
+and these are my two most recent articles:
 
-<p>{{ post.excerpt }}</p>
+<ul>
+{% for post in site.posts limit: 2 %}
 
-<div class="meta">Posted {{ post.date | date_to_string }}.
+<li>
+<span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+<span class="meta">&mdash; {{ post.date | date_to_string }}</span>
 
-{% if post.tags != empty %}Tagged 
+{{ post.excerpt }}
 
-  {% for tag in post.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-
-{% endif %}
-</div>
-
+</li>
 
 {% endfor %}
+</ul>
+
+<!-- testing 2,34 -->
+
+Free & Open Source Software
+---------------------------
+
+I'm the author of <a href="http://sbjson.org">SBJson</a>, a popular
+JSON parser & generator for Objective-C. You are welcome to use
+it&mdash;and any other project available from my
+[Github profile][github]&mdash;for free, as long as you adhere to
+their respective licenses.
+
+In most cases the license requires that you have to attribute me in
+your application. I understand that this attribution requirement can
+sometimes be a problem. If you let me know about the problem, I may
+agree to grant you an alternative license.
+
+[github]: http://github.com/stig

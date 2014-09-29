@@ -3,35 +3,16 @@ title: About Stig Brautaset
 layout: page
 ---
 
-I'm a polyglot software developer, making software for fun and profit. I've
-released toys and free software projects in C, Prolog, Perl, Objective-C, Java
-and Scala. Employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
-Objective-C, Scala and English.
-
-I am Norwegian but also consider myself a Londoner. I have lived here
-since September 2000, except for March 2011 to February 2012 when I
-lived in Hong Kong.
-
-Code by me
-----------
-
-My [GitHub profile][github] lists many software projects, some of
-which may be useful to you. (Though most probably are not.) You are
-welcome to make use of these, for free, as long as you adhere to their
-respective licenses. For the ones provided under a BSD, this means
-that you have to attribute me in your application.
-
-I understand that the attribution requirement can sometimes be a
-problem. Send me a mail and I'm sure we can come to an agreement.
-(There may be a charge, or mutually agreeable attribution.)
-
-[github]: http://github.com/stig
+I am Norwegian but consider myself "part Brit". I moved to London to
+attend University in September 2000, and stayed until March
+2011&mdash;when I moved to Hong Kong. It didn't really work out, so I
+moved back to London in February 2012.
 
 Elsewhere
 ---------
 
-I have profiles on various sites all over the web, in various states
-of lacking attention, including these:
+I have profiles on many places across the web, in various states of
+lacking attention, including these:
 
 * [Twitter](http://twitter.com/stigbra)
 * [LinkedIn](http://uk.linkedin.com/in/stigbrautaset)
@@ -46,5 +27,3 @@ Unless you already have my phone number, I suggest trying one of:
 
 * <http://twitter.com/stigbra>
 * <stig@brautaset.org>
-
-
