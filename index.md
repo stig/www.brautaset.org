@@ -14,13 +14,11 @@ and these are my two most recent articles:
 <ul>
 {% for post in site.posts limit: 2 %}
 
-<li>
-<span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-<span class="meta">&mdash; {{ post.date | date_to_string }}</span>
-
-{{ post.excerpt }}
-
-</li>
+  <li>
+    <span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+    <span class="meta">&mdash; {{ post.date | date_to_string }}</span>
+    {{ post.excerpt }}
+  </li>
 
 {% endfor %}
 </ul>

@@ -141,12 +141,11 @@ nav {
 
 }
 
-
 .meta {
     color: $aaa;
     font-size: 90%;
+    display: none
 }
-
 
 header {
     h1 {
@@ -331,6 +330,7 @@ footer {
         margin: 0 auto;
     }
 
+    .meta { display: inline }
 }
 
 @media only screen and (min-width: 50em) {
@@ -339,6 +339,8 @@ footer {
         width: 35em;
         margin: 0 auto;
     }
+
+    .meta { display: inline }
 }
 
 
