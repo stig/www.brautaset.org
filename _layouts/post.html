@@ -3,40 +3,35 @@ layout: default
 ---
 
 <header>
-    {% include nav.html %}
-    <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 </header>
 
 <article>
-    {{ content }}
+  {{ content }}
 </article>
 
 <footer>
 
-    <nav>
-        <p>Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
-        {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-        {% endif %}
-        <a href="https://twitter.com/intent/tweet?text=@stigbra&url=http://superloopy.io{{ page.url }}">Comment</a> or <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }} @&url=http://superloopy.io{{ page.url }}">Share</a> it on Twitter.
+  <nav>
+    <p>Posted {{ page.date | date_to_string }}{% if page.tags == empty %}.{% else %} in
+      {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+      {% endif %}
+      <a href="https://twitter.com/intent/tweet?text=@stigbra&url=http://superloopy.io{{ page.url }}">Comment</a> or <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }} @&url=http://superloopy.io{{ page.url }}">Share</a> it on Twitter.
 
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-        was the previous article.
-        {% endif %}
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+      was the previous article.
+      {% endif %}
 
-        {% if page.next %}
-        The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
-        {% endif %}
+      {% if page.next %}
+      The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
+      {% endif %}
 
-        You can also browse <a href="/articles/tagged.html">articles
-        by tag</a> or view
-        <a href="/articles.html">all articles</a> in a chronological list.</p>
+      You can also browse <a href="/articles/tagged.html">articles by
+        tag</a> or view a chronological list
+        of <a href="/articles.html">all articles</a>.</p>
+  </nav>
 
-    </nav>
-
-        <p>Copyright
-        &copy; {{ site.time | date: '%Y' }} Stig Brautaset.
-        </p>
+    <p>Copyright &copy; Stig Brautaset.</p>
 
 </footer>
-
