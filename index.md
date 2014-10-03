@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I'm Stig
+title: Stig Brautaset
 ---
 
 I'm a polyglot software developer, making software for fun and profit. I've
@@ -9,7 +9,7 @@ and Scala. Employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
 Objective-C, Scala and English.
 
 This is my website. As part of it I maintain [a blog](/articles.html),
-and these are my two most recent articles:
+and these are excerpts from my two most recent articles:
 
 <ul>
 {% for post in site.posts limit: 2 %}
@@ -23,16 +23,13 @@ and these are my two most recent articles:
 {% endfor %}
 </ul>
 
-<!-- testing 2,34 -->
-
 Free & Open Source Software
 ---------------------------
 
-I'm the author of <a href="http://sbjson.org">SBJson</a>, a popular
-JSON parser & generator for Objective-C. You are welcome to use
-it&mdash;and any other project available from my
-[Github profile][github]&mdash;for free, as long as you adhere to
-their respective licenses.
+I wrote <a href="http://sbjson.org">SBJson</a>, a popular JSON parser
+& generator for Objective-C. You are welcome to use it&mdash;and any
+other project available from my [Github profile][github]&mdash;for
+free, as long as you adhere to their respective licenses.
 
 In most cases the license requires that you have to attribute me in
 your application. I understand that this attribution requirement can
