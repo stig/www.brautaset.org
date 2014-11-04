@@ -3,10 +3,9 @@ title: About Stig Brautaset
 layout: page
 ---
 
-I am Norwegian but consider myself "part Brit". I moved to London to
-attend University in September 2000, and stayed until March
-2011&mdash;when I moved to Hong Kong. It didn't really work out, so I
-moved back to London in February 2012.
+I am Norwegian but consider myself "part Brit", having lived in London
+most of my adult life. I started at University of Westminster in
+September 2000 and have pretty much stayed since.
 
 Elsewhere
 ---------

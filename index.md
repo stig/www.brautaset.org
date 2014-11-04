@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Stig Brautaset
+title: Superloopy
 ---
 
-I'm a polyglot software developer, making software for fun and profit. I've
-released toys and free software projects in C, Prolog, Perl, Objective-C, Java
-and Scala. Employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
-Objective-C, Scala and English.
+I'm a polyglot software developer for fun and profit. I love playing
+with new languages and over the years have toyed with C, Prolog, Perl,
+Objective-C, Java, Scala & Clojure. Employers have paid me to write
+HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala and English.
 
-This is my website. As part of it I maintain [a blog](/articles.html),
-and these are excerpts from my two most recent articles:
+This is my personal website. As part of it I maintain
+[a blog](/articles.html), and these are excerpts from my two most
+recent articles:
 
 <ul>
 {% for post in site.posts limit: 2 %}
