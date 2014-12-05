@@ -49,15 +49,15 @@ your own computer. However, many of us carry around our computers
 these days; and most mail providers offer web mail, so I don't think
 this is a major roadblock.
 
-Taken to the extreme this snag could land you in real trouble if you
-registered with an email address you no longer have access to. (Your
-work email address, for example.) With the traditonal approach you
-could luck out and remember the password, and thus be able to login.
-Although whether you’d be able to update your email address is another
-matter: well-behaved sites usually send an email to your old address
-for confirmation that you actually want to update. Recommending people
-to register a secondary email address, or a phone number that can
-receive SMS, could save your bacon in this situation.
+Taken to the extreme this snag could land users in real trouble if
+they registered with an email address they no longer have access to.
+With the traditonal approach you could luck out and remember the
+password, and thus be able to login. (Although whether you’ d be able
+to update your email address is another matter: well-behaved sites
+usually send an email to your old address for confirmation that you
+actually want to update.) Recommending people register a secondary
+email address, or a phone number that can receive SMS, could save some
+support emails in this situation.
 
 I can imagine some people objecting to requiring an email roundtrip
 for to complete user registration. However, many sites already require
