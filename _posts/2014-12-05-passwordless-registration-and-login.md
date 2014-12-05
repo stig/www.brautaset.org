@@ -7,7 +7,7 @@ tags: [ Design ]
 I have been thinking about passwordless login lately, and wondering
 why it's not used more. A couple of days ago I was reading a thread on
 [lobste.rs][] and came across this [blog post][] by Nick Moore on the
-subject. It inspired to post my own thoughts.
+subject. It inspired me to post my own thoughts.
 
 [lobste.rs]: https://lobste.rs/s/hp5btv/invalid_username_or_password_is_a_useless_security_measure
 [blog post]: http://nick.zoic.org/etc/the-selfish-secret-logins-without-passwords/
