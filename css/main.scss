@@ -1,13 +1,6 @@
 ---
 ---
 
-$whitesmoke: #f0f0ff;
-$lightgray: #eee;
-$darkgray: #333;
-$lightblue: #f8f8ff;
-$aaa: #aaa;
-
-
 nav {
 
     a {
@@ -27,7 +20,7 @@ nav {
 
         li + li {
             padding-left: 0.5em;
-            border-left: 1px $lightgray solid;
+            border-left: 1px #eee solid;
         }
 
         li:last-child {
@@ -37,10 +30,16 @@ nav {
 
 }
 
+/* Meta is not displayed by default */
 .meta {
-    color: $aaa;
+    color: #aaa;
     font-size: 90%;
     display: none
+}
+
+/* ... but if you have a big enough screen, why not? */
+@media (min-width: 550px) {
+    .meta { display: inline }
 }
 
 
@@ -69,8 +68,4 @@ footer {
 
     clear: both;
     color: #666;
-}
-
-@media (min-width: 550px) {
-    .meta { display: inline }
 }
