@@ -8,12 +8,13 @@ $lightblue: #f8f8ff;
 $aaa: #aaa;
 
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 nav {
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     ul {
         padding: 0.5em 0 0 0;
         margin: 0;
@@ -42,16 +43,6 @@ nav {
     display: none
 }
 
-
-article, footer {
-    a:link {
-        background-color: lightyellow;
-    }
-
-    a:visited {
-        background-color: $whitesmoke;
-    }
-}
 
 article {
 
