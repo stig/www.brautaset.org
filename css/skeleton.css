@@ -258,9 +258,9 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-    list-style: circle inside; }
+    list-style: circle; }
 ol {
-    list-style: decimal inside; }
+    list-style: decimal; }
 ol, ul {
     margin-top: 0;
     padding-left: 0; }
@@ -272,6 +272,12 @@ ol ul {
     font-size: 90%; }
 li {
     margin-bottom: 0.67rem; }
+
+@media (min-width: 550px) {
+    ol, ul {
+        padding-left: 2rem;}
+}
+
 
 
 /* Code
