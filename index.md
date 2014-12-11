@@ -3,8 +3,8 @@ layout: page
 title: Superloopy
 ---
 
-I'm a polyglot software developer for fun and profit. I love playing
-with new languages and over the years have toyed with C, Prolog, Perl,
+I'm a polyglot software developer, and love playing with differnt
+languages. Over the years have toyed with C, Prolog, Perl,
 Objective-C, Java, Scala & Clojure. Employers have paid me to write
 HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala and English.
 
