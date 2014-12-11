@@ -4,9 +4,9 @@ nav ul {
   list-style-type: none; }
 nav ul li {
   display: inline;
-  padding-right: 0.5em; }
+  padding-right: 0.25em; }
 nav ul li + li {
-  padding-left: 0.5em;
+  padding-left: 0.25em;
   border-left: 1px #eee solid; }
 nav ul li:last-child {
   padding-right: 0; }
@@ -17,11 +17,23 @@ header a {
 header h1 {
   margin-top: 2rem; }
 
+header nav {
+    font-size: 67%;
+}
 .post-meta {
   color: #aaa;
   font-size: 90%;
   display: none; }
 @media (min-width: 550px) {
+    nav ul li {
+        padding-right: 0.5em;
+    }
+    nav ul li + li {
+        padding-left: 0.5em;
+    }
+    header nav {
+        font-size: 100%;
+    }
   .post-meta {
     display: inline; } }
 
