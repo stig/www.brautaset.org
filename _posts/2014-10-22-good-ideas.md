@@ -1,6 +1,7 @@
 ---
 title: Good Ideas
 layout: post
+tags: [Thoughts]
 ---
 
 I mentioned in private conversation recently that I would like to work

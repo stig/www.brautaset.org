@@ -1,11 +1,12 @@
 ---
 title: Smartphone Addiction
 layout: post
+tags: [Thoughts]
 ---
 
 Although I like my iPhone 5---and I'm sure I would *love* the new model
 coming out soon---I've gradually come to realise that I'm addicted to
-using it. 
+using it.
 
 My addiction is not to the phone itself---I can probably count my
 number of monthly phone calls on the fingers on one hand---but to all
@@ -60,4 +61,3 @@ calling me to let me know I'm legible for an *early* upgrade. Is it
 because a) they want to charge me an early upgrade fee, or b) it's
 because the next iPhone is expected to come out soon, and they don't
 particularly like iPhones? Answers on a post card...
-

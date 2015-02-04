@@ -1,6 +1,7 @@
 ---
 title: Nuisance Calls
 layout: post
+tags: [Thoughts]
 ---
 
 I'm interrupted far too often by cold-callers, PPI spammers, or even
