@@ -30,3 +30,9 @@ magazine. This is the result.
 A long, long time ago I used *make* and *cpp* to maintain my website.
 Later I upgraded to *m4*. I ended up writing an article on the
 subject, and this was published in Linux Magazine.
+
+- My [Net-a-Porter Techblog entries](http://techblog.net-a-porter.com/author/stig/) (2013-2014)
+<br/>
+I wrote a few entries on the Net-a-Porter tech blog
+in my various roles there. (Details about my roles on my linkedin
+profile.)
