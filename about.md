@@ -3,9 +3,9 @@ title: About Stig Brautaset
 layout: page
 ---
 
-I am Norwegian but consider myself "part Brit", having lived in London
+I am Norwegian but consider myself Brit*ish*, having lived in England
 most of my adult life. I started at University of Westminster in
-September 2000 and have pretty much stayed since.
+September 2000 and have only spent a year abroad since.
 
 Elsewhere
 ---------
