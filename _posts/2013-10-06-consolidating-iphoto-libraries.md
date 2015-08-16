@@ -74,3 +74,24 @@ My response:
 
 
 [md5 hash]: http://en.wikipedia.org/wiki/MD5
+
+
+**Update 2015/08/16:** One annoyance under iTunes is that the "rolls" or
+"albums" feature is utterly meaningless, because you've got 255 albums named
+"00", "01", "..", "fe", "ff". However, you can fix that by running `exiftool`
+over the resulting files to have them grouped by year and month (there are
+[more examples in the exiftool documentation][exiftool]):
+
+    exiftool -d %Y/%m "-directory<datetimeoriginal" DIR_OF_FILES
+
+This moves the images found in `DIR_OF_FILES` into a directory structure based
+on the year and month the data was taken, as taken from the Exif data in the
+image itself. The structure will be like so:
+
+    2009/11/foo.jpg
+    2009/11/bar.jpg
+    2010/01/baz.jpg
+    2010/01/qux.jpg
+
+
+[exiftool]: http://www.sno.phy.queensu.ca/~phil/exiftool/filename.html
