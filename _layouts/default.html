@@ -1,24 +1,15 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | strip_html }}</title>
+<meta name="description" content="Personal Website">
+<meta name="author" content="Stig Brautaset">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/pygments.css">
+<link rel="stylesheet" href="/css/main.css">
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title | strip_html }}</title>
-    <meta name="description" content="Personal Website">
-    <meta name="author" content="Stig Brautaset">
+<div class="container">
+{{ content }}
+</div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/skeleton.css">
-    <link rel="stylesheet" href="/css/pygments.css">
-    <link rel="stylesheet" href="/css/main.css">
-
-</head>
-<body>
-  <div class="container">
-
-    {{ content }}
-
-  </div>
-</body>
-</html>
