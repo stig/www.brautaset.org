@@ -1,11 +1,13 @@
 body {
     font-family: Optima, "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
+    font-size: 1.1em;
 }
 
+body > article,
 body > header,
 body > footer {
-    max-width: 100ch;
+    max-width: 75ch;
     margin: auto;
     padding: 0 2ch 1em;
     /* For aside */
@@ -24,6 +26,7 @@ body > footer {
 }
 
 @media (min-width: 550px) {
+    body {  font-size: 1.3em;}
     .post-meta {
         display: inline;
     }
