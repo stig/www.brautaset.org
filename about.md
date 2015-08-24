@@ -3,7 +3,7 @@ title: About Stig Brautaset
 layout: page
 ---
 
-I am Norwegian but consider myself Brit*ish*, having lived in England
+I am Norwegian but consider myself Brit-*ish*, having lived in England
 most of my adult life. I started at University of Westminster in
 September 2000 and have only spent a year abroad since.
 
