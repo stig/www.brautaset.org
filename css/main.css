@@ -16,11 +16,11 @@ body > footer {
 
 body > footer {
     border-top: 1px solid #ccc;
-    color: #aaa;
+    color: #888;
 }
 
 .post-meta {
-    color: #aaa;
+    color: #888;
     font-size: 90%;
     display: none;
 }
