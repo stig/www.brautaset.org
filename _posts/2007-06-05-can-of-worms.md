@@ -3,9 +3,9 @@ layout: post
 title: A Can of Worms
 ---
 
-<div class="right">
-<img src="/images/2007/06/can-of-worms.jpg" alt="can-of-worms.jpg" />
-</div>
+<figure>
+  <img alt="Can of Worms" src="/images/2007/06/can-of-worms.jpg">
+</figure>
 
 You know the feeling: you're at your desk, planet-sized brain poring over some code
 through your beady browns. Then out of the blue somebody arrives with a can of worms, and

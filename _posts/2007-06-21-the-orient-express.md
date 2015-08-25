@@ -4,10 +4,6 @@ title: The Orient Express
 tags: [Reviews]
 ---
 
-<div class="right">
-<img src="http://farm2.static.flickr.com/1374/582696077_6ade4cc09b_m.jpg" alt="Orient express">
-</div>
-
 Today Nadia and I took her parents on a day-trip to Folkstone on the <a href="http://www.orient-express.com/web/luxury/trains_cruises/journey_planner_uk.jsp">Orient Express</a>. We left Victoria at about 11:30 and had a delicious <a href="http://flickr.com/photos/skugg/582701275">three course lunch</a> on the way down. The <a href="http://flickr.com/photos/skugg/583042524/">main course</a>, in particular, was fantastic.
 
 The train in itself was an experience. It consisted exclusively of British Pullman carriages; ours was the Ibis, built in 1925. We had our own compartment, and people in white uniforms falling over themselves to make sure we had a comfortable journey.

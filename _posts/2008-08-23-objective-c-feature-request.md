@@ -4,9 +4,9 @@ layout: post
 tags: [Objective-C]
 ---
 
-<div class="right">
+<figure>
 <img src="/images/2008/08/dictionary.png" alt="dictionary icon" />
-</div>
+</figure>
 
 Objective-C, particularly after it became 2.0, is my favourite language. It's partly
 because of the language itself, but I guess mostly because of the libraries. The Cocoa

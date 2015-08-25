@@ -7,9 +7,7 @@ tags: [Recipes]
 My son and I have problems digesting dairy, so this dairy-free pudding recipe that my wife
 drummed up has become a firm favourite.
 
-<div class="fullwidth">
 <img src="/images/2013/03/dairy-free-bread-pudding.jpg" alt="Dairy Free Bread and Butter pudding" />
-</div>
 
 Ingredients:
 
