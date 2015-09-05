@@ -25,6 +25,8 @@ body > footer {
     display: none;
 }
 
+dd { margin: 1.5rem 0 }
+
 @media (min-width: 550px) {
     body {  font-size: 1.3em;}
     .post-meta {
