@@ -20,7 +20,7 @@ A full chronological list of posts is available on the <a href="/articles.html">
 
 <h2 id="{{ tag.first }}">{{ tag.first }}</h2>
 
-<ul class="posts">
+<ul>
 {% for post in site.posts %}
   {% if post.tags contains tag.first %}
     <li>
