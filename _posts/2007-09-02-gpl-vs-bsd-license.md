@@ -12,7 +12,7 @@ Here's a question that's been on my mind lately:
 > bit at a loss at what to use for new projects. Do I stick with using version 2? Do I
 > read and try to understand version 3 enough that I'm comfortable using it? Or do I use
 > something else entirely?
->
+
 It's important to me that I'm able to fully comprehend the license I put on my own
 software. The BSD license wins hands down in this category: it is short and written in
 very simple language. For comparison here's the number of words in the BSD, GPLv2 and
