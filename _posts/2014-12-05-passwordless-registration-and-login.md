@@ -59,13 +59,13 @@ actually want to update.) Recommending people register a secondary
 email address, or a phone number that can receive SMS, could save some
 support emails in this situation.
 
-I can imagine some people objecting to requiring an email roundtrip
-for to complete user registration. However, many sites already require
-email verification after registration and I don't see this being
-substantially different. If anything, it's simpler to maintain because
-there's just one path. And there's nothing stopping you from letting
-them start using your site straight away and just rely on session
-state until they've finished registering.
+I can imagine some people objecting to requiring an email roundtrip to
+complete user registration. However, many sites already require email
+verification after registration and I don't see this being substantially
+different. If anything, it's simpler to maintain because there's just one
+path. And there's nothing stopping you from letting them start using your site
+straight away and just rely on session state until they've finished
+registering.
 
 I've been mulling over the idea of passwordless registration and login
 for some time, and for the above reasons I am fairly confident it will
