@@ -30,7 +30,7 @@ recent articles:
 Free & Open Source Software
 ---------------------------
 
-I wrote <a href="http://sbjson.org">SBJson</a>, a popular JSON parser
+I wrote [SBJson][], a popular JSON parser
 & generator for Objective-C. You are welcome to use it&mdash;and any
 other project available from my [Github profile][github]&mdash;for
 free, as long as you adhere to their respective licenses.
@@ -40,4 +40,5 @@ your application. I understand that this attribution requirement can
 sometimes be a problem. If you let me know about the problem, I may
 agree to grant you an alternative license.
 
+[sbjson]: http://sbjson.org
 [github]: http://github.com/stig
