@@ -3,7 +3,7 @@ layout: page
 title: Superloopy
 ---
 
-Here are teasers from most recent articles from my blog.
+Below are teasers from my most recent articles.
 
 <dl>
 {% for post in site.posts limit: 5 %}
