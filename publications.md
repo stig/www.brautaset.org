@@ -12,7 +12,7 @@ This is a list of some of my talks & articles hosted elsewhere:
 </dt>
 
 <dd>
-This is my first *Pecha Kucha* style talk, made at NSLondon meetup.
+This is my first <em>Pecha Kucha</em> style talk, made at NSLondon meetup.
 The sound is not great, and one of my slides is a bit
 misleading, but I have a special fondness for this one as it's the
 first time I've been invited to speak.
@@ -26,7 +26,7 @@ first time I've been invited to speak.
 I presented this "experience talk" at Scala eXchange 2013 with Sam
 Dean. (I'm afraid you have to log in to view the video.) It's a
 mish-mash of stuff we learnt while building the backend of The
-Netbook---Net-A-Porter's social network offering.
+Netbook&mdash;Net-A-Porter's social network offering.
 </dd>
 
 <dt>
@@ -47,8 +47,8 @@ with M4 (200?)</a>
 </dt>
 
 <dd>
-A long, long time ago I used *make* and *cpp* to maintain my website.
-Later I upgraded to *m4*. I ended up writing an article on the
+A long, long time ago I used <em>make</em> and <em>cpp</em> to maintain my website.
+Later I upgraded to <em>m4</em>. I ended up writing an article on the
 subject, and this was published in Linux Magazine.
 </dd>
 
