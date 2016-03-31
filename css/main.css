@@ -1,20 +1,19 @@
-body {
+html {
     font-family: Optima, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-    color: #222;
-    font-size: 1.1em;
 }
 
-body > article,
-body > header,
-body > footer {
-    max-width: 75ch;
-    margin: auto;
-    padding: 0 2ch 1em;
+main, body {
+    max-width: 72ch;
+    margin: 1rem 1ch;
     /* For aside */
     position: relative;
 }
 
-body > footer {
+main, body > header {
+    border-bottom: 1px solid #ccc;
+}
+
+main, body > footer {
     border-top: 1px solid #ccc;
     color: #888;
 }
@@ -27,13 +26,13 @@ body > footer {
 
 dd { margin: 1.5rem 0 }
 
-@media (min-width: 550px) {
-    body {  font-size: 1.3em;}
-    .post-meta {
-        display: inline;
-    }
+@media (min-width: 500px) {
+    html { font-size: 1.2em; }
+    body {margin: auto;}
+    .post-meta {display: inline;}
 }
 
-body > header {
-    border-bottom: 1px solid #ccc;
+
+@media (min-width: 800px) {
+    html { font-size: 1.3em; }
 }
