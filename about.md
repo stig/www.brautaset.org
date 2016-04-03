@@ -3,6 +3,8 @@ title: About
 layout: page
 ---
 
+
+
 I'm Stig Brautaset, a software person on the internet. This is my personal
 website, which is mostly [a blog](/articles.html). I am Norwegian but consider
 myself Brit*ish*, having lived in England most of my adult life. I moved to
