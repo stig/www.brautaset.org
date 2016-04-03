@@ -3,6 +3,8 @@ title: About
 layout: page
 ---
 
+
+
 I'm Stig Brautaset, a software person on the internet. This is my personal
 website, which is mostly [a blog](/articles.html). I am Norwegian but consider
 myself Brit*ish*, having lived in England most of my adult life. I moved to
@@ -24,6 +26,8 @@ attention, including these:
 About SBJson
 ------------
 
+
+
 I wrote [SBJson][], a popular JSON parser & generator for Objective-C. You are
 welcome to use it&mdash;and any other project available from my
 [Github profile][github]&mdash;for free, as long as you adhere to their
@@ -37,8 +41,12 @@ alternative license.
 [sbjson]: http://sbjson.org
 [github]: http://github.com/stig
 
+
+
 Contact Me
 ----------
+
+
 
 Unless you already have my phone number, I suggest trying one of:
 
