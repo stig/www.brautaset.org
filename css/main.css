@@ -2,6 +2,13 @@ html {
     font-family: Optima, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
 
+/* I think writ's headers are too large */
+h1 { font-size: 1.44em; }
+h2 { font-size: 1.2em; }
+h3, h4, h5, h6 { font-size: 1em; }
+
+h1, h2, h3 { line-height: 2rem; }
+
 main, body {
     max-width: 72ch;
     margin: 1rem 1ch;
@@ -20,7 +27,6 @@ main, body > footer {
 
 .post-meta {
     color: #888;
-    font-size: 90%;
     display: none;
 }
 
@@ -29,12 +35,15 @@ main, body > footer {
 dd { margin: 1.5rem 0 }
 
 @media (min-width: 500px) {
-    html { font-size: 1.2em; }
+    html { font-size: large; }
+
+    /* Use larger header-sizes on larger devices */
+    h1 { font-size: 2.074em; }
+    h2 { font-size: 1.728em; }
+    h3 { font-size: 1.44em; }
+    h4 { font-size: 1.2em; }
+    h5, h6 { font-size: 1em; }
+
     body {margin: auto;}
     .post-meta {display: inline;}
-}
-
-
-@media (min-width: 800px) {
-    html { font-size: 1.3em; }
 }
