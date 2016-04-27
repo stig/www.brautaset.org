@@ -31,8 +31,6 @@ main, body > footer {
 
 .footpara { display: inline; }
 
-dd { margin: 1.5rem 0 }
-
 @media (min-width: 500px) {
     html { font-size: large; }
 
