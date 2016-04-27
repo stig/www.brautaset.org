@@ -33,7 +33,7 @@ day before our sale ended. It occured to me that that because I ran
 the new test the day *after* the sale ended, a lot of requests would
 return 0-length responses, which would be served faster. This
 explained everything! _Except_ that the environment where I ran the
-load test has a static data dump, so its data hasn't changed. Damn!
+load test has a static data dump, so its data hadn't changed. Damn!
 
 So I redid the test, for both the baseline and my change, but this
 time replaying access logs from *after* the sale ended to be more
@@ -53,12 +53,12 @@ I decided not to waste more time trying to explain exactly why.
 
 The change went into production, where we regretfully didn't see the
 improvement on our latency we saw during our load test. However, we
-*did* see is a reduced number of queries against the backend for the
+*did* see a reduced number of queries against the backend for the
 same load on the frontend. We thought the reason we were not seing an
-improvement in latency was that our current live environment is not as
-stressed as our load testing environment, so it is *already* at the
+improvement in latency was that our live environment was not as
+stressed as our load testing environment, so it was *already* at the
 lower tier of latency. In other words, it would take more pounding
-before latency degrades.
+before latency degraded.
 
 A few days later---during load testing of an unrelated change---we
 found the *actual* reason for the speedup: Since there was only one
