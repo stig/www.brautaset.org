@@ -9,9 +9,7 @@ main, body {
     position: relative;
 }
 
-main, body > header {
-    border-bottom: 1px solid #ccc;
-}
+main, body > header {}
 
 main, body > footer {
     border-top: 1px solid #ccc;
