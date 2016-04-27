@@ -3,7 +3,9 @@ layout: page
 title: Superloopy
 ---
 
-Below are teasers from my most recent articles.
+This is my personal website, which is mostly a blog. Most will be tech
+related, but anything goes really. Here are a few teasers from my most recent
+articles:
 
 <ul>
 {% for post in site.posts limit: 5 %}
