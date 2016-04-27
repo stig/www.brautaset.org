@@ -10,8 +10,7 @@ h3, h4, h5, h6 { font-size: 1em; }
 h1, h2, h3 { line-height: 2rem; }
 
 main, body {
-    max-width: 72ch;
-    margin: 1rem 1ch;
+    margin: 1ch 0.5ch;
     /* For aside */
     position: relative;
 }
@@ -37,6 +36,12 @@ dd { margin: 1.5rem 0 }
 @media (min-width: 500px) {
     html { font-size: large; }
 
+    /* Center content */
+    body {
+        max-width: 72ch;
+        margin: auto;
+    }
+
     /* Use larger header-sizes on larger devices */
     h1 { font-size: 2.074em; }
     h2 { font-size: 1.728em; }
@@ -44,6 +49,5 @@ dd { margin: 1.5rem 0 }
     h4 { font-size: 1.2em; }
     h5, h6 { font-size: 1em; }
 
-    body {margin: auto;}
     .post-meta {display: inline;}
 }
