@@ -33,7 +33,7 @@ day before our sale ended. It occured to me that that because I ran
 the new test the day *after* the sale ended, a lot of requests would
 return 0-length responses, which would be served faster. This
 explained everything! _Except_ that the environment where I ran the
-load test has a static data dump, so its data hadn't changed. Damn!
+load test had a static data dump, so its data hadn't changed. Damn!
 
 So I redid the test, for both the baseline and my change, but this
 time replaying access logs from *after* the sale ended to be more
