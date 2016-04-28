@@ -10,9 +10,8 @@ these did---and I'm OK with that.
 
 <ul class="posts">
 {% for post in site.posts %}
-  <li>
-    <span class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-    <span class="post-meta">&mdash; {{ post.date | date_to_string }}</span>
-  </li>
+
+  {% include post-li.html %}
+
 {% endfor %}
 </ul>
