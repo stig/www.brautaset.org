@@ -1,7 +1,8 @@
 ---
 title: Not so philosophically different after all?
 layout: post
-tags: [Clojure, Programming]
+tags:
+  - Clojure
 ---
 
 I found Chris Done's
