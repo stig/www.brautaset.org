@@ -15,19 +15,19 @@ layout: default
 <footer>
 
   <nav>
-    <p>{% if page.tags != empty %}Posted in
-      {% for tag in page.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
-      {% endif %}
-      Copyright &copy; Stig Brautaset.
+    <p>
+      {% if page.tags != empty %} Posted in {% for tag in page.tags %}{%
+      unless forloop.first %}, {% endunless
+      %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+      {% endif %} Copyright &copy; <a href="/about.html">Stig Brautaset</a>.
     </p>
 
     <p>
-      {% if page.previous %}
-      <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-      was the previous entry. {% endif %}
+      {% if page.previous %}<a href="{{ page.previous.url }}">{{
+      page.previous.title }}</a> was the previous article. {% endif %}
 
       {% if page.next %}
-      The next entry is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
+      The next article is <a href="{{ page.next.url }}">{{ page.next.title }}</a>.
       {% endif %}
     </p>
   </nav>
