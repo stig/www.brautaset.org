@@ -5,6 +5,11 @@ layout: page
 
 This is a list of some of my talks & articles hosted elsewhere:
 
+- [My Net-a-Porter Techblog entries (2013--2014)](http://techblog.net-a-porter.com/author/stig/)
+
+  I wrote a few entries on the Net-a-Porter tech blog in my various roles
+  there. (Details about my roles on my linkedin profile.)
+
 - [Delighting your users with SBJson 4 (2013)](https://vimeo.com/86478323)
 
   This is my first _Pecha Kucha_ style talk, made at NSLondon meetup. The
@@ -25,13 +30,9 @@ This is a list of some of my talks & articles hosted elsewhere:
   member of the audience to write it up as an article for ONLamp magazine.
   This is the result.
 
-- [Creating HTML with M4 (200?)](http://www.linux-magazine.com/w3/issue/25/GNUm4.pdf#!)
+- [Creating HTML with M4 (2002)](files/m4.pdf)
 
   A long, long time ago I used `make` and `cpp` to maintain my website. Later
   I upgraded to `m4`. I ended up writing an article on the subject, and this
   was published in Linux Magazine.
 
-- [My Net-a-Porter Techblog entries (2013--2014)](http://techblog.net-a-porter.com/author/stig/)
-
-  I wrote a few entries on the Net-a-Porter tech blog in my various roles
-  there. (Details about my roles on my linkedin profile.)
