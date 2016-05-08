@@ -5,8 +5,10 @@ layout: page
 
 I'm Stig Brautaset, a software person on the internet. I am Norwegian but
 consider myself Brit*ish*, having lived in England most of my adult life. I
-moved to London for university in 2000. 15 years later I've now moved to
-Berwick-upon-Tweed in the English countryside, near the Scottish border.
+moved to London for university in 2000. It took me over a decade to realise &
+admit to myself that I didn't actually enjoy living in London; and I've now
+moved to Berwick-upon-Tweed in the English countryside, near the Scottish
+border.
 
 I love playing with different languages. Over the years have toyed with C,
 Prolog, Perl, Objective-C, Java, Scala & Clojure. Employers have paid me to
