@@ -16,9 +16,12 @@ layout: default
 
   <nav>
     <p>
-      {% if page.tags != empty %} Posted in {% for tag in page.tags %}{%
-      unless forloop.first %}, {% endunless
-      %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
+      {% if page.tags != empty %} Posted in
+      {% for tag in page.tags %}{% if forloop.first %}
+      {% elsif forloop.last %} &amp;
+      {% else %},
+      {% endif %}
+      <a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}.
       {% endif %} Copyright &copy; <a href="/about.html">Stig Brautaset</a>.
     </p>
 
