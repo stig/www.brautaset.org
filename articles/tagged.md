@@ -8,7 +8,7 @@ are listed under more than on tag. Available tags:
 
 
 <ul>
-{% for tag in site.tags order:ascending %}
+{% for tag in site.tags %}
 <li><a href="#{{ tag.first }}">{{ tag.first }}</a></li>
 {% endfor %}
 </ul>
