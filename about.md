@@ -3,16 +3,13 @@ title: About
 layout: page
 ---
 
-I'm Stig Brautaset, a software person on the internet. I am Norwegian but
-consider myself Brit*ish*, having lived in England most of my adult life. I
-moved to London for university in 2000. It took me over a decade to realise &
-admit to myself that I didn't actually enjoy living in London; and I've now
-moved to Berwick-upon-Tweed in the English countryside, near the Scottish
-border.
+I am a Brit*ish* Norwegian, currently living near Berwick-upon-Tweed in the
+English countryside.
 
-I love playing with different languages. Over the years have toyed with C,
-Prolog, Perl, Objective-C, Java, Scala & Clojure. Employers have paid me to
-write HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala and English.
+I have worked in software development since 2003. Over the years have toyed
+with C, Prolog, Perl, Objective-C, Java, Scala & Clojure. Employers have paid
+me to write HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala and
+English.
 
 I have profiles on many places across the web, in various states of lacking
 attention, including these:
@@ -26,8 +23,8 @@ About SBJson
 ------------
 
 I wrote [SBJson][], a popular JSON parser & generator for Objective-C. You are
-welcome to use it&mdash;and any other project available from my
-[Github profile][github]&mdash;for free, as long as you adhere to their
+welcome to use it---and any other project available from my
+[Github profile][github]---for free, as long as you adhere to their
 respective licenses.
 
 In most cases the license requires that you have to attribute me in your
