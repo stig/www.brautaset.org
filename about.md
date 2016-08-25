@@ -3,7 +3,8 @@ title: About
 layout: page
 ---
 
-I am a Brit*ish* Norwegian, currently living near Berwick-upon-Tweed in the
+I am a Brit*ish* Norwegian, currently living near
+[Berwick-upon-Tweed](https://en.wikipedia.org/wiki/Berwick-upon-Tweed) in the
 English countryside.
 
 I have worked in software development since 2003. Over the years have toyed
