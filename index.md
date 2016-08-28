@@ -11,7 +11,21 @@ from my most recent articles:
 <ul class="posts">
 {% for post in site.posts limit: 3 %}
 
-  {% include post-li.html %}
+<li>
+    <span class="post-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </span>
+
+    <span class="post-meta">
+        &mdash; {{ post.date | date_to_string }}
+        {% if post.tags != empty %}<p>Posted in: {% for tag in post.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}</p>
+        {% endif %}
+    </span>
+
+    <p>
+        {{ post.excerpt }}
+    </p>
+</li>
 
 {% endfor %}
 </ul>
