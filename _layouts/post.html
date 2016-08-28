@@ -4,8 +4,6 @@ layout: default
 <header>
   <a href="/"><img src="/logo.png" alt="SuperLoopy Logo"/></a>
   <h1>{{ page.title }}</h1>
-  <p class="post-meta">~ By <a href="/">Stig Brautaset</a> on {{ page.date |
-  date_to_string }} ~</p>
 </header>
 
 <article>
@@ -15,8 +13,8 @@ layout: default
 <footer>
 
   <nav>
-    <p>
-      {% if page.tags != empty %} Posted in
+    <p>Posted {{ page.date | date_to_string }}
+      {% if page.tags != empty %} in
       {% for tag in page.tags %}{% if forloop.first %}
       {% elsif forloop.last %} &amp;
       {% else %},
