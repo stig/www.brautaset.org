@@ -2,6 +2,7 @@
 layout: post
 title: ModSecurity and Puppet Spelunking
 tags: [Operations]
+abstract: "In which I investigate how to configure SecAuditLogParts for ModSecurity with Puppet, and find I have to contribute a patch to make it possible."
 ---
 
 This week I have made my first (non-README) contribution to a puppet module.

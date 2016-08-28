@@ -1,6 +1,7 @@
 ---
 title: Overcoming RSI
 layout: post
+abstract: "Early 2005 I encountered a bad bout of RSI. Prompted by a comment on the Lobsters forum, I thought I'd share my experience."
 ---
 
 I came across

@@ -1,7 +1,10 @@
 ---
 title: Setting up Leafnode NNTP server on OS X
 layout: post
+abstract: I set up the Leafnode NNTP server on OS X, for use with Emacs and the  Gnus newsreader.
 ---
+
+**Note: Although this works, I don't actually use Leafnode any more. I now use the [Gnus Agent](https://www.gnu.org/software/emacs/manual/html_node/gnus/Agent-Basics.html) instead.**
 
 I read email and news with Gnus. I often use a laptop, and often in places I
 don't have internet access. Gnus doesn't like not being able to connect to the
