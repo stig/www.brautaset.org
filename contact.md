@@ -3,7 +3,5 @@ title: Contact me
 layout: page
 ---
 
-Unless you already have my phone number, I suggest trying one of:
-
-* <http://twitter.com/stigbra>
-* <stig@brautaset.org>
+You have reached a discontinued page. Please see the contact section in
+[about](/about.html#contact-me).
