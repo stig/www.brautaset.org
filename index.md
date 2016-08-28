@@ -37,15 +37,16 @@ and here is the remaining list:
 
 <li>
 
-    <span class="post-title">
+    <p>
+        <span class="post-title">
         <a href="{{ post.url }}">{{ post.title }}</a>
-    </span>
-
+        </span>
     <span class="post-meta">
         &mdash; {{ post.date | date_to_string }}
         {% if post.tags != empty %}<div>Tags: {% for tag in post.tags %}{% unless forloop.first %}, {% endunless %}<a href="/articles/tagged.html#{{ tag }}">{{ tag }}</a>{% endfor %}</div>
         {% endif %}
     </span>
+    </p>
 
 </li>
 
