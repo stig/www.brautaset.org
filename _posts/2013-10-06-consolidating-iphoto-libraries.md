@@ -14,7 +14,7 @@ One problem was that the same picture would exist with different file names, pro
 
 I wrote a simple program to iterate over all image & movie files in a directory and create a copy of each named after the [MD5 hash][] of its content. Thus files whose content were identical, but had different names, would now end up with the same name. I did not want to end up with tens of thousands of files in one directory, so I made my program put each file in a directory named after the 2 first characters of each file's name. Here it is:
 
-{% comment %}
+{% highlight sh %}
 #!/bin/sh
 
 set -e
@@ -38,9 +38,7 @@ find "$src" -type f | while read file ; do
     echo $log >> "$dst/log"
     echo $log
 done
-{% endcomment %}
-
-<script src="https://gist.github.com/stig/6859521.js">&nbsp;</script>
+{% endhighlight %}
 
 Since I didn't have enough disk space to duplicate all the images, I used hardlinks. This essentially means you just create a new filename pointing to the same data on disk, without taking up extra data. I also made the program create a log file containing the location of each file and its MD5 hash so I could find out how many files were processed and how many duplicates were found.
 
