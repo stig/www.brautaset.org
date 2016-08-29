@@ -1,6 +1,8 @@
 ---
 title: Superloopy
 layout: page
+redirect_from:
+    - /articles.html
 ---
 
 This is my personal website, which is mostly a blog. Sometimes I blog because

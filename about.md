@@ -1,6 +1,8 @@
 ---
 title: About
 layout: page
+redirect_from:
+    - /contact.html
 ---
 
 I am a Brit*ish* Norwegian, currently living near
