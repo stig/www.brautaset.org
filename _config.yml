@@ -1,6 +1,9 @@
 permalink: /articles/:year/:title.html
 highlighter: rouge
 markdown: kramdown
+title: "Superloopy.io blog posts"
+author:
+  twitter: stigbra
 feed:
   path: atom.xml
 gems:
