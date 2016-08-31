@@ -20,7 +20,6 @@ attention, including these:
 * [Twitter](http://twitter.com/stigbra)
 * [LinkedIn](http://uk.linkedin.com/in/stigbrautaset)
 * [Ohloh](https://www.ohloh.net/accounts/stigbra)
-* [Masterbranch](http://www.masterbranch.com/developer/stig.brautaset)
 
 About SBJson
 ------------
