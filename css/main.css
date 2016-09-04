@@ -10,7 +10,9 @@ main, body {
     margin: 1ch 0.5ch;
 }
 
-main, body > header {}
+main, body > header {
+    border-bottom: 1px dashed #ccc;
+}
 
 main, body > footer {
     margin-top: 0.5ch;
