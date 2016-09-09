@@ -1,0 +1,169 @@
+---
+title: FizzBuzz
+layout: post
+abstract: Breakdown of my Tweetable FizzBuzz created using sed and xargs.
+tags: [Hacks]
+---
+
+<p>
+The FizzBuzz interview question has been going around a while. If for some
+reason you're not familiar with it, here's one wording of it:
+</p>
+
+<blockquote>
+<p>
+Write a program that prints the numbers from 1 to 100. For numbers divisible
+by three print "fizz" instead of the number, and for numbers divisible by five
+print "buzz". For numbers which are divisible by both three and five print
+"fizzbuzz".
+</p>
+</blockquote>
+
+<p>
+Solutions using loops, recursion, if and switch statements abound. But here's
+my (hopefully) novel solution to this problem. It uses <code>sed</code> an <code>xargs</code> and
+runs in a Unix shell. It is tweetable (i.e. less than 140 chars) and uses no
+conditionals:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">seq 5 5 100 | xargs -IX echo <span style="color: #008000;">"Xs/[0-9]*/buzz/"</span> &gt; f
+seq 3 3 100 | xargs -IX echo <span style="color: #008000;">"Xs/[0-9]*/fizz/"</span> &gt;&gt; f
+seq 1 100 | sed -f f
+</pre>
+</div>
+
+<p>
+Here's how it works:
+</p>
+
+<ol class="org-ol">
+<li>The first line creates sed commands to replace zero or more digits on every
+5th line with the word "buzz"</li>
+<li>The second line creates sed commands to replace zero or more digits on
+every 3rd line with the word "fizz"</li>
+<li>The 3rd line creates a list of numbers from 1 to 100 (the <code>seq 1 100</code> part)
+and runs all the sed commands over each that, in order.</li>
+</ol>
+
+<p>
+How does 15 become "fizzbuzz" though? The trick is in the "<b>zero</b> or more
+digits" part. First sed runs <code>15s/[0-9]*/buzz/</code> which replaces all the digits
+with "buzz". Then sed runs <code>15s/[0-9]*/fizz/</code> which replaces the <b>zero-length
+string of no digits</b> with "fizz" but without removing the word "buzz".
+</p>
+
+<p>
+The resulting output looks like this:
+</p>
+
+<pre class="example">
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+16
+17
+fizz
+19
+buzz
+fizz
+22
+23
+fizz
+buzz
+26
+fizz
+28
+29
+fizzbuzz
+31
+32
+fizz
+34
+buzz
+fizz
+37
+38
+fizz
+buzz
+41
+fizz
+43
+44
+fizzbuzz
+46
+47
+fizz
+49
+buzz
+fizz
+52
+53
+fizz
+buzz
+56
+fizz
+58
+59
+fizzbuzz
+61
+62
+fizz
+64
+buzz
+fizz
+67
+68
+fizz
+buzz
+71
+fizz
+73
+74
+fizzbuzz
+76
+77
+fizz
+79
+buzz
+fizz
+82
+83
+fizz
+buzz
+86
+fizz
+88
+89
+fizzbuzz
+91
+92
+fizz
+94
+buzz
+fizz
+97
+98
+fizz
+buzz
+</pre>
+
+<p>
+Addendum: Is this really a valid fizzbuzz solution? You tell me! It conforms
+to the spec, but the program doesn't really look at the values 1 to 100 on
+each line. Instead of the <i>values</i> on each line, it works with the <i>positions</i>
+of the lines.
+</p>
