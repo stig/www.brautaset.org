@@ -1,0 +1,102 @@
+---
+title: Change Terminal background colour on OS X via ssh
+layout: post
+abstract: I show how to change Terminal.app colours automatically when logging into certain remote machines via SSH.
+---
+
+<p>
+I spend most of my work days in Emacs, Slack, Safari &amp; Terminal. Some of the
+Terminals I've got open, such as those connected to a machine in the
+production environment, requires a more elevated attention than others. It
+would be nice if these "high risk" terminals were visually distinct. A
+colleague shared <a href="http://superuser.com/questions/603909/how-to-change-terminal-colors-when-connecting-to-ssh-hosts">How to change terminal colors change when connecting to SSH
+hosts</a> and it inspired me to finally implement this.
+</p>
+
+<p>
+The solution presented there does not work on OS X Terminal, so I had to roll
+my own. My first hurdle was how to change the Terminal background from a
+script. The only solution I could find was with <a href="https://akrabat.com/osx-terminal-colours/">AppleScript</a>. The next issue I
+had was that the solution given in that post changes the background for all
+tabs in that terminal window, which is not what I want. I can't remember where
+I found how to affect only one tab, but here is the code I'm using now:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-apples"><span style="color: #0000FF;">on</span> <span style="color: #006699;">run</span> desiredColour
+    <span style="color: #0000FF;">if</span> length <span style="color: #0000FF; font-style: italic;">of</span> desiredColour<span style="color: #6434A3;"> &gt; </span>0
+        <span style="color: #0000FF; font-style: italic;">set</span> <span style="color: #BA36A5;">colour</span> <span style="color: #0000FF; font-style: italic;">to</span> desiredColour
+    <span style="color: #0000FF;">else</span>
+        <span style="color: #8D8D84;"># </span><span style="color: #8D8D84; font-style: italic;">The RGB colour of the "Novel" profile I'm using;</span>
+        <span style="color: #8D8D84;"># </span><span style="color: #8D8D84; font-style: italic;">This is the default I want to get back to.</span>
+        <span style="color: #0000FF; font-style: italic;">set</span> <span style="color: #BA36A5;">colour</span> <span style="color: #0000FF; font-style: italic;">to</span> { 52007, 48990, 29970 }
+    <span style="color: #0000FF;">end</span>
+
+   <span style="color: #0000FF;">tell</span> <span style="color: #0000FF;">application</span> <span style="color: #008000;">"Terminal"</span>
+        <span style="color: #0000FF;">tell</span> selected tab <span style="color: #0000FF; font-style: italic;">of</span> <span style="color: #0000FF; font-style: italic;">front</span> window
+          <span style="color: #0000FF; font-style: italic;">set</span> background color <span style="color: #0000FF; font-style: italic;">to</span> colour
+     <span style="color: #0000FF;">end</span> <span style="color: #0000FF;">tell</span>
+  <span style="color: #0000FF;">end</span> <span style="color: #0000FF;">tell</span>
+<span style="color: #0000FF;">end</span> <span style="color: #0000FF; font-style: italic;">run</span>
+</pre>
+</div>
+
+<p>
+I put the above in <code>~/Dotfiles/termcolours.scpt</code>, and invoke it from the
+commandline like so:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">osascript ~/Dotfiles/termcolours.scpt red
+</pre>
+</div>
+
+<p>
+That changes the background colour of the current tab to red. (Orange, yellow,
+blue, green also works. Try it! Go wild!) Calling the script with no arguments
+resets the terminal background back to its default colour:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">osascript ~/Dotfiles/termcolours.scpt
+</pre>
+</div>
+
+<p>
+Now, after adding <code>PermitLocalCommand yes</code> to my <code>/etc/ssh/ssh_config</code> I can
+put the following in my <code>~/.ssh/config</code>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-conf">Host my-live-machine.example.com
+    LocalCommand osascript ~/Dotfiles/termcolours.scpt red
+</pre>
+</div>
+
+<p>
+The current Terminal tab now changes to red when I ssh to that machine. Result!
+</p>
+
+<p>
+Ah, but wait! When I exit the remote machine the background of that tab is not
+reset to its original colour. For that, if you use Bash/Zsh you could just use
+the solution from the post I linked to above. But I use <a href="http://fishshell.com">fish</a>, and it uses
+functions instead of aliases. I put the following in
+<code>~/.config/fish/functions/ssh.fish</code>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-fish"><span style="color: #0000FF;">function</span> <span style="color: #006699;">ssh</span> --description <span style="color: #008000;">'wrapper around ssh to reset term colours after exit'</span>
+        <span style="color: #006FE0;">/usr/bin/ssh</span> <span style="color: #008000;">$</span><span style="color: #BA36A5;">argv</span>
+        <span style="color: #006FE0;">osascript</span> ~/Dotfiles/termcolours.scpt
+<span style="color: #0000FF;">end</span>
+</pre>
+</div>
+
+<p>
+And there you have it!</p>
