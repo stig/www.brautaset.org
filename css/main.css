@@ -64,5 +64,5 @@ img { max-width: 100%; }
     background: lightgray;
     border: 2px solid navy;
     border-radius: 5px;
-    padding: 0.5ch;
+    padding: 0 0.5ch;
 }
