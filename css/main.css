@@ -60,3 +60,9 @@ img { max-width: 100%; }
     .post-meta {display: inline;}
 }
 
+.org-src-container {
+    background: lightgray;
+    border: 2px solid navy;
+    border-radius: 5px;
+    padding: 0.5ch;
+}
