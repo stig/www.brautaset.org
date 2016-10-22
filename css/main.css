@@ -1,10 +1,17 @@
 html {
-    font-family: Optima, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-}
+    font-family:
+    Optima,
+    -apple-system,
+    ".SFNSText-Regular",
+    "San Francisco",
+    "Roboto",
+    "Segoe UI",
+    "Helvetica Neue",
+    "Lucida Grande",
+    sans-serif;
 
-h1 { font-size: 1.44em; }
-h2 { font-size: 1.2em; }
-h3, h4, h5, h6 { font-size: 1em; }
+    font-size: x-large;
+}
 
 main, body {
     margin: 1ch 0.5ch;
@@ -43,7 +50,6 @@ img { max-width: 100%; }
 .footpara { display: inline; }
 
 @media (min-width: 500px) {
-    html { font-size: large; }
 
     /* Center content */
     body {
