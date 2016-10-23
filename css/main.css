@@ -67,3 +67,9 @@ img { max-width: 100%; }
     padding: 0 1ch;
     font-size: large;
 }
+
+blockquote {
+    border-left: 0.5ch solid lightgray;
+    margin-left: 0;
+    padding-left: 2.5ch;
+}
