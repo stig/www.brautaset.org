@@ -46,13 +46,11 @@ tags: %^{Tags (comma separated)}
 In my Emacs config I add an entry like this:
 </p>
 
-<div class="org-src-container">
-
-<pre class="src src-emacs-lisp">(add-to-list 'org-capture-templates
+{% highlight emacs-lisp %}
+(add-to-list 'org-capture-templates
              '("b" "Blog Post" entry (file+headline "Agenda.org" "Blog")
                (file "tpl-blog-post.org") :empty-lines-before 1))
-</pre>
-</div>
+{% endhighlight %}
 
 <p>
 This means I can hit <code>C-c c b</code> and a buffer opens up prompting me for <i>Title</i>,

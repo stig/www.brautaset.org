@@ -60,16 +60,20 @@ img { max-width: 100%; }
     .post-meta {display: inline;}
 }
 
-.org-src-container {
-    background: lightgray;
-    border: 1px solid gray;
-    border-radius: 1ch;
-    padding: 0 1ch;
-    font-size: large;
-}
-
 blockquote {
     border-left: 0.5ch solid lightgray;
     margin-left: 0;
     padding-left: 2.5ch;
+}
+
+figure.highlight, pre {
+    margin: 0;
+    padding: 0;
+}
+figure > pre, .org-src-container {
+    background: #eee;
+    border: 1px solid gray;
+    border-radius: 1ch;
+    padding: 1ch;
+    font-size: large;
 }
