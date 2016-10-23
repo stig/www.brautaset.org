@@ -62,7 +62,8 @@ img { max-width: 100%; }
 
 .org-src-container {
     background: lightgray;
-    border: 2px solid navy;
-    border-radius: 5px;
-    padding: 0 0.5ch;
+    border: 1px solid gray;
+    border-radius: 1ch;
+    padding: 0 1ch;
+    font-size: large;
 }
