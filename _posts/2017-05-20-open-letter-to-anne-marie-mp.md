@@ -2,6 +2,7 @@
 layout: post
 title: 'Open Letter to Anne-Marie Trevelyan MP: How are the Conservatives "working for everyone"?'
 abstract: 'I ask how the Conservatives can say they are "working for everyone" whilst giving extra tax breaks and benefits to the 15% of top earners, and at the same time cutting benefits for the poor.'
+tags: [Politics, Open Letters]
 ---
 
 Dear [Anne-Marie](https://www.teamtrevelyan.co.uk/),
