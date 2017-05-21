@@ -15,25 +15,25 @@ times* the size of low earners<sup><a id="fnr.2" class="footref" href="#fn.2">2<
 minimum wage should only get a £100 tax break but those who earn many
 times more should get a £500 tax break?
 
-High earners already have lots of benefits. Take for example the ISA
-offerings you bumped the limits of to £20,000/year. It would
-*technically* be possible to get this benefit if you earn £25,000 per
-year&#x2014;assuming you live for free, eat for free, and spend no more
-than 75 pence per day<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. Yet, the median salary in this country is
-roughly £21,000 before tax<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, which means half the population
-cannot possibly get this full benefit even if they put *all* their
-earnings in. You need to be among the top 10% of higher earners, which
-means you have a salary of more than £35,345<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, to have a fighting
-chance of making the full use of this benefit. This shows that this
-is really a benefit for the few: the elite.
+Now consider the ISA offerings you bumped the limits of to £20,000 per
+year. It would *technically* be possible to get this benefit if you earn
+£25,000 per year&#x2014;assuming you live for free, eat for free, and spend
+no more than 75 pence per day<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. Yet, the median salary in this
+country is roughly £21,000 before tax<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, which means half the
+population cannot possibly get this full benefit even if they save *all*
+their earnings. You need to be among the top 10% of higher
+earners&#x2014;which means you have a salary of more than
+£35,345<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>&#x2014;to have a fighting chance of making the full use of
+this benefit. It is clear that this is not a benefit for everyone, but
+for the few: the elite.
 
-To finance this furthering of tax cut and savings benefit for high
-earners you cut benefits to the poorest and most vulnerable in this
-country. You're cutting the Employment Support Allowance (ESA) by
-£29/week. You're cutting child tax credits, worth £545 per year.
-Further you are freezing benefits, including JSA, ESA, child benefits
-and some housing benefit payments<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup>. All the while a rising number
-of people are reaching out to food banks to make ends meet<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>.
+To finance thes tax cuts and benefits for high earners you cut
+benefits to the poorest and most vulnerable in this country. You're
+cutting the Employment Support Allowance (ESA) by £29/week. You're
+cutting child tax credits, worth £545 per year. Further you are
+freezing benefits, including JSA, ESA, child benefits and some housing
+benefit payments<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup>. All the while a rising number of people are
+reaching out to food banks to make ends meet<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>.
 
 The Conservatives say you are "working for everyone". It's time you
 start acting like it.
