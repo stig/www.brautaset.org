@@ -12,8 +12,8 @@ I live in your constituency and I have a question.
 I am wondering how the Conservatives can say you are "working for
 everyone" whilst giving the 15% of top earners<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> a tax break *5
 times* the size of low earners<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>? How is it fair that people on
-minimum wage should only get a £100 tax break but those who earn many
-times more should get a £500 tax break?
+minimum wage should only get a £100 tax break but those who earn more
+than £45,000 gets a £500 tax break?
 
 Now consider the ISA offerings you bumped the limits of to £20,000 per
 year. It would *technically* be possible to get this benefit if you earn
@@ -27,7 +27,7 @@ earners&#x2014;which means you have a salary of more than
 this benefit. It is clear that this is not a benefit for everyone, but
 for the few: the elite.
 
-To finance thes tax cuts and benefits for high earners you cut
+To finance these tax cuts and benefits for high earners you cut
 benefits to the poorest and most vulnerable in this country. You're
 cutting the Employment Support Allowance (ESA) by £29/week. You're
 cutting child tax credits, worth £545 per year. Further you are
