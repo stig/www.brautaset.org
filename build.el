@@ -8,7 +8,9 @@
                     (or (buffer-file-name)
                         load-file-name))
 
-      publish-path (concat project-path "_site/")
+      ;; For now deploy side-by-side, since I cannot figure out how to
+      ;; simulate a Jekyll site so it will deploy from _site :-(
+      publish-path project-path ;; (concat project-path "_site/")
 
       org-html-home/up-format "
 <div id=\"org-div-home-and-up\">
