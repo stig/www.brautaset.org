@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-06-02 Fri 20:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Good Ideas</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Stig Brautaset" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <img src="/images/logo.png"/>
+  <nav>
+    <ul>
+      <!-- <li><a accesskey="h" href="/"> Up </a></li>
+ -->
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="a" href="/articles"> Articles </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Good Ideas</h1>
+<p>
+I mentioned in private conversation recently that I would like to work
+on making the world a better place. In response I was asked "what does
+<i>better</i> mean to you?" which sort of perplexed me&#x2014;it had never occured
+to me to try to define it. So in this post I'll present a few Good Ideas
+I believe is making (or will make) the world a better place.
+</p>
+
+<p>
+<b>Affordable education.</b> I strongly believe that free education is not
+only <i>right</i>&#x2014;it is also a sound <i>investment against future taxes</i>.
+Higher education tends to lead to higher salaries, thus a higher
+educated population ends up paying more tax through their working life.
+</p>
+
+<p>
+<b>Equal and generous parental leave.</b> When parental leave is taken wholly
+or mostly by mothers they tend to be overlooked for promotion and pay
+rises, or discriminated against when applying for jobs. But when men
+<i>also</i> can take up to six months leave, women get more protection
+against discrimination. There are also indications that families where
+dad take a more active role in child rearing tends to divorce less
+frequently. Thus, equality with regards to parental leave leads to fewer
+broken homes.
+</p>
+
+<p>
+<b>Unconditional basic income.</b> Let's replace all benefits with a
+guaranteed basic income for all citizens. I believe this will become a
+necessity as more and more jobs are being automated away. When mining
+machines took over the dangerous jobs miners were doing I don't think
+the they were sorry they couldn't go back&#x2014;though many were surely
+distraught that they couldn't support their families any more. If they
+had <a href="http://en.wikipedia.org/wiki/Basic_income">basic income</a> to fall back on, less problems could have been the
+result. Of course it's not a complete solution. Not everyone (myself
+included) will be content with devoting ourselves to art &amp; culture, so
+will need to find new things to do. But I believe it's a start:
+particularly when coupled with free education.
+</p>
+
+<p>
+<b>Self-driving cars.</b> I'm optimistic about this, and I hope that my son
+never has to learn to drive. Traffic accidents are apparently now the
+<a href="http://www.theguardian.com/global-development/2012/may/02/traffic-accidents-biggest-killer-young-people">biggest killer of young people worldwide</a>. Of course most of the deaths
+is in developing countries, which will likely not be the first to
+adopt self-driving cars, but one has to start somewhere. This might
+incidentally be a catalyst for unconditional basic income due to job
+losses from self-driving lorries, cabs, and busses.
+</p>
+
+<p>
+<b>Tax oil and tobacco companies to within an inch of their
+profitability.</b> (Or beyond.) It is not right that a few companies
+should be allowed to get absurdly rich by plundering the planet's last
+reserves of non-renewable natural resources. Neither is it right that
+companies peddling <a href="http://en.wikipedia.org/wiki/Health_effects_of_tobacco">the single greatest cause of preventable death
+globally</a> should be allowed to reap astronomical profits from it.
+</p>
+
+<p>
+I don't think any of this is a pipe dream. Most of the above ideas are
+<i>already</i> implemented in various parts of the world. For example:
+</p>
+
+<ul class="org-ul">
+<li>In Scotland&#x2014;as it is throughout Scandinavia&#x2014;education is already
+essentially free, if you exclude living costs.</li>
+
+<li>In Norway parental leave is 46 weeks at 100% pay, or optionally 56
+weeks at 80% pay. Of this 12 weeks is reserved for the father and
+<i>cannot be transferred to the mother</i>. According to this <a href="http://www.nytimes.com/2010/06/10/world/europe/10iht-sweden.html?pagewanted=all&amp;_r=0">NY Times
+article</a> Sweden has a similar scheme.</li>
+
+<li><a href="http://www.tobaccoatlas.org/solutions/tobacco_taxes/excise_tax/">Cuba, UK and Egypt</a> are in the lead on the taxation of tobacco. (But
+probably not by enough.)</li>
+
+<li>Norway <a href="http://en.wikipedia.org/wiki/Taxation_in_Norway#Taxation_of_petroleum_activities">tax petroleum extraction at 78%</a>. The proceeds is put into a
+fund, and invested for the future.</li>
+</ul>
+
+<p>
+Unconditional basic income is unfortunately not a reality yet. Though
+it <i>has</i> seen successful small-scale trials in several countries and
+<a href="http://www.reuters.com/article/2013/10/04/us-swiss-pay-idUSBRE9930O620131004">Switzerland</a> will apparently be voting on whether to introduce it
+nationwide in not too long. Finally, Ford predicts <a href="http://www.extremetech.com/extreme/132147-ford-self-driving-cars-2017">self driving cars
+by 2017</a>.
+</p>
+
+<p>
+A man can dream&#x2026;
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2014-10-22</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="date">Created: 2017-06-02 Fri 20:52</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
