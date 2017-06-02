@@ -1,0 +1,19 @@
+#+title: Stig's Corner
+
+This is my personal website. There are many like it, but this one is
+mine. Sometimes I blog because I have something to say, sometimes it's
+just to practice writing. Most articles are tech related, but anything
+goes really. Here is a list of recent articles:
+
+- [[file:articles/2017/open-letter-to-anne-marie-mp.org][Open Letter to Anne Marie MP]] :: I ask how the Conservatives can say
+     they are "working for everyone" whilst giving extra tax breaks
+     and benefits to the 15% of top earners, and at the same time
+     cutting benefits for the poor.
+
+- [[file:articles/2017/hydra-theme-switcher.org][Hydra Theme Switcher For Emacs]] :: I learnt how to quickly switch
+     between all installed themes in Emacs.
+
+- [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]] :: I went to a local school and talked to
+     prospective computer science students there about my education
+     and career. This is a transcript of my talk, which was organised
+     by STEMNET.

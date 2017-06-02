@@ -1,0 +1,58 @@
+#+title: CityLink is teh suck!
+#+date: 2007-02-07
+#+begin_abstract
+I rant about CityLink's attempt at delivering my new TV.
+#+end_abstract
+
+Never, ever, deal with [[http://www.city-link.co.uk/][ShittyLink]] if you can avoid it. They were
+supposed to deliver my new TV on Saturday, but failed to do so.
+Yesterday I got a card from them in my mailbox, saying they attempted
+delivery and can I please call this 0870 number to arrange re-delivery
+(this was odd, since I'd asked the merchant to arrange redelivery for
+next Saturday, but that's another rant)?
+
+I call the number. It's, surprise surprise, an automatic phone service.
+They offer me three options---none of which involves any hope of
+speaking to a human---in a terribly frustrating way designed to make
+people give up and chose the first: picking the parcel up from their
+depot. I'm not prepared to pick up a 32 inch TV and lug it across London
+when the people that try to make me do so are paid to deliver it to me.
+So I persevere.
+
+I pick "arrange for redelivery" from their phone service and don't know
+whether to laugh or cry when I hear that they don't offer Saturday as an
+option. I decide to go for the third option, leave your name and number
+and they will call you back. Do they fuck.
+
+Of course they don't. So I call this morning. First their support person
+either plays dumb and pretends there is no parcel on record for me, or
+fails to take down the consignment number correctly. Saved by the bell,
+the battery runs out of my phone so I don't have to talk to that ass
+anymore. I call back later having found a phone with more battery, and
+is instantly put on hold.
+
+Finally being able to speak to a person that acknowledges that they know
+about a package that was meant to be delivered to me on Saturday. They
+don't even try to apologise for not delivering, attempting to lay the
+blame on the sender by claiming it's because it had not arrived with
+them until Tuesday 6th. Their tracking website clearly says they picked
+the TV up from the merchant on Friday 2nd but I figure it's not going to
+give me better service to press that issue further.
+
+The final straw comes when the lady on the other end tells me that I
+cannot arrange to have the parcel redelivered on Saturday. So, let's
+see. First they fail to deliver the package when they're supposed to.
+Then they try to bully me into picking up the package at their depot,
+doing their job for them. Then they won't let me arrange a redelivery on
+a day of the week that's convenient for me, and indeed is the same day
+of the week they were supposed to deliver the package in the first
+place.
+
+Adding insult to injury, this experience is not a one-off thing either.
+It has awaken memories from times past of a Mac Powerbook that was
+supposed to be delivered to $WORK and spent more than two months in
+transit between ShittyLink's London depot and our Old Street office.
+
+Why do people continue to use these fuckers? I'm now severely tempted to
+cancel my purchase and reorder the TV from someone that doesn't use
+ShittyLink. That way I may get my TV sometime this spring.

@@ -1,0 +1,121 @@
+#+title: ModSecurity and Puppet Spelunking
+#+date: 2016-03-16
+#+begin_abstract
+In which I investigate how to configure SecAuditLogParts for
+ModSecurity with Puppet, and find I have to contribute a patch to make
+it possible.
+#+end_abstract
+#+index: Puppet and ModSecurity
+
+This week I have made my first (non-README) contribution to a puppet
+module.
+
+I was attempting to configure [[https://github.com/SpiderLabs/ModSecurity][ModSecurity]] using the puppetlabs-apache
+puppet module when I discovered that the
+=/var/log/httpd/modsec_audit.log= file contained the request body for
+rejected requests. For PCI-DSS reasons, this was not desirous, so I
+set out to learn how I could configure ModSecurity to stop doing that.
+
+First I consulted the [[https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual#SecAuditLogParts][ModSecurity audit log]] documentation and learnt
+that you can choose which sections to include in the audit log with
+the =SecAuditLogParts= directive. Helpfully the audit log file contains
+section separators (e.g. =--be604c0a-C--=) which have a section
+identifier---in this case =C=---which corresponds to the "request body"
+part. So, all I had to do was ensure that I removed =C= from the
+=SecAuditLogParts= directive. Simples!
+
+There was just one /teeeny tiny/ problem. My
+=/etc/httpd/conf.d/security.conf= contained the below line, and /look ma/,
+no =C= to be seen. Drat.
+
+#+BEGIN_EXAMPLE
+    SecAuditLogParts ABIJDEFHZ
+#+END_EXAMPLE
+
+My first thought was that perhaps my config file was not read and
+ModSecurity was running with its defaults, which are documented to be
+=ABCFHZ=. Or perhaps there was an error in the config file further up so
+it was only partly read[fn:1]. To test this I changed the =SecAuditLog=
+directive (which was the last directive in the file) and restarted
+Apache. I provoked ModSecurity again, and lo and behold it logged to
+the audit log with the new name. So at least I had confirmed that the
+config file was read.
+
+I also discovered that my audit log had the =E= section in them, which
+is /not/ in the default, so I went back to re-read the documentation for
+the audit log sections. I won't bother you with details of how my lips
+moved when carefully reading the text, but here's our culprit:
+
+#+BEGIN_QUOTE
+  -  *I*: This part is a replacement for part C. It will log the same
+     data as C in all cases except when multipart/form-data encoding in
+     used. In this case, it will log a fake
+     application/x-www-form-urlencoded body that contains the
+     information about parameters but not about the files. This is handy
+     if you don't want to have (often large) files stored in your audit
+     logs.
+#+END_QUOTE
+
+Using the =C= section identifier in the log file when all the other
+sections map directly from the section part selector to the section
+identifier is unintuitive, to say the least. I wasted quite a lot of
+time because of this and [[https://github.com/SpiderLabs/ModSecurity/issues/1089][filed an issue]] about it. I wouldn't be
+surprised if it is never fixed as third-party tools rely on the
+current behaviour though.
+
+Moving on! I now had a plan. All I had to do was remove the =I= part
+selector from the =SecAuditLogParts= directive. Unfortunately this was
+not configurable through =puppetlabs-apache=. It was hardcoded in the
+=security.conf.erb= template. The plan now became "moaning to friends"
+about my situation. In private[fn:2].
+
+Turns out I moaned to the right friends. After receiving some
+encouragement and pointers from [[http://unixdaemon.net][Dean Wilson]] I set out to contribute
+the ability to configure which sections you want printed to the
+=modsec_audit.log= file to =puppetlabs-apache=. It was much simpler than I
+thought, and culminated in a [[https://github.com/puppetlabs/puppetlabs-apache/pull/1392][pull request]] that was merged pretty
+swiftly.
+
+If you're thinking: "that's cool. I could use that actually. What do I
+have to do?" then don't worry---I've got your back! It may be a little
+while before there's a [[https://github.com/puppetlabs/puppetlabs-apache/releases][new release]], but if you use [[http://bombasticmonkey.com/librarian-puppet/][librarian-puppet]] to
+manage your puppet modules you can easily install the tip of the
+current master branch by putting this in your =Puppetfile=:
+
+#+BEGIN_EXAMPLE
+    mod 'puppetlabs-apache',
+      :git => 'https://github.com/puppetlabs/puppetlabs-apache.git'
+#+END_EXAMPLE
+
+You can then select which sections you want printed to the
+=modsec_audit.log= file by putting something like this in a relevant
+hiera file:
+
+#+BEGIN_EXAMPLE
+    apache::mod::security::audit_log_parts: ABZ
+#+END_EXAMPLE
+
+If you don't use hiera, you can set it directly from a puppet manifest
+like so:
+
+#+BEGIN_EXAMPLE
+    class { '::apache::mod::security':
+      audit_log_parts => 'ABZ'
+    }
+#+END_EXAMPLE
+
+By the way, /please/ do not blindly copy =ABZ= from the above example, but
+refer to the [[https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-2-Data-Formats#audit-log][audit log]] documentation and make an informed choice as to
+which sections you want to log to /your/ audit log. Every app is
+different and what's right for mine is not necessarily right for
+yours. (Especially since that isn't actually what I use: I just felt
+it rolled off the tongue nicely for this example, if you pronounce the
+=Z= like a =C=, as some are wont.)
+
+* Footnotes
+
+[fn:1] Although I judged the chance of the latter slim, since no
+warnings or errors were logged about corrupt config.
+
+[fn:2] I am a grown-up, and a professional, after all.
+

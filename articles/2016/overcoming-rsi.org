@@ -1,0 +1,78 @@
+#+title: Overcoming RSI
+#+date: 2016-05-02
+#+begin_abstract
+Early 2005 I encountered a bad bout of RSI. Prompted by a comment on
+the Lobsters forum, I thought I'd share my experience.
+#+end_abstract
+#+index: RSI!Overcoming
+
+I came across [[https://boinkor.net/2016/04/some-things-i-learned-about-dealing-with-rsi/][this story]] about overcoming RSI and thought I'd share my
+experience in [[https://lobste.rs/s/qaeig8/some_things_i_learned_about_dealing_with_rsi][the comments]] on Lobsters. When that turned out blog-post
+length, I thought I'd post it here too.
+
+I had a terribly scary run-in with RSI about 20 months into my working
+career, or about 2 months into my new job. Like the author, I had it
+bad: I found it excruciatingly painful to open doors, or do pretty much
+anything. In the evenings I would sit in front of the TV with a pillow
+in my lap, resting my hands on the pillow---that too would be painful.
+Even resting my hands on the top of the duvet in bed was painful.
+
+I seriously considered leaving IT, but I persevered as I couldn't
+think of anything I'd want to do that didn't involve a lot of typing.
+(Even going back to study would require quite a lot of typing.) So I
+talked to my boss, who I knew had also struggled with RSI
+periodically. He gave the same advice as [[https://lobste.rs/c/9qexwc][@kel]]: change things up. That
+was 11 years ago, and I guess it was sage advice because I am still
+programming, but mostly pain free these days.
+
+In addition to the wrist pains, that went all the way up to the elbow
+and beyond (on the left) I had other symptoms. One of the most
+persistent ones is that my fingertips, and the first joint on the
+fingers, would have stabbing pains from pressing the keys.
+
+Some things that helped me, /probably/ in order of importance:
+
+1. Throw away the wrist rest. "Resting" my wrists on a gel-pad while
+   typing constricted the blood vessels just under the skin, and made me
+   prone to bending the wrists to read far-away keys rather than moving
+   my whole arm from the shoulder. This was possibly the hardest, but
+   most effective thing I did: learn to type without resting my forearms
+   on the table / wrist rest.
+2. Getting a proper external split keyboard. The first two months at
+   that job I was typing on the laptop keyboard. (Macbook Pro.) I
+   switched to using a Microsoft split keyboard for a while, but I
+   found the keys too hard to press down. I soon moved to the [[https://www.amazon.co.uk/Fujitsu-Keyboard-KBPC-keyboards-CSA-C22-2/dp/B000JWEJEC?ie=UTF8&keywords=siemens%20keyboard&qid=1455117950&ref_=sr_1_2&s=electronics&sr=1-2][Fujitsu
+   Siemens Butterfly]] one and haven't looked back. A split keyboard
+   allows a much more normal position of my arms, leading to more
+   natural positions of the wrists. (For me, at least.)
+3. I joined a gym (lucky me: work sponsored gym membership across the
+   road) and worked on upper back and arm strength to improve my posture
+   and have the strength to let my underarms hover over the table rather
+   than resting on it the whole day. (See the first point.)
+4. Pair programming. My team was very understanding. We did a lot of
+   pairing, though not on everything, and I probably ended up pairing
+   more during this process. On days when my RSI was very bad I would
+   sometimes be doing the driving, but without holding the keyboard. I
+   am forever grateful to my very understanding colleagues. (Who were
+   all senior to me.)
+
+Some things that didn't help:
+
+-  I could not switch to Dvorak layout, because I was already using it.
+   I now wonder if that hid my symptoms for a while, until it got
+   completely out of hand? Who knows. It's anyway the only way I can
+   touch type. (Because if I look at the keys I just get confused: they
+   don't type what they say on them.)
+-  Taking holidays. I took a two-week break from touching a computer,
+   and felt absolutely fine. However, within minutes of sitting down in
+   front of a keyboard my hands were in agony again. That was not a
+   great day.
+
+It took months getting over the pain. For a long time fear of the pain
+itself probably caused me to tense up and make things worse than they
+could have been. But, with the help of an understanding boss I did
+eventually manage to get back to a pain-free existence.
+
+Over the years since I have had bouts with RSI again, sometimes very
+bad, but I now know that I don't need to panic. I /do/ need to double
+down on discipline though.

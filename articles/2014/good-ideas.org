@@ -1,0 +1,78 @@
+#+title: Good Ideas
+#+date: 2014-10-22
+#+index: Education!Why it should be free or at least affordable
+#+index: Parental Leave!Why it should be generous and ubiquitous
+#+index: Basic Income
+#+index: Self-driving cars
+
+I mentioned in private conversation recently that I would like to work
+on making the world a better place. In response I was asked "what does
+/better/ mean to you?" which sort of perplexed me---it had never occured
+to me to try to define it. So in this post I'll present a few Good Ideas
+I believe is making (or will make) the world a better place.
+
+*Affordable education.* I strongly believe that free education is not
+only /right/---it is also a sound /investment against future taxes/.
+Higher education tends to lead to higher salaries, thus a higher
+educated population ends up paying more tax through their working life.
+
+*Equal and generous parental leave.* When parental leave is taken wholly
+or mostly by mothers they tend to be overlooked for promotion and pay
+rises, or discriminated against when applying for jobs. But when men
+/also/ can take up to six months leave, women get more protection
+against discrimination. There are also indications that families where
+dad take a more active role in child rearing tends to divorce less
+frequently. Thus, equality with regards to parental leave leads to fewer
+broken homes.
+
+*Unconditional basic income.* Let's replace all benefits with a
+guaranteed basic income for all citizens. I believe this will become a
+necessity as more and more jobs are being automated away. When mining
+machines took over the dangerous jobs miners were doing I don't think
+the they were sorry they couldn't go back---though many were surely
+distraught that they couldn't support their families any more. If they
+had [[http://en.wikipedia.org/wiki/Basic_income][basic income]] to fall back on, less problems could have been the
+result. Of course it's not a complete solution. Not everyone (myself
+included) will be content with devoting ourselves to art & culture, so
+will need to find new things to do. But I believe it's a start:
+particularly when coupled with free education.
+
+*Self-driving cars.* I'm optimistic about this, and I hope that my son
+never has to learn to drive. Traffic accidents are apparently now the
+[[http://www.theguardian.com/global-development/2012/may/02/traffic-accidents-biggest-killer-young-people][biggest killer of young people worldwide]]. Of course most of the deaths
+is in developing countries, which will likely not be the first to
+adopt self-driving cars, but one has to start somewhere. This might
+incidentally be a catalyst for unconditional basic income due to job
+losses from self-driving lorries, cabs, and busses.
+
+*Tax oil and tobacco companies to within an inch of their
+profitability.* (Or beyond.) It is not right that a few companies
+should be allowed to get absurdly rich by plundering the planet's last
+reserves of non-renewable natural resources. Neither is it right that
+companies peddling [[http://en.wikipedia.org/wiki/Health_effects_of_tobacco][the single greatest cause of preventable death
+globally]] should be allowed to reap astronomical profits from it.
+
+I don't think any of this is a pipe dream. Most of the above ideas are
+/already/ implemented in various parts of the world. For example:
+
+- In Scotland---as it is throughout Scandinavia---education is already
+  essentially free, if you exclude living costs.
+
+- In Norway parental leave is 46 weeks at 100% pay, or optionally 56
+  weeks at 80% pay. Of this 12 weeks is reserved for the father and
+  /cannot be transferred to the mother/. According to this [[http://www.nytimes.com/2010/06/10/world/europe/10iht-sweden.html?pagewanted=all&_r=0][NY Times
+  article]] Sweden has a similar scheme.
+
+- [[http://www.tobaccoatlas.org/solutions/tobacco_taxes/excise_tax/][Cuba, UK and Egypt]] are in the lead on the taxation of tobacco. (But
+  probably not by enough.)
+
+- Norway [[http://en.wikipedia.org/wiki/Taxation_in_Norway#Taxation_of_petroleum_activities][tax petroleum extraction at 78%]]. The proceeds is put into a
+  fund, and invested for the future.
+
+Unconditional basic income is unfortunately not a reality yet. Though
+it /has/ seen successful small-scale trials in several countries and
+[[http://www.reuters.com/article/2013/10/04/us-swiss-pay-idUSBRE9930O620131004][Switzerland]] will apparently be voting on whether to introduce it
+nationwide in not too long. Finally, Ford predicts [[http://www.extremetech.com/extreme/132147-ford-self-driving-cars-2017][self driving cars
+by 2017]].
+
+A man can dream...

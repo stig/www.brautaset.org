@@ -1,0 +1,17 @@
+#+title: Generating Bar Charts with SQL
+#+date: 2006-11-23
+#+index: SQL!Generating Bar Charts
+#+index: Bar Charts!Generating with SQL
+
+[[http://jerakeen.org][jerakeen]] pointed me to a post showing how you could [[http://www.squarebits.com/blog/2006/11/generate_simple.html][Generate Simple
+Bar Charts From a MySQL Prompt]]. It's a neat trick for quickly getting
+a feel for the distribution of values in a database. The post is MySQL
+centric, but you can do the same thing in any database. PostgreSQL's
+=REPEAT= is very particular about being passed an INT, however, so you
+may have to cast the second argument:
+
+#+BEGIN_SRC sql
+  SELECT foo_id, REPEAT('#', COUNT(*)::INT)
+  FROM bar
+  GROUP BY 1;
+#+END_SRC

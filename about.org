@@ -1,0 +1,26 @@
+#+title: About
+
+I grew up in Hovdebygda, a village in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta Municipality]] on the west
+coast of Norway. I studied Electronics in Ørsta, Ålesund & Oslo. After
+interrupting my studies by compulsory military service I moved to
+London to study Artificial Intelligence at Westminster University
+in 2000. I still live in England, though in March 2015 I moved from
+London to [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
+
+I have worked in software development since I graduated in 2003. Over the
+years employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
+Objective-C, Scala, Python, Bash and English.
+
+I have accounts on more sites than I can remember. Most are in varying
+states of lacking attention. Here are some:
+
+- [[http://twitter.com/stigbra][Twitter]]
+- [[http://uk.linkedin.com/in/stigbrautaset][LinkedIn]]
+- [[https://www.ohloh.net/accounts/stigbra][Ohloh]]
+
+* Contacting Me
+
+Unless you already have my phone number, I suggest trying one of:
+
+- http://twitter.com/stigbra
+- stig@brautaset.org

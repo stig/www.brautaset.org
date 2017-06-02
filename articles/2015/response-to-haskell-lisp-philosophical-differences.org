@@ -1,0 +1,120 @@
+#+title: Not so philosophically different after all?
+#+date: 2015-12-23
+#+index: Clojure!On this Lisp's non-difference from Haskell
+
+I found Chris Done's [[http://chrisdone.com/posts/haskell-lisp-philosophy-difference][A philosophical difference between Haskell and
+Lisp]] via its [[https://lobste.rs/s/mjxvyn/a_philosophical_difference_between_haskell_and_lisp][Lobste.rs' thread]] and my response ended up blog-post
+length so I decided to reproduce it here.
+
+Chris opens with:
+
+#+BEGIN_QUOTE
+  One difference in philosophy of Lisp (e.g. Common Lisp, Emacs Lisp)
+  and Haskell is that the latter makes liberal use of many tiny
+  functions that do one single task. This is known as composability, or
+  the UNIX philosophy. In Lisp a procedure tends to accept many options
+  which configure its behaviour. This is known as monolithism, or to
+  make procedures like a kitchen-sink, or a Swiss-army knife.
+#+END_QUOTE
+
+Now, I don't know Common Lisp, and not much Emacs Lisp, but his first
+example does not hold for Clojure. I don't recognise it at all. For
+example, a straight-forward beginner's implementation of this function:
+
+#+BEGIN_QUOTE
+  take all elements from the list--except the first three--that satisfy
+  predicate p, and take only the first five of those
+#+END_QUOTE
+
+Would probably look like this:
+
+#+BEGIN_SRC clojure
+  (defn f [p coll]
+    (take 5 (filter p (drop 3 coll))))
+#+END_SRC
+
+However, this would probably be more idiomatic to rewrite it using the
+[[http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/-%3E%3E][~->>~]] macro. This has the benefit that the wording in the spec matches
+the code better:
+
+#+BEGIN_SRC clojure
+  (defn f'[p coll]
+    (->> coll
+         (drop 3)
+         (filter p)
+         (take 5)))
+#+END_SRC
+
+I'm not sure what's going on with the second problem:
+
+#+BEGIN_QUOTE
+  get all elements greater than 5, then just the even ones of that set.
+#+END_QUOTE
+
+It looks to me like /neither/ his lisp nor his Haskell solution works,
+as they both get only the even numbers /below/ 5. So, I'll show my
+solution to both the stated problem and my implementation of his
+examples in Clojure. The stated problem first:
+
+#+BEGIN_SRC clojure
+  (filter even? (iterate inc 5))
+#+END_SRC
+
+Rewritten with =->>=:
+
+#+BEGIN_SRC clojure
+  (->> (iterate inc 5)
+       (filter even?))
+#+END_SRC
+
+The problem that his code examples solve I would do like this:
+
+#+BEGIN_SRC clojure
+  [2 4]
+#+END_SRC
+
+Ok, that was cheeky, so let's show it with code too:
+
+#+BEGIN_SRC clojure
+  (filter even? (range 5))
+#+END_SRC
+
+or, if =0= is not desired:
+
+#+BEGIN_SRC clojure
+        (filter even? (range 1 5))
+#+END_SRC
+
+Range has a =step= option too, but I'd hardly call it a kitchen sink
+function:
+
+#+BEGIN_EXAMPLE
+  user> (doc range)
+  -------------------------
+  clojure.core/range
+  ([] [end] [start end] [start end step])
+    Returns a lazy seq of nums from start (inclusive) to end
+    (exclusive), by step, where start defaults to 0, step to 1, and end to
+    infinity. When step is equal to 0, returns an infinite sequence of
+    start. When start is equal to end, returns empty list.
+  ;; => nil
+#+END_EXAMPLE
+
+So we could solve this like this too:
+
+#+BEGIN_SRC clojure
+  (range 2 5 2)
+#+END_SRC
+
+Alternatively, if you really want to use 2 functions, we could also
+emulate his Haskell solution:
+
+#+BEGIN_SRC clojure
+  (take-while even? (range 1 5))
+#+END_SRC
+
+As others in the Lobsters thread commented, Scheme also favours small
+composable functions. Perhaps all this shows is the problem of trying
+to divine a philosophical difference between a single language and
+/family of languages/ twice its age [[https://en.wikipedia.org/wiki/Lisp_(programming_language)][with over 25 dialects listed on
+Wikipedia]].

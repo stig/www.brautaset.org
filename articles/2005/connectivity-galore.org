@@ -1,0 +1,25 @@
+#+title: Connectivity Galore
+#+date: 2005-07-25
+
+I'm in Norway on holiday. I'm the resident tech.
+
+My parents have an ISDN telephone, and ADSL internet connectivity. Now
+they are changing to VOIP telephony, as this will give them free
+national calls. Allegedly.
+
+Going over their stash of connectivity voodoo (almost none of which was
+hooked up to anything), I found:
+
+-  1 ADSL over ISDN router
+-  1 "normal" ADSL router
+-  1 ADSL router with built-in wireless AP and 4-port switch
+-  1 combined wireless AP & 4-port switch
+-  1 VOIP box
+
+The "normal" ADSL router arrived recently from their ADSL provider; it
+is a replacement for the one with built-in wireless and switch, as these
+have been showing stability issues. I've put it in place and hooked up
+the stand-alone AP to it, so after some careful vetting of tech they now
+have 2 ADSL routers to send back to their provider.
+
+Gah!

@@ -1,0 +1,47 @@
+#+title: Regular Expressions
+#+date: 2006-07-19
+#+index: Regular Expression!Find words with three double letter groups
+
+*Note:* This post has been updated to reflect the contents of
+=/usr/share/dict/words= on OS X Mountain Lion, and use egrep rather than
+Perl.
+
+A friend mentioned that the word "bookkeeping" was (apparently) the
+only English word that had three consecutive groups of double letters
+in it. I decided to test this statement, so I wrote a little regular
+expression to verify it. Here's the program, and the results of
+running it:
+
+#+BEGIN_SRC sh
+egrep '(.)\1(.)\2(.)\3' /usr/share/dict/words
+#+END_SRC
+
+: bookkeeper
+: bookkeeping
+: subbookkeeper
+
+
+So, it turned out he was right. (At the time this post was written, he
+was; subbokkeeper has been added later, and I'll allow bookkeeping as
+a variant of bookkeeper.) Then I got curious; what if the groups don't
+have to be consecutive? That's easy enough to check, so let's do that:
+
+#+BEGIN_SRC sh
+egrep '(.)\1.*(.)\2.*(.)\3' /usr/share/dict/words | wc -l
+#+END_SRC
+
+: 170
+
+Wow. I wonder if any of those have *four* groups of double letters in
+them? (Non consecutive?)
+
+#+BEGIN_SRC sh
+egrep '(.)\1.*(.)\2.*(.)\3.*(.)\4' /usr/share/dict/words
+#+END_SRC
+
+: killeekillee
+: possessionlessness
+: subbookkeeper
+: successlessness
+
+Those sure are some funny words...

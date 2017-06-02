@@ -10,22 +10,21 @@ html {
     "Lucida Grande",
     sans-serif;
 
-    font-size: x-large;
+    margin: 0.5ch;
 }
 
-main, body {
-    margin: 1ch 0.5ch;
+body {
+    margin: 0;
 }
 
-main, body > header {
-    border-bottom: 1px dashed #ccc;
+html, .subtitle {
+    font-size: large;
 }
 
-main, body > footer {
-    margin-top: 0.5ch;
+.abstract {
+    padding: 0 10%;
     border-top: 1px dashed #ccc;
-    color: #888;
-    padding-bottom: 5ch;
+    border-bottom: 1px dashed #ccc;
 }
 
 nav ul {
@@ -37,43 +36,28 @@ nav ul li {
     padding-left: 1ch;
     white-space: nowrap;
 }
-nav ul li:first-child { padding-left: 0; }
-
-img { max-width: 100%; }
-
-
-.post-meta {
-    color: #888;
-    display: none;
+nav ul li:first-child {
+    padding-left: 0;
 }
 
-.footpara { display: inline; }
+img {
+    max-width: 100%;
+}
+
+#postamble {
+    border-top: 1px dashed #ccc;
+    font-size: smaller;
+    color: #888;
+}
 
 @media (min-width: 500px) {
-
-    /* Center content */
     body {
-        max-width: 72ch;
+        max-width: 65ch;
         margin: auto;
     }
 
-    .post-meta {display: inline;}
-}
+    html, .subtitle {
+        font-size: x-large;
+    }
 
-blockquote {
-    border-left: 0.5ch solid lightgray;
-    margin-left: 0;
-    padding-left: 2.5ch;
-}
-
-figure.highlight, pre {
-    margin: 0;
-    padding: 0;
-}
-figure > pre, .org-src-container {
-    background: #eee;
-    border: 1px solid gray;
-    border-radius: 1ch;
-    padding: 1ch;
-    font-size: large;
 }

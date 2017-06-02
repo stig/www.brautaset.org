@@ -1,0 +1,72 @@
+#+title: A Lesson in Benchmarking
+#+date: 2015-02-24
+#+index: Development!A lesson in Benchmarking
+
+Our API had a cache builder abstraction that allowed us to use either an
+in-memory LRU cache or memcached. The LRU cache was faster, but the
+memcached version could be shared, and "unlimited" in size. It was added
+on the theory that as we scaled out, the memcached version would be
+better because a higher number of instances would see fewer cache hits.
+
+The Memcached version was never really used in anger: it was too slow
+for the hottest caches, and we had a brief outage due to a missed
+=@SerialVersionUID= annotation on some code--which manifest itself at
+deployment, when the old version of the code wrote a version of the
+serialised class to the cache and the new version tried to instanciate
+this. Coupled with the need to manage more machines meant that we moved
+away from using it when we moved our API to AWS. Finally it was a lot of
+code (about 10% of this particular project's code base!) so recently I
+removed the abstraction layer and the memcache version, leaving only the
+LRU version.
+
+Just for curiosity I did a load test before and after, on otherwise
+identical setup. The load test consist of replaying access logs from a
+few weeks back. I expected no change, or if anything a small improvement
+in performance. Instead I was gobsmacked to see see a 25% increase in
+throughput, sustained over 50 minutes. I thought there must be a
+mistake. The API serves product data for a retail site, and the baseline
+was the previous commit---but the baseline was run the day before our
+sale ended. It occured to me that that because I ran the new test the
+day /after/ the sale ended, a lot of requests would return 0-length
+responses, which would be served faster. This explained everything!
+/Except/ that the environment where I ran the load test had a static
+data dump, so its data hadn't changed. Damn!
+
+So I redid the test, for both the baseline and my change, but this time
+replaying access logs from /after/ the sale ended to be more
+representative. This time we saw a /50%/ increase in throughput. Best
+part: 99th percentile improvements in latency from 1.3s to 540ms! Worst
+part: not understanding how, or why. I was now questioning everything,
+including my sanity.
+
+Looking deeper into the metrics for the wider stack it turns out that we
+fired fewer requests to data stores behind the API layer. This implies
+that our API-layer cache is more effective after the change. I was
+confident that the change didn't introduce unintend change of behaviour.
+We strongly suspected a bug somewhere in all the code that was deleted
+that caused the caching to be not as efficient as it should have been.
+Since it was an unexpected /increase/ in performance I decided not to
+waste more time trying to explain exactly why.
+
+The change went into production, where we regretfully didn't see the
+improvement on our latency we saw during our load test. However, we
+/did/ see a reduced number of queries against the backend for the same
+load on the frontend. We thought the reason we were not seing an
+improvement in latency was that our live environment was not as stressed
+as our load testing environment, so it was /already/ at the lower tier
+of latency. In other words, it would take more pounding before latency
+degraded.
+
+A few days later---during load testing of an unrelated change---we found
+the /actual/ reason for the speedup: Since there was only one cache
+implementation left I renamed a config key from =foo.cache.lru-max-size=
+and =foo.cache.memcache-max-size= to simply =foo.cache.max-size=. This
+was not overriden in our test & production environments and therefore
+ended up using the (far too large) default value. We found this when the
+feature we were testing put so many objects in the cache that the JVM
+ran out of memory and started throwing exceptions...
+
+Moral of the story: /be suspicious of accidental performance gains/.
+Luckily we caught this before we had a production outage, but I should
+have trusted my initial instinct and looked harder to find the cause for
+the unexpected speedup. I'll know next time!
