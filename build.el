@@ -56,7 +56,7 @@ if(/superloopy\.io/.test(window.location.hostname)) {
       org-publish-project-alist
       `(("static"
          :base-directory ,project-path
-         :base-extension "css\\|el\\|png\\|jpg\\|gif\\|pdf"
+         :base-extension "css\\|png\\|jpg\\|pdf"
          :exclude "_site"
          :publishing-directory ,publish-path
          :publishing-function org-publish-attachment
