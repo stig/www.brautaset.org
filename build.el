@@ -77,4 +77,4 @@ if(/superloopy\.io/.test(window.location.hostname)) {
          :recursive t)))
 
 (require 'ox)
-(org-publish-all t)
+(org-publish-all)
