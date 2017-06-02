@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-06-02 Fri 20:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Consolidating and de-duplicating iPhoto libraries</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Stig Brautaset" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <img src="/images/logo.png"/>
+  <nav>
+    <ul>
+      <!-- <li><a accesskey="h" href="/"> Up </a></li>
+ -->
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="a" href="/articles"> Articles </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Consolidating and de-duplicating iPhoto libraries</h1>
+<p>
+This explains how I consolidated &amp; de-duped about 45,000 pictures and
+movies from four iPhoto libraries on two different machines and various
+directories full of images on USB drives into one 33,000 file library.
+</p>
+
+<p>
+We had about 25,000 photos in one library from a previous (unsuccessful)
+attempt at consolidating libraries. We had two further libraries
+containing about 13,000 and 10,000 images each, and a fourth iPhoto
+library on a separate machine, plus the aforementioned random grab-bag
+of directories full of images. (I didn't count how many these were, but
+they numbered in the thousands.) After consolidation we ended up with
+33,000 images and movies in one iPhoto library.
+</p>
+
+<p>
+iPhoto has a menu item for finding duplicates, but I was not been able
+to make it work; it would just hang trying to find duplicates in one of
+the smaller libraries. And even if I could get that to work I didn't
+have the space to copy all the images into one giant library and let
+iPhoto sort it out. So I wrote a program to help me.
+</p>
+
+<p>
+One problem was that the same picture would exist with different file
+names, probably due to being imported from devices into multiple
+different iPhoto libraries or to being exported &amp; then imported again in
+the aforementioned failed consolidation attempt. We also had different
+images existing with the same name, due to the counter on the camera
+looping around. This was OK since iPhoto stores images from different
+imports in different directories, but it meant that we couldn't just
+copy all the files into one directory and use the names to de-duplicate
+them.
+</p>
+
+<p>
+I wrote a simple program to iterate over all image &amp; movie files in a
+directory and create a copy of each named after the
+<a href="http://en.wikipedia.org/wiki/MD5">MD5 hash</a> of its content. Thus
+files whose content were identical, but had different names, would now
+end up with the same name. I did not want to end up with tens of
+thousands of files in one directory, so I made my program put each file
+in a directory named after the 2 first characters of each file's name.
+Here it is:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">!/bin/</span><span style="font-weight: bold;">sh</span>
+
+<span style="font-weight: bold;">set</span> -e
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">set -x</span>
+
+<span style="font-weight: bold; font-style: italic;">src</span>=$<span style="font-weight: bold; font-style: italic;">1</span>
+<span style="font-weight: bold; font-style: italic;">dst</span>=$<span style="font-weight: bold; font-style: italic;">2</span>
+
+find <span style="font-style: italic;">"$src"</span> -type f | <span style="font-weight: bold;">while </span><span style="font-weight: bold;">read</span> file ; <span style="font-weight: bold;">do</span>
+    <span style="font-weight: bold; font-style: italic;">chksum</span>=$(md5 -q <span style="font-style: italic;">"$file"</span>)
+    <span style="font-weight: bold; font-style: italic;">dir</span>=$(<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">chksum</span> | cut -b1-2)
+    <span style="font-weight: bold; font-style: italic;">suffix</span>=$(<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">file</span> | awk -F. <span style="font-style: italic;">'{print tolower($NF)}'</span>)
+    <span style="font-weight: bold; font-style: italic;">to</span>=$<span style="font-weight: bold; font-style: italic;">dst</span>/$<span style="font-weight: bold; font-style: italic;">dir</span>/$<span style="font-weight: bold; font-style: italic;">chksum</span>.$<span style="font-weight: bold; font-style: italic;">suffix</span>
+    <span style="font-weight: bold;">if ! </span><span style="font-weight: bold;">test</span> -f <span style="font-style: italic;">"$to"</span> ; <span style="font-weight: bold;">then</span>
+        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Make sure destination dir exists...</span>
+        mkdir -p $<span style="font-weight: bold; font-style: italic;">dst</span>/$<span style="font-weight: bold; font-style: italic;">dir</span>
+        link <span style="font-style: italic;">"$file"</span> <span style="font-style: italic;">"$to"</span>
+    <span style="font-weight: bold;">fi</span>
+
+    <span style="font-weight: bold; font-style: italic;">log</span>=<span style="font-style: italic;">"$chksum $file"</span>
+    <span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">log</span> &gt;&gt; <span style="font-style: italic;">"$dst/log"</span>
+    <span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">log</span>
+<span style="font-weight: bold;">done</span>
+</pre>
+</div>
+
+<p>
+Since I didn't have enough disk space to duplicate all the images, I
+used hardlinks. This essentially means you just create a new filename
+pointing to the same data on disk, without taking up extra data. I also
+made the program create a log file containing the location of each file
+and its MD5 hash so I could find out how many files were processed and
+how many duplicates were found.
+</p>
+
+<p>
+A problem with the MD5 hash approach would be if duplicate copies of
+images had different image metadata. This could be the case is some
+copies had had their dates adjusted or if iPhoto where changing the EXIF
+information when you star photos or tag faces in them. Fortunately, a
+little experimentation showed that iPhoto does not change the image
+files but stores this extra information in a separate database. My
+approach would thus mean that we would lose stars &amp; face tags, but we
+considered this an acceptable trade off. Consolidating and de-duping the
+libraries would be worth it.
+</p>
+
+<p>
+What if the EXIF information <i>had</i> been edited? (Some image managers
+do.) Would all hope be lost? No, it would not. The Imagemagick suite of
+tools comes with the <i>identify</i> program, which allows you to get a hash
+of just the image data. This would allow us to find more duplicates,
+even if the EXIF information had been edited; however it runs much,
+<i>much</i> slower than just using MD5 so I chose not to use it.
+</p>
+
+<p>
+One worry I had was how to make sure I got hold of all the originals
+from iPhoto. Due to the aforementioned space constraint I couldn't just
+export all the photos and thus create new copies. However, this turned
+out not to be an issue. iPhoto stores its originals in a <i>Masters</i>
+directory, along parallel directories for <i>Previews</i> and <i>Thumbnails</i>.
+Thus I just ran my program on the Masters directory. One risk would be
+losing edits to images, but I was OK with this.
+</p>
+
+<p>
+In the end I had 255 directories with on average 130 files in each. I
+imported these directories into a brand new iPhoto library roughly ten
+at a time. Since iPhoto doesn't use hardlinks but copies the photos into
+its library (to avoid nasty surprises if someone decided to edit the
+file in a different location, no doubt) this ate up disk fast; and I had
+to delete the existing libraries under the different accounts to make
+room. Since I had Time Machine backups (yes, plural&#x2014;I rotate two Time
+Machine disks) I felt OK doing this.
+</p>
+
+<p>
+We are really happy with the result :-)
+</p>
+
+<p>
+<b>Update 2014/05/08:</b> A few days ago I received a question to this post
+from Jeff Ruth. Because it, and its answer, may be useful to more people
+I asked if I could reproduce it here.
+</p>
+
+<blockquote>
+<p>
+Hello and thanks for the post about your iPhoto consolidation and
+de-duping. I'd love to do something similar. We have three Apple
+laptops (two MacBooks from 2008 and 2009) and a new Macbook Pro
+Retina. In all, about 3-5 iPHoto libraries, I think. Your project
+seems to be what we'd like to do. However, I'm not sure how to do it.
+If you have a minute, could you please tell me how I can use your
+code, or do this a different way, without the program? I am not a
+programmer, but have used Terminal now and then and am not afraid to
+experiment if necessary. Thanks a lot, in advance.
+</p>
+
+<p>
+Jeff Ruth
+</p>
+</blockquote>
+
+<p>
+My response:
+</p>
+
+<blockquote>
+<p>
+Do your libraries contain duplicates? If not, I wouldn't bother with
+this approach. We only needed to because we had imported the same
+photos into multiple photo albums.
+</p>
+
+<p>
+The script was intended for developers, but if you want to try you
+have to copy the file (dedupe-media.sh) to your local disk, then make
+it executable. In Terminal, you do that with ‘chmod +x
+dedupe-media.sh'. (Without the quotes.) You then run the script like
+so:
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+<code>/path/to/dedupe-media.sh /path/to/iPhotoLibrary/Masters /destination/path</code>
+</p>
+
+<p>
+If you want to run this on multiple laptops you may want to make the
+destination a single USB disk (or something) so probably
+/Volumes/My\<sub>USB</sub>\<sub>Disk</sub>\<sub>Name</sub>. This disk will accumulate unique photos.
+The product is just a big folder of files, which will have to imported
+into a new library. All metadata (faces, etc) will have to attached
+again.
+</p>
+
+<p>
+Please note this script comes with NO WARRANTY OF ANY KIND. You must
+take adequate backup of your libraries before running the above.
+Although I have made my best attempt at making the script work (and it
+does for me!), I take no responsibility for any data loss you may
+experience.
+</p>
+</blockquote>
+
+<p>
+<b>Update 2015/08/16:</b> One annoyance under iTunes is that the "rolls" or
+"albums" feature is utterly meaningless, because you've got 255 albums
+named "00", "01", "..", "fe", "ff". However, you can fix that by running
+<code>exiftool</code> over the resulting files to have them grouped by year and
+month (there are
+<a href="http://www.sno.phy.queensu.ca/~phil/exiftool/filename.html">more
+examples in the exiftool documentation</a>):
+</p>
+
+<pre class="example">
+exiftool -d %Y/%m "-directory&lt;datetimeoriginal" DIR_OF_FILES
+</pre>
+
+<p>
+This moves the images found in <code>DIR_OF_FILES</code> into a directory structure
+based on the year and month the data was taken, as taken from the Exif
+data in the image itself. The structure will be like so:
+</p>
+
+<pre class="example">
+2009/11/foo.jpg
+2009/11/bar.jpg
+2010/01/baz.jpg
+2010/01/qux.jpg
+</pre>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2013-10-06</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="date">Created: 2017-06-02 Fri 20:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
