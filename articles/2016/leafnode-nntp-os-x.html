@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2017-06-02 Fri 20:58 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- 2017-06-03 Sat 08:27 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Setting up Leafnode on OS X</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Stig Brautaset" />
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -241,7 +239,7 @@ if(/superloopy.io/.test(window.location.hostname)) {
 <body>
 
 <div id="org-div-home-and-up">
-  <img src="/images/logo.png"/>
+  <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
       <!-- <li><a accesskey="h" href="/"> Up </a></li>
@@ -272,7 +270,7 @@ now use the <a href="https://www.gnu.org/software/emacs/manual/html_node/gnus/Ag
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org65399c4">Introduction</a></li>
+<li><a href="#orgc5d6278">Introduction</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#configuration">Configuration</a></li>
 <li><a href="#a-note-on-users">A note on users</a></li>
@@ -292,18 +290,18 @@ now use the <a href="https://www.gnu.org/software/emacs/manual/html_node/gnus/Ag
 <h2>List of Listings</h2>
 <div id="text-list-of-listings">
 <ul>
-<li><a href="#org50120fc"><span class="listing-number">Listing 1:</span> Example <code>/usr/local/etc/leafnode/config</code></a></li>
-<li><a href="#org77f246e"><span class="listing-number">Listing 2:</span> <code>org.brautaset.fetchnews.plist</code></a></li>
-<li><a href="#org79a77de"><span class="listing-number">Listing 3:</span> <code>org.brautaset.leafnode.plist</code></a></li>
-<li><a href="#org8f2cb89"><span class="listing-number">Listing 4:</span> <code>org.brautaset.texpire.plist</code></a></li>
-<li><a href="#orgc2a6fc2"><span class="listing-number">Listing 5:</span> Starting the services with the <code>launchctl</code> command</a></li>
+<li><a href="#org7e8b07f"><span class="listing-number">Listing 1:</span> Example <code>/usr/local/etc/leafnode/config</code></a></li>
+<li><a href="#orga62414a"><span class="listing-number">Listing 2:</span> <code>org.brautaset.fetchnews.plist</code></a></li>
+<li><a href="#org267fc71"><span class="listing-number">Listing 3:</span> <code>org.brautaset.leafnode.plist</code></a></li>
+<li><a href="#org406d894"><span class="listing-number">Listing 4:</span> <code>org.brautaset.texpire.plist</code></a></li>
+<li><a href="#org572de2b"><span class="listing-number">Listing 5:</span> Starting the services with the <code>launchctl</code> command</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org65399c4" class="outline-2">
-<h2 id="org65399c4">Introduction</h2>
-<div class="outline-text-2" id="text-org65399c4">
+<div id="outline-container-orgc5d6278" class="outline-2">
+<h2 id="orgc5d6278">Introduction</h2>
+<div class="outline-text-2" id="text-orgc5d6278">
 <p>
 I read email and news with Gnus. I often use a laptop, and often in
 places I don't have internet access. Gnus doesn't like not being able to
@@ -321,8 +319,8 @@ might want to read this post instead. No Emacs required :-)
 </div>
 </div>
 
-<div id="outline-container-org9572a2b" class="outline-2">
-<h2 id="installation"><a id="org9572a2b"></a>Installation</h2>
+<div id="outline-container-org5764fc4" class="outline-2">
+<h2 id="installation"><a id="org5764fc4"></a>Installation</h2>
 <div class="outline-text-2" id="text-installation">
 <p>
 First we have to install Leafnode. This is dirt simple with
@@ -336,8 +334,8 @@ First we have to install Leafnode. This is dirt simple with
 </div>
 </div>
 
-<div id="outline-container-org28cd003" class="outline-2">
-<h2 id="configuration"><a id="org28cd003"></a>Configuration</h2>
+<div id="outline-container-orgfc0a929" class="outline-2">
+<h2 id="configuration"><a id="orgfc0a929"></a>Configuration</h2>
 <div class="outline-text-2" id="text-configuration">
 <p>
 Configuring Leafnode is also quite simple really. The action all takes
@@ -345,12 +343,12 @@ place in the <code>/usr/local/etc/leafnode/config</code> file. You have to creat
 this file, but there's very few required settings and there's a
 well-commented example at <code>/usr/local/etc/leafnode/config.example</code> that
 we can use as a reference. I'll omit comments from my example, which
-you can view in listing <a href="#org50120fc">1</a>. (You obviously have to change
+you can view in listing <a href="#org7e8b07f">1</a>. (You obviously have to change
 <code>hostname</code> to suit you.)
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example <code>/usr/local/etc/leafnode/config</code></label><pre class="src src-conf" id="org50120fc"><span style="font-weight: bold; font-style: italic;">expire</span> = 20
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example <code>/usr/local/etc/leafnode/config</code></label><pre class="src src-conf" id="org7e8b07f"><span style="font-weight: bold; font-style: italic;">expire</span> = 20
 <span style="font-weight: bold; font-style: italic;">server</span> = news.gmane.org
 <span style="font-weight: bold; font-style: italic;">initialfetch</span> = 100
 <span style="font-weight: bold; font-style: italic;">hostname</span> = yourhost.yourdomain.com
@@ -359,8 +357,8 @@ you can view in listing <a href="#org50120fc">1</a>. (You obviously have to chan
 </div>
 </div>
 
-<div id="outline-container-org7bfeb39" class="outline-2">
-<h2 id="a-note-on-users"><a id="org7bfeb39"></a>A note on users</h2>
+<div id="outline-container-org0c0c74f" class="outline-2">
+<h2 id="a-note-on-users"><a id="org0c0c74f"></a>A note on users</h2>
 <div class="outline-text-2" id="text-a-note-on-users">
 <p>
 Leafnode keeps going on about having to create a separate user to run
@@ -370,8 +368,8 @@ single-user case on my laptop it's overkill&#x2014;so I don't bother.
 </div>
 </div>
 
-<div id="outline-container-org8220a64" class="outline-2">
-<h2 id="scheduling"><a id="org8220a64"></a>Scheduling</h2>
+<div id="outline-container-org5ac06ca" class="outline-2">
+<h2 id="scheduling"><a id="org5ac06ca"></a>Scheduling</h2>
 <div class="outline-text-2" id="text-scheduling">
 <p>
 Leafnode is not just one program, but a collection of programs. The
@@ -395,16 +393,16 @@ The files below all go in the <code>~/Library/LaunchAgents</code> directory.
 </p>
 </div>
 
-<div id="outline-container-orgdfa723e" class="outline-3">
-<h3 id="fetchnews"><a id="orgdfa723e"></a>Fetchnews</h3>
+<div id="outline-container-org82a1966" class="outline-3">
+<h3 id="fetchnews"><a id="org82a1966"></a>Fetchnews</h3>
 <div class="outline-text-3" id="text-fetchnews">
 <p>
 Let's run this every 30 minutes to push outgoing posts to and fetch new
-articles from upstream. This is in listing <a href="#org77f246e">2</a>.
+articles from upstream. This is in listing <a href="#orga62414a">2</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span><code>org.brautaset.fetchnews.plist</code></label><pre class="src src-xml" id="org77f246e"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 2: </span><code>org.brautaset.fetchnews.plist</code></label><pre class="src src-xml" id="orga62414a"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
 <span style="font-style: italic;">&lt;!</span><span style="font-style: italic;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="font-weight: bold;">plist</span> <span style="font-weight: bold; font-style: italic;">version</span>=<span style="font-style: italic;">"1.0"</span>&gt;
   &lt;<span style="font-weight: bold;">dict</span>&gt;
@@ -425,18 +423,18 @@ articles from upstream. This is in listing <a href="#org77f246e">2</a>.
 </div>
 </div>
 
-<div id="outline-container-org8719a71" class="outline-3">
-<h3 id="leafnode"><a id="org8719a71"></a>Leafnode</h3>
+<div id="outline-container-orga545126" class="outline-3">
+<h3 id="leafnode"><a id="orga545126"></a>Leafnode</h3>
 <div class="outline-text-3" id="text-leafnode">
 <p>
 Next we need to make sure that Leafnode runs when anyone (Gnus)
 attempts to connect to the news server. It is best to launch it on
 demand, so it does not require resources when we are not reading news.
-Find it in listing <a href="#org79a77de">3</a>.
+Find it in listing <a href="#org267fc71">3</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span><code>org.brautaset.leafnode.plist</code></label><pre class="src src-xml" id="org79a77de"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 3: </span><code>org.brautaset.leafnode.plist</code></label><pre class="src src-xml" id="org267fc71"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
 <span style="font-style: italic;">&lt;!</span><span style="font-style: italic;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="font-weight: bold;">plist</span> <span style="font-weight: bold; font-style: italic;">version</span>=<span style="font-style: italic;">"1.0"</span>&gt;
   &lt;<span style="font-weight: bold;">dict</span>&gt;
@@ -468,18 +466,18 @@ Find it in listing <a href="#org79a77de">3</a>.
 </div>
 </div>
 
-<div id="outline-container-orgea5c0ed" class="outline-3">
-<h3 id="texpire"><a id="orgea5c0ed"></a>Texpire</h3>
+<div id="outline-container-org4c1845a" class="outline-3">
+<h3 id="texpire"><a id="org4c1845a"></a>Texpire</h3>
 <div class="outline-text-3" id="text-texpire">
 <p>
 We'll run it about every 7 hours, which means that on successive days it
 should run at different times of day. I do this so that there's a bigger
 chance it <i>eventually</i> will run at a time the computer is on. The file
-is in listing <a href="#org8f2cb89">4</a>.
+is in listing <a href="#org406d894">4</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span><code>org.brautaset.texpire.plist</code></label><pre class="src src-xml" id="org8f2cb89"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 4: </span><code>org.brautaset.texpire.plist</code></label><pre class="src src-xml" id="org406d894"><span style="font-style: italic;">&lt;?</span><span style="font-weight: bold; font-style: italic;">xml</span><span style="font-style: italic;"> </span><span style="font-style: italic;">version="1.0" encoding="UTF-8"</span><span style="font-style: italic;">?&gt;</span>
 <span style="font-style: italic;">&lt;!</span><span style="font-style: italic;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="font-weight: bold;">plist</span> <span style="font-weight: bold; font-style: italic;">version</span>=<span style="font-style: italic;">"1.0"</span>&gt;
   &lt;<span style="font-weight: bold;">dict</span>&gt;
@@ -500,19 +498,19 @@ is in listing <a href="#org8f2cb89">4</a>.
 </div>
 </div>
 
-<div id="outline-container-org433bdc0" class="outline-3">
-<h3 id="start-the-services"><a id="org433bdc0"></a>Start the services</h3>
+<div id="outline-container-org328e0de" class="outline-3">
+<h3 id="start-the-services"><a id="org328e0de"></a>Start the services</h3>
 <div class="outline-text-3" id="text-start-the-services">
 <p>
 Because we put the launchd config files in <code>~/Library/LaunchAgents</code> they
 should be automatically loaded at login, so you shouldn't have to think
 about it. However, you probably don't want to logout and back in again
 just to load them. Luckily you can run this command to load them
-manually now using the command in listing <a href="#orgc2a6fc2">5</a>.
+manually now using the command in listing <a href="#org572de2b">5</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span>Starting the services with the <code>launchctl</code> command</label><pre class="src src-sh" id="orgc2a6fc2">launchctl load ~/Library/LaunchAgents/org.brautaset.{fetchnews,texpire,leafnode}.plist
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Starting the services with the <code>launchctl</code> command</label><pre class="src src-sh" id="org572de2b">launchctl load ~/Library/LaunchAgents/org.brautaset.{fetchnews,texpire,leafnode}.plist
 </pre>
 </div>
 
@@ -524,8 +522,8 @@ also have to change the above command.
 </div>
 </div>
 
-<div id="outline-container-orgccb91ae" class="outline-2">
-<h2 id="closing-notes"><a id="orgccb91ae"></a>Closing notes</h2>
+<div id="outline-container-org1cd4f99" class="outline-2">
+<h2 id="closing-notes"><a id="org1cd4f99"></a>Closing notes</h2>
 <div class="outline-text-2" id="text-closing-notes">
 <p>
 I hope you found this useful. I know I would have when I was trying to
@@ -537,7 +535,7 @@ set this up a few weeks ago!
 <div id="postamble" class="status">
 <p class="date">Date: 2016-05-12</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-02 Fri 20:58</p>
+<p class="date">Created: 2017-06-03 Sat 08:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

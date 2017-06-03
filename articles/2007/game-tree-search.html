@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2017-06-02 Fri 20:58 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- 2017-06-03 Sat 08:27 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MiniMax and AlphaBeta Search</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Stig Brautaset" />
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -241,7 +239,7 @@ if(/superloopy.io/.test(window.location.hostname)) {
 <body>
 
 <div id="org-div-home-and-up">
-  <img src="/images/logo.png"/>
+  <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
       <!-- <li><a accesskey="h" href="/"> Up </a></li>
@@ -276,10 +274,10 @@ MiniMax algorithm and its AlphaBeta pruning optimisation.
 <h2>List of Listings</h2>
 <div id="text-list-of-listings">
 <ul>
-<li><a href="#orgdead9a0"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
-<li><a href="#orgd62fd13"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
-<li><a href="#org84d9a38"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
-<li><a href="#org21b81aa"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
+<li><a href="#org5b44b49"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
+<li><a href="#orga7f2170"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
+<li><a href="#org0a61ba5"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
+<li><a href="#orgbf4a2dc"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
 </ul>
 </div>
 </div>
@@ -321,8 +319,8 @@ alpha-beta pruning improves on it. This article tries to explain how
 both works.
 </p>
 
-<div id="outline-container-org5b8fe72" class="outline-2">
-<h2 id="the-minimax-algorithm"><a id="org5b8fe72"></a>The Minimax algorithm</h2>
+<div id="outline-container-org43dd1bc" class="outline-2">
+<h2 id="the-minimax-algorithm"><a id="org43dd1bc"></a>The Minimax algorithm</h2>
 <div class="outline-text-2" id="text-the-minimax-algorithm">
 <p>
 Let us use Tic-Tac-Toe as an example when explaining how the Minimax
@@ -366,7 +364,7 @@ normally implemented.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="orgdead9a0">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="org5b44b49">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
   <span style="font-weight: bold;">if</span> ([state isEndOfGame])
     <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
 
@@ -394,7 +392,7 @@ can later apply it to advance the game.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="orgd62fd13">-(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold;">minimaxRootWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="orga7f2170">-(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold;">minimaxRootWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
   <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">bestmove</span> = <span style="font-weight: bold; text-decoration: underline;">nil</span>;
   <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">score</span> = -1; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">value for</span>
   loss <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
@@ -414,8 +412,8 @@ can later apply it to advance the game.
 </div>
 </div>
 
-<div id="outline-container-org375fa00" class="outline-2">
-<h2 id="depth-limited-minimax"><a id="org375fa00"></a>Depth-limited Minimax</h2>
+<div id="outline-container-org8c388b1" class="outline-2">
+<h2 id="depth-limited-minimax"><a id="org8c388b1"></a>Depth-limited Minimax</h2>
 <div class="outline-text-2" id="text-depth-limited-minimax">
 <p>
 Only when the search space is sufficiently small, like in our
@@ -438,7 +436,7 @@ Notice that the initial value for score has changed.
 
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org84d9a38">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> {
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org0a61ba5">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> {
   <span style="font-weight: bold;">if</span> (!ply || [state isEndOfGame])
     <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
   <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">score</span> = -1000; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">value for loss</span>
@@ -469,8 +467,8 @@ evaluation function identifies strong states.
 </div>
 </div>
 
-<div id="outline-container-org97e4dcc" class="outline-2">
-<h2 id="alpha-beta-pruning"><a id="org97e4dcc"></a>Alpha-Beta pruning</h2>
+<div id="outline-container-orgd88958a" class="outline-2">
+<h2 id="alpha-beta-pruning"><a id="orgd88958a"></a>Alpha-Beta pruning</h2>
 <div class="outline-text-2" id="text-alpha-beta-pruning">
 <p>
 In the late 50s it was realised that it was not necessary to visit all
@@ -495,7 +493,7 @@ bound, the path is pruned. Here's an example:
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="org21b81aa">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">alphaBetaWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> <span style="font-weight: bold;">alpha</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">alpha</span> <span style="font-weight: bold;">beta</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">beta</span> {
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="orgbf4a2dc">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">alphaBetaWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> <span style="font-weight: bold;">alpha</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">alpha</span> <span style="font-weight: bold;">beta</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">beta</span> {
   <span style="font-weight: bold;">if</span> (!ply || [state isEndOfGame])
     <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
   <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
@@ -535,7 +533,7 @@ timespan.
 <div id="postamble" class="status">
 <p class="date">Date: 2007-08-17</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-02 Fri 20:58</p>
+<p class="date">Created: 2017-06-03 Sat 08:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
