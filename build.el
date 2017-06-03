@@ -17,6 +17,9 @@
                     (or (buffer-file-name)
                         load-file-name))
 
+      ;; Avoid foo~ backup files everywhere
+      backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+
       ;; For now deploy side-by-side, since I cannot figure out how to
       ;; simulate a Jekyll site so it will deploy from _site :-(
       publish-path project-path ;; (concat project-path "_site/")
