@@ -23,7 +23,7 @@ your application bundle by setting the installation path of your
 framework to be =@executable_path/../Frameworks=.
 
 #+attr_html: :alt Install Path
-file:../../images/2007/09/install-path.png
+[[file:../../images/2007/09/install-path.png]]
 
 If you want to embed a framework inside another framework you'll need
 the even more special =@loader_path=, which is only available in OS X
@@ -32,13 +32,13 @@ example above. Now add the framework to your application the way you'd
 add any other existing framework:
 
 #+attr_html: :alt Add Existing Framework
-file:../../images/2007/09/add-existing-framework.png
+[[file:../../images/2007/09/add-existing-framework.png]]
 
 Add a "copy files" build phase and chose destination =Frameworks=. Drag
 the embedded framework you added into it.
 
 #+attr_html: :alt Copy Files Build Phase
-file:../../images/2007/09/copy-files-build-phase.png
+[[file:../../images/2007/09/copy-files-build-phase.png]]
 
 Voilá!
 

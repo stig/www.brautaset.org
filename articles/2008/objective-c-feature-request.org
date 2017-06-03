@@ -2,8 +2,8 @@
 #+date: 2008-08-23
 #+index: Objective-C!Feature Request
 
-#+attr_html: :alt Dictionary Icon
-file:../../images/2008/08/dictionary.png
+#+attr_html: :alt Dictionary Icon :align right
+[[file:../../images/2008/08/dictionary.png]]
 
 Objective-C, particularly after it became 2.0, is my favourite language.
 It's partly because of the language itself, but I guess mostly because

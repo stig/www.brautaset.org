@@ -1,8 +1,8 @@
 #+title: A Can of Worms
 #+date: 2007-06-05
 
-#+attr_html: :alt Can of Worms
-file:../../images/2007/06/can-of-worms.jpg
+#+attr_html: :alt Can of Worms :align right :width 25%
+[[file:../../images/2007/06/can-of-worms.jpg]]
 
 You know the feeling: you're at your desk, planet-sized brain poring
 over some code through your beady browns. Then out of the blue somebody
