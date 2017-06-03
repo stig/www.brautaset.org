@@ -12,9 +12,11 @@
       ;; simulate a Jekyll site so it will deploy from _site :-(
       publish-path project-path ;; (concat project-path "_site/")
 
+      org-html-doctype "html5"
+
       org-html-home/up-format "
 <div id=\"org-div-home-and-up\">
-  <img src=\"/images/logo.png\"/>
+  <img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/>
   <nav>
     <ul>
       <!-- <li><a accesskey=\"h\" href=\"%s\"> Up </a></li>\n -->
