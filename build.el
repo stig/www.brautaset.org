@@ -2,7 +2,16 @@
 
 (require 'package)
 (package-initialize)
-(load-file (expand-file-name "~/.emacs.d/Org.el"))
+
+;; Require modes used for syntax highlighting of code examples
+(require 'clojure-mode)
+(require 'scala-mode)
+(require 'cc-mode)
+(require 'sh-script)
+
+;; Require org export
+(require 'ox)
+
 
 (setq project-path (file-name-directory
                     (or (buffer-file-name)
