@@ -1,0 +1,267 @@
+#+title: Blogging with Org mode
+#+subtitle: And using Emacs as a build tool
+#+date: 2017-06-03
+#+begin_abstract
+I describe how---and why---I changed from blogging using Markdown &
+Jekyll to using Org mode.
+#+end_abstract
+#+index: Org mode!For blogging
+
+As my love-affair with Org mode continue to deepen, blogging with
+Markdown Jekyll was starting to chafe. I wanted to write my blog posts
+in Org mode instead. I looked around to find a Jekyll plugin that
+would allow that, campaigned to have it updated to Jekyll 3, and
+opened a [[https://github.com/github/pages-gem/pull/335][pull request against pages-gem]] to whitelist this plugin for
+use with Github Pages. Unfortunately, this PR was given the silent
+treatment and I ended up closing it: given all the attention my
+one-line change was not getting, it was clear they were not keen to
+merge it. Thus I decided to transform by blog into an Org mode
+project, and I now use Org mode's publishing to generate the HTML
+pages.
+
+*Why move away from Jekyll?* I could have moved to just use the plugin
+locally, but given I had to check in generated HTML anyway I saw few
+benefits to it. I was in a bad place with Jekyll: for various boring
+reasons almost every time I wanted to blog I had to install ruby &
+Jekyll anew---and potentially struggle to install nokogiri /again/.
+
+*What are the benefits to going full Org mode?* Well, the editing
+experience is just so much /better/, IMO. It supports a rich &
+extensible set of markup that is nevertheless very easy to get right.
+The table support is fantastic. Inter-linking of documents works
+incredibly well, and works both in source form and exported form. The
+support for editing code examples with syntax highlighting provided by
+the major mode is outstanding. Org mode supports inline images /in the
+source/ version. Finally it's written in---and can be customised
+with---Emacs lisp, which is much more approachable (to me) than Ruby.
+
+In short, I'm hoping that this transformation will reduce my (mostly
+artificial) barrier to blogging, aiding me to blog more often. To
+/further/ reduce the barrier to entry I have an Org template for blog
+posts, which you can see in listing [[lst:post-template]]. Org mode will
+prompt for all the ~%^{Something~} entries.
+
+#+caption: Org blog post template
+#+name: lst:post-template
+#+BEGIN_SRC org
+  ,#+title: %^{Title}
+  ,#+date: %<%Y-%m-%d>
+  ,#+begin_abstract
+  %^{Abstract}
+  ,#+end_abstract
+  ,#+index: %^{Concept Index Entry}
+
+  %?
+#+END_SRC
+
+I include this in my capture templates in a slightly unusual way.
+Usually Org is expecting to capture into existing files, but I want a
+new file created each time with a name I specify. So at capture time I
+separately query for a title to use in the URL---aka "the slug". I
+cannot take this from the capture template expansion of ~%^{Title},~
+regretfully, because the prompts for that don't run until the file has
+been created. The capture entry can be seen in listing [[lst:capture]],
+and the function to prompt for the slug in listing [[lst:slug-prompt]].
+
+#+caption: Blog post capture entry
+#+name: lst:capture
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'org-capture-templates
+               '("b" "Blog Post" plain
+                 (file (capture-blog-post-file))
+                 (file "tpl-blog-post.org")))
+#+END_SRC
+
+#+caption: Prompt for blog post file name
+#+name:  lst:slug-prompt
+#+BEGIN_SRC emacs-lisp
+  (defun capture-blog-post-file ()
+    (let* ((title (read-string "Slug: "))
+           (slug (replace-regexp-in-string "[^a-z]+" "-" (downcase title))))
+      (expand-file-name
+       (format "~/blog/articles/%s/%s.org"
+               (format-time-string "%Y" (current-time))
+               slug))))
+#+END_SRC
+
+Finally, the code to build the blog are available in a script called
+=build.el= in my blog's root. It can be run from the commandline with
+Emacs in batch mode, or I could eval the configuration into my running
+Emacs instance and publish individual pages while I'm working on them.
+The current version of this script can be seen in listing [[lst:build]].
+
+#+caption: Script to build blog
+#+name: lst:build
+#+BEGIN_SRC emacs-lisp
+  #!/usr/bin/env emacs --script
+
+  (require 'package)
+  (package-initialize)
+
+  ;; Require modes used for syntax highlighting of code examples
+  (require 'clojure-mode)
+  (require 'scala-mode)
+  (require 'cc-mode)
+  (require 'sh-script)
+
+  ;; Require org export
+  (require 'ox)
+
+
+  (setq project-path (file-name-directory
+                      (or (buffer-file-name)
+                          load-file-name))
+
+        ;; Avoid foo~ backup files everywhere
+        backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+
+        ;; For now deploy side-by-side, since I cannot figure out how to
+        ;; simulate a Jekyll site so it will deploy from _site :-(
+        publish-path project-path ;; (concat project-path "_site/")
+
+        org-html-doctype "html5"
+
+        org-html-home/up-format "
+  <div id=\"org-div-home-and-up\">
+    <img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/>
+    <nav>
+      <ul>
+        <!-- <li><a accesskey=\"h\" href=\"%s\"> Up </a></li>\n -->
+        <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
+        <li><a accesskey=\"a\" href=\"/articles\"> Articles </a></li>
+        <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
+        <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
+      </ul>
+    </nav>
+  </div>
+  "
+
+        org-html-head (concat "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />\n"
+                              "<link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" />")
+
+        org-html-scripts (concat org-html-scripts
+                                 "
+  <script type=\"text/javascript\">
+  if(/superloopy\.io/.test(window.location.hostname)) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-4113456-6', 'auto');
+    ga('send', 'pageview');
+  }
+  </script>")
+
+        org-html-link-home "/"
+        org-html-link-up "/"
+
+        org-export-with-toc nil
+        org-export-with-author t
+        org-export-with-email nil
+        org-export-with-creator nil
+        org-export-with-section-numbers nil
+
+        org-html-preamble nil
+        org-html-postamble 'auto
+
+        org-publish-project-alist
+        `(("static"
+           :base-directory ,project-path
+           :base-extension "css\\|png\\|jpg\\|pdf"
+           :exclude "_site"
+           :publishing-directory ,publish-path
+           :publishing-function org-publish-attachment
+           :recursive t)
+
+          ("home"
+           :base-directory ,project-path
+           :publishing-directory ,publish-path
+           :publishing-function org-html-publish-to-html)
+
+          ("articles"
+           :base-directory ,(concat project-path "articles")
+           :makeindex t
+           :publishing-directory ,(concat publish-path "articles")
+           :publishing-function org-html-publish-to-html
+           :recursive t)))
+
+  (org-publish-all)
+#+END_SRC
+
+Some of my recent posts had been written in Org mode already, but had
+been exported to HTML for publication as per [[../2016/how-i-blog-this-week.org][my previous post on
+blogging]]. Those were easy to convert, and required only minor edits.
+Once it was clear that the concept would work, I wrote a script that
+did a decent first pass of transforming the existing articles from
+Markdown to Org using [[http://pandoc.org][Pandoc]], and then fixed the remaining doodaahs
+manually. You can see my hacky conversion script in listing
+[[lst:convert]].
+
+#+caption: Rough conversion from Jekyll-style Markdown-with-YAML-frontmatter to Org
+#+name: lst:convert
+#+BEGIN_SRC fish
+  function md2org --description 'Convert .md blog post to Org'
+          for file in $argv
+                  set year (echo $file | cut -d- -f1)
+                  set date (echo $file | cut -d- -f1-3)
+                  set slug (echo $file | cut -d- -f4- | cut -d. -f1)
+
+                  mkdir -p ~/blog/articles/$year
+                  set f ~/blog/articles/$year/$slug.org
+
+                  echo "#+"(grep -m 1 '^title:' $file) > $f
+                  echo "#+date: $date" >> $f
+
+                  if set abstract (grep -m 1 '^abstract:' $file)
+                          set abstract (echo $abstract | sed 's/abstract: //')
+                          echo "#+begin_abstract" >> $f
+                          echo $abstract >> $f
+                          echo "#+end_abstract" >> $f
+                  end
+
+                  if set tags (grep -m 1 '^tags:' $file)
+                          set tags (sed 's/tags: //' | tr -d '[,]')
+                          for tag in $tags
+                                  echo "#+index: $tag" >> $f
+                          end
+                  end
+
+                  echo >> $f
+
+                  sed '/^---$/,/^---$/d' $file \
+                  | pandoc --no-highlight \
+                  -f markdown+backtick_code_blocks+fenced_code_attributes \
+                  -t org \
+                  >> $f
+
+                  echo $year -- $date -- $slug
+          end
+  end
+#+END_SRC
+
+*Preview.* One of the nice things Jekyll provided was a web server, so
+you could preview things in a browser properly. In this new solution
+I've been using Python's =SimpleHTTPServer= instead. I cd into the blog
+directory in a Terminal window and issue the following command, which
+serves files from the current directory as a web site.
+
+#+BEGIN_SRC sh
+  python -m SimpleHTTPServer
+#+END_SRC
+
+*What is missing?* Obviously things are not perfect. If they were, there
+would be no reason to continue this blog! Here are two specific gripes I
+haven't managed to solve yet:
+
+- Auto-generated list of latest posts. Org publishing supports an
+  index, which I'm using, and a sitemap--but the latter is dog slow
+  and inflexible, resulting in poor quality output. All my attempts at
+  getting a proper reverse chronological order of posts have failed.
+  There is no way to order the /folders/, so sometimes the years don't
+  come in the right order. I don't add posts that often, so I've
+  decided to live with this for now.
+
+- I am still checking in generated HTML pages. I would rather avoid
+  this. Potentially I could fix this by hosting in S3 instead. That
+  way I could probably enable HTTPS too, since AWS ACM gives you free
+  certs.

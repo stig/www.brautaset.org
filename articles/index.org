@@ -4,6 +4,7 @@ This is the full article list in reverse chronological order. There's
 also a [[file:theindex.org][concept index]].
 
    + 2017
+     + [[file:2017/blogging-with-org-mode.org][Blogging With Org Mode]]
      + [[file:2017/open-letter-to-anne-marie-mp.org][Open Letter to Anne-Marie Trevelyan MP]]
      + [[file:2017/hydra-theme-switcher.org][Hydra Theme Switcher for Emacs]]
    + 2016
