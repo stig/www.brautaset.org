@@ -90,5 +90,4 @@ if(/superloopy\.io/.test(window.location.hostname)) {
          :publishing-function org-html-publish-to-html
          :recursive t)))
 
-(require 'ox)
 (org-publish-all)
