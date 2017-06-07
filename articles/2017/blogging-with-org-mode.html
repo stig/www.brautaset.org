@@ -1,184 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-05 Mon 18:28 -->
+<!-- 2017-06-07 Wed 16:22 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blogging with Org mode</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Stig Brautaset">
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
-<link rel="icon" type="image/png" href="/images/icon.png" />
+      <link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -224,16 +64,6 @@ for the JavaScript code in this tag.
      target.className = elem.cacheClassTarget;
  }
 /*]]>*///-->
-</script>
-<script type="text/javascript">
-if(/superloopy.io/.test(window.location.hostname)) {
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-4113456-6', 'auto');
-  ga('send', 'pageview');
-}
 </script>
 </head>
 <body>
@@ -301,17 +131,17 @@ with&#x2014;Emacs lisp, which is much more approachable (to me) than Ruby.
 In short, I'm hoping that this transformation will reduce my (mostly
 artificial) barrier to blogging, aiding me to blog more often. To
 <i>further</i> reduce the barrier to entry I have an Org template for blog
-posts, which you can see in listing <a href="#orgffa7578">1</a>. Org mode will
+posts, which you can see in listing <a href="#orge141a01">1</a>. Org mode will
 prompt for all the <code>%^{Something</code>} entries.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Org blog post template</label><pre class="src src-org" id="orgffa7578"><span style="color: #558b2f; font-size: 135%;">#+title:</span> <span style="color: #212121; font-size: 135%; font-weight: bold;">%^{Title}</span>
-<span style="color: #558b2f; font-size: 135%;">#+date:</span> <span style="color: #00796b; font-size: 135%;">%&lt;%Y-%m-%d&gt;</span>
-<span style="color: #4e342e; background-color: #efebe9;">#+begin_abstract</span>
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Org blog post template</label><pre class="src src-org" id="orge141a01">#+title: <span style="font-weight: bold;">%^{Title}</span>
+#+date: %&lt;%Y-%m-%d&gt;
+<span style="font-weight: bold; font-style: italic;">#+begin_abstract</span>
 %^{Abstract}
-<span style="color: #4e342e; background-color: #efebe9;">#+end_abstract</span>
-<span style="color: #607d8b;">#+index: %^{Concept Index Entry}</span>
+<span style="font-weight: bold; font-style: italic;">#+end_abstract</span>
+<span style="font-weight: bold; font-style: italic;">#+index: %^{Concept Index Entry}</span>
 
 %?
 </pre>
@@ -324,25 +154,25 @@ new file created each time with a name I specify. So at capture time I
 separately query for a title to use in the URL&#x2014;aka "the slug". I
 cannot take this from the capture template expansion of <code>%^{Title},</code>
 regretfully, because the prompts for that don't run until the file has
-been created. The capture entry can be seen in listing <a href="#orgc82ebd4">2</a>,
-and the function to prompt for the slug in listing <a href="#org7c5b2ec">3</a>.
+been created. The capture entry can be seen in listing <a href="#orgf8671f5">2</a>,
+and the function to prompt for the slug in listing <a href="#org7a16821">3</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Blog post capture entry</label><pre class="src src-emacs-lisp" id="orgc82ebd4">(add-to-list 'org-capture-templates
-             '(<span style="color: #689f38;">"b"</span> <span style="color: #689f38;">"Blog Post"</span> plain
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Blog post capture entry</label><pre class="src src-emacs-lisp" id="orgf8671f5">(add-to-list 'org-capture-templates
+             '(<span style="font-style: italic;">"b"</span> <span style="font-style: italic;">"Blog Post"</span> plain
                (file (capture-blog-post-file))
-               (file <span style="color: #689f38;">"tpl-blog-post.org"</span>)))
+               (file <span style="font-style: italic;">"tpl-blog-post.org"</span>)))
 </pre>
 </div>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Prompt for blog post file name</label><pre class="src src-emacs-lisp" id="org7c5b2ec">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">capture-blog-post-file</span> ()
-  (<span style="color: #00796b;">let*</span> ((title (read-string <span style="color: #689f38;">"Slug: "</span>))
-         (slug (replace-regexp-in-string <span style="color: #689f38;">"[</span><span style="color: #2196f3;">^</span><span style="color: #689f38;">a-z]+"</span> <span style="color: #689f38;">"-"</span> (downcase title))))
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Prompt for blog post file name</label><pre class="src src-emacs-lisp" id="org7a16821">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">capture-blog-post-file</span> ()
+  (<span style="font-weight: bold;">let*</span> ((title (read-string <span style="font-style: italic;">"Slug: "</span>))
+         (slug (replace-regexp-in-string <span style="font-style: italic;">"[</span><span style="font-style: italic;">^</span><span style="font-style: italic;">a-z]+"</span> <span style="font-style: italic;">"-"</span> (downcase title))))
     (expand-file-name
-     (format <span style="color: #689f38;">"~/blog/articles/%s/%s.org"</span>
-             (format-time-string <span style="color: #689f38;">"%Y"</span> (current-time))
+     (format <span style="font-style: italic;">"~/blog/articles/%s/%s.org"</span>
+             (format-time-string <span style="font-style: italic;">"%Y"</span> (current-time))
              slug))))
 </pre>
 </div>
@@ -352,71 +182,71 @@ Finally, the code to build the blog are available in a script called
 <code>build.el</code> in my blog's root. It can be run from the commandline with
 Emacs in batch mode, or I could eval the configuration into my running
 Emacs instance and publish individual pages while I'm working on them.
-The current version of this script can be seen in listing <a href="#org11d6194">4</a>.
+The current version of this script can be seen in listing <a href="#org0cbb248">4</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Script to build blog</label><pre class="src src-emacs-lisp" id="org11d6194">#!/usr/bin/env emacs --script
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Script to build blog</label><pre class="src src-emacs-lisp" id="org0cbb248">#!/usr/bin/env emacs --script
 
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">package</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">package</span>)
 (package-initialize)
 
-<span style="color: #607d8b;">;; </span><span style="color: #607d8b;">Require modes used for syntax highlighting of code examples</span>
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">clojure-mode</span>)
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">scala-mode</span>)
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">cc-mode</span>)
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">sh-script</span>)
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Require modes used for syntax highlighting of code examples</span>
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">clojure-mode</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">scala-mode</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">cc-mode</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">sh-script</span>)
 
-<span style="color: #607d8b;">;; </span><span style="color: #607d8b;">Require org export</span>
-(<span style="color: #00796b;">require</span> '<span style="color: #558b2f;">ox</span>)
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Require org export</span>
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ox</span>)
 
 
-(<span style="color: #00796b;">setq</span> project-path (file-name-directory
-                    (<span style="color: #00796b;">or</span> (buffer-file-name)
+(<span style="font-weight: bold;">setq</span> project-path (file-name-directory
+                    (<span style="font-weight: bold;">or</span> (buffer-file-name)
                         load-file-name))
 
-      <span style="color: #607d8b;">;; </span><span style="color: #607d8b;">Avoid foo~ backup files everywhere</span>
-      backup-directory-alist `((<span style="color: #689f38;">"."</span> . ,(concat user-emacs-directory <span style="color: #689f38;">"backups"</span>)))
+      <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Avoid foo~ backup files everywhere</span>
+      backup-directory-alist `((<span style="font-style: italic;">"."</span> . ,(concat user-emacs-directory <span style="font-style: italic;">"backups"</span>)))
 
-      <span style="color: #607d8b;">;; </span><span style="color: #607d8b;">For now deploy side-by-side, since I cannot figure out how to</span>
-      <span style="color: #607d8b;">;; </span><span style="color: #607d8b;">simulate a Jekyll site so it will deploy from _site :-(</span>
-      publish-path project-path <span style="color: #607d8b;">;; </span><span style="color: #607d8b;">(concat project-path "_site/")</span>
+      <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">For now deploy side-by-side, since I cannot figure out how to</span>
+      <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">simulate a Jekyll site so it will deploy from _site :-(</span>
+      publish-path project-path <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">(concat project-path "_site/")</span>
 
-      org-html-doctype <span style="color: #689f38;">"html5"</span>
+      org-html-doctype <span style="font-style: italic;">"html5"</span>
 
-      org-html-home/up-format <span style="color: #689f38;">"</span>
-<span style="color: #689f38;">&lt;div id=\"org-div-home-and-up\"&gt;</span>
-<span style="color: #689f38;">  &lt;img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/&gt;</span>
-<span style="color: #689f38;">  &lt;nav&gt;</span>
-<span style="color: #689f38;">    &lt;ul&gt;</span>
-<span style="color: #689f38;">      &lt;!-- &lt;li&gt;&lt;a accesskey=\"h\" href=\"%s\"&gt; Up &lt;/a&gt;&lt;/li&gt;\n --&gt;</span>
-<span style="color: #689f38;">      &lt;li&gt;&lt;a accesskey=\"H\" href=\"%s\"&gt; Home &lt;/a&gt;&lt;/li&gt;</span>
-<span style="color: #689f38;">      &lt;li&gt;&lt;a accesskey=\"a\" href=\"/articles\"&gt; Articles &lt;/a&gt;&lt;/li&gt;</span>
-<span style="color: #689f38;">      &lt;li&gt;&lt;a accesskey=\"p\" href=\"/publications.html\"&gt; Publications &lt;/a&gt;&lt;/li&gt;</span>
-<span style="color: #689f38;">      &lt;li&gt;&lt;a accesskey=\"A\" href=\"/about.html\"&gt; About &lt;/a&gt;&lt;/li&gt;</span>
-<span style="color: #689f38;">    &lt;/ul&gt;</span>
-<span style="color: #689f38;">  &lt;/nav&gt;</span>
-<span style="color: #689f38;">&lt;/div&gt;</span>
-<span style="color: #689f38;">"</span>
+      org-html-home/up-format <span style="font-style: italic;">"</span>
+<span style="font-style: italic;">&lt;div id=\"org-div-home-and-up\"&gt;</span>
+<span style="font-style: italic;">  &lt;img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/&gt;</span>
+<span style="font-style: italic;">  &lt;nav&gt;</span>
+<span style="font-style: italic;">    &lt;ul&gt;</span>
+<span style="font-style: italic;">      &lt;!-- &lt;li&gt;&lt;a accesskey=\"h\" href=\"%s\"&gt; Up &lt;/a&gt;&lt;/li&gt;\n --&gt;</span>
+<span style="font-style: italic;">      &lt;li&gt;&lt;a accesskey=\"H\" href=\"%s\"&gt; Home &lt;/a&gt;&lt;/li&gt;</span>
+<span style="font-style: italic;">      &lt;li&gt;&lt;a accesskey=\"a\" href=\"/articles\"&gt; Articles &lt;/a&gt;&lt;/li&gt;</span>
+<span style="font-style: italic;">      &lt;li&gt;&lt;a accesskey=\"p\" href=\"/publications.html\"&gt; Publications &lt;/a&gt;&lt;/li&gt;</span>
+<span style="font-style: italic;">      &lt;li&gt;&lt;a accesskey=\"A\" href=\"/about.html\"&gt; About &lt;/a&gt;&lt;/li&gt;</span>
+<span style="font-style: italic;">    &lt;/ul&gt;</span>
+<span style="font-style: italic;">  &lt;/nav&gt;</span>
+<span style="font-style: italic;">&lt;/div&gt;</span>
+<span style="font-style: italic;">"</span>
 
-      org-html-head (concat <span style="color: #689f38;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" /&gt;\n"</span>
-                            <span style="color: #689f38;">"&lt;link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" /&gt;"</span>)
+      org-html-head (concat <span style="font-style: italic;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" /&gt;\n"</span>
+                            <span style="font-style: italic;">"&lt;link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" /&gt;"</span>)
 
       org-html-scripts (concat org-html-scripts
-                               <span style="color: #689f38;">"</span>
-<span style="color: #689f38;">&lt;script type=\"text/javascript\"&gt;</span>
-<span style="color: #689f38;">if(/superloopy\.io/.test(window.location.hostname)) {</span>
-<span style="color: #689f38;">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){</span>
-<span style="color: #689f38;">  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),</span>
-<span style="color: #689f38;">  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)</span>
-<span style="color: #689f38;">  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');</span>
-<span style="color: #689f38;">  ga('create', 'UA-4113456-6', 'auto');</span>
-<span style="color: #689f38;">  ga('send', 'pageview');</span>
-<span style="color: #689f38;">}</span>
-<span style="color: #689f38;">&lt;/script&gt;"</span>)
+                               <span style="font-style: italic;">"</span>
+<span style="font-style: italic;">&lt;script type=\"text/javascript\"&gt;</span>
+<span style="font-style: italic;">if(/superloopy</span><span style="font-weight: bold; font-style: italic;">\</span><span style="font-style: italic;">.io/.test(window.location.hostname)) {</span>
+<span style="font-style: italic;">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){</span>
+<span style="font-style: italic;">  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),</span>
+<span style="font-style: italic;">  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)</span>
+<span style="font-style: italic;">  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');</span>
+<span style="font-style: italic;">  ga('create', 'UA-4113456-6', 'auto');</span>
+<span style="font-style: italic;">  ga('send', 'pageview');</span>
+<span style="font-style: italic;">}</span>
+<span style="font-style: italic;">&lt;/script&gt;"</span>)
 
-      org-html-link-home <span style="color: #689f38;">"/"</span>
-      org-html-link-up <span style="color: #689f38;">"/"</span>
+      org-html-link-home <span style="font-style: italic;">"/"</span>
+      org-html-link-up <span style="font-style: italic;">"/"</span>
 
       org-export-with-toc nil
       org-export-with-author t
@@ -428,25 +258,25 @@ The current version of this script can be seen in listing <a href="#org11d6194">
       org-html-postamble 'auto
 
       org-publish-project-alist
-      `((<span style="color: #689f38;">"static"</span>
-         <span style="color: #B71C1C;">:base-directory</span> ,project-path
-         <span style="color: #B71C1C;">:base-extension</span> <span style="color: #689f38;">"css</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">png</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">jpg</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">pdf"</span>
-         <span style="color: #B71C1C;">:exclude</span> <span style="color: #689f38;">"_site"</span>
-         <span style="color: #B71C1C;">:publishing-directory</span> ,publish-path
-         <span style="color: #B71C1C;">:publishing-function</span> org-publish-attachment
-         <span style="color: #B71C1C;">:recursive</span> t)
+      `((<span style="font-style: italic;">"static"</span>
+         <span style="font-weight: bold;">:base-directory</span> ,project-path
+         <span style="font-weight: bold;">:base-extension</span> <span style="font-style: italic;">"css</span><span style="font-weight: bold; font-style: italic;">\\</span><span style="font-weight: bold; font-style: italic;">|</span><span style="font-style: italic;">png</span><span style="font-weight: bold; font-style: italic;">\\</span><span style="font-weight: bold; font-style: italic;">|</span><span style="font-style: italic;">jpg</span><span style="font-weight: bold; font-style: italic;">\\</span><span style="font-weight: bold; font-style: italic;">|</span><span style="font-style: italic;">pdf"</span>
+         <span style="font-weight: bold;">:exclude</span> <span style="font-style: italic;">"_site"</span>
+         <span style="font-weight: bold;">:publishing-directory</span> ,publish-path
+         <span style="font-weight: bold;">:publishing-function</span> org-publish-attachment
+         <span style="font-weight: bold;">:recursive</span> t)
 
-        (<span style="color: #689f38;">"home"</span>
-         <span style="color: #B71C1C;">:base-directory</span> ,project-path
-         <span style="color: #B71C1C;">:publishing-directory</span> ,publish-path
-         <span style="color: #B71C1C;">:publishing-function</span> org-html-publish-to-html)
+        (<span style="font-style: italic;">"home"</span>
+         <span style="font-weight: bold;">:base-directory</span> ,project-path
+         <span style="font-weight: bold;">:publishing-directory</span> ,publish-path
+         <span style="font-weight: bold;">:publishing-function</span> org-html-publish-to-html)
 
-        (<span style="color: #689f38;">"articles"</span>
-         <span style="color: #B71C1C;">:base-directory</span> ,(concat project-path <span style="color: #689f38;">"articles"</span>)
-         <span style="color: #B71C1C;">:makeindex</span> t
-         <span style="color: #B71C1C;">:publishing-directory</span> ,(concat publish-path <span style="color: #689f38;">"articles"</span>)
-         <span style="color: #B71C1C;">:publishing-function</span> org-html-publish-to-html
-         <span style="color: #B71C1C;">:recursive</span> t)))
+        (<span style="font-style: italic;">"articles"</span>
+         <span style="font-weight: bold;">:base-directory</span> ,(concat project-path <span style="font-style: italic;">"articles"</span>)
+         <span style="font-weight: bold;">:makeindex</span> t
+         <span style="font-weight: bold;">:publishing-directory</span> ,(concat publish-path <span style="font-style: italic;">"articles"</span>)
+         <span style="font-weight: bold;">:publishing-function</span> org-html-publish-to-html
+         <span style="font-weight: bold;">:recursive</span> t)))
 
 (org-publish-all)
 </pre>
@@ -460,47 +290,47 @@ Once it was clear that the concept would work, I wrote a script that
 did a decent first pass of transforming the existing articles from
 Markdown to Org using <a href="http://pandoc.org">Pandoc</a>, and then fixed the remaining doodaahs
 manually. You can see my hacky conversion script in listing
-<a href="#org6f298cb">5</a>.
+<a href="#orgcc8d3a4">5</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span>Rough conversion from Jekyll-style Markdown-with-YAML-frontmatter to Org</label><pre class="src src-fish" id="org6f298cb"><span style="color: #00796b;">function</span> <span style="color: #0097A7;">md2org</span> <span style="color: #2196f3;">--description</span> <span style="color: #689f38;">'Convert .md blog post to Org'</span>
-        <span style="color: #00796b;">for</span> <span style="color: #B71C1C;">file</span> in <span style="color: #689f38;">$</span><span style="color: #EF6C00;">argv</span>
-                <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">year</span> (<span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span> <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">cut</span> -d- -f1)
-                <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">date</span> (<span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span> <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">cut</span> -d- -f1-3)
-                <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">slug</span> (<span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span> <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">cut</span> -d- -f4- <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">cut</span> -d. -f1)
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Rough conversion from Jekyll-style Markdown-with-YAML-frontmatter to Org</label><pre class="src src-fish" id="orgcc8d3a4"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">md2org</span> --description <span style="font-style: italic;">'Convert .md blog post to Org'</span>
+        <span style="font-weight: bold;">for</span> <span style="font-weight: bold;">file</span> in <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">argv</span>
+                <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">year</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> | <span style="font-weight: bold;">cut</span> -d- -f1)
+                <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">date</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> | <span style="font-weight: bold;">cut</span> -d- -f1-3)
+                <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">slug</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> | <span style="font-weight: bold;">cut</span> -d- -f4- | <span style="font-weight: bold;">cut</span> -d. -f1)
 
-                <span style="color: #B71C1C;">mkdir</span> -p ~/blog/articles/$year
-                <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">f</span> ~/blog/articles/$year/$slug.org
+                <span style="font-weight: bold;">mkdir</span> -p ~/blog/articles/$year
+                <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">f</span> ~/blog/articles/$year/$slug.org
 
-                <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">"#+"</span>(grep -m <span style="color: #558b2f;">1</span> <span style="color: #689f38;">'^title:'</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span>) &gt; <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
-                <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">"#+date: $date"</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
+                <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"#+"</span>(grep -m <span style="font-weight: bold; text-decoration: underline;">1</span> <span style="font-style: italic;">'^title:'</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span>) &gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
+                <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"#+date: $date"</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
 
-                <span style="color: #00796b;">if</span> <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">abstract</span> (<span style="color: #B71C1C;">grep</span> -m <span style="color: #558b2f;">1</span> <span style="color: #689f38;">'^abstract:'</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span>)
-                        <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">abstract</span> (<span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">abstract</span> <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">sed</span> <span style="color: #689f38;">'s/abstract: //'</span>)
-                        <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">"#+begin_abstract"</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
-                        <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">abstract</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
-                        <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">"#+end_abstract"</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
-                <span style="color: #00796b;">end</span>
+                <span style="font-weight: bold;">if</span> <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">abstract</span> (<span style="font-weight: bold;">grep</span> -m <span style="font-weight: bold; text-decoration: underline;">1</span> <span style="font-style: italic;">'^abstract:'</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span>)
+                        <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">abstract</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">abstract</span> | <span style="font-weight: bold;">sed</span> <span style="font-style: italic;">'s/abstract: //'</span>)
+                        <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"#+begin_abstract"</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
+                        <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">abstract</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
+                        <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"#+end_abstract"</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
+                <span style="font-weight: bold;">end</span>
 
-                <span style="color: #00796b;">if</span> <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">tags</span> (<span style="color: #B71C1C;">grep</span> -m <span style="color: #558b2f;">1</span> <span style="color: #689f38;">'^tags:'</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span>)
-                        <span style="color: #00796b;">set</span> <span style="color: #EF6C00;">tags</span> (<span style="color: #B71C1C;">sed</span> <span style="color: #689f38;">'s/tags: //'</span> <span style="color: #2196f3;">|</span> <span style="color: #B71C1C;">tr</span> -d <span style="color: #689f38;">'[,]'</span>)
-                        <span style="color: #00796b;">for</span> <span style="color: #B71C1C;">tag</span> in <span style="color: #689f38;">$</span><span style="color: #EF6C00;">tags</span>
-                                <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">"#+index: $tag"</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
-                        <span style="color: #00796b;">end</span>
-                <span style="color: #00796b;">end</span>
+                <span style="font-weight: bold;">if</span> <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">tags</span> (<span style="font-weight: bold;">grep</span> -m <span style="font-weight: bold; text-decoration: underline;">1</span> <span style="font-style: italic;">'^tags:'</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span>)
+                        <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">tags</span> (<span style="font-weight: bold;">sed</span> <span style="font-style: italic;">'s/tags: //'</span> | <span style="font-weight: bold;">tr</span> -d <span style="font-style: italic;">'[,]'</span>)
+                        <span style="font-weight: bold;">for</span> <span style="font-weight: bold;">tag</span> in <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">tags</span>
+                                <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"#+index: $tag"</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
+                        <span style="font-weight: bold;">end</span>
+                <span style="font-weight: bold;">end</span>
 
-                <span style="color: #B71C1C;">echo</span><span style="color: #2196f3;"> &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
+                <span style="font-weight: bold;">echo</span> &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
 
-                <span style="color: #B71C1C;">sed</span> <span style="color: #689f38;">'/^---$/,/^---$/d'</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">file</span> <span style="color: #2196f3;">\</span>
-                <span style="color: #2196f3;">|</span> pandoc --no-highlight <span style="color: #2196f3;">\</span>
-                <span style="color: #B71C1C;">-f</span> markdown+backtick_code_blocks+fenced_code_attributes <span style="color: #2196f3;">\</span>
-                <span style="color: #B71C1C;">-t</span> org <span style="color: #2196f3;">\</span>
-<span style="color: #2196f3;">                &gt;&gt;</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">f</span>
+                <span style="font-weight: bold;">sed</span> <span style="font-style: italic;">'/^---$/,/^---$/d'</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> \
+                | pandoc --no-highlight \
+                <span style="font-weight: bold;">-f</span> markdown+backtick_code_blocks+fenced_code_attributes \
+                <span style="font-weight: bold;">-t</span> org \
+                &gt;&gt; <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">f</span>
 
-                <span style="color: #B71C1C;">echo</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">year</span> -- <span style="color: #689f38;">$</span><span style="color: #EF6C00;">date</span> -- <span style="color: #689f38;">$</span><span style="color: #EF6C00;">slug</span>
-        <span style="color: #00796b;">end</span>
-<span style="color: #00796b;">end</span>
+                <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">year</span> -- <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">date</span> -- <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">slug</span>
+        <span style="font-weight: bold;">end</span>
+<span style="font-weight: bold;">end</span>
 </pre>
 </div>
 
@@ -541,7 +371,7 @@ certs.</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2017-06-03</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-05 Mon 18:28</p>
+<p class="date">Created: 2017-06-07 Wed 16:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

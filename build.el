@@ -24,6 +24,10 @@
       ;; simulate a Jekyll site so it will deploy from _site :-(
       publish-path project-path ;; (concat project-path "_site/")
 
+      ;; Don't include the default style, as we've copied it into
+      ;; css/main.css
+      org-html-head-include-default-style nil
+
       org-html-doctype "html5"
 
       org-html-home/up-format "
@@ -41,12 +45,11 @@
 </div>
 "
 
-      org-html-head (concat "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />\n"
-                            "<link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" />")
+      org-html-head
+      "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />
+      <link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" />"
 
-      org-html-scripts (concat org-html-scripts
-                               "
-<script type=\"text/javascript\">
+      org-html-head-extra "<script type=\"text/javascript\">
 if(/superloopy\.io/.test(window.location.hostname)) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,7 +58,7 @@ if(/superloopy\.io/.test(window.location.hostname)) {
   ga('create', 'UA-4113456-6', 'auto');
   ga('send', 'pageview');
 }
-</script>")
+</script>"
 
       org-html-link-home "/"
       org-html-link-up "/"
