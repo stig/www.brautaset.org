@@ -79,15 +79,9 @@ if(/superloopy\.io/.test(window.location.hostname)) {
          :recursive t)
 
         ("home"
+         :recursive t
          :base-directory ,project-path
          :publishing-directory ,publish-path
-         :publishing-function org-html-publish-to-html)
-
-        ("articles"
-         :base-directory ,(concat project-path "articles")
-         :makeindex t
-         :publishing-directory ,(concat publish-path "articles")
-         :publishing-function org-html-publish-to-html
-         :recursive t)))
+         :publishing-function org-html-publish-to-html)))
 
 (org-publish-all)
