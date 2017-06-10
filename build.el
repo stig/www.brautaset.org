@@ -72,15 +72,7 @@ if(/superloopy\.io/.test(window.location.hostname)) {
       org-html-postamble 'auto
 
       org-publish-project-alist
-      `(("static"
-         :base-directory ,project-path
-         :base-extension "css\\|png\\|jpg\\|pdf"
-         :exclude "_site"
-         :publishing-directory ,publish-path
-         :publishing-function org-publish-attachment
-         :recursive t)
-
-        ("home"
+      `(("home"
          :recursive t
          :makeindex t
          :base-directory ,project-path
