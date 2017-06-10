@@ -37,7 +37,6 @@
     <ul>
       <!-- <li><a accesskey=\"h\" href=\"%s\"> Up </a></li>\n -->
       <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
-      <li><a accesskey=\"a\" href=\"/articles.html\"> Articles </a></li>
       <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
       <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
     </ul>
@@ -88,4 +87,8 @@ if(/superloopy\.io/.test(window.location.hostname)) {
          :publishing-directory ,publish-path
          :publishing-function org-html-publish-to-html)))
 
-(org-publish-all)
+(if (< 3 (length command-line-args))
+    (progn
+      (print "Invoked with --force flag")
+      (org-publish-all t))
+  (org-publish-all))
