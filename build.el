@@ -37,7 +37,7 @@
     <ul>
       <!-- <li><a accesskey=\"h\" href=\"%s\"> Up </a></li>\n -->
       <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
-      <li><a accesskey=\"a\" href=\"/articles\"> Articles </a></li>
+      <li><a accesskey=\"a\" href=\"/articles.html\"> Articles </a></li>
       <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
       <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
     </ul>
@@ -47,7 +47,7 @@
 
       org-html-head
       "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css\" />
-      <link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" />"
+<link rel=\"icon\" type=\"image/png\" href=\"/images/icon.png\" />"
 
       org-html-head-extra "<script type=\"text/javascript\">
 if(/superloopy\.io/.test(window.location.hostname)) {
@@ -83,6 +83,7 @@ if(/superloopy\.io/.test(window.location.hostname)) {
 
         ("home"
          :recursive t
+         :makeindex t
          :base-directory ,project-path
          :publishing-directory ,publish-path
          :publishing-function org-html-publish-to-html)))

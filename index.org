@@ -6,6 +6,9 @@ just to practice writing. Most articles are tech related, but anything
 goes really. Below is a short list of recent articles. I also maintain
 a separate [[file:articles/index.org][full list of articles]].
 
+- [[file:articles/2017/electoral-reform-now.org][Electoral Reform Now!]] :: I try to show how unjust the First Past the
+     Post system used to elect MPs in UK General Elections is.
+
 - [[file:articles/2017/blogging-with-org-mode.org][Blogging with Org Mode]] :: I describe how---and why---I changed from
      blogging using Markdown & Jekyll to using Org mode.
 

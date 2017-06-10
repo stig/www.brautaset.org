@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-07 Wed 16:22 -->
+<!-- 2017-06-10 Sat 18:13 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blogging with Org mode</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Stig Brautaset">
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
-      <link rel="icon" type="image/png" href="/images/icon.png" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
 <script type="text/javascript">
 if(/superloopy.io/.test(window.location.hostname)) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -75,7 +75,7 @@ for the JavaScript code in this tag.
       <!-- <li><a accesskey="h" href="/"> Up </a></li>
  -->
       <li><a accesskey="H" href="/"> Home </a></li>
-      <li><a accesskey="a" href="/articles"> Articles </a></li>
+      <li><a accesskey="a" href="/articles.html"> Articles </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
     </ul>
@@ -131,12 +131,12 @@ with&#x2014;Emacs lisp, which is much more approachable (to me) than Ruby.
 In short, I'm hoping that this transformation will reduce my (mostly
 artificial) barrier to blogging, aiding me to blog more often. To
 <i>further</i> reduce the barrier to entry I have an Org template for blog
-posts, which you can see in listing <a href="#orge141a01">1</a>. Org mode will
+posts, which you can see in listing <a href="#orgde8b91c">1</a>. Org mode will
 prompt for all the <code>%^{Something</code>} entries.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Org blog post template</label><pre class="src src-org" id="orge141a01">#+title: <span style="font-weight: bold;">%^{Title}</span>
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Org blog post template</label><pre class="src src-org" id="orgde8b91c">#+title: <span style="font-weight: bold;">%^{Title}</span>
 #+date: %&lt;%Y-%m-%d&gt;
 <span style="font-weight: bold; font-style: italic;">#+begin_abstract</span>
 %^{Abstract}
@@ -154,12 +154,12 @@ new file created each time with a name I specify. So at capture time I
 separately query for a title to use in the URL&#x2014;aka "the slug". I
 cannot take this from the capture template expansion of <code>%^{Title},</code>
 regretfully, because the prompts for that don't run until the file has
-been created. The capture entry can be seen in listing <a href="#orgf8671f5">2</a>,
-and the function to prompt for the slug in listing <a href="#org7a16821">3</a>.
+been created. The capture entry can be seen in listing <a href="#org494ea6e">2</a>,
+and the function to prompt for the slug in listing <a href="#orgf6f7857">3</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Blog post capture entry</label><pre class="src src-emacs-lisp" id="orgf8671f5">(add-to-list 'org-capture-templates
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Blog post capture entry</label><pre class="src src-emacs-lisp" id="org494ea6e">(add-to-list 'org-capture-templates
              '(<span style="font-style: italic;">"b"</span> <span style="font-style: italic;">"Blog Post"</span> plain
                (file (capture-blog-post-file))
                (file <span style="font-style: italic;">"tpl-blog-post.org"</span>)))
@@ -167,7 +167,7 @@ and the function to prompt for the slug in listing <a href="#org7a16821">3</a>.
 </div>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Prompt for blog post file name</label><pre class="src src-emacs-lisp" id="org7a16821">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">capture-blog-post-file</span> ()
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Prompt for blog post file name</label><pre class="src src-emacs-lisp" id="orgf6f7857">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">capture-blog-post-file</span> ()
   (<span style="font-weight: bold;">let*</span> ((title (read-string <span style="font-style: italic;">"Slug: "</span>))
          (slug (replace-regexp-in-string <span style="font-style: italic;">"[</span><span style="font-style: italic;">^</span><span style="font-style: italic;">a-z]+"</span> <span style="font-style: italic;">"-"</span> (downcase title))))
     (expand-file-name
@@ -182,11 +182,11 @@ Finally, the code to build the blog are available in a script called
 <code>build.el</code> in my blog's root. It can be run from the commandline with
 Emacs in batch mode, or I could eval the configuration into my running
 Emacs instance and publish individual pages while I'm working on them.
-The current version of this script can be seen in listing <a href="#org0cbb248">4</a>.
+The current version of this script can be seen in listing <a href="#org321e416">4</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Script to build blog</label><pre class="src src-emacs-lisp" id="org0cbb248">#!/usr/bin/env emacs --script
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Script to build blog</label><pre class="src src-emacs-lisp" id="org321e416">#!/usr/bin/env emacs --script
 
 (<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">package</span>)
 (package-initialize)
@@ -290,11 +290,11 @@ Once it was clear that the concept would work, I wrote a script that
 did a decent first pass of transforming the existing articles from
 Markdown to Org using <a href="http://pandoc.org">Pandoc</a>, and then fixed the remaining doodaahs
 manually. You can see my hacky conversion script in listing
-<a href="#orgcc8d3a4">5</a>.
+<a href="#org947881b">5</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span>Rough conversion from Jekyll-style Markdown-with-YAML-frontmatter to Org</label><pre class="src src-fish" id="orgcc8d3a4"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">md2org</span> --description <span style="font-style: italic;">'Convert .md blog post to Org'</span>
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Rough conversion from Jekyll-style Markdown-with-YAML-frontmatter to Org</label><pre class="src src-fish" id="org947881b"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">md2org</span> --description <span style="font-style: italic;">'Convert .md blog post to Org'</span>
         <span style="font-weight: bold;">for</span> <span style="font-weight: bold;">file</span> in <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">argv</span>
                 <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">year</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> | <span style="font-weight: bold;">cut</span> -d- -f1)
                 <span style="font-weight: bold;">set</span> <span style="font-weight: bold; font-style: italic;">date</span> (<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">file</span> | <span style="font-weight: bold;">cut</span> -d- -f1-3)
@@ -371,7 +371,7 @@ certs.</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2017-06-03</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-07 Wed 16:22</p>
+<p class="date">Created: 2017-06-10 Sat 18:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
