@@ -1,19 +1,29 @@
-#+title: About
+#+title: About Stig Brautaset
+
+I have a BSc in Artificial Intelligence from the University of
+Westminster in London, UK. I graduated in June 2003, and since then
+have worked in software development in various industries such as
+fashion, investment banking, online photos, and fintech. Over the
+years employers have paid me to write HTML, PHP, Perl, C, JavaScript,
+Java, Objective-C, Scala, Python, Bash and English.
 
 I grew up in Hovdebygda, a village in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta Municipality]] on the west
-coast of Norway. I studied Electronics in Ørsta, Ålesund & Oslo. After
-interrupting my studies by compulsory military service I moved to
-London to study Artificial Intelligence at Westminster University
-in 2000. I still live in England, though in March 2015 I moved from
-London to [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
+coast of Norway. I studied Electronics in Ørsta, Ålesund & Oslo. I
+underwent compulsory military service as sonar operator on a submarine
+before I moved to London for University. I still live in England,
+though in March 2015 I moved from bustling London to rural
+[[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
 
-I have worked in software development since I graduated in 2003. Over the
-years employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
-Objective-C, Scala, Python, Bash and English.
+If you want more details, I suggest reading the transcript of my
+[[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]] where I talked for 45 minutes about my
+education and career.
+
+* Presences on the web
 
 I have accounts on more sites than I can remember. Most are in varying
 states of lacking attention. Here are some:
 
+- [[https://github.com/stig][GitHub]]
 - [[http://twitter.com/stigbra][Twitter]]
 - [[http://uk.linkedin.com/in/stigbrautaset][LinkedIn]]
 - [[https://www.ohloh.net/accounts/stigbra][Ohloh]]
