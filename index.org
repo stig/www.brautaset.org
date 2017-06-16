@@ -10,6 +10,10 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+  - [[file:articles/2017/n-queens.org][N Queens in Clojure]] :: Solving the problem of putting N Queens on
+       an /N/ by /N/ chess board without them being able to threaten
+       eachother.
+
   - [[file:articles/2017/electoral-reform-now.org][Electoral Reform Now!]] :: I try to show how unjust the First Past
        the Post system used to elect MPs in UK General Elections is.
 

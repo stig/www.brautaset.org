@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2017-06-16 Fri 22:33 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The N Queens Problem</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <img src="/images/logo.png" alt="Superloopy Logo"/>
+  <nav>
+    <ul>
+      <!-- <li><a accesskey="h" href="/"> Up </a></li>
+ -->
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">The N Queens Problem</h1>
+<div class="abstract">
+<p>
+Using Clojure to put \(N\) Queens on an \(N \times N\) chess board
+without them being able to threaten eachother.
+</p>
+
+</div>
+<p>
+I read a blog post by Aphyr about solving the <i>N Queens</i> problem called
+<a href="https://aphyr.com/posts/342-typing-the-technical-interview">Typing the technical interview</a>, which made me reminisce about
+wrestling with this problem at Uni over a decade ago.
+</p>
+
+<p>
+In my first year at Uni I was handed a solution, in C, that one of the
+maths teachers had scribbled on a napkin in the pub. (It was a <i>British</i>
+university, after all.) It only solved the problem for \(N=8\), and I
+wanted to generalise it for all \(N\). I remember my pride in achieving
+this, and in finding a way to make it run faster by adding an early
+stop condition. I rewrote it several times, in C and C++, to remove
+the original's use of a global variable and just to try out different
+approaches.
+</p>
+
+<p>
+Later, while still at Uni, I toyed with solving this problem using a
+genetic algorithm. (I was doing an AI degree, and was learning about
+GAs.) I managed to get a solution that, after a lot of work, got a
+solution for low values of \(N\), but the most valuable lesson I learnt
+was that this problem is a poor fit for a GA (at least such a simple
+one as my implementation) because of the inherent constraints between
+all the pieces: <i>every</i> Queen must be unable to capture any other. Also,
+there is no ranking other than "it is valid" vs "it is not valid",
+thus a GA  can not iterate towards a better solution: it can just
+randomly mutate things until it chances on a working solution.
+</p>
+
+<p>
+Fast forward to present day, 15 years later. I decided to try and
+solve it in Clojure&#x2014;my current first language of choice. First,
+however, I had to make sure I had a suitable algorithm for finding a
+solution. I tried to work out an algorithm for myself, and to help me
+"desk check" it I drew a four-by-four Chess board and labelled the
+directions like below. (One of the beauties of it being an \(N\) Queens
+problem is you can test with \(N\) smaller than 8. This makes it easier
+to create tests.)
+</p>
+
+
+<div class="figure">
+<p><img src="n-queens/board.png" alt="board.png">
+</p>
+</div>
+
+
+<p>
+The algorithm was easy to discover, but I found it very hard to put it
+into words! Anyway, here is my attempt:
+</p>
+
+<ol class="org-ol">
+<li>Start in the west-most column</li>
+<li>Place <i>one</i> Queen in each column until there are \(N\) Queens on the \(N
+   \times N\) board</li>
+<li>For each column, start in the south-most row and move north. Place
+a Queen in the first row such that it doesn't threaten any of the
+other Queens already on the board</li>
+<li>If you can't put a Queen anywhere in a column you have to
+backtrack: go back a column and move the Queen there north to the
+next row; you may have to repeat this process</li>
+<li>When you've backtracked so many times that you are about to fall of
+the north end of the west-most column you're done</li>
+</ol>
+
+<p>
+Following the algoritm you might end up with somethnig like this:
+</p>
+
+
+<div class="figure">
+<p><img src="n-queens/solved.png" alt="solved.png">
+</p>
+</div>
+
+<p>
+Now I was ready to start thinking about how to solve this problem in
+Clojure. First I thought about how to represent my board. The
+"obvious" choice would have been a two-dimensional vector, but
+realising that the algorithm constrains us to only ever put one queen
+in each row/column we can compress the board to a simple vector. The
+indexes of the vector are its column locations, and each value is an
+integer indicating the row index a queen is placed in that column. The
+next figure shows how this vector would represent the solution in the
+previous figure. Both rows and column indexes start counting from
+zero.
+</p>
+
+
+<div class="figure">
+<p><img src="n-queens/vector.png" alt="vector.png">
+</p>
+</div>
+
+<p>
+When experimenting with the algorithm I realised that we don't need to
+check if every Queen can capture any others all the time: since the
+queens capture in all eight directions it's enough to check if the
+queen <i>we're about to place</i> can capture any of the others. Further,
+it's clear from the algorithm that we never need to check directly
+north or south, because we only put one queen in each column. And we
+never need to check east of us, because we <i>know</i> that part of the board
+is still empty. This leaves checking three directions: directly west,
+southwest, and northwest. Now we're ready to dive into Clojure.
+</p>
+
+<p>
+Let's check if directly west is safe first. This is easy: just check
+that any of the existing vector locations does not contain our row
+index. Job done!
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-west?</span>
+  [board row]
+  (<span style="color: #B71C1C;">not-any?</span> #{row} board))
+</pre>
+</div>
+
+<p>
+Let's check southwest next. This is a bit more complex. We need to
+walk back from our current column index, decrementing our row index
+and column index at each step, check if the row number at each column
+matches this calculated value. At any point, if the row or column
+becomes less than zero we've reached the end of the board and this is
+a "safe" location: no capture is possible in this direction.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-southwest?</span>
+  [board row]
+  (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
+         row (<span style="color: #B71C1C;">dec</span> row)]
+    (<span style="color: #00796b;">if</span> (<span style="color: #00796b;">or</span> (&gt; 0 col) (&gt; 0 row))
+      <span style="color: #558b2f;">true</span>
+      (<span style="color: #00796b;">if</span> (= (<span style="color: #B71C1C;">nth</span> board col) row)
+        <span style="color: #558b2f;">false</span>
+        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">dec</span> row))))))
+</pre>
+</div>
+
+<p>
+Checking the northwest direction is similar to southwest, with the
+difference that we have <i>increment</i> the row indexes. Thus we also need
+the size of the board passed in, because we need to know the max index
+value our rows can have.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-northwest?</span>
+  [board row size]
+  (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
+         row (<span style="color: #B71C1C;">inc</span> row)]
+    (<span style="color: #00796b;">if</span> (<span style="color: #00796b;">or</span> (&gt; 0 col) (&gt;= row size))
+      <span style="color: #558b2f;">true</span>
+      (<span style="color: #00796b;">if</span> (= (<span style="color: #B71C1C;">nth</span> board col) row)
+        <span style="color: #558b2f;">false</span>
+        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">inc</span> row))))))
+</pre>
+</div>
+
+<p>
+For convenience I packaged all the three previous directions into a
+single method, <code>and</code>-ing them all together:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe?</span>
+  <span style="color: #673ab7;">"Check if the proposed position is a safe one</span>
+<span style="color: #673ab7;">  to put a Queen such that it cannot capture</span>
+<span style="color: #673ab7;">  any of the existing queens on the board."</span>
+  [board row size]
+  (<span style="color: #00796b;">and</span>
+   (safe-west? board row)
+   (safe-southwest? board row)
+   (safe-northwest? board row size)))
+</pre>
+</div>
+
+<p>
+We're now ready to write a function generate all the solutions for a
+board of size \(N\):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">queens</span>
+  <span style="color: #673ab7;">"Finds all solutions to the N Queens</span>
+<span style="color: #673ab7;">  problem for a given board size."</span>
+  [size]
+  (<span style="color: #00796b;">loop</span> [board []
+         row 0
+         acc []]
+    (<span style="color: #00796b;">if</span> (= size row)
+      (<span style="color: #00796b;">if</span> (<span style="color: #B71C1C;">empty?</span> board)
+        acc
+        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">pop</span> board)
+               (<span style="color: #B71C1C;">inc</span> (<span style="color: #B71C1C;">last</span> board))
+               acc))
+      (<span style="color: #00796b;">if</span> (= size (<span style="color: #B71C1C;">count</span> board))
+        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">pop</span> board)
+               (<span style="color: #B71C1C;">inc</span> (<span style="color: #B71C1C;">last</span> board))
+               (<span style="color: #B71C1C;">conj</span> acc board))
+        (<span style="color: #00796b;">if</span> (safe? board row size)
+          (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">conj</span> board row) 0 acc)
+          (<span style="color: #00796b;">recur</span> board (<span style="color: #B71C1C;">inc</span> row) acc))))))
+</pre>
+</div>
+
+<p>
+It took me a while longer to solve this than I am happy with, but I am
+happy with the final solution. Clojure, an immutable lisp, fits the
+recursion-based solution well.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2017-06-14</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="date">Created: 2017-06-16 Fri 22:33</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
