@@ -355,3 +355,7 @@ thead + tbody, tbody + tbody {
 caption.t-above {
     padding: 0.5ch;
 }
+
+#footnotes {
+    border-top: 1px solid grey;
+}

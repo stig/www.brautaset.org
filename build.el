@@ -75,6 +75,7 @@ if(/superloopy\.io/.test(window.location.hostname)) {
       `(("home"
          :recursive t
          :makeindex t
+         :html-footnotes-section "<div id='footnotes'><!--%s-->%s</div>"
          :base-directory ,project-path
          :publishing-directory ,publish-path
          :publishing-function org-html-publish-to-html)))
