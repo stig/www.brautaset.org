@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-16 Fri 22:58 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not so philosophically different after all?</title>
@@ -121,8 +121,8 @@ Would probably look like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="font-weight: bold;">defn</span> <span style="font-weight: bold;">f</span> [p coll]
-  (take 5 (filter p (drop 3 coll))))
+<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">f</span> [p coll]
+  (<span style="color: #B71C1C;">take</span> 5 (<span style="color: #B71C1C;">filter</span> p (<span style="color: #B71C1C;">drop</span> 3 coll))))
 </pre>
 </div>
 
@@ -133,11 +133,11 @@ the code better:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="font-weight: bold;">defn</span> <span style="font-weight: bold;">f</span>'[p coll]
-  (<span style="font-weight: bold;">-&gt;&gt;</span> coll
-       (drop 3)
-       (filter p)
-       (take 5)))
+<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">f</span>'[p coll]
+  (<span style="color: #00796b;">-&gt;&gt;</span> coll
+       (<span style="color: #B71C1C;">drop</span> 3)
+       (<span style="color: #B71C1C;">filter</span> p)
+       (<span style="color: #B71C1C;">take</span> 5)))
 </pre>
 </div>
 
@@ -159,7 +159,7 @@ examples in Clojure. The stated problem first:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(filter even? (iterate inc 5))
+<pre class="src src-clojure">(<span style="color: #B71C1C;">filter</span> even? (<span style="color: #B71C1C;">iterate</span> inc 5))
 </pre>
 </div>
 
@@ -168,8 +168,8 @@ Rewritten with <code>-&gt;&gt;</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="font-weight: bold;">-&gt;&gt;</span> (iterate inc 5)
-     (filter even?))
+<pre class="src src-clojure">(<span style="color: #00796b;">-&gt;&gt;</span> (<span style="color: #B71C1C;">iterate</span> inc 5)
+     (<span style="color: #B71C1C;">filter</span> even?))
 </pre>
 </div>
 
@@ -187,7 +187,7 @@ Ok, that was cheeky, so let's show it with code too:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(filter even? (range 5))
+<pre class="src src-clojure">(<span style="color: #B71C1C;">filter</span> even? (<span style="color: #B71C1C;">range</span> 5))
 </pre>
 </div>
 
@@ -196,7 +196,7 @@ or, if <code>0</code> is not desired:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(filter even? (range 1 5))
+<pre class="src src-clojure">(<span style="color: #B71C1C;">filter</span> even? (<span style="color: #B71C1C;">range</span> 1 5))
 </pre>
 </div>
 
@@ -222,7 +222,7 @@ So we could solve this like this too:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(range 2 5 2)
+<pre class="src src-clojure">(<span style="color: #B71C1C;">range</span> 2 5 2)
 </pre>
 </div>
 
@@ -232,7 +232,7 @@ emulate his Haskell solution:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(take-while even? (range 1 5))
+<pre class="src src-clojure">(<span style="color: #B71C1C;">take-while</span> even? (<span style="color: #B71C1C;">range</span> 1 5))
 </pre>
 </div>
 
@@ -247,7 +247,7 @@ Wikipedia</a>.
 <div id="postamble" class="status">
 <p class="date">Date: 2015-12-23</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-16 Fri 22:58</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
