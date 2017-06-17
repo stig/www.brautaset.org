@@ -2,7 +2,7 @@
 #+date: 2017-06-14
 #+begin_abstract
 Using Clojure to put $N$ Queens on an $N \times N$ chess board
-without them being able to threaten eachother.
+without them being able to threaten each other.
 #+end_abstract
 #+index: Clojure!Solving the N Queens problem
 
@@ -40,32 +40,32 @@ problem is you can test with $N$ smaller than 8. This makes it easier
 to create tests.)
 
 #+caption: Four by Four Chess Board
-#+BEGIN_SRC ditaa :file n-queens/board.png  :cmdline -E
-             North
+#+BEGIN_SRC ditaa :file n-queens/board.png :cmdline -E
+               North
 
-     +----+----+----+----+
-     |cGRE|    |cGRE|    |
-     |    |    |    |    |
-     |    |    |    |    |
-     +----+----+----+----+
-     |    |cGRE|    |cGRE|
-     |    |    |    |    |
-     |    |    |    |    |
-West +----+----+----+----+ East
-     |cGRE|    |cGRE|    |
-     |    |    |    |    |
-     |    |    |    |    |
-     +----+----+----+----+
-     |    |cGRE|    |cGRE|
-     |    |    |    |    |
-     |    |    |    |    |
-     +----+----+----+----+
+     +-----+-----+-----+-----+
+     |cGRE |     |cGRE |     |
+     |     |     |     |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
+     |     |cGRE |     |cGRE |
+     |     |     |     |     |
+     |     |     |     |     |
+West +-----+-----+-----+-----+ East
+     |cGRE |     |cGRE |     |
+     |     |     |     |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
+     |     |cGRE |     |cGRE |
+     |     |     |     |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
 
-             South
+               South
 #+END_SRC
 
 #+RESULTS:
-[[file:n-queens.png]]
+[[file:n-queens/board.png]]
 
 
 The algorithm was easy to discover, but I found it very hard to put it
@@ -83,33 +83,36 @@ into words! Anyway, here is my attempt:
 5. When you've backtracked so many times that you are about to fall of
    the north end of the west-most column you're done
 
-Following the algoritm you might end up with somethnig like this:
+Following the algorithm you might end up with something like this:
 
 #+attr_html: :alt N Queens solution for N=4
 #+caption: N Queens solution for $N=4$
 #+BEGIN_SRC ditaa :file n-queens/solved.png :cmdline -E
-             North
+               North
 
-     +----+----+----+----+
-     |cGRE|    |cGRE|    |
-     |    | Q  |    |    |
-     |    |    |    |    |
-     +----+----+----+----+
-     |    |cGRE|    |cGRE|
-     |    |    |    | Q  |
-     |    |    |    |    |
-West +----+----+----+----+ East
-     |cGRE|    |cGRE|    |
-     | Q  |    |    |    |
-     |    |    |    |    |
-     +----+----+----+----+
-     |    |cGRE|    |cGRE|
-     |    |    | Q  |    |
-     |    |    |    |    |
-     +----+----+----+----+
+     +-----+-----+-----+-----+
+     |cGRE |     |cGRE |     |
+     |     |  ♛  |     |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
+     |     |cGRE |     |cGRE |
+     |     |     |     |  ♛  |
+     |     |     |     |     |
+West +-----+-----+-----+-----+ East
+     |cGRE |     |cGRE |     |
+     |  ♛  |     |     |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
+     |     |cGRE |     |cGRE |
+     |     |     |  ♛  |     |
+     |     |     |     |     |
+     +-----+-----+-----+-----+
 
-             South
+               South
 #+END_SRC
+
+#+RESULTS:
+[[file:n-queens/solved.png]]
 
 Now I was ready to start thinking about how to solve this problem in
 Clojure. First I thought about how to represent my board. The
@@ -153,11 +156,11 @@ index. Job done!
 #+END_SRC
 
 Let's check southwest next. This is a bit more complex. We need to
-walk back from our current column index, decrementing our row index
-and column index at each step, check if the row number at each column
-matches this calculated value. At any point, if the row or column
-becomes less than zero we've reached the end of the board and this is
-a "safe" location: no capture is possible in this direction.
+decrement our row index and column index and check if the row number
+at that column matches the calculated row value. At any point, if the
+row or column becomes less than zero we've reached the end of the
+board and this is a "safe" location: no capture is possible in this
+direction.
 
 #+BEGIN_SRC clojure
   (defn- safe-southwest?
