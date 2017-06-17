@@ -167,11 +167,15 @@ direction.
     [board row]
     (loop [col (dec (count board))
            row (dec row)]
-      (if (or (> 0 col) (> 0 row))
+      (cond
+        (or (< col 0) (< row 0))
         true
-        (if (= (nth board col) row)
-          false
-          (recur (dec col) (dec row))))))
+
+        (= (nth board col) row)
+        false
+
+        :default
+        (recur (dec col) (dec row)))))
 #+END_SRC
 
 Checking the northwest direction is similar to southwest, with the
@@ -184,11 +188,15 @@ value our rows can have.
     [board row size]
     (loop [col (dec (count board))
            row (inc row)]
-      (if (or (> 0 col) (>= row size))
+      (cond
+        (or (< col 0) (>= row size))
         true
-        (if (= (nth board col) row)
-          false
-          (recur (dec col) (inc row))))))
+
+        (= (nth board col) row)
+        false
+
+        :default
+        (recur (dec col) (inc row)))))
 #+END_SRC
 
 For convenience I packaged all the three previous directions into a

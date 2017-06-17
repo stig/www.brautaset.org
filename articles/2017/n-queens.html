@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-17 Sat 10:50 -->
+<!-- 2017-06-17 Sat 11:02 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The N Queens Problem</title>
@@ -246,11 +246,15 @@ direction.
   [board row]
   (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
          row (<span style="color: #B71C1C;">dec</span> row)]
-    (<span style="color: #00796b;">if</span> (<span style="color: #00796b;">or</span> (&gt; 0 col) (&gt; 0 row))
+    (<span style="color: #00796b;">cond</span>
+      (<span style="color: #00796b;">or</span> (&lt; col 0) (&lt; row 0))
       <span style="color: #558b2f;">true</span>
-      (<span style="color: #00796b;">if</span> (= (<span style="color: #B71C1C;">nth</span> board col) row)
-        <span style="color: #558b2f;">false</span>
-        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">dec</span> row))))))
+
+      (= (<span style="color: #B71C1C;">nth</span> board col) row)
+      <span style="color: #558b2f;">false</span>
+
+      <span style="color: #B71C1C;">:default</span>
+      (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">dec</span> row)))))
 </pre>
 </div>
 
@@ -266,11 +270,15 @@ value our rows can have.
   [board row size]
   (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
          row (<span style="color: #B71C1C;">inc</span> row)]
-    (<span style="color: #00796b;">if</span> (<span style="color: #00796b;">or</span> (&gt; 0 col) (&gt;= row size))
+    (<span style="color: #00796b;">cond</span>
+      (<span style="color: #00796b;">or</span> (&lt; col 0) (&gt;= row size))
       <span style="color: #558b2f;">true</span>
-      (<span style="color: #00796b;">if</span> (= (<span style="color: #B71C1C;">nth</span> board col) row)
-        <span style="color: #558b2f;">false</span>
-        (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">inc</span> row))))))
+
+      (= (<span style="color: #B71C1C;">nth</span> board col) row)
+      <span style="color: #558b2f;">false</span>
+
+      <span style="color: #B71C1C;">:default</span>
+      (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">inc</span> row)))))
 </pre>
 </div>
 
@@ -330,7 +338,7 @@ recursion-based solution well.
 <div id="postamble" class="status">
 <p class="date">Date: 2017-06-14</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-17 Sat 10:50</p>
+<p class="date">Created: 2017-06-17 Sat 11:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
