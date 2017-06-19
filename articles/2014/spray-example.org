@@ -1,6 +1,7 @@
 #+title: Spray Example
 #+date: 2014-02-16
 #+index: Scala!Complete Spray DSL Example
+#+index: Spray!Complete Scala DSL Example
 
 I love using [[http://spray.io][Spray]] and its routing DSL for REST APIs but I've found a
 lot of the examples are just showing off its syntax. I've been missing

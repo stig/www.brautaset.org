@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 12:23 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Injecting Akka's TestProbe in place of child actors</title>
@@ -97,8 +97,7 @@ parameter, this is simple. But what if it does not?
 
 <p>
 Or, you can simply send your actor a message containing the probe as
-<a href="http://doc.akka.io/docs/akka/2.1.0/scala/testing.html#Using_Multiple_Probe_Actors">this
-example from the Akka documentation</a> shows. However, if your actor
+<a href="http://doc.akka.io/docs/akka/2.1.0/scala/testing.html#Using_Multiple_Probe_Actors">this example from the Akka documentation</a> shows. However, if your actor
 creates children itself it can get more difficult. Here's an example
 setup from my (admittedly rather limited) experience with Akka so far:
 </p>
@@ -108,20 +107,22 @@ setup from my (admittedly rather limited) experience with Akka so far:
   <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span><span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span>
 }
 
-<span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
+<span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span>
+    <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
   <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Foo</span>
 }
 
 <span style="font-weight: bold;">object</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> {
-    <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">apply</span>() <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span>
+  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">apply</span>() <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span>
 }
 
 <span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
-    <span style="font-weight: bold;">this:</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> <span style="font-weight: bold;">=&gt;</span>
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">router</span> <span style="font-weight: bold;">=</span> context.actorOf(<span style="font-weight: bold; text-decoration: underline;">Props</span>(newFoo).withRouter(<span style="font-weight: bold; text-decoration: underline;">FromConfig</span>()))
-    <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
-        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">...</span>
-    }
+  <span style="font-weight: bold;">this:</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> <span style="font-weight: bold;">=&gt;</span>
+  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">router</span> <span style="font-weight: bold;">=</span> context.actorOf(
+    <span style="font-weight: bold; text-decoration: underline;">Props</span>(newFoo).withRouter(<span style="font-weight: bold; text-decoration: underline;">FromConfig</span>()))
+  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">...</span>
+  }
 }
 </pre>
 </div>
@@ -149,7 +150,8 @@ parameter:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(target<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">ActorRef</span>) <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
+<pre class="src src-scala"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(target<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">ActorRef</span>)
+    <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
   <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
     <span style="font-weight: bold;">case</span> <span style="font-weight: bold; font-style: italic;">x</span> <span style="font-weight: bold;">=&gt;</span> target forward x
   }
@@ -157,10 +159,12 @@ parameter:
 
 <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
   <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">probe</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">TestProbe</span>()
-  <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
+  <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>
+      <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
     <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(probe.ref)
   }
-  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">actor</span> <span style="font-weight: bold;">=</span> context.actorOf(<span style="font-weight: bold; text-decoration: underline;">Props</span>(<span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>))
+  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">actor</span> <span style="font-weight: bold;">=</span> context.actorOf(
+    <span style="font-weight: bold; text-decoration: underline;">Props</span>(<span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>))
 }
 </pre>
 </div>
@@ -172,7 +176,8 @@ so:
 
 <div class="org-src-container">
 <pre class="src src-scala"><span style="font-style: italic;">"Bar"</span> should {
-  <span style="font-style: italic;">"involve child in doing something"</span> in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
+  <span style="font-style: italic;">"involve child in doing something"</span>
+  in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
     actor ! <span style="font-style: italic;">"SomeMessage"</span>
     probe.expectMsg(<span style="font-style: italic;">"MessageToChild"</span>)
     probe.reply(<span style="font-style: italic;">"ReplyFromChild"</span>)
@@ -194,7 +199,7 @@ OK in tests.)
 <div id="postamble" class="status">
 <p class="date">Date: 2013-03-24</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 12:23</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -54,10 +54,10 @@ There's probably a fancy mathematical way of determining this, but I
 brute-forced it using the following Scala program:
 
 #+BEGIN_SRC scala
-    def g(n: Int, r:Double, lim: Double): Int
-        = if (r < lim) n else g(n+1, r / 2, lim)
-    g(0, 1, Float.MinPositiveValue)
-    g(0, 1, Double.MinPositiveValue)
+  def g(n: Int, r:Double, lim: Double): Int
+      = if (r < lim) n else g(n+1, r / 2, lim)
+  g(0, 1, Float.MinPositiveValue)
+  g(0, 1, Double.MinPositiveValue)
 #+END_SRC
 
 Of course, there's a chance that number of re-orderings will exceed even

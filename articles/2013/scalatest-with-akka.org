@@ -1,6 +1,7 @@
 #+title: Using ScalaTest with Akka
 #+date: 2013-03-25
 #+index: Scala!Akka and ScalaTest
+#+index: Akka!Working with ScalaTest
 
 To test Actor code with ScalaTest you have to mix in a lot of traits;
 sometimes it can be difficult to remember them all. Inspired by a
@@ -9,57 +10,62 @@ a trait because it takes constructor parameters) that you can drop
 into a project.
 
 #+BEGIN_SRC scala
-    import akka.actor.ActorSystem
-    import akka.testkit.{ ImplicitSender, TestKit }
-    import org.scalatest.{ WordSpec, BeforeAndAfterAll }
-    import org.scalatest.matchers.MustMatchers
+  import akka.actor.ActorSystem
+  import akka.testkit.{ ImplicitSender, TestKit }
+  import org.scalatest.{ WordSpec, BeforeAndAfterAll }
+  import org.scalatest.matchers.MustMatchers
 
-    abstract class TestKitSpec(name: String)
-        extends TestKit(ActorSystem(name))
-        with WordSpec
-        with MustMatchers
-        with BeforeAndAfterAll
-        with ImplicitSender {
+  abstract class TestKitSpec(name: String)
+      extends TestKit(ActorSystem(name))
+      with WordSpec
+      with MustMatchers
+      with BeforeAndAfterAll
+      with ImplicitSender {
 
-      override def afterAll() {
-        system.shutdown()
-      }
+    override def afterAll() {
+      system.shutdown()
     }
+  }
 #+END_SRC
 
 You use it like this (extending the test part of my previous post on
 [[file:injecting-akka-testprobe.org][injecting Akka's TestProbe]] into actors):
 
 #+BEGIN_SRC scala
-    object BarSpec {
-      class Wrapper(target: ActorRef) extends Actor {
-        def receive = {
-          case x => target forward x
-        }
+  object BarSpec {
+    class Wrapper(target: ActorRef)
+        extends Actor {
+      def receive = {
+        case x => target forward x
       }
     }
+  }
 
-    class BarSpec extends TestKitSpec("BarSpec") {
-      import Bar._
-      import BarSpec._
+  class BarSpec
+      extends TestKitSpec("BarSpec") {
+    import Bar._
+    import BarSpec._
 
-      trait TestCase {
-        val probe = TestProbe()
-        trait TestChildrenProvider extends ChildrenProvider {
-          def newBar = new Wrapper(probe.ref)
-        }
-        val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
+    trait TestCase {
+      val probe = TestProbe()
+      trait TestChildrenProvider
+          extends ChildrenProvider {
+        def newBar = new Wrapper(probe.ref)
       }
+      val actor = context.actorOf(
+        Props(new Bar with TestChildrenProvider))
+    }
 
-      "Bar" should {
-        "involve child in doing something" in new TestCase {
-          actor ! "SomeMessage"
-          probe.expectMsg("MessageToChild")
-          probe.reply("ReplyFromChild")
-          expectMsg("ReplyFromParent")
-        }
+    "Bar" should {
+      "involve child in doing something"
+      in new TestCase {
+        actor ! "SomeMessage"
+        probe.expectMsg("MessageToChild")
+        probe.reply("ReplyFromChild")
+        expectMsg("ReplyFromParent")
       }
     }
+  }
 #+END_SRC
 
 I find this makes testing of Akka actors quite nice and clean.

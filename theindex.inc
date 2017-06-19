@@ -1,4 +1,7 @@
 * A
+  - Akka
+    - [[file:articles/2013/injecting-akka-testprobe.org][Injecting TestProbe in place of children in Scala]]
+    - [[file:articles/2013/scalatest-with-akka.org][Working with ScalaTest]]
   - [[file:articles/2008/avenue-que.org][Avenue Que]]
 * B
   - Banking
@@ -111,7 +114,11 @@
     - [[file:articles/2007/piping-to-sh.org][Piping to -]]
     - [[file:articles/2007/renaming-lots-of-files.org][Renaming lot of files]]
   - [[file:articles/2005/new-headphones.org][Shure EC2]]
+  - Slick
+    - [[file:articles/2013/scala-slick-postgresql-unit-tests.org][Scala Unit Tests with PostgreSQL]]
   - [[file:articles/2014/smartphone-addiction.org][Smartphone Addition]]
+  - Spray
+    - [[file:articles/2014/spray-example.org][Complete Scala DSL Example]]
   - SQL
     - [[file:articles/2006/generating-bar-charts-with-sql.org][Generating Bar Charts]]
 * T

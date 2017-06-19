@@ -1,6 +1,7 @@
 #+title: Injecting Akka's TestProbe in place of child actors
 #+date: 2013-03-24
 #+index: Scala!Injecting Akka's TestProbe in place of children
+#+index: Akka!Injecting TestProbe in place of children in Scala
 
 You have an actor that uses one or more child actors. You want to inject
 a TestProbe in place of the child(ren) to test the behaviour of the
@@ -8,36 +9,37 @@ parent in isolation. If your actor takes another actor as a constructor
 parameter, this is simple. But what if it does not?
 
 #+BEGIN_SRC scala
-    val foo = TestProbe()
-    val act = system.actorOf(Props(new Bar(foo.ref)))
+  val foo = TestProbe()
+  val act = system.actorOf(Props(new Bar(foo.ref)))
 #+END_SRC
 
 Or, you can simply send your actor a message containing the probe as
-[[http://doc.akka.io/docs/akka/2.1.0/scala/testing.html#Using_Multiple_Probe_Actors][this
-example from the Akka documentation]] shows. However, if your actor
+[[http://doc.akka.io/docs/akka/2.1.0/scala/testing.html#Using_Multiple_Probe_Actors][this example from the Akka documentation]] shows. However, if your actor
 creates children itself it can get more difficult. Here's an example
 setup from my (admittedly rather limited) experience with Akka so far:
 
 #+BEGIN_SRC scala
-    trait ChildrenProvider {
-      def newFoo: Actor
-    }
+  trait ChildrenProvider {
+    def newFoo: Actor
+  }
 
-    trait ProductionChildrenProvider extends ChildrenProvider {
-      def newFoo = new Foo
-    }
+  trait ProductionChildrenProvider
+      extends ChildrenProvider {
+    def newFoo = new Foo
+  }
 
-    object Bar {
-        def apply() = new Bar with ProductionChildrenProvider
-    }
+  object Bar {
+    def apply() = new Bar with ProductionChildrenProvider
+  }
 
-    class Bar extends Actor {
-        this: ChildrenProvider =>
-        val router = context.actorOf(Props(newFoo).withRouter(FromConfig()))
-        def receive = {
-            // ...
-        }
+  class Bar extends Actor {
+    this: ChildrenProvider =>
+    val router = context.actorOf(
+      Props(newFoo).withRouter(FromConfig()))
+    def receive = {
+      // ...
     }
+  }
 #+END_SRC
 
 This lets me inject a stubbed-out Foo instance in a test, but if you
@@ -57,33 +59,37 @@ and create a wrapper around TestProbe's =ref= as a constructor
 parameter:
 
 #+BEGIN_SRC scala
-    class Wrapper(target: ActorRef) extends Actor {
-      def receive = {
-        case x => target forward x
-      }
+  class Wrapper(target: ActorRef)
+      extends Actor {
+    def receive = {
+      case x => target forward x
     }
+  }
 
-    trait TestCase {
-      val probe = TestProbe()
-      trait TestChildrenProvider extends ChildrenProvider {
-        def newFoo = new Wrapper(probe.ref)
-      }
-      val actor = context.actorOf(Props(new Bar with TestChildrenProvider))
+  trait TestCase {
+    val probe = TestProbe()
+    trait TestChildrenProvider
+        extends ChildrenProvider {
+      def newFoo = new Wrapper(probe.ref)
     }
+    val actor = context.actorOf(
+      Props(new Bar with TestChildrenProvider))
+  }
 #+END_SRC
 
 This TestCase trait can then be wrapped around your code under test like
 so:
 
 #+BEGIN_SRC scala
-    "Bar" should {
-      "involve child in doing something" in new TestCase {
-        actor ! "SomeMessage"
-        probe.expectMsg("MessageToChild")
-        probe.reply("ReplyFromChild")
-        expectMsg("ReplyFromParent")
-      }
+  "Bar" should {
+    "involve child in doing something"
+    in new TestCase {
+      actor ! "SomeMessage"
+      probe.expectMsg("MessageToChild")
+      probe.reply("ReplyFromChild")
+      expectMsg("ReplyFromParent")
     }
+  }
 #+END_SRC
 
 This makes it much easier to reason about each test in isolation, and

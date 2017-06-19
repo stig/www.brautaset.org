@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 12:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Using ScalaTest with Akka</title>
@@ -91,19 +91,19 @@ into a project.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">import</span> akka.actor.<span style="font-weight: bold; text-decoration: underline;">ActorSystem</span>
-<span style="font-weight: bold;">import</span> akka.testkit.{ <span style="font-weight: bold; text-decoration: underline;">ImplicitSender</span>, <span style="font-weight: bold; text-decoration: underline;">TestKit</span> }
-<span style="font-weight: bold;">import</span> org.scalatest.{ <span style="font-weight: bold; text-decoration: underline;">WordSpec</span>, <span style="font-weight: bold; text-decoration: underline;">BeforeAndAfterAll</span> }
-<span style="font-weight: bold;">import</span> org.scalatest.matchers.<span style="font-weight: bold; text-decoration: underline;">MustMatchers</span>
+<pre class="src src-scala"><span style="color: #00796b;">import</span> akka.actor.<span style="color: #558b2f;">ActorSystem</span>
+<span style="color: #00796b;">import</span> akka.testkit.{ <span style="color: #558b2f;">ImplicitSender</span>, <span style="color: #558b2f;">TestKit</span> }
+<span style="color: #00796b;">import</span> org.scalatest.{ <span style="color: #558b2f;">WordSpec</span>, <span style="color: #558b2f;">BeforeAndAfterAll</span> }
+<span style="color: #00796b;">import</span> org.scalatest.matchers.<span style="color: #558b2f;">MustMatchers</span>
 
-<span style="font-weight: bold;">abstract</span> <span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">TestKitSpec</span>(name<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">String</span>)
-    <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">TestKit</span>(<span style="font-weight: bold; text-decoration: underline;">ActorSystem</span>(name))
-    <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">WordSpec</span>
-    <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">MustMatchers</span>
-    <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">BeforeAndAfterAll</span>
-    <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">ImplicitSender</span> {
+<span style="color: #B71C1C;">abstract</span> <span style="color: #00796b;">class</span> <span style="color: #0097A7;">TestKitSpec</span>(name<span style="color: #00796b;">:</span> <span style="color: #0097A7;">String</span>)
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">TestKit</span>(<span style="color: #558b2f;">ActorSystem</span>(name))
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">WordSpec</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">MustMatchers</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">BeforeAndAfterAll</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">ImplicitSender</span> {
 
-  <span style="font-weight: bold;">override</span> <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">afterAll</span>() {
+  <span style="color: #B71C1C;">override</span> <span style="color: #00796b;">def</span> <span style="color: #0097A7;">afterAll</span>() {
     system.shutdown()
   }
 }
@@ -116,32 +116,37 @@ You use it like this (extending the test part of my previous post on
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">object</span> <span style="font-weight: bold; text-decoration: underline;">BarSpec</span> {
-  <span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(target<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">ActorRef</span>) <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
-    <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
-      <span style="font-weight: bold;">case</span> <span style="font-weight: bold; font-style: italic;">x</span> <span style="font-weight: bold;">=&gt;</span> target forward x
+<pre class="src src-scala"><span style="color: #00796b;">object</span> <span style="color: #558b2f;">BarSpec</span> {
+  <span style="color: #00796b;">class</span> <span style="color: #0097A7;">Wrapper</span>(target<span style="color: #00796b;">:</span> <span style="color: #0097A7;">ActorRef</span>)
+      <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Actor</span> {
+    <span style="color: #00796b;">def</span> <span style="color: #0097A7;">receive</span> <span style="color: #00796b;">=</span> {
+      <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">x</span> <span style="color: #00796b;">=&gt;</span> target forward x
     }
   }
 }
 
-<span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">BarSpec</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">TestKitSpec</span>(<span style="font-style: italic;">"BarSpec"</span>) {
-  <span style="font-weight: bold;">import</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span>.<span style="font-weight: bold;">_</span>
-  <span style="font-weight: bold;">import</span> <span style="font-weight: bold; text-decoration: underline;">BarSpec</span>.<span style="font-weight: bold;">_</span>
+<span style="color: #00796b;">class</span> <span style="color: #0097A7;">BarSpec</span>
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">TestKitSpec</span>(<span style="color: #689f38;">"BarSpec"</span>) {
+  <span style="color: #00796b;">import</span> <span style="color: #558b2f;">Bar</span>.<span style="color: #00796b;">_</span>
+  <span style="color: #00796b;">import</span> <span style="color: #558b2f;">BarSpec</span>.<span style="color: #00796b;">_</span>
 
-  <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">probe</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">TestProbe</span>()
-    <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
-      <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newBar</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(probe.ref)
+  <span style="color: #00796b;">trait</span> <span style="color: #0097A7;">TestCase</span> {
+    <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">probe</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">TestProbe</span>()
+    <span style="color: #00796b;">trait</span> <span style="color: #0097A7;">TestChildrenProvider</span>
+        <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">ChildrenProvider</span> {
+      <span style="color: #00796b;">def</span> <span style="color: #0097A7;">newBar</span> <span style="color: #00796b;">=</span> <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Wrapper</span>(probe.ref)
     }
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">actor</span> <span style="font-weight: bold;">=</span> context.actorOf(<span style="font-weight: bold; text-decoration: underline;">Props</span>(<span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>))
+    <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">actor</span> <span style="color: #00796b;">=</span> context.actorOf(
+      <span style="color: #558b2f;">Props</span>(<span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span> <span style="color: #00796b;">with</span> <span style="color: #0097A7;">TestChildrenProvider</span>))
   }
 
-  <span style="font-style: italic;">"Bar"</span> should {
-    <span style="font-style: italic;">"involve child in doing something"</span> in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
-      actor ! <span style="font-style: italic;">"SomeMessage"</span>
-      probe.expectMsg(<span style="font-style: italic;">"MessageToChild"</span>)
-      probe.reply(<span style="font-style: italic;">"ReplyFromChild"</span>)
-      expectMsg(<span style="font-style: italic;">"ReplyFromParent"</span>)
+  <span style="color: #689f38;">"Bar"</span> should {
+    <span style="color: #689f38;">"involve child in doing something"</span>
+    in <span style="color: #00796b;">new</span> <span style="color: #0097A7;">TestCase</span> {
+      actor ! <span style="color: #689f38;">"SomeMessage"</span>
+      probe.expectMsg(<span style="color: #689f38;">"MessageToChild"</span>)
+      probe.reply(<span style="color: #689f38;">"ReplyFromChild"</span>)
+      expectMsg(<span style="color: #689f38;">"ReplyFromParent"</span>)
     }
   }
 }
@@ -155,7 +160,7 @@ I find this makes testing of Akka actors quite nice and clean.
 <div id="postamble" class="status">
 <p class="date">Date: 2013-03-25</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 12:20</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

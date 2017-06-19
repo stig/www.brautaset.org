@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 12:10 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spray Example</title>
@@ -133,8 +133,8 @@ error, depending on how you look at it) in stride:
 
 <div class="org-src-container">
 <pre class="src src-scala">onSuccess(model ? id) {
-    <span style="font-weight: bold;">case</span> <span style="font-weight: bold; font-style: italic;">item</span><span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Item</span> <span style="font-weight: bold;">=&gt;</span> complete(<span style="font-weight: bold; text-decoration: underline;">OK</span>, item)
-    <span style="font-weight: bold;">case</span> <span style="font-weight: bold; text-decoration: underline;">ItemNotFound</span> <span style="font-weight: bold;">=&gt;</span> complete(<span style="font-weight: bold; text-decoration: underline;">NotFound</span>)
+    <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">item</span><span style="color: #00796b;">:</span> <span style="color: #0097A7;">Item</span> <span style="color: #00796b;">=&gt;</span> complete(<span style="color: #558b2f;">OK</span>, item)
+    <span style="color: #00796b;">case</span> <span style="color: #558b2f;">ItemNotFound</span> <span style="color: #00796b;">=&gt;</span> complete(<span style="color: #558b2f;">NotFound</span>)
 }
 </pre>
 </div>
@@ -179,7 +179,7 @@ it is being exposed by a REST API at all.
 <div id="postamble" class="status">
 <p class="date">Date: 2014-02-16</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 12:10</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

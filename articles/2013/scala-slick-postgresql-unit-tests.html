@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 12:17 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scala, Slick &amp; PostgreSQL Unit Tests</title>
@@ -98,21 +98,32 @@ it is (import &amp; package lines omitted for brevity):
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">PostgresSpec</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Suite</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">BeforeAndAfterAll</span> {
-  <span style="font-weight: bold;">private</span> <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">dbname</span> <span style="font-weight: bold;">=</span> getClass.getSimpleName.toLowerCase
-  <span style="font-weight: bold;">private</span> <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">driver</span> <span style="font-weight: bold;">=</span> <span style="font-style: italic;">"org.postgresql.Driver"</span>
+<pre class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">PostgresSpec</span>
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Suite</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">BeforeAndAfterAll</span> {
+  <span style="color: #B71C1C;">private</span> <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">dbname</span> <span style="color: #00796b;">=</span>
+    getClass.getSimpleName.toLowerCase
+  <span style="color: #B71C1C;">private</span> <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">driver</span> <span style="color: #00796b;">=</span>
+    <span style="color: #689f38;">"org.postgresql.Driver"</span>
 
-  <span style="font-weight: bold;">private</span> <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">postgres</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">Database</span>.forURL(<span style="font-style: italic;">"jdbc:postgresql:postgres"</span>, driver <span style="font-weight: bold;">=</span> driver)
+  <span style="color: #B71C1C;">private</span> <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">postgres</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">Database</span>.forURL(
+    <span style="color: #689f38;">"jdbc:postgresql:postgres"</span>, driver <span style="color: #00796b;">=</span> driver)
+
   postgres withSession {
-    <span style="font-weight: bold; text-decoration: underline;">Q</span>.updateNA(s<span style="font-style: italic;">"DROP DATABASE IF EXISTS </span><span style="font-weight: bold; font-style: italic;">$dbname</span><span style="font-style: italic;">"</span>).execute()
-    <span style="font-weight: bold; text-decoration: underline;">Q</span>.updateNA(s<span style="font-style: italic;">"CREATE DATABASE </span><span style="font-weight: bold; font-style: italic;">$dbname</span><span style="font-style: italic;">"</span>).execute()
+    <span style="color: #558b2f;">Q</span>.updateNA(
+      s<span style="color: #689f38;">"DROP DATABASE IF EXISTS </span><span style="color: #EF6C00;">$dbname</span><span style="color: #689f38;">"</span>).execute()
+
+    <span style="color: #558b2f;">Q</span>.updateNA(
+      s<span style="color: #689f38;">"CREATE DATABASE </span><span style="color: #EF6C00;">$dbname</span><span style="color: #689f38;">"</span>).execute()
   }
 
-  <span style="font-weight: bold;">override</span> <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">afterAll</span>() {
-    postgres withSession <span style="font-weight: bold; text-decoration: underline;">Q</span>.updateNA(s<span style="font-style: italic;">"DROP DATABASE </span><span style="font-weight: bold; font-style: italic;">$dbname</span><span style="font-style: italic;">"</span>).execute()
+  <span style="color: #B71C1C;">override</span> <span style="color: #00796b;">def</span> <span style="color: #0097A7;">afterAll</span>() {
+    postgres withSession <span style="color: #558b2f;">Q</span>.updateNA(
+      s<span style="color: #689f38;">"DROP DATABASE </span><span style="color: #EF6C00;">$dbname</span><span style="color: #689f38;">"</span>).execute()
   }
 
-  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">database</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">Database</span>.forURL(s<span style="font-style: italic;">"jdbc:postgresql:</span><span style="font-weight: bold; font-style: italic;">$dbname</span><span style="font-style: italic;">"</span>, driver <span style="font-weight: bold;">=</span> driver)
+  <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">database</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">Database</span>.forURL(
+    s<span style="color: #689f38;">"jdbc:postgresql:</span><span style="color: #EF6C00;">$dbname</span><span style="color: #689f38;">"</span>, driver <span style="color: #00796b;">=</span> driver)
 }
 </pre>
 </div>
@@ -126,44 +137,63 @@ test. Here's an example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">PostgresUserDaoSpec</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">FlatSpec</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">PostgresSpec</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">MustMatchers</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">BeforeAndAfter</span> {
+<pre class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">PostgresUserDaoSpec</span>
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">FlatSpec</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">PostgresSpec</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">MustMatchers</span>
+    <span style="color: #00796b;">with</span> <span style="color: #0097A7;">BeforeAndAfter</span> {
 
-  <span style="font-weight: bold;">import</span> <span style="font-weight: bold; text-decoration: underline;">Schema</span>.<span style="font-weight: bold;">_</span>
+  <span style="color: #00796b;">import</span> <span style="color: #558b2f;">Schema</span>.<span style="color: #00796b;">_</span>
 
   before {
     database withSession
-      <span style="font-weight: bold; text-decoration: underline;">Schema</span>.ddl.create
+    <span style="color: #558b2f;">Schema</span>.ddl.create
   }
 
   after {
     database withSession
-      <span style="font-weight: bold; text-decoration: underline;">Schema</span>.ddl.drop
+    <span style="color: #558b2f;">Schema</span>.ddl.drop
   }
 
-  <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">Case</span> {
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">dao</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">PostgresUserDao</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">DatabaseProvider</span> {
-      <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">db</span> <span style="font-weight: bold;">=</span> database
+  <span style="color: #00796b;">trait</span> <span style="color: #0097A7;">Case</span> {
+    <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">dao</span> <span style="color: #00796b;">=</span> <span style="color: #00796b;">new</span> <span style="color: #0097A7;">PostgresUserDao</span>
+        <span style="color: #00796b;">with</span> <span style="color: #0097A7;">DatabaseProvider</span> {
+      <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">db</span> <span style="color: #00796b;">=</span> database
     }
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">user</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">User</span>(<span style="font-weight: bold; text-decoration: underline;">UUID</span>.randomUUID(), <span style="font-style: italic;">"foo@example.com"</span>, <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">DateTime</span>)
-    <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">user2</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">User</span>(<span style="font-weight: bold; text-decoration: underline;">UUID</span>.randomUUID(), <span style="font-style: italic;">"bar@example.com"</span>, <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">DateTime</span>)
+    <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">user</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">User</span>(
+      <span style="color: #558b2f;">UUID</span>.randomUUID(),
+      <span style="color: #689f38;">"foo@example.com"</span>,
+      <span style="color: #00796b;">new</span> <span style="color: #0097A7;">DateTime</span>)
+    <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">user2</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">User</span>(
+      <span style="color: #558b2f;">UUID</span>.randomUUID(),
+      <span style="color: #689f38;">"bar@example.com"</span>,
+      <span style="color: #00796b;">new</span> <span style="color: #0097A7;">DateTime</span>)
   }
 
-  <span style="font-style: italic;">"register"</span> should <span style="font-style: italic;">"create a record in the user table"</span> in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Case</span> {
+  <span style="color: #689f38;">"register"</span> should
+  <span style="color: #689f38;">"create a record in the user table"</span>
+  in <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Case</span> {
     dao.register(user)
     database withSession {
-      <span style="font-weight: bold; text-decoration: underline;">Q</span>.queryNA[<span style="font-weight: bold; text-decoration: underline;">Int</span>](<span style="font-style: italic;">"select count(*) from public.user"</span>).first() must be(<span style="font-weight: bold; text-decoration: underline;">1</span>)
+      <span style="color: #558b2f;">Q</span>.queryNA[<span style="color: #558b2f;">Int</span>](
+        <span style="color: #689f38;">"select count(*) from public.user"</span>).first()
+      must be(<span style="color: #558b2f;">1</span>)
     }
   }
 
-  it should <span style="font-style: italic;">"allow multiple records"</span> in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Case</span> {
+  it should
+  <span style="color: #689f38;">"allow multiple records"</span>
+  in <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Case</span> {
     dao.register(user)
-    dao.register(user2) must be(<span style="font-weight: bold; text-decoration: underline;">true</span>)
+    dao.register(user2) must be(<span style="color: #558b2f;">true</span>)
     database withSession {
-      <span style="font-weight: bold; text-decoration: underline;">Q</span>.queryNA[<span style="font-weight: bold; text-decoration: underline;">Int</span>](<span style="font-style: italic;">"select count(*) from public.user"</span>).first() must be(<span style="font-weight: bold; text-decoration: underline;">2</span>)
+      <span style="color: #558b2f;">Q</span>.queryNA[<span style="color: #558b2f;">Int</span>](
+        <span style="color: #689f38;">"select count(*) from public.user"</span>).first()
+      must be(<span style="color: #558b2f;">2</span>)
     }
   }
 
-  <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">... more tests ...</span>
+  <span style="color: #607d8b;">// </span><span style="color: #607d8b;">... more tests ...</span>
 }
 </pre>
 </div>
@@ -178,7 +208,7 @@ each test.
 <div id="postamble" class="status">
 <p class="date">Date: 2013-06-16</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 12:17</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

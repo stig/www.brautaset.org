@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 12:18 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Real custom rank keys</title>
@@ -156,10 +156,10 @@ brute-forced it using the following Scala program:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">g</span>(n<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Int</span>, r<span style="font-weight: bold;">:</span><span style="font-weight: bold; text-decoration: underline;">Double</span>, lim<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Double</span>)<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Int</span>
-    <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">if</span> (r &lt; lim) n <span style="font-weight: bold;">else</span> g(n+<span style="font-weight: bold; text-decoration: underline;">1</span>, r / <span style="font-weight: bold; text-decoration: underline;">2</span>, lim)
-g(<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">Float</span>.<span style="font-weight: bold; text-decoration: underline;">MinPositiveValue</span>)
-g(<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">Double</span>.<span style="font-weight: bold; text-decoration: underline;">MinPositiveValue</span>)
+<pre class="src src-scala"><span style="color: #00796b;">def</span> <span style="color: #0097A7;">g</span>(n<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>, r<span style="color: #00796b;">:</span><span style="color: #0097A7;">Double</span>, lim<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Double</span>)<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>
+    <span style="color: #00796b;">=</span> <span style="color: #00796b;">if</span> (r &lt; lim) n <span style="color: #00796b;">else</span> g(n+<span style="color: #558b2f;">1</span>, r / <span style="color: #558b2f;">2</span>, lim)
+g(<span style="color: #558b2f;">0</span>, <span style="color: #558b2f;">1</span>, <span style="color: #558b2f;">Float</span>.<span style="color: #558b2f;">MinPositiveValue</span>)
+g(<span style="color: #558b2f;">0</span>, <span style="color: #558b2f;">1</span>, <span style="color: #558b2f;">Double</span>.<span style="color: #558b2f;">MinPositiveValue</span>)
 </pre>
 </div>
 
@@ -179,7 +179,7 @@ it in anger yet.</i>
 <div id="postamble" class="status">
 <p class="date">Date: 2013-02-23</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 12:18</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
