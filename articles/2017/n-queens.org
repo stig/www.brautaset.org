@@ -243,3 +243,49 @@ board of size $N$:
 It took me a while longer to solve this than I am happy with, but I am
 happy with the final solution. Clojure, an immutable lisp, fits the
 recursion-based solution well.
+
+*Update*: for what it's worth, I also wrote some tests---but I forgot to
+include them in the original version of this post. I've added them
+below. I'm using sets so the tests would work even if the /order/ of
+board generation was different.
+
+#+BEGIN_SRC clojure
+  (deftest n-queens-test
+    (testing "no solution small boards"
+      (is (empty? (queens 0)))
+      (is (empty? (queens 2)))
+      (is (empty? (queens 3))))
+    (testing "N = 1"
+      (is (= '([0]) (queens 1))))
+    (testing "N = 4"
+      (is (= #{[1 3 0 2]
+               [2 0 3 1]}
+             (set (queens 4)))))
+    (testing "N = 5"
+      (is (= #{[0 2 4 1 3]
+               [0 3 1 4 2]
+               [1 3 0 2 4]
+               [1 4 2 0 3]
+               [2 0 3 1 4]
+               [2 4 1 3 0]
+               [3 0 2 4 1]
+               [3 1 4 2 0]
+               [4 1 3 0 2]
+               [4 2 0 3 1]}
+             (set (queens 5)))))
+    (testing "N = 6"
+      (is (= #{[1 3 5 0 2 4]
+               [2 5 1 4 0 3]
+               [3 0 4 1 5 2]
+               [4 2 0 5 3 1]}
+             (set (queens 6)))))
+    (testing "N > 8"
+      (is (vector? (queens 9)))))
+#+END_SRC
+
+Take a look at the solutions for $N=4$ and notice that the second
+solution is the same as the first backwards. Actually this is the case
+for all $N$ where there are solutions: they all have a "mirror image".
+(This shouldn't really be a surprise.) I wonder if there's a way to
+speed up generation of solutions by stoppig midway and just mirroring
+the solutions we have already got?
