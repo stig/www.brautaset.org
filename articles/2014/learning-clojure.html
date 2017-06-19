@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-16 Fri 22:56 -->
+<!-- 2017-06-19 Mon 14:04 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learning Clojure by Solving Euler Problems</title>
@@ -109,11 +109,13 @@ incredibly slow. Here it is:
     (<span style="color: #B71C1C;">filter</span> odd? (<span style="color: #B71C1C;">iterate</span> inc 3)))
   (<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-prime?</span> [n]
     (<span style="color: #B71C1C;">every?</span>
-      (<span style="color: #00796b;">fn</span> [x] (<span style="color: #B71C1C;">not=</span> (<span style="color: #B71C1C;">mod</span> n x) 0))
-      (<span style="color: #B71C1C;">cons</span> 2 (<span style="color: #B71C1C;">take-while</span> (<span style="color: #00796b;">fn</span> [x] (&lt; (* x x) (<span style="color: #B71C1C;">inc</span> n))) (odd-seq)))))
+     (<span style="color: #00796b;">fn</span> [x] (<span style="color: #B71C1C;">not=</span> (<span style="color: #B71C1C;">mod</span> n x) 0))
+     (<span style="color: #B71C1C;">cons</span> 2 (<span style="color: #B71C1C;">take-while</span> 
+              (<span style="color: #00796b;">fn</span> [x] (&lt; (* x x) (<span style="color: #B71C1C;">inc</span> n)))
+              (odd-seq)))))
   (<span style="color: #B71C1C;">cons</span> 2
-    (<span style="color: #B71C1C;">filter</span> naive-prime?
-      (odd-seq))))
+        (<span style="color: #B71C1C;">filter</span> naive-prime?
+                (odd-seq))))
 </pre>
 </div>
 
@@ -131,22 +133,23 @@ well in the process. This version is about twice as fast as the above:
   (<span style="color: #00796b;">let</span> [odd-seq (<span style="color: #B71C1C;">iterate</span> #(+ <span style="color: #EF6C00;">%1</span> 2) 3)]
     (<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">prime?</span> [n]
       (<span style="color: #B71C1C;">every?</span>
-        #(<span style="color: #B71C1C;">not=</span> (<span style="color: #B71C1C;">mod</span> n <span style="color: #EF6C00;">%1</span>) 0)
-        (<span style="color: #B71C1C;">take-while</span> #(&lt; (* <span style="color: #EF6C00;">%1</span> <span style="color: #EF6C00;">%1</span>) (<span style="color: #B71C1C;">inc</span> n)) odd-seq)))
+       #(<span style="color: #B71C1C;">not=</span> (<span style="color: #B71C1C;">mod</span> n <span style="color: #EF6C00;">%1</span>) 0)
+       (<span style="color: #B71C1C;">take-while</span>
+        #(&lt; (* <span style="color: #EF6C00;">%1</span> <span style="color: #EF6C00;">%1</span>) (<span style="color: #B71C1C;">inc</span> n))
+        odd-seq)))
     (<span style="color: #B71C1C;">cons</span> 2
-      (<span style="color: #B71C1C;">filter</span> prime?
-        odd-seq))))
+          (<span style="color: #B71C1C;">filter</span> prime?
+                  odd-seq))))
 </pre>
 </div>
 
 <p>
 It still an incredibly naive implementation though, and about a
-gazillion times slower than the version by
-<a href="http://clj-me.cgrand.net/2009/07/30/everybody-loves-the-sieve-of-eratosthenes/">Christophe
-Grand</a>. My understanding of Clojure was not deep enough to completely
-understand how that implementation works. But, I was able to learn some
-things (for example the <code>letfn</code> construct) from it and I set out to
-explore an idea I had for a fast, lazy Sieve of Eratosthenes.
+gazillion times slower than the version by <a href="http://clj-me.cgrand.net/2009/07/30/everybody-loves-the-sieve-of-eratosthenes/">Christophe Grand</a>. My
+understanding of Clojure was not deep enough to completely understand
+how that implementation works. But, I was able to learn some things
+(for example the <code>letfn</code> construct) from it and I set out to explore an
+idea I had for a fast, lazy Sieve of Eratosthenes.
 </p>
 
 <p>
@@ -163,26 +166,34 @@ the set. My last attempt is shown below.
 
 <div class="org-src-container">
 <pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">sprimes</span>
-  <span style="color: #673ab7;">"Stream of prime numbers using a streaming version of the Sieve of Eratosthenes. Take 2!"</span>
+  <span style="color: #673ab7;">"Stream of prime numbers using a streaming</span>
+<span style="color: #673ab7;">  version of the Sieve of Eratosthenes. Take 2!"</span>
   []
-  (<span style="color: #00796b;">letfn</span> [
-    (thrice [x] (* x 3))
-    (bump-vals [kv]
-      (<span style="color: #00796b;">let</span> [key (<span style="color: #B71C1C;">key</span> kv)]
-        [key (+ (<span style="color: #B71C1C;">val</span> kv) (* 2 key))]))
-    (map-updates [m c]
-      (<span style="color: #00796b;">-&gt;&gt;</span> m
-        (<span style="color: #B71C1C;">filter</span> (<span style="color: #00796b;">fn</span> [entry] (&gt; c (<span style="color: #B71C1C;">val</span> entry))))
-        (<span style="color: #B71C1C;">map</span> bump-vals)
-        (<span style="color: #B71C1C;">into</span> {})))
-    (next-prime [m s c]
-      (<span style="color: #00796b;">if</span> (s c)
-        (<span style="color: #00796b;">recur</span> m s (+ 2 c))
-        (<span style="color: #00796b;">let</span> [updates (map-updates m c)]
-          (<span style="color: #00796b;">if-not</span> (<span style="color: #B71C1C;">empty?</span> updates)
-            (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">into</span> m updates) (<span style="color: #B71C1C;">into</span> s (<span style="color: #B71C1C;">vals</span> updates)) c)
-              (<span style="color: #00796b;">let</span> [tc (thrice c)]
-                (<span style="color: #B71C1C;">cons</span> c (<span style="color: #B71C1C;">lazy-seq</span> (next-prime (<span style="color: #B71C1C;">assoc</span> m c tc) (<span style="color: #B71C1C;">conj</span> s tc) (+ 2 c)))))))))]
+  (<span style="color: #00796b;">letfn</span> [(thrice [x] (* x 3))
+          (bump-vals [kv]
+            (<span style="color: #00796b;">let</span> [key (<span style="color: #B71C1C;">key</span> kv)]
+              [key (+ (<span style="color: #B71C1C;">val</span> kv) (* 2 key))]))
+          (map-updates [m c]
+            (<span style="color: #00796b;">-&gt;&gt;</span> m
+                 (<span style="color: #B71C1C;">filter</span>
+                  (<span style="color: #00796b;">fn</span> [entry] (&gt; c (<span style="color: #B71C1C;">val</span> entry))))
+                 (<span style="color: #B71C1C;">map</span> bump-vals)
+                 (<span style="color: #B71C1C;">into</span> {})))
+          (next-prime [m s c]
+            (<span style="color: #00796b;">if</span> (s c)
+              (<span style="color: #00796b;">recur</span> m s (+ 2 c))
+              (<span style="color: #00796b;">let</span> [updates (map-updates m c)]
+                (<span style="color: #00796b;">if-not</span> (<span style="color: #B71C1C;">empty?</span> updates)
+                  (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">into</span> m updates)
+                         (<span style="color: #B71C1C;">into</span> s (<span style="color: #B71C1C;">vals</span> updates))
+                         c)
+                  (<span style="color: #00796b;">let</span> [tc (thrice c)]
+                    (<span style="color: #B71C1C;">cons</span> c
+                          (<span style="color: #B71C1C;">lazy-seq</span>
+                           (next-prime
+                            (<span style="color: #B71C1C;">assoc</span> m c tc)
+                            (<span style="color: #B71C1C;">conj</span> s tc)
+                            (+ 2 c)))))))))]
     (<span style="color: #B71C1C;">cons</span> 2 (next-prime {} #{} 3))))
 </pre>
 </div>
@@ -200,11 +211,19 @@ factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">user=&gt; (<span style="color: #B71C1C;">time</span> (<span style="color: #00796b;">doall</span> (<span style="color: #B71C1C;">take</span> 1 (<span style="color: #B71C1C;">drop</span> 1000000 (grand-lazy-primes)))))
+<pre class="src src-clojure">user=&gt; (<span style="color: #B71C1C;">time</span>
+        (<span style="color: #00796b;">doall</span>
+         (<span style="color: #B71C1C;">take</span> 1
+               (<span style="color: #B71C1C;">drop</span> 1000000
+                     (grand-lazy-primes)))))
 <span style="color: #689f38;">"Elapsed time: 18665.168 msecs"</span>
 (15485867)
 
-user=&gt; (<span style="color: #B71C1C;">time</span> (<span style="color: #00796b;">doall</span> (<span style="color: #B71C1C;">take</span> 1 (<span style="color: #B71C1C;">drop</span> 1000000 (grand-lazy-primes2)))))
+user=&gt; (<span style="color: #B71C1C;">time</span>
+        (<span style="color: #00796b;">doall</span>
+         (<span style="color: #B71C1C;">take</span> 1
+               (<span style="color: #B71C1C;">drop</span> 1000000
+                     (grand-lazy-primes2)))))
 <span style="color: #689f38;">"Elapsed time: 13422.726 msecs"</span>
 (15485867)
 </pre>
@@ -218,7 +237,7 @@ Problem 4&#x2026;
 <div id="postamble" class="status">
 <p class="date">Date: 2014-02-10</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-16 Fri 22:56</p>
+<p class="date">Created: 2017-06-19 Mon 14:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

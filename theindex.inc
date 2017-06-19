@@ -83,6 +83,8 @@
   - Photos
     - [[file:articles/2013/backing-up-photos-online.org][Backing up online]]
     - [[file:articles/2013/consolidating-iphoto-libraries.org][Consolidating and de-duplicating iPhoto libraries]]
+  - Primes
+    - [[file:articles/2014/learning-clojure.org][Finding with Clojure]]
   - Proportional Representation
     - [[file:articles/2017/electoral-reform-now.org][Voting system]]
   - Puppet
