@@ -1,6 +1,7 @@
 #+title: Spray Routing Error Handling
 #+date: 2013-08-05
 #+index: Scala!Spray routing error handling
+#+index: Spray!Scala DSL routing error handling
 
 I've recently taken a lot of inspiration from a blog post titled [[http://blog.eigengo.com/blog_posts/akka-spray][Akka
 and Spray]] over at the Eigengo blog. It covers a lot of ground and
@@ -13,21 +14,25 @@ or a failure. If the user already exist, we want to return a 400 error,
 otherwise a 500 will do. Here's my exceptionHandler:
 
 #+BEGIN_SRC scala
-    implicit def exceptionHandler(implicit log: LoggingContext) =
-        ExceptionHandler {
-            case NotRegisteredException(_) => ctx =>
-                val err = Error("Email Already Registered")
-                log.warning("{} encountered while handling request: {}", err, ctx.request)
-                ctx.complete(StatusCodes.BadRequest, err)
-        }
+  implicit def exceptionHandler(
+    implicit log: LoggingContext) =
+    ExceptionHandler {
+      case NotRegisteredException(_) => ctx =>
+        val err = Error("Email Already Registered")
+        log.warning(
+          "{} encountered while handling request: {}",
+          err,
+          ctx.request)
+        ctx.complete(StatusCodes.BadRequest, err)
+    }
 #+END_SRC
 
 I initially used =mapTo[Try[User]]= in my service:
 
 #+BEGIN_SRC scala
-    complete {
-        (register ? req).mapTo[Try[User]]
-    }
+  complete {
+    (register ? req).mapTo[Try[User]]
+  }
 #+END_SRC
 
 This works, however, I don't like that I have to wrap responses from the
@@ -35,13 +40,13 @@ register actor in Success/Failure. And I /particularly/ don't like that
 I have to return an exception in the failure case:
 
 #+BEGIN_SRC scala
-    sender ! Success(User(...))
+  sender ! Success(User(...))
 #+END_SRC
 
 or
 
 #+BEGIN_SRC scala
-    sender ! Failure(NotRegisteredException(...))
+  sender ! Failure(NotRegisteredException(...))
 #+END_SRC
 
 You cannot simply ditch the =Success= and =Failure= wrappers and
@@ -51,26 +56,26 @@ exceptionHandler. However, I found I could use =collect= on the future
 to get the effect I want:
 
 #+BEGIN_SRC scala
-
-    complete {
-        (register ? req).collect {
-            case u : User => u
-            case NotRegistered => throw NotRegisteredException(req.email)
-        }
+  complete {
+    (register ? req).collect {
+      case u : User => u
+      case NotRegistered =>
+        throw NotRegisteredException(req.email)
     }
+  }
 #+END_SRC
 
 Now, in my register actor, I don't have to wrap my values and am free to
 do this:
 
 #+BEGIN_SRC scala
-    sender ! User(...)
+  sender ! User(...)
 #+END_SRC
 
 or
 
 #+BEGIN_SRC scala
-    sender ! NotRegistered
+  sender ! NotRegistered
 #+END_SRC
 
 It feels right to me that the register handler should not have to know

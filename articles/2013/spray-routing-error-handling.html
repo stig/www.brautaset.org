@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2017-06-10 Sat 21:59 -->
+<!-- 2017-06-19 Mon 13:19 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spray Routing Error Handling</title>
@@ -97,13 +97,17 @@ otherwise a 500 will do. Here's my exceptionHandler:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">implicit</span> <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">exceptionHandler</span>(<span style="font-weight: bold;">implicit</span> log<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">LoggingContext</span>) <span style="font-weight: bold;">=</span>
-    <span style="font-weight: bold; text-decoration: underline;">ExceptionHandler</span> {
-        <span style="font-weight: bold;">case</span> <span style="font-weight: bold; text-decoration: underline;">NotRegisteredException</span>(<span style="font-weight: bold;">_</span>) <span style="font-weight: bold;">=&gt;</span> ctx <span style="font-weight: bold;">=&gt;</span>
-            <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">err</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">Error</span>(<span style="font-style: italic;">"Email Already Registered"</span>)
-            log.warning(<span style="font-style: italic;">"{} encountered while handling request: {}"</span>, err, ctx.request)
-            ctx.complete(<span style="font-weight: bold; text-decoration: underline;">StatusCodes</span>.<span style="font-weight: bold; text-decoration: underline;">BadRequest</span>, err)
-    }
+<pre class="src src-scala"><span style="color: #B71C1C;">implicit</span> <span style="color: #00796b;">def</span> <span style="color: #0097A7;">exceptionHandler</span>(
+  <span style="color: #B71C1C;">implicit</span> log<span style="color: #00796b;">:</span> <span style="color: #0097A7;">LoggingContext</span>) <span style="color: #00796b;">=</span>
+  <span style="color: #558b2f;">ExceptionHandler</span> {
+    <span style="color: #00796b;">case</span> <span style="color: #0097A7;">NotRegisteredException</span>(<span style="color: #00796b;">_</span>) <span style="color: #00796b;">=&gt;</span> ctx <span style="color: #00796b;">=&gt;</span>
+      <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">err</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">Error</span>(<span style="color: #689f38;">"Email Already Registered"</span>)
+      log.warning(
+        <span style="color: #689f38;">"{} encountered while handling request: {}"</span>,
+        err,
+        ctx.request)
+      ctx.complete(<span style="color: #558b2f;">StatusCodes</span>.<span style="color: #558b2f;">BadRequest</span>, err)
+  }
 </pre>
 </div>
 
@@ -113,7 +117,7 @@ I initially used <code>mapTo[Try[User]]</code> in my service:
 
 <div class="org-src-container">
 <pre class="src src-scala">complete {
-    (register ? req).mapTo[<span style="font-weight: bold; text-decoration: underline;">Try</span>[<span style="font-weight: bold; text-decoration: underline;">User</span>]]
+  (register ? req).mapTo[<span style="color: #558b2f;">Try</span>[<span style="color: #558b2f;">User</span>]]
 }
 </pre>
 </div>
@@ -125,7 +129,7 @@ I have to return an exception in the failure case:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="font-weight: bold; text-decoration: underline;">Success</span>(<span style="font-weight: bold; text-decoration: underline;">User</span>(...))
+<pre class="src src-scala">sender ! <span style="color: #558b2f;">Success</span>(<span style="color: #558b2f;">User</span>(...))
 </pre>
 </div>
 
@@ -134,7 +138,7 @@ or
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="font-weight: bold; text-decoration: underline;">Failure</span>(<span style="font-weight: bold; text-decoration: underline;">NotRegisteredException</span>(...))
+<pre class="src src-scala">sender ! <span style="color: #558b2f;">Failure</span>(<span style="color: #558b2f;">NotRegisteredException</span>(...))
 </pre>
 </div>
 
@@ -148,10 +152,11 @@ to get the effect I want:
 
 <div class="org-src-container">
 <pre class="src src-scala">complete {
-    (register ? req).collect {
-        <span style="font-weight: bold;">case</span> <span style="font-weight: bold; font-style: italic;">u</span> <span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">User</span> <span style="font-weight: bold;">=&gt;</span> u
-        <span style="font-weight: bold;">case</span> <span style="font-weight: bold; text-decoration: underline;">NotRegistered</span> <span style="font-weight: bold;">=&gt;</span> <span style="font-weight: bold;">throw</span> <span style="font-weight: bold; text-decoration: underline;">NotRegisteredException</span>(req.email)
-    }
+  (register ? req).collect {
+    <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">u</span> <span style="color: #00796b;">:</span> <span style="color: #0097A7;">User</span> <span style="color: #00796b;">=&gt;</span> u
+    <span style="color: #00796b;">case</span> <span style="color: #558b2f;">NotRegistered</span> <span style="color: #00796b;">=&gt;</span>
+      <span style="color: #00796b;">throw</span> <span style="color: #558b2f;">NotRegisteredException</span>(req.email)
+  }
 }
 </pre>
 </div>
@@ -162,7 +167,7 @@ do this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="font-weight: bold; text-decoration: underline;">User</span>(...)
+<pre class="src src-scala">sender ! <span style="color: #558b2f;">User</span>(...)
 </pre>
 </div>
 
@@ -171,7 +176,7 @@ or
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="font-weight: bold; text-decoration: underline;">NotRegistered</span>
+<pre class="src src-scala">sender ! <span style="color: #558b2f;">NotRegistered</span>
 </pre>
 </div>
 
@@ -186,7 +191,7 @@ non-REST contexts.
 <div id="postamble" class="status">
 <p class="date">Date: 2013-08-05</p>
 <p class="author">Author: Stig Brautaset</p>
-<p class="date">Created: 2017-06-10 Sat 21:59</p>
+<p class="date">Created: 2017-06-19 Mon 13:19</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

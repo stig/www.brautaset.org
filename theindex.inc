@@ -119,6 +119,7 @@
   - [[file:articles/2014/smartphone-addiction.org][Smartphone Addition]]
   - Spray
     - [[file:articles/2014/spray-example.org][Complete Scala DSL Example]]
+    - [[file:articles/2013/spray-routing-error-handling.org][Scala DSL routing error handling]]
   - SQL
     - [[file:articles/2006/generating-bar-charts-with-sql.org][Generating Bar Charts]]
 * T
