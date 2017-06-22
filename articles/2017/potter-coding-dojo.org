@@ -478,6 +478,12 @@ potter.core> (time
 Alright! I think that will suffice. Now let's get to work on this
 solution.
 
+/Days later/
+
+Oh boy. I just came back from a very, very deep rabbit-hole. Rather
+than trying to detail the process, let's just skip straight to a tour
+of the result...
+
 ** A tour of my final solution
 
 Let's start with the basics. We need the ~clojure.math.combinatorics~
