@@ -19,6 +19,7 @@
     - [[file:articles/2014/optimising-http-cache-hit-rate.org][Maximising Hit Rates]]
   - Clojure
     - [[file:articles/2015/response-to-haskell-lisp-philosophical-differences.org][On this Lisp's non-difference from Haskell]]
+    - [[file:articles/2017/potter-coding-dojo.org][Potter Code Dojo]]
     - [[file:articles/2017/n-queens.org][Solving the N Queens problem]]
     - [[file:articles/2014/learning-clojure.org][Using it to solve Euler Problems]]
 * D

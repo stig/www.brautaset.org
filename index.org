@@ -10,6 +10,10 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+  - [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]] :: Detailing my trials and
+       tribulations with the "Potter" coding dojo problem, with code
+       examples in Clojure.
+
   - [[file:articles/2017/n-queens.org][N Queens in Clojure]] :: Solving the problem of putting N Queens on
        an /N/ by /N/ chess board without them being able to threaten
        eachother.
