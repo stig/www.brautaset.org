@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -108,21 +107,21 @@ only one tab, but here is the code I'm using now:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-apples"><span style="font-weight: bold;">on</span> <span style="font-weight: bold;">run</span> desiredColour
-    <span style="font-weight: bold;">if</span> length <span style="font-weight: bold; font-style: italic;">of</span> desiredColour<span style="font-weight: bold; text-decoration: underline;"> &gt; </span>0
-        <span style="font-weight: bold; font-style: italic;">set</span> <span style="font-weight: bold; font-style: italic;">colour</span> <span style="font-weight: bold; font-style: italic;">to</span> desiredColour
-    <span style="font-weight: bold;">else</span>
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">The RGB colour of the "Novel" profile I'm using;</span>
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">This is the default I want to get back to.</span>
-        <span style="font-weight: bold; font-style: italic;">set</span> <span style="font-weight: bold; font-style: italic;">colour</span> <span style="font-weight: bold; font-style: italic;">to</span> { 52007, 48990, 29970 }
-    <span style="font-weight: bold;">end</span>
+<pre class="src src-apples"><span style="color: #00796b;">on</span> <span style="color: #0097A7;">run</span> desiredColour
+    <span style="color: #00796b;">if</span> length <span style="color: #00796b; font-style: italic;">of</span> desiredColour<span style="color: #0097A7;"> &gt; </span>0
+        <span style="color: #00796b; font-style: italic;">set</span> <span style="color: #EF6C00;">colour</span> <span style="color: #00796b; font-style: italic;">to</span> desiredColour
+    <span style="color: #00796b;">else</span>
+        <span style="color: #607d8b;"># </span><span style="color: #607d8b;">The RGB colour of the "Novel" profile I'm using;</span>
+        <span style="color: #607d8b;"># </span><span style="color: #607d8b;">This is the default I want to get back to.</span>
+        <span style="color: #00796b; font-style: italic;">set</span> <span style="color: #EF6C00;">colour</span> <span style="color: #00796b; font-style: italic;">to</span> { 52007, 48990, 29970 }
+    <span style="color: #00796b;">end</span>
 
-   <span style="font-weight: bold;">tell</span> <span style="font-weight: bold;">application</span> <span style="font-style: italic;">"Terminal"</span>
-        <span style="font-weight: bold;">tell</span> selected tab <span style="font-weight: bold; font-style: italic;">of</span> <span style="font-weight: bold; font-style: italic;">front</span> window
-          <span style="font-weight: bold; font-style: italic;">set</span> background color <span style="font-weight: bold; font-style: italic;">to</span> colour
-     <span style="font-weight: bold;">end</span> <span style="font-weight: bold;">tell</span>
-  <span style="font-weight: bold;">end</span> <span style="font-weight: bold;">tell</span>
-<span style="font-weight: bold;">end</span> <span style="font-weight: bold; font-style: italic;">run</span>
+   <span style="color: #00796b;">tell</span> <span style="color: #00796b;">application</span> <span style="color: #689f38;">"Terminal"</span>
+        <span style="color: #00796b;">tell</span> selected tab <span style="color: #00796b; font-style: italic;">of</span> <span style="color: #00796b; font-style: italic;">front</span> window
+          <span style="color: #00796b; font-style: italic;">set</span> background color <span style="color: #00796b; font-style: italic;">to</span> colour
+     <span style="color: #00796b;">end</span> <span style="color: #00796b;">tell</span>
+  <span style="color: #00796b;">end</span> <span style="color: #00796b;">tell</span>
+<span style="color: #00796b;">end</span> <span style="color: #00796b; font-style: italic;">run</span>
 </pre>
 </div>
 
@@ -173,10 +172,10 @@ following in <code>~/.config/fish/functions/ssh.fish</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-fish"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">ssh</span> --description <span style="font-style: italic;">'wrapper around ssh to reset term colours after exit'</span>
-        <span style="font-weight: bold;">/usr/bin/ssh</span> <span style="font-style: italic;">$</span><span style="font-weight: bold; font-style: italic;">argv</span>
-        <span style="font-weight: bold;">osascript</span> ~/Dotfiles/termcolours.scpt
-<span style="font-weight: bold;">end</span>
+<pre class="src src-fish"><span style="color: #00796b;">function</span> <span style="color: #0097A7;">ssh</span> <span style="color: #2196f3;">--description</span> <span style="color: #689f38;">'wrapper around ssh to reset term colours after exit'</span>
+        <span style="color: #B71C1C;">/usr/bin/ssh</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">argv</span>
+        <span style="color: #B71C1C;">osascript</span> ~/Dotfiles/termcolours.scpt
+<span style="color: #00796b;">end</span>
 </pre>
 </div>
 
@@ -185,8 +184,8 @@ And there you have it!
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2016-09-09</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

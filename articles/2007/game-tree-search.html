@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -102,10 +101,10 @@ MiniMax algorithm and its AlphaBeta pruning optimisation.
 <h2>List of Listings</h2>
 <div id="text-list-of-listings">
 <ul>
-<li><a href="#org99acc3e"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
-<li><a href="#orgd05e81c"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
-<li><a href="#org9ebe9c7"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
-<li><a href="#org2818485"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
+<li><a href="#org4bf760a"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
+<li><a href="#org3024982"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
+<li><a href="#org2e8cf92"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
+<li><a href="#org94b3312"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
 </ul>
 </div>
 </div>
@@ -147,8 +146,8 @@ alpha-beta pruning improves on it. This article tries to explain how
 both works.
 </p>
 
-<div id="outline-container-org7ada332" class="outline-2">
-<h2 id="the-minimax-algorithm"><a id="org7ada332"></a>The Minimax algorithm</h2>
+<div id="outline-container-orgf2ddc6c" class="outline-2">
+<h2 id="the-minimax-algorithm"><a id="orgf2ddc6c"></a>The Minimax algorithm</h2>
 <div class="outline-text-2" id="text-the-minimax-algorithm">
 <p>
 Let us use Tic-Tac-Toe as an example when explaining how the Minimax
@@ -192,20 +191,20 @@ normally implemented.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="org99acc3e">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
-  <span style="font-weight: bold;">if</span> ([state isEndOfGame])
-    <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="org4bf760a">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
+  <span style="color: #00796b;">if</span> ([state isEndOfGame])
+    <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
 
-  <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">score</span> = -1; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">value for loss</span>
-  <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
-  <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">enumerator</span> = [moves objectEnumerator];
-  <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">m</span>; m = [enumerator nextObjnextObject]; ) {
-    <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">s2</span> = [state successorStateWithMove:m];
-    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">sc</span> = -[<span style="font-weight: bold;">self</span> minimaxWithState:s2 player:3 - player];
-    <span style="font-weight: bold;">if</span> (sc &gt; score)
+  <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">score</span> = -1; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">value for loss</span>
+  <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];
+  <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">enumerator</span> = [moves objectEnumerator];
+  <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">m</span>; m = [enumerator nextObjnextObject]; ) {
+    <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">s2</span> = [state successorStateWithMove:m];
+    <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">sc</span> = -[<span style="color: #00796b;">self</span> minimaxWithState:s2 player:3 - player];
+    <span style="color: #00796b;">if</span> (sc &gt; score)
       score = sc;
   }
-  <span style="font-weight: bold;">return</span> score;
+  <span style="color: #00796b;">return</span> score;
 }
 </pre>
 </div>
@@ -220,28 +219,28 @@ can later apply it to advance the game.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="orgd05e81c">-(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold;">minimaxRootWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> {
-  <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">bestmove</span> = <span style="font-weight: bold; text-decoration: underline;">nil</span>;
-  <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">score</span> = -1; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">value for</span>
-  loss <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
-  <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">enumerator</span> = [moves objectEnumerator];
-  <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">m</span>; m = [enumerator nextObject]; ) {
-    <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">s2</span> = [state successorStateWithMove:m];
-    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">sc</span> = -[<span style="font-weight: bold;">self</span> minimaxWithState:s2 player:3 - player];
-    <span style="font-weight: bold;">if</span> (sc &gt; score) {
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="org3024982">-(<span style="color: #0097A7;">id</span>)<span style="color: #0097A7;">minimaxRootWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
+  <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">bestmove</span> = <span style="color: #558b2f;">nil</span>;
+  <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">score</span> = -1; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">value for</span>
+  loss <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];
+  <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">enumerator</span> = [moves objectEnumerator];
+  <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">m</span>; m = [enumerator nextObject]; ) {
+    <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">s2</span> = [state successorStateWithMove:m];
+    <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">sc</span> = -[<span style="color: #00796b;">self</span> minimaxWithState:s2 player:3 - player];
+    <span style="color: #00796b;">if</span> (sc &gt; score) {
       bestmove = m;
       score = sc;
     }
   }
-  <span style="font-weight: bold;">return</span> bestmove;
+  <span style="color: #00796b;">return</span> bestmove;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7569821" class="outline-2">
-<h2 id="depth-limited-minimax"><a id="org7569821"></a>Depth-limited Minimax</h2>
+<div id="outline-container-org7ea0db4" class="outline-2">
+<h2 id="depth-limited-minimax"><a id="org7ea0db4"></a>Depth-limited Minimax</h2>
 <div class="outline-text-2" id="text-depth-limited-minimax">
 <p>
 Only when the search space is sufficiently small, like in our
@@ -264,19 +263,19 @@ Notice that the initial value for score has changed.
 
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org9ebe9c7">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">minimaxWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> {
-  <span style="font-weight: bold;">if</span> (!ply || [state isEndOfGame])
-    <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
-  <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">score</span> = -1000; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">value for loss</span>
-  <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
-  <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">enumerator</span> = [moves objectEnumerator];
-  <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">m</span>; m = [enumerator nextObject]; ) {
-    <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">s2</span> = [state successorStateWithMove:m];
-    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">sc</span> = -[<span style="font-weight: bold;">self</span> minimaxWithState:s2 player:3 - player];
-    <span style="font-weight: bold;">if</span> (sc &gt; score)
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org2e8cf92">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> {
+  <span style="color: #00796b;">if</span> (<span style="color: #2196f3;">!</span>ply || [state isEndOfGame])
+    <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
+  <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">score</span> = -1000; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">value for loss</span>
+  <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];
+  <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">enumerator</span> = [moves objectEnumerator];
+  <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">m</span>; m = [enumerator nextObject]; ) {
+    <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">s2</span> = [state successorStateWithMove:m];
+    <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">sc</span> = -[<span style="color: #00796b;">self</span> minimaxWithState:s2 player:3 - player];
+    <span style="color: #00796b;">if</span> (sc &gt; score)
       score = sc;
   }
-  <span style="font-weight: bold;">return</span> score;
+  <span style="color: #00796b;">return</span> score;
 }
 </pre>
 </div>
@@ -295,8 +294,8 @@ evaluation function identifies strong states.
 </div>
 </div>
 
-<div id="outline-container-org1fc0117" class="outline-2">
-<h2 id="alpha-beta-pruning"><a id="org1fc0117"></a>Alpha-Beta pruning</h2>
+<div id="outline-container-org97d7ec5" class="outline-2">
+<h2 id="alpha-beta-pruning"><a id="org97d7ec5"></a>Alpha-Beta pruning</h2>
 <div class="outline-text-2" id="text-alpha-beta-pruning">
 <p>
 In the late 50s it was realised that it was not necessary to visit all
@@ -321,24 +320,24 @@ bound, the path is pruned. Here's an example:
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="org2818485">-(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold;">alphaBetaWithState</span>:(<span style="font-weight: bold; text-decoration: underline;">id</span>)<span style="font-weight: bold; font-style: italic;">state</span> <span style="font-weight: bold;">player</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">player</span> <span style="font-weight: bold;">ply</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">ply</span> <span style="font-weight: bold;">alpha</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">alpha</span> <span style="font-weight: bold;">beta</span>:(<span style="font-weight: bold; text-decoration: underline;">int</span>)<span style="font-weight: bold; font-style: italic;">beta</span> {
-  <span style="font-weight: bold;">if</span> (!ply || [state isEndOfGame])
-    <span style="font-weight: bold;">return</span> [state evaluateWithPlayer:player];
-  <span style="font-weight: bold; text-decoration: underline;">NSArray</span> *<span style="font-weight: bold; font-style: italic;">moves</span> = [state movesAvailable];
-  <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">enumerator</span> = [moves objectEnumerator];
-  <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">m</span>; m = [enumerator nextObject]; ) {
-    <span style="font-weight: bold; text-decoration: underline;">id</span> <span style="font-weight: bold; font-style: italic;">s2</span> = [state successorStateWithMove:m];
-    <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">sc</span> = -[<span style="font-weight: bold;">self</span> alphaBetaWithState:s2
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="org94b3312">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">alphaBetaWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> <span style="color: #0097A7;">alpha</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">alpha</span> <span style="color: #0097A7;">beta</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">beta</span> {
+  <span style="color: #00796b;">if</span> (<span style="color: #2196f3;">!</span>ply || [state isEndOfGame])
+    <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
+  <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];
+  <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">enumerator</span> = [moves objectEnumerator];
+  <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">m</span>; m = [enumerator nextObject]; ) {
+    <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">s2</span> = [state successorStateWithMove:m];
+    <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">sc</span> = -[<span style="color: #00796b;">self</span> alphaBetaWithState:s2
                                 player:3 - player
                                    ply:ply-1
                                  alpha:-beta
                                   beta:-alpha];
-    <span style="font-weight: bold;">if</span> (sc &gt; alpha)
+    <span style="color: #00796b;">if</span> (sc &gt; alpha)
       alpha = sc;
-    <span style="font-weight: bold;">if</span> (alpha &gt;= beta)
-      <span style="font-weight: bold;">break</span>; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">prune branch.</span>
+    <span style="color: #00796b;">if</span> (alpha &gt;= beta)
+      <span style="color: #00796b;">break</span>; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">prune branch.</span>
   }
-  <span style="font-weight: bold;">return</span> alpha;
+  <span style="color: #00796b;">return</span> alpha;
 }
 </pre>
 </div>
@@ -359,8 +358,8 @@ timespan.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2007-08-17</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

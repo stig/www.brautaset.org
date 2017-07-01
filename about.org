@@ -17,20 +17,3 @@ though in March 2015 I moved from bustling London to rural
 If you want more details, I suggest reading the transcript of my
 [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]] where I talked for 45 minutes about my
 education and career.
-
-* Presences on the web
-
-I have accounts on more sites than I can remember. Most are in varying
-states of lacking attention. Here are some:
-
-- [[https://github.com/stig][GitHub]]
-- [[http://twitter.com/stigbra][Twitter]]
-- [[http://uk.linkedin.com/in/stigbrautaset][LinkedIn]]
-- [[https://www.ohloh.net/accounts/stigbra][Ohloh]]
-
-* Contacting Me
-
-Unless you already have my phone number, I suggest trying one of:
-
-- http://twitter.com/stigbra
-- stig@brautaset.org

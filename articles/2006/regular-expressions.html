@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -96,7 +95,7 @@ running it:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="font-style: italic;">'(.)\1(.)\2(.)\3'</span> /usr/share/dict/words
+<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1(.)\2(.)\3'</span> /usr/share/dict/words
 </pre>
 </div>
 
@@ -116,7 +115,7 @@ have to be consecutive? That's easy enough to check, so let's do that:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="font-style: italic;">'(.)\1.*(.)\2.*(.)\3'</span> /usr/share/dict/words | wc -l
+<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3'</span> /usr/share/dict/words | wc -l
 </pre>
 </div>
 
@@ -131,7 +130,7 @@ them? (Non consecutive?)
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="font-style: italic;">'(.)\1.*(.)\2.*(.)\3.*(.)\4'</span> /usr/share/dict/words
+<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3.*(.)\4'</span> /usr/share/dict/words
 </pre>
 </div>
 
@@ -148,8 +147,8 @@ Those sure are some funny words&#x2026;
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2006-07-19</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

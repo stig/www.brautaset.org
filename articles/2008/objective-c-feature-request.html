@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -127,14 +126,14 @@ hunt for a particularly egregious example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="font-weight: bold; text-decoration: underline;">NSDictionary</span> *<span style="font-weight: bold; font-style: italic;">userInfo</span> = [<span style="font-weight: bold; text-decoration: underline;">NSDictionary</span> dictionaryWithObjectsAndKeys:
-    [<span style="font-weight: bold; text-decoration: underline;">NSValue</span> valueWithPointer:SecKeychainLockAll],
+<pre class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithObjectsAndKeys:
+    [<span style="color: #0097A7;">NSValue</span> valueWithPointer:SecKeychainLockAll],
         AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTION,
-    @<span style="font-style: italic;">"SecKeychainLockAll"</span>,
+    @<span style="color: #689f38;">"SecKeychainLockAll"</span>,
         AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTIONNAME,
     AI_LOCALIZED_SECURITY_ERROR_DESCRIPTION(err),
         AIKEYCHAIN_ERROR_USERINFO_ERRORDESCRIPTION,
-    <span style="font-weight: bold; text-decoration: underline;">nil</span>];
+    <span style="color: #558b2f;">nil</span>];
 </pre>
 </div>
 
@@ -143,14 +142,14 @@ Doesn't that make a lot more sense like this?
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="font-weight: bold; text-decoration: underline;">NSDictionary</span> *<span style="font-weight: bold; font-style: italic;">userInfo</span> = [<span style="font-weight: bold; text-decoration: underline;">NSDictionary</span> dictionaryWithKeysAndObjects:
+<pre class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithKeysAndObjects:
     AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTION,
-        [<span style="font-weight: bold; text-decoration: underline;">NSValue</span> valueWithPointer:SecKeychainLockAll],
+        [<span style="color: #0097A7;">NSValue</span> valueWithPointer:SecKeychainLockAll],
     AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTIONNAME,
-        @<span style="font-style: italic;">"SecKeychainLockAll"</span>,
+        @<span style="color: #689f38;">"SecKeychainLockAll"</span>,
     AIKEYCHAIN_ERROR_USERINFO_ERRORDESCRIPTION,
         AI_LOCALIZED_SECURITY_ERROR_DESCRIPTION(err),
-    <span style="font-weight: bold; text-decoration: underline;">nil</span>];
+    <span style="color: #558b2f;">nil</span>];
 </pre>
 </div>
 
@@ -163,8 +162,8 @@ hoping that they honour it and put it in Snow Leopard&#x2026;
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2008-08-23</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

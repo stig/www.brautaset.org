@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -89,8 +88,8 @@ parameter, this is simple. But what if it does not?
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">foo</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">TestProbe</span>()
-<span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">act</span> <span style="font-weight: bold;">=</span> system.actorOf(<span style="font-weight: bold; text-decoration: underline;">Props</span>(<span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span>(foo.ref)))
+<pre class="src src-scala"><span style="color: #00796b;">val</span> <span style="color: #EF6C00;">foo</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">TestProbe</span>()
+<span style="color: #00796b;">val</span> <span style="color: #EF6C00;">act</span> <span style="color: #00796b;">=</span> system.actorOf(<span style="color: #558b2f;">Props</span>(<span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span>(foo.ref)))
 </pre>
 </div>
 
@@ -102,25 +101,25 @@ setup from my (admittedly rather limited) experience with Akka so far:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
-  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span><span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span>
+<pre class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">ChildrenProvider</span> {
+  <span style="color: #00796b;">def</span> <span style="color: #0097A7;">newFoo</span><span style="color: #00796b;">:</span> <span style="color: #0097A7;">Actor</span>
 }
 
-<span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span>
-    <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
-  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Foo</span>
+<span style="color: #00796b;">trait</span> <span style="color: #0097A7;">ProductionChildrenProvider</span>
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">ChildrenProvider</span> {
+  <span style="color: #00796b;">def</span> <span style="color: #0097A7;">newFoo</span> <span style="color: #00796b;">=</span> <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Foo</span>
 }
 
-<span style="font-weight: bold;">object</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> {
-  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">apply</span>() <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">ProductionChildrenProvider</span>
+<span style="color: #00796b;">object</span> <span style="color: #558b2f;">Bar</span> {
+  <span style="color: #00796b;">def</span> <span style="color: #0097A7;">apply</span>() <span style="color: #00796b;">=</span> <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span> <span style="color: #00796b;">with</span> <span style="color: #0097A7;">ProductionChildrenProvider</span>
 }
 
-<span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
-  <span style="font-weight: bold;">this:</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> <span style="font-weight: bold;">=&gt;</span>
-  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">router</span> <span style="font-weight: bold;">=</span> context.actorOf(
-    <span style="font-weight: bold; text-decoration: underline;">Props</span>(newFoo).withRouter(<span style="font-weight: bold; text-decoration: underline;">FromConfig</span>()))
-  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
-    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">...</span>
+<span style="color: #00796b;">class</span> <span style="color: #0097A7;">Bar</span> <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Actor</span> {
+  <span style="color: #00796b;">this:</span> <span style="color: #0097A7;">ChildrenProvider</span> <span style="color: #00796b;">=&gt;</span>
+  <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">router</span> <span style="color: #00796b;">=</span> context.actorOf(
+    <span style="color: #558b2f;">Props</span>(newFoo).withRouter(<span style="color: #558b2f;">FromConfig</span>()))
+  <span style="color: #00796b;">def</span> <span style="color: #0097A7;">receive</span> <span style="color: #00796b;">=</span> {
+    <span style="color: #607d8b;">// </span><span style="color: #607d8b;">...</span>
   }
 }
 </pre>
@@ -149,21 +148,21 @@ parameter:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(target<span style="font-weight: bold;">:</span> <span style="font-weight: bold; text-decoration: underline;">ActorRef</span>)
-    <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">Actor</span> {
-  <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">receive</span> <span style="font-weight: bold;">=</span> {
-    <span style="font-weight: bold;">case</span> <span style="font-weight: bold; font-style: italic;">x</span> <span style="font-weight: bold;">=&gt;</span> target forward x
+<pre class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">Wrapper</span>(target<span style="color: #00796b;">:</span> <span style="color: #0097A7;">ActorRef</span>)
+    <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Actor</span> {
+  <span style="color: #00796b;">def</span> <span style="color: #0097A7;">receive</span> <span style="color: #00796b;">=</span> {
+    <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">x</span> <span style="color: #00796b;">=&gt;</span> target forward x
   }
 }
 
-<span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
-  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">probe</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold; text-decoration: underline;">TestProbe</span>()
-  <span style="font-weight: bold;">trait</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>
-      <span style="font-weight: bold;">extends</span> <span style="font-weight: bold; text-decoration: underline;">ChildrenProvider</span> {
-    <span style="font-weight: bold;">def</span> <span style="font-weight: bold;">newFoo</span> <span style="font-weight: bold;">=</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Wrapper</span>(probe.ref)
+<span style="color: #00796b;">trait</span> <span style="color: #0097A7;">TestCase</span> {
+  <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">probe</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">TestProbe</span>()
+  <span style="color: #00796b;">trait</span> <span style="color: #0097A7;">TestChildrenProvider</span>
+      <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">ChildrenProvider</span> {
+    <span style="color: #00796b;">def</span> <span style="color: #0097A7;">newFoo</span> <span style="color: #00796b;">=</span> <span style="color: #00796b;">new</span> <span style="color: #0097A7;">Wrapper</span>(probe.ref)
   }
-  <span style="font-weight: bold;">val</span> <span style="font-weight: bold; font-style: italic;">actor</span> <span style="font-weight: bold;">=</span> context.actorOf(
-    <span style="font-weight: bold; text-decoration: underline;">Props</span>(<span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bar</span> <span style="font-weight: bold;">with</span> <span style="font-weight: bold; text-decoration: underline;">TestChildrenProvider</span>))
+  <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">actor</span> <span style="color: #00796b;">=</span> context.actorOf(
+    <span style="color: #558b2f;">Props</span>(<span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span> <span style="color: #00796b;">with</span> <span style="color: #0097A7;">TestChildrenProvider</span>))
 }
 </pre>
 </div>
@@ -174,13 +173,13 @@ so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="font-style: italic;">"Bar"</span> should {
-  <span style="font-style: italic;">"involve child in doing something"</span>
-  in <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">TestCase</span> {
-    actor ! <span style="font-style: italic;">"SomeMessage"</span>
-    probe.expectMsg(<span style="font-style: italic;">"MessageToChild"</span>)
-    probe.reply(<span style="font-style: italic;">"ReplyFromChild"</span>)
-    expectMsg(<span style="font-style: italic;">"ReplyFromParent"</span>)
+<pre class="src src-scala"><span style="color: #689f38;">"Bar"</span> should {
+  <span style="color: #689f38;">"involve child in doing something"</span>
+  in <span style="color: #00796b;">new</span> <span style="color: #0097A7;">TestCase</span> {
+    actor ! <span style="color: #689f38;">"SomeMessage"</span>
+    probe.expectMsg(<span style="color: #689f38;">"MessageToChild"</span>)
+    probe.reply(<span style="color: #689f38;">"ReplyFromChild"</span>)
+    expectMsg(<span style="color: #689f38;">"ReplyFromParent"</span>)
   }
 }
 </pre>
@@ -196,8 +195,8 @@ OK in tests.)
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2013-03-24</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

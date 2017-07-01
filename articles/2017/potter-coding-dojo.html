@@ -93,11 +93,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -140,26 +139,26 @@ deep and I have found myself thinking about it a lot since.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgafa3e2d">A Warning</a></li>
-<li><a href="#orgcd89bbb">The Problem</a></li>
-<li><a href="#org88bd8f3">Towards a (simplistic) solution</a></li>
-<li><a href="#org8663b78">Finding a solution <i>at all</i> for large purchases</a></li>
-<li><a href="#org19da77f">Actually passing tests for edge cases</a></li>
-<li><a href="#orge67e95e">Towards a moderately fast, correct &amp; <i>robust</i> solution</a>
+<li><a href="#org80554ef">A Warning</a></li>
+<li><a href="#orgff70d2a">The Problem</a></li>
+<li><a href="#org4b5e548">Towards a (simplistic) solution</a></li>
+<li><a href="#org985c269">Finding a solution <i>at all</i> for large purchases</a></li>
+<li><a href="#org75fe3b4">Actually passing tests for edge cases</a></li>
+<li><a href="#org9e44abe">Towards a moderately fast, correct &amp; <i>robust</i> solution</a>
 <ul>
-<li><a href="#org8ca02a9">Experimenting in a Clojure REPL</a></li>
-<li><a href="#org350077d">A tour of my final solution</a></li>
-<li><a href="#org1821e55">Potential Improvements</a></li>
+<li><a href="#org6c4475e">Experimenting in a Clojure REPL</a></li>
+<li><a href="#org26f3e56">A tour of my final solution</a></li>
+<li><a href="#org7625978">Potential Improvements</a></li>
 </ul>
 </li>
-<li><a href="#org6ce0313">Epilogue</a></li>
+<li><a href="#org84ae322">Epilogue</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgafa3e2d" class="outline-2">
-<h2 id="orgafa3e2d">A Warning</h2>
-<div class="outline-text-2" id="text-orgafa3e2d">
+<div id="outline-container-org80554ef" class="outline-2">
+<h2 id="org80554ef">A Warning</h2>
+<div class="outline-text-2" id="text-org80554ef">
 <p>
 If you are considering doing this Coding Dojo yourself, you may want
 to postpone reading this until you do because it provides not one but
@@ -168,9 +167,9 @@ to postpone reading this until you do because it provides not one but
 </div>
 </div>
 
-<div id="outline-container-orgcd89bbb" class="outline-2">
-<h2 id="orgcd89bbb">The Problem</h2>
-<div class="outline-text-2" id="text-orgcd89bbb">
+<div id="outline-container-orgff70d2a" class="outline-2">
+<h2 id="orgff70d2a">The Problem</h2>
+<div class="outline-text-2" id="text-orgff70d2a">
 <p>
 (Paraphrased by yours truly; the original is over at <a href="http://codingdojo.org/kata/Potter/">codingdojo</a>.)
 </p>
@@ -277,9 +276,9 @@ cheapest.
 </div>
 </div>
 
-<div id="outline-container-org88bd8f3" class="outline-2">
-<h2 id="org88bd8f3">Towards a (simplistic) solution</h2>
-<div class="outline-text-2" id="text-org88bd8f3">
+<div id="outline-container-org4b5e548" class="outline-2">
+<h2 id="org4b5e548">Towards a (simplistic) solution</h2>
+<div class="outline-text-2" id="text-org4b5e548">
 <p>
 I immediately thought that this was a combinatorial problem scoured
 Clojure's collections library for suitable combinatorial operators. I
@@ -487,9 +486,9 @@ It's time to try a different approach.
 </div>
 </div>
 
-<div id="outline-container-org8663b78" class="outline-2">
-<h2 id="org8663b78">Finding a solution <i>at all</i> for large purchases</h2>
-<div class="outline-text-2" id="text-org8663b78">
+<div id="outline-container-org985c269" class="outline-2">
+<h2 id="org985c269">Finding a solution <i>at all</i> for large purchases</h2>
+<div class="outline-text-2" id="text-org985c269">
 <p>
 Although the simple solution works for small numbers of books, it is
 impractical for larger stacks of books. I felt that it might be
@@ -537,9 +536,9 @@ it does not find <i>the best</i> price for the final edge case.
 </div>
 </div>
 
-<div id="outline-container-org19da77f" class="outline-2">
-<h2 id="org19da77f">Actually passing tests for edge cases</h2>
-<div class="outline-text-2" id="text-org19da77f">
+<div id="outline-container-org75fe3b4" class="outline-2">
+<h2 id="org75fe3b4">Actually passing tests for edge cases</h2>
+<div class="outline-text-2" id="text-org75fe3b4">
 <p>
 My fast solution eagerly tries to build as big partitions as possible
 from the remaining books. So if you have the following: 1 1 2 2 3 3 4
@@ -649,9 +648,9 @@ function may start to exhibit weird behaviour.
 </div>
 </div>
 
-<div id="outline-container-orge67e95e" class="outline-2">
-<h2 id="orge67e95e">Towards a moderately fast, correct &amp; <i>robust</i> solution</h2>
-<div class="outline-text-2" id="text-orge67e95e">
+<div id="outline-container-org9e44abe" class="outline-2">
+<h2 id="org9e44abe">Towards a moderately fast, correct &amp; <i>robust</i> solution</h2>
+<div class="outline-text-2" id="text-org9e44abe">
 <p>
 Michelle tried to show me how to solve the problem using <i>Maths</i> but
 kept on being distracted from reaching a solution by my questions
@@ -691,9 +690,9 @@ these sets.
 </p>
 </div>
 
-<div id="outline-container-org8ca02a9" class="outline-3">
-<h3 id="org8ca02a9">Experimenting in a Clojure REPL</h3>
-<div class="outline-text-3" id="text-org8ca02a9">
+<div id="outline-container-org6c4475e" class="outline-3">
+<h3 id="org6c4475e">Experimenting in a Clojure REPL</h3>
+<div class="outline-text-3" id="text-org6c4475e">
 <p>
 I still think that <code>combo/partitions</code> can help me find all the different
 <i>shapes</i> or partitions, with a bit of creative management of its input,
@@ -793,9 +792,9 @@ of the result&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org350077d" class="outline-3">
-<h3 id="org350077d">A tour of my final solution</h3>
-<div class="outline-text-3" id="text-org350077d">
+<div id="outline-container-org26f3e56" class="outline-3">
+<h3 id="org26f3e56">A tour of my final solution</h3>
+<div class="outline-text-3" id="text-org26f3e56">
 <p>
 Let's start with the basics. We need the <code>clojure.math.combinatorics</code>
 package, so let's import that. And let's define our book price too.
@@ -1024,9 +1023,9 @@ there.
 </div>
 </div>
 
-<div id="outline-container-org1821e55" class="outline-3">
-<h3 id="org1821e55">Potential Improvements</h3>
-<div class="outline-text-3" id="text-org1821e55">
+<div id="outline-container-org7625978" class="outline-3">
+<h3 id="org7625978">Potential Improvements</h3>
+<div class="outline-text-3" id="text-org7625978">
 <p>
 This is fast enough, correct enough, and robust enough that I don't
 feel like spending any more time on it. However, if I <i>were</i> to make it
@@ -1047,9 +1046,9 @@ the same arguments, so it might benefit from memoization.</li>
 </div>
 </div>
 
-<div id="outline-container-org6ce0313" class="outline-2">
-<h2 id="org6ce0313">Epilogue</h2>
-<div class="outline-text-2" id="text-org6ce0313">
+<div id="outline-container-org84ae322" class="outline-2">
+<h2 id="org84ae322">Epilogue</h2>
+<div class="outline-text-2" id="text-org84ae322">
 <p>
 If you want to get into more details and play with this code yourself
 you might find it easier to check out my <a href="https://github.com/stig/coding-dojo">coding-dojo repo</a> rather than
@@ -1064,7 +1063,7 @@ you are who came up with this exercise :-)
 </p>
 </div>
 </div>
-<div id='footnotes'><!--Footnotes-->
+<div id="footnotes"><!--Footnotes-->
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 There are several configurations this discount could apply,
 e.g. ((1 + 2) (3)), ((1) (2 + 3)), ((1 + 3) (2)).
@@ -1092,8 +1091,8 @@ it.
 
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Date: 2017-06-22</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -117,55 +116,55 @@ gray grid on a pleasant blue background:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc">- (<span style="font-weight: bold; text-decoration: underline;">void</span>)<span style="font-weight: bold;">awakeFromNib</span> {
-  <span style="font-weight: bold;">self</span>.wantsLayer = <span style="font-weight: bold; text-decoration: underline;">YES</span>;
-  <span style="font-weight: bold; text-decoration: underline;">CALayer</span> *<span style="font-weight: bold; font-style: italic;">grid</span> = <span style="font-weight: bold;">self</span>.layer;
+<pre class="src src-objc">- (<span style="color: #0097A7;">void</span>)<span style="color: #0097A7;">awakeFromNib</span> {
+  <span style="color: #00796b;">self</span>.wantsLayer = <span style="color: #558b2f;">YES</span>;
+  <span style="color: #0097A7;">CALayer</span> *<span style="color: #EF6C00;">grid</span> = <span style="color: #00796b;">self</span>.layer;
 
   grid.backgroundColor = CGColorCreateGenericRGB(0.1, 0.1, 0.4, .8);
-  grid.layoutManager = [<span style="font-weight: bold; text-decoration: underline;">CAConstraintLayoutManager</span> layoutManager];
+  grid.layoutManager = [<span style="color: #0097A7;">CAConstraintLayoutManager</span> layoutManager];
 
-  <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">rows</span> = 8;
-  <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">columns</span> = 8;
+  <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">rows</span> = 8;
+  <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">columns</span> = 8;
 
-  <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">r</span> = 0; r &lt; rows; r++) {
-    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">c</span> = 0; c &lt; columns; c++) {
-      <span style="font-weight: bold; text-decoration: underline;">CALayer</span> *<span style="font-weight: bold; font-style: italic;">cell</span> = [<span style="font-weight: bold; text-decoration: underline;">CALayer</span> layer];
+  <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">r</span> = 0; r &lt; rows; r++) {
+    <span style="color: #00796b;">for</span> (<span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">c</span> = 0; c &lt; columns; c++) {
+      <span style="color: #0097A7;">CALayer</span> *<span style="color: #EF6C00;">cell</span> = [<span style="color: #0097A7;">CALayer</span> layer];
       cell.borderColor = CGColorCreateGenericGray(0.8, 0.8);
       cell.borderWidth = 1;
       cell.cornerRadius = 4;
-      cell.name = [<span style="font-weight: bold; text-decoration: underline;">NSString</span> stringWithFormat:@<span style="font-style: italic;">"%u@%u"</span>, c, r];
+      cell.name = [<span style="color: #0097A7;">NSString</span> stringWithFormat:@<span style="color: #689f38;">"%u@%u"</span>, c, r];
 
       [cell addConstraint:
-              [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+              [<span style="color: #0097A7;">CAConstraint</span>
                 constraintWithAttribute: kCAConstraintWidth
-                             relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                             relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                               attribute: kCAConstraintWidth
                                   scale: 1.0 / columns
                                  offset: 0]];
 
       [cell addConstraint:
-              [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+              [<span style="color: #0097A7;">CAConstraint</span>
                 constraintWithAttribute: kCAConstraintHeight
-                             relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                             relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                               attribute: kCAConstraintHeight
                                   scale: 1.0 / rows
                                  offset: 0]];
 
       [cell addConstraint:
-              [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+              [<span style="color: #0097A7;">CAConstraint</span>
                 constraintWithAttribute: kCAConstraintMinX
-                             relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                             relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                               attribute: kCAConstraintMaxX
-                                  scale: c / (<span style="font-weight: bold; text-decoration: underline;">float</span>)<span style="font-weight: bold; text-decoration: underline;">columns</span>
-                                 <span style="font-weight: bold; font-style: italic;">offset</span>: 0]];
+                                  scale: c / (<span style="color: #0097A7;">float</span>)<span style="color: #0097A7;">columns</span>
+                                 <span style="color: #EF6C00;">offset</span>: 0]];
 
       [cell addConstraint:
-              [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+              [<span style="color: #0097A7;">CAConstraint</span>
                 constraintWithAttribute: kCAConstraintMinY
-                             relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                             relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                               attribute: kCAConstraintMaxY
-                                  scale: r / (<span style="font-weight: bold; text-decoration: underline;">float</span>)<span style="font-weight: bold; text-decoration: underline;">rows</span>
-                                 <span style="font-weight: bold; font-style: italic;">offset</span>: 0]];
+                                  scale: r / (<span style="color: #0097A7;">float</span>)<span style="color: #0097A7;">rows</span>
+                                 <span style="color: #EF6C00;">offset</span>: 0]];
 
       [grid addSublayer:cell];
     }
@@ -194,41 +193,41 @@ adding the 0.5 to c &amp; r in the scale:
 
 <div class="org-src-container">
 <pre class="src src-objc">[cell addConstraint:
-        [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+        [<span style="color: #0097A7;">CAConstraint</span>
           constraintWithAttribute: kCAConstraintWidth
-                       relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                       relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                         attribute: kCAConstraintWidth
                             scale: 1.0 / columns offset: -2]];
 
 [cell addConstraint:
-        [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+        [<span style="color: #0097A7;">CAConstraint</span>
           constraintWithAttribute: kCAConstraintHeight
-                       relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                       relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                         attribute: kCAConstraintHeight
                             scale: 1.0 / rows
                            offset: -2]];
 
 [cell addConstraint:
-        [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+        [<span style="color: #0097A7;">CAConstraint</span>
           constraintWithAttribute: kCAConstraintMidX
-                       relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                       relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                         attribute: kCAConstraintMaxX
-                            scale: (c + 0.5) / (<span style="font-weight: bold; text-decoration: underline;">float</span>)<span style="font-weight: bold; text-decoration: underline;">columns</span>
-                           <span style="font-weight: bold; font-style: italic;">offset</span>: 0]];
+                            scale: (c + 0.5) / (<span style="color: #0097A7;">float</span>)<span style="color: #0097A7;">columns</span>
+                           <span style="color: #EF6C00;">offset</span>: 0]];
 
 [cell addConstraint:
-        [<span style="font-weight: bold; text-decoration: underline;">CAConstraint</span>
+        [<span style="color: #0097A7;">CAConstraint</span>
           constraintWithAttribute: kCAConstraintMidY
-                       relativeTo: @<span style="font-style: italic;">"superlayer"</span>
+                       relativeTo: @<span style="color: #689f38;">"superlayer"</span>
                         attribute: kCAConstraintMaxY
-                            scale: (r + 0.5) / (<span style="font-weight: bold; text-decoration: underline;">float</span>)<span style="font-weight: bold; text-decoration: underline;">rows</span>
-                           <span style="font-weight: bold; font-style: italic;">offset</span>: 0]];
+                            scale: (r + 0.5) / (<span style="color: #0097A7;">float</span>)<span style="color: #0097A7;">rows</span>
+                           <span style="color: #EF6C00;">offset</span>: 0]];
 </pre>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2008-10-01</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

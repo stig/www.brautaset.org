@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -129,8 +128,8 @@ candidate keys:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">setq</span> sb/hydra-selectors
-     <span style="font-style: italic;">"abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">setq</span> sb/hydra-selectors
+     <span style="color: #689f38;">"abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>)
 </pre>
 </div>
 
@@ -145,9 +144,9 @@ looks like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/sort-themes</span> (themes)
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/sort-themes</span> (themes)
   (sort themes
-        (<span style="font-weight: bold;">lambda</span> (a b)
+        (<span style="color: #00796b;">lambda</span> (a b)
           (string&lt; (symbol-name a) 
                    (symbol-name b)))))
 </pre>
@@ -166,8 +165,8 @@ the mapping function. Just what I needed! As a bonus it stops when
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/hydra-load-theme-heads</span> (themes)
-  (mapcar* (<span style="font-weight: bold;">lambda</span> (a b)
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/hydra-load-theme-heads</span> (themes)
+  (mapcar* (<span style="color: #00796b;">lambda</span> (a b)
              (list (char-to-string a)
                    `(sb/load-theme ',b)
                    (symbol-name b)))
@@ -191,14 +190,14 @@ like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(eval `(<span style="font-weight: bold;">defhydra</span> sb/hydra-select-themes
-         (<span style="font-weight: bold;">:hint</span> nil <span style="font-weight: bold;">:color</span> pink)
-         <span style="font-style: italic;">"Select Theme"</span>
+<pre class="src src-emacs-lisp">(eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
+         (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
+         <span style="color: #689f38;">"Select Theme"</span>
          ,@(sb/hydra-load-theme-heads
             (sb/sort-themes
              (custom-available-themes)))
-         (<span style="font-style: italic;">"DEL"</span> (sb/disable-all-themes))
-         (<span style="font-style: italic;">"RET"</span> nil <span style="font-style: italic;">"done"</span> <span style="font-weight: bold;">:color</span> blue)))
+         (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
+         (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))
 </pre>
 </div>
 
@@ -207,7 +206,7 @@ We then just need to assign a keybinding, which I do like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">bind-keys</span> (<span style="font-style: italic;">"C-c w t"</span> . sb/hydra-select-themes/body))
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> . sb/hydra-select-themes/body))
 </pre>
 </div>
 
@@ -221,15 +220,15 @@ this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">bind-keys</span> (<span style="font-style: italic;">"C-c w t"</span> .
-            (eval `(<span style="font-weight: bold;">defhydra</span> sb/hydra-select-themes
-                     (<span style="font-weight: bold;">:hint</span> nil <span style="font-weight: bold;">:color</span> pink)
-                     <span style="font-style: italic;">"Select Theme"</span>
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
+            (eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
+                     (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
+                     <span style="color: #689f38;">"Select Theme"</span>
                      ,@(sb/hydra-load-theme-heads
                         (sb/sort-themes
                          (custom-available-themes)))
-                     (<span style="font-style: italic;">"DEL"</span> (sb/disable-all-themes))
-                     (<span style="font-style: italic;">"RET"</span> nil <span style="font-style: italic;">"done"</span> <span style="font-weight: bold;">:color</span> blue)))))
+                     (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
+                     (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))
 </pre>
 </div>
 
@@ -253,18 +252,18 @@ here it is:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">bind-keys</span> (<span style="font-style: italic;">"C-c w t"</span> .
-            (<span style="font-weight: bold;">lambda</span> ()
-              (<span style="font-weight: bold;">interactive</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
+            (<span style="color: #00796b;">lambda</span> ()
+              (<span style="color: #00796b;">interactive</span>)
               (call-interactively
-               (eval `(<span style="font-weight: bold;">defhydra</span> sb/hydra-select-themes
-                        (<span style="font-weight: bold;">:hint</span> nil <span style="font-weight: bold;">:color</span> pink)
-                        <span style="font-style: italic;">"Select Theme"</span>
+               (eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
+                        (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
+                        <span style="color: #689f38;">"Select Theme"</span>
                         ,@(sb/hydra-load-theme-heads
                            (sb/sort-themes
                             (custom-available-themes)))
-                        (<span style="font-style: italic;">"DEL"</span> (sb/disable-all-themes))
-                        (<span style="font-style: italic;">"RET"</span> nil <span style="font-style: italic;">"done"</span> <span style="font-weight: bold;">:color</span> blue)))))))
+                        (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
+                        (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))))
 </pre>
 </div>
 
@@ -273,44 +272,44 @@ For completeness here's the full source for this switcher:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/disable-all-themes</span> ()
-  (<span style="font-weight: bold;">interactive</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/disable-all-themes</span> ()
+  (<span style="color: #00796b;">interactive</span>)
   (mapc #'disable-theme custom-enabled-themes))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/load-theme</span> (theme)
-  <span style="font-style: italic;">"Enhance `</span><span style="font-weight: bold; font-style: italic; text-decoration: underline;">load-theme</span><span style="font-style: italic;">' by first disabling enabled themes."</span>
+(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/load-theme</span> (theme)
+  <span style="color: #673ab7;">"Enhance `</span><span style="color: #558b2f;">load-theme</span><span style="color: #673ab7;">' by first disabling enabled themes."</span>
   (sb/disable-all-themes)
   (load-theme theme))
 
-(<span style="font-weight: bold;">setq</span> sb/hydra-selectors
-      <span style="font-style: italic;">"abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>)
+(<span style="color: #00796b;">setq</span> sb/hydra-selectors
+      <span style="color: #689f38;">"abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>)
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/sort-themes</span> (themes)
+(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/sort-themes</span> (themes)
   (sort themes
-        (<span style="font-weight: bold;">lambda</span> (a b)
+        (<span style="color: #00796b;">lambda</span> (a b)
           (string&lt;
            (symbol-name a)
            (symbol-name b)))))
 
-(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">sb/hydra-load-theme-heads</span> (themes)
-  (mapcar* (<span style="font-weight: bold;">lambda</span> (a b)
+(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/hydra-load-theme-heads</span> (themes)
+  (mapcar* (<span style="color: #00796b;">lambda</span> (a b)
              (list (char-to-string a)
                    `(sb/load-theme ',b)
                    (symbol-name b)))
            sb/hydra-selectors themes))
 
-(<span style="font-weight: bold;">bind-keys</span> (<span style="font-style: italic;">"C-c w t"</span> .
-            (<span style="font-weight: bold;">lambda</span> ()
-              (<span style="font-weight: bold;">interactive</span>)
+(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
+            (<span style="color: #00796b;">lambda</span> ()
+              (<span style="color: #00796b;">interactive</span>)
               (call-interactively
-               (eval `(<span style="font-weight: bold;">defhydra</span> sb/hydra-select-themes
-                        (<span style="font-weight: bold;">:hint</span> nil <span style="font-weight: bold;">:color</span> pink)
-                        <span style="font-style: italic;">"Select Theme"</span>
+               (eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
+                        (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
+                        <span style="color: #689f38;">"Select Theme"</span>
                         ,@(sb/hydra-load-theme-heads
                            (sb/sort-themes
                             (custom-available-themes)))
-                        (<span style="font-style: italic;">"DEL"</span> (sb/disable-all-themes))
-                        (<span style="font-style: italic;">"RET"</span> nil <span style="font-style: italic;">"done"</span> <span style="font-weight: bold;">:color</span> blue)))))))
+                        (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
+                        (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))))
 </pre>
 </div>
 
@@ -319,8 +318,8 @@ For what it's worth, here's my full <a href="https://github.com/stig/dot-files/b
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2017-02-16</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

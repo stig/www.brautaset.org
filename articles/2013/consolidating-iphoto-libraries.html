@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -129,29 +128,29 @@ Here it is:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">!/bin/</span><span style="font-weight: bold;">sh</span>
+<pre class="src src-sh"><span style="color: #607d8b;">#</span><span style="color: #607d8b;">!/bin/</span><span style="color: #00796b;">sh</span>
 
-<span style="font-weight: bold;">set</span> -e
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">set -x</span>
+<span style="color: #B71C1C;">set</span> -e
+<span style="color: #607d8b;"># </span><span style="color: #607d8b;">set -x</span>
 
-<span style="font-weight: bold; font-style: italic;">src</span>=$<span style="font-weight: bold; font-style: italic;">1</span>
-<span style="font-weight: bold; font-style: italic;">dst</span>=$<span style="font-weight: bold; font-style: italic;">2</span>
+<span style="color: #EF6C00;">src</span>=$<span style="color: #EF6C00;">1</span>
+<span style="color: #EF6C00;">dst</span>=$<span style="color: #EF6C00;">2</span>
 
-find <span style="font-style: italic;">"$src"</span> -type f | <span style="font-weight: bold;">while </span><span style="font-weight: bold;">read</span> file ; <span style="font-weight: bold;">do</span>
-    <span style="font-weight: bold; font-style: italic;">chksum</span>=$(md5 -q <span style="font-style: italic;">"$file"</span>)
-    <span style="font-weight: bold; font-style: italic;">dir</span>=$(<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">chksum</span> | cut -b1-2)
-    <span style="font-weight: bold; font-style: italic;">suffix</span>=$(<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">file</span> | awk -F. <span style="font-style: italic;">'{print tolower($NF)}'</span>)
-    <span style="font-weight: bold; font-style: italic;">to</span>=$<span style="font-weight: bold; font-style: italic;">dst</span>/$<span style="font-weight: bold; font-style: italic;">dir</span>/$<span style="font-weight: bold; font-style: italic;">chksum</span>.$<span style="font-weight: bold; font-style: italic;">suffix</span>
-    <span style="font-weight: bold;">if ! </span><span style="font-weight: bold;">test</span> -f <span style="font-style: italic;">"$to"</span> ; <span style="font-weight: bold;">then</span>
-        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Make sure destination dir exists...</span>
-        mkdir -p $<span style="font-weight: bold; font-style: italic;">dst</span>/$<span style="font-weight: bold; font-style: italic;">dir</span>
-        link <span style="font-style: italic;">"$file"</span> <span style="font-style: italic;">"$to"</span>
-    <span style="font-weight: bold;">fi</span>
+find <span style="color: #689f38;">"$src"</span> -type f | <span style="color: #00796b;">while </span><span style="color: #B71C1C;">read</span> file ; <span style="color: #00796b;">do</span>
+    <span style="color: #EF6C00;">chksum</span>=$(md5 -q <span style="color: #689f38;">"$file"</span>)
+    <span style="color: #EF6C00;">dir</span>=$(<span style="color: #B71C1C;">echo</span> $<span style="color: #EF6C00;">chksum</span> | cut -b1-2)
+    <span style="color: #EF6C00;">suffix</span>=$(<span style="color: #B71C1C;">echo</span> $<span style="color: #EF6C00;">file</span> | awk -F. <span style="color: #689f38;">'{print tolower($NF)}'</span>)
+    <span style="color: #EF6C00;">to</span>=$<span style="color: #EF6C00;">dst</span>/$<span style="color: #EF6C00;">dir</span>/$<span style="color: #EF6C00;">chksum</span>.$<span style="color: #EF6C00;">suffix</span>
+    <span style="color: #00796b;">if ! </span><span style="color: #B71C1C;">test</span> -f <span style="color: #689f38;">"$to"</span> ; <span style="color: #00796b;">then</span>
+        <span style="color: #607d8b;"># </span><span style="color: #607d8b;">Make sure destination dir exists...</span>
+        mkdir -p $<span style="color: #EF6C00;">dst</span>/$<span style="color: #EF6C00;">dir</span>
+        link <span style="color: #689f38;">"$file"</span> <span style="color: #689f38;">"$to"</span>
+    <span style="color: #00796b;">fi</span>
 
-    <span style="font-weight: bold; font-style: italic;">log</span>=<span style="font-style: italic;">"$chksum $file"</span>
-    <span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">log</span> &gt;&gt; <span style="font-style: italic;">"$dst/log"</span>
-    <span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">log</span>
-<span style="font-weight: bold;">done</span>
+    <span style="color: #EF6C00;">log</span>=<span style="color: #689f38;">"$chksum $file"</span>
+    <span style="color: #B71C1C;">echo</span> $<span style="color: #EF6C00;">log</span> &gt;&gt; <span style="color: #689f38;">"$dst/log"</span>
+    <span style="color: #B71C1C;">echo</span> $<span style="color: #EF6C00;">log</span>
+<span style="color: #00796b;">done</span>
 </pre>
 </div>
 
@@ -305,8 +304,8 @@ data in the image itself. The structure will be like so:
 </pre>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2013-10-06</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

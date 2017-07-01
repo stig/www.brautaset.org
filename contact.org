@@ -1,0 +1,11 @@
+#+title: Contact
+
+If you want to contact me about one of my many software projects I ask
+that you do so via its [[https://github.com/stig][GitHub]] page.
+
+Otherwise the best way of contacting me---unless you have my mobile
+phone number---is via email: [[mailto:stig@brautaset.org][stig@brautaset.org]].
+
+If you don't like email & don't mind waiting a while for a response
+you can alternatively try [[http://twitter.com/stigbra][Twitter]]. (I check Twitter roughly once a
+week.)

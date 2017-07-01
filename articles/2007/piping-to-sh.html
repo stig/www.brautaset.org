@@ -71,11 +71,10 @@ for the JavaScript code in this tag.
   <img src="/images/logo.png" alt="Superloopy Logo"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey="h" href="/"> Up </a></li>
- -->
       <li><a accesskey="H" href="/"> Home </a></li>
       <li><a accesskey="p" href="/publications.html"> Publications </a></li>
       <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -87,7 +86,7 @@ little effort. Let's remind ourselves how the one-liner looks:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="font-weight: bold;">for</span> f<span style="font-weight: bold;"> in</span> *.doc ; <span style="font-weight: bold;">do</span> mv $<span style="font-weight: bold; font-style: italic;">f</span> ${<span style="font-weight: bold; font-style: italic;">f</span>%.doc}.txt ; <span style="font-weight: bold;">done</span>
+<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
 </pre>
 </div>
 
@@ -98,7 +97,7 @@ way to get around that is to pre-pend the command with echo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="font-weight: bold;">for</span> f<span style="font-weight: bold;"> in</span> *.doc ; <span style="font-weight: bold;">do </span><span style="font-weight: bold;">echo</span> mv $<span style="font-weight: bold; font-style: italic;">f</span> ${<span style="font-weight: bold; font-style: italic;">f</span>%.doc}.txt ; <span style="font-weight: bold;">done</span>
+<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
 </pre>
 </div>
 
@@ -111,7 +110,7 @@ or you can pipe the result to <code>sh -</code>; the latter being my favourite:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="font-weight: bold;">for</span> f<span style="font-weight: bold;"> in</span> *.doc ; <span style="font-weight: bold;">do </span><span style="font-weight: bold;">echo</span> mv $<span style="font-weight: bold; font-style: italic;">f</span> ${<span style="font-weight: bold; font-style: italic;">f</span>%.doc}.txt ; <span style="font-weight: bold;">done</span> | sh -
+<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span> | sh -
 </pre>
 </div>
 
@@ -125,8 +124,8 @@ read commands from its standard input and execute each line. Simple!
 </p>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2007-06-15</p>
-<p class="author">Author: Stig Brautaset</p>
+<p class="author">Author: <a href="/contact.html">Stig Brautaset</a></p>
+<p class="licence">Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

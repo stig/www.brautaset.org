@@ -37,10 +37,10 @@
   <img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/>
   <nav>
     <ul>
-      <!-- <li><a accesskey=\"h\" href=\"%s\"> Up </a></li>\n -->
       <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
       <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
       <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
+      <li><a accesskey=\"c\" href=\"/contact.html\"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -67,18 +67,19 @@ if(/superloopy\.io/.test(window.location.hostname)) {
       org-export-with-toc nil
       org-export-with-section-numbers nil
 
-      org-export-with-author t
-      org-export-with-email nil
-      org-export-time-stamp-file nil
-
       org-html-preamble nil
-      org-html-postamble 'auto
+      org-html-postamble t
+      org-html-postamble-format
+      '(("en" "<p class=\"author\">Author: <a href=\"/contact.html\">%a</a></p>
+<p class=\"licence\">Licence: <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a></p>
+<p class=\"validation\">%v</p>"))
+
+      org-html-footnotes-section "<div id=\"footnotes\"><!--%s-->%s</div>"
 
       org-publish-project-alist
       `(("home"
          :recursive t
          :makeindex t
-         :html-footnotes-section "<div id='footnotes'><!--%s-->%s</div>"
          :base-directory ,project-path
          :publishing-directory ,publish-path
          :publishing-function org-html-publish-to-html)))
