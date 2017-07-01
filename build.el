@@ -12,6 +12,8 @@
 ;; Require org export
 (require 'ox)
 
+(setq user-full-name "Stig Brautaset"
+      user-mail-address "stig@brautaset.org")
 
 (setq project-path (file-name-directory
                     (or (buffer-file-name)
@@ -63,10 +65,11 @@ if(/superloopy\.io/.test(window.location.hostname)) {
       org-html-link-up "/"
 
       org-export-with-toc nil
+      org-export-with-section-numbers nil
+
       org-export-with-author t
       org-export-with-email nil
-      org-export-with-creator nil
-      org-export-with-section-numbers nil
+      org-export-time-stamp-file nil
 
       org-html-preamble nil
       org-html-postamble 'auto
