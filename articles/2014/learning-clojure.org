@@ -27,7 +27,7 @@ incredibly slow. Here it is:
     (defn naive-prime? [n]
       (every?
        (fn [x] (not= (mod n x) 0))
-       (cons 2 (take-while 
+       (cons 2 (take-while
                 (fn [x] (< (* x x) (inc n)))
                 (odd-seq)))))
     (cons 2

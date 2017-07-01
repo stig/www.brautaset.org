@@ -109,7 +109,7 @@ incredibly slow. Here it is:
   (<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-prime?</span> [n]
     (<span style="color: #B71C1C;">every?</span>
      (<span style="color: #00796b;">fn</span> [x] (<span style="color: #B71C1C;">not=</span> (<span style="color: #B71C1C;">mod</span> n x) 0))
-     (<span style="color: #B71C1C;">cons</span> 2 (<span style="color: #B71C1C;">take-while</span> 
+     (<span style="color: #B71C1C;">cons</span> 2 (<span style="color: #B71C1C;">take-while</span>
               (<span style="color: #00796b;">fn</span> [x] (&lt; (* x x) (<span style="color: #B71C1C;">inc</span> n)))
               (odd-seq)))))
   (<span style="color: #B71C1C;">cons</span> 2
