@@ -42,8 +42,12 @@ if(/superloopy\.io/.test(window.location.hostname)) {
 
               (eval . (setq-default org-publish-project-alist
                                     `(("home"
-                                       :recursive t
-                                       :makeindex t
                                        :base-directory ,(expand-file-name "~/blog")
                                        :publishing-directory ,(expand-file-name "~/blog")
+                                       :publishing-function org-html-publish-to-html)
+                                      ("articles"
+                                       :recursive t
+                                       :makeindex t
+                                       :base-directory ,(expand-file-name "~/blog/articles")
+                                       :publishing-directory ,(expand-file-name "~/blog/articles")
                                        :publishing-function org-html-publish-to-html)))))))

@@ -2,7 +2,7 @@
 
 This is an attempt at indexing by concept. It does not list all
 articles. Also, some articles are listed more than once. You can
-alternatively view a [[file:index.org][full list of articles in reverse chronological
+alternatively view a [[file:../index.org][full list of articles in reverse chronological
 order]].
 
 #+include: "theindex.inc"
