@@ -10,6 +10,9 @@ also maintain a separate [[file:articles/theindex.org][concept index]].
 
 * 2017
 
+  - [[file:articles/2017/blogging-with-org-mode-update.org][Blogging with Org mode---update]] :: A short experience report about
+       blogging with Org mode.
+
   - [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]] :: Detailing my trials and
        tribulations with the "Potter" coding dojo problem, with code
        examples in Clojure.
