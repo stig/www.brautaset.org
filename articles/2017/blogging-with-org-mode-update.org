@@ -3,7 +3,7 @@
 #+begin_abstract
 A short experience report about blogging with Org mode.
 #+end_abstract
-#+index: Org mode!Blogging with (update)
+#+index: Org mode!Experience blogging with
 
 Since [[file:blogging-with-org-mode.org][changing my blog to use Emacs' Org mode]] rather than Jekyll one
 month ago I've written four posts. (This will be the fifth.) In
@@ -44,5 +44,3 @@ are syntax-highlighted as when Emacs runs in a terminal, and this is
 
 I conclude that switching to Org mode has been an enabler for my
 blogging, and I'm happy with the switch.
-
-

@@ -75,6 +75,7 @@
     - [[file:2008/introducing-statistics-for-objective-c.org][Statistics]]
     - [[file:2008/objective-c-syntax-sugar-wish-list.org][Syntax Sugar Wish List]]
   - Org mode
+    - [[file:2017/blogging-with-org-mode-update.org][Experience blogging with]]
     - [[file:2017/blogging-with-org-mode.org][For blogging]]
     - [[file:2016/how-i-blog-this-week.org][Using with Jekyll]]
   - [[file:2007/the-orient-express.org][Orient Express]]

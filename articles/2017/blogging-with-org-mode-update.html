@@ -148,16 +148,18 @@ and use of \(\LaTeX{}\) formulas.
 </p>
 
 <p>
+I've discovered that I much prefer initiating the publishing step from
+within Emacs rather than with the <code>build.el</code> script, so yesterday I
+changed to use <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html">directory-local variables</a> to set the publishing project
+for my blog. This also improves the syntax highlighting of code
+examples. It appears that when running in script mode code examples
+are syntax-highlighted as when Emacs runs in a terminal, and this is
+<i>much</i> inferior to when Emacs runs as a GUI.
+</p>
+
+<p>
 I conclude that switching to Org mode has been an enabler for my
-blogging, and I'm still very happy with the switch. One change I've
-done, however, is discovering that I prefer initiating the project
-publish from within Emacs rather than with the <code>build.el</code> script, so
-I've changed to use <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html">directory-local variables</a> to set the publishing
-project for my blog instead. Partly this is for convenience, and
-partly it's because it improves the syntax highlighting of code
-examples. (When running as a script it highlights code examples like
-when Emacs runs in a terminal, and this is <i>much</i> inferior to when Emacs
-runs as a GUI.)
+blogging, and I'm happy with the switch.
 </p>
 </div>
 <div id="postamble" class="status">
