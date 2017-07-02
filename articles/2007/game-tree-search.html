@@ -68,7 +68,7 @@ for the JavaScript code in this tag.
 <body>
 
 <div id="org-div-home-and-up">
-  <img src="/images/logo.png" alt="Superloopy Logo"/>
+  <a href="/"><img src="/images/logo.png" alt="Superloopy Logo"/></a>
   <nav>
     <ul>
       <li><a accesskey="H" href="/"> Home </a></li>
@@ -101,10 +101,10 @@ MiniMax algorithm and its AlphaBeta pruning optimisation.
 <h2>List of Listings</h2>
 <div id="text-list-of-listings">
 <ul>
-<li><a href="#org4bf760a"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
-<li><a href="#org3024982"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
-<li><a href="#org2e8cf92"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
-<li><a href="#org94b3312"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
+<li><a href="#org9fa5367"><span class="listing-number">Listing 1:</span> Example MiniMax implementation</a></li>
+<li><a href="#org5741331"><span class="listing-number">Listing 2:</span> Example MiniMax implementation for root</a></li>
+<li><a href="#org02dc036"><span class="listing-number">Listing 3:</span> Example depth-limited MiniMax implementation</a></li>
+<li><a href="#org2507642"><span class="listing-number">Listing 4:</span> Example AlphaBeta pruning</a></li>
 </ul>
 </div>
 </div>
@@ -146,8 +146,8 @@ alpha-beta pruning improves on it. This article tries to explain how
 both works.
 </p>
 
-<div id="outline-container-orgf2ddc6c" class="outline-2">
-<h2 id="the-minimax-algorithm"><a id="orgf2ddc6c"></a>The Minimax algorithm</h2>
+<div id="outline-container-org94d70ee" class="outline-2">
+<h2 id="the-minimax-algorithm"><a id="org94d70ee"></a>The Minimax algorithm</h2>
 <div class="outline-text-2" id="text-the-minimax-algorithm">
 <p>
 Let us use Tic-Tac-Toe as an example when explaining how the Minimax
@@ -191,7 +191,7 @@ normally implemented.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="org4bf760a">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example MiniMax implementation</label><pre class="src src-objc" id="org9fa5367">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
   <span style="color: #00796b;">if</span> ([state isEndOfGame])
     <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
 
@@ -219,7 +219,7 @@ can later apply it to advance the game.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="org3024982">-(<span style="color: #0097A7;">id</span>)<span style="color: #0097A7;">minimaxRootWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Example MiniMax implementation for root</label><pre class="src src-objc" id="org5741331">-(<span style="color: #0097A7;">id</span>)<span style="color: #0097A7;">minimaxRootWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> {
   <span style="color: #0097A7;">id</span> <span style="color: #EF6C00;">bestmove</span> = <span style="color: #558b2f;">nil</span>;
   <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">score</span> = -1; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">value for</span>
   loss <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];
@@ -239,8 +239,8 @@ can later apply it to advance the game.
 </div>
 </div>
 
-<div id="outline-container-org7ea0db4" class="outline-2">
-<h2 id="depth-limited-minimax"><a id="org7ea0db4"></a>Depth-limited Minimax</h2>
+<div id="outline-container-orge2625fc" class="outline-2">
+<h2 id="depth-limited-minimax"><a id="orge2625fc"></a>Depth-limited Minimax</h2>
 <div class="outline-text-2" id="text-depth-limited-minimax">
 <p>
 Only when the search space is sufficiently small, like in our
@@ -263,7 +263,7 @@ Notice that the initial value for score has changed.
 
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org2e8cf92">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> {
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Example depth-limited MiniMax implementation</label><pre class="src src-objc" id="org02dc036">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">minimaxWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> {
   <span style="color: #00796b;">if</span> (<span style="color: #2196f3;">!</span>ply || [state isEndOfGame])
     <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
   <span style="color: #0097A7;">int</span> <span style="color: #EF6C00;">score</span> = -1000; <span style="color: #607d8b;">// </span><span style="color: #607d8b;">value for loss</span>
@@ -294,8 +294,8 @@ evaluation function identifies strong states.
 </div>
 </div>
 
-<div id="outline-container-org97d7ec5" class="outline-2">
-<h2 id="alpha-beta-pruning"><a id="org97d7ec5"></a>Alpha-Beta pruning</h2>
+<div id="outline-container-org591ca89" class="outline-2">
+<h2 id="alpha-beta-pruning"><a id="org591ca89"></a>Alpha-Beta pruning</h2>
 <div class="outline-text-2" id="text-alpha-beta-pruning">
 <p>
 In the late 50s it was realised that it was not necessary to visit all
@@ -320,7 +320,7 @@ bound, the path is pruned. Here's an example:
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="org94b3312">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">alphaBetaWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> <span style="color: #0097A7;">alpha</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">alpha</span> <span style="color: #0097A7;">beta</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">beta</span> {
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Example AlphaBeta pruning</label><pre class="src src-objc" id="org2507642">-(<span style="color: #0097A7;">int</span>)<span style="color: #0097A7;">alphaBetaWithState</span>:(<span style="color: #0097A7;">id</span>)<span style="color: #EF6C00;">state</span> <span style="color: #0097A7;">player</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">player</span> <span style="color: #0097A7;">ply</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">ply</span> <span style="color: #0097A7;">alpha</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">alpha</span> <span style="color: #0097A7;">beta</span>:(<span style="color: #0097A7;">int</span>)<span style="color: #EF6C00;">beta</span> {
   <span style="color: #00796b;">if</span> (<span style="color: #2196f3;">!</span>ply || [state isEndOfGame])
     <span style="color: #00796b;">return</span> [state evaluateWithPlayer:player];
   <span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">moves</span> = [state movesAvailable];

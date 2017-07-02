@@ -9,7 +9,7 @@
               (org-html-link-home . "/")
               (org-html-home/up-format . "
 <div id=\"org-div-home-and-up\">
-  <img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/>
+  <a href=\"/\"><img src=\"/images/logo.png\" alt=\"Superloopy Logo\"/></a>
   <nav>
     <ul>
       <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
