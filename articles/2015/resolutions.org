@@ -1,5 +1,5 @@
 #+title: 2015 Resolutions
-#+date: 2015-01-01
+#+date: <2015-01-01>
 #+index: Resolutions!2015 Resolutions
 
 Happy New Year! The title of this post makes it look like I have a

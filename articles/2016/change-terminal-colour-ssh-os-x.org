@@ -1,5 +1,5 @@
 #+title: Change Terminal background colour on OS X via ssh
-#+date: 2016-09-09
+#+date: <2016-09-09>
 #+begin_abstract
 I show how to change Terminal.app colours automatically when logging
 into certain remote machines via SSH

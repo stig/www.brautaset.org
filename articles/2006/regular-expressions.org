@@ -1,5 +1,5 @@
 #+title: Regular Expressions
-#+date: 2006-07-19
+#+date: <2006-07-19>
 #+index: Regular Expression!Find words with three double letter groups
 
 *Note:* This post has been updated to reflect the contents of

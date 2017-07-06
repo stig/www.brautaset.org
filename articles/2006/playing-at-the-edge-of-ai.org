@@ -1,5 +1,5 @@
 #+title: Playing at the Edge of AI
-#+date: 2006-11-24
+#+date: <2006-11-24>
 #+index: Neural Nets
 #+index: Genetic Algorithms
 

@@ -1,5 +1,5 @@
 #+title: Renaming lots of files
-#+date: 2007-06-11
+#+date: <2007-06-11>
 #+index: Shell!Renaming lot of files
 
 I was astounded to find out a couple of days ago that one of my

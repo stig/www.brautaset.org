@@ -1,5 +1,5 @@
 #+title: ModSecurity and Puppet Spelunking
-#+date: 2016-03-16
+#+date: <2016-03-16>
 #+begin_abstract
 In which I investigate how to configure SecAuditLogParts for
 ModSecurity with Puppet, and find I have to contribute a patch to make

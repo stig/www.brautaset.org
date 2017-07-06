@@ -1,5 +1,5 @@
 #+title: Quiet Please
-#+date: 2007-03-02
+#+date: <2007-03-02>
 
 In January I bought a guitar and a small practice amp. As I noted back
 then the amp has lots of effects which saves me buying an array of

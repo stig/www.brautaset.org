@@ -1,5 +1,5 @@
 #+title: Introducing Statistics for Objective-C
-#+date: 2008-02-23
+#+date: <2008-02-23>
 #+index: Objective-C!Statistics
 
 I have just released version 1.0 of [[https://github.com/stig/Statistics][Statistics]]: an Objective-C

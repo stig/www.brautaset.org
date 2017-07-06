@@ -1,5 +1,5 @@
 #+title: Hydra Theme Switcher for Emacs
-#+date: 2017-02-16
+#+date: <2017-02-16>
 #+begin_abstract
 I learnt how to quickly switch between all installed themes in Emacs
 using Hydra.

@@ -1,6 +1,6 @@
 #+title: Abandon all hope
 #+subtitle: The Terrorists And Retailers Have Won
-#+date: 2006-12-19
+#+date: <2006-12-19>
 #+index: Security Theatre
 
 Leaving London Stansted early this morning I'm currently at Oslo

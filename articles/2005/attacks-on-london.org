@@ -1,5 +1,5 @@
 #+title: Attacks on London
-#+date: 2005-07-09
+#+date: <2005-07-09>
 
 A big /thank you/ to everyone who sent email, sms or picked up the phone
 to ask if I am ok; it has been a humbling experience.

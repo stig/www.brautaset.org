@@ -1,5 +1,5 @@
 #+title: Re-designing for readers
-#+date: 2013-06-15
+#+date: <2013-06-15>
 
 I enjoyed reading Matt Gemmell's post on [[http://mattgemmell.com/2013/05/22/designing-blogs-for-readers/][designing blogs for readers]]
 the other week. I decided to see how well my own blog "complies" to

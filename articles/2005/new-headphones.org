@@ -1,5 +1,5 @@
 #+title: New Headphones
-#+date: 2005-12-02
+#+date: <2005-12-02>
 #+index: Shure EC2
 
 Earlier when I've griped about the iPod Shuffle, saying it needed a

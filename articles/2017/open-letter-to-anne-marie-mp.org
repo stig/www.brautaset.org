@@ -1,6 +1,6 @@
 #+title: Open Letter to Anne-Marie Trevelyan MP
 #+subtitle: How are the Conservatives "working for everyone"?
-#+date: 2017-05-20
+#+date: <2017-05-20>
 #+index: Tax Breaks!Tories' gift to those on high income
 #+index: ISA!Tories' benefit to those on higher income
 #+index: Working for Everyone!On the Tory pledge

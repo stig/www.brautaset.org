@@ -1,5 +1,5 @@
 #+title: Spray Example
-#+date: 2014-02-16
+#+date: <2014-02-16>
 #+index: Scala!Complete Spray DSL Example
 #+index: Spray!Complete Scala DSL Example
 

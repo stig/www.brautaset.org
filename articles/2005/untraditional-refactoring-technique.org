@@ -1,5 +1,5 @@
 #+title: Untraditional Refactoring Technique
-#+date: 2005-09-30
+#+date: <2005-09-30>
 #+index: Dead code elimination
 
 Bizzarely, today I found myself deleting a test script preparing to

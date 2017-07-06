@@ -1,5 +1,5 @@
 #+title: What now for SBJson?
-#+date: 2013-03-05
+#+date: <2013-03-05>
 #+index: SBJson!What now?
 
 In the middle of 2007 I was given roughly six months notice that I would

@@ -1,5 +1,5 @@
 #+title: Injecting Akka's TestProbe in place of child actors
-#+date: 2013-03-24
+#+date: <2013-03-24>
 #+index: Scala!Injecting Akka's TestProbe in place of children
 #+index: Akka!Injecting TestProbe in place of children in Scala
 

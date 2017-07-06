@@ -1,5 +1,5 @@
 #+title: Not so philosophically different after all?
-#+date: 2015-12-23
+#+date: <2015-12-23>
 #+index: Clojure!On this Lisp's non-difference from Haskell
 
 I found Chris Done's [[http://chrisdone.com/posts/haskell-lisp-philosophy-difference][A philosophical difference between Haskell and

@@ -1,5 +1,5 @@
 #+title: Avenue Que?
-#+date: 2008-06-05
+#+date: <2008-06-05>
 #+index: Avenue Que
 
 [[http://blog.unixdaemon.net/][Dean]] and I went to see Avenue Q last night, having heard rave reviews

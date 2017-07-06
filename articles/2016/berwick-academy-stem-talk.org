@@ -1,5 +1,5 @@
 #+title: Berwick Academy STEM Talk
-#+date: 2016-10-01
+#+date: <2016-10-01>
 #+begin_abstract
 I went to [[http://www.berwickacademy.org][Berwick Academy]] and talked to prospective computer science
 students there about my education and career. This is a transcript of

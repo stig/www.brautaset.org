@@ -1,5 +1,5 @@
 #+title: CityLink is teh suck!
-#+date: 2007-02-07
+#+date: <2007-02-07>
 #+begin_abstract
 I rant about CityLink's attempt at delivering my new TV.
 #+end_abstract

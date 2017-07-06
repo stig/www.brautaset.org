@@ -1,6 +1,5 @@
 #+title: Blade Trinity
-#+date: 2005-10-08
-#+index: Blade Trinity
+#+date: <2005-10-08>
 #+index: Blade Trinity
 
 Though Snipe's character was one-dimensional and dull as ever, [[http://uk.imdb.com/title/tt0359013/][Blade

@@ -1,5 +1,5 @@
 #+title: FizzBuzz
-#+date: 2016-09-09
+#+date: <2016-09-09>
 #+begin_abstract
 Breakdown of my Tweetable FizzBuzz created using sed and xargs.
 #+end_abstract

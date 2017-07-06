@@ -1,5 +1,5 @@
 #+title: Well done is
-#+date: 2007-03-22
+#+date: <2007-03-22>
 
 My boss is very good at taking meeting notes so that everybody knows
 what's going on. These notes are highly distilled and this week's notes

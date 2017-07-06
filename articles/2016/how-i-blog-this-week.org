@@ -1,5 +1,5 @@
 #+title: How I Blog (This Week)
-#+date: 2016-10-06
+#+date: <2016-10-06>
 #+begin_abstract
 I share my Emacs & Org-mode setup for blogging with Jekyll.
 #+end_abstract

@@ -1,5 +1,5 @@
 #+title: Rise of the Machine
-#+date: 2006-08-12
+#+date: <2006-08-12>
 #+begin_abstract
 I ruminate on implementing a simple virtual machine---for a simple
 language---in C.

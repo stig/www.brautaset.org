@@ -1,5 +1,5 @@
 #+title: Electoral Reform Now!
-#+date: 2017-06-10
+#+date: <2017-06-10>
 #+begin_abstract
 I try to show how unjust the First Past the Post system used to elect
 MPs in UK General Elections is.

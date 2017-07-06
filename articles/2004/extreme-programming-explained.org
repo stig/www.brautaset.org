@@ -1,5 +1,5 @@
 #+title: Extreme Programming Explained
-#+date: 2004-10-11
+#+date: <2004-10-11>
 #+index: Extreme Programming Explained
 
 -  Author: Kent Beck

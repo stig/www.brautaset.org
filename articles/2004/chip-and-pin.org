@@ -1,5 +1,5 @@
 #+title: Chip And Pin
-#+date: 2004-08-28
+#+date: <2004-08-28>
 #+index: Banking!Chip and Pin
 
 I'm getting sick of the British banks' self-gratification. They're

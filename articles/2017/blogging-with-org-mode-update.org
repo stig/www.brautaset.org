@@ -1,5 +1,5 @@
 #+title: Blogging with Org mode---update!
-#+date: 2017-07-02
+#+date: <2017-07-02>
 #+begin_abstract
 A short experience report about blogging with Org mode.
 #+end_abstract

@@ -16,6 +16,7 @@
       <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
       <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
       <li><a accesskey=\"c\" href=\"/contact.html\"> Contact </a></li>
+      <li>Licence: <a accesskey=\"l\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a></li>
     </ul>
   </nav>
 </div>
@@ -35,19 +36,18 @@ if(/superloopy\.io/.test(window.location.hostname)) {
 </script>")
 
               (org-html-preamble . nil)
-              (org-html-postamble . t)
-              (org-html-postamble-format . (("en" "<p class=\"author\">Author: <a href=\"/contact.html\">%a</a></p>
-<p class=\"licence\">Licence: <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a></p>
-<p class=\"validation\">%v</p>")))
+              (org-html-metadata-timestamp-format . "%e %B %Y")
+              (org-html-postamble . auto)
 
-              (eval . (setq-default org-publish-project-alist
-                                    `(("home"
-                                       :base-directory ,(expand-file-name "~/blog")
-                                       :publishing-directory ,(expand-file-name "~/blog")
-                                       :publishing-function org-html-publish-to-html)
-                                      ("articles"
-                                       :recursive t
-                                       :makeindex t
-                                       :base-directory ,(expand-file-name "~/blog/articles")
-                                       :publishing-directory ,(expand-file-name "~/blog/articles")
-                                       :publishing-function org-html-publish-to-html)))))))
+              (eval . (setq-default
+                       org-publish-project-alist
+                       `(("home"
+                          :base-directory ,(expand-file-name "~/blog")
+                          :publishing-directory ,(expand-file-name "~/blog")
+                          :publishing-function org-html-publish-to-html)
+                         ("articles"
+                          :recursive t
+                          :makeindex t
+                          :base-directory ,(expand-file-name "~/blog/articles")
+                          :publishing-directory ,(expand-file-name "~/blog/articles")
+                          :publishing-function org-html-publish-to-html)))))))

@@ -1,5 +1,5 @@
 #+title: Co-operative Banking Trouble
-#+date: 2004-03-13
+#+date: <2004-03-13>
 #+begin_abstract
 In which I regale you with my attempt to get a current account with
 the Co-operative bank.

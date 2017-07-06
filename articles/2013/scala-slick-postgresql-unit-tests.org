@@ -1,5 +1,5 @@
 #+title: Scala, Slick & PostgreSQL Unit Tests
-#+date: 2013-06-16
+#+date: <2013-06-16>
 #+index: Scala!Slick and PostgreSQL Unit Tests
 #+index: Slick!Scala Unit Tests with PostgreSQL
 

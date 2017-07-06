@@ -1,5 +1,5 @@
 #+title: Smartphone Addiction
-#+date: 2014-08-06
+#+date: <2014-08-06>
 #+index: Smartphone Addition
 
 Although I like my iPhone 5---and I'm sure I would /love/ the new model

@@ -1,5 +1,5 @@
 #+title: Backing Up Photos Online
-#+date: 2013-03-06
+#+date: <2013-03-06>
 #+index:Photos!Backing up online
 
 We use Time Machine to back up our main computer. We have two 1GB USB

@@ -1,5 +1,5 @@
 #+title: Moving-in Party
-#+date: 2006-04-26
+#+date: <2006-04-26>
 
 [[http://www.sem-jacobsen.no/][Stein]] came over from Norway Sunday morning. We spent a few hours
 catching up and reminiscing about the past before going to [[http://www.yosushi.com/][Yo! Sushi]]

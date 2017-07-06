@@ -1,5 +1,5 @@
 #+title: Generating Bar Charts with SQL
-#+date: 2006-11-23
+#+date: <2006-11-23>
 #+index: SQL!Generating Bar Charts
 #+index: Bar Charts!Generating with SQL
 

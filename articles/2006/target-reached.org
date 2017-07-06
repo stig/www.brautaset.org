@@ -1,5 +1,5 @@
 #+title: Target Reached!
-#+date: 2006-03-15
+#+date: <2006-03-15>
 
 At the gym today I finally managed to meet the target set for me back in
 November last year: use a X-trainer and cover two arbitrary (as far as

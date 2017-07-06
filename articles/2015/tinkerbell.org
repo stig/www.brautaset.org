@@ -1,5 +1,5 @@
 #+title: Tinker Bell (2008)
-#+date: 2015-02-03
+#+date: <2015-02-03>
 #+index: Tinker Bell (2008)
 
 A talented young engineer struggles to overcome social norms and to be

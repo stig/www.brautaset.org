@@ -1,5 +1,5 @@
 #+title: Connectivity Galore
-#+date: 2005-07-25
+#+date: <2005-07-25>
 
 I'm in Norway on holiday. I'm the resident tech.
 

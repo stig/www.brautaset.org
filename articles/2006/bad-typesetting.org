@@ -1,5 +1,5 @@
 #+title: Bad Typesetting
-#+date: 2006-11-28
+#+date: <2006-11-28>
 
 While I'm on the subject of writing, I thought I'd sneak in a note about
 typesetting. I'm a closet typesetting geek; you probably /have/ to be to

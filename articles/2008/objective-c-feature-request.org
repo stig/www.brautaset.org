@@ -1,5 +1,5 @@
 #+title: Objective-C Feature Request
-#+date: 2008-08-23
+#+date: <2008-08-23>
 #+index: Objective-C!Feature Request
 
 #+attr_html: :alt Dictionary Icon :align right

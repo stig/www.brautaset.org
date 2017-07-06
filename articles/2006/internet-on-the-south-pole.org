@@ -1,5 +1,5 @@
 #+title: Internet on the South Pole
-#+date: 2006-08-17
+#+date: <2006-08-17>
 
 I've occasionally wondered how they manage to get Internet to research
 bases at the North or South pole. You migth think they'd use satellites,

@@ -1,5 +1,5 @@
 #+title: Connected!
-#+date: 2006-04-30
+#+date: <2006-04-30>
 
 We finally have a network connection at the new place. Though we don't
 have ADSL yet (there's a problem transferring it here because [[http://plus.net][plus]]'s

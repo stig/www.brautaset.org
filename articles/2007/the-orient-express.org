@@ -1,5 +1,5 @@
 #+title: The Orient Express
-#+date: 2007-06-21
+#+date: <2007-06-21>
 #+index: Orient Express
 
 Today Nadia and I took her parents on a day-trip to Folkstone on the

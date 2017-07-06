@@ -1,5 +1,5 @@
 #+title: Resolutions
-#+date: 2014-01-01
+#+date: <2014-01-01>
 #+index: Resolutions!2014
 
 The Brautasets stayed in London again this year. We do not like to

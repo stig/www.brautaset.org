@@ -1,5 +1,5 @@
 #+title: Using ScalaTest with Akka
-#+date: 2013-03-25
+#+date: <2013-03-25>
 #+index: Scala!Akka and ScalaTest
 #+index: Akka!Working with ScalaTest
 

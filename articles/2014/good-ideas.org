@@ -1,5 +1,5 @@
 #+title: Good Ideas
-#+date: 2014-10-22
+#+date: <2014-10-22>
 #+index: Education!Why it should be free or at least affordable
 #+index: Parental Leave!Why it should be generous and ubiquitous
 #+index: Basic Income

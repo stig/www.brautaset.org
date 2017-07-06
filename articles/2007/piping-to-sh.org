@@ -1,5 +1,5 @@
 #+title: Piping to sh -
-#+date: 2007-06-15
+#+date: <2007-06-15>
 #+index: Shell!Piping to -
 
 So, in a [[file:renaming-lots-of-files.org][previous post]] I showed how to rename lots of files with

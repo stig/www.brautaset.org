@@ -1,5 +1,5 @@
 #+title: MiniMax and AlphaBeta Search
-#+date: 2007-08-17
+#+date: <2007-08-17>
 #+begin_abstract
 I try to give an overview of & explain (perhaps mainly to myself) the
 MiniMax algorithm and its AlphaBeta pruning optimisation.

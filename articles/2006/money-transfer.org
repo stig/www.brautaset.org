@@ -1,5 +1,5 @@
 #+title: Money Transfer
-#+date: 2006-01-30
+#+date: <2006-01-30>
 #+begin_abstract
 Wherein I rant about my unsuccessful attempt at transferring money
 from the UK HSBC account to my Norwegian (Nordea) bank account.

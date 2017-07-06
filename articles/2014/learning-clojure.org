@@ -1,5 +1,5 @@
 #+title: Learning Clojure by Solving Euler Problems
-#+date: 2014-02-10
+#+date: <2014-02-10>
 #+index: Clojure!Using it to solve Euler Problems
 #+index: Primes!Finding with Clojure
 

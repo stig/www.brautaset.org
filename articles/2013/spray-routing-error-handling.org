@@ -1,5 +1,5 @@
 #+title: Spray Routing Error Handling
-#+date: 2013-08-05
+#+date: <2013-08-05>
 #+index: Scala!Spray routing error handling
 #+index: Spray!Scala DSL routing error handling
 

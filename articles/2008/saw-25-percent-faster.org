@@ -1,5 +1,5 @@
 #+title: Saw 25% faster!
-#+date: 2008-09-20
+#+date: <2008-09-20>
 
 Today I bought a new saw at the local hardware store. It's an [[http://www.irwin.dk/pdf/IR_JA_LIT_KFS_880_300dpi_4C.pdf][Irwin
 Universal 880 Triple Ground]] handsaw. It, as the name suggests,

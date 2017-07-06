@@ -1,5 +1,5 @@
 #+title: Can I have some Water please?
-#+date: 2004-11-21
+#+date: <2004-11-21>
 
 Today we've been without water, more or less. I was roused from my bed
 at about midnight last night, just after falling asleep. I can't

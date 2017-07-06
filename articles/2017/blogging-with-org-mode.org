@@ -1,6 +1,6 @@
 #+title: Blogging with Org mode
 #+subtitle: And using Emacs as a build tool
-#+date: 2017-06-03
+#+date: <2017-06-03>
 #+begin_abstract
 I describe how---and why---I changed from blogging using Markdown &
 Jekyll to using Org mode.

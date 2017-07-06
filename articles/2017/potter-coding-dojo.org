@@ -1,5 +1,5 @@
 #+title: The "Potter" Coding Dojo (in Clojure)
-#+date: 2017-06-22
+#+date: <2017-06-22>
 #+begin_abstract
 Detailing my trials and tribulations with the "Potter" coding dojo
 problem, with code examples in Clojure.

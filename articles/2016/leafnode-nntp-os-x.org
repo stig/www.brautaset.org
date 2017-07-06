@@ -1,5 +1,5 @@
 #+title: Setting up Leafnode on OS X
-#+date: 2016-05-12
+#+date: <2016-05-12>
 #+index: Leafnode!Setting up on OS X
 #+begin_abstract
 I set up the Leafnode NNTP server on OS X, for use with Emacs and the

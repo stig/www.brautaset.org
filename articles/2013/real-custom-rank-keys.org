@@ -1,5 +1,5 @@
 #+title: Real custom rank keys
-#+date: 2013-02-23
+#+date: <2013-02-23>
 #+index: Ranking!Using real keys
 
 Let me guess: you have, at some point in your career, implemented a

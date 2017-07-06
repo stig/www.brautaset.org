@@ -1,5 +1,5 @@
 #+title: Overcoming RSI
-#+date: 2016-05-02
+#+date: <2016-05-02>
 #+begin_abstract
 Early 2005 I encountered a bad bout of RSI. Prompted by a comment on
 the Lobsters forum, I thought I'd share my experience.

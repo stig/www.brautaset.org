@@ -1,5 +1,5 @@
 #+title: What I want for my Birthday
-#+date: 2006-04-03
+#+date: <2006-04-03>
 
 According to the [[http://worldlandtrust.org][World Land Trust]], citing [[http://www.independent.co.uk/][The Independent]], Britons
 last year spent £3.6 billion on food, healthcare and accessories for
