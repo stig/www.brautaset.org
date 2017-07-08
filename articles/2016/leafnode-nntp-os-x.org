@@ -18,10 +18,10 @@ now use the [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Agent-Bas
   :END:
 
 I read email and news with Gnus. I often use a laptop, and often in
-places I don't have internet access. Gnus doesn't like not being able to
-connect to the nntp server when it starts, so as a work-around I run the
-[[http://leafnode.sourceforge.net][Leafnode]] NNTP server locally. As a
-nice side effect, Gnus starts a lot faster.
+places I don't have internet access. Gnus doesn't like not being able
+to connect to the nntp server when it starts, so as a work-around I
+run the [[http://leafnode.sourceforge.net][Leafnode]] NNTP server locally. As a nice side-effect, Gnus
+starts a lot faster.
 
 I use [[http://orgmode.org][Orgmode]] and have a [[https://github.com/stig/dot-files/blob/master/Leafnode.org][Leafnode.org]] that all the configuration is
 generated from. If you use Emacs, and Orgmode, you probably want to
@@ -33,8 +33,7 @@ might want to read this post instead. No Emacs required :-)
   :CUSTOM_ID: installation
   :END:
 
-First we have to install Leafnode. This is dirt simple with
-[[http://brew.sh][homebrew]]:
+First we have to install Leafnode. This is dirt simple with [[http://brew.sh][homebrew]]:
 
 #+BEGIN_SRC sh
     brew install leafnode
@@ -50,8 +49,8 @@ place in the =/usr/local/etc/leafnode/config= file. You have to create
 this file, but there's very few required settings and there's a
 well-commented example at =/usr/local/etc/leafnode/config.example= that
 we can use as a reference. I'll omit comments from my example, which
-you can view in listing [[lst:leafnode.cfg]]. (You obviously have to change
-=hostname= to suit you.)
+you can view in listing [[lst:leafnode.cfg]]. (You obviously have to
+change =hostname= to suit you.)
 
 #+caption: Example =/usr/local/etc/leafnode/config=
 #+name: lst:leafnode.cfg
@@ -200,9 +199,9 @@ is in listing [[lst:texpire]].
    :END:
 
 Because we put the launchd config files in =~/Library/LaunchAgents= they
-should be automatically loaded at login, so you shouldn't have to think
-about it. However, you probably don't want to logout and back in again
-just to load them. Luckily you can run this command to load them
+should be automatically loaded at login, so you shouldn't have to
+think about it. However, you probably don't want to logout and back in
+again just to load them. Luckily you can run this command to load them
 manually now using the command in listing [[lst:launchctl]].
 
 #+caption: Starting the services with the =launchctl= command
