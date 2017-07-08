@@ -32,6 +32,7 @@ down and get a slightly lower number of MPs.)
 
 #+caption: Number of MPs for each party with First Past the Post in the UK 2017 General Election, vs hypothetical numbers with Proportional Representation
 #+name: tbl:fptp-vs-pr
+#+attr_html: :id fptp-vs-pr
 | Party                            |    Votes | % of the vote | MPs  currently | MPs with PR | Gain/Loss in MPs |
 |----------------------------------+----------+---------------+----------------+-------------+------------------|
 | Conservative                     | 13667213 |         42.45 |            318 |         276 |              -42 |
