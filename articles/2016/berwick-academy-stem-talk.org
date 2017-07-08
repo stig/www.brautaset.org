@@ -13,6 +13,9 @@ contents.
 #+TOC: headlines 1 local
 
 ** Introduction
+   :PROPERTIES:
+   :CUSTOM_ID: intro
+   :END:
 
    Hello! My name is Stig Brautaset. I am Norwegian, but because I've lived
    in England most of my adult life I feel more Brit /ish/.
@@ -48,6 +51,9 @@ contents.
    I'm here to talk to you about today.
 
 ** About asking questions
+   :PROPERTIES:
+   :CUSTOM_ID: asking-questions
+   :END:
 
    Feel free to ask questions at any time, by raising your hand. I am here
    mainly for your benefit. Obviously I am here for my own benefit too, but
@@ -57,6 +63,9 @@ contents.
    I would appreciate it if you tell me your name when you ask a question.
 
 ** A-level equivalent, 1994-1997
+   :PROPERTIES:
+   :CUSTOM_ID: a-level-equiv
+   :END:
 
    I thought I'd start in 1994, when I was about as old as you are now. Back
    then dinosaurs roamed the street, and people were terrified of /Y2K/.
@@ -100,6 +109,9 @@ contents.
    equivalent electronics degree.
 
 ** 2 years HND equivalent, 1997-1999
+   :PROPERTIES:
+   :CUSTOM_ID: hnd-equiv
+   :END:
 
    This degree was originally intended to give people with industry
    background the theoretical basis to get more out of their jobs, and it
@@ -118,6 +130,9 @@ contents.
    on a submarine.
 
 ** Military Service, 1999-2000
+   :PROPERTIES:
+   :CUSTOM_ID: military-service
+   :END:
 
    In Norway we still have compulsory military service, where you serve for
    about one year. You can choose between land, sea and air, and I chose to
@@ -171,6 +186,9 @@ contents.
    I left the navy in July 2000 and moved to London the following September.
 
 ** University of Westminster, 2000-2003
+   :PROPERTIES:
+   :CUSTOM_ID: university
+   :END:
 
    I studied Artificial Intelligence at University. I did tolerably well,
    and here's the best recipe I can give you for succeeding at University:
@@ -202,6 +220,9 @@ contents.
    /that/ I found I got the job & I started working three weeks later.
 
 ** University is not the only route to make it in programming!
+   :PROPERTIES:
+   :CUSTOM_ID: university-not-required
+   :END:
 
    I want to make absolutely clear that you /do not/ have to have a computer
    science education to make it as a programmer. I happen to have one, but I
@@ -211,6 +232,9 @@ contents.
    a degree at all.
 
 ** Knowledge Technology Solutions, 2003-2005
+   :PROPERTIES:
+   :CUSTOM_ID: kts
+   :END:
 
    My first job was PHP programming. I had never done that before, so I had
    to learn on the job. /This is not abnormal./ Some employers want strong
@@ -227,6 +251,9 @@ contents.
    job there. I got it.
 
 ** Fotango, 2005-2008
+   :PROPERTIES:
+   :CUSTOM_ID: fotango
+   :END:
 
    I worked on a big online Photo album website owned by Canon Europe, where
    people could upload their photos and videos, arrange them into albums and
@@ -278,6 +305,9 @@ contents.
    At the end of 2007 the last of us left and I went to join a bank.
 
 ** Morgan Stanley, 2008-2012
+   :PROPERTIES:
+   :CUSTOM_ID: ms
+   :END:
 
    I worked for Morgan Stanley, a large American investment bank, for 4
    years. I worked on programs used by traders to manage their clients'
@@ -293,6 +323,9 @@ contents.
    quit and moved back to the UK.
 
 ** NET-A-PORTER / The OutNet / Mr Porter, 2012-2015
+   :PROPERTIES:
+   :CUSTOM_ID: nap
+   :END:
 
    Back in London I started working in the fashion industry.
    As I hinted at earlier, I got this job /directly/ as a result of my JSON
@@ -354,6 +387,9 @@ contents.
    up here three weeks later.
 
 ** LaterPay GmbH, 2015-Now
+   :PROPERTIES:
+   :CUSTOM_ID: laterpay
+   :END:
 
    In July last year I started working from "home" for a German company, and
    I still work there.
@@ -371,6 +407,9 @@ contents.
    more about eachother.
 
 ** Conclusion
+   :PROPERTIES:
+   :CUSTOM_ID: conclusion
+   :END:
 
    That's all I have prepared. I want to round off by letting you know that
    a career in software development has been great for me, and it can be for

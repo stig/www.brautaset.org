@@ -140,26 +140,26 @@ deep and I have found myself thinking about it a lot since.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgea220de">A Warning</a></li>
-<li><a href="#orgaa22b8e">The Problem</a></li>
-<li><a href="#orgd64a0f0">Towards a (simplistic) solution</a></li>
-<li><a href="#orge7fd16b">Finding a solution <i>at all</i> for large purchases</a></li>
-<li><a href="#org4400fcf">Actually passing tests for edge cases</a></li>
-<li><a href="#orgfabeabd">Towards a moderately fast, correct &amp; <i>robust</i> solution</a>
+<li><a href="#a-warning">A Warning</a></li>
+<li><a href="#the-problem">The Problem</a></li>
+<li><a href="#simple-solution">Towards a (simplistic) solution</a></li>
+<li><a href="#fast-approximation">Finding a solution <i>at all</i> for large purchases</a></li>
+<li><a href="#passing-all-tests">Actually passing tests for edge cases</a></li>
+<li><a href="#less-cheating">Towards a moderately fast, correct &amp; <i>robust</i> solution</a>
 <ul>
-<li><a href="#org143789e">Experimenting in a Clojure REPL</a></li>
-<li><a href="#orgf661e75">A tour of my final solution</a></li>
-<li><a href="#org53734cf">Potential Improvements</a></li>
+<li><a href="#experimenting-in-repl">Experimenting in a Clojure REPL</a></li>
+<li><a href="#solution-tour">A tour of my final solution</a></li>
+<li><a href="#potential-improvements">Potential Improvements</a></li>
 </ul>
 </li>
-<li><a href="#org1c77885">Epilogue</a></li>
+<li><a href="#epilogue">Epilogue</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgea220de" class="outline-2">
-<h2 id="orgea220de">A Warning</h2>
-<div class="outline-text-2" id="text-orgea220de">
+<div id="outline-container-org94be96b" class="outline-2">
+<h2 id="a-warning"><a id="org94be96b"></a>A Warning</h2>
+<div class="outline-text-2" id="text-a-warning">
 <p>
 If you are considering doing this Coding Dojo yourself, you may want
 to postpone reading this until you do because it provides not one but
@@ -168,9 +168,9 @@ to postpone reading this until you do because it provides not one but
 </div>
 </div>
 
-<div id="outline-container-orgaa22b8e" class="outline-2">
-<h2 id="orgaa22b8e">The Problem</h2>
-<div class="outline-text-2" id="text-orgaa22b8e">
+<div id="outline-container-org6ed0c31" class="outline-2">
+<h2 id="the-problem"><a id="org6ed0c31"></a>The Problem</h2>
+<div class="outline-text-2" id="text-the-problem">
 <p>
 (Paraphrased by yours truly; the original is over at <a href="http://codingdojo.org/kata/Potter/">codingdojo</a>.)
 </p>
@@ -277,9 +277,9 @@ cheapest.
 </div>
 </div>
 
-<div id="outline-container-orgd64a0f0" class="outline-2">
-<h2 id="orgd64a0f0">Towards a (simplistic) solution</h2>
-<div class="outline-text-2" id="text-orgd64a0f0">
+<div id="outline-container-org6d1f3ba" class="outline-2">
+<h2 id="simple-solution"><a id="org6d1f3ba"></a>Towards a (simplistic) solution</h2>
+<div class="outline-text-2" id="text-simple-solution">
 <p>
 I immediately thought that this was a combinatorial problem scoured
 Clojure's collections library for suitable combinatorial operators. I
@@ -487,9 +487,9 @@ It's time to try a different approach.
 </div>
 </div>
 
-<div id="outline-container-orge7fd16b" class="outline-2">
-<h2 id="orge7fd16b">Finding a solution <i>at all</i> for large purchases</h2>
-<div class="outline-text-2" id="text-orge7fd16b">
+<div id="outline-container-org245f917" class="outline-2">
+<h2 id="fast-approximation"><a id="org245f917"></a>Finding a solution <i>at all</i> for large purchases</h2>
+<div class="outline-text-2" id="text-fast-approximation">
 <p>
 Although the simple solution works for small numbers of books, it is
 impractical for larger stacks of books. I felt that it might be
@@ -537,9 +537,9 @@ it does not find <i>the best</i> price for the final edge case.
 </div>
 </div>
 
-<div id="outline-container-org4400fcf" class="outline-2">
-<h2 id="org4400fcf">Actually passing tests for edge cases</h2>
-<div class="outline-text-2" id="text-org4400fcf">
+<div id="outline-container-orgb8d2595" class="outline-2">
+<h2 id="passing-all-tests"><a id="orgb8d2595"></a>Actually passing tests for edge cases</h2>
+<div class="outline-text-2" id="text-passing-all-tests">
 <p>
 My fast solution eagerly tries to build as big partitions as possible
 from the remaining books. So if you have the following: 1 1 2 2 3 3 4
@@ -649,9 +649,9 @@ function may start to exhibit weird behaviour.
 </div>
 </div>
 
-<div id="outline-container-orgfabeabd" class="outline-2">
-<h2 id="orgfabeabd">Towards a moderately fast, correct &amp; <i>robust</i> solution</h2>
-<div class="outline-text-2" id="text-orgfabeabd">
+<div id="outline-container-orge65cbf9" class="outline-2">
+<h2 id="less-cheating"><a id="orge65cbf9"></a>Towards a moderately fast, correct &amp; <i>robust</i> solution</h2>
+<div class="outline-text-2" id="text-less-cheating">
 <p>
 Michelle tried to show me how to solve the problem using <i>Maths</i> but
 kept on being distracted from reaching a solution by my questions
@@ -691,9 +691,9 @@ these sets.
 </p>
 </div>
 
-<div id="outline-container-org143789e" class="outline-3">
-<h3 id="org143789e">Experimenting in a Clojure REPL</h3>
-<div class="outline-text-3" id="text-org143789e">
+<div id="outline-container-org202940a" class="outline-3">
+<h3 id="experimenting-in-repl"><a id="org202940a"></a>Experimenting in a Clojure REPL</h3>
+<div class="outline-text-3" id="text-experimenting-in-repl">
 <p>
 I still think that <code>combo/partitions</code> can help me find all the different
 <i>shapes</i> or partitions, with a bit of creative management of its input,
@@ -793,9 +793,9 @@ of the result&#x2026;
 </div>
 </div>
 
-<div id="outline-container-orgf661e75" class="outline-3">
-<h3 id="orgf661e75">A tour of my final solution</h3>
-<div class="outline-text-3" id="text-orgf661e75">
+<div id="outline-container-org31bd886" class="outline-3">
+<h3 id="solution-tour"><a id="org31bd886"></a>A tour of my final solution</h3>
+<div class="outline-text-3" id="text-solution-tour">
 <p>
 Let's start with the basics. We need the <code>clojure.math.combinatorics</code>
 package, so let's import that. And let's define our book price too.
@@ -1024,9 +1024,9 @@ there.
 </div>
 </div>
 
-<div id="outline-container-org53734cf" class="outline-3">
-<h3 id="org53734cf">Potential Improvements</h3>
-<div class="outline-text-3" id="text-org53734cf">
+<div id="outline-container-orgee78061" class="outline-3">
+<h3 id="potential-improvements"><a id="orgee78061"></a>Potential Improvements</h3>
+<div class="outline-text-3" id="text-potential-improvements">
 <p>
 This is fast enough, correct enough, and robust enough that I don't
 feel like spending any more time on it. However, if I <i>were</i> to make it
@@ -1047,9 +1047,9 @@ the same arguments, so it might benefit from memoization.</li>
 </div>
 </div>
 
-<div id="outline-container-org1c77885" class="outline-2">
-<h2 id="org1c77885">Epilogue</h2>
-<div class="outline-text-2" id="text-org1c77885">
+<div id="outline-container-orgd48087e" class="outline-2">
+<h2 id="epilogue"><a id="orgd48087e"></a>Epilogue</h2>
+<div class="outline-text-2" id="text-epilogue">
 <p>
 If you want to get into more details and play with this code yourself
 you might find it easier to check out my <a href="https://github.com/stig/coding-dojo">coding-dojo repo</a> rather than
