@@ -6,7 +6,7 @@ just to practice writing. It used to be that most articles were tech
 related, but I think that ship has sailed now. Anything goes really.
 
 Below is a full list of articles, in reverse chronological order. I
-also maintain a separate [[file:articles/theindex.org][concept index]].
+also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
