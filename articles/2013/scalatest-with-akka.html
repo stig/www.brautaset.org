@@ -90,7 +90,7 @@ into a project.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">import</span> akka.actor.<span style="color: #558b2f;">ActorSystem</span>
+<pre><code class="src src-scala"><span style="color: #00796b;">import</span> akka.actor.<span style="color: #558b2f;">ActorSystem</span>
 <span style="color: #00796b;">import</span> akka.testkit.{ <span style="color: #558b2f;">ImplicitSender</span>, <span style="color: #558b2f;">TestKit</span> }
 <span style="color: #00796b;">import</span> org.scalatest.{ <span style="color: #558b2f;">WordSpec</span>, <span style="color: #558b2f;">BeforeAndAfterAll</span> }
 <span style="color: #00796b;">import</span> org.scalatest.matchers.<span style="color: #558b2f;">MustMatchers</span>
@@ -106,7 +106,7 @@ into a project.
     system.shutdown()
   }
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -115,7 +115,7 @@ You use it like this (extending the test part of my previous post on
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">object</span> <span style="color: #558b2f;">BarSpec</span> {
+<pre><code class="src src-scala"><span style="color: #00796b;">object</span> <span style="color: #558b2f;">BarSpec</span> {
   <span style="color: #00796b;">class</span> <span style="color: #0097A7;">Wrapper</span>(target<span style="color: #00796b;">:</span> <span style="color: #0097A7;">ActorRef</span>)
       <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Actor</span> {
     <span style="color: #00796b;">def</span> <span style="color: #0097A7;">receive</span> <span style="color: #00796b;">=</span> {
@@ -149,7 +149,7 @@ You use it like this (extending the test part of my previous post on
     }
   }
 }
-</pre>
+</code></pre>
 </div>
 
 <p>

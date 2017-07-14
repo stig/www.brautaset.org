@@ -127,7 +127,7 @@ hunt for a particularly egregious example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithObjectsAndKeys:
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithObjectsAndKeys:
     [<span style="color: #0097A7;">NSValue</span> valueWithPointer:SecKeychainLockAll],
         AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTION,
     @<span style="color: #689f38;">"SecKeychainLockAll"</span>,
@@ -135,7 +135,7 @@ hunt for a particularly egregious example:
     AI_LOCALIZED_SECURITY_ERROR_DESCRIPTION(err),
         AIKEYCHAIN_ERROR_USERINFO_ERRORDESCRIPTION,
     <span style="color: #558b2f;">nil</span>];
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -143,7 +143,7 @@ Doesn't that make a lot more sense like this?
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithKeysAndObjects:
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">userInfo</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithKeysAndObjects:
     AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTION,
         [<span style="color: #0097A7;">NSValue</span> valueWithPointer:SecKeychainLockAll],
     AIKEYCHAIN_ERROR_USERINFO_SECURITYFUNCTIONNAME,
@@ -151,7 +151,7 @@ Doesn't that make a lot more sense like this?
     AIKEYCHAIN_ERROR_USERINFO_ERRORDESCRIPTION,
         AI_LOCALIZED_SECURITY_ERROR_DESCRIPTION(err),
     <span style="color: #558b2f;">nil</span>];
-</pre>
+</code></pre>
 </div>
 
 <p>

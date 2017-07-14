@@ -117,7 +117,7 @@ gray grid on a pleasant blue background:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc">- (<span style="color: #0097A7;">void</span>)<span style="color: #0097A7;">awakeFromNib</span> {
+<pre><code class="src src-objc">- (<span style="color: #0097A7;">void</span>)<span style="color: #0097A7;">awakeFromNib</span> {
   <span style="color: #00796b;">self</span>.wantsLayer = <span style="color: #558b2f;">YES</span>;
   <span style="color: #0097A7;">CALayer</span> *<span style="color: #EF6C00;">grid</span> = <span style="color: #00796b;">self</span>.layer;
 
@@ -171,7 +171,7 @@ gray grid on a pleasant blue background:
     }
   }
 }
-</pre>
+</code></pre>
 </div>
 
 
@@ -193,7 +193,7 @@ adding the 0.5 to c &amp; r in the scale:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc">[cell addConstraint:
+<pre><code class="src src-objc">[cell addConstraint:
         [<span style="color: #0097A7;">CAConstraint</span>
           constraintWithAttribute: kCAConstraintWidth
                        relativeTo: @<span style="color: #689f38;">"superlayer"</span>
@@ -223,7 +223,7 @@ adding the 0.5 to c &amp; r in the scale:
                         attribute: kCAConstraintMaxY
                             scale: (r + 0.5) / (<span style="color: #0097A7;">float</span>)<span style="color: #0097A7;">rows</span>
                            <span style="color: #EF6C00;">offset</span>: 0]];
-</pre>
+</code></pre>
 </div>
 </div>
 <div id="postamble" class="status">

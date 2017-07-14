@@ -101,7 +101,7 @@ incredibly slow. Here it is:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-primes-seq</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-primes-seq</span>
   <span style="color: #673ab7;">"Stig's first naive prime number sequence generator."</span>
   []
   (<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">odd-seq</span> []
@@ -115,7 +115,7 @@ incredibly slow. Here it is:
   (<span style="color: #B71C1C;">cons</span> 2
         (<span style="color: #B71C1C;">filter</span> naive-prime?
                 (odd-seq))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -126,7 +126,7 @@ well in the process. This version is about twice as fast as the above:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-primes-seq4</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">naive-primes-seq4</span>
   <span style="color: #673ab7;">"Stig's 4th naive prime number sequence generator."</span>
   []
   (<span style="color: #00796b;">let</span> [odd-seq (<span style="color: #B71C1C;">iterate</span> #(+ <span style="color: #EF6C00;">%1</span> 2) 3)]
@@ -139,7 +139,7 @@ well in the process. This version is about twice as fast as the above:
     (<span style="color: #B71C1C;">cons</span> 2
           (<span style="color: #B71C1C;">filter</span> prime?
                   odd-seq))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -164,7 +164,7 @@ the set. My last attempt is shown below.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">sprimes</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">sprimes</span>
   <span style="color: #673ab7;">"Stream of prime numbers using a streaming</span>
 <span style="color: #673ab7;">  version of the Sieve of Eratosthenes. Take 2!"</span>
   []
@@ -194,7 +194,7 @@ the set. My last attempt is shown below.
                             (<span style="color: #B71C1C;">conj</span> s tc)
                             (+ 2 c)))))))))]
     (<span style="color: #B71C1C;">cons</span> 2 (next-prime {} #{} 3))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -210,7 +210,7 @@ factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">user=&gt; (<span style="color: #B71C1C;">time</span>
+<pre><code class="src src-clojure">user=&gt; (<span style="color: #B71C1C;">time</span>
         (<span style="color: #00796b;">doall</span>
          (<span style="color: #B71C1C;">take</span> 1
                (<span style="color: #B71C1C;">drop</span> 1000000
@@ -225,7 +225,7 @@ user=&gt; (<span style="color: #B71C1C;">time</span>
                      (grand-lazy-primes2)))))
 <span style="color: #689f38;">"Elapsed time: 13422.726 msecs"</span>
 (15485867)
-</pre>
+</code></pre>
 </div>
 
 <p>

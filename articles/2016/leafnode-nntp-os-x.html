@@ -155,8 +155,8 @@ First we have to install Leafnode. This is dirt simple with <a href="http://brew
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">brew install leafnode
-</pre>
+<pre><code class="src src-sh">brew install leafnode
+</code></pre>
 </div>
 </div>
 </div>
@@ -175,11 +175,11 @@ change <code>hostname</code> to suit you.)
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example <code>/usr/local/etc/leafnode/config</code></label><pre class="src src-conf" id="orgfe77707"><span style="color: #EF6C00;">expire</span> = 20
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Example <code>/usr/local/etc/leafnode/config</code></label><pre><code class="src src-conf" id="orgfe77707"><span style="color: #EF6C00;">expire</span> = 20
 <span style="color: #EF6C00;">server</span> = news.gmane.org
 <span style="color: #EF6C00;">initialfetch</span> = 100
 <span style="color: #EF6C00;">hostname</span> = yourhost.yourdomain.com
-</pre>
+</code></pre>
 </div>
 </div>
 </div>
@@ -229,7 +229,7 @@ articles from upstream. This is in listing <a href="#org4309c5c">2</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span><code>org.brautaset.fetchnews.plist</code></label><pre class="src src-xml" id="org4309c5c"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 2: </span><code>org.brautaset.fetchnews.plist</code></label><pre><code class="src src-xml" id="org4309c5c"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
 <span style="color: #689f38;">&lt;!</span><span style="color: #689f38;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="color: #0097A7;">plist</span> <span style="color: #EF6C00;">version</span>=<span style="color: #689f38;">"1.0"</span>&gt;
   &lt;<span style="color: #0097A7;">dict</span>&gt;
@@ -245,7 +245,7 @@ articles from upstream. This is in listing <a href="#org4309c5c">2</a>.
     &lt;<span style="color: #0097A7;">string</span>&gt;/usr/local/var/spool/news&lt;/<span style="color: #0097A7;">string</span>&gt;
   &lt;/<span style="color: #0097A7;">dict</span>&gt;
 &lt;/<span style="color: #0097A7;">plist</span>&gt;
-</pre>
+</code></pre>
 </div>
 </div>
 </div>
@@ -261,7 +261,7 @@ Find it in listing <a href="#org646c5ed">3</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span><code>org.brautaset.leafnode.plist</code></label><pre class="src src-xml" id="org646c5ed"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 3: </span><code>org.brautaset.leafnode.plist</code></label><pre><code class="src src-xml" id="org646c5ed"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
 <span style="color: #689f38;">&lt;!</span><span style="color: #689f38;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="color: #0097A7;">plist</span> <span style="color: #EF6C00;">version</span>=<span style="color: #689f38;">"1.0"</span>&gt;
   &lt;<span style="color: #0097A7;">dict</span>&gt;
@@ -288,7 +288,7 @@ Find it in listing <a href="#org646c5ed">3</a>.
     &lt;/<span style="color: #0097A7;">dict</span>&gt;
   &lt;/<span style="color: #0097A7;">dict</span>&gt;
 &lt;/<span style="color: #0097A7;">plist</span>&gt;
-</pre>
+</code></pre>
 </div>
 </div>
 </div>
@@ -304,7 +304,7 @@ is in listing <a href="#orgbf3f94e">4</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 4: </span><code>org.brautaset.texpire.plist</code></label><pre class="src src-xml" id="orgbf3f94e"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
+<label class="org-src-name"><span class="listing-number">Listing 4: </span><code>org.brautaset.texpire.plist</code></label><pre><code class="src src-xml" id="orgbf3f94e"><span style="color: #689f38;">&lt;?</span><span style="color: #00796b;">xml</span><span style="color: #689f38;"> </span><span style="color: #673ab7;">version="1.0" encoding="UTF-8"</span><span style="color: #689f38;">?&gt;</span>
 <span style="color: #689f38;">&lt;!</span><span style="color: #689f38;">DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
 &lt;<span style="color: #0097A7;">plist</span> <span style="color: #EF6C00;">version</span>=<span style="color: #689f38;">"1.0"</span>&gt;
   &lt;<span style="color: #0097A7;">dict</span>&gt;
@@ -320,7 +320,7 @@ is in listing <a href="#orgbf3f94e">4</a>.
     &lt;<span style="color: #0097A7;">string</span>&gt;/usr/local/var/spool/news&lt;/<span style="color: #0097A7;">string</span>&gt;
   &lt;/<span style="color: #0097A7;">dict</span>&gt;
 &lt;/<span style="color: #0097A7;">plist</span>&gt;
-</pre>
+</code></pre>
 </div>
 </div>
 </div>
@@ -337,8 +337,8 @@ manually now using the command in listing <a href="#org162e823">5</a>.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span>Starting the services with the <code>launchctl</code> command</label><pre class="src src-sh" id="org162e823">launchctl load ~/Library/LaunchAgents/org.brautaset.{fetchnews,texpire,leafnode}.plist
-</pre>
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Starting the services with the <code>launchctl</code> command</label><pre><code class="src src-sh" id="org162e823">launchctl load ~/Library/LaunchAgents/org.brautaset.{fetchnews,texpire,leafnode}.plist
+</code></pre>
 </div>
 
 <p>

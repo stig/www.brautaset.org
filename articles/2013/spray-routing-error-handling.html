@@ -96,7 +96,7 @@ otherwise a 500 will do. Here's my exceptionHandler:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #B71C1C;">implicit</span> <span style="color: #00796b;">def</span> <span style="color: #0097A7;">exceptionHandler</span>(
+<pre><code class="src src-scala"><span style="color: #B71C1C;">implicit</span> <span style="color: #00796b;">def</span> <span style="color: #0097A7;">exceptionHandler</span>(
   <span style="color: #B71C1C;">implicit</span> log<span style="color: #00796b;">:</span> <span style="color: #0097A7;">LoggingContext</span>) <span style="color: #00796b;">=</span>
   <span style="color: #558b2f;">ExceptionHandler</span> {
     <span style="color: #00796b;">case</span> <span style="color: #0097A7;">NotRegisteredException</span>(<span style="color: #00796b;">_</span>) <span style="color: #00796b;">=&gt;</span> ctx <span style="color: #00796b;">=&gt;</span>
@@ -107,7 +107,7 @@ otherwise a 500 will do. Here's my exceptionHandler:
         ctx.request)
       ctx.complete(<span style="color: #558b2f;">StatusCodes</span>.<span style="color: #558b2f;">BadRequest</span>, err)
   }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -115,10 +115,10 @@ I initially used <code>mapTo[Try[User]]</code> in my service:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">complete {
+<pre><code class="src src-scala">complete {
   (register ? req).mapTo[<span style="color: #558b2f;">Try</span>[<span style="color: #558b2f;">User</span>]]
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -128,8 +128,8 @@ I have to return an exception in the failure case:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="color: #558b2f;">Success</span>(<span style="color: #558b2f;">User</span>(...))
-</pre>
+<pre><code class="src src-scala">sender ! <span style="color: #558b2f;">Success</span>(<span style="color: #558b2f;">User</span>(...))
+</code></pre>
 </div>
 
 <p>
@@ -137,8 +137,8 @@ or
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="color: #558b2f;">Failure</span>(<span style="color: #558b2f;">NotRegisteredException</span>(...))
-</pre>
+<pre><code class="src src-scala">sender ! <span style="color: #558b2f;">Failure</span>(<span style="color: #558b2f;">NotRegisteredException</span>(...))
+</code></pre>
 </div>
 
 <p>
@@ -150,14 +150,14 @@ to get the effect I want:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">complete {
+<pre><code class="src src-scala">complete {
   (register ? req).collect {
     <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">u</span> <span style="color: #00796b;">:</span> <span style="color: #0097A7;">User</span> <span style="color: #00796b;">=&gt;</span> u
     <span style="color: #00796b;">case</span> <span style="color: #558b2f;">NotRegistered</span> <span style="color: #00796b;">=&gt;</span>
       <span style="color: #00796b;">throw</span> <span style="color: #558b2f;">NotRegisteredException</span>(req.email)
   }
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -166,8 +166,8 @@ do this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="color: #558b2f;">User</span>(...)
-</pre>
+<pre><code class="src src-scala">sender ! <span style="color: #558b2f;">User</span>(...)
+</code></pre>
 </div>
 
 <p>
@@ -175,8 +175,8 @@ or
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">sender ! <span style="color: #558b2f;">NotRegistered</span>
-</pre>
+<pre><code class="src src-scala">sender ! <span style="color: #558b2f;">NotRegistered</span>
+</code></pre>
 </div>
 
 <p>

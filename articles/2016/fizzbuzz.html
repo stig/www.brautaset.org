@@ -109,10 +109,10 @@ chars) and uses no conditionals:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">seq 5 5 100 | xargs -IX echo <span style="color: #689f38;">"Xs/[0-9]*/buzz/"</span> &gt; f
+<pre><code class="src src-sh">seq 5 5 100 | xargs -IX echo <span style="color: #689f38;">"Xs/[0-9]*/buzz/"</span> &gt; f
 seq 3 3 100 | xargs -IX echo <span style="color: #689f38;">"Xs/[0-9]*/fizz/"</span> &gt;&gt; f
 seq 1 100 | sed -f f
-</pre>
+</code></pre>
 </div>
 
 <p>

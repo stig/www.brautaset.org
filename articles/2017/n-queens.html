@@ -225,10 +225,10 @@ index. Job done!
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-west?</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-west?</span>
   [board row]
   (<span style="color: #B71C1C;">not-any?</span> #{row} board))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -241,7 +241,7 @@ direction.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-southwest?</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-southwest?</span>
   [board row]
   (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
          row (<span style="color: #B71C1C;">dec</span> row)]
@@ -254,7 +254,7 @@ direction.
 
       <span style="color: #B71C1C;">:default</span>
       (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">dec</span> row)))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -265,7 +265,7 @@ value our rows can have.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-northwest?</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe-northwest?</span>
   [board row size]
   (<span style="color: #00796b;">loop</span> [col (<span style="color: #B71C1C;">dec</span> (<span style="color: #B71C1C;">count</span> board))
          row (<span style="color: #B71C1C;">inc</span> row)]
@@ -278,7 +278,7 @@ value our rows can have.
 
       <span style="color: #B71C1C;">:default</span>
       (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">dec</span> col) (<span style="color: #B71C1C;">inc</span> row)))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -287,7 +287,7 @@ single method, <code>and</code>-ing them all together:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe?</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn-</span> <span style="color: #0097A7;">safe?</span>
   <span style="color: #673ab7;">"Check if the proposed position is a safe one</span>
 <span style="color: #673ab7;">  to put a Queen such that it cannot capture</span>
 <span style="color: #673ab7;">  any of the existing queens on the board."</span>
@@ -296,7 +296,7 @@ single method, <code>and</code>-ing them all together:
    (safe-west? board row)
    (safe-southwest? board row)
    (safe-northwest? board row size)))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -305,7 +305,7 @@ board of size \(N\):
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">queens</span>
+<pre><code class="src src-clojure">(<span style="color: #00796b;">defn</span> <span style="color: #0097A7;">queens</span>
   <span style="color: #673ab7;">"Finds all solutions to the N Queens</span>
 <span style="color: #673ab7;">  problem for a given board size."</span>
   [size]
@@ -325,7 +325,7 @@ board of size \(N\):
         (<span style="color: #00796b;">if</span> (safe? board row size)
           (<span style="color: #00796b;">recur</span> (<span style="color: #B71C1C;">conj</span> board row) 0 acc)
           (<span style="color: #00796b;">recur</span> board (<span style="color: #B71C1C;">inc</span> row) acc))))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -342,7 +342,7 @@ board generation was different.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure">(<span style="color: #B71C1C;">deftest</span> <span style="color: #0097A7;">n-queens-test</span>
+<pre><code class="src src-clojure">(<span style="color: #B71C1C;">deftest</span> <span style="color: #0097A7;">n-queens-test</span>
   (<span style="color: #B71C1C;">testing</span> <span style="color: #689f38;">"no solution small boards"</span>
     (<span style="color: #B71C1C;">is</span> (<span style="color: #B71C1C;">empty?</span> (queens 0)))
     (<span style="color: #B71C1C;">is</span> (<span style="color: #B71C1C;">empty?</span> (queens 2)))
@@ -373,7 +373,7 @@ board generation was different.
            (<span style="color: #B71C1C;">set</span> (queens 6)))))
   (<span style="color: #B71C1C;">testing</span> <span style="color: #689f38;">"N &gt; 8"</span>
     (<span style="color: #B71C1C;">is</span> (<span style="color: #B71C1C;">vector?</span> (queens 9)))))
-</pre>
+</code></pre>
 </div>
 
 <p>

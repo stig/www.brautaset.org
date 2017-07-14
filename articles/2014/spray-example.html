@@ -131,11 +131,11 @@ error, depending on how you look at it) in stride:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala">onSuccess(model ? id) {
+<pre><code class="src src-scala">onSuccess(model ? id) {
     <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">item</span><span style="color: #00796b;">:</span> <span style="color: #0097A7;">Item</span> <span style="color: #00796b;">=&gt;</span> complete(<span style="color: #558b2f;">OK</span>, item)
     <span style="color: #00796b;">case</span> <span style="color: #558b2f;">ItemNotFound</span> <span style="color: #00796b;">=&gt;</span> complete(<span style="color: #558b2f;">NotFound</span>)
 }
-</pre>
+</code></pre>
 </div>
 
 <p>

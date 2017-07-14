@@ -97,7 +97,7 @@ it is (import &amp; package lines omitted for brevity):
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">PostgresSpec</span>
+<pre><code class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">PostgresSpec</span>
     <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Suite</span>
     <span style="color: #00796b;">with</span> <span style="color: #0097A7;">BeforeAndAfterAll</span> {
   <span style="color: #B71C1C;">private</span> <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">dbname</span> <span style="color: #00796b;">=</span>
@@ -124,7 +124,7 @@ it is (import &amp; package lines omitted for brevity):
   <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">database</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">Database</span>.forURL(
     s<span style="color: #689f38;">"jdbc:postgresql:</span><span style="color: #EF6C00;">$dbname</span><span style="color: #689f38;">"</span>, driver <span style="color: #00796b;">=</span> driver)
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -136,7 +136,7 @@ test. Here's an example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">PostgresUserDaoSpec</span>
+<pre><code class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">PostgresUserDaoSpec</span>
     <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">FlatSpec</span>
     <span style="color: #00796b;">with</span> <span style="color: #0097A7;">PostgresSpec</span>
     <span style="color: #00796b;">with</span> <span style="color: #0097A7;">MustMatchers</span>
@@ -194,7 +194,7 @@ test. Here's an example:
 
   <span style="color: #607d8b;">// </span><span style="color: #607d8b;">... more tests ...</span>
 }
-</pre>
+</code></pre>
 </div>
 
 <p>

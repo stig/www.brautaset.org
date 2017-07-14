@@ -129,9 +129,9 @@ candidate keys:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">setq</span> sb/hydra-selectors
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">setq</span> sb/hydra-selectors
      <span style="color: #689f38;">"abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>)
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -145,12 +145,12 @@ looks like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/sort-themes</span> (themes)
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/sort-themes</span> (themes)
   (sort themes
         (<span style="color: #00796b;">lambda</span> (a b)
           (string&lt; (symbol-name a) 
                    (symbol-name b)))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -166,13 +166,13 @@ the mapping function. Just what I needed! As a bonus it stops when
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/hydra-load-theme-heads</span> (themes)
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/hydra-load-theme-heads</span> (themes)
   (mapcar* (<span style="color: #00796b;">lambda</span> (a b)
              (list (char-to-string a)
                    `(sb/load-theme ',b)
                    (symbol-name b)))
            sb/hydra-selectors themes))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -191,7 +191,7 @@ like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
+<pre><code class="src src-emacs-lisp">(eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
          (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
          <span style="color: #689f38;">"Select Theme"</span>
          ,@(sb/hydra-load-theme-heads
@@ -199,7 +199,7 @@ like so:
              (custom-available-themes)))
          (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
          (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -207,8 +207,8 @@ We then just need to assign a keybinding, which I do like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> . sb/hydra-select-themes/body))
-</pre>
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> . sb/hydra-select-themes/body))
+</code></pre>
 </div>
 
 <p>
@@ -221,7 +221,7 @@ this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
             (eval `(<span style="color: #00796b;">defhydra</span> sb/hydra-select-themes
                      (<span style="color: #B71C1C;">:hint</span> nil <span style="color: #B71C1C;">:color</span> pink)
                      <span style="color: #689f38;">"Select Theme"</span>
@@ -230,7 +230,7 @@ this:
                          (custom-available-themes)))
                      (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
                      (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -253,7 +253,7 @@ here it is:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">bind-keys</span> (<span style="color: #689f38;">"C-c w t"</span> .
             (<span style="color: #00796b;">lambda</span> ()
               (<span style="color: #00796b;">interactive</span>)
               (call-interactively
@@ -265,7 +265,7 @@ here it is:
                             (custom-available-themes)))
                         (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
                         (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -273,7 +273,7 @@ For completeness here's the full source for this switcher:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/disable-all-themes</span> ()
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">defun</span> <span style="color: #0097A7;">sb/disable-all-themes</span> ()
   (<span style="color: #00796b;">interactive</span>)
   (mapc #'disable-theme custom-enabled-themes))
 
@@ -311,7 +311,7 @@ For completeness here's the full source for this switcher:
                             (custom-available-themes)))
                         (<span style="color: #689f38;">"DEL"</span> (sb/disable-all-themes))
                         (<span style="color: #689f38;">"RET"</span> nil <span style="color: #689f38;">"done"</span> <span style="color: #B71C1C;">:color</span> blue)))))))
-</pre>
+</code></pre>
 </div>
 
 <p>

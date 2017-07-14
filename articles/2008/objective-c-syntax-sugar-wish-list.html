@@ -89,7 +89,7 @@ suspect&#x2014;no more so than in for example Java.) It goes like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">array</span> = [<span style="color: #0097A7;">NSArray</span> arrayWithObjects:
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">array</span> = [<span style="color: #0097A7;">NSArray</span> arrayWithObjects:
     @<span style="color: #689f38;">"one"</span>, @<span style="color: #689f38;">"two"</span>, @<span style="color: #689f38;">"three"</span>, <span style="color: #558b2f;">nil</span>];
 
 <span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">dict</span> = [<span style="color: #0097A7;">NSDictionary</span> dictionaryWithObjectsAndKeys:
@@ -97,7 +97,7 @@ suspect&#x2014;no more so than in for example Java.) It goes like this:
     [<span style="color: #0097A7;">NSNumber</span> numberWithInteger:2], @<span style="color: #689f38;">"two"</span>,
     [<span style="color: #0097A7;">NSNumber</span> numberWithBool:<span style="color: #558b2f;">YES</span>], @<span style="color: #689f38;">"true"</span>,
     <span style="color: #558b2f;">nil</span>];
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -106,8 +106,8 @@ are created with a special syntax, like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSString</span> *<span style="color: #EF6C00;">string</span> = @<span style="color: #689f38;">"This is a string"</span>;
-</pre>
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSString</span> *<span style="color: #EF6C00;">string</span> = @<span style="color: #689f38;">"This is a string"</span>;
+</code></pre>
 </div>
 
 <p>
@@ -116,14 +116,14 @@ The syntax would be something like this:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">array</span> = @[ @<span style="color: #689f38;">"one"</span>, @<span style="color: #689f38;">"two"</span>, @<span style="color: #689f38;">"three"</span> ];
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSArray</span> *<span style="color: #EF6C00;">array</span> = @[ @<span style="color: #689f38;">"one"</span>, @<span style="color: #689f38;">"two"</span>, @<span style="color: #689f38;">"three"</span> ];
 
 <span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">dict</span> = @{
     @<span style="color: #689f38;">"one"</span>, [<span style="color: #0097A7;">NSNumber</span> numberWithInteger:1],
     @<span style="color: #689f38;">"two"</span>, [<span style="color: #0097A7;">NSNumber</span> numberWithInteger:2],
     @<span style="color: #689f38;">"true"</span>, [<span style="color: #0097A7;">NSNumber</span> numberWithBool:<span style="color: #558b2f;">YES</span>],
 };
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -140,13 +140,13 @@ syntax:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">@234</span>    <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithInteger:234]</span>
+<pre><code class="src src-objc"><span style="color: #0097A7;">@234</span>    <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithInteger:234]</span>
 @-14    <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithInteger:-14]</span>
 @12.0   <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithDouble:12.0]</span>
 @-0.01  <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithDouble:-0.01]</span>
 @YES    <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithBool:YES]</span>
 @NO     <span style="color: #607d8b;">// </span><span style="color: #607d8b;">equivalent to [NSNumber numberWithBool:NO]</span>
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -154,12 +154,12 @@ The initial dictionary creation example would then simply become:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">dict</span> = @{
+<pre><code class="src src-objc"><span style="color: #0097A7;">NSDictionary</span> *<span style="color: #EF6C00;">dict</span> = @{
     @<span style="color: #689f38;">"one"</span>, @1,
     @<span style="color: #689f38;">"two"</span>, @2,
     @<span style="color: #689f38;">"true"</span>, @YES,
 };
-</pre>
+</code></pre>
 </div>
 
 <p>

@@ -91,10 +91,10 @@ may have to cast the second argument:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sql"><span style="color: #00796b;">SELECT</span> foo_id, REPEAT(<span style="color: #689f38;">'#'</span>, <span style="color: #B71C1C;">COUNT</span>(*)::<span style="color: #0097A7;">INT</span>)
+<pre><code class="src src-sql"><span style="color: #00796b;">SELECT</span> foo_id, REPEAT(<span style="color: #689f38;">'#'</span>, <span style="color: #B71C1C;">COUNT</span>(*)::<span style="color: #0097A7;">INT</span>)
 <span style="color: #00796b;">FROM</span> bar
 <span style="color: #00796b;">GROUP</span> <span style="color: #00796b;">BY</span> 1;
-</pre>
+</code></pre>
 </div>
 </div>
 <div id="postamble" class="status">

@@ -108,7 +108,7 @@ only one tab, but here is the code I'm using now:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-apples"><span style="color: #00796b;">on</span> <span style="color: #0097A7;">run</span> desiredColour
+<pre><code class="src src-apples"><span style="color: #00796b;">on</span> <span style="color: #0097A7;">run</span> desiredColour
     <span style="color: #00796b;">if</span> length <span style="color: #00796b; font-style: italic;">of</span> desiredColour<span style="color: #0097A7;"> &gt; </span>0
         <span style="color: #00796b; font-style: italic;">set</span> <span style="color: #EF6C00;">colour</span> <span style="color: #00796b; font-style: italic;">to</span> desiredColour
     <span style="color: #00796b;">else</span>
@@ -123,7 +123,7 @@ only one tab, but here is the code I'm using now:
      <span style="color: #00796b;">end</span> <span style="color: #00796b;">tell</span>
   <span style="color: #00796b;">end</span> <span style="color: #00796b;">tell</span>
 <span style="color: #00796b;">end</span> <span style="color: #00796b; font-style: italic;">run</span>
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -132,8 +132,8 @@ commandline like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">osascript ~/Dotfiles/termcolours.scpt red
-</pre>
+<pre><code class="src src-sh">osascript ~/Dotfiles/termcolours.scpt red
+</code></pre>
 </div>
 
 <p>
@@ -144,8 +144,8 @@ colour:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">osascript ~/Dotfiles/termcolours.scpt
-</pre>
+<pre><code class="src src-sh">osascript ~/Dotfiles/termcolours.scpt
+</code></pre>
 </div>
 
 <p>
@@ -154,9 +154,9 @@ can put the following in my <code>~/.ssh/config</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-ssh">Host my-live-machine.example.com
+<pre><code class="src src-ssh">Host my-live-machine.example.com
     LocalCommand osascript ~/Dotfiles/termcolours.scpt red
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -173,11 +173,11 @@ following in <code>~/.config/fish/functions/ssh.fish</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-fish"><span style="color: #00796b;">function</span> <span style="color: #0097A7;">ssh</span> <span style="color: #2196f3;">--description</span> <span style="color: #689f38;">'wrapper around ssh to reset term colours after exit'</span>
+<pre><code class="src src-fish"><span style="color: #00796b;">function</span> <span style="color: #0097A7;">ssh</span> <span style="color: #2196f3;">--description</span> <span style="color: #689f38;">'wrapper around ssh to reset term colours after exit'</span>
         <span style="color: #B71C1C;">/usr/bin/ssh</span> <span style="color: #689f38;">$</span><span style="color: #EF6C00;">argv</span>
         <span style="color: #B71C1C;">osascript</span> ~/Dotfiles/termcolours.scpt
 <span style="color: #00796b;">end</span>
-</pre>
+</code></pre>
 </div>
 
 <p>

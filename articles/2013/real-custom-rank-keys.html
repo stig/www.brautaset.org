@@ -155,11 +155,11 @@ brute-forced it using the following Scala program:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">def</span> <span style="color: #0097A7;">g</span>(n<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>, r<span style="color: #00796b;">:</span><span style="color: #0097A7;">Double</span>, lim<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Double</span>)<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>
+<pre><code class="src src-scala"><span style="color: #00796b;">def</span> <span style="color: #0097A7;">g</span>(n<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>, r<span style="color: #00796b;">:</span><span style="color: #0097A7;">Double</span>, lim<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Double</span>)<span style="color: #00796b;">:</span> <span style="color: #0097A7;">Int</span>
     <span style="color: #00796b;">=</span> <span style="color: #00796b;">if</span> (r &lt; lim) n <span style="color: #00796b;">else</span> g(n+<span style="color: #558b2f;">1</span>, r / <span style="color: #558b2f;">2</span>, lim)
 g(<span style="color: #558b2f;">0</span>, <span style="color: #558b2f;">1</span>, <span style="color: #558b2f;">Float</span>.<span style="color: #558b2f;">MinPositiveValue</span>)
 g(<span style="color: #558b2f;">0</span>, <span style="color: #558b2f;">1</span>, <span style="color: #558b2f;">Double</span>.<span style="color: #558b2f;">MinPositiveValue</span>)
-</pre>
+</code></pre>
 </div>
 
 <p>

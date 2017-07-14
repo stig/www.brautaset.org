@@ -89,9 +89,9 @@ parameter, this is simple. But what if it does not?
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">val</span> <span style="color: #EF6C00;">foo</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">TestProbe</span>()
+<pre><code class="src src-scala"><span style="color: #00796b;">val</span> <span style="color: #EF6C00;">foo</span> <span style="color: #00796b;">=</span> <span style="color: #558b2f;">TestProbe</span>()
 <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">act</span> <span style="color: #00796b;">=</span> system.actorOf(<span style="color: #558b2f;">Props</span>(<span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span>(foo.ref)))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -102,7 +102,7 @@ setup from my (admittedly rather limited) experience with Akka so far:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">ChildrenProvider</span> {
+<pre><code class="src src-scala"><span style="color: #00796b;">trait</span> <span style="color: #0097A7;">ChildrenProvider</span> {
   <span style="color: #00796b;">def</span> <span style="color: #0097A7;">newFoo</span><span style="color: #00796b;">:</span> <span style="color: #0097A7;">Actor</span>
 }
 
@@ -123,7 +123,7 @@ setup from my (admittedly rather limited) experience with Akka so far:
     <span style="color: #607d8b;">// </span><span style="color: #607d8b;">...</span>
   }
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -149,7 +149,7 @@ parameter:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">Wrapper</span>(target<span style="color: #00796b;">:</span> <span style="color: #0097A7;">ActorRef</span>)
+<pre><code class="src src-scala"><span style="color: #00796b;">class</span> <span style="color: #0097A7;">Wrapper</span>(target<span style="color: #00796b;">:</span> <span style="color: #0097A7;">ActorRef</span>)
     <span style="color: #00796b;">extends</span> <span style="color: #0097A7;">Actor</span> {
   <span style="color: #00796b;">def</span> <span style="color: #0097A7;">receive</span> <span style="color: #00796b;">=</span> {
     <span style="color: #00796b;">case</span> <span style="color: #EF6C00;">x</span> <span style="color: #00796b;">=&gt;</span> target forward x
@@ -165,7 +165,7 @@ parameter:
   <span style="color: #00796b;">val</span> <span style="color: #EF6C00;">actor</span> <span style="color: #00796b;">=</span> context.actorOf(
     <span style="color: #558b2f;">Props</span>(<span style="color: #00796b;">new</span> <span style="color: #0097A7;">Bar</span> <span style="color: #00796b;">with</span> <span style="color: #0097A7;">TestChildrenProvider</span>))
 }
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -174,7 +174,7 @@ so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scala"><span style="color: #689f38;">"Bar"</span> should {
+<pre><code class="src src-scala"><span style="color: #689f38;">"Bar"</span> should {
   <span style="color: #689f38;">"involve child in doing something"</span>
   in <span style="color: #00796b;">new</span> <span style="color: #0097A7;">TestCase</span> {
     actor ! <span style="color: #689f38;">"SomeMessage"</span>
@@ -183,7 +183,7 @@ so:
     expectMsg(<span style="color: #689f38;">"ReplyFromParent"</span>)
   }
 }
-</pre>
+</code></pre>
 </div>
 
 <p>

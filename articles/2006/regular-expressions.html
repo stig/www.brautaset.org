@@ -96,8 +96,8 @@ running it:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1(.)\2(.)\3'</span> /usr/share/dict/words
-</pre>
+<pre><code class="src src-sh">egrep <span style="color: #689f38;">'(.)\1(.)\2(.)\3'</span> /usr/share/dict/words
+</code></pre>
 </div>
 
 <pre class="example">
@@ -116,8 +116,8 @@ have to be consecutive? That's easy enough to check, so let's do that:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3'</span> /usr/share/dict/words | wc -l
-</pre>
+<pre><code class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3'</span> /usr/share/dict/words | wc -l
+</code></pre>
 </div>
 
 <pre class="example">
@@ -131,8 +131,8 @@ them? (Non consecutive?)
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3.*(.)\4'</span> /usr/share/dict/words
-</pre>
+<pre><code class="src src-sh">egrep <span style="color: #689f38;">'(.)\1.*(.)\2.*(.)\3.*(.)\4'</span> /usr/share/dict/words
+</code></pre>
 </div>
 
 <pre class="example">

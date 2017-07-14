@@ -87,8 +87,8 @@ little effort. Let's remind ourselves how the one-liner looks:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
-</pre>
+<pre><code class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
+</code></pre>
 </div>
 
 <p>
@@ -98,8 +98,8 @@ way to get around that is to pre-pend the command with echo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
-</pre>
+<pre><code class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span>
+</code></pre>
 </div>
 
 <p>
@@ -111,8 +111,8 @@ or you can pipe the result to <code>sh -</code>; the latter being my favourite:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span> | sh -
-</pre>
+<pre><code class="src src-sh"><span style="color: #00796b;">for</span> f<span style="color: #00796b;"> in</span> *.doc ; <span style="color: #00796b;">do </span><span style="color: #B71C1C;">echo</span> mv $<span style="color: #EF6C00;">f</span> ${<span style="color: #EF6C00;">f</span>%.doc}.txt ; <span style="color: #00796b;">done</span> | sh -
+</code></pre>
 </div>
 
 <p>
