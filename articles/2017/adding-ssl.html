@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adding SSL to this Blog</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <a href="/"><img src="/images/logo.png" alt="Superloopy Logo"/></a>
+  <nav>
+    <ul>
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
+      <li>Licence: <a accesskey="l" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Adding SSL to this Blog</h1>
+<div class="abstract">
+<p>
+I outline the steps I plan to take to add SSL to this blog, leveraging
+AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
+CloudFormation.)
+</p>
+
+</div>
+<p>
+Because this is basic static site I've not previously bothered with
+SSL. But as <a href="https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view">Chrome and Firefox will require HTTP/2 requests to be
+encrypted</a>, and with <a href="https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure">Chrome marking HTTP As Non-Secure</a>, I figure it's
+time to do something about that.
+</p>
+
+<p>
+GitHub Pages, where this site is currently hosted, regretfully <a href="https://github.com/isaacs/github/issues/156">doesn't
+support HTTPS for custom domains</a>. (It does, however, support it for
+<a href="https://github.com/blog/2186-https-for-github-pages"><code>$username.github.io</code></a> domains.) I was pleasantly surprised how
+convenient Amazon Certificate Manager &amp; CloudFront is for obtaining &amp;
+deploying certificates. I thought I would use that for this project. I
+also want to do this with CloudFormation, so I have a repeatable setup
+at the end. (I have a couple other sites that can benefit from SSL
+too.)
+</p>
+
+<p>
+For hosting the content there's a couple different approaches I could
+take:
+</p>
+<ol class="org-ol">
+<li>Continuing to publish static HTML to stig.github.io and use that
+as the Origin</li>
+<li>Publish static HTML to S3 and use <i>that</i> as the Origin</li>
+</ol>
+<p>
+Since I no longer use Jekyll but check in generated files, switching
+to publishing them to S3 instead is my preferred option.
+</p>
+
+<p>
+There is an additional issue to solve. I want the Apex domain (i.e.
+superloopy.io) redirecting to www.superloopy.io. This is currently
+handled by [[htt I would like to use S3 to handle this
+redirection, as outlined in the <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting a Static Website on Amazon S3</a>
+documentation. However, you cannot CNAME the Apex domain to such a
+bucket&#x2014;unless you rely on Amazon Route 53 for your DNS needs. So the
+<i>first</i> part of this project will probably be to delegate<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> my DNS
+to Route 53.
+</p>
+
+<p>
+Thus, a plan emerges:
+</p>
+<ol class="org-ol">
+<li>Delegate DNS for superloopy.io to AWS Route 53</li>
+<li>Handle redirects from Apex domain to www with an S3 bucket</li>
+<li>Change my blog publishing setup to populate an S3 bucket</li>
+<li>Serve my blog from this S3 bucket, using CloudFront to deploy an
+ACM-provided cert</li>
+</ol>
+
+<p>
+One thing I have in abundant supply is lack of time, so I'm afraid
+those steps will have to be the subject of future posts.
+</p>
+<div id="footnotes"><!--Footnotes-->
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+I don't want to transfer the actual domain, at least yet, as
+I've been happy with Gandi for many years and they are a bit cheaper
+than AWS for <code>.io</code> domains.
+</p></div></div>
+
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 16 July 2017</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

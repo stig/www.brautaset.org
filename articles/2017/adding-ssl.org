@@ -1,0 +1,55 @@
+#+title: Adding SSL to this Blog
+#+date: <2017-07-16 Sun>
+#+begin_abstract
+I outline the steps I plan to take to add SSL to this blog, leveraging
+AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
+CloudFormation.)
+#+end_abstract
+#+index: SSL!Adding to this blog
+
+Because this is basic static site I've not previously bothered with
+SSL. But as [[https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view][Chrome and Firefox will require HTTP/2 requests to be
+encrypted]], and with [[https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure][Chrome marking HTTP As Non-Secure]], I figure it's
+time to do something about that.
+
+GitHub Pages, where this site is currently hosted, regretfully [[https://github.com/isaacs/github/issues/156][doesn't
+support HTTPS for custom domains]]. (It does, however, support it for
+[[https://github.com/blog/2186-https-for-github-pages][=$username.github.io=]] domains.) I was pleasantly surprised how
+convenient Amazon Certificate Manager & CloudFront is for obtaining &
+deploying certificates. I thought I would use that for this project. I
+also want to do this with CloudFormation, so I have a repeatable setup
+at the end. (I have a couple other sites that can benefit from SSL
+too.)
+
+For hosting the content there's a couple different approaches I could
+take:
+1. Continuing to publish static HTML to stig.github.io and use that
+   as the Origin
+2. Publish static HTML to S3 and use /that/ as the Origin
+Since I no longer use Jekyll but check in generated files, switching
+to publishing them to S3 instead is my preferred option.
+
+There is an additional issue to solve. I want the Apex domain (i.e.
+superloopy.io) redirecting to www.superloopy.io. This is currently
+handled by [[htt I would like to use S3 to handle this
+redirection, as outlined in the [[https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html][Hosting a Static Website on Amazon S3]]
+documentation. However, you cannot CNAME the Apex domain to such a
+bucket---unless you rely on Amazon Route 53 for your DNS needs. So the
+/first/ part of this project will probably be to delegate[fn:1] my DNS
+to Route 53.
+
+Thus, a plan emerges:
+1. Delegate DNS for superloopy.io to AWS Route 53
+2. Handle redirects from Apex domain to www with an S3 bucket
+3. Change my blog publishing setup to populate an S3 bucket
+5. Serve my blog from this S3 bucket, using CloudFront to deploy an
+   ACM-provided cert
+
+One thing I have in abundant supply is lack of time, so I'm afraid
+those steps will have to be the subject of future posts.
+
+* Footnotes
+
+[fn:1] I don't want to transfer the actual domain, at least yet, as
+I've been happy with Gandi for many years and they are a bit cheaper
+than AWS for =.io= domains.

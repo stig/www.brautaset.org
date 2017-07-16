@@ -126,6 +126,8 @@
     - [[file:articles/2013/spray-routing-error-handling.org][Scala DSL routing error handling]]
   - SQL
     - [[file:articles/2006/generating-bar-charts-with-sql.org][Generating Bar Charts]]
+  - SSL
+    - [[file:articles/2017/adding-ssl.org][Adding to this blog]]
 * T
   - Talk
     - [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]]

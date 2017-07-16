@@ -10,11 +10,17 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+** [[file:articles/2017/adding-ssl.org][Adding SSL to this Blog]]
+
+I outline the steps I plan to take to add SSL to this blog, leveraging
+AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
+CloudFormation.)
+
 ** [[file:articles/2017/blogging-with-org-mode-update.org][Blogging with Org mode---update]]
 
 A short experience report about blogging with Org mode.
 
-**  [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]
+** [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]
 
 Detailing my trials and tribulations with the "Potter" coding dojo
 problem, with code examples in Clojure.
