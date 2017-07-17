@@ -14,12 +14,12 @@ time to do something about that.
 
 GitHub Pages, where this site is currently hosted, regretfully [[https://github.com/isaacs/github/issues/156][doesn't
 support HTTPS for custom domains]]. (It does, however, support it for
-[[https://github.com/blog/2186-https-for-github-pages][=$username.github.io=]] domains.) I was pleasantly surprised how
-convenient Amazon Certificate Manager & CloudFront is for obtaining &
-deploying certificates. I thought I would use that for this project. I
-also want to do this with CloudFormation, so I have a repeatable setup
-at the end. (I have a couple other sites that can benefit from SSL
-too.)
+[[https://github.com/blog/2186-https-for-github-pages][=$username.github.io=]] domains.) At work I was recently pleasantly
+surprised how convenient Amazon Certificate Manager & CloudFront is
+for obtaining & deploying certificates, and I thought I would use that
+for this project. I also want to do this with CloudFormation, so I
+have a repeatable setup at the end. (I have a couple other sites that
+can benefit from SSL too.)
 
 For hosting the content there's a couple different approaches I could
 take:
