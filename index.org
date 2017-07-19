@@ -10,6 +10,11 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+** [[file:articles/2017/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]]
+
+In which I delegate DNS from Gandi to AWS Route 53, and learn how to
+configure Route 53 with CloudFormation & Sceptre.
+
 ** [[file:articles/2017/adding-ssl.org][Adding SSL to this Blog]]
 
 I outline the steps I plan to take to add SSL to this blog, leveraging

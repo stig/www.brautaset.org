@@ -1,0 +1,298 @@
+#+title: Managing AWS Route 53 with CloudFormation
+#+date: <2017-07-19 Wed>
+#+bind: org-confirm-babel-evaluate nil
+#+begin_abstract
+In which I delegate DNS from Gandi to AWS Route 53, and learn how to
+configure Route 53 with CloudFormation & Sceptre.
+#+end_abstract
+#+index: CloudFormation!Managing Route 53 with
+#+index: DNS!Managing with CloudFormation
+
+* Introduction
+
+In my [[file:adding-ssl.org][previous post]] I outlined my plan for adding SSL to this blog.
+This post is me exploring the first step in that plan: managing DNS in
+AWS Route 53 via CloudFormation.
+
+Gandi has been great for the most part but using their DNS
+configuration is my least favourite part of interacting with their
+site. Route 53 is a lot less frustrating, but I've got the exact same
+base DNS setup I want to replicate across at least three domains that
+I own and I don't want to do it all manually. Also, I want to learn
+more about CloudFormation.
+
+#+toc: headlines
+#+toc: listings
+
+* Discussion
+
+I started this journey by reading through the [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html][CloudFormation User
+Guide]]. It is alright at explaining how the various bits in the
+templates fit together, but I feel there's a bit missing with regards
+to application. They are very firm in their recommendation that you
+should put your templates in revision control, but they don't really
+show any techniques for how you would go about that. They mostly use
+the AWS console for interacting with CloudFormation which I do not
+want to do.
+
+Enter [[https://sceptre.cloudreach.com/latest/about.html][Sceptre]], an unopinionated tool to drive CloudFormation. Its
+[[https://sceptre.cloudreach.com/latest/docs/get_started.html][Getting Started Guide]] starts out by explaining the directory layout
+and config files involved, and is a good companion to the
+CloudFormation docs in my opinion.
+
+* Creating a Route53 HostedZone with CloudFormation
+
+To manage Route 53 records with CloudFormation you need to use a
+~AWS::Route53::RecordSet~. One of /its/ required properties is a
+~HostedZone~ (or ~HostedZoneName~) property---so I started there. Turns
+out creating a zone is very easy. My complete template (stored in
+=templates/dns-zone.yaml=) looks like this:
+
+#+caption: =templates/dns-zone.yaml=
+#+name: lst:tpl-zone
+#+BEGIN_SRC yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  DomainName:
+    Type: String
+    Default: example.net
+Resources:
+  DNS:
+    Type: "AWS::Route53::HostedZone"
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneConfig:
+        Comment: !Join
+          - " "
+          - ["My hosted zone for", !Ref DomainName]
+#+END_SRC
+
+I set up a single required parameter, the domain name we want to
+create a zone for, and create a single resource of type. The only
+thing that caused me a bit of trouble here was getting the ~!Join~
+syntax right for the comment.
+
+With a template in place we need an environment & stack config so we
+can create a stack. Normally an "environment" is something like "dev",
+"test", "prod" but I won't bother with that for my blog so I'll use
+"superloopy" for the environment name for this blog here at
+[[http://www.superloopy.io][superloopy.io]]. I create a file called =config/superloopy/dns-zone.yaml=
+that looks like this:
+
+#+caption: =config/superloopy/dns-zone.yaml=
+#+name: lst:cfg-zone
+#+BEGIN_SRC yaml
+template_path: templates/dns-zone.yaml
+parameters:
+    DomainName: superloopy.io
+#+END_SRC
+
+Now we're ready to run Sceptre! Note: I don't worry about breaking my
+blog at this point because I haven't yet told Gandi to use AWS' name
+servers. I execute sceptre from the top-level directory like so:
+
+#+BEGIN_SRC fish
+sceptre create-stack superloopy dns-zone
+#+END_SRC
+
+Here's the result of running that command, with timestamps & common
+prefixes removed:
+
+: Creating stack
+: sb-superloopy-dns-zone AWS::CloudFormation::Stack CREATE_IN_PROGRESS User Initiated
+: DNS AWS::Route53::HostedZone CREATE_IN_PROGRESS
+: DNS AWS::Route53::HostedZone CREATE_IN_PROGRESS Resource creation Initiated
+: DNS AWS::Route53::HostedZone CREATE_COMPLETE
+: sb-superloopy-dns-zone AWS::CloudFormation::Stack CREATE_COMPLETE
+
+Success! Next I thought I'd tackle my MX setup.
+
+* Setting up Route 53 MX records with CloudFormation
+
+I use Gandi's MXs and see no need to end that now. There's a primary
+and a secondary, with different priorities and domain names. After a
+bit of experimentation I ended up with =templates/mx.yaml= looking like
+this:
+
+#+caption: =templates/mx.yaml=
+#+name: lst:tpl-mx
+#+BEGIN_SRC yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  DomainName:
+    Type: String
+    Default: example.net
+  PrimaryMx:
+    Type: String
+    Default: spool.mail.gandi.net
+  SecondaryMx:
+    Type: String
+    Default: fb.mail.gandi.net
+  TTL:
+    Type: Number
+    Default: 600
+Resources:
+  MxRecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneName: !Join
+        - ""
+        - [!Ref DomainName, "."]
+      Type: MX
+      TTL: !Ref TTL
+      ResourceRecords:
+        - !Join
+          - ""
+          - [10, " ", !Ref PrimaryMx, "."]
+        - !Join
+          - ""
+          - [50, " ", !Ref SecondaryMx, "."]
+#+END_SRC
+
+I'm not terribly happy with the hardcoded priorities for the MX
+servers, nor with the limitation that the template only supports two
+MXs. (Nor, indeed, that it /requires/ two MXs.) But---it will suffice
+for now.
+
+When it comes to the stack config the default MXs are fine for my
+domain, so all we need to set in the stack config is the ~DomainName~:
+
+#+caption: =config/superloopy/mx.yaml=
+#+name: lst:cfg-mx
+#+BEGIN_SRC yaml
+template_path: templates/mx.yaml
+parameters:
+  DomainName: superloopy.io
+#+END_SRC
+
+Standing up that stack looks like this (minus the timestamps etc):
+
+: superloopy/mx - Creating stack
+: sb-superloopy-mx AWS::CloudFormation::Stack CREATE_IN_PROGRESS User Initiated
+: MxRecordSet AWS::Route53::RecordSet CREATE_IN_PROGRESS
+: MxRecordSet AWS::Route53::RecordSet CREATE_IN_PROGRESS Resource creation Initiated
+: MxRecordSet AWS::Route53::RecordSet CREATE_COMPLETE
+: sb-superloopy-mx AWS::CloudFormation::Stack CREATE_COMPLETE
+
+If I ask one of the AWS nameservers listed in my zone, I can see that
+the MX record looks alright. I have to add the address of the NS to
+query part to explicitly ask one of the AWS nameserves as I have not
+yet delegated the zone to AWS.
+
+#+BEGIN_SRC fish
+dig @ns-1681.awsdns-18.co.uk -t mx superloopy.io +short
+#+END_SRC
+
+: 10 spool.mail.gandi.net.
+: 50 fb.mail.gandi.net.
+
+Great!
+
+* Combining the zone and mx stacks
+
+At this point I started having second thoughts about my approach. I
+originally had in mind setting up just the zone in one stack, and
+creating the mx entries as another stack, and the Apex forwarding with
+its own DNS Setup in a separate stack, and finally the www bucket with
+the content with its own DNS setup in yet another stack.
+
+However, I think I got it the wrong way around. I now feel that all
+the DNS setup should be in one stack. I combined my =dns-zone= and =mx=
+templates into a single template and added handling of the Apex and
+WWW records to it. The resulting template is in =templates/dns.yaml= and
+its contents is:
+
+#+caption: =templates/dns.yaml=
+#+name: lst:tpl-dns
+#+BEGIN_SRC yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  DomainName:
+    Type: String
+    Default: example.net
+  TTL:
+    Type: Number
+    Default: 600
+  MxRecords:
+    Type: CommaDelimitedList
+    Description: >-
+      A comma-separated list of entries for MX servers. Each entry
+      should have a priority and domain name, separated by a space.
+    Default: 10 spool.mail.gandi.net,50 fb.mail.gandi.net
+  ApexRecords:
+    Type: CommaDelimitedList
+    Description: >-
+      The default here is for GitHub Pages, cf
+      https://help.github.com/articles/setting-up-an-apex-domain/
+    Default: 192.30.252.153,192.30.252.154
+  WwwRecord:
+    Type: String
+    Description: >-
+      Set up www.example.net as CNAME for this address
+    Default: stig.github.io
+Resources:
+  Zone:
+    Type: 'AWS::Route53::HostedZone'
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneConfig:
+        Comment: !Join
+          - " "
+          - ["My hosted zone for", !Ref DomainName]
+  MxRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneId: !Ref Zone
+      Type: MX
+      TTL: !Ref TTL
+      ResourceRecords: !Ref MxRecords
+  ApexRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneId: !Ref Zone
+      Type: A
+      TTL: !Ref TTL
+      ResourceRecords: !Ref ApexRecords
+  WwwRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      Name: !Join
+        - ""
+        - ['www.', !Ref DomainName, '.']
+      HostedZoneId: !Ref Zone
+      Type: CNAME
+      TTL: !Ref TTL
+      ResourceRecords:
+        - !Ref WwwRecord
+#+END_SRC
+
+As you can see from Listing [[lst:tpl-dns]] I also switched to using a
+~CommaDelimitedList~ for the MX records. (I learnt about them when
+researching how to best represent the ~ApexRecords~.) So, now we don't
+hard-code priorities in the template, and we support any number of MX
+records.
+
+Finally we just need a new =config/superloopy/dns.yaml= file to drive
+it, and since the defaults are mostly OK it just needs to set the
+template path and DomainName:
+
+#+caption: =config/superloopy/dns.yaml=
+#+name: lst:cfg-dns
+#+BEGIN_SRC yaml
+template_path: templates/dns.yaml
+parameters:
+  DomainName: superloopy.io
+#+END_SRC
+
+* Conclusion
+
+So, that's it for this post. I've learnt how to set up a Route 53 zone
+with Sceptre/CloudFormation and I'm pretty happy with it. I haven't
+actually delegated DNS to this zone yet, as I want to give myself a
+chance to experiment a bit more figuring out how to change this DNS
+zone to refer to CloudFront distributions while I learn how to set up
+the redirections for the Apex domain and hosting www from an S3 bucket
+behind CloudFront.

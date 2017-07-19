@@ -39,10 +39,10 @@ your DNS needs. So the /first/ part of this project will probably be to
 delegate[fn:1] my DNS to Route 53.
 
 Thus, a plan emerges:
-1. Delegate DNS for superloopy.io to AWS Route 53
+1. [[file:route-53-cloudformation.org][Manage DNS for superloopy.io with AWS Route 53]]
 2. Handle redirects from Apex domain to www with an S3 bucket
 3. Change my blog publishing setup to populate an S3 bucket
-5. Serve my blog from this S3 bucket, using CloudFront to deploy an
+4. Serve my blog from this S3 bucket, using CloudFront to deploy an
    ACM-provided cert
 
 One thing I have in abundant supply is lack of time, so I'm afraid

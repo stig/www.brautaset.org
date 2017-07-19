@@ -22,10 +22,14 @@
     - [[file:articles/2017/potter-coding-dojo.org][Potter Code Dojo]]
     - [[file:articles/2017/n-queens.org][Solving the N Queens problem]]
     - [[file:articles/2014/learning-clojure.org][Using it to solve Euler Problems]]
+  - CloudFormation
+    - [[file:articles/2017/route-53-cloudformation.org][Managing Route 53 with]]
 * D
   - [[file:articles/2005/untraditional-refactoring-technique.org][Dead code elimination]]
   - Development
     - [[file:articles/2015/benchmarking.org][A lesson in Benchmarking]]
+  - DNS
+    - [[file:articles/2017/route-53-cloudformation.org][Managing with CloudFormation]]
 * E
   - Education
     - [[file:articles/2014/good-ideas.org][Why it should be free or at least affordable]]
