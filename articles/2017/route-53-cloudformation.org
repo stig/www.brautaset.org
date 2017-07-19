@@ -40,7 +40,7 @@ Enter [[https://sceptre.cloudreach.com/latest/about.html][Sceptre]], an unopinio
 and config files involved, and is a good companion to the
 CloudFormation docs in my opinion.
 
-* Creating a Route53 HostedZone with CloudFormation
+* Creating a Route 53 HostedZone with CloudFormation
 
 To manage Route 53 records with CloudFormation you need to use a
 ~AWS::Route53::RecordSet~. One of /its/ required properties is a
