@@ -365,76 +365,81 @@ its contents is:
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 5: </span><code>templates/dns.yaml</code></label><pre><code class="src src-yaml" id="org3c73d39"><span style="color: #EF6C00;">AWSTemplateFormatVersion</span>: <span style="color: #689f38;">"2010-09-09"</span>
-<span style="color: #EF6C00;">Parameters</span>:
-  <span style="color: #EF6C00;">DomainName</span>:
-    <span style="color: #EF6C00;">Type</span>: String
-    <span style="color: #EF6C00;">Default</span>: example.net
-  <span style="color: #EF6C00;">TTL</span>:
-    <span style="color: #EF6C00;">Type</span>: Number
-    <span style="color: #EF6C00;">Default</span>: 600
-  <span style="color: #EF6C00;">MxRecords</span>:
-    <span style="color: #EF6C00;">Type</span>: CommaDelimitedList
-    <span style="color: #EF6C00;">Description</span>: &gt;-
-      <span style="color: #689f38;">A comma-separated list of entries for MX servers. Each entry</span>
-<span style="color: #689f38;">      should have a priority and domain name, separated by a space.</span>
-    <span style="color: #EF6C00;">Default</span>: 10 spool.mail.gandi.net,50 fb.mail.gandi.net
-  <span style="color: #EF6C00;">ApexRecords</span>:
-    <span style="color: #EF6C00;">Type</span>: CommaDelimitedList
-    <span style="color: #EF6C00;">Description</span>: &gt;-
-      <span style="color: #689f38;">The default here is for GitHub Pages, cf</span>
-<span style="color: #689f38;">      https://help.github.com/articles/setting-up-an-apex-domain/</span>
-    <span style="color: #EF6C00;">Default</span>: 192.30.252.153,192.30.252.154
-  <span style="color: #EF6C00;">WwwRecord</span>:
-    <span style="color: #EF6C00;">Type</span>: String
-    <span style="color: #EF6C00;">Description</span>: &gt;-
-      <span style="color: #689f38;">Set up www.example.net as CNAME for this address</span>
-    <span style="color: #EF6C00;">Default</span>: stig.github.io
-<span style="color: #EF6C00;">Resources</span>:
-  <span style="color: #EF6C00;">Zone</span>:
-    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::HostedZone'</span>
-    <span style="color: #EF6C00;">Properties</span>:
-      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
-      <span style="color: #EF6C00;">HostedZoneConfig</span>:
-        <span style="color: #EF6C00;">Comment</span>: <span style="color: #0097A7;">!Join</span>
-          - <span style="color: #689f38;">" "</span>
-          - [<span style="color: #689f38;">"My hosted zone for"</span>, <span style="color: #0097A7;">!Ref</span> DomainName]
-  <span style="color: #EF6C00;">MxRecordSet</span>:
-    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
-    <span style="color: #EF6C00;">Properties</span>:
-      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
-      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone
-      <span style="color: #EF6C00;">Type</span>: MX
-      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
-      <span style="color: #EF6C00;">ResourceRecords</span>: <span style="color: #0097A7;">!Ref</span> MxRecords
-  <span style="color: #EF6C00;">ApexRecordSet</span>:
-    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
-    <span style="color: #EF6C00;">Properties</span>:
-      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
-      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone
-      <span style="color: #EF6C00;">Type</span>: A
-      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
-      <span style="color: #EF6C00;">ResourceRecords</span>: <span style="color: #0097A7;">!Ref</span> ApexRecords
-  <span style="color: #EF6C00;">WwwRecordSet</span>:
-    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
-    <span style="color: #EF6C00;">Properties</span>:
-      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Join</span>
-        - <span style="color: #689f38;">""</span>
-        - [<span style="color: #689f38;">'www.'</span>, <span style="color: #0097A7;">!Ref</span> DomainName, <span style="color: #689f38;">'.'</span>]
-      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone
-      <span style="color: #EF6C00;">Type</span>: CNAME
-      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
-      <span style="color: #EF6C00;">ResourceRecords</span>:
-        - <span style="color: #0097A7;">!Ref</span> WwwRecord
+<label class="org-src-name"><span class="listing-number">Listing 5: </span><code>templates/dns.yaml</code></label><pre><code class="src src-yaml" id="org3c73d39"><span class="linenr"> 1: </span><span style="color: #EF6C00;">AWSTemplateFormatVersion</span>: <span style="color: #689f38;">"2010-09-09"</span>
+<span class="linenr"> 2: </span><span style="color: #EF6C00;">Parameters</span>:
+<span class="linenr"> 3: </span>  <span style="color: #EF6C00;">DomainName</span>:
+<span class="linenr"> 4: </span>    <span style="color: #EF6C00;">Type</span>: String
+<span class="linenr"> 5: </span>    <span style="color: #EF6C00;">Default</span>: example.net
+<span class="linenr"> 6: </span>  <span style="color: #EF6C00;">TTL</span>:
+<span class="linenr"> 7: </span>    <span style="color: #EF6C00;">Type</span>: Number
+<span class="linenr"> 8: </span>    <span style="color: #EF6C00;">Default</span>: 600
+<span class="linenr"> 9: </span>  <span style="color: #EF6C00;">MxRecords</span>:
+<span id="coderef-csv1" class="coderef-off"><span class="linenr">10: </span>    <span style="color: #EF6C00;">Type</span>: CommaDelimitedList</span>
+<span class="linenr">11: </span>    <span style="color: #EF6C00;">Description</span>: &gt;-
+<span class="linenr">12: </span>      <span style="color: #689f38;">A comma-separated list of entries for MX servers. Each entry</span>
+<span class="linenr">13: </span><span style="color: #689f38;">      should have a priority and domain name, separated by a space.</span>
+<span class="linenr">14: </span>    <span style="color: #EF6C00;">Default</span>: 10 spool.mail.gandi.net,50 fb.mail.gandi.net
+<span class="linenr">15: </span>  <span style="color: #EF6C00;">ApexRecords</span>:
+<span class="linenr">16: </span>    <span style="color: #EF6C00;">Type</span>: CommaDelimitedList
+<span class="linenr">17: </span>    <span style="color: #EF6C00;">Description</span>: &gt;-
+<span class="linenr">18: </span>      <span style="color: #689f38;">The default here is for GitHub Pages, cf</span>
+<span class="linenr">19: </span><span style="color: #689f38;">      https://help.github.com/articles/setting-up-an-apex-domain/</span>
+<span class="linenr">20: </span>    <span style="color: #EF6C00;">Default</span>: 192.30.252.153,192.30.252.154
+<span class="linenr">21: </span>  <span style="color: #EF6C00;">WwwRecord</span>:
+<span class="linenr">22: </span>    <span style="color: #EF6C00;">Type</span>: String
+<span class="linenr">23: </span>    <span style="color: #EF6C00;">Description</span>: &gt;-
+<span class="linenr">24: </span>      <span style="color: #689f38;">Set up www.example.net as CNAME for this address</span>
+<span class="linenr">25: </span>    <span style="color: #EF6C00;">Default</span>: stig.github.io
+<span class="linenr">26: </span><span style="color: #EF6C00;">Resources</span>:
+<span class="linenr">27: </span>  <span style="color: #EF6C00;">Zone</span>:
+<span class="linenr">28: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::HostedZone'</span>
+<span class="linenr">29: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr">30: </span>      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
+<span class="linenr">31: </span>      <span style="color: #EF6C00;">HostedZoneConfig</span>:
+<span class="linenr">32: </span>        <span style="color: #EF6C00;">Comment</span>: <span style="color: #0097A7;">!Join</span>
+<span class="linenr">33: </span>          - <span style="color: #689f38;">" "</span>
+<span class="linenr">34: </span>          - [<span style="color: #689f38;">"My hosted zone for"</span>, <span style="color: #0097A7;">!Ref</span> DomainName]
+<span class="linenr">35: </span>  <span style="color: #EF6C00;">MxRecordSet</span>:
+<span class="linenr">36: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
+<span class="linenr">37: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr">38: </span>      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
+<span id="coderef-zone-id" class="coderef-off"><span class="linenr">39: </span>      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone</span>
+<span class="linenr">40: </span>      <span style="color: #EF6C00;">Type</span>: MX
+<span class="linenr">41: </span>      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
+<span id="coderef-csv2" class="coderef-off"><span class="linenr">42: </span>      <span style="color: #EF6C00;">ResourceRecords</span>: <span style="color: #0097A7;">!Ref</span> MxRecords</span>
+<span class="linenr">43: </span>  <span style="color: #EF6C00;">ApexRecordSet</span>:
+<span class="linenr">44: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
+<span class="linenr">45: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr">46: </span>      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Ref</span> DomainName
+<span class="linenr">47: </span>      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone
+<span class="linenr">48: </span>      <span style="color: #EF6C00;">Type</span>: A
+<span class="linenr">49: </span>      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
+<span class="linenr">50: </span>      <span style="color: #EF6C00;">ResourceRecords</span>: <span style="color: #0097A7;">!Ref</span> ApexRecords
+<span class="linenr">51: </span>  <span style="color: #EF6C00;">WwwRecordSet</span>:
+<span class="linenr">52: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::Route53::RecordSet'</span>
+<span class="linenr">53: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr">54: </span>      <span style="color: #EF6C00;">Name</span>: <span style="color: #0097A7;">!Join</span>
+<span class="linenr">55: </span>        - <span style="color: #689f38;">""</span>
+<span class="linenr">56: </span>        - [<span style="color: #689f38;">'www.'</span>, <span style="color: #0097A7;">!Ref</span> DomainName, <span style="color: #689f38;">'.'</span>]
+<span class="linenr">57: </span>      <span style="color: #EF6C00;">HostedZoneId</span>: <span style="color: #0097A7;">!Ref</span> Zone
+<span class="linenr">58: </span>      <span style="color: #EF6C00;">Type</span>: CNAME
+<span class="linenr">59: </span>      <span style="color: #EF6C00;">TTL</span>: <span style="color: #0097A7;">!Ref</span> TTL
+<span class="linenr">60: </span>      <span style="color: #EF6C00;">ResourceRecords</span>:
+<span class="linenr">61: </span>        - <span style="color: #0097A7;">!Ref</span> WwwRecord
 </code></pre>
 </div>
 
 <p>
-As you can see from Listing <a href="#org3c73d39">5</a> I also switched to using a
-<code>CommaDelimitedList</code> for the MX records. (I learnt about them when
-researching how to best represent the <code>ApexRecords</code>.) So, now we don't
-hard-code priorities in the template, and we support any number of MX
-records.
+As you can see on lines <a href="#coderef-csv1" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-csv1');" onmouseout="CodeHighlightOff(this, 'coderef-csv1');">10</a> and <a href="#coderef-csv2" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-csv2');" onmouseout="CodeHighlightOff(this, 'coderef-csv2');">42</a> I also switched to using a
+<code>CommaDelimitedList</code> for the MX records<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. The result is no
+more hard-code priorities in the template, and I can support any
+number of MX records.
+</p>
+
+<p>
+Furthermore, now that the zone resource is in the same template I also
+switched to using <code>HostedZoneId</code> on line <a href="#coderef-zone-id" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-zone-id');" onmouseout="CodeHighlightOff(this, 'coderef-zone-id');">39</a> rather than looking
+up the zone by name. It just seems more robust, somehow.
 </p>
 
 <p>
@@ -466,7 +471,11 @@ behind CloudFront.
 </p>
 </div>
 </div>
-</div>
+<div id="footnotes"><!--Footnotes-->
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">I learnt about them when
+researching how to best represent the <code>ApexRecords</code>.</div></div>
+
+</div></div>
 <div id="postamble" class="status">
 <p class="date">Date: 19 July 2017</p>
 <p class="author">Author: Stig Brautaset</p>

@@ -205,7 +205,7 @@ its contents is:
 
 #+caption: =templates/dns.yaml=
 #+name: lst:tpl-dns
-#+BEGIN_SRC yaml
+#+BEGIN_SRC yaml -n -r
 AWSTemplateFormatVersion: "2010-09-09"
 Parameters:
   DomainName:
@@ -215,7 +215,7 @@ Parameters:
     Type: Number
     Default: 600
   MxRecords:
-    Type: CommaDelimitedList
+    Type: CommaDelimitedList             (ref:csv1)
     Description: >-
       A comma-separated list of entries for MX servers. Each entry
       should have a priority and domain name, separated by a space.
@@ -244,10 +244,10 @@ Resources:
     Type: 'AWS::Route53::RecordSet'
     Properties:
       Name: !Ref DomainName
-      HostedZoneId: !Ref Zone
+      HostedZoneId: !Ref Zone            (ref:zone-id)
       Type: MX
       TTL: !Ref TTL
-      ResourceRecords: !Ref MxRecords
+      ResourceRecords: !Ref MxRecords    (ref:csv2)
   ApexRecordSet:
     Type: 'AWS::Route53::RecordSet'
     Properties:
@@ -269,11 +269,15 @@ Resources:
         - !Ref WwwRecord
 #+END_SRC
 
-As you can see from Listing [[lst:tpl-dns]] I also switched to using a
-~CommaDelimitedList~ for the MX records. (I learnt about them when
-researching how to best represent the ~ApexRecords~.) So, now we don't
-hard-code priorities in the template, and we support any number of MX
-records.
+As you can see on lines [[(csv1)]] and [[(csv2)]] I also switched to using a
+~CommaDelimitedList~ for the MX records[fn::I learnt about them when
+researching how to best represent the ~ApexRecords~.]. The result is no
+more hard-code priorities in the template, and I can support any
+number of MX records.
+
+Furthermore, now that the zone resource is in the same template I also
+switched to using ~HostedZoneId~ on line [[(zone-id)]] rather than looking
+up the zone by name. It just seems more robust, somehow.
 
 Finally we just need a new =config/superloopy/dns.yaml= file to drive
 it, and since the defaults are mostly OK it just needs to set the
