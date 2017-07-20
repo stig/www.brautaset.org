@@ -8,8 +8,6 @@ configure Route 53 with CloudFormation & Sceptre.
 #+index: CloudFormation!Managing Route 53 with
 #+index: DNS!Managing with CloudFormation
 
-* Introduction
-
 In my [[file:adding-ssl.org][previous post]] I outlined my plan for adding SSL to this blog.
 This post is me exploring the first step in that plan: managing DNS in
 AWS Route 53 via CloudFormation.
