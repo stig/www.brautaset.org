@@ -23,6 +23,7 @@
     - [[file:articles/2017/n-queens.org][Solving the N Queens problem]]
     - [[file:articles/2014/learning-clojure.org][Using it to solve Euler Problems]]
   - CloudFormation
+    - [[file:articles/2017/adding-ssl-to-s3-with-cloudformation.org][Creating S3 bucket, Certificate & CloudFront distribution]]
     - [[file:articles/2017/route-53-cloudformation.org][Managing Route 53 with]]
 * D
   - [[file:articles/2005/untraditional-refactoring-technique.org][Dead code elimination]]

@@ -40,7 +40,7 @@ delegate[fn:1] my DNS to Route 53.
 
 Thus, a plan emerges:
 1. [[file:route-53-cloudformation.org][Manage DNS for superloopy.io with AWS Route 53]]
-2. Handle redirects from Apex domain to www with an S3 bucket
+2. [[file:ssl-enabled-s3-redirects-with-cloudformation.org][Handle redirects from Apex domain to www with an S3 bucket]]
 3. Change my blog publishing setup to populate an S3 bucket
 4. Serve my blog from this S3 bucket, using CloudFront to deploy an
    ACM-provided cert
