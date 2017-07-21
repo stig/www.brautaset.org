@@ -14,7 +14,7 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 In which I learn to create an SSL certificate used by a CloudFront
 distribution to expose the contents of an S3 bucket over HTTPS with
-Sceptre and CloudFormation.
+CloudFormation.
 
 ** [[file:articles/2017/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]]
 
