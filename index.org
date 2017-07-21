@@ -10,7 +10,7 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
-** [[file:articles/2017/adding-ssl-to-s3-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]]
+** [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]]
 
 In which I learn to create an SSL certificate used by a CloudFront
 distribution to expose the contents of an S3 bucket over HTTPS with
