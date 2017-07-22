@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating an S3 website bucket exposed over HTTPS with CloudFormation</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <a href="/"><img src="/images/logo.png" alt="Superloopy Logo"/></a>
+  <nav>
+    <ul>
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
+      <li>Licence: <a accesskey="l" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Creating an S3 website bucket exposed over HTTPS with CloudFormation</h1>
+<div class="abstract">
+<p>
+I show how to create an S3 bucket set up to serve a static website,
+and expose it over HTTPS via CloudFront, using the same SSL
+certificate we created in the previous post&#x2014;all via CloudFormation.
+</p>
+
+</div>
+
+<p>
+This post builds on the template I created in my previous post, where
+I <a href="ssl-enabled-s3-redirects-with-cloudformation.html">created an S3 redirection bucket supported by an SSL certificate</a>.
+You may find it helpful to read that post first. Furthermore, this
+post is part of a series where I <a href="adding-ssl.html">add SSL to this blog</a>. If you like
+this post, you might like the others too.
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#logbucket">Log bucket</a></li>
+<li><a href="#sitebucket">Site bucket</a></li>
+<li><a href="#cloudfront">CloudFront distribution</a></li>
+<li><a href="#testing">Now we can test everything!</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf6d074e" class="outline-2">
+<h2 id="logbucket"><a id="orgf6d074e"></a>Log bucket</h2>
+<div class="outline-text-2" id="text-logbucket">
+<p>
+Since the bucket we're creating this time is going to host our site it
+might be interesting to capture access logs<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. S3
+buckets are great for logging, and it's super easy to configure them
+for this. The below snippet does exactly that<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. The key thing
+about log buckets is to remember setting the <code>AccessControl</code> property to
+<code>LogDeliveryWrite</code>.
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-yaml"><span class="linenr">1: </span><span style="color: #EF6C00;">Resources</span>:
+<span class="linenr">2: </span>  [...]
+<span class="linenr">3: </span>  <span style="color: #EF6C00;">LogBucket</span>:
+<span class="linenr">4: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::S3::Bucket'</span>
+<span class="linenr">5: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr">6: </span>      <span style="color: #EF6C00;">AccessControl</span>: LogDeliveryWrite
+<span class="linenr">7: </span>      <span style="color: #EF6C00;">BucketName</span>: <span style="color: #0097A7;">!Join</span>
+<span class="linenr">8: </span>        - <span style="color: #689f38;">'.'</span>
+<span class="linenr">9: </span>        - [<span style="color: #689f38;">'www'</span>, <span style="color: #0097A7;">!Ref</span> DomainName, <span style="color: #689f38;">'logs'</span>]
+</code></pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde11f15" class="outline-2">
+<h2 id="sitebucket"><a id="orgde11f15"></a>Site bucket</h2>
+<div class="outline-text-2" id="text-sitebucket">
+<p>
+Next we create the bucket that will hold our website. This time we
+won't redirect anything, though we'll specify that when someone asks
+for the root of the bucket they'll get the <code>index.html</code> document&#x2014;and
+on error they'll get the <code>404.html</code> document<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. Finally we configure this bucket to ship logs to the
+<code>LogBucket</code> we created in the previous step.
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-yaml"><span class="linenr"> 1: </span><span style="color: #EF6C00;">Resources</span>:
+<span class="linenr"> 2: </span>  [...]
+<span class="linenr"> 3: </span>  <span style="color: #EF6C00;">SiteBucket</span>:
+<span class="linenr"> 4: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::S3::Bucket'</span>
+<span class="linenr"> 5: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr"> 6: </span>      <span style="color: #EF6C00;">BucketName</span>: <span style="color: #0097A7;">!Join</span> [<span style="color: #689f38;">'.'</span>, [<span style="color: #689f38;">'www'</span>, <span style="color: #0097A7;">!Ref</span> DomainName]]
+<span class="linenr"> 7: </span>      <span style="color: #EF6C00;">WebsiteConfiguration</span>:
+<span class="linenr"> 8: </span>        <span style="color: #EF6C00;">IndexDocument</span>: index.html
+<span class="linenr"> 9: </span>        <span style="color: #EF6C00;">ErrorDocument</span>: 404.html
+<span class="linenr">10: </span>      <span style="color: #EF6C00;">LoggingConfiguration</span>:
+<span class="linenr">11: </span>        <span style="color: #EF6C00;">DestinationBucketName</span>: <span style="color: #0097A7;">!Ref</span> LogBucket
+</code></pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb58ba11" class="outline-2">
+<h2 id="cloudfront"><a id="orgb58ba11"></a>CloudFront distribution</h2>
+<div class="outline-text-2" id="text-cloudfront">
+<p>
+Finally we set up a CloudFront distribution. This is identical to the
+setup in the <a href="ssl-enabled-s3-redirects-with-cloudformation.html#orga3d5508">previous post</a> except our Alias now has a <code>www</code> prefix.
+Nevertheless, this is a short post so I'll include it here for
+completeness. Note that this also uses the <code>SSL</code> certificate we set up
+in the previous post, since we created that with a
+<code>SubjectAlternativeName</code> that would work for our <code>www</code> domain. I also
+added an <code>Output</code> so we can get at the CloudFormation domain for
+testing, since the DNS still points to GitHub Pages.
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-yaml"><span class="linenr"> 1: </span><span style="color: #EF6C00;">Resources</span>:
+<span class="linenr"> 2: </span>  [...]
+<span class="linenr"> 3: </span>  <span style="color: #EF6C00;">SiteCloudFront</span>:
+<span class="linenr"> 4: </span>    <span style="color: #EF6C00;">Type</span>: <span style="color: #689f38;">'AWS::CloudFront::Distribution'</span>
+<span class="linenr"> 5: </span>    <span style="color: #EF6C00;">Properties</span>:
+<span class="linenr"> 6: </span>      <span style="color: #EF6C00;">DistributionConfig</span>:
+<span class="linenr"> 7: </span>        <span style="color: #EF6C00;">Aliases</span>:
+<span class="linenr"> 8: </span>          - <span style="color: #0097A7;">!Join</span> [<span style="color: #689f38;">'.'</span>, [<span style="color: #689f38;">'www'</span>, <span style="color: #0097A7;">!Ref</span> DomainName]]
+<span class="linenr"> 9: </span>        <span style="color: #EF6C00;">Enabled</span>: <span style="color: #558b2f;">True</span>
+<span class="linenr">10: </span>        <span style="color: #EF6C00;">Origins</span>:
+<span class="linenr">11: </span>          - <span style="color: #EF6C00;">DomainName</span>: <span style="color: #0097A7;">!Select</span>
+<span class="linenr">12: </span>              - 1
+<span class="linenr">13: </span>              - <span style="color: #0097A7;">!Split</span> [<span style="color: #689f38;">"//"</span>, <span style="color: #0097A7;">!GetAtt</span> SiteBucket.WebsiteURL]
+<span class="linenr">14: </span>            <span style="color: #EF6C00;">Id</span>: origin
+<span class="linenr">15: </span>            <span style="color: #EF6C00;">CustomOriginConfig</span>:
+<span class="linenr">16: </span>              <span style="color: #EF6C00;">OriginProtocolPolicy</span>: http-only
+<span class="linenr">17: </span>        <span style="color: #EF6C00;">DefaultCacheBehavior</span>:
+<span class="linenr">18: </span>          <span style="color: #EF6C00;">TargetOriginId</span>: origin
+<span class="linenr">19: </span>          <span style="color: #EF6C00;">DefaultTTL</span>: 5
+<span class="linenr">20: </span>          <span style="color: #EF6C00;">MaxTTL</span>: 30
+<span class="linenr">21: </span>          <span style="color: #EF6C00;">ForwardedValues</span>:
+<span class="linenr">22: </span>            <span style="color: #EF6C00;">QueryString</span>: <span style="color: #558b2f;">false</span>
+<span class="linenr">23: </span>          <span style="color: #EF6C00;">ViewerProtocolPolicy</span>: redirect-to-https
+<span class="linenr">24: </span>        <span style="color: #EF6C00;">ViewerCertificate</span>:
+<span class="linenr">25: </span>          <span style="color: #EF6C00;">AcmCertificateArn</span>: <span style="color: #0097A7;">!Ref</span> SSL
+<span class="linenr">26: </span>          <span style="color: #EF6C00;">SslSupportMethod</span>: sni-only
+<span class="linenr">27: </span><span style="color: #EF6C00;">Outputs</span>:
+<span class="linenr">28: </span>  [...]
+<span class="linenr">29: </span>  <span style="color: #EF6C00;">SiteCloudFrontDomain</span>:
+<span class="linenr">30: </span>    <span style="color: #EF6C00;">Value</span>: <span style="color: #0097A7;">!GetAtt</span> SiteCloudFront.DomainName
+</code></pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org202ab89" class="outline-2">
+<h2 id="testing"><a id="org202ab89"></a>Now we can test everything!</h2>
+<div class="outline-text-2" id="text-testing">
+<p>
+To test this setup we have to upload some files to the S3 bucket.
+First I did that like this:
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-fish"><span style="color: #B71C1C;">aws</span> s3 sync <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--exclude</span> <span style="color: #689f38;">'*'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.html'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.png'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.css'</span> <span style="color: #2196f3;">\</span>
+    ~/blog/ s3://www.superloopy.io
+</code></pre>
+</div>
+
+<p>
+However, I kept getting permissions errors. I wasted a lot of time
+investigating bucket permissions until I realised I need to add public
+read <i>object</i> permissions too. <code>aws s3 sync --acl public-read</code> will do
+that, so I <code>touch</code>-ed all the files and re-uploaded them like this:
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-fish"><span style="color: #B71C1C;">aws</span> s3 sync --acl public-read <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--exclude</span> <span style="color: #689f38;">'*'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.html'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.png'</span> <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--include</span> <span style="color: #689f38;">'*.css'</span> <span style="color: #2196f3;">\</span>
+    ~/blog/ s3://www.superloopy.io
+</code></pre>
+</div>
+
+<p>
+I was able to get the <code>SiteCloudFrontDomain</code> value from my
+CloudFormation Stack and visit that domain in a browser. It redirects
+me to the HTTPS version of the same site, as expected, and shows the
+<code>index.html</code> document. If we go to a path that doesn't exist, we get the
+expected 404 page. Success!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6655362" class="outline-2">
+<h2 id="conclusion"><a id="org6655362"></a>Conclusion</h2>
+<div class="outline-text-2" id="text-conclusion">
+<p>
+The thing that caused me most grief with this setup was not
+CloudFormation itself but learning that each S3 <i>object</i> in my bucket
+had to have public read permissions too. Novice mistake, I'm sure! And
+I'm actually really happy that objects are private by default. That is
+a <i>good</i> and sensible default! (Even if it did cause me a bit of a
+headache today.)
+</p>
+</div>
+</div>
+<div id="footnotes"><!--Footnotes-->
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">This was not so
+interesting for the redirection bucket we created in the last post, as
+all the requests should ultimately end up on <i>this</i> bucket anyway.</div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+You don't have to specify a <code>BucketName</code>, but I like to as it
+makes finding the right bucket in the S3 console a lot easier.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara">Much as before on
+GitHub.</div></div>
+
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 22 July 2017</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

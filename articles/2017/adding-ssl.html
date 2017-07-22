@@ -138,9 +138,10 @@ Thus, a plan emerges:
 <ol class="org-ol">
 <li><a href="route-53-cloudformation.html">Manage DNS for superloopy.io with AWS Route 53</a></li>
 <li><a href="ssl-enabled-s3-redirects-with-cloudformation.html">Handle redirects from Apex domain to www with an S3 bucket</a></li>
-<li>Change my blog publishing setup to populate an S3 bucket</li>
-<li>Serve my blog from this S3 bucket, using CloudFront to deploy an
-ACM-provided cert</li>
+<li><a id="org896feda"></a><a href="s3-website-with-https-using-cloudformation.html">Create an S3 site bucket, fronted by ACM-provided
+SSL Cert via CloudFront, that I can publish by blog from</a><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></li>
+<li><a id="org49bf76d"></a>Change my blog publishing setup to populate the S3
+bucket from previous step<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup></li>
 </ol>
 
 <p>
@@ -152,6 +153,12 @@ those steps will have to be the subject of future posts.
 I don't want to transfer the actual domain, at least yet, as
 I've been happy with Gandi for many years and they are a bit cheaper
 than AWS for <code>.io</code> domains.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+I changed the order of steps <a href="#org896feda">3</a> and <a href="#org49bf76d">4</a> as I came
+to realise I have to actually have an S3 bucket to publish to in order
+to test the change to publishing.
 </p></div></div>
 
 </div></div>

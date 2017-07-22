@@ -1,0 +1,170 @@
+#+title: Creating an S3 website bucket exposed over HTTPS with CloudFormation
+#+date: <2017-07-22 Sat>
+#+begin_abstract
+I show how to create an S3 bucket set up to serve a static website,
+and expose it over HTTPS via CloudFront, using the same SSL
+certificate we created in the previous post---all via CloudFormation.
+#+end_abstract
+
+This post builds on the template I created in my previous post, where
+I [[file:ssl-enabled-s3-redirects-with-cloudformation.org][created an S3 redirection bucket supported by an SSL certificate]].
+You may find it helpful to read that post first. Furthermore, this
+post is part of a series where I [[file:adding-ssl.org][add SSL to this blog]]. If you like
+this post, you might like the others too.
+
+#+toc: headlines
+
+* Log bucket
+  :PROPERTIES:
+  :CUSTOM_ID: logbucket
+  :END:
+#+index: CloudFormation!Creating an S3 bucket to store logs
+
+Since the bucket we're creating this time is going to host our site it
+might be interesting to capture access logs[fn::This was not so
+interesting for the redirection bucket we created in the last post, as
+all the requests should ultimately end up on /this/ bucket anyway.]. S3
+buckets are great for logging, and it's super easy to configure them
+for this. The below snippet does exactly that[fn:1]. The key thing
+about log buckets is to remember setting the ~AccessControl~ property to
+~LogDeliveryWrite~.
+
+#+BEGIN_SRC yaml -n -r
+    Resources:
+      [...]
+      LogBucket:
+        Type: 'AWS::S3::Bucket'
+        Properties:
+          AccessControl: LogDeliveryWrite
+          BucketName: !Join
+            - '.'
+            - ['www', !Ref DomainName, 'logs']
+#+END_SRC
+
+* Site bucket
+  :PROPERTIES:
+  :CUSTOM_ID: sitebucket
+  :END:
+#+index: CloudFormation!Creating an S3 bucket for a static website
+
+Next we create the bucket that will hold our website. This time we
+won't redirect anything, though we'll specify that when someone asks
+for the root of the bucket they'll get the =index.html= document---and
+on error they'll get the =404.html= document[fn::Much as before on
+GitHub.]. Finally we configure this bucket to ship logs to the
+~LogBucket~ we created in the previous step.
+
+#+BEGIN_SRC yaml -n -r
+  Resources:
+    [...]
+    SiteBucket:
+      Type: 'AWS::S3::Bucket'
+      Properties:
+        BucketName: !Join ['.', ['www', !Ref DomainName]]
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: 404.html
+        LoggingConfiguration:
+          DestinationBucketName: !Ref LogBucket
+#+END_SRC
+
+* CloudFront distribution
+  :PROPERTIES:
+  :CUSTOM_ID: cloudfront
+  :END:
+
+Finally we set up a CloudFront distribution. This is identical to the
+setup in the [[file:ssl-enabled-s3-redirects-with-cloudformation.org::*CloudFront%20Distribution][previous post]] except our Alias now has a =www= prefix.
+Nevertheless, this is a short post so I'll include it here for
+completeness. Note that this also uses the ~SSL~ certificate we set up
+in the previous post, since we created that with a
+~SubjectAlternativeName~ that would work for our =www= domain. I also
+added an ~Output~ so we can get at the CloudFormation domain for
+testing, since the DNS still points to GitHub Pages.
+
+#+BEGIN_SRC yaml -n -r
+  Resources:
+    [...]
+    SiteCloudFront:
+      Type: 'AWS::CloudFront::Distribution'
+      Properties:
+        DistributionConfig:
+          Aliases:
+            - !Join ['.', ['www', !Ref DomainName]]
+          Enabled: True
+          Origins:
+            - DomainName: !Select
+                - 1
+                - !Split ["//", !GetAtt SiteBucket.WebsiteURL]
+              Id: origin
+              CustomOriginConfig:
+                OriginProtocolPolicy: http-only
+          DefaultCacheBehavior:
+            TargetOriginId: origin
+            DefaultTTL: 5
+            MaxTTL: 30
+            ForwardedValues:
+              QueryString: false
+            ViewerProtocolPolicy: redirect-to-https
+          ViewerCertificate:
+            AcmCertificateArn: !Ref SSL
+            SslSupportMethod: sni-only
+  Outputs:
+    [...]
+    SiteCloudFrontDomain:
+      Value: !GetAtt SiteCloudFront.DomainName
+#+END_SRC
+
+* Now we can test everything!
+  :PROPERTIES:
+  :CUSTOM_ID: testing
+  :END:
+
+To test this setup we have to upload some files to the S3 bucket.
+First I did that like this:
+
+#+BEGIN_SRC fish
+  aws s3 sync \
+      --exclude '*' \
+      --include '*.html' \
+      --include '*.png' \
+      --include '*.css' \
+      ~/blog/ s3://www.superloopy.io
+#+END_SRC
+
+However, I kept getting permissions errors. I wasted a lot of time
+investigating bucket permissions until I realised I need to add public
+read /object/ permissions too. =aws s3 sync --acl public-read= will do
+that, so I =touch=-ed all the files and re-uploaded them like this:
+
+#+BEGIN_SRC fish
+  aws s3 sync --acl public-read \
+      --exclude '*' \
+      --include '*.html' \
+      --include '*.png' \
+      --include '*.css' \
+      ~/blog/ s3://www.superloopy.io
+#+END_SRC
+
+I was able to get the ~SiteCloudFrontDomain~ value from my
+CloudFormation Stack and visit that domain in a browser. It redirects
+me to the HTTPS version of the same site, as expected, and shows the
+=index.html= document. If we go to a path that doesn't exist, we get the
+expected 404 page. Success!
+
+* Conclusion
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
+
+The thing that caused me most grief with this setup was not
+CloudFormation itself but learning that each S3 /object/ in my bucket
+had to have public read permissions too. Novice mistake, I'm sure! And
+I'm actually really happy that objects are private by default. That is
+a /good/ and sensible default! (Even if it did cause me a bit of a
+headache today.)
+
+* Footnotes
+
+[fn:1] You don't have to specify a ~BucketName~, but I like to as it
+makes finding the right bucket in the S3 console a lot easier.

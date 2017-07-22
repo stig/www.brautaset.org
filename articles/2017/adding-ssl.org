@@ -41,14 +41,19 @@ delegate[fn:1] my DNS to Route 53.
 Thus, a plan emerges:
 1. [[file:route-53-cloudformation.org][Manage DNS for superloopy.io with AWS Route 53]]
 2. [[file:ssl-enabled-s3-redirects-with-cloudformation.org][Handle redirects from Apex domain to www with an S3 bucket]]
-3. Change my blog publishing setup to populate an S3 bucket
-4. Serve my blog from this S3 bucket, using CloudFront to deploy an
-   ACM-provided cert
+3. <<site-bucket>>[[file:s3-website-with-https-using-cloudformation.org][Create an S3 site bucket, fronted by ACM-provided
+   SSL Cert via CloudFront, that I can publish by blog from]][fn:2]
+4. <<publish>>Change my blog publishing setup to populate the S3
+   bucket from previous step[fn:2]
 
 One thing I have in abundant supply is lack of time, so I'm afraid
 those steps will have to be the subject of future posts.
 
 * Footnotes
+
+[fn:2] I changed the order of steps [[site-bucket]] and [[publish]] as I came
+to realise I have to actually have an S3 bucket to publish to in order
+to test the change to publishing.
 
 [fn:1] I don't want to transfer the actual domain, at least yet, as
 I've been happy with Gandi for many years and they are a bit cheaper

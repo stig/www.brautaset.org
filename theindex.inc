@@ -23,6 +23,8 @@
     - [[file:articles/2017/n-queens.org][Solving the N Queens problem]]
     - [[file:articles/2014/learning-clojure.org][Using it to solve Euler Problems]]
   - CloudFormation
+    - [[file:articles/2017/s3-website-with-https-using-cloudformation.org::#sitebucket][Creating an S3 bucket for a static website]]
+    - [[file:articles/2017/s3-website-with-https-using-cloudformation.org::#logbucket][Creating an S3 bucket to store logs]]
     - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#cloudfront][Creating CloudFront distribution]]
     - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#s3-redirection][Creating S3 redirection bucket]]
     - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#certificate][Creating SSL Certificate]]
