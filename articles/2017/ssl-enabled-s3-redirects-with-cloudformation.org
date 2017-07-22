@@ -174,8 +174,8 @@ home.].
   :END:
 
 Now that I'm using =us-east-1= as the region creating the stack
-succeeds. But does it /work/? Since I haven't delegated DNS yet I have
-to use the CloudFormation distribution URL directly to test it:
+succeeds. But does it /work/? Since I haven't delegated DNS yet I use
+the S3 website URL directly to test the redirection on its own.
 
 #+BEGIN_SRC sh :results output :exports both
 curl -v http://superloopy.io.s3-website-us-east-1.amazonaws.com/articles/2017/adding-ssl.html
@@ -189,9 +189,9 @@ curl -v http://superloopy.io.s3-website-us-east-1.amazonaws.com/articles/2017/ad
 < Location: https://www.superloopy.io/articles/2017/adding-ssl.html
 #+end_example
 
-So, yes! The S3 setup looks like it's working! But... Does the
-CloudFront setup work? This is where the ~Outputs~ section comes in---I
-can ask Sceptre to display my stack's outputs:
+So, yes! The S3 redirection setup looks like it's working! But... Does
+the CloudFront setup work? This is where the ~Outputs~ section comes
+in---I can ask Sceptre to display my stack's outputs:
 
 #+BEGIN_SRC sh :results output :exports both
 sceptre describe-stack-outputs superloopy www

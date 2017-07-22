@@ -287,8 +287,8 @@ CloudFront for now<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>.
 <div class="outline-text-2" id="text-testing-redirection">
 <p>
 Now that I'm using <code>us-east-1</code> as the region creating the stack
-succeeds. But does it <i>work</i>? Since I haven't delegated DNS yet I have
-to use the CloudFormation distribution URL directly to test it:
+succeeds. But does it <i>work</i>? Since I haven't delegated DNS yet I use
+the S3 website URL directly to test the redirection on its own.
 </p>
 
 <div class="org-src-container">
@@ -304,9 +304,9 @@ to use the CloudFormation distribution URL directly to test it:
 </pre>
 
 <p>
-So, yes! The S3 setup looks like it's working! But&#x2026; Does the
-CloudFront setup work? This is where the <code>Outputs</code> section comes in&#x2014;I
-can ask Sceptre to display my stack's outputs:
+So, yes! The S3 redirection setup looks like it's working! But&#x2026; Does
+the CloudFront setup work? This is where the <code>Outputs</code> section comes
+in&#x2014;I can ask Sceptre to display my stack's outputs:
 </p>
 
 <div class="org-src-container">
