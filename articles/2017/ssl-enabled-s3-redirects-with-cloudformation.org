@@ -1,11 +1,10 @@
 #+title: Setting up SSL-enabled S3 redirection with CloudFormation
 #+date: <2017-07-21 Fri>
 #+begin_abstract
-In which I learn to create an SSL certificate used by a CloudFront
-distribution to expose the contents of an S3 bucket over HTTPS with
-Sceptre and CloudFormation.
+I show how to create an S3 bucket for redirecting web requests, put it
+behind a CloudFront distribution, and configured /this/ with an SSL
+certificate---all via CloudFormation.
 #+end_abstract
-#+index: CloudFormation!Creating S3 bucket, Certificate & CloudFront distribution
 
 This is the third post in an ongoing [[file:adding-ssl.org][series]] in which I move my blog to
 HTTPS. In the [[file:route-53-cloudformation.org][previous post]] I learnt how to set up DNS in Route 53
@@ -14,9 +13,11 @@ up a redirection from the Apex domain (i.e. superloopy.io) to
 www.superloopy.io.
 
 #+toc: headlines
-#+toc: listings
 
 * Outputs
+  :PROPERTIES:
+  :CUSTOM_ID: outputs
+  :END:
 
 In addition to ~Parameters~ and ~Resources~ this stack will have an
 [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html][Outputs]] section. This will contain the domain name of the CloudFront
@@ -38,6 +39,10 @@ at the top level of the YAML template, and looks like this:
 #+END_SRC
 
 * Certificate
+  :PROPERTIES:
+  :CUSTOM_ID: certificate
+  :END:
+#+INDEX: CloudFormation!Creating SSL Certificate
 
 Next we create a [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html][Certificate]]. It is fairly easy: the only required
 configuration is the domain name. However, we will also add a
@@ -57,6 +62,10 @@ Resources:
 #+END_SRC
 
 * S3 Redirection bucket
+  :PROPERTIES:
+  :CUSTOM_ID: s3-redirection
+  :END:
+#+INDEX: CloudFormation!Creating S3 redirection bucket
 
 Next we create ~ApexBucket~---the bucket used for redirection from the
 Apex domain to the WWW site proper. We'll use the [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html][AWS::S3::Bucket]]
@@ -86,6 +95,10 @@ Resources:
 #+END_SRC
 
 * CloudFront Distribution
+  :PROPERTIES:
+  :CUSTOM_ID: cloudfront
+  :END:
+#+INDEX: CloudFormation!Creating CloudFront distribution
 
 Finally we need to set up the CloudFront distribution, using its
 [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig.html][AWS::CloudFront::Distribution]] resource. It has only one property, the
@@ -134,7 +147,10 @@ about them, other than that they seem to do the job.
             SslSupportMethod: sni-only
 #+END_SRC
 
-* CloudFront /really/ likes the =us-east-1= region
+** CloudFront /really/ likes the =us-east-1= region
+   :PROPERTIES:
+   :CUSTOM_ID: cloudfront-like-us-east-1
+   :END:
 
 Attempting to create the above stack unfortunately fails with the
 following error:
@@ -152,7 +168,10 @@ CloudFront for now[fn::Hopefully in the future CloudFront allows certs
 made anywhere, and then I can re-create my stack in a region closer to
 home.].
 
-* Testing our stack so far
+* Testing that redirection works
+  :PROPERTIES:
+  :CUSTOM_ID: testing-redirection
+  :END:
 
 Now that I'm using =us-east-1= as the region creating the stack
 succeeds. But does it /work/? Since I haven't delegated DNS yet I have
@@ -200,6 +219,9 @@ curl -v https://d117yhymq9s8zd.cloudfront.net/articles/2017/adding-ssl.html
 Result!
 
 * The completed template
+  :PROPERTIES:
+  :CUSTOM_ID: complete-template
+  :END:
 
 For the sake of completeness, here's my completed template:
 
@@ -260,6 +282,9 @@ For the sake of completeness, here's my completed template:
 #+END_SRC
 
 * Conclusion
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
 
 I am pretty happy with this setup. No doubt it will be useful when
 moving all my sites to HTTPS over the next months.

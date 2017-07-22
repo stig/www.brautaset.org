@@ -23,8 +23,10 @@
     - [[file:articles/2017/n-queens.org][Solving the N Queens problem]]
     - [[file:articles/2014/learning-clojure.org][Using it to solve Euler Problems]]
   - CloudFormation
-    - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org][Creating S3 bucket, Certificate & CloudFront distribution]]
-    - [[file:articles/2017/route-53-cloudformation.org][Managing Route 53 with]]
+    - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#cloudfront][Creating CloudFront distribution]]
+    - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#s3-redirection][Creating S3 redirection bucket]]
+    - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#certificate][Creating SSL Certificate]]
+    - [[file:articles/2017/route-53-cloudformation.org][Managing Route 53]]
 * D
   - [[file:articles/2005/untraditional-refactoring-technique.org][Dead code elimination]]
   - Development

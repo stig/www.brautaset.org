@@ -83,12 +83,13 @@ for the JavaScript code in this tag.
 <h1 class="title">Setting up SSL-enabled S3 redirection with CloudFormation</h1>
 <div class="abstract">
 <p>
-In which I learn to create an SSL certificate used by a CloudFront
-distribution to expose the contents of an S3 bucket over HTTPS with
-Sceptre and CloudFormation.
+I show how to create an S3 bucket for redirecting web requests, put it
+behind a CloudFront distribution, and configured <i>this</i> with an SSL
+certificate&#x2014;all via CloudFormation.
 </p>
 
 </div>
+
 <p>
 This is the third post in an ongoing <a href="adding-ssl.html">series</a> in which I move my blog to
 HTTPS. In the <a href="route-53-cloudformation.html">previous post</a> I learnt how to set up DNS in Route 53
@@ -101,32 +102,24 @@ www.superloopy.io.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org69c02b1">Outputs</a></li>
-<li><a href="#orgce5da4a">Certificate</a></li>
-<li><a href="#org940117d">S3 Redirection bucket</a></li>
-<li><a href="#orgf584ec5">CloudFront Distribution</a></li>
-<li><a href="#org638d307">CloudFront <i>really</i> likes the <code>us-east-1</code> region</a></li>
-<li><a href="#org9410f7a">Testing our stack so far</a></li>
-<li><a href="#org0a4472e">The completed template</a></li>
-<li><a href="#org6764783">Conclusion</a></li>
-</ul>
-</div>
-</div>
-<div id="list-of-listings">
-<h2>List of Listings</h2>
-<div id="text-list-of-listings">
+<li><a href="#outputs">Outputs</a></li>
+<li><a href="#certificate">Certificate</a></li>
+<li><a href="#s3-redirection">S3 Redirection bucket</a></li>
+<li><a href="#cloudfront">CloudFront Distribution</a>
 <ul>
-<li><a href="#orgf7e3499"><span class="listing-number">Listing 1:</span> CloudFormation Outputs section</a></li>
-<li><a href="#orgc500b4a"><span class="listing-number">Listing 2:</span> Creating AWS::CertificateManager::Certificate with SANs</a></li>
-<li><a href="#org740ae52"><span class="listing-number">Listing 3:</span> S3 bucket for redirection</a></li>
-<li><a href="#org5099ac7"><span class="listing-number">Listing 4:</span> Complete <code>templates/www.yaml</code> template</a></li>
+<li><a href="#cloudfront-like-us-east-1">CloudFront <i>really</i> likes the <code>us-east-1</code> region</a></li>
+</ul>
+</li>
+<li><a href="#testing-redirection">Testing that redirection works</a></li>
+<li><a href="#complete-template">The completed template</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-org69c02b1" class="outline-2">
-<h2 id="org69c02b1">Outputs</h2>
-<div class="outline-text-2" id="text-org69c02b1">
+<h2 id="outputs"><a id="org69c02b1"></a>Outputs</h2>
+<div class="outline-text-2" id="text-outputs">
 <p>
 In addition to <code>Parameters</code> and <code>Resources</code> this stack will have an
 <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Outputs</a> section. This will contain the domain name of the CloudFront
@@ -150,8 +143,8 @@ at the top level of the YAML template, and looks like this:
 </div>
 
 <div id="outline-container-orgce5da4a" class="outline-2">
-<h2 id="orgce5da4a">Certificate</h2>
-<div class="outline-text-2" id="text-orgce5da4a">
+<h2 id="certificate"><a id="orgce5da4a"></a>Certificate</h2>
+<div class="outline-text-2" id="text-certificate">
 <p>
 Next we create a <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html">Certificate</a>. It is fairly easy: the only required
 configuration is the domain name. However, we will also add a
@@ -173,8 +166,8 @@ cert for both. This goes in the <code>Resources</code> section:
 </div>
 
 <div id="outline-container-org940117d" class="outline-2">
-<h2 id="org940117d">S3 Redirection bucket</h2>
-<div class="outline-text-2" id="text-org940117d">
+<h2 id="s3-redirection"><a id="org940117d"></a>S3 Redirection bucket</h2>
+<div class="outline-text-2" id="text-s3-redirection">
 <p>
 Next we create <code>ApexBucket</code>&#x2014;the bucket used for redirection from the
 Apex domain to the WWW site proper. We'll use the <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html">AWS::S3::Bucket</a>
@@ -208,8 +201,8 @@ active.) Here's how this section looks:
 </div>
 
 <div id="outline-container-orgf584ec5" class="outline-2">
-<h2 id="orgf584ec5">CloudFront Distribution</h2>
-<div class="outline-text-2" id="text-orgf584ec5">
+<h2 id="cloudfront"><a id="orgf584ec5"></a>CloudFront Distribution</h2>
+<div class="outline-text-2" id="text-cloudfront">
 <p>
 Finally we need to set up the CloudFront distribution, using its
 <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig.html">AWS::CloudFront::Distribution</a> resource. It has only one property, the
@@ -264,11 +257,10 @@ about them, other than that they seem to do the job.
 </code></pre>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org638d307" class="outline-2">
-<h2 id="org638d307">CloudFront <i>really</i> likes the <code>us-east-1</code> region</h2>
-<div class="outline-text-2" id="text-org638d307">
+<div id="outline-container-org638d307" class="outline-3">
+<h3 id="cloudfront-like-us-east-1"><a id="org638d307"></a>CloudFront <i>really</i> likes the <code>us-east-1</code> region</h3>
+<div class="outline-text-3" id="text-cloudfront-like-us-east-1">
 <p>
 Attempting to create the above stack unfortunately fails with the
 following error:
@@ -288,10 +280,11 @@ CloudFront for now<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>.
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org9410f7a" class="outline-2">
-<h2 id="org9410f7a">Testing our stack so far</h2>
-<div class="outline-text-2" id="text-org9410f7a">
+<div id="outline-container-orgcd7afb3" class="outline-2">
+<h2 id="testing-redirection"><a id="orgcd7afb3"></a>Testing that redirection works</h2>
+<div class="outline-text-2" id="text-testing-redirection">
 <p>
 Now that I'm using <code>us-east-1</code> as the region creating the stack
 succeeds. But does it <i>work</i>? Since I haven't delegated DNS yet I have
@@ -351,8 +344,8 @@ Result!
 </div>
 
 <div id="outline-container-org0a4472e" class="outline-2">
-<h2 id="org0a4472e">The completed template</h2>
-<div class="outline-text-2" id="text-org0a4472e">
+<h2 id="complete-template"><a id="org0a4472e"></a>The completed template</h2>
+<div class="outline-text-2" id="text-complete-template">
 <p>
 For the sake of completeness, here's my completed template:
 </p>
@@ -415,8 +408,8 @@ For the sake of completeness, here's my completed template:
 </div>
 
 <div id="outline-container-org6764783" class="outline-2">
-<h2 id="org6764783">Conclusion</h2>
-<div class="outline-text-2" id="text-org6764783">
+<h2 id="conclusion"><a id="org6764783"></a>Conclusion</h2>
+<div class="outline-text-2" id="text-conclusion">
 <p>
 I am pretty happy with this setup. No doubt it will be useful when
 moving all my sites to HTTPS over the next months.

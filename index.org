@@ -12,9 +12,9 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 ** [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]]
 
-In which I learn to create an SSL certificate used by a CloudFront
-distribution to expose the contents of an S3 bucket over HTTPS with
-CloudFormation.
+I show how to create an S3 bucket for redirecting web requests, put it
+behind a CloudFront distribution, and configured /this/ with an SSL
+certificate---all via CloudFormation.
 
 ** [[file:articles/2017/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]]
 
