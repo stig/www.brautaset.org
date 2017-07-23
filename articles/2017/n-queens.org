@@ -40,7 +40,7 @@ problem is you can test with $N$ smaller than 8. This makes it easier
 to create tests.)
 
 #+caption: Four by Four Chess Board
-#+BEGIN_SRC ditaa :file n-queens/board.png :cmdline -E
+#+BEGIN_SRC ditaa :file n-queens/board.png :cmdline -E :eval never-export
                North
 
      +-----+-----+-----+-----+
@@ -87,7 +87,7 @@ Following the algorithm you might end up with something like this:
 
 #+attr_html: :alt N Queens solution for N=4
 #+caption: N Queens solution for $N=4$
-#+BEGIN_SRC ditaa :file n-queens/solved.png :cmdline -E
+#+BEGIN_SRC ditaa :file n-queens/solved.png :cmdline -E :eval never-export
                North
 
      +-----+-----+-----+-----+
@@ -126,7 +126,7 @@ previous figure. Both rows and column indexes start counting from
 zero.
 
 #+caption: Clojure vector board representation
-#+BEGIN_SRC ditaa :file n-queens/vector.png
+#+BEGIN_SRC ditaa :file n-queens/vector.png :eval never-export
     0   1   2   4    <-- Column indexes
   +---+---+---+---+
   |   |   |   |   |
