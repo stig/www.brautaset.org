@@ -7,7 +7,7 @@ CloudFormation.)
 #+end_abstract
 #+index: SSL!Adding to this blog
 
-Because this is basic static site I've not previously bothered with
+Because this is a basic static site I've not previously bothered with
 SSL. But as [[https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view][Chrome and Firefox will require HTTP/2 requests to be
 encrypted]], and with [[https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure][Chrome marking HTTP as non-secure]], I figure it's
 time to do something about that.
