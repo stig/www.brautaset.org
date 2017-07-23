@@ -3,12 +3,17 @@
 This is my personal website. There are many like it, but this one is
 mine. Sometimes I blog because I have something to say, sometimes it's
 just to practice writing. It used to be that most articles were tech
-related, but I think that ship has sailed now. Anything goes really.
+related, but I think that ship has sailed now.
 
 Below is a full list of articles, in reverse chronological order. I
 also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
+
+** [[file:articles/2017/publishing-this-blog-to-s3.org][Publishing this blog to an S3 bucket]]
+
+I show briefly the changes I need to make to publish this blog to S3
+rather than to GitHub.
 
 ** [[file:articles/2017/s3-website-with-https-using-cloudformation.org][Creating S3 website with SSL using CloudFormation]]
 

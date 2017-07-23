@@ -43,13 +43,17 @@ Thus, a plan emerges:
 2. [[file:ssl-enabled-s3-redirects-with-cloudformation.org][Handle redirects from Apex domain to www with an S3 bucket]]
 3. <<site-bucket>>[[file:s3-website-with-https-using-cloudformation.org][Create an S3 site bucket, fronted by ACM-provided
    SSL Cert via CloudFront, that I can publish by blog from]][fn:2]
-4. <<publish>>Change my blog publishing setup to populate the S3
-   bucket from previous step[fn:2]
+4. <<publish>>[[file:publishing-this-blog-to-s3.org][Change my blog publishing setup to populate the S3
+   bucket from previous step]][fn:2]
+5. Update DNS using ~Fn::ImportValue~ in CloudFormation[fn:3]
 
 One thing I have in abundant supply is lack of time, so I'm afraid
 those steps will have to be the subject of future posts.
 
 * Footnotes
+
+[fn:3] I forgot to update my DNS stack when creating the S3 buckets,
+as I had intended, so I do it as a separate step.
 
 [fn:2] I changed the order of steps [[site-bucket]] and [[publish]] as I came
 to realise I have to actually have an S3 bucket to publish to in order

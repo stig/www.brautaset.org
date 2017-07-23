@@ -140,8 +140,9 @@ Thus, a plan emerges:
 <li><a href="ssl-enabled-s3-redirects-with-cloudformation.html">Handle redirects from Apex domain to www with an S3 bucket</a></li>
 <li><a id="org896feda"></a><a href="s3-website-with-https-using-cloudformation.html">Create an S3 site bucket, fronted by ACM-provided
 SSL Cert via CloudFront, that I can publish by blog from</a><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></li>
-<li><a id="org49bf76d"></a>Change my blog publishing setup to populate the S3
-bucket from previous step<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup></li>
+<li><a id="org49bf76d"></a><a href="publishing-this-blog-to-s3.html">Change my blog publishing setup to populate the S3
+bucket from previous step</a><sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup></li>
+<li>Update DNS using <code>Fn::ImportValue</code> in CloudFormation<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></li>
 </ol>
 
 <p>
@@ -159,6 +160,11 @@ than AWS for <code>.io</code> domains.
 I changed the order of steps <a href="#org896feda">3</a> and <a href="#org49bf76d">4</a> as I came
 to realise I have to actually have an S3 bucket to publish to in order
 to test the change to publishing.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+I forgot to update my DNS stack when creating the S3 buckets,
+as I had intended, so I do it as a separate step.
 </p></div></div>
 
 </div></div>

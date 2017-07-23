@@ -112,6 +112,8 @@
   - RSI
     - [[file:articles/2016/overcoming-rsi.org][Overcoming]]
 * S
+  - S3
+    - [[file:articles/2017/org-publish-to-s3.org][Uploading public website files]]
   - SBJson
     - [[file:articles/2014/delighting-users-with-sbjson-4.org][Streaming JSON]]
     - [[file:articles/2013/what-now-for-sbjson.org][What now?]]

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publishing this blog to an S3 bucket</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Stig Brautaset">
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<script type="text/javascript">
+if(/superloopy.io/.test(window.location.hostname)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4113456-6', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+  <a href="/"><img src="/images/logo.png" alt="Superloopy Logo"/></a>
+  <nav>
+    <ul>
+      <li><a accesskey="H" href="/"> Home </a></li>
+      <li><a accesskey="p" href="/publications.html"> Publications </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="c" href="/contact.html"> Contact </a></li>
+      <li>Licence: <a accesskey="l" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Publishing this blog to an S3 bucket</h1>
+<div class="abstract">
+<p>
+I show briefly the changes I need to make to publish this blog to S3
+rather than to GitHub.
+</p>
+
+</div>
+<p>
+This is a short post adding to the testing notes from the <a href="s3-website-with-https-using-cloudformation.html#testing">previous
+post</a> where I created an S3 bucket to host my static site. To test that
+it worked I had to upload <i>something</i> and ended up doing most of what I
+had intended for this blog post. If you're reading my <a href="adding-ssl.html">adding SSL
+series</a> but are only interested in the CloudFormation bits you can skip
+this post as it doesn't contain any.
+</p>
+
+<p>
+For the tests in my previeous post I relied on all <code>.html</code> pages being
+generated in the same base directory as their sources. But as I don't
+intend to check in the generated files, I don't want to continue that!
+Instead I want the generated files to end up in <code>~/public_html</code> on my
+machine, so I can preview them. I intend to do much like what I do
+now: <code>cd</code> into the root directory containing the generated blog and
+issue the command <code>python -m SimpleHTTPServer</code>.
+</p>
+
+<p>
+So, I have to change my publishing setup. For the processing of the
+Org files I just have to change the <code>:publishing-directory</code> setting from
+<code>~/blog</code> to <code>~/public_html</code> but I have to add a new project to deal with
+static files. This project looks like so:
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-emacs-lisp">(<span style="color: #00796b;">setq</span> org-publish-project-alist
+      '((<span style="color: #689f38;">"superloopy_static"</span>
+         <span style="color: #B71C1C;">:base-directory</span> <span style="color: #689f38;">"~/blog"</span>
+         <span style="color: #B71C1C;">:publishing-directory</span> <span style="color: #689f38;">"~/public_html"</span>
+         <span style="color: #B71C1C;">:base-extension</span> <span style="color: #689f38;">"css</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">jpg</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">png</span><span style="color: #FFA000;">\\</span><span style="color: #4527A0;">|</span><span style="color: #689f38;">pdf"</span>
+         <span style="color: #B71C1C;">:recursive</span> t
+         <span style="color: #B71C1C;">:publishing-function</span> org-publish-attachment)
+        (<span style="color: #689f38;">"superloopy_html"</span>
+         ...)
+</code></pre>
+</div>
+
+<p>
+Now, after I have reviewed the changes to the generated files (by
+browsing to <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>) I have to upload the generated
+files to S3. This is similar to how I uploaded the test files in the
+previous post, but now that the directory only contains generated
+files I can shorten it to make the <code>=--exclude</code> line more specific and
+contain fewer <code>--include</code> lines. My <code>upload.fish</code> script looks like this:
+</p>
+
+<div class="org-src-container">
+<pre><code class="src src-fish"><span style="color: #607d8b;">#</span><span style="color: #607d8b;">!/usr/local/bin/fish</span>
+
+<span style="color: #00796b;">set</span> <span style="color: #2196f3;">-gx</span> <span style="color: #EF6C00;">AWS_PROFILE</span> stig
+<span style="color: #B71C1C;">aws</span> s3 sync <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--acl</span> public-read <span style="color: #2196f3;">\</span>
+    <span style="color: #B71C1C;">--exclude</span> <span style="color: #689f38;">'.DS_Store'</span> <span style="color: #2196f3;">\</span>
+    ~/public_html/ s3://www.superloopy.io
+</code></pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 23 July 2017</p>
+<p class="author">Author: Stig Brautaset</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
