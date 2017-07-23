@@ -10,6 +10,12 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+** [[file:articles/2017/dns-cloudformation-importvalue.org][Updating DNS with output of another CloudFormation stack]]
+
+I show the changes to my Sceptre config & CloudFormation template
+required to point DNS to my the two CloudFront distributions I've
+created.
+
 ** [[file:articles/2017/publishing-this-blog-to-s3.org][Publishing this blog to an S3 bucket]]
 
 I show briefly the changes I need to make to publish this blog to S3

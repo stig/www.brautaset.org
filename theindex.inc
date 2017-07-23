@@ -29,6 +29,7 @@
     - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#s3-redirection][Creating S3 redirection bucket]]
     - [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::#certificate][Creating SSL Certificate]]
     - [[file:articles/2017/route-53-cloudformation.org][Managing Route 53]]
+    - [[file:articles/2017/dns-cloudformation-importvalue.org][Stack dependencies]]
 * D
   - [[file:articles/2005/untraditional-refactoring-technique.org][Dead code elimination]]
   - Development
@@ -113,7 +114,7 @@
     - [[file:articles/2016/overcoming-rsi.org][Overcoming]]
 * S
   - S3
-    - [[file:articles/2017/org-publish-to-s3.org][Uploading public website files]]
+    - [[file:articles/2017/publishing-this-blog-to-s3.org][Uploading public website files]]
   - SBJson
     - [[file:articles/2014/delighting-users-with-sbjson-4.org][Streaming JSON]]
     - [[file:articles/2013/what-now-for-sbjson.org][What now?]]

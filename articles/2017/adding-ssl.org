@@ -45,7 +45,7 @@ Thus, a plan emerges:
    SSL Cert via CloudFront, that I can publish by blog from]][fn:2]
 4. <<publish>>[[file:publishing-this-blog-to-s3.org][Change my blog publishing setup to populate the S3
    bucket from previous step]][fn:2]
-5. Update DNS using ~Fn::ImportValue~ in CloudFormation[fn:3]
+5. [[file:dns-cloudformation-importvalue.org][Update DNS using ~Fn::ImportValue~ in CloudFormation]][fn:3]
 
 One thing I have in abundant supply is lack of time, so I'm afraid
 those steps will have to be the subject of future posts.

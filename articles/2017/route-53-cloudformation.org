@@ -188,6 +188,9 @@ dig @ns-1681.awsdns-18.co.uk -t mx superloopy.io +short
 Great!
 
 * Combining the zone and mx stacks
+  :PROPERTIES:
+  :CUSTOM_ID: full-template
+  :END:
 
 At this point I started having second thoughts about my approach. I
 originally had in mind setting up just the zone in one stack, and
