@@ -245,7 +245,7 @@ This change concludes the work to add SSL to my blog. The only bit I
 haven't shown is how to tell Gandi to use the name servers I've
 configured on AWS Route 53 rather than the default ones, but I feel
 that is outside the scope of this blog series. It's now done, however,
-and if you're reading this you're getting full experience of my
+and if you're reading this you're getting<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> the full experience of my
 HTTPS-enabled blog :-)
 </p>
 </div>
@@ -254,6 +254,13 @@ HTTPS-enabled blog :-)
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara">I
 didn't see much reason to make it a template property as it is used
 <i>everywhere</i> you create an <code>AliasTarget</code> for a CloudFront domain.</div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Or, as it happens, maybe not yet. Because it turns out lots of
+home routers (including my own) ignore TTLs and cache DNS servers for
+a long time. So for a week or so I'll leave the generated files in
+GitHub, and also post new content to the AWS S3 bucket. 
+</p></div></div>
 
 </div></div>
 <div id="postamble" class="status">
