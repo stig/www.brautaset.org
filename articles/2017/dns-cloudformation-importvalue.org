@@ -2,7 +2,7 @@
 #+date: <2017-07-23 Sun>
 #+begin_abstract
 I show the changes to my Sceptre config & CloudFormation template
-required to point DNS to my the two CloudFront distributions I've
+required to point DNS to the two CloudFront distributions I've
 created.
 #+end_abstract
 #+index: CloudFormation!Stack dependencies
