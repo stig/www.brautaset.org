@@ -96,7 +96,7 @@ examples of using the ~!Sub~ function which resulted in a much nicer way
 to produce the fqdn from the apex domain; see [[(name)]].) The
 ~WwwRecordSet~ now looks like this:
 
-#+BEGIN_SRC yaml
+#+BEGIN_SRC yaml -n -r
   WwwRecordSet:
     Type: 'AWS::Route53::RecordSet'
     Properties:
@@ -117,7 +117,7 @@ new resource is in the next snippet. Note that I found the "magic"
 didn't see much reason to make it a template property as it is used
 /everywhere/ you create an ~AliasTarget~ for a CloudFront domain.].
 
-#+BEGIN_SRC yaml -r
+#+BEGIN_SRC yaml -n -r
   ApexRecordSet:
     Type: 'AWS::Route53::RecordSet'
     Properties:
