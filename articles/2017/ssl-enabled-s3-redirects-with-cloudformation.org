@@ -177,7 +177,7 @@ Now that I'm using =us-east-1= as the region creating the stack
 succeeds. But does it /work/? Since I haven't delegated DNS yet I use
 the S3 website URL directly to test the redirection on its own.
 
-#+BEGIN_SRC sh :results output :exports both
+#+BEGIN_SRC sh :results output :exports both :eval never-export
 curl -v http://superloopy.io.s3-website-us-east-1.amazonaws.com/articles/2017/adding-ssl.html
 #+END_SRC
 
@@ -193,7 +193,7 @@ So, yes! The S3 redirection setup looks like it's working! But... Does
 the CloudFront setup work? This is where the ~Outputs~ section comes
 in---I can ask Sceptre to display my stack's outputs:
 
-#+BEGIN_SRC sh :results output :exports both
+#+BEGIN_SRC sh :results output :exports both :eval never-export
 sceptre describe-stack-outputs superloopy www
 #+END_SRC
 
@@ -204,7 +204,7 @@ sceptre describe-stack-outputs superloopy www
 
 Plugging that domain name into my query results in:
 
-#+BEGIN_SRC sh :results output :exports both
+#+BEGIN_SRC sh :results output :exports both :eval never-export
 curl -v https://d117yhymq9s8zd.cloudfront.net/articles/2017/adding-ssl.html
 #+END_SRC
 
