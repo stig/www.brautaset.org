@@ -10,6 +10,12 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+** [[file:articles/2017/parking-in-berwick-upon-tweed.org][Open Letter to NCC about Parking in Berwick]]
+
+I complain about the unacceptable parking situation for commuters to
+Berwick-upon-Tweed and present a few suggestions for improvement that
+might help.
+
 ** [[file:articles/2017/dns-cloudformation-importvalue.org][Updating DNS with output of another CloudFormation stack]]
 
 I show the changes to my Sceptre config & CloudFormation template
