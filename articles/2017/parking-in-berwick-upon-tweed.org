@@ -82,16 +82,22 @@ surface that is the problem.
 I posit that we need a thorough overhaul of parking in Berwick. Here
 are some suggestions for your consideration:
 
-** Introduce a commuter parking disc
+** Introduce commuter friendly parking in town
 
-This would mimic the existing short-stay parking disk but have days of
-the week on it rather than hours. It would be valid for a single day,
-but not multiple days in a row. There could either be a separate car
-park where these would be valid, or their users could park in the
-existing short-stay parking ones. (The latter would require the
-commuter disks to be rather more expensive than the existing disk to
-discourage misuse, or be something you have to apply for like the
-resident permits.)
+One way could be introduce a comumter disk, mimicing the existing
+short-stay parking disk but with days of the week on it rather than
+hours. It would be valid for a single day, but not multiple days in a
+row. There could either be a separate car park where these would be
+valid, or their users could park in the existing short-stay parking
+ones. (The latter would require the commuter disks to be rather more
+expensive than the existing disk to discourage misuse, or be something
+you have to apply for like the resident permits.) Ideally you should
+have to show that you work in town to qualify.
+
+Another way to do this would be extending the existing [[http://www.northumberland.gov.uk/NorthumberlandCountyCouncil/media/Parking-documents/1518-Northumberland-Pay-and-Display-Parking-permit-Terms-and-Conditons.pdf][Pay & Display]]
+scheme to a location inside the walls, suitable for commuting.
+However, this solution does not address the problem of cars parked for
+weeks at a time.
 
 ** Introduce half-day parking
 
