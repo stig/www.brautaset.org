@@ -45,7 +45,7 @@ end up using all day parking instead. The two hour parking by the
 Maltings particularly rankles, as it is impossible to use for a
 matinee or day-time play.
 
-** People often don't park fully inside the parking bays 
+** People often don't park fully inside the parking bays
 
 Thus take up more space than necessary. This is particularly the case
 in Foul Ford and Castlegate car parks.
@@ -69,6 +69,13 @@ You don't have to worry about obtaining or displaying the disk, nor
 about remembering to be back at a certain time. I have myself been
 guilty of (ab-)using long-stay car parks for this reason, and doubt
 I'm the only one.
+
+** Castlegate long stay and overspill car park is often a mudbath
+
+I often end up parking here because I can't find suitable parking
+inside the walls. Yet, it's not the distance of walking I object to:
+it's having to wade through mud, and risk a fall on the slippery
+surface that is the problem.
 
 * Recommendations
 
@@ -104,7 +111,7 @@ often see two cars parked in space that would suffice for three.
 
 ** Properly develop Castlegate Long Stay overspill car park
 
-Make it suitable for parking in all weather and footwear. 
+Make it suitable for parking in all weather and footwear.
 
 This would be particularly effective in combination with improved
 access from Castlegate Long stay and overspill car parks to the town.
@@ -118,7 +125,7 @@ Hatters Lane.
 This could perhaps be done by requiring a parking disk for long stay
 parking too, and perhaps by making this disk more expensive.
 
-** Make the bus car park by the Library back into a car park 
+** Make the bus car park by the Library back into a car park
 
 It should be at least two hours, since many events you may want to
 attend to at the library last an hour.
@@ -140,3 +147,19 @@ I don't think that any of the above recommendations will fix the
 parking problem on their own. Nor do I necessarily think adding more
 parking is the right solution. Rather, I believe a multi-pronged
 approach is required.
+
+I realise that the existing parking disk is a County wide scheme, and
+the particular problem I describe is perhaps localised to Berwick. (I
+have no experience with other towns in the county, so cannot speak for
+them.) Thus introducing a disk, or additional charges, for long-stay
+parking could be a problem. However, it feels like introducing a
+commuter disk, and dedicated parking for carriers of such a disk, as a
+specific solution to a specific problem we have here that will have
+little impact to the rest of the county. Improving the quality of the
+surface and bay markings of existing parking sites should also give
+good result with no impact to the parking scheme anywhere else.
+
+* Contact
+
+I refer you to [[file:../../contact.org][my contact details]] should you wish to contact me about
+this open letter.
