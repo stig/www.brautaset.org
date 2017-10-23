@@ -23,12 +23,9 @@ Enter the [[https://en.wikipedia.org/wiki/Line_Printer_Daemon_protocol][Line Pri
 printing. You can use the =lpr= utility (it's what I used) to queue
 files to be printed, or to alter a previously submitted request.  It's
 also networked, and provides an admin with the ability to manage the
-queue.  (For example deleting repeated jobs.)
-
-Writing this it's now more than 18 years since I did this, so I don't
-remember the details.  I *think* what I did was write some =lpd= config
-and a few lines of shell script that acted as "a printer" and would
-play a music file using MPlayer[fn:1].  Voilá!  I and other
+queue.  (For example deleting repeated jobs.)  I ended up write some
+=lpd= config and a few lines of shell script that acted as "a printer"
+and would play a music file using MPlayer[fn:1].  Voilá!  I and other
 users[fn:2] could now print music through my stereo.
 
 I remember trying a different app first, but MBPlayer's edge was that
@@ -38,10 +35,17 @@ where music was /piped in/ rather than provided in a named file.  (It
 also handled cases where =.mp3= files had been labelled as =.ogg= so its
 owner could appear cool.)
 
+* Disclaimer
+
+This transpired so long ago (1998-99) that I don't remember all the
+details.  I cannot even remember whether it was my own invention or if
+I got the idea from someone else.  Nevertheless it was a fun
+experiment at the time.
+
 My endeavours was before the initial release Common UNIX Printing
 System (CUPS) and its [[https://en.wikipedia.org/wiki/CUPS#Filter_system][filter system]] but it looks like it should be
-possible to do the same with that as I did back then.  (And probably a
-lot simpler too!)
+possible to do the same with that as I did back then.  (And possibly
+rather a lot simpler too!)
 
 * Footnotes
 
