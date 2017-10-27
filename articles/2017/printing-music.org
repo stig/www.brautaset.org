@@ -48,6 +48,12 @@ System (CUPS) and its [[https://en.wikipedia.org/wiki/CUPS#Filter_system][filter
 possible to do the same with that as I did back then.  (And possibly
 rather a lot simpler too!)
 
+* Thanks
+
+Thanks to [[https://www.doismellburning.co.uk/][Kristian Glass]] for reviewing a draft of this article. (And
+requesting that I write the post in the first place, after it came up
+in a conversation on Slack.)
+
 * Footnotes
 
 [fn:1] Now probably known as [[http://mplayerx.org][MPlayerX]]? I haven't really kept up...
