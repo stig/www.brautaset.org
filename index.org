@@ -10,6 +10,11 @@ also maintain a separate [[file:theindex.org][concept index]].
 
 * 2017
 
+** [[file:articles/2017/printing-music.org][Printing Music (Through My Stereo!)]]
+
+I explain how I set up MPlayer as a printer driver so I could add a
+distributed print queue for music. (AKA a JukeBox.)
+
 ** [[file:articles/2017/parking-in-berwick-upon-tweed.org][Open Letter to NCC about Parking in Berwick]]
 
 I complain about the unacceptable parking situation for commuters to

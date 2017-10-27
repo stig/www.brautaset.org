@@ -23,10 +23,11 @@ Enter the [[https://en.wikipedia.org/wiki/Line_Printer_Daemon_protocol][Line Pri
 printing. You can use the =lpr= utility (it's what I used) to queue
 files to be printed, or to alter a previously submitted request.  It's
 also networked, and provides an admin with the ability to manage the
-queue.  (For example deleting repeated jobs.)  I ended up write some
-=lpd= config and a few lines of shell script that acted as "a printer"
-and would play a music file using MPlayer[fn:1].  Voilá!  I and other
-users[fn:2] could now print music through my stereo.
+queue.  (For example deleting repeated jobs.)  I ended up writing =lpd=
+configuration and a few lines of shell script that acted as a printer.
+This "printer" would read files off the print que and use
+MPlayer[fn:1] to "print" them[fn:2].  Voilá!  I and other users[fn:3]
+could now "print" music through my stereo.
 
 I remember trying a different app first, but MBPlayer's edge was that
 it introspected the byte stream to detect the file type, rather than
@@ -49,8 +50,10 @@ rather a lot simpler too!)
 
 * Footnotes
 
-[fn:2] I /say/ other users, but I was the only Linux user in my halls of
-residence and noone else ever used it.
-
 [fn:1] Now probably known as [[http://mplayerx.org][MPlayerX]]? I haven't really kept up...
+
+[fn:2] I.e. play music.
+
+[fn:3] I /say/ other users, but I was the only Linux user in my halls of
+residence and noone else ever used it.
 
