@@ -10,6 +10,7 @@ aws s3 sync \
     --delete \
     --exclude '.DS_Store' \
     --exclude '*.html' \
+    --exclude '.venv' \
     --acl public-read \
     --cache-control "max-age=$ASSETS_TTL" \
     ~/public_html/ s3://www.superloopy.io
