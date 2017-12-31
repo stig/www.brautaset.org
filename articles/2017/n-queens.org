@@ -287,5 +287,5 @@ Take a look at the solutions for $N=4$ and notice that the second
 solution is the same as the first backwards. Actually this is the case
 for all $N$ where there are solutions: they all have a "mirror image".
 (This shouldn't really be a surprise.) I wonder if there's a way to
-speed up generation of solutions by stoppig midway and just mirroring
+speed up generation of solutions by stopping midway and just mirroring
 the solutions we have already got?
