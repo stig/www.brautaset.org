@@ -8,6 +8,13 @@ related, but I think that ship has sailed now.
 Below is a full list of articles, in reverse chronological order. I
 also maintain a separate [[file:theindex.org][concept index]].
 
+* 2018
+
+** [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
+
+I present four ways you can support me if you have (or continue to)
+benefit from my work on Free and Open Source Software.
+
 * 2017
 
 ** [[file:articles/2017/printing-music.org][Printing Music (Through My Stereo!)]]
