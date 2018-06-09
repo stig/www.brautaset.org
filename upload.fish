@@ -13,7 +13,7 @@ aws s3 sync \
     --exclude '.venv' \
     --acl public-read \
     --cache-control "max-age=$ASSETS_TTL" \
-    ~/public_html/ s3://www.superloopy.io
+    ~/public_html/ s3://www.brautaset.org
 
 # Copy HTML; this changes often, so use shorter TTL
 aws s3 sync \
@@ -22,4 +22,4 @@ aws s3 sync \
     --include '*.html' \
     --acl public-read \
     --cache-control "max-age=$HTML_TTL" \
-    ~/public_html/ s3://www.superloopy.io
+    ~/public_html/ s3://www.brautaset.org
