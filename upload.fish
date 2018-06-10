@@ -23,3 +23,7 @@ aws s3 sync \
     --acl public-read \
     --cache-control "max-age=$HTML_TTL" \
     ~/public_html/ s3://www.brautaset.org
+
+aws cloudfront create-invalidation \
+    --distribution-id E2HQ2C8QF1FXUZ \
+    --paths '/*'
