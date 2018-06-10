@@ -2,28 +2,22 @@
 
 set -gx AWS_PROFILE stig
 
-set HTML_TTL 1800       # 30 minutes
-set ASSETS_TTL 31536000 # 1 year
+set TTL   86400    # 1 day
 
-# Copy non-HTML; assets, images, etc, that don't change often
-aws s3 sync \
-    --delete \
-    --exclude '.DS_Store' \
-    --exclude '*.html' \
-    --exclude '.venv' \
-    --acl public-read \
-    --cache-control "max-age=$ASSETS_TTL" \
-    ~/public_html/ s3://www.brautaset.org
-
-# Copy HTML; this changes often, so use shorter TTL
 aws s3 sync \
     --delete \
     --exclude '*' \
+    --include '*.png' \
+    --include '*.pdf' \
+    --include '*.jpg' \
     --include '*.html' \
+    --include '*.css' \
+    --include '*.xml' \
     --acl public-read \
-    --cache-control "max-age=$HTML_TTL" \
+    --cache-control "max-age=$TTL" \
     ~/public_html/ s3://www.brautaset.org
 
+# Invalidate CloudFront cache when uploading new files
 aws cloudfront create-invalidation \
     --distribution-id E2HQ2C8QF1FXUZ \
     --paths '/*'
