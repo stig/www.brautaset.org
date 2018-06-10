@@ -1,18 +1,21 @@
 #+title: About Stig Brautaset
 
-I have a BSc in Artificial Intelligence from the University of
-Westminster in London, UK. I graduated in June 2003, and since then
-have worked in software development in various industries such as
-fashion, investment banking, online photos, and fintech. Over the
-years employers have paid me to write HTML, PHP, Perl, C, JavaScript,
-Java, Objective-C, Scala, Python, Bash and English.
+I studied AI at the University of Westminster, where I graduated
+in 2003. Since then I've worked in software development in industries
+such as fashion, investment banking, online photos, and fintech.
+Employers have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
+Objective-C, Scala, Python, Bash and English.
+
+I wrote the first version of the (moderately popular) [[https://github.com/stig/json-framework/][SBJson]] JSON
+parser/generator for Objective-C in 2007, and have maintained it ever
+since. It's now in its 5th major version and have over 3800 stars on
+GitHub.
 
 I grew up in Hovdebygda, a village in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta Municipality]] on the west
-coast of Norway. I studied Electronics in Ørsta, Ålesund & Oslo. I
-underwent compulsory military service as sonar operator on a submarine
-before I moved to London for University. I still live in England,
-though in March 2015 I moved from bustling London to rural
-[[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
+coast of Norway. I studied audio/video electronics, then endured
+compulsory military service as a sonar operator on a submarine.  I
+then went to University in London.  15 years later I'd had enough of
+the Big Smoke and moved to rural [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
 
 If you want more details, I suggest reading the transcript of my
 [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]] where I talked for 45 minutes about my
