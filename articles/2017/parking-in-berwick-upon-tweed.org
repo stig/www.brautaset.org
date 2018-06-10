@@ -167,5 +167,5 @@ good result with no impact to the parking scheme anywhere else.
 
 * Contact
 
-I refer you to [[file:../../contact.org][my contact details]] should you wish to contact me about
+I refer you to [[../../about.org::#contact][my contact details]] should you wish to contact me about
 this open letter.
