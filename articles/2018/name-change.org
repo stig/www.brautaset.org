@@ -1,0 +1,12 @@
+#+title: Name Change
+#+date: <2018-06-10 Sun>
+#+begin_abstract
+Why this site is moving from www.superloopy.io to www.brautaset.org.
+#+end_abstract
+
+I've decided to end the experiment with a separate vanity domain
+(superloopy.io) for this site. =.io= domains are expensive, and I don't
+want to pay for one any longer. And more to the point, I don't want to
+pay for more than one private vanity domain, and I've been using the
+brautaset.org domain for my email for two decades so it was a pretty
+easy choice to keep that one.
