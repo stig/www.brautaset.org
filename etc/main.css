@@ -22,9 +22,12 @@
     font-family: monospace; color: orange;
 }
 
-.tag    {
-    background-color: #eee; font-family: monospace;
-    padding: 2px; font-size: 80%; font-weight: normal;
+.tag {
+    background-color: pink;
+    font-family: monospace;
+    padding: 2px;
+    font-size: 80%;
+    font-weight: normal;
 }
 
 .timestamp {
@@ -287,15 +290,15 @@ textarea {
 
 html {
     font-family:
-    Optima,
-    -apple-system,
-    ".SFNSText-Regular",
-    "San Francisco",
-    "Roboto",
-    "Segoe UI",
-    "Helvetica Neue",
-    "Lucida Grande",
-    sans-serif;
+	Optima,
+	-apple-system,
+	".SFNSText-Regular",
+	"San Francisco",
+	"Roboto",
+	"Segoe UI",
+	"Helvetica Neue",
+	"Lucida Grande",
+	sans-serif;
     margin: 0 0.5ch;
 }
 
