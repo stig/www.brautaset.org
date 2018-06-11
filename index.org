@@ -7,6 +7,10 @@ more!]. Sometimes I blog because I have something to say, sometimes
 it's just to practice writing. Here are all my articles, most recent
 first:
 
+* [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
+
+Why this site is moving from www.superloopy.io to www.brautaset.org.
+
 * [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
 
 I present four ways you can support me if you have (or continue to)

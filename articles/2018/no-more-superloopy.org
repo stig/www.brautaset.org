@@ -1,0 +1,16 @@
+#+title: No More Superloopy
+#+date: <2018-06-10 Sun>
+#+begin_abstract
+Why this site is moving from www.superloopy.io to www.brautaset.org.
+#+end_abstract
+
+I've decided to end the experiment with a separate vanity domain
+(superloopy.io) for this site. =.io= domains are expensive, and I don't
+want to pay for one any longer. And more to the point, I don't want to
+pay for more than one vanity domain. Since I've been using the
+brautaset.org domain for my email for nearly two decades it was a
+pretty easy choice to keep that one.
+
+I'm still [[../2017/publishing-this-blog-to-s3.org][deploying to S3]], and still using CloudFormation to set up S3
+buckets, SSL Certificates and CloudFront distributions.  For the next
+6 months I'll redirect requests to www.brautaset.org.
