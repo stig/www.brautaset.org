@@ -1,7 +1,7 @@
 #+title: No More Superloopy
 #+date: <2018-06-10 Sun>
 #+begin_abstract
-Why this site is moving from www.superloopy.io to www.brautaset.org.
+Why this site is moving from the superloopy.io domain to brautaset.org.
 #+end_abstract
 
 I've decided to end the experiment with a separate vanity domain

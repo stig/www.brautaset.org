@@ -9,7 +9,7 @@ first:
 
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
 
-Why this site is moving from www.superloopy.io to www.brautaset.org.
+Why this site is moving from the superloopy.io domain to brautaset.org.
 
 * [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
 
