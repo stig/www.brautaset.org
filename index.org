@@ -1,11 +1,10 @@
 #+title: Stig's Soapbox
+#+options: H:0
 
-I'm Stig Brautaset. I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
-I occasionally find time to maintain this blog[fn::Honestly I mainly
-seem to be futzing around with the build system. I should write
-more!]. Sometimes I blog because I have something to say, sometimes
-it's just to practice writing. Here are all my articles, most recent
-first:
+I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
+I occasionally find time to maintain this blog.  (Though mainly I seem
+to be just fiddle around with the build system.)  Here are all my
+articles, most recent first:
 
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
 
