@@ -6,12 +6,17 @@ benefit from my work on Free and Open Source Software (FOSS).
 #+end_abstract
 
 I've been contributing to Free and Open Source Software (FOSS) for
-over 15 years now.  I've never charged for this work, though lots of
+over 15 years now. I've never charged for this work, though lots of
 people have benefited from it.  You could argue I'm /absurdly/ late to
-the table, but I've now set up profiles on [[https://www.patreon.com/stigbra][Patreon]] and [[https://liberapay.com/stig/][Liberapay]] to
-allow people to pay me a (small) monthly amount for this work.
-Alternatively, you may prefer a one-off donation via [[https://paypal.me/stigbra][Paypal]], or buying
+the table, +but I've now set up profiles on Patreon and Liberapay to
+allow people to pay me a (small) monthly amount for this work.+
+Alternatively, you may prefer a one-off donation via [[https://paypal.me/stigbra][PayPal]], or buying
 me something from my [[http://amzn.eu/bRH7hfI][Amazon Wish List]] instead.
+
+:NOTE:
+As of June 2018 I decided to end the Patreon and Liberapay
+experiments. You can still use the Amazon Wishlist and PayPal options.
+:END:
 
 I only expect to recover a /small fraction/ of the time, effort and
 money I've spent developing and supporting FOSS software.  If you have
