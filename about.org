@@ -12,10 +12,9 @@ photos, investment banking, and fashion.  Employers have paid me to
 write HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala,
 Python, Bash and English.
 
-I wrote the first version of the (moderately popular) [[https://github.com/stig/json-framework/][SBJson]] JSON
-parser/generator for Objective-C in 2007, and have maintained it ever
-since. It's now in its 5th major version and have over 3800 stars on
-GitHub.
+I started writing the moderately popular [[https://github.com/stig/json-framework/][SBJson]] JSON parser/generator
+for Objective-C in 2007, and have maintained it ever since. It's now
+in its 5th major version and have over 3800 stars on GitHub.
 
 In 2015 my little family had had enough of the Big Smoke and we upped
 sticks & moved to rural [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]].
