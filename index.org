@@ -1,6 +1,11 @@
 #+title: Stig's Soapbox
 #+options: H:0
+#+RSS_IMAGE_URL: https://www.brautaset.org/etc/icon.png
+#+DESCRIPTION: I'm Stig Brautaset, and you're reading my site's RSS feed.
 
+#+MACRO: no-rss (eval (if (org-export-derived-backend-p org-export-current-backend 'rss) "* COMMENT :noexport:" ""))
+
+{{{no-rss}}}
 I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
