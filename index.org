@@ -457,13 +457,13 @@ it possible.
   :PUBDATE:  <2007-09-22>
   :RSS_PERMALINK: articles/2007/embedding-cocoa-frameworks.html
   :END:
-* [[file:articles/2007/gpl-vs-bsd-license.org][Goodbye GPL, hello BSD?]]
+* [[file:articles/2007/gpl-vs-bsd-license.org][Goodbye GPL, hello BSD?]]                                           :Soapbox:
   :PROPERTIES:
   :ID:       5B1F858D-4F36-46A9-87B2-C2EF71C362DD
   :PUBDATE:  <2007-09-02>
   :RSS_PERMALINK: articles/2007/gpl-vs-bsd-license.html
   :END:
-* [[file:articles/2007/game-tree-search.org][MiniMax and AlphaBeta Search]]
+* [[file:articles/2007/game-tree-search.org][MiniMax and AlphaBeta Search]]                                     :Tutorial:
   :PROPERTIES:
   :ID:       2A28E0A8-31E1-4A49-A113-D6C856179CA5
   :PUBDATE:  <2007-08-17>
@@ -481,7 +481,7 @@ it possible.
   :PUBDATE:  <2007-06-21>
   :RSS_PERMALINK: articles/2007/the-orient-express.html
   :END:
-* [[file:articles/2007/piping-to-sh.org][Piping to sh -]]                                                      :Hacks:
+* [[file:articles/2007/piping-to-sh.org][Piping to sh -]]                                                   :Tutorial:
   :PROPERTIES:
   :ID:       06E732EC-2381-44CF-8B65-D713982AD50E
   :PUBDATE:  <2007-06-15>
@@ -565,7 +565,7 @@ it possible.
   :PUBDATE:  <2006-08-13>
   :RSS_PERMALINK: articles/2006/hippies.html
   :END:
-* [[file:articles/2006/rise-of-the-machine.org][Rise of the Machine]]
+* [[file:articles/2006/rise-of-the-machine.org][Rise of the Machine]]                                                 :Hacks:
   :PROPERTIES:
   :ID:       BB05F5CF-8BF2-452C-93C1-984F566B0AC3
   :PUBDATE:  <2006-08-12>
@@ -637,7 +637,7 @@ it possible.
   :PUBDATE:  <2005-10-08>
   :RSS_PERMALINK: articles/2005/blade-trinity.html
   :END:
-* [[file:articles/2005/untraditional-refactoring-technique.org][Untraditional Refactoring Technique]]
+* [[file:articles/2005/untraditional-refactoring-technique.org][Untraditional Refactoring Technique]]                                 :Hacks:
   :PROPERTIES:
   :ID:       6168F518-1E81-4825-92F1-A055D9A889FC
   :PUBDATE:  <2005-09-30>
