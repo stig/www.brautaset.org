@@ -1,6 +1,6 @@
 #+title: Tinker Bell (2008)
 #+date: <2015-02-03>
-#+index: Tinker Bell (2008)
+#+category: Reviews
 
 A talented young engineer struggles to overcome social norms and to be
 allowed to join her friends on their annual field trip.

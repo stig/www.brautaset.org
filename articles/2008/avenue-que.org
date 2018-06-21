@@ -1,6 +1,6 @@
 #+title: Avenue Que?
 #+date: <2008-06-05>
-#+index: Avenue Que
+#+category: Reviews
 
 [[http://blog.unixdaemon.net/][Dean]] and I went to see Avenue Q last night, having heard rave reviews
 about it. Plus, he found some cheap tickets, which turned out to be

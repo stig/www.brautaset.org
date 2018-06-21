@@ -1,6 +1,6 @@
 #+title: Little Brother
 #+date: <2010-01-09>
-#+index: Little Brother
+#+category: Reviews
 
 [[http://craphound.com/littlebrother][Little Brother]] by Cory Doctorow is a whirlwind of a novel,
 downloadable in various electronic formats from the author's website.

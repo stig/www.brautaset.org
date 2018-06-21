@@ -3,8 +3,7 @@
 #+begin_abstract
 I share my Emacs & Org-mode setup for blogging with Jekyll.
 #+end_abstract
-#+index: Jekyll!Using with Org mode
-#+index: Org mode!Using with Jekyll
+#+category: Org
 
  I've long used [[http://jekyllrb.com][Jekyll]] to assemble my blog, and Emacs two write all my content
  and templates. I've been wanting to use [[https://github.com/eggcaker/jekyll-org/issues/19][jekyll-org]] to write my blog entries

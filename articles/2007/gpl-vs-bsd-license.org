@@ -1,7 +1,6 @@
 #+title: Goodbye GPL, hello BSD?
 #+date: <2007-09-02>
-#+index: Licence!GPL
-#+index: Licence!BSD
+#+category: Licence
 
 Here's a question that's been on my mind lately:
 

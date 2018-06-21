@@ -1,6 +1,6 @@
 #+title: Delighting your users with SBJson 4
 #+date: <2014-02-15>
-#+index: SBJson!Streaming JSON
+#+category: SBJson
 
 I was asked to speak about SBJson at [[http://blog.cocoapods.org/Cocoa-Kucha-2/][Cocoa Kucha 2]] on the 16th
 of January 2014 and used the opportunity to try to explain why I think

@@ -1,6 +1,6 @@
 #+title: Chip And Pin
 #+date: <2004-08-28>
-#+index: Banking!Chip and Pin
+#+category: Soapbox
 
 I'm getting sick of the British banks' self-gratification. They're
 saying that Britain is one of the first countries to make use of this

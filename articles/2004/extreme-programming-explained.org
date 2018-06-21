@@ -1,6 +1,6 @@
 #+title: Extreme Programming Explained
 #+date: <2004-10-11>
-#+index: Extreme Programming Explained
+#+category: Reviews
 
 -  Author: Kent Beck
 -  ISBN: 0-201-61641-6

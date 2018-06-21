@@ -4,7 +4,7 @@
 I show how to change Terminal.app colours automatically when logging
 into certain remote machines via SSH
 #+end_abstract
-#+index: Terminal background colour!Change on OS X from ssh
+#+category: Hacks
 
 I spend most of my work days in Emacs, Slack, Safari & Terminal. Some
 of the Terminals I've got open, such as those connected to a machine

@@ -1,6 +1,6 @@
 #+title: Not so philosophically different after all?
 #+date: <2015-12-23>
-#+index: Clojure!On this Lisp's non-difference from Haskell
+#+category: Clojure
 
 I found Chris Done's [[http://chrisdone.com/posts/haskell-lisp-philosophy-difference][A philosophical difference between Haskell and
 Lisp]] via its [[https://lobste.rs/s/mjxvyn/a_philosophical_difference_between_haskell_and_lisp][Lobste.rs' thread]] and my response ended up blog-post

@@ -1,6 +1,6 @@
 #+title: 2015 Resolutions
 #+date: <2015-01-01>
-#+index: Resolutions!2015 Resolutions
+#+category: Resolutions
 
 Happy New Year! The title of this post makes it look like I have a
 silly number of resolutions this year, but fear not: I've managed to

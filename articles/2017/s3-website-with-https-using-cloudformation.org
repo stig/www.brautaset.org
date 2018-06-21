@@ -5,6 +5,8 @@ I show how to create an S3 bucket set up to serve a static website,
 and expose it over HTTPS via CloudFront, using the same SSL
 certificate we created in the previous post---all via CloudFormation.
 #+end_abstract
+#+category: CloudFormation
+#+category: S3
 
 This post builds on the template I created in my previous post, where
 I [[file:ssl-enabled-s3-redirects-with-cloudformation.org][created an S3 redirection bucket supported by an SSL certificate]].
@@ -18,7 +20,6 @@ this post, you might like the others too.
   :PROPERTIES:
   :CUSTOM_ID: logbucket
   :END:
-#+index: CloudFormation!Creating an S3 bucket to store logs
 
 Since the bucket we're creating this time is going to host our site it
 might be interesting to capture access logs[fn::This was not so
@@ -45,7 +46,6 @@ about log buckets is to remember setting the ~AccessControl~ property to
   :PROPERTIES:
   :CUSTOM_ID: sitebucket
   :END:
-#+index: CloudFormation!Creating an S3 bucket for a static website
 
 Next we create the bucket that will hold our website. This time we
 won't redirect anything, though we'll specify that when someone asks

@@ -1,6 +1,6 @@
 #+title: Optimising HTTP Cache Hit Rate
 #+date: <2014-08-01>
-#+index: Cache!Maximising Hit Rates
+#+category: Development
 
 I wrote a post over on our company blog titled [[http://techblog.net-a-porter.com/2014/08/maximising-cache-hit-rates-for-rest-apis/][Maximising Cache Hit
 Rates For Rest APIs]]. My team is responsible for producing (and

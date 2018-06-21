@@ -1,7 +1,6 @@
 #+title: Creating a resizable grid of CALayers
 #+date: <2008-10-01>
-#+index: Objective-C!CALayers
-#+index: Objective-C!CAConstraintLayoutManager
+#+category: ObjectiveC
 #+begin_abstract
 I demonstrate how to create a resizable grid of equally-sized cells in
 Core Animation, using a CAConstraintLayoutManager.

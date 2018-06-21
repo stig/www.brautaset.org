@@ -1,6 +1,6 @@
 #+title: New Headphones
 #+date: <2005-12-02>
-#+index: Shure EC2
+#+category: Reviews
 
 Earlier when I've griped about the iPod Shuffle, saying it needed a
 dynamic compressor, [[http://twoshortplanks.com/][Mark Fowler]] told me I just needed better

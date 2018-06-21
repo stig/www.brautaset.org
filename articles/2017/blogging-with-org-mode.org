@@ -5,7 +5,7 @@
 I describe how---and why---I changed from blogging using Markdown &
 Jekyll to using Org mode.
 #+end_abstract
-#+index: Org mode!For blogging
+#+category: Org
 
 As my love-affair with Org mode continue to deepen, blogging with
 Markdown Jekyll was starting to chafe. I wanted to write my blog posts

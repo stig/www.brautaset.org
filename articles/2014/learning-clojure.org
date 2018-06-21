@@ -1,7 +1,6 @@
 #+title: Learning Clojure by Solving Euler Problems
 #+date: <2014-02-10>
-#+index: Clojure!Using it to solve Euler Problems
-#+index: Primes!Finding with Clojure
+#+category: Clojure
 
 I'm always interested in new technologies and languages. We're using
 Scala at work, and I really quite like the language. I really do like

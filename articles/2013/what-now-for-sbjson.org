@@ -1,6 +1,6 @@
 #+title: What now for SBJson?
 #+date: <2013-03-05>
-#+index: SBJson!What now?
+#+category: SBJson
 
 In the middle of 2007 I was given roughly six months notice that I would
 be made redundant from Fotango as the company was to be shut down.

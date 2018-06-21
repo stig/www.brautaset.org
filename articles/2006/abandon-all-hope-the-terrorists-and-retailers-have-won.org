@@ -1,7 +1,7 @@
 #+title: Abandon all hope
 #+subtitle: The Terrorists And Retailers Have Won
 #+date: <2006-12-19>
-#+index: Security Theatre
+#+category: Soapbox
 
 Leaving London Stansted early this morning I'm currently at Oslo
 Gardermoen airport waiting for my connecting flight to Hovdebygda. I am

@@ -4,7 +4,7 @@
 I try to give an overview of & explain (perhaps mainly to myself) the
 MiniMax algorithm and its AlphaBeta pruning optimisation.
 #+end_abstract
-#+index: Game-tree search
+#+category: Tutorial
 
 #+TOC: headlines
 #+TOC: listings

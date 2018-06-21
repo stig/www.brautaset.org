@@ -1,6 +1,6 @@
 #+title: Resolutions
 #+date: <2014-01-01>
-#+index: Resolutions!2014
+#+category: Resolutions
 
 The Brautasets stayed in London again this year. We do not like to
 travel at the best of times, and doing eight-hour journeys at Christmas

@@ -3,7 +3,7 @@
 #+begin_abstract
 A short experience report about blogging with Org mode.
 #+end_abstract
-#+index: Org mode!Experience blogging with
+#+category: Org
 
 Since [[file:blogging-with-org-mode.org][changing my blog to use Emacs' Org mode]] rather than Jekyll one
 month ago I've written four posts. (This will be the fifth.) In

@@ -1,7 +1,7 @@
 #+title: Using ScalaTest with Akka
 #+date: <2013-03-25>
-#+index: Scala!Akka and ScalaTest
-#+index: Akka!Working with ScalaTest
+#+category: Scala
+#+category: Akka
 
 To test Actor code with ScalaTest you have to mix in a lot of traits;
 sometimes it can be difficult to remember them all. Inspired by a

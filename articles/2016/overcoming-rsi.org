@@ -4,7 +4,7 @@
 Early 2005 I encountered a bad bout of RSI. Prompted by a comment on
 the Lobsters forum, I thought I'd share my experience.
 #+end_abstract
-#+index: RSI!Overcoming
+#+category: Soapbox
 
 I came across [[https://boinkor.net/2016/04/some-things-i-learned-about-dealing-with-rsi/][this story]] about overcoming RSI and thought I'd share my
 experience in [[https://lobste.rs/s/qaeig8/some_things_i_learned_about_dealing_with_rsi][the comments]] on Lobsters. When that turned out blog-post

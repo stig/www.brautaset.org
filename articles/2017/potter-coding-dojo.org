@@ -4,7 +4,7 @@
 Detailing my trials and tribulations with the "Potter" coding dojo
 problem, with code examples in Clojure.
 #+end_abstract
-#+index: Clojure!Potter Code Dojo
+#+category: Clojure
 
 At the end of May our remote-first company met up for one of our
 thrice-yearly week-long meetups. One of the objectives is to socialise

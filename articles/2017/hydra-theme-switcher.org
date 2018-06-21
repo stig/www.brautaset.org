@@ -4,8 +4,7 @@
 I learnt how to quickly switch between all installed themes in Emacs
 using Hydra.
 #+end_abstract
-#+index: Hydra!Writing an Emacs Theme Switcher
-#+index: Emacs Theme!Switching with Hydra
+#+category: Emacs
 
 I recently read Greg Hendershott's [[http://www.greghendershott.com/2017/02/emacs-themes.html][emacs themes]] blog post, and cribbed
 liberally from his approach to loading themes. I also cribbed his

@@ -1,6 +1,6 @@
 #+title: Regular Expressions
 #+date: <2006-07-19>
-#+index: Regular Expression!Find words with three double letter groups
+#+category: Hacks
 
 *Note:* This post has been updated to reflect the contents of
 =/usr/share/dict/words= on OS X Mountain Lion, and use egrep rather than

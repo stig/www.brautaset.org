@@ -1,9 +1,6 @@
 #+title: Good Ideas
 #+date: <2014-10-22>
-#+index: Education!Why it should be free or at least affordable
-#+index: Parental Leave!Why it should be generous and ubiquitous
-#+index: Basic Income
-#+index: Self-driving cars
+#+category: Soapbox
 
 I mentioned in private conversation recently that I would like to work
 on making the world a better place. In response I was asked "what does

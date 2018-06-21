@@ -1,6 +1,6 @@
 #+title: A lesson in testing
 #+date: <2006-10-28>
-#+index: Testing!Its impact on interface design
+#+category: Testing
 
 A while back I wrote a basic Neural Net class in Objective-C, and tested
 it pretty well. Or, so I thought. The net was a bit slow at calculating

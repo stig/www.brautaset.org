@@ -1,6 +1,6 @@
 #+title: A Lesson in Benchmarking
 #+date: <2015-02-24>
-#+index: Development!A lesson in Benchmarking
+#+category: Development
 
 Our API had a cache builder abstraction that allowed us to use either an
 in-memory LRU cache or memcached. The LRU cache was faster, but the

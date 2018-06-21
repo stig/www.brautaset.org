@@ -1,7 +1,7 @@
 #+title: Scala, Slick & PostgreSQL Unit Tests
 #+date: <2013-06-16>
-#+index: Scala!Slick and PostgreSQL Unit Tests
-#+index: Slick!Scala Unit Tests with PostgreSQL
+#+category: Scala
+#+category: Slick
 
 When I first started writing DAO tests in Scala/Slick with PostgreSQL I
 would use a trait to create a new database for each individual test. I

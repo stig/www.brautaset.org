@@ -1,6 +1,6 @@
 #+title: Resolutions Progress
 #+date: <2014-06-25>
-#+index: Resolutions!2014 Progress
+#+category: Resolutions
 
 Thought I'd post a quick note on progress with on my [[file:resolutions.org][New Years
 Resolutions]].

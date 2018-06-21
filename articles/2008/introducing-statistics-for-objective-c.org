@@ -1,6 +1,6 @@
 #+title: Introducing Statistics for Objective-C
 #+date: <2008-02-23>
-#+index: Objective-C!Statistics
+#+category: ObjectiveC
 
 I have just released version 1.0 of [[https://github.com/stig/Statistics][Statistics]]: an Objective-C
 Foundation framework inspired by Perl's [[http://search.cpan.org/dist/Statistics-Descriptive/][Statistics::Descriptive]]. By

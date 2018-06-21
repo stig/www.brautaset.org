@@ -1,6 +1,6 @@
 #+title: Test Driven Development
 #+date: <2005-02-20>
-#+index: Test Driven Development
+#+category: Reviews
 
 -  Author: Kent Beck
 -  ISBN: 0-321-14653-0

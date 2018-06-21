@@ -1,6 +1,5 @@
 #+title: Consolidating and de-duplicating iPhoto libraries
 #+date: <2013-10-06>
-#+index: Photos!Consolidating and de-duplicating iPhoto libraries
 
 This explains how I consolidated & de-duped about 45,000 pictures and
 movies from four iPhoto libraries on two different machines and various

@@ -4,7 +4,7 @@
 I explain how I set up MPlayer as a printer driver so I could add a
 distributed print queue for music. (AKA a JukeBox.)
 #+end_abstract
-#+index: Hacks!Printing Music
+#+category: Hacks
 
 In this day of 3D printing it's interesting to think about what can be
 printed in the future.  In *this* post, however, I'll attempt regale you

@@ -4,7 +4,7 @@
 I ruminate on implementing a simple virtual machine---for a simple
 language---in C.
 #+end_abstract
-#+index: Virtual Machine!On writing one in C
+#+category: Development
 
 Last week [[http://www.google.com/search?q=Norman+Nunley][Norman Nunley]] got me interested in the [[http://icfpcontest.org/][ICFP challenge 2006]],
 despite it being over. It involved implementing a Universal Machine

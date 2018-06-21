@@ -5,8 +5,7 @@ In which I investigate how to configure SecAuditLogParts for
 ModSecurity with Puppet, and find I have to contribute a patch to make
 it possible.
 #+end_abstract
-#+index: Puppet!My change to the ModSecurity module
-#+index: ModSecurity!Configuring with Puppet
+#+category: Development
 
 This week I have made my first (non-README) contribution to a puppet
 module.

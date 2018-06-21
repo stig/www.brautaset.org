@@ -1,7 +1,6 @@
 #+title: Generating Bar Charts with SQL
 #+date: <2006-11-23>
-#+index: SQL!Generating Bar Charts
-#+index: Bar Charts!Generating with SQL
+#+category: Hacks
 
 [[http://jerakeen.org][jerakeen]] pointed me to a post showing how you could [[http://www.squarebits.com/blog/2006/11/generate_simple.html][Generate Simple
 Bar Charts From a MySQL Prompt]]. It's a neat trick for quickly getting

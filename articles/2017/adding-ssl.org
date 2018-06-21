@@ -5,7 +5,6 @@ I outline the steps I plan to take to add SSL to this blog, leveraging
 AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
 CloudFormation.)
 #+end_abstract
-#+index: SSL!Adding to this blog
 
 Because this is a basic static site I've not previously bothered with
 SSL. But as [[https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view][Chrome and Firefox will require HTTP/2 requests to be

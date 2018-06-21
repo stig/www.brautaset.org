@@ -6,7 +6,7 @@ I complain about the unacceptable parking situation for commuters to
 Berwick-upon-Tweed and present a few suggestions for improvement that
 might help.
 #+end_abstract
-#+index: Parking!Open letter about commuter parking in Berwick-upon-Tweed
+#+category: Soapbox
 
 I have an office at Berwick Workspaces, commuting in from a nearby
 village about 15-20 minutes away by car. In the last six months it has

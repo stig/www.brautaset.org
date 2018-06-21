@@ -4,7 +4,7 @@
 In which I regale you with my attempt to get a current account with
 the Co-operative bank.
 #+end_abstract
-#+index: Banking!Co-operative Trouble
+#+category: Soapbox
 
 And here I was thinking the people I currently bank with are
 incompetent. Turns out that the [[http://www.co-operativebank.co.uk/][Co-operative bank]] aren't much better.

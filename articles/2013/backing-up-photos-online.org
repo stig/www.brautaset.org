@@ -1,6 +1,6 @@
 #+title: Backing Up Photos Online
 #+date: <2013-03-06>
-#+index:Photos!Backing up online
+#+index: Hacks
 
 We use Time Machine to back up our main computer. We have two 1GB USB
 drives that we rotate. Every so often I take the drive currently plugged

@@ -1,6 +1,5 @@
 #+title: The Orient Express
 #+date: <2007-06-21>
-#+index: Orient Express
 
 Today Nadia and I took her parents on a day-trip to Folkstone on the
 [[http://www.orient-express.com/web/luxury/trains_cruises/journey_planner_uk.jsp][Orient Express]]. We left Victoria at about 11:30 and had a delicious

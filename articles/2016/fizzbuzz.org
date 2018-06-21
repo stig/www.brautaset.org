@@ -3,7 +3,7 @@
 #+begin_abstract
 Breakdown of my Tweetable FizzBuzz created using sed and xargs.
 #+end_abstract
-#+index: FizzBuzz!A Tweetable solution using sed and xargs
+#+category: Hacks
 
 The FizzBuzz interview question has been going around a while. If for
 some reason you're not familiar with it, here's one wording of it:

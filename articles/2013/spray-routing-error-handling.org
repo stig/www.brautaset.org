@@ -1,7 +1,7 @@
 #+title: Spray Routing Error Handling
 #+date: <2013-08-05>
-#+index: Scala!Spray routing error handling
-#+index: Spray!Scala DSL routing error handling
+#+category: Scala
+#+category: Spray
 
 I've recently taken a lot of inspiration from a blog post titled [[http://blog.eigengo.com/blog_posts/akka-spray][Akka
 and Spray]] over at the Eigengo blog. It covers a lot of ground and

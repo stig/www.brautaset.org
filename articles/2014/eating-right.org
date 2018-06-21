@@ -1,6 +1,5 @@
 #+title: Losing weight by eating right
 #+date: <2014-02-17>
-#+index: Losing weight!By eating right
 
 Losing weight is one of my new year [[file:resolutions.org][resolutions]]. I started on a
 "reduced gluten" diet around 10th of January. My main motivation for

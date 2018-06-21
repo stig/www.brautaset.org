@@ -4,7 +4,7 @@
 Using Clojure to put $N$ Queens on an $N \times N$ chess board
 without them being able to threaten each other.
 #+end_abstract
-#+index: Clojure!Solving the N Queens problem
+#+category: Clojure
 
 I read a blog post by Aphyr about solving the /N Queens/ problem called
 [[https://aphyr.com/posts/342-typing-the-technical-interview][Typing the technical interview]], which made me reminisce about

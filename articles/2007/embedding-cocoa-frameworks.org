@@ -3,7 +3,7 @@
 #+begin_abstract
 I show how to embed a cocoa framework into your application.
 #+end_abstract
-#+index: Objective-C!Embedding Frameworks
+#+category: ObjectiveC
 
 Cocoa has a really neat feature that allows you to embed a framework
 inside your application bundle. Why would you want to do this? Not all

@@ -1,6 +1,6 @@
 #+title: Objective-C Feature Request
 #+date: <2008-08-23>
-#+index: Objective-C!Feature Request
+#+category: ObjectiveC
 
 #+attr_html: :alt Dictionary Icon :align right
 [[file:../../images/2008/08/dictionary.png]]

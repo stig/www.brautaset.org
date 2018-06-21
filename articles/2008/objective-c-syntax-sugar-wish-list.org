@@ -1,6 +1,6 @@
 #+title: Objective-C syntax sugar wish list
 #+date: <2008-08-25>
-#+index: Objective-C!Syntax Sugar Wish List
+#+category: ObjectiveC
 
 As I mentioned in my previous post Objective-C is my (current) favourite
 programming language. But there things that could be improved. Creating

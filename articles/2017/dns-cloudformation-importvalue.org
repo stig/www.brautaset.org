@@ -5,7 +5,7 @@ I show the changes to my Sceptre config & CloudFormation template
 required to point DNS to the two CloudFront distributions I've
 created.
 #+end_abstract
-#+index: CloudFormation!Stack dependencies
+#+category: CloudFormation
 
 This post is part of a series where I [[file:adding-ssl.org][add SSL]] to this blog. The =www=
 template I created in two [[file:ssl-enabled-s3-redirects-with-cloudformation.org][previous]] [[file:s3-website-with-https-using-cloudformation.org][posts]] had two outputs defined for
