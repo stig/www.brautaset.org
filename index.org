@@ -232,7 +232,7 @@ into certain remote machines via SSH.
 I set up the Leafnode NNTP server on OS X, for use with Emacs and the
 Gnus newsreader.
 
-* [[file:articles/2016/overcoming-rsi.org][Overcoming RSI]]
+* [[file:articles/2016/overcoming-rsi.org][Overcoming RSI]]                                                    :Soapbox:
   :PROPERTIES:
   :ID:       A53B10D0-91CE-44D6-8CC5-EE9A94965D1F
   :PUBDATE:  <2016-05-02>
@@ -259,7 +259,7 @@ it possible.
   :PUBDATE:  <2015-12-23>
   :RSS_PERMALINK: articles/2015/response-to-haskell-lisp-philosophical-differences.html
   :END:
-* [[file:articles/2015/benchmarking.org][A Lesson in Benchmarking]]
+* [[file:articles/2015/benchmarking.org][A Lesson in Benchmarking]]                                      :Development:
   :PROPERTIES:
   :ID:       B579A96C-45AD-4289-BF89-105F2FAD35EA
   :PUBDATE:  <2015-02-24>
@@ -295,7 +295,7 @@ it possible.
   :PUBDATE:  <2014-10-22>
   :RSS_PERMALINK: articles/2014/good-ideas.html
   :END:
-* [[file:articles/2014/optimising-http-cache-hit-rate.org][Optimising HTTP Cache Hit Rate]]
+* [[file:articles/2014/optimising-http-cache-hit-rate.org][Optimising HTTP Cache Hit Rate]]                                :Development:
   :PROPERTIES:
   :ID:       76929930-D920-4B7F-931E-8EFA4E76CB94
   :PUBDATE:  <2014-08-01>
@@ -313,7 +313,7 @@ it possible.
   :PUBDATE:  <2014-06-25>
   :RSS_PERMALINK: articles/2014/progress.html
   :END:
-* [[file:articles/2014/toddlercalm.org][ToddlerCalm]]
+* [[file:articles/2014/toddlercalm.org][ToddlerCalm]]                                                       :Reviews:
   :PROPERTIES:
   :ID:       58E14056-7C42-4B93-A1E9-F2EAFDF83CA3
   :PUBDATE:  <2014-06-26>
@@ -349,7 +349,7 @@ it possible.
   :PUBDATE:  <2014-01-01>
   :RSS_PERMALINK: articles/2014/resolutions.html
   :END:
-* [[file:articles/2013/consolidating-iphoto-libraries.org][Consolidating and de-duplicating iPhoto libraries]]
+* [[file:articles/2013/consolidating-iphoto-libraries.org][Consolidating and de-duplicating iPhoto libraries]]                   :Hacks:
   :PROPERTIES:
   :ID:       95BD3A67-C09D-432D-94FE-DB5AE3A89D5E
   :PUBDATE:  <2013-10-06>
@@ -523,7 +523,7 @@ it possible.
   :PUBDATE:  <2007-01-02>
   :RSS_PERMALINK: articles/2007/rice-instruction-craziness.html
   :END:
-* [[file:articles/2006/abandon-all-hope-the-terrorists-and-retailers-have-won.org][Abandon all hope]]
+* [[file:articles/2006/abandon-all-hope-the-terrorists-and-retailers-have-won.org][Abandon all hope]]                                                  :Soapbox:
   :PROPERTIES:
   :ID:       174BA689-F16F-43B4-94FD-B2E837767993
   :PUBDATE:  <2006-12-19>
@@ -619,7 +619,7 @@ it possible.
   :PUBDATE:  <2006-03-15>
   :RSS_PERMALINK: articles/2006/target-reached.html
   :END:
-* [[file:articles/2006/money-transfer.org][Money Transfer]]
+* [[file:articles/2006/money-transfer.org][Money Transfer]]                                                    :Soapbox:
   :PROPERTIES:
   :ID:       687CF9EC-BF38-43D5-B6C9-265574A4F62D
   :PUBDATE:  <2006-01-30>

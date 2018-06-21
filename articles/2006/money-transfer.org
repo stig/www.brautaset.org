@@ -4,6 +4,7 @@
 Wherein I rant about my unsuccessful attempt at transferring money
 from the UK HSBC account to my Norwegian (Nordea) bank account.
 #+end_abstract
+#+category: Soapbox
 
 Why, why, /why/ do the banks in this country insist on staying put in
 the dark ages?
