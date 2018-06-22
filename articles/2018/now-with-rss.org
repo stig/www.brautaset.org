@@ -24,8 +24,7 @@ it generate a valid and useful feed:
 I had to change the headings I used in my index page to get rid of my
 old top-level headings containing dividing my full list of post into
 their publication year. Not a big loss, I think, as the URL of each
-post contains the year, and each post contains its publication date at
-the bottom.
+post contains the year already.
 
 To link to the actual post from the RSS feed (rather than to the copy
 of the abstract on the index page) I had to add =RSS_PERMALINK= entries
@@ -69,6 +68,8 @@ Getting the publication dates right was just a case of applying elbow
 grease. To do so all I had to do was to update the =PUBDATE= property
 for each entry in the index page to that of the blog post in question.
 Since I don't have all that many articles this wasn't too difficult.
+For future posts I'll let =ox-rss= generate the =PUBDATE= properties,
+since adding them to the index will effectively publish them.
 
 Creating a section with a header containing a link to the post page,
 adding tags from the post's categories, setting =PUBDATE= and
@@ -95,20 +96,21 @@ is what I came up with.
 		  (buffer-file-name)))
 	   (tree (org-element-parse-buffer))
 
-	   (title (org-element-map tree 'keyword
-		    (sb/org-kw-get "TITLE") nil t))
-	   (date (org-element-map tree 'keyword
-		   (sb/org-kw-get "DATE") nil t))
-	   (categories (org-element-map tree 'keyword
-			 (sb/org-kw-get "CATEGORY")))
-	   (abstract (s-join (ref:s-join)
-		      ""
-		      (org-element-map tree 'special-block
-			(lambda (sb)
-			  (if (equal "abstract"
-				     (org-element-property :type sb))
-			      (org-element-interpret-data
-			       (org-element-contents sb))))))))
+	   (title
+	    (org-element-map tree 'keyword
+	      (sb/org-kw-get "TITLE") nil t))
+
+	   (categories
+	    (org-element-map tree 'keyword
+	      (sb/org-kw-get "CATEGORY")))
+
+	   (abstract (ref:abstract)
+	    (org-element-interpret-data
+	     (org-element-map tree 'special-block
+	       (lambda (sb)
+		 (if (equal "abstract"
+			    (org-element-property :type sb))
+		     (org-element-contents sb)))))))))
 
       (with-temp-buffer
 	(org-mode)   (ref:org-mode)
@@ -141,14 +143,13 @@ is what I came up with.
 I query the Org parsetree for the title, date and category keywords,
 and the =abstract= special block. (I created a little helper [[(macro)][macro]] to
 avoid repetition, since I extract three different keywords in the same
-way.) Figuring out how to parse out the abstract was much harder, but
-I managed something. I'm not so happy about the [[(s-join)][use of s-join]] in this
-part, but it does the job.
+way.) Figuring out how to parse out the [[(abstract)][abstract]] was much harder, but
+I managed something that works well enough.
 
-For generating the text entry I use Org mode programmatically. One
-caveat was that some of the APIs (I think most notably the
-[[(set-tags)][org-set-tags-to]] call) would not work until I [[(org-mode)][turned on Org mode]] in my
-temporary buffer.
+For generating the entry (in index.org) for my blog post I use Org
+mode programmatically. One caveat was that some of the APIs (I think
+most notably the [[(set-tags)][org-set-tags-to]] call) would not work until I [[(org-mode)][turned
+on Org mode]] in my temporary buffer.
 
 So there you go! I think this was all I had to contend with to produce
 an RSS feed from this blog. I hope you enjoyed this post!  It ended up
