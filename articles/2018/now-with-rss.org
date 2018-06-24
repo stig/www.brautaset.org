@@ -1,6 +1,7 @@
 #+title: Now With RSS!
 #+begin_abstract
-A post to announce that this site now has an RSS feed, and how I create it.
+A post to announce that this site now has an RSS feed generated from
+the front page's content, and explain how I create it.
 #+end_abstract
 #+category: Org
 #+category: Emacs
@@ -10,21 +11,18 @@ because I think the site really needs it, but because it intrigued me
 to figure out to do it using my existing [[../2017/blogging-with-org-mode.org][Emacs Org blogging solution]].
 
 In short, I use [[https://code.orgmode.org/bzg/org-mode/src/master/contrib/lisp/ox-rss.el][ox-rss.el]] (from Org mode's contrib) to produce an RSS
-feed from the [[../../index.org][home]] page. I was delighted that tags on headlines were
+feed from the [[../../index.org][home]] page.  I was delighted that tags on headlines were
 automatically translated into RSS Categories, with no extra work from
-me. However, I had to get over some hurdles before I was able to make
-it generate a valid and useful feed:
+me.  However, I had to jump some hoops to generate a valid and useful
+feed.
 
-1. Only /top-level/ headings make it into nodes in the RSS
-2. My index page is just that, but I wanted to link to the full article page from the feed
-3. No paragraph content is allowed before the entries
-4. I wanted my RSS feed to reflect original publication dates of my articles
-5. I want it to be easy to create a new entry on the index page
-
+* Only /top-level/ headings become items in the RSS feed
 I had to change the headings I used in my index page to get rid of my
 old top-level headings containing dividing my full list of post into
 their publication year. Not a big loss, I think, as the URL of each
 post contains the year already.
+
+* I wanted the RSS feed to link to the full article page
 
 To link to the actual post from the RSS feed (rather than to the copy
 of the abstract on the index page) I had to add =RSS_PERMALINK= entries
@@ -32,6 +30,8 @@ to each of the headings in the index page. One slightly annoying bit
 about this is that I can't use the =.org= extension like everywhere
 else, I have to change it to the =.html= extension it will be when
 published.
+
+* No paragraph content is allowed before the entries
 
 Thirdly, the issue of my index page's introductory text not being
 allowed in RSS. Solving this was a bit tricky, but I know that Org has
@@ -64,12 +64,16 @@ like this:
   ,#+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
 #+END_SRC
 
+* Getting the publication dates right
+
 Getting the publication dates right was just a case of applying elbow
 grease. To do so all I had to do was to update the =PUBDATE= property
 for each entry in the index page to that of the blog post in question.
 Since I don't have all that many articles this wasn't too difficult.
 For future posts I'll let =ox-rss= generate the =PUBDATE= properties,
 since adding them to the index will effectively publish them.
+
+* I want it to be easy to create a new entry on the index page
 
 Creating a section with a header containing a link to the post page,
 adding tags from the post's categories, setting =PUBDATE= and
@@ -150,6 +154,8 @@ For generating the entry (in index.org) for my blog post I use Org
 mode programmatically. One caveat was that some of the APIs (I think
 most notably the [[(set-tags)][org-set-tags-to]] call) would not work until I [[(org-mode)][turned
 on Org mode]] in my temporary buffer.
+
+* Conclusion
 
 So there you go! I think this was all I had to contend with to produce
 an RSS feed from this blog. I hope you enjoyed this post!  It ended up
