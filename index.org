@@ -10,6 +10,14 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/org-mode-rss.html
+  :END:
+
+A post to announce that this site now has an RSS feed generated from
+the front page's content, and explain how I create it.
+
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
   :PROPERTIES:
   :ID:       277CD937-43EE-4E5E-ABBA-8CC453DA3562

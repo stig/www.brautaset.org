@@ -1,10 +1,11 @@
-#+title: Now With RSS!
+#+title: Creating an RSS feed with Org mode
 #+begin_abstract
 A post to announce that this site now has an RSS feed generated from
 the front page's content, and explain how I create it.
 #+end_abstract
 #+category: Org
 #+category: Emacs
+#+options: H:0
 
 For a while I've been wanting to add RSS to this site. Not so much
 because I think the site really needs it, but because it intrigued me
@@ -16,14 +17,13 @@ automatically translated into RSS Categories, with no extra work from
 me.  However, I had to jump some hoops to generate a valid and useful
 feed.
 
-* Only /top-level/ headings become items in the RSS feed
+*Only /top-level/ headings become items in the RSS feed.*
 I had to change the headings I used in my index page to get rid of my
 old top-level headings containing dividing my full list of post into
 their publication year. Not a big loss, I think, as the URL of each
 post contains the year already.
 
-* I wanted the RSS feed to link to the full article page
-
+*I wanted the RSS feed to link to the full article page.*
 To link to the actual post from the RSS feed (rather than to the copy
 of the abstract on the index page) I had to add =RSS_PERMALINK= entries
 to each of the headings in the index page. One slightly annoying bit
@@ -31,8 +31,7 @@ about this is that I can't use the =.org= extension like everywhere
 else, I have to change it to the =.html= extension it will be when
 published.
 
-* No paragraph content is allowed before the entries
-
+*No paragraph content is allowed before the entries.*
 Thirdly, the issue of my index page's introductory text not being
 allowed in RSS. Solving this was a bit tricky, but I know that Org has
 a way to tag sections with =:noexport:= to omit it from being included,
@@ -64,8 +63,7 @@ like this:
   ,#+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
 #+END_SRC
 
-* Getting the publication dates right
-
+*Getting the publication dates right.*
 Getting the publication dates right was just a case of applying elbow
 grease. To do so all I had to do was to update the =PUBDATE= property
 for each entry in the index page to that of the blog post in question.
@@ -73,90 +71,7 @@ Since I don't have all that many articles this wasn't too difficult.
 For future posts I'll let =ox-rss= generate the =PUBDATE= properties,
 since adding them to the index will effectively publish them.
 
-* I want it to be easy to create a new entry on the index page
-
-Creating a section with a header containing a link to the post page,
-adding tags from the post's categories, setting =PUBDATE= and
-=RSS_PERMALINK= options, as well as copying the abstract of each post
-was not something I wanted to do manually. I had an opportunity to
-learn a little more Emacs lisp, and experiment with the Org APIs. This
-is what I came up with.
-
-#+BEGIN_SRC emacs-lisp -n -r
-  (defun sb/org-kw-get (key)   (ref:macro)
-    "Return a lambda that takes an Org keyword
-  element and returns its :value property if its :key
-  property matches `key'."
-    `(lambda (kw)
-       (if (equal ,key (org-element-property :key kw))
-	   (org-element-property :value kw))))
-
-  (defun sb/parse-metadata ()
-    "Call in a blog post to get an entry suitable for
-  linking to this post from the index page."
-    (interactive)
-    (let* ((path (s-chop-prefix
-		  (expand-file-name "~/blog/")
-		  (buffer-file-name)))
-	   (tree (org-element-parse-buffer))
-
-	   (title
-	    (org-element-map tree 'keyword
-	      (sb/org-kw-get "TITLE") nil t))
-
-	   (categories
-	    (org-element-map tree 'keyword
-	      (sb/org-kw-get "CATEGORY")))
-
-	   (abstract (ref:abstract)
-	    (org-element-interpret-data
-	     (org-element-map tree 'special-block
-	       (lambda (sb)
-		 (if (equal "abstract"
-			    (org-element-property :type sb))
-		     (org-element-contents sb)))))))))
-
-      (with-temp-buffer
-	(org-mode)   (ref:org-mode)
-	(org-insert-heading)
-
-	;; Would have loved to use `org-insert-link' here but
-	;; I can't stop it from presenting a prompt :-(
-	(insert "[[file:" path "][" title "]]")
-
-	(insert "\n\n")
-	(insert abstract)
-
-	(org-set-property "PUBDATE" date)
-	(org-set-property "RSS_PERMALINK"
-			  (format "%s.html"
-				  (s-chop-suffix ".org" path)))
-
-	;; Need to go back to the first line to set tags
-	(goto-char (point-min))
-	(org-set-tags-to categories) (ref:set-tags)
-	(org-set-tags nil t) ;; adjust tags in the source
-
-	;; Copy the contents of the temporary buffer as a string
-	;; *without properties* to my kill ring for pasting into
-	;; my index.org file
-	(copy-region-as-kill
-	 (point-min) (point-max)))))
-#+END_SRC
-
-I query the Org parsetree for the title, date and category keywords,
-and the =abstract= special block. (I created a little helper [[(macro)][macro]] to
-avoid repetition, since I extract three different keywords in the same
-way.) Figuring out how to parse out the [[(abstract)][abstract]] was much harder, but
-I managed something that works well enough.
-
-For generating the entry (in index.org) for my blog post I use Org
-mode programmatically. One caveat was that some of the APIs (I think
-most notably the [[(set-tags)][org-set-tags-to]] call) would not work until I [[(org-mode)][turned
-on Org mode]] in my temporary buffer.
-
-* Conclusion
-
+*Conclusion.*
 So there you go! I think this was all I had to contend with to produce
 an RSS feed from this blog. I hope you enjoyed this post!  It ended up
 a bit longer than I expected, but there you go.
