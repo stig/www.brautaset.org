@@ -13,6 +13,8 @@ occasionally take time to maintain this site.
 * [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/org-mode-rss.html
+  :ID:       C01FD31A-584C-485B-B2E9-2731099619D2
+  :PUBDATE:  <2018-06-25 Mon 09:48>
   :END:
 
 A post to announce that this site now has an RSS feed generated from
