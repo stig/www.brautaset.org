@@ -10,6 +10,17 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+
+* [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/making-team-decisions.html
+  :ID:       FC57FD1D-C212-457D-A252-C806A3D9267D
+  :PUBDATE:  <2018-08-21 Tue 18:26>
+  :END:
+
+I summarise a useful technique for making team decisions I learnt
+about at The London Lead Developer conference a couple months ago.
+
 * [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/org-mode-rss.html
