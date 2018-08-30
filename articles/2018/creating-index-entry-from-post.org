@@ -6,7 +6,7 @@ I wanted it to be easy to create a new entry on the index page. I call
 on Emacs Lisp to help.
 #+end_abstract
 
-As mentioned when I [[file:~/blog/articles/2017/blogging-with-org-mode.org][first moved to use Org mode for blogging]] I haven't
+As mentioned when I [[../2017/blogging-with-org-mode.org][first moved to use Org mode for blogging]] I haven't
 had a way to automatically create an index of posts. It's been a
 rather tedious manual task, and now that I've [[file:org-mode-rss.org][added TAGs and the
 =RSS_PERMALINK= property]] to the things I need to address I didn't want
