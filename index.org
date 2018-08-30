@@ -10,6 +10,15 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/creating-index-entry-from-post.html
+  :ID:       C410CC58-B1EB-48EE-9440-0CBC9E51F3DF
+  :PUBDATE:  <2018-08-30 Thu 21:37>
+  :END:
+
+I wanted it to be easy to create a new entry on the index page. I call
+on Emacs Lisp to help.
 
 * [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
   :PROPERTIES:
