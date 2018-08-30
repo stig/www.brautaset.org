@@ -685,7 +685,7 @@ it possible.
 * [[file:articles/2004/water-please.org][Can I have some Water please?]]
   :PROPERTIES:
   :ID:       6CB5C09A-3FA4-4ADA-A619-778D292054B1
-  :PUBDATE:  <2018-06-16 Sat 21:31>
+  :PUBDATE:  <2004-11-21>
   :RSS_PERMALINK: articles/2004/water-please.html
   :END:
 * [[file:articles/2004/extreme-programming-explained.org][Extreme Programming Explained]]                                     :Reviews:
@@ -715,7 +715,7 @@ it possible.
 * [[file:articles/2002/heinlein.org][Heinlein's list of skills]]
   :PROPERTIES:
   :ID:       CA6885A5-1D8D-424B-864C-53DD8F887927
-  :PUBDATE:  <2018-06-16 Sat 21:31>
+  :PUBDATE:   <2002-09-11>
   :RSS_PERMALINK: articles/2002/heinlein.html
   :END:
 * [[file:articles/2002/blade-2.org][Blade 2]]                                                           :Reviews:
