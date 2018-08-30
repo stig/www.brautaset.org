@@ -1,8 +1,8 @@
-#!/usr/local/bin/fish
+#!/bin/zsh
 
-set -gx AWS_PROFILE stig
+export AWS_PROFILE=stig
 
-set TTL   86400    # 1 day
+export TTL=86400    # 1 day
 
 aws s3 sync \
     --delete \
