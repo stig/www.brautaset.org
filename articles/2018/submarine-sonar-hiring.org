@@ -60,12 +60,32 @@ there was? I guess that satisfied him, because instead of freezing my
 bottom off in Norway the following winter I was on the first Norwegian
 submarine to ever attend a NATO exercise in the Mediterranean.
 
-When I wrote up this story I realised it contains a lesson relevant to
-hiring: people who don't satisfy all the proxy requirements in your
-job ad may still be a good fit for your role. Please make sure the
-requirements you put in job ads are actual /requirements/, and not "nice
-to have"s.
+When I wrote up this story I realised it confirmed a lesson relevant
+to hiring: sometimes people will disqualify themselves from applying
+to your job because they don't fulfill all the requirements in your
+job ad. Both men and women do this, but HP research showed that [[https://hbr.org/2014/08/why-women-dont-apply-for-jobs-unless-theyre-100-qualified][women
+are less likely than men to apply unless they 100% qualified]].
 
+I nearly didn't apply to become a sonar operator since I failed the
+proxy requirement "has perfect score on generic hearing test". If I
+had qualified for /any/ of the other options available at the end of my
+basic training I would have applied to that instead. However, the /real/
+requirement was "can learn to classify boats by their sound under
+water", and it turns out I was pretty good at that.
+
+By putting unrealistic or inaccurate proxy requirements in your job ad
+you are likely to get miss out on good candidates. You will be more
+successful at hiring if you make sure what you put under the
+Requirements heading in your job ad are actual /requirements/, and leave
+anything negotiable under the "nice to have" section.
+
+Let's finish off with an example. If you're hiring a driver it might
+make sense to require candidates have a valid driver's licence. Throw
+in a line about advanced driving qualifications too, if you're hiring
+a getaway driver. That candidates must be martial artists and have a
+passing likeness to Jason Statham is heavily in "nice to have"
+territory though, unless you are the casting director for the next
+installment of [[https://en.wikipedia.org/wiki/Transporter_(franchise)][The Transporter]] franchise.
 
 * Footnotes
 
