@@ -10,6 +10,16 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/submarine-sonar-hiring.html
+  :END:
+
+This is a transcript of a lightning talk I gave at a company "all
+hands" get-together. I tell the story of my "hiring experience" as a
+sonar operator on a submarine in the Norwegian Navy. To tie it into
+work, I included a little hiring-related lesson at the end.
+
 * [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/creating-index-entry-from-post.html

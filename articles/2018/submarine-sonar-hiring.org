@@ -55,23 +55,26 @@ normally this meant I would get first pick. But, the officer in charge
 seemed a bit hesitant and asked me: "wasn't there something wrong with
 your hearing?" I didn't want to lie. But I also didn't want to
 disqualify myself. I took a slight gamble and answered him with a
-question: would I have managed to get the best score on your test if
-there was? I guess that satisfied him, because instead of freezing my
-bottom off in Norway the following winter I was on the first Norwegian
-submarine to ever attend a NATO exercise in the Mediterranean.
+question: would I have managed to get the best score on the sonar
+operator test if there was?
+
+I guess that satisfied him, because instead of freezing my bottom off
+in Norway the following winter I was on the first Norwegian submarine
+to ever attend a NATO exercise in the Mediterranean.
+
+-------
 
 When I wrote up this story I realised it confirmed a lesson relevant
 to hiring: sometimes people will disqualify themselves from applying
 to your job because they don't fulfill all the requirements in your
-job ad. Both men and women do this, but HP research showed that [[https://hbr.org/2014/08/why-women-dont-apply-for-jobs-unless-theyre-100-qualified][women
-are less likely than men to apply unless they 100% qualified]].
+job ad. If I had qualified for /any/ of the other options available at
+the end of my basic training I would have applied to that
+instead.
 
-I nearly didn't apply to become a sonar operator since I failed the
-proxy requirement "has perfect score on generic hearing test". If I
-had qualified for /any/ of the other options available at the end of my
-basic training I would have applied to that instead. However, the /real/
-requirement was "can learn to classify boats by their sound under
-water", and it turns out I was pretty good at that.
+So, I nearly didn't apply to become a sonar operator since I failed
+the proxy requirement "has perfect score on generic hearing test".
+However, the /real/ requirement was "can learn to classify boats by
+their sound under water", and it turns out I was pretty good at that!
 
 By putting unrealistic or inaccurate proxy requirements in your job ad
 you are likely to get miss out on good candidates. You will be more
@@ -86,6 +89,11 @@ a getaway driver. That candidates must be martial artists and have a
 passing likeness to Jason Statham is heavily in "nice to have"
 territory though, unless you are the casting director for the next
 installment of [[https://en.wikipedia.org/wiki/Transporter_(franchise)][The Transporter]] franchise.
+
+* Acknowledgements
+
+  I wish to thank [[https://www.doismellburning.co.uk][Kristian Glass]] for providing valuable comments that
+  improved the conclusion in this article.
 
 * Footnotes
 
