@@ -9,10 +9,20 @@
 I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
+* [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/minecraft-music-extractor.html
+  :ID:       C950F98A-A473-4778-B7E0-4FF62825E751
+  :PUBDATE:  <2018-11-25 Sun 21:23>
+  :END:
+
+I create a Python script to extract music files from Minecraft's assets.
 
 * [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/submarine-sonar-hiring.html
+  :ID:       C6E26433-127A-4EDB-B9D0-DF00E00B8D3C
+  :PUBDATE:  <2018-11-25 Sun 19:43>
   :END:
 
 This is a transcript of a lightning talk I gave at a company "all

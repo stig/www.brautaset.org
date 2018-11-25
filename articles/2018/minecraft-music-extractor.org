@@ -1,15 +1,19 @@
-#+title: Creating a Python script to extract Minecraft Music
+#+title: Extracting Minecraft Music with Python
 #+begin_abstract
-I create a Python script to extract music files from vanilla Minecraft.
+I create a Python script to extract music files from Minecraft's assets.
 #+end_abstract
 #+category: Minecraft
 #+category: Python
 
-My son loves Minecraft. He even loves the /music/ of Minecraft. He
-particularly loves the music during the credits in the 1.13 version so
-much that he will sometimes put it on and just sit and listen to it.
-We wanted to be able to play this music at his upcoming birthday
-party, without having to bring a computer and have Minecraft running.
+My son loves Minecraft. (Witness the evidence from his [[https://www.youtube.com/channel/UCSPr6gDj4kVYoLJGIR-2YIw][YouTube
+channel]].) He even loves the /music/ of Minecraft, particularly the music
+during the credits in the 1.13 version; and will sometimes put on the
+credits to listen. We wanted to be able to play this music at his
+upcoming birthday party, without having to bring a computer and have
+Minecraft running.
+
+#+CAPTION: This is the two of us playing the Minecraft Minigame "Raft Clash"
+[[file:minecraft-raft-clash.png]]
 
 My wife found [[https://minecraft.gamepedia.com/Tutorials/Sound_directory][a tutorial]] for extracting the music, but we couldn't get
 the example code to run on our Macs. /However/, I could understand what
@@ -47,24 +51,26 @@ from one version to the next, only the checksum in that version's
 index file needs to change, and the corresponding object added to the
 =objects= directory.
 
-We wanted to extract the music from the most recent Minecraft
-version. To avoid having to edit the script (or make it take
-arguments) whenever we install an update, I decided to make the script
-automatically find the most recent version. It does that by listing
-all the indices files (line [[(indices)]]), sort the list, and take the
-most recent (line [[(index)]]).
+We wanted music from the most recent Minecraft version. To avoid
+having to edit the script (or make it take arguments) whenever we
+install an update, I decided to make the script automatically find the
+most recent version. It does that by listing all the indices files
+(line [[(indices)]]), sort the list, and take the most recent (line
+[[(index)]]).
 
-We wanted to be able to run the script multiple times without things
-breaking or overwriting previously extracted music. To do this I put
-the music files in a versioned directory under =~/Music/Minecraft=. I
-removed the file extension (i.e. the =.json= bit) from the index
-filename, and used that as the version number (see line [[(noext)]]).
+To play it safe, we wanted to be able to run the script multiple times
+without things breaking or overwriting previously extracted music. To
+do this I put the music files in a versioned directory under
+=~/Music/Minecraft=. I removed the file extension (i.e. the =.json= bit)
+from the index filename, and used that as the version number (see line
+[[(noext)]]).
 
-We decided to extract all the assets with "music" in their name. We
-also wanted to keep the context provided by the full asset name. (It's
-not immediately obvious to me that "axolotl" has to do with water.)
-This means I had to create the full directory path to the extracted
-file, however, which I do at line [[(makedirs)]]. We have to check if the
+We were only interested in music, and like the existing script only
+extracted all the assets with "music" in their name. We also wanted to
+keep the context provided by the full asset name. (It's not
+immediately obvious to me that "axolotl" has to do with water.)  This
+means I had to create the full directory path to the extracted file,
+however, which I do at line [[(makedirs)]]. We have to check if the
 directory already exists first, otherwise the ~os.makedirs~ function
 throws an exception[fn::I don't know if the Pythonic way would be to
 just try it, and catch the exception.].
