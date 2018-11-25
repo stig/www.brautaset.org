@@ -1,0 +1,123 @@
+#+title: Creating a Python script to extract Minecraft Music
+#+begin_abstract
+I create a Python script to extract music files from vanilla Minecraft.
+#+end_abstract
+#+category: Minecraft
+#+category: Python
+
+My son loves Minecraft. He even loves the /music/ of Minecraft. He
+particularly loves the music during the credits in the 1.13 version so
+much that he will sometimes put it on and just sit and listen to it.
+We wanted to be able to play this music at his upcoming birthday
+party, without having to bring a computer and have Minecraft running.
+
+My wife found [[https://minecraft.gamepedia.com/Tutorials/Sound_directory][a tutorial]] for extracting the music, but we couldn't get
+the example code to run on our Macs. /However/, I could understand what
+it was trying to do sufficiently to write my own version. I decided to
+write it in Python, because parsing JSON with =grep= offends my
+sensibilites[fn::That, and my wife's computer doesn't have [[https://stedolan.github.io/jq/][jq]]
+installed.]. I'm not a Python expert though, so please don't use this
+as an example of how you should write Python!
+
+Through this I learnt about how Minecraft stores its assets. The core
+idea (for our purpose, anyway) is that each Minecraft version has an
+/index/ file containing a list of all its assets, and their SHA1
+~hash~ and their size. Here is an example:
+
+#+BEGIN_SRC json
+    {
+      "objects": {
+	"icons/icon_16x16.png": {
+	  "hash": "bdf48ef6b5d0d23bbb02e17d04865216179f510a",
+	  "size": 3665
+	},
+	"minecraft/sounds/music/game/water/axolotl.ogg": {
+	  "hash": "ee92e4ed79b3c4c47eabe71b36375b5d3f05b017",
+	  "size": 10423856
+	}
+      }
+    }
+#+END_SRC
+
+These hashes attached to the asset names corresponds to file names in
+the =objects= directory, which is the asset we want. The names are the
+SHA1 hash of their contents. This is pretty neat, and allows Minecraft
+to store assets for multiple versions efficiently. If an asset changes
+from one version to the next, only the checksum in that version's
+index file needs to change, and the corresponding object added to the
+=objects= directory.
+
+We wanted to extract the music from the most recent Minecraft
+version. To avoid having to edit the script (or make it take
+arguments) whenever we install an update, I decided to make the script
+automatically find the most recent version. It does that by listing
+all the indices files (line [[(indices)]]), sort the list, and take the
+most recent (line [[(index)]]).
+
+We wanted to be able to run the script multiple times without things
+breaking or overwriting previously extracted music. To do this I put
+the music files in a versioned directory under =~/Music/Minecraft=. I
+removed the file extension (i.e. the =.json= bit) from the index
+filename, and used that as the version number (see line [[(noext)]]).
+
+We decided to extract all the assets with "music" in their name. We
+also wanted to keep the context provided by the full asset name. (It's
+not immediately obvious to me that "axolotl" has to do with water.)
+This means I had to create the full directory path to the extracted
+file, however, which I do at line [[(makedirs)]]. We have to check if the
+directory already exists first, otherwise the ~os.makedirs~ function
+throws an exception[fn::I don't know if the Pythonic way would be to
+just try it, and catch the exception.].
+
+The ~find~ (line [[(find)]]) function[fn::I found this on Stack Overflow, I
+think.] iterates over all the files and directories under the
+directory in its first argument, and returns the full path if it finds
+a file whose name matches the second argument. In our case we pass it
+the assets directory and the object hash, see line [[(asset_path)]].
+
+The full code is below.
+
+#+BEGIN_SRC python -n -r
+  #!/usr/bin/env python
+  import os
+  import json
+  from shutil import copyfile
+
+  # This is where vanilla Minecraft stores its assets
+  assets_path = os.path.expanduser( (ref:assets)
+     "~/Library/Application Support/minecraft/assets")
+
+  indices_dir = os.path.join(assets_path, "indexes")
+  indices = os.listdir(indices_dir) (ref:indices)
+  index_file = sorted(indices)[-1] (ref:index)
+  index_path = os.path.join(indices_dir, index_file)
+
+  version, _ = os.path.splitext(index_file) (ref:noext)
+  output_dir = os.path.expanduser(
+      "~/Music/Minecraft/%s/" % version)
+
+  with open(index_path, "r") as read_file:
+      objects = json.load(read_file)["objects"]
+
+  def find(name, path): (ref:find)
+      for root, dirs, files in os.walk(path):
+	  if name in files:
+	      os.path.join(root, name)
+
+  for k in objects:
+      if "music" in k:
+	  asset_path = find(objects[k]["hash"], assets_path) (ref:asset_path)
+	  outfile = os.path.join(output_dir, k)
+	  print("Extracting %s..." % outfile)
+
+	  if not os.path.exists(os.path.dirname(outfile)):
+	      os.makedirs(os.path.dirname(outfile)) (ref:makedirs)
+	  copyfile(asset_path, outfile)
+#+END_SRC
+
+There you have it! You can use this on macOS to extract the music from
+Vanilla Minecraft[fn::I know from first-hand experience that it does
+not work if you use the [[https://multimc.org][MultiMC launcher]].]. One improvement I
+considered, but ultimately decided was not needed (yet) was the
+ability to specify which version to extract the music from, and the
+directory to extract the music /to/.
