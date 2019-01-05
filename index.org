@@ -9,6 +9,16 @@
 I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
+
+* [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
+  :ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
+  :PUBDATE:  <2019-01-05 Sat 16:00>
+  :END:
+
+I list my musical goals for 2019, and touch briefly on achievements in 2018.
+
 * [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/minecraft-music-extractor.html
