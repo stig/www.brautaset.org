@@ -23,13 +23,9 @@ If you want more details, I suggest reading the transcript of my
 [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]] where I talked for 45 minutes about my
 education and career.
 
-* Contact
-  :PROPERTIES:
-  :CUSTOM_ID: contact
-  :END:
+* About this website
 
-If you want to contact me about one of my many software projects I ask
-that you do so via its [[https://github.com/stig][GitHub]] page.
-
-Otherwise the best way of contacting me---unless you have my mobile
-phone number---is via email: [[mailto:stig@brautaset.org][stig@brautaset.org]].
+  I currently build this website in Emacs with Org mode, and use Org's
+  "publish" feature to generate static HTML files that I deploy on
+  Amazon S3 behind a CloudFront distribution and a free SSL
+  certificate.
