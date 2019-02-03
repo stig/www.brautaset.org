@@ -10,6 +10,16 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/musical-goals-january-update.html
+  :ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
+  :PUBDATE:  <2019-02-03 Sun 22:38>
+  :END:
+
+The first of (hopefully) monthly posts with updates on my musical
+goals for 2019. I cover achievements in January, and new goals for
+February.
 * [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/musical-goals-for-2019.html

@@ -1,0 +1,65 @@
+#+title: Musical Goals January Update
+#+begin_abstract
+The first of (hopefully) monthly posts with updates on my musical
+goals for 2019. I cover achievements in January, and new goals for
+February.
+#+end_abstract
+#+category: Music
+
+A month ago I wrote about my [[file:musical-goals-for-2019.org][musical goals for 2019]], where I rounded
+off with my goals for January. I managed to put in 30-60 minutes
+practice almost every day, and felt that it was a pretty productive
+month. Here are those goals again:
+
+1. Complete [[https://www.justinguitar.com/guitar-lessons/grade-3-quickfire-test-et-306][Justin's Ear Training Grade 3]] and improve on my 75% score
+   for his Quickfire test
+2. Enquire at the local music shop about local people amenable to
+   jamming / playing together
+3. Finish Justin's beginner consolidation modules
+4. Retire my current set list and pick some new songs to practice
+5. Record AC/DC's "You Shook Me All Night Long"
+
+I'm pleased to say that I managed to achieve all of them! Retiring my
+"set list" (i.e. the songs I currently was growing tired of) obviously
+didn't require much effort. Neither did finish Justin's consolidation
+modules and Ear Training test, but they were important milestones for
+me nonetheless. At my local music shop I learned [[http://stevemorrison.eu/Steve_Morrison-Welcome.html][Steve Morrison]] hosts
+a local beginners Jam every week, and I'm really excited to give this
+a try soon!
+
+The standout item on the list was obviously recording myself playing.
+I did a "first steps with GarageBand" around the middle of the month,
+thinking I'd do another take at the end. In the end it took me so long
+to do that I decided to not record again even though I know I did lots
+of mistakes. (In particular the rhythm part during the start of the
+solo is all wrong.) The recording is only to be able to track my
+progress, after all. Nevertheless, I thought I'd share it.
+
+#+begin_export html
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/561910641%3Fsecret_token%3Ds-A4lNW&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+#+end_export
+
+As a bonus exercise I tried to transcribe the whole song. I used
+[[http://lilypond.org/][LilyPond]], which is a Free Software music engraving program. I chose it
+because the input files are plain text, so I can edit them using
+Emacs. It can produce both traditional music notation and tabulature,
+and also Midi output! Since I cannot read music all that well, I used
+this to help me gauge whether I got the rhythm and notes right. It
+took me a lot of work (10+ hours) to get the rhythm part done, and I
+gave up adding the solo because of all the bends that I found LilyPond
+doesn't support well.
+
+- [[file:You_Shook_Me_All_Night_Long.pdf][You Shook Me All Night Long (PDF)]]
+
+* February Goals
+
+  I've had a think about goals for next moth, and so far I've come up
+  with this:
+
+
+  1. Jam with others at least once (scheduled for the 6th!)
+  2. Complete Justin's [[https://www.justinguitar.com/modules/effective-practice][Effective Practice Module]]
+  3. Comfortably play the [[https://www.justinguitar.com/guitar-lessons/the-find-a-note-exercise-mt-434][Note Finding Exercise]] for CGDAEBF @ 60bpm
+  4. Play [[https://www.justinguitar.com/guitar-lessons/how-to-practice-scales-sc-102][major scale pattern 1 in thirds]] at 160 bpm
+  5. Learn, transcribe (rhythm part), and record [[https://www.youtube.com/watch?v=JGftIcp2SC0][Touch Too Much]] by AC/DC
+
