@@ -1,10 +1,8 @@
 #!/bin/zsh
 
-export AWS_PROFILE=stig
-
 export TTL=86400    # 1 day
 
-aws s3 sync \
+aws-vault exec personal -- aws s3 sync \
     --delete \
     --exclude '*' \
     --include '*.png' \
@@ -18,6 +16,6 @@ aws s3 sync \
     ~/public_html/ s3://www.brautaset.org
 
 # Invalidate CloudFront cache when uploading new files
-aws cloudfront create-invalidation \
+aws-vault exec personal -- aws cloudfront create-invalidation \
     --distribution-id E2HQ2C8QF1FXUZ \
     --paths '/*'
