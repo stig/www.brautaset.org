@@ -10,6 +10,14 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
+  :ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
+  :PUBDATE:  <2019-03-21 Thu 14:39>
+  :END:
+
+I review the noise-cancelling headphones I've been using for about 3 years.
 * [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/musical-goals-january-update.html

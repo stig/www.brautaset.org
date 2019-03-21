@@ -1,0 +1,79 @@
+#+title: Bose QuietComfort 35 Review
+#+begin_abstract
+I review the noise-cancelling headphones I've been using for about 3 years.
+#+end_abstract
+#+category: Reviews
+
+Colleagues have asked numerous times about my experience with Bose
+QuietComfort 35 noise-cancelling headphones. This post is me
+re-posting my most recent response on my blog to save myself typing
+the next time I'm asked.
+
+The good:
+
+- I love that they can connect to two devices via bluetooth (both my
+  phone and computer). This is important to avoid me missing phone
+  calls if I'm connected to computer or meeting/slack notifications if
+  I'm connected to the phone.
+
+- They are particularly great for travel: it's like a 1st-class
+  upgrade for airports, planes and trains.
+
+- They're also pretty good at keeping me from hearing wife/son while
+  working. Important as I work from home and my wife home educates our
+  son.
+
+- They can optionally work with a cable, and this doubles the battery
+  life. (Which is already good.) If they run out of battery they
+  continue to work as headphones, but you get no noise cancelling
+  (obviously).
+
+- Speaking of battery, they seem to charge in no time at all, and you
+  get a spoken message about battery level every time you put them
+  on - and a warning when they're getting low.
+
+- They're very comfortable, even after 3 years use. (This in stark
+  contrast to a previous pair of Shure ones I had where the earpads
+  hardened and became uncomfortable pretty quickly.)
+
+- They fold up compactly into a superb travel case that protects them
+  well.
+
+The bad:
+
+- The price.
+
+- The sound quality for /listening to music/ specifically is not as good
+  as the cheaper pair of Shure over-the-ear headphones I had.
+
+- Not being able to hear anything that goes on around you when in a
+  meeting can be a disadvantage.
+
+- Their cost.
+
+- For meetings the quality of the sound from the mic is not as good as
+  a cheap headset (with a dedicated mic arm) I have.
+
+- Also for meetings: the mic pick up keyboard and other ambient
+  noises, but you can't hear it so you're not aware!
+
+- It can be dangerous to wear them outside, as you can't hear traffic
+  or other road users.
+
+- They are expensive.
+
+- They're not great in windy/drafty conditions. I think this is
+  because they try to cancel out "phantom wind" that's blowing on the
+  ambient mics.
+
+- It's not possible to turn off the noise cancelling without plugging
+  in a cable, which also turns off the bluetooth.
+
+- Did I mention they're not cheap?
+
+Verdict
+
+For my use I think the good outweigh the bad, and if my QuiteComfort
+35s broke I would /consider/ getting them again. I'm not 100% sure
+because I feel where they really shine (solo) air/train travel, and
+I'm not sure the price is worth it given I so rarely travel nowadays.
