@@ -82,12 +82,12 @@ cheapest.
   :CUSTOM_ID: simple-solution
   :END:
 
-I immediately thought that this was a combinatorial problem scoured
+I immediately thought that this was a combinatorial problem and scoured
 Clojure's collections library for suitable combinatorial operators. I
 didn't find what I wanted in the standard library, but
 ~clojure.math.combinatorics~ appeared to have what I needed.
 
-~clojure.math.combinatorics/partitions~ returs all the different ways to
+~clojure.math.combinatorics/partitions~ return all the different ways to
 partition the input into subsets, which sounds like it might work. I
 felt I was ready to start coding.
 
@@ -532,7 +532,7 @@ make.
 
 We know we'll price /partitions/ of books, so let's make a function to
 price each partition, and one to price a /collection/ of partitions.
-These doesn't need to be terribly efficient, because we won't be
+These don't need to be terribly efficient, because we won't be
 calling them very often.
 
 #+BEGIN_SRC clojure
@@ -566,7 +566,7 @@ integers, where each integer is a count of books.
     (->> discounts keys sort last))
 
   (defn- partitions
-    "Produce all sequence of possible
+    "Produce a sequence of possible
     partitions representing N number of
     books, constrained by a max size for
     each partition."
@@ -588,7 +588,7 @@ of those prices we'll end up paying yet.
 #+BEGIN_SRC clojure
   (defn- sort-partitions-by-price
     "Zip sequences of prices & partitions
-    together,and sort by price so the
+    together, and sort by price so the
     cheapest sequence of partitions comes
     first."
     [prices parts]
@@ -633,7 +633,7 @@ check if it's possible to map our desired purchase of books to a
 particular set of partitions of books. Or put another way, given a seq
 of partition sizes can we pick all of them (depleeting the set of
 books) such that each partition contains distinct books? This is
-essenitally a depth-first search.
+essentially a depth-first search.
 
 #+BEGIN_SRC clojure
   (defn- picks-completely?
@@ -709,7 +709,7 @@ put it all together in our public ~price~ function:
 
 Basically we're just looping over all our candidate set of partitions,
 cheapest first, and stopping as soon as we find a partition we can
-use. The last candiate partition is has every book in a partition of
+use. The last candiate partition has every book in a partition of
 its own, which /must/ match, so there's no special cases to handle
 there.
 
