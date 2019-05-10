@@ -10,6 +10,16 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack on projects, and
 occasionally take time to maintain this site.
 
+* [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/learning-guitar-update.html
+  :ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
+  :PUBDATE:  <2019-05-10 Fri 08:53>
+  :END:
+
+I try to keep myself honest--and on target!--by posting an update on
+my guitar learning journey.
+
 * [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html

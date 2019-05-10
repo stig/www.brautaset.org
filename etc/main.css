@@ -377,3 +377,11 @@ caption.t-above {
     margin: 0 0 1em 0;
 }
 .drawer *:last-child {margin-bottom: 0;}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
