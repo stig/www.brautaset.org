@@ -1,0 +1,26 @@
+version: 2.1
+
+executors:
+  emacs26:
+    working_directory: ~/blog
+    docker:
+      - image: silex/emacs:26.2-dev
+
+jobs:
+  build:
+    executor: emacs26
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v2-org-{{ .Branch }}
+            - v2-org-master
+      - run:
+          name: Publish Blog
+          command: emacs --batch --load .circleci/config.el --funcall org-publish-all
+      - store_artifacts:
+          path: ~/public_html
+      - save_cache:
+          key: v2-org-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ~/.emacs.d
