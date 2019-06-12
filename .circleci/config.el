@@ -24,6 +24,23 @@
        <meta name=\"referrer\" content=\"same-origin\">
 " prefix prefix))
 
+
+;; Set to a non-empty string, otherwise our html-home/up-format
+;; snippet will not be used.
+(setq org-html-link-up "t")
+
+(defun sb/html-home/up-format (prefix)
+  (format "
+       <div id=\"org-div-home-and-up\">
+	 <nav>
+	   <ul>
+	     <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
+	     <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
+	     <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
+	   </ul>
+	 </nav>
+       </div>" prefix prefix prefix))
+
 (setq org-publish-project-alist
       `(("www"
 	 :components ("www-pages" "www-articles" "www-static" "www-rss"))
@@ -48,18 +65,7 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-link-up ""
-	 :html-link-home ""
-	 :html-home/up-format "
-       <div id=\"org-div-home-and-up\">
-	 <nav>
-	   <ul>
-	     <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
-	     <li><a accesskey=\"A\" href=\"about.html\"> About </a></li>
-	     <li><a accesskey=\"p\" href=\"publications.html\"> Publications </a></li>
-	   </ul>
-	 </nav>
-       </div>"
+	 :html-home/up-format ,(sb/html-home/up-format "")
 	 :html-head ,(sb/html-head "")
 
 	 :html-head-include-default-style nil
@@ -81,17 +87,7 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-link-up "../../"
-	 :html-link-home "../../"
-	 :html-home/up-format "
-       <div id=\"org-div-home-and-up\">
-	 <nav>
-	   <ul>
-	     <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
-             <li><a accesskey=\"A\" href=\"%s/about.html\"> About </a></li>
-	   </ul>
-	 </nav>
-       </div>"
+	 :html-home/up-format ,(sb/html-home/up-format "../../")
 	 :html-head ,(sb/html-head "../../")
 
 	 :html-head-include-default-style nil
