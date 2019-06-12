@@ -9,8 +9,8 @@
 
 (defun sb/html-head (prefix)
   (format "
-       <link rel=\"stylesheet\" type=\"text/css\" href=\"%s/etc/main.css\" />
-       <link rel=\"icon\" type=\"image/png\" href=\"%s/etc/icon.png\" />
+       <link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/main.css\" />
+       <link rel=\"icon\" type=\"image/png\" href=\"%setc/icon.png\" />
        <link rel=\"alternative\" type=\"application/rss+xml\"
 	     href=\"https://www.brautaset.org/index.xml\"
 	     title=\"Stig's Soapbox RSS Feed\" />
@@ -42,15 +42,15 @@
 	 :html-html5-fancy t
 	 :html-doctype "html5"
 	 :html-footnotes-section "<div id=\"footnotes\"><!--%s-->%s</div>"
-	 :html-link-up "/"
-	 :html-link-home "/"
+	 :html-link-up ""
+	 :html-link-home ""
 	 :html-home/up-format "
        <div id=\"org-div-home-and-up\">
 	 <nav>
 	   <ul>
 	     <li><a accesskey=\"H\" href=\"%s\"> Home </a></li>
-	     <li><a accesskey=\"A\" href=\"/about.html\"> About </a></li>
-	     <li><a accesskey=\"p\" href=\"/publications.html\"> Publications </a></li>
+	     <li><a accesskey=\"A\" href=\"about.html\"> About </a></li>
+	     <li><a accesskey=\"p\" href=\"publications.html\"> Publications </a></li>
 	   </ul>
 	 </nav>
        </div>"
@@ -87,7 +87,7 @@
 	   </ul>
 	 </nav>
        </div>"
-	 :html-head ,(sb/html-head "../..")
+	 :html-head ,(sb/html-head "../../")
 
 	 :html-head-include-default-style nil
 	 :html-head-include-scripts nil
