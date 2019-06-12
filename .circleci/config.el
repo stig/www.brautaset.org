@@ -1,7 +1,11 @@
 ;; Don't make backup copies in ~/public_html
 (setq backup-inhibited t)
 
-(setq org-html-postamble "<p>Copyright &copy; Stig Brautaset. <a accesskey=\"l\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Licence</a></p>
+(setq org-html-footnotes-section
+      "<div id=\"footnotes\"><!--%s-->%s</div>")
+
+(setq org-html-postamble
+      "<p>Copyright &copy; Stig Brautaset. <a accesskey=\"l\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Licence</a></p>
 ")
 
 (defun sb/org-html-format-drawer (name content)
@@ -44,7 +48,6 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-footnotes-section "<div id=\"footnotes\"><!--%s-->%s</div>"
 	 :html-link-up ""
 	 :html-link-home ""
 	 :html-home/up-format "
@@ -78,7 +81,6 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-footnotes-section "<div id=\"footnotes\"><!--%s-->%s</div>"
 	 :html-link-up "../../"
 	 :html-link-home "../../"
 	 :html-home/up-format "
