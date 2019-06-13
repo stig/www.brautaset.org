@@ -1,3 +1,6 @@
+;; Don't make backup copies in ~/public_html
+(setq backup-inhibited t)
+
 (setq org-html-postamble "<p>Copyright &copy; Stig Brautaset. <a accesskey=\"l\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Licence</a></p>
 ")
 
