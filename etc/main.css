@@ -385,3 +385,15 @@ caption.t-above {
 .column {
     flex: 50%;
 }
+
+/* Styles for Source code blocks */
+.org-builtin { color: #483d8b; }
+.org-clojure-keyword { color: #008b8b; }
+.org-comment { color: #b22222; }
+.org-comment-delimiter { color: #b22222; }
+.org-doc { color: #8b2252; }
+.org-function-name { color: #0000ff; }
+.org-keyword { color: #a020f0; }
+.org-string { color: #8b2252; }
+.org-type { color: #228b22; }
+.org-variable-name { color: #a0522d; }
