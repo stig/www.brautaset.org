@@ -1,10 +1,16 @@
 version: 2.1
 
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+
 executors:
   emacs26:
     working_directory: ~/blog
     docker:
       - image: silex/emacs:26.2-dev
+  python3:
+    docker:
+      - image: circleci/python:3.7
 
 jobs:
   build:
@@ -24,3 +30,51 @@ jobs:
           key: v2-org-{{ .Branch }}-{{ .Revision }}
           paths:
             - ~/.emacs.d
+      - persist_to_workspace:
+          root: ~/public_html
+          paths:
+            - '*'
+
+  deploy:
+    executor: python3
+    steps:
+      - attach_workspace:
+          at: ~/public_html
+      - aws-s3/sync:
+          from: ~/public_html
+          to: 's3://www.brautaset.org'
+          arguments: >-
+            --delete
+            --exclude '*'
+            --include '*.png'
+            --include '*.pdf'
+            --include '*.jpg'
+            --include '*.html'
+            --include '*.css'
+            --include '*.xml'
+            --acl public-read
+            --cache-control "max-age=86400"
+      - run: >-
+          aws cloudfront create-invalidation
+          --distribution-id E2HQ2C8QF1FXUZ
+          --paths '/*'
+
+workflows:
+  version: 2
+
+  pr:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master
+
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - build
