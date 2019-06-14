@@ -110,3 +110,6 @@
 	 :exclude ".*"              ;; To exclude all files...
 	 :include ("index.org")     ;; ... except index.org.
 	 :table-of-contents nil)))
+
+;; This goes in RSS header, I think...
+(setq user-mail-address "stig@brautaset.org")
