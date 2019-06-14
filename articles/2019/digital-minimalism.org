@@ -1,6 +1,8 @@
 #+title: Digital Minimalism
 #+begin_abstract
-I read the book, and it gave me the courage to leave social media.
+I briefly review the book by Cal Newport, and report how it's helping
+me take back control of where I spend my limited currency in today's
+attention economy.
 #+end_abstract
 #+category: Lifestyle
 #+category: Reviews
