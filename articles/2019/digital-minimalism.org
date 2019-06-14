@@ -12,7 +12,7 @@ however, the book encourages you to carefully evaluate whether each
 piece of technology you allow in your life enhances your quality of
 life or not.
 
-Not everything in the book was new to me: I wrote about my [[file:~/blog/articles/2014/smartphone-addiction.org][smartphone
+Not everything in the book was new to me: I wrote about my [[file:../2014/smartphone-addiction.org][smartphone
 addiction]] nearly 5 years ago. Since then I've taken steps to remove
 distractions from my phone, particularly in the last year. My phone
 has no:
