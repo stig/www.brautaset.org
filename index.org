@@ -7,8 +7,8 @@
 
 {{{no-rss}}}
 I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work
-I hang with my family, read, play guitar, run, hack on projects, and
-occasionally take time to maintain this site.
+I hang with my family, read, play guitar, run, hack my Emacs config,
+and occasionally update this site.
 
 * [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
   :PROPERTIES:
