@@ -13,9 +13,8 @@ piece of technology you allow in your life enhances your quality of
 life or not.
 
 Not everything in the book was new to me: I wrote about my [[file:../2014/smartphone-addiction.org][smartphone
-addiction]] nearly 5 years ago. Since then I've taken steps to remove
-distractions from my phone, particularly in the last year. My phone
-has no:
+addiction]] nearly 5 years ago. I haven't given up a smartphone.
+However, removed distractions from it. My phone now has no:
 
 - Social media apps
 - Slack (despite using it at work)
@@ -25,16 +24,17 @@ has no:
   settings to hide it.]
 - YouTube
 
-This has certainly helped, and I've been able to wean myself off
-compulsively checking my phone at almost any opportunity. (E.g. while
-brushing my teeth.) However, it is /not enough/.
+This has certainly helped, and I've weaned myself off compulsively
+looking at stuff on my phone whenever I'm not at my computer. (E.g.
+while brushing my teeth.) I'm even comfortable leaving the house
+without my phone. However, it is /not enough/.
 
 Twitter and Facebook still steals my attention when I'm in front of my
-computer. I tried paring down the number of people I followed, but
-still found myself compulsively checking the services and often fell
-down a rabbit hole while doing so. Not only did I spend much more time
-than I indented on these services, I never come away feeling it was
-time well spent!
+computer. I tried paring down the number of people I followed, and
+installing filters to remove distractions, but still found myself
+compulsively checking the services. I spent much more time than I
+indented on these services, yet I never come away feeling it was time
+well spent!
 
 Additionally it's clear by now that Twitter and Facebook are only
 interested in maximising your time on the site so they can get your
@@ -59,4 +59,4 @@ digital distractions, bit by bit. For a while I've desperately wanted
 more control over where I spend my limited currency in the attention
 economy[fn::If you're interested in doing the same, but don't know
 where to start, I recommend the book in the opening paragraph.].
-/Digital Minimalism/ gave me the confidence to take action.
+Reading /Digital Minimalism/ gave me the confidence to take action.
