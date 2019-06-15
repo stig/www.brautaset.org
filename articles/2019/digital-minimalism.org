@@ -1,23 +1,20 @@
 #+title: Digital Minimalism
 #+begin_abstract
-I briefly review the book by Cal Newport, and report how it's helping
-me take back control of where I spend my limited currency in today's
-attention economy.
+I introduce Cal Newport's book, and how it's helping me take control
+of where I spend my limited currency in today's attention economy.
 #+end_abstract
 #+category: Lifestyle
 #+category: Reviews
 
 My wife borrowed [[http://www.calnewport.com/books/digital-minimalism/][Digital Minimalism]] at our local library, and we both
 read it. Living a life supported---but not /lead/---by technology
-resonates with me. Technology is not intrinsically good or bad,
-however, the book encourages you to carefully evaluate whether each
-piece of technology you allow in your life enhances your quality of
-life or not.
+resonates with me. Technology is not intrinsically good or bad, but we
+should carefully evaluate whether every piece of technology you allow
+yourself to use enhances your quality of life or not.
 
-Not everything in the book was new to me: I wrote about my [[file:../2014/smartphone-addiction.org][smartphone
-addiction]] nearly 5 years ago. I haven't managed to give up my
-smartphone. However, I've removed distractions from it. My phone
-currently has no:
+Not everything in the book was new to me. I wrote about my [[file:../2014/smartphone-addiction.org][smartphone
+addiction]] nearly 5 years ago, and although I haven't given up my
+smartphone my situation has improved. My phone currently has no:
 
 - Social media apps
 - Slack (despite using it at work)
