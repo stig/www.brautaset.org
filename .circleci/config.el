@@ -1,6 +1,3 @@
-;; Don't make backup copies in ~/public_html
-(setq backup-inhibited t)
-
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
