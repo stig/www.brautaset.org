@@ -4,11 +4,23 @@
 (setq org-html-footnotes-section
       "<div id=\"footnotes\"><!--%s-->%s</div>")
 
-(defun sb/org-html-format-drawer (name content)
-  (concat "<div class=\"drawer " (downcase name) "\">\n"
-	  "<h6>" (capitalize name) "</h6>\n"
-	  content
-	  "\n</div>"))
+(setq org-export-time-stamp-file nil)
+(setq org-export-with-drawers t)
+(setq org-export-with-section-numbers nil)
+(setq org-export-with-toc nil)
+
+(setq org-html-doctype "html5")
+(setq org-html-head-include-default-style nil)
+(setq org-html-head-include-scripts nil)
+(setq org-html-html5-fancy t)
+(setq org-html-metadata-timestamp-format "%e %B %Y")
+
+(setq org-html-format-drawer-function
+      (lambda (name content)
+	(format "<div class=\"drawer %s\"><h6>%s</h6>%s</div>"
+		(downcase name)
+		(capitalize name)
+		content)))
 
 (defun sb/html-head (prefix)
   (format "
@@ -55,22 +67,9 @@
 	 :base-directory "~/blog"
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html
-	 :section-numbers nil
-	 :time-stamp-file nil
-	 :with-toc nil
-	 :with-drawers t
-	 :html-format-drawer-function sb/org-html-format-drawer
-
-	 :html-html5-fancy t
-	 :html-doctype "html5"
 	 :html-preamble ,(sb/preamble "")
 	 :html-postamble ,(sb/postamble "")
-	 :html-head ,(sb/html-head "")
-
-	 :html-head-include-default-style nil
-	 :html-head-include-scripts nil
-
-	 :html-metadata-timestamp-format "%e %B %Y")
+	 :html-head ,(sb/html-head ""))
 
 	("www-articles"
 	 :exclude ",.*"
@@ -78,21 +77,8 @@
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t
-	 :section-numbers nil
-	 :time-stamp-file nil
-	 :with-toc nil
-	 :with-drawers t
-	 :html-format-drawer-function sb/org-html-format-drawer
-
-	 :html-html5-fancy t
-	 :html-doctype "html5"
 	 :html-postamble ,(sb/postamble "../../")
-	 :html-head ,(sb/html-head "../../")
-
-	 :html-head-include-default-style nil
-	 :html-head-include-scripts nil
-
-	 :html-metadata-timestamp-format "%e %B %Y")
+	 :html-head ,(sb/html-head "../../"))
 
 	("www-rss"
 	 :base-directory "~/blog"
@@ -102,10 +88,8 @@
 	 :rss-extension "xml"
 	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
-	 :section-numbers nil
 	 :exclude ".*"              ;; To exclude all files...
-	 :include ("index.org")     ;; ... except index.org.
-	 :table-of-contents nil)))
+	 :include ("index.org"))))  ;; ... except index.org.
 
-;; This goes in RSS header, I think...
+;; This goes in RSS header.
 (setq user-mail-address "stig@brautaset.org")
