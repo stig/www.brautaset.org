@@ -21,19 +21,23 @@
 " prefix prefix))
 
 (setq sb/copyright
-      "<li>Copyright &copy; 2011-2019 Stig Brautaset</li>")
+      "<p>Copyright &copy; 2011-2019 Stig Brautaset</p>")
 
-(defun sb/navigation (prefix &rest copy)
+(defun sb/preamble (prefix)
   (format "
 	 <nav>
 	   <ul>
 	     <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
 	     <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
 	     <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
-             %s
 	   </ul>
 	 </nav>
-       " prefix prefix prefix (if copy sb/copyright "")))
+       " prefix prefix prefix))
+
+(defun sb/postamble (prefix)
+  (concat
+   (sb/preamble prefix)
+   sb/copyright))
 
 (setq org-publish-project-alist
       `(("www"
@@ -59,8 +63,8 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-preamble ,(sb/navigation "")
-	 :html-postamble ,(sb/navigation "" t)
+	 :html-preamble ,(sb/preamble "")
+	 :html-postamble ,(sb/postamble "")
 	 :html-head ,(sb/html-head "")
 
 	 :html-head-include-default-style nil
@@ -82,7 +86,7 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-postamble ,(sb/navigation "../../" t)
+	 :html-postamble ,(sb/postamble "../../")
 	 :html-head ,(sb/html-head "../../")
 
 	 :html-head-include-default-style nil
