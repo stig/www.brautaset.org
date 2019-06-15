@@ -51,28 +51,33 @@
    (sb/preamble prefix)
    sb/copyright))
 
+(setq common-properties
+      '(
+	:author "Stig Brautaset"
+	:email "stig@brautaset.org"
+	:base-directory "~/blog"
+	:publishing-directory "~/public_html"
+	))
+
 (setq org-publish-project-alist
       `(("www"
 	 :components ("www-pages" "www-articles" "www-static" "www-rss"))
 
 	("www-static"
-	 :base-directory "~/blog"
-	 :publishing-directory "~/public_html"
+	 ,@common-properties
 	 :base-extension "css\\|jpg\\|png\\|pdf\\|html"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
 
 	("www-pages"
-	 :exclude ",.*"
-	 :base-directory "~/blog"
-	 :publishing-directory "~/public_html"
+	 ,@common-properties
 	 :publishing-function org-html-publish-to-html
 	 :html-preamble ,(sb/preamble "")
 	 :html-postamble ,(sb/postamble "")
 	 :html-head ,(sb/html-head ""))
 
 	("www-articles"
-	 :exclude ",.*"
+	 ,@common-properties
 	 :base-directory "~/blog/articles"
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
@@ -81,15 +86,11 @@
 	 :html-head ,(sb/html-head "../../"))
 
 	("www-rss"
-	 :base-directory "~/blog"
+	 ,@common-properties
 	 :base-extension "org"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
 	 :rss-extension "xml"
-	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
 	 :exclude ".*"              ;; To exclude all files...
 	 :include ("index.org"))))  ;; ... except index.org.
-
-;; This goes in RSS header.
-(setq user-mail-address "stig@brautaset.org")
