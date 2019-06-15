@@ -54,8 +54,17 @@
     text-decoration: underline;
 }
 
-#postamble p, #preamble p {
-    font-size: 90%; margin: .2em;
+#preamble, #postamble {
+    white-space: nowrap;
+    font-size: 90%;
+}
+
+#preamble {
+    text-align: right;
+}
+
+#postamble {
+    border-top: 1px solid grey;
 }
 
 p.verse {
@@ -252,11 +261,6 @@ dt {
 
 }
 
-#org-div-home-and-up
-{
-    text-align: right; font-size: 70%; white-space: nowrap;
-}
-
 textarea {
     overflow-x: auto;
 }
@@ -314,29 +318,38 @@ body {
     border-bottom: 1px dashed #ccc;
 }
 
-#org-div-home-and-up nav ul {
+#preamble nav ul {
     padding: 0;
     list-style-type: none;
 }
 
-#org-div-home-and-up nav ul li {
+#preamble nav ul li {
     display: inline;
     padding-left: 1ch;
     white-space: nowrap;
 }
 
-#org-div-home-and-up nav ul li:first-child {
+#preamble nav ul li:first-child {
+    padding-left: 0;
+}
+
+#postamble nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#postamble nav ul li {
+    display: inline;
+    padding-left: 1ch;
+    white-space: nowrap;
+}
+
+#postamble nav ul li:first-child {
     padding-left: 0;
 }
 
 img {
     max-width: 100%;
-}
-
-#postamble {
-    border-top: 1px dashed #ccc;
-    font-size: smaller;
-    color: #888;
 }
 
 @media (min-width: 600px) {
@@ -362,8 +375,8 @@ caption.t-above {
 #footnotes {
     border-top: 1px solid grey;
     color: #555;
+    font-size: smaller;
 }
-
 
 /* Drawers. Inspired by https://pavpanchekha.com/blog/org-mode-publish.html */
 .drawer {

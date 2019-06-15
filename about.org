@@ -21,3 +21,7 @@ its 5th major version and have over 3800 stars on GitHub.
   "publish" feature to generate static HTML files that I deploy on
   Amazon S3 behind a CloudFront distribution and a free SSL
   certificate.
+
+  Code examples are by me unless otherwise specified, and available
+  under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
+  following permissive lisence.
