@@ -15,8 +15,9 @@ piece of technology you allow in your life enhances your quality of
 life or not.
 
 Not everything in the book was new to me: I wrote about my [[file:../2014/smartphone-addiction.org][smartphone
-addiction]] nearly 5 years ago. I haven't given up a smartphone.
-However, removed distractions from it. My phone now has no:
+addiction]] nearly 5 years ago. I haven't managed to give up my
+smartphone. However, I've removed distractions from it. My phone
+currently has no:
 
 - Social media apps
 - Slack (despite using it at work)
@@ -33,10 +34,10 @@ without my phone. However, it is /not enough/.
 
 Twitter and Facebook still steals my attention when I'm in front of my
 computer. I tried paring down the number of people I followed, and
-installing filters to remove distractions, but still found myself
-compulsively checking the services. I spent much more time than I
-indented on these services, yet I never come away feeling it was time
-well spent!
+installing browser plugins to remove their worst distractions. I still
+found myself compulsively checking the services. I spent more time
+than I indented on these services, and I never came away feeling this
+time was well spent!
 
 Additionally it's clear by now that Twitter and Facebook are only
 interested in maximising your time on the site so they can get your
