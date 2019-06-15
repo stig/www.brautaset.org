@@ -4,17 +4,6 @@
 (setq org-html-footnotes-section
       "<div id=\"footnotes\"><!--%s-->%s</div>")
 
-(setq org-export-time-stamp-file nil)
-(setq org-export-with-drawers t)
-(setq org-export-with-section-numbers nil)
-(setq org-export-with-toc nil)
-
-(setq org-html-doctype "html5")
-(setq org-html-head-include-default-style nil)
-(setq org-html-head-include-scripts nil)
-(setq org-html-html5-fancy t)
-(setq org-html-metadata-timestamp-format "%e %B %Y")
-
 (setq org-html-format-drawer-function
       (lambda (name content)
 	(format "<div class=\"drawer %s\"><h6>%s</h6>%s</div>"
@@ -57,7 +46,17 @@
 	:email "stig@brautaset.org"
 	:base-directory "~/blog"
 	:publishing-directory "~/public_html"
-	))
+
+	:section-numbers nil
+	:time-stamp-file nil
+	:with-drawers t
+	:with-toc nil
+
+	:html-doctype "html5"
+	:html-head-include-default-style nil
+	:html-head-include-scripts nil
+	:html-html5-fancy t
+	:html-metadata-timestamp-format "%e %B %Y"))
 
 (setq org-publish-project-alist
       `(("www"
@@ -71,26 +70,25 @@
 
 	("www-pages"
 	 ,@common-properties
-	 :publishing-function org-html-publish-to-html
-	 :html-preamble ,(sb/preamble "")
+	 :html-head ,(sb/html-head "")
 	 :html-postamble ,(sb/postamble "")
-	 :html-head ,(sb/html-head ""))
+	 :html-preamble ,(sb/preamble "")
+	 :publishing-function org-html-publish-to-html)
 
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
+	 :html-head ,(sb/html-head "../../")
+	 :html-postamble ,(sb/postamble "../../")
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
-	 :recursive t
-	 :html-postamble ,(sb/postamble "../../")
-	 :html-head ,(sb/html-head "../../"))
+	 :recursive t)
 
 	("www-rss"
 	 ,@common-properties
-	 :base-extension "org"
+	 :exclude ".*"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
-	 :rss-extension "xml"
+	 :include ("index.org")
 	 :publishing-function (org-rss-publish-to-rss)
-	 :exclude ".*"              ;; To exclude all files...
-	 :include ("index.org"))))  ;; ... except index.org.
+	 :rss-extension "xml")))
