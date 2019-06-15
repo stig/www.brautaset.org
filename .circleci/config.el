@@ -4,10 +4,6 @@
 (setq org-html-footnotes-section
       "<div id=\"footnotes\"><!--%s-->%s</div>")
 
-(setq org-html-postamble
-      "<p>Copyright &copy; Stig Brautaset. <a accesskey=\"l\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Licence</a></p>
-")
-
 (defun sb/org-html-format-drawer (name content)
   (concat "<div class=\"drawer " (downcase name) "\">\n"
 	  "<h6>" (capitalize name) "</h6>\n"
@@ -24,22 +20,20 @@
        <meta name=\"referrer\" content=\"same-origin\">
 " prefix prefix))
 
+(setq sb/copyright
+      "<li>Copyright &copy; 2011-2019 Stig Brautaset</li>")
 
-;; Set to a non-empty string, otherwise our html-home/up-format
-;; snippet will not be used.
-(setq org-html-link-up "t")
-
-(defun sb/html-home/up-format (prefix)
+(defun sb/navigation (prefix &rest copy)
   (format "
-       <div id=\"org-div-home-and-up\">
 	 <nav>
 	   <ul>
 	     <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
 	     <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
 	     <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
+             %s
 	   </ul>
 	 </nav>
-       </div>" prefix prefix prefix))
+       " prefix prefix prefix (if copy sb/copyright "")))
 
 (setq org-publish-project-alist
       `(("www"
@@ -65,7 +59,8 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-home/up-format ,(sb/html-home/up-format "")
+	 :html-preamble ,(sb/navigation "")
+	 :html-postamble ,(sb/navigation "" t)
 	 :html-head ,(sb/html-head "")
 
 	 :html-head-include-default-style nil
@@ -87,7 +82,7 @@
 
 	 :html-html5-fancy t
 	 :html-doctype "html5"
-	 :html-home/up-format ,(sb/html-home/up-format "../../")
+	 :html-postamble ,(sb/navigation "../../" t)
 	 :html-head ,(sb/html-head "../../")
 
 	 :html-head-include-default-style nil
