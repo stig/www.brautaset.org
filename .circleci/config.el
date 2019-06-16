@@ -44,8 +44,6 @@
       '(
 	:author "Stig Brautaset"
 	:email "stig@brautaset.org"
-	:base-directory "~/blog"
-	:publishing-directory "~/public_html"
 
 	:section-numbers nil
 	:time-stamp-file nil
@@ -64,15 +62,19 @@
 
 	("www-static"
 	 ,@common-properties
+	 :base-directory "~/blog"
 	 :base-extension "css\\|jpg\\|png\\|pdf\\|html"
 	 :recursive t
+	 :publishing-directory "~/public_html"
 	 :publishing-function org-publish-attachment)
 
 	("www-pages"
 	 ,@common-properties
+	 :base-directory "~/blog"
 	 :html-head ,(sb/html-head "")
 	 :html-postamble ,(sb/postamble "")
 	 :html-preamble ,(sb/preamble "")
+	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 
 	("www-articles"
@@ -86,9 +88,11 @@
 
 	("www-rss"
 	 ,@common-properties
+	 :base-directory "~/blog"
 	 :exclude ".*"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
 	 :include ("index.org")
+	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
 	 :rss-extension "xml")))
