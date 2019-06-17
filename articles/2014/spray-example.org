@@ -12,7 +12,7 @@ regard.
 
 The main goal of this example is to show how to wire together a REST API
 using Spray Routing (v1.2) that uses a model-actor from the spray
-routing layer. It also shows off a few things I consider good practice:
+routing layer. It also shows off three things I consider good practice:
 
 - Custom =Cache-Control= header generation. Achieve optimal caching by
   tailoring a resource's =max-age= to avoid over- or under-caching
@@ -23,7 +23,7 @@ routing layer. It also shows off a few things I consider good practice:
   ORM mappings. I think this is bad practice and prefer to use
   different classes.
 
-- The [[http://spray.io/documentation/1.2.0/spray-routing/future-%20directives/onSuccess/][onSuccess]] directive, which allows us to improve on my [[file:~/blog/articles/2013/spray-routing-error-handling.org][previous]]
+- The [[http://spray.io/documentation/1.2.0/spray-routing/future-%20directives/onSuccess/][onSuccess]] directive, which allows us to improve on my [[file:../2013/spray-routing-error-handling.org][previous]]
   post on handling expected errors (e.g. 404) in the spray routing
   DSL.
 

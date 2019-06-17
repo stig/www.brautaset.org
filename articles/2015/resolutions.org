@@ -5,14 +5,14 @@
 Happy New Year! The title of this post makes it look like I have a
 silly number of resolutions this year, but fear not: I've managed to
 limit myself to five. Before getting to them, however, let's first
-review how I did on my [[file:~/blog/articles/2014/resolutions.org][2014 resolutions]]:
+review how I did on my [[file:../2014/resolutions.org][2014 resolutions]]:
 
 - CodeClub: failed! I did however sign up as a STEM Ambassador, and
   were in talks with a school to start a club---but didn't find a way
   to commit the required time.
 - Lose weight: success! Although I didn't get to 75kg by April, I did
   by August---and my weight continues to drop. It seems I am able to
-  [[file:~/blog/articles/2014/eating-right.org][lose weight by eating right]].
+  [[file:../2014/eating-right.org][lose weight by eating right]].
 - Blogging: success! I managed fourteen blog posts last year
   (including three on the [[http://techblog.net-a-porter.com/author/stig/][company blog]]) which is one shy of my goal,
   but I'm claiming this year's record-length /Yuletide/ letter to family
