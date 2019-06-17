@@ -1,15 +1,14 @@
 #+title: About Stig Brautaset
 
-I live and work remotely from rural [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]] in the North
-East of England. I've previously lived in London (about 14 years) and
-Hong Kong (1 year). Employers have paid me to write HTML, PHP, Perl,
+I'm a software engineer living near [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]], in the
+northeast of England. I've previously worked in London and Hong Kong;
+I now work remotely. Employers have paid me to write HTML, PHP, Perl,
 C, JavaScript, Java, Objective-C, Scala, Python, Bash and English.
 
-I am from Hovdebygda, a village in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta Municipality]] on the west
-coast of Norway. I studied electronics, and endured compulsory
-military service as a sonar operator on a submarine, before moving to
-London for university. I studied AI at the University of Westminster,
-graduating in 2003.
+I'm originally from Hovdebygda, in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta]], on the west coast of Norway.
+I studied electronics and endured compulsory military service as a
+sonar operator on a submarine, before moving to London to study AI at
+the University of Westminster. I graduated in 2003.
 
 I started writing the popular [[https://github.com/stig/json-framework/][SBJson]] JSON parser/generator for
 Objective-C in 2007, and have maintained it ever since. It's now in
