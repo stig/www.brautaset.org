@@ -10,17 +10,18 @@ I studied electronics and endured compulsory military service as a
 sonar operator on a submarine, before moving to London to study AI at
 the University of Westminster. I graduated in 2003.
 
-I started writing the popular [[https://github.com/stig/json-framework/][SBJson]] JSON parser/generator for
-Objective-C in 2007, and have maintained it ever since. It's now in
-its 5th major version and have over 3800 stars on GitHub.
+* About SBJson
+
+  I started writing the popular [[https://github.com/stig/json-framework/][SBJson]] JSON parser/generator for
+  Objective-C in 2007, and have maintained it ever since. It's now in
+  its 5th major version and have over 3800 stars on GitHub.
 
 * About this website
 
-  I currently build this website in Emacs with Org mode, and use Org's
-  "publish" feature to generate static HTML files that I deploy on
-  Amazon S3 behind a CloudFront distribution and a free SSL
-  certificate.
+  I build this website in Emacs' Org mode, which can publish static
+  HTML files. Those I deploy on Amazon S3 behind a CloudFront
+  distribution and a free SSL certificate.
 
-  Code examples are by me unless otherwise specified, and available
+  Code examples are by me, unless otherwise specified, and available
   under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
-  following permissive lisence.
+  lisence.
