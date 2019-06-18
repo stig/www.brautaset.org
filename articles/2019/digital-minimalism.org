@@ -57,6 +57,5 @@ in-depth reporting and lack of celebrity worship and single-paragraph
 Essentially, I'm extricating myself from social media and unwanted
 digital distractions, bit by bit. For a while I've desperately wanted
 more control over where I spend my limited currency in the attention
-economy[fn::If you're interested in doing the same, but don't know
-where to start, I recommend the book in the opening paragraph.].
-Reading /Digital Minimalism/ gave me the confidence to take action.
+economy. Reading /Digital Minimalism/ gave me the confidence to take
+action.
