@@ -1,8 +1,9 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-(setq org-html-footnotes-section
-      "<div id=\"footnotes\"><!--%s-->%s</div>")
+(setq sb/copyright "<p>Copyright &copy; 2011-2019 Stig Brautaset</p>")
+
+(setq org-html-footnotes-section "<div id=\"footnotes\"><!--%s-->%s</div>")
 
 (setq org-html-format-drawer-function
       (lambda (name content)
@@ -20,9 +21,6 @@
       title=\"Stig's Soapbox RSS Feed\" />
 <meta name=\"referrer\" content=\"same-origin\">
 " prefix prefix prefix))
-
-(setq sb/copyright
-      "<p>Copyright &copy; 2011-2019 Stig Brautaset</p>")
 
 (defun sb/preamble (prefix)
   (format "<nav>
