@@ -12,28 +12,27 @@
 		content)))
 
 (defun sb/html-head (prefix)
-  (format "
-       <link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/main.css\" />
-       <link rel=\"icon\" type=\"image/png\" href=\"%setc/icon.png\" />
-       <link rel=\"alternative\" type=\"application/rss+xml\"
-	     href=\"https://www.brautaset.org/index.xml\"
-	     title=\"Stig's Soapbox RSS Feed\" />
-       <meta name=\"referrer\" content=\"same-origin\">
-" prefix prefix))
+  (format "<link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/org.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/main.css\" />
+<link rel=\"icon\" type=\"image/png\" href=\"%setc/icon.png\" />
+<link rel=\"alternative\" type=\"application/rss+xml\"
+      href=\"https://www.brautaset.org/index.xml\"
+      title=\"Stig's Soapbox RSS Feed\" />
+<meta name=\"referrer\" content=\"same-origin\">
+" prefix prefix prefix))
 
 (setq sb/copyright
       "<p>Copyright &copy; 2011-2019 Stig Brautaset</p>")
 
 (defun sb/preamble (prefix)
-  (format "
-	 <nav>
-	   <ul>
-	     <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
-	     <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
-	     <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
-	   </ul>
-	 </nav>
-       " prefix prefix prefix))
+  (format "<nav>
+  <ul>
+    <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
+    <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
+    <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
+  </ul>
+</nav>
+" prefix prefix prefix))
 
 (defun sb/postamble (prefix)
   (concat
