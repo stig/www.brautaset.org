@@ -111,3 +111,9 @@ caption.t-above {
 .org-string { color: #8b2252; }
 .org-type { color: #228b22; }
 .org-variable-name { color: #a0522d; }
+
+
+.tag > span {
+    background-color: orange;
+    padding: 0 4px;
+}
