@@ -15,16 +15,22 @@
 (defun sb/preamble (prefix)
   (format "<nav>
   <ul>
-    <li><a accesskey=\"H\" href=\"%sindex.html\"> Home </a></li>
-    <li><a accesskey=\"p\" href=\"%spublications.html\"> Publications </a></li>
-    <li><a accesskey=\"A\" href=\"%sabout.html\"> About </a></li>
+    <li><a accesskey=\"H\" href=\"%sindex.html\">Home</a></li>
+    <li><a accesskey=\"p\" href=\"%spublications.html\">Publications</a></li>
+    <li><a accesskey=\"A\" href=\"%sabout.html\">About</a></li>
   </ul>
 </nav>
 " prefix prefix prefix))
 
 (defun sb/postamble (prefix)
   (concat
-   (sb/preamble prefix)
+   (format "<nav>
+  <ul>
+    <li><a accesskey=\"H\" href=\"%sindex.html\">Home</a></li>
+    <li><a accesskey=\"A\" href=\"%sabout.html\">About</a></li>
+  </ul>
+</nav>
+" prefix prefix)
    sb/copyright))
 
 (setq common-properties
