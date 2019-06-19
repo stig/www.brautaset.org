@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: The "Potter" Coding Dojo (in Clojure)
 #+date: <2017-06-22>
 #+begin_abstract

@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Learning Clojure by Solving Euler Problems
 #+date: <2014-02-10>
 #+category: Clojure

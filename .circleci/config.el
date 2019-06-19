@@ -12,17 +12,6 @@
 		(capitalize name)
 		content)))
 
-(defun sb/html-head (prefix)
-  (format "<link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/org.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"%setc/main.css\" />
-<link rel=\"icon\" type=\"image/png\" href=\"%setc/icon.png\" />
-<link rel=\"alternative\" type=\"application/rss+xml\"
-      href=\"https://www.brautaset.org/index.xml\"
-      title=\"Stig's Soapbox RSS Feed\" />
-<meta name=\"referrer\" content=\"same-origin\">
-<meta name=\"description\" content=\"Stig Brautaset's blog\">
-" prefix prefix prefix))
-
 (defun sb/preamble (prefix)
   (format "<nav>
   <ul>
@@ -69,7 +58,7 @@
 	("www-pages"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :html-head ,(sb/html-head "")
+	 :exclude "lvl-\[0-9\]\.org"
 	 :html-postamble ,(sb/postamble "")
 	 :html-preamble ,(sb/preamble "")
 	 :publishing-directory "~/public_html"
@@ -78,7 +67,6 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-	 :html-head ,(sb/html-head "../../")
 	 :html-postamble ,(sb/postamble "../../")
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html

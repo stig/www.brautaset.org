@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Blogging with Org mode
 #+subtitle: And using Emacs as a build tool
 #+date: <2017-06-03>

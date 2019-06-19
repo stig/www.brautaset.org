@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Renaming lots of files
 #+date: <2007-06-11>
 #+category: Tutorial

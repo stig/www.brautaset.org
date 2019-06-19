@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Scala, Slick & PostgreSQL Unit Tests
 #+date: <2013-06-16>
 #+category: Scala

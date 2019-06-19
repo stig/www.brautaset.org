@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: First Dim Sum
 #+date: <2001-10-28>
 

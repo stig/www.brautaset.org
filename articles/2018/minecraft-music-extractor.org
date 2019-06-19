@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Extracting Minecraft Music with Python
 #+begin_abstract
 I create a Python script to extract music files from Minecraft's assets.

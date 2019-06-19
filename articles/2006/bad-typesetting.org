@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Bad Typesetting
 #+date: <2006-11-28>
 

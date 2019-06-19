@@ -1,3 +1,4 @@
+#+setupfile: lvl-0.org
 #+title: Contact
 
 If you want to contact me about one of my software projects I ask that

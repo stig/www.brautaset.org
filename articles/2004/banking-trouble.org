@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Co-operative Banking Trouble
 #+date: <2004-03-13>
 #+begin_abstract

@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: New Headphones
 #+date: <2005-12-02>
 #+category: Reviews

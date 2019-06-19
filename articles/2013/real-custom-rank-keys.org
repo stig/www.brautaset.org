@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Real custom rank keys
 #+date: <2013-02-23>
 #+category: Hacks

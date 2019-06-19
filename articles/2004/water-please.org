@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Can I have some Water please?
 #+date: <2004-11-21>
 

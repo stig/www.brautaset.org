@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Creating a resizable grid of CALayers
 #+date: <2008-10-01>
 #+category: ObjectiveC

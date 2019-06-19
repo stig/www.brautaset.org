@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Making Team Decisions
 #+begin_abstract
 I summarise a useful technique for making team decisions I learnt

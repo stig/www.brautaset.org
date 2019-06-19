@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Avenue Que?
 #+date: <2008-06-05>
 #+category: Reviews

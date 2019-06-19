@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Good Ideas
 #+date: <2014-10-22>
 #+category: Soapbox

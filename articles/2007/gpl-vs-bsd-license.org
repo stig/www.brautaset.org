@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Goodbye GPL, hello BSD?
 #+date: <2007-09-02>
 #+category: Licence

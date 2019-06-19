@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: My hiring experience as a submarine sonar operator in the Norwegian Navy
 #+begin_abstract
 This is a transcript of a lightning talk I gave at a company "all

@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Change Terminal background colour on OS X via ssh
 #+date: <2016-09-09>
 #+begin_abstract

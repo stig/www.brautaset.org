@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Untraditional Refactoring Technique
 #+date: <2005-09-30>
 #+category: Development

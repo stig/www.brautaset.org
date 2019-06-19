@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Setting up Leafnode on OS X
 #+date: <2016-05-12>
 #+category: Tutorial

@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Spray Routing Error Handling
 #+date: <2013-08-05>
 #+category: Scala

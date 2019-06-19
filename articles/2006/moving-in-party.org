@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: Moving-in Party
 #+date: <2006-04-26>
 

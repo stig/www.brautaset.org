@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: A Can of Worms
 #+date: <2007-06-05>
 

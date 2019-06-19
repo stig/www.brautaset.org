@@ -1,3 +1,4 @@
+#+setupfile: ../../lvl-2.org
 #+title: 2015 Resolutions
 #+date: <2015-01-01>
 #+category: Resolutions

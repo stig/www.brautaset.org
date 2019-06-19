@@ -1,3 +1,4 @@
+#+setupfile: lvl-0.org
 #+title: About Stig Brautaset
 
 I'm a software engineer living near [[https://en.wikipedia.org/wiki/Berwick-upon-Tweed][Berwick-upon-Tweed]], in the
