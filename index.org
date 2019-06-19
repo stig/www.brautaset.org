@@ -1,7 +1,5 @@
 #+title: Stig's Soapbox
 #+options: H:0
-#+RSS_IMAGE_URL: https://www.brautaset.org/etc/icon.png
-#+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
 
 #+MACRO: no-rss (eval (if (org-export-derived-backend-p org-export-current-backend 'rss) "* COMMENT :noexport:" ""))
 

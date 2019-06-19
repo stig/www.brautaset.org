@@ -20,6 +20,7 @@
       href=\"https://www.brautaset.org/index.xml\"
       title=\"Stig's Soapbox RSS Feed\" />
 <meta name=\"referrer\" content=\"same-origin\">
+<meta name=\"description\" content=\"Stig Brautaset's blog\">
 " prefix prefix prefix))
 
 (defun sb/preamble (prefix)
@@ -86,10 +87,12 @@
 	("www-rss"
 	 ,@common-properties
 	 :base-directory "~/blog"
+	 :description "I'm Stig Brautaset, and this is my blog's RSS feed."
 	 :exclude ".*"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
 	 :include ("index.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
+	 :rss-image-url "https://www.brautaset.org/etc/icon.png"
 	 :rss-extension "xml")))
