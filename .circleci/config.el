@@ -12,26 +12,24 @@
 		(capitalize name)
 		content)))
 
-(defun sb/preamble (prefix)
-  (format "<nav>
+(setq org-html-preamble "
+<nav>
   <ul>
-    <li><a accesskey=\"H\" href=\"%sindex.html\">Home</a></li>
-    <li><a accesskey=\"p\" href=\"%spublications.html\">Publications</a></li>
-    <li><a accesskey=\"A\" href=\"%sabout.html\">About</a></li>
+    <li><a accesskey=\"H\" href=\"index.html\">Home</a></li>
+    <li><a accesskey=\"p\" href=\"publications.html\">Publications</a></li>
+    <li><a accesskey=\"A\" href=\"about.html\">About</a></li>
   </ul>
 </nav>
-" prefix prefix prefix))
+")
 
-(defun sb/postamble (prefix)
-  (concat
-   (format "<nav>
+(setq org-html-postamble (concat "
+<nav>
   <ul>
-    <li><a accesskey=\"H\" href=\"%sindex.html\">Home</a></li>
-    <li><a accesskey=\"A\" href=\"%sabout.html\">About</a></li>
+    <li><a accesskey=\"H\" href=\"../../index.html\">Home</a></li>
+    <li><a accesskey=\"A\" href=\"../../about.html\">About</a></li>
   </ul>
 </nav>
-" prefix prefix)
-   sb/copyright))
+" sb/copyright))
 
 (setq common-properties
       '(
@@ -65,15 +63,14 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
 	 :exclude "lvl-\[0-9\]\.org"
-	 :html-postamble ,(sb/postamble "")
-	 :html-preamble ,(sb/preamble "")
+	 :html-postamble (lambda (ignored) sb/copyright) ;; no bottom nav for pages
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-	 :html-postamble ,(sb/postamble "../../")
+	 :html-preamble nil ;; no preamble (top nav!) for articles
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
