@@ -106,8 +106,19 @@ caption.t-above {
 .org-type { color: #228b22; }
 .org-variable-name { color: #a0522d; }
 
+/* Override styles from org.css */
+.tag { background-color: white;
+       padding: 0; }
 
-.tag > span {
-    background-color: orange;
-    padding: 0 4px;
+/* Make tags moar fancy! Credit: https://gongzhitaao.org/orgcss/ */
+.tag span {
+    padding:.3em;
+    float:right;
+    margin-left:.5em;
+    border:1px solid #bbb;
+    border-radius:3px;
+    background-clip:padding-box;
+    color:#333;
+    background-color:orange;
+    line-height:1
 }
