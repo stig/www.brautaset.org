@@ -4,7 +4,7 @@
 #+category: ObjectiveC
 
 #+attr_html: :alt Dictionary Icon :align right
-[[file:../../images/2008/08/dictionary.png]]
+[[file:dictionary.png]]
 
 Objective-C, particularly after it became 2.0, is my favourite language.
 It's partly because of the language itself, but I guess mostly because
