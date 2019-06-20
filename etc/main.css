@@ -1,4 +1,6 @@
 /* This file contains *my* styles */
+h1, h2, h3, h4, h5, h6 { color: orange }
+
 #preamble,
 #postamble {font-size: smaller}
 #postamble {border-top: 1px solid grey}
