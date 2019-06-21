@@ -82,9 +82,14 @@ caption.t-above {
 }
 
 #footnotes {
-    border-top: 1px solid grey;
     color: #555;
     font-size: smaller;
+}
+
+#footnotes hr {
+    border: 0;
+    border-top: 1px solid orange;
+    width: 50%;
 }
 
 /* Drawers. Inspired by https://pavpanchekha.com/blog/org-mode-publish.html */
