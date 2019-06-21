@@ -73,7 +73,7 @@ heavily.
      #preamble {margin-top: 3px}
      #postamble {margin-bottom: 1em}
 
-     #preamble, #postamble, .abstract {
+     #preamble, #postamble, .abstract, .drawer {
 	 background-color: blanchedalmond;
 	 border-radius: 3px;
 	 border: 1px solid orange;
@@ -102,23 +102,14 @@ heavily.
 
 * Drawers
 
-   Styled similarly to pre-/postamble and abstract, but add a heading.
+   I style these like pre-/postamble and abstract, but add a heading.
    [[https://pavpanchekha.com/blog/org-mode-publish.html][Credit]].
 
   #+begin_src css
-    .drawer {
-	background: blanchedalmond;
-	border-radius: 3px;
-	border: 1px solid orange;
-	margin: 1em 0;
-	padding: 0.3em;
-    }
     .drawer h6 {
 	font-size: 100%;
-	font-weight: bold;
-	margin: 0 0 1em 0;
+	margin: 1em 0;
     }
-    .drawer *:last-child {margin-bottom: 0}
   #+end_src
 
 * Tags
