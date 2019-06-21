@@ -83,10 +83,10 @@ caption.t-above {
 /* Drawers. Inspired by https://pavpanchekha.com/blog/org-mode-publish.html */
 .drawer {
     background: blanchedalmond;
-    border-radius: 10px;
-    border: 5px solid orange;
+    border-radius: 3px;
+    border: 1px solid orange;
     margin: 1em 0;
-    padding: 20px;
+    padding: 1em;
 }
 .drawer h6 {
     font-size: 100%;
