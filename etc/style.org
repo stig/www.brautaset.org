@@ -1,10 +1,8 @@
 #+title: My Preferred CSS
 #+PROPERTY: header-args:css :tangle ~/public_html/etc/style.css :results silent :mkdirp yes
 
-CSS styles for my blog.
-
-Currently I like ~orange~ and ~blanchedalmond~, so those colours feature
-heavily.
+CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
+those colours feature heavily. Hope I'm not overdoing it!
 
 * Set the Scene (Fonts, Margins, Headings)
 
