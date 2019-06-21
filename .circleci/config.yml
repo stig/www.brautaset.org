@@ -22,6 +22,12 @@ jobs:
             - v5-org-{{ .Branch }}
             - v5-org-master
       - run:
+          name: Tangle CSS
+          command: >
+            emacs --batch
+            --eval "(require 'ob-tangle)"
+            --eval '(org-babel-tangle-file "etc/style.org")'
+      - run:
           name: Publish Blog
           command: >
             emacs --batch
