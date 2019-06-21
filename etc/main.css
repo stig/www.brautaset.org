@@ -1,4 +1,6 @@
 /* This file contains *my* styles */
+/* TODO: Incorporate org.css into this file and retain just the styles
+   I need. */
 h1, h2, h3, h4, h5, h6 { color: orange }
 
 #preamble,
