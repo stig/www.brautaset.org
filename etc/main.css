@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 { color: orange }
 #postamble p,
 #preamble p {margin: 0.5em 0}
 
+#preamble {margin-top: 3px}
 #postamble {margin-bottom: 1em}
 
 html {
