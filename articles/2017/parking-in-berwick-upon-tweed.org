@@ -1,4 +1,5 @@
 #+setupfile: ../../lvl-2.org
+#+options: h:1
 #+title: Parking in Berwick Needs a Rethink
 #+subtitle: An Open Letter to Northumberland County Council
 #+date: <2017-10-07 Sat>
