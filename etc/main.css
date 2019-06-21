@@ -116,13 +116,13 @@ caption.t-above {
 
 /* Make tags moar fancy! Credit: https://gongzhitaao.org/orgcss/ */
 .tag span {
-    padding:.3em;
-    float:right;
-    margin-left:.5em;
-    border:1px solid #bbb;
-    border-radius:3px;
     background-clip:padding-box;
-    color:#333;
     background-color:blanchedalmond;
-    line-height:1
+    border-radius:3px;
+    border:1px solid orange;
+    color:black;
+    float:right;
+    line-height:1;
+    margin-left:.5em;
+    padding:.3em;
 }
