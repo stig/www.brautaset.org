@@ -5,7 +5,6 @@ h1, h2, h3, h4, h5, h6 { color: orange }
 
 #preamble,
 #postamble {font-size: smaller}
-#postamble {border-top: 1px solid grey}
 
 #preamble nav ul,
 #postamble nav ul {
@@ -25,6 +24,8 @@ h1, h2, h3, h4, h5, h6 { color: orange }
 /* Override style set in org.css */
 #postamble p,
 #preamble p {margin: 0.5em 0}
+
+#postamble {margin-bottom: 1em}
 
 html {
     font-family:
@@ -46,10 +47,11 @@ body {
     margin: 0;
 }
 
-.abstract {
-    padding: 0 10%;
-    border-top: 1px dashed #ccc;
-    border-bottom: 1px dashed #ccc;
+#preamble, #postamble, .abstract {
+    background-color: blanchedalmond;
+    border-radius: 3px;
+    border: 1px solid orange;
+    padding: 0 0.3em;
 }
 
 /* TODO: Reduce padding around figures for small screens */
@@ -90,7 +92,7 @@ caption.t-above {
     border-radius: 3px;
     border: 1px solid orange;
     margin: 1em 0;
-    padding: 1em;
+    padding: 0.3em;
 }
 .drawer h6 {
     font-size: 100%;
