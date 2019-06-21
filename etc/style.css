@@ -1,26 +1,165 @@
-/*
- Org mode's default styles for HTML export. I've copied them here to
- avoid having a massive chunk of inline CSS in every post & page.
-*/
-.title  { text-align: center;
-          margin-bottom: .2em; }
-.subtitle { text-align: center;
-            font-size: medium;
-            font-weight: bold;
-            margin-top:0; }
-.todo   { font-family: monospace; color: red; }
-.done   { font-family: monospace; color: green; }
-.priority { font-family: monospace; color: orange; }
-.tag    { background-color: #eee; font-family: monospace;
-          padding: 2px; font-size: 80%; font-weight: normal; }
-.timestamp { color: #bebebe; }
-.timestamp-kwd { color: #5f9ea0; }
-.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-.org-center { margin-left: auto; margin-right: auto; text-align: center; }
-.underline { text-decoration: underline; }
-#postamble p, #preamble p { font-size: 90%; margin: .2em; }
-p.verse { margin-left: 3%; }
+/* Tangle style.org to update this file! */
+
+.title  {
+    text-align: center;
+    margin-bottom: .2em;
+}
+.subtitle {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    margin-top:0;
+}
+
+html {
+    font-family:
+	Optima,
+	-apple-system,
+	".SFNSText-Regular",
+	"San Francisco",
+	"Roboto",
+	"Segoe UI",
+	"Helvetica Neue",
+	"Lucida Grande",
+	sans-serif;
+    margin: 0 0.5ch;
+}
+
+body {
+    font-size: large;
+    max-width: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { color: orange }
+
+#preamble,
+#postamble {font-size: smaller}
+
+#preamble nav ul,
+#postamble nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#preamble nav ul {text-align: right}
+
+#preamble nav ul li,
+#postamble nav ul li {display: inline}
+
+/* Padding between li elements in pre- /postamble nav */
+#preamble nav ul li + li,
+#postamble nav ul li + li {padding-left: 2ch}
+
+/* Override style set in org.css */
+#postamble p,
+#preamble p {margin: 0.5em 0}
+
+#preamble {margin-top: 3px}
+#postamble {margin-bottom: 1em}
+
+#preamble, #postamble, .abstract {
+    background-color: blanchedalmond;
+    border-radius: 3px;
+    border: 1px solid orange;
+    padding: 0 0.3em;
+}
+
+table {border-collapse:collapse}
+td, th {vertical-align:top}
+th.org-right  {text-align: center}
+th.org-left   {text-align: center}
+th.org-center {text-align: center}
+td.org-right  {text-align: right}
+td.org-left   {text-align: left}
+td.org-center {text-align: center}
+
+td + td, th + th {border-left: 1px solid orange}
+thead + tbody, tbody + tbody {border-top: 1px solid orange}
+
+.drawer {
+    background: blanchedalmond;
+    border-radius: 3px;
+    border: 1px solid orange;
+    margin: 1em 0;
+    padding: 0.3em;
+}
+.drawer h6 {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+}
+.drawer *:last-child {margin-bottom: 0}
+
+.tag {
+    font-family: monospace;
+    padding: 0;
+    font-size: 80%;
+    font-weight: normal;
+}
+
+.tag span {
+    background-clip:padding-box;
+    background-color:blanchedalmond;
+    border-radius:3px;
+    border:1px solid orange;
+    color:black;
+    float:right;
+    line-height:1;
+    margin-left:.5em;
+    padding:.3em;
+}
+
+.org-builtin {color: #483d8b}
+.org-clojure-keyword {color: #008b8b}
+.org-comment {color: #b22222}
+.org-comment-delimiter {color: #b22222}
+.org-doc {color: #8b2252}
+.org-function-name {color: #0000ff}
+.org-keyword {color: #a020f0}
+.org-string {color: #8b2252}
+.org-type {color: #228b22}
+.org-variable-name {color: #a0522d}
+
+.linenr {font-size: smaller}
+.code-highlighted {background-color: #ffff00}
+
+.row {display: flex}
+.column {flex: 50%}
+
+.footpara {display: inline}
+.footdef  {margin-bottom: 1em}
+
+#footnotes {
+    color: #555;
+    font-size: smaller;
+}
+
+#footnotes hr {
+    border: 0;
+    border-top: 1px solid orange;
+    width: 50%;
+}
+
+@media (min-width: 600px) {
+    body {
+	font-size: x-large;
+	max-width: 65ch;
+	margin: auto;
+    }
+}
+
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+
+caption.t-above {
+    caption-side: top;
+    padding: 0.5ch;
+}
+caption.t-bottom {caption-side: bottom}
+
+img {max-width: 100%}
+
 pre {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #eee;
@@ -43,6 +182,7 @@ pre.src:before {
     padding: 3px;
     border: 1px solid black;
 }
+
 pre.src:hover:before { display: inline;}
 /* Languages per Org manual */
 pre.src-asymptote:before { content: 'Asymptote'; }
@@ -137,21 +277,6 @@ pre.src-nxml:before { content: 'XML'; }
      (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
 pre.src-conf:before { content: 'Configuration File'; }
 
-table { border-collapse:collapse; }
-caption.t-above { caption-side: top; }
-caption.t-bottom { caption-side: bottom; }
-td, th { vertical-align:top;  }
-th.org-right  { text-align: center;  }
-th.org-left   { text-align: center;   }
-th.org-center { text-align: center; }
-td.org-right  { text-align: right;  }
-td.org-left   { text-align: left;   }
-td.org-center { text-align: center; }
-dt { font-weight: bold; }
-.footpara { display: inline; }
-.footdef  { margin-bottom: 1em; }
-.figure { padding: 1em; }
-.figure p { text-align: center; }
 .equation-container {
     display: table;
     text-align: center;
@@ -165,20 +290,13 @@ dt { font-weight: bold; }
     text-align: right;
     vertical-align: middle;
 }
-.inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-}
-#org-div-home-and-up
-{ text-align: right; font-size: 70%; white-space: nowrap; }
-textarea { overflow-x: auto; }
-.linenr { font-size: smaller }
-.code-highlighted { background-color: #ffff00; }
-.org-info-js_info-navigation { border-style: none; }
-#org-info-js_console-label
-{ font-size: 10px; font-weight: bold; white-space: nowrap; }
-.org-info-js_search-highlight
-{ background-color: #ffff00; color: #000000; font-weight: bold; }
-.org-svg { width: 90%; }
+
+.todo   { font-family: monospace; color: red; }
+.done   { font-family: monospace; color: green; }
+.priority { font-family: monospace; color: orange; }
+.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+p.verse { margin-left: 3%; }
+dt { font-weight: bold; }
