@@ -52,6 +52,8 @@ body {
     border-bottom: 1px dashed #ccc;
 }
 
+/* TODO: Reduce padding around figures for small screens */
+
 img {
     max-width: 100%;
 }
