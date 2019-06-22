@@ -30,7 +30,7 @@ This "printer" would read files off the print que and use
 MPlayer[fn:1] to "print" them[fn:2].  Voilá!  I and other users[fn:3]
 could now "print" music through my stereo.
 
-I remember trying a different app first, but MBPlayer's edge was that
+I remember trying a different app first, but MPlayer's edge was that
 it introspected the byte stream to detect the file type, rather than
 rely on file name suffix.  This meant it was able to handle situations
 where music was /piped in/ rather than provided in a named file.  (It
