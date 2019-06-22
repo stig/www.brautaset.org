@@ -161,13 +161,6 @@ those colours feature heavily. Hope I'm not overdoing it!
     .code-highlighted {background-color: #ffff00}
   #+end_src
 
-* Support multiple columns
-
-  #+begin_src css
-    .row {display: flex}
-    .column {flex: 50%}
-  #+end_src
-
 * Footnotes in HTML
 
   These get a diminutive orange ~<hr>~ above, and have slightly lighter
@@ -186,26 +179,6 @@ those colours feature heavily. Hope I'm not overdoing it!
 	border: 0;
 	border-top: 1px solid orange;
 	width: 50%;
-    }
-  #+end_src
-
-* Allowances for big screens
-
-  I try to target small screens by default, but I make allowances for
-  larger screens.
-
-  #+begin_src css
-    @media (min-width: 600px) {
-	body {
-	    font-size: x-large;
-	    max-width: 65ch;
-	    margin: auto;
-	}
-
-	figure {
-	    margin: 1ch;
-	    padding: 1ch;
-	}
     }
   #+end_src
 
@@ -315,3 +288,34 @@ those colours feature heavily. Hope I'm not overdoing it!
     p.verse { margin-left: 3%; }
     dt { font-weight: bold; }
   #+end_src
+
+* Cater for bigger screens
+
+  I target small screens by default, but here I make allowances for
+  larger screens.
+
+  Increase the body's font size, and limit its width. Center the body
+  by automatically adjusting margins surrounding it.
+
+  Introduce small margin & padding around figures, which looks a bit
+  nicer on big screens. Particularly when used in a columnar layout,
+  which we also activate here.
+
+  #+begin_src css
+    @media (min-width: 600px) {
+	body {
+	    font-size: x-large;
+	    max-width: 65ch;
+	    margin: auto;
+	}
+
+	figure {
+	    margin: 1ch;
+	    padding: 1ch;
+	}
+
+	.row {display: flex}
+	.column {flex: 50%}
+    }
+  #+end_src
+
