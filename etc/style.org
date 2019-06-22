@@ -63,18 +63,17 @@ those colours feature heavily. Hope I'm not overdoing it!
      #preamble nav ul li + li,
      #postamble nav ul li + li {padding-left: 2ch}
 
-     /* Override style set in org.css */
      #postamble p,
-     #preamble p {margin: 0.5em 0}
+     #preamble p {margin: 0.5ch 0}
 
-     #preamble {margin-top: 3px}
-     #postamble {margin-bottom: 1em}
+     #preamble {margin-top: 0.5ch}
+     #postamble {margin-bottom: 1ch}
 
      #preamble, #postamble, .abstract, .drawer {
 	 background-color: blanchedalmond;
 	 border-radius: 3px;
 	 border: 1px solid orange;
-	 padding: 0 0.3em;
+	 padding: 0 0.5ch;
      }
    #+end_src
 
