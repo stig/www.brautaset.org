@@ -201,18 +201,21 @@ those colours feature heavily. Hope I'm not overdoing it!
 	    max-width: 65ch;
 	    margin: auto;
 	}
+
+	figure {
+	    margin: 1ch;
+	    padding: 1ch;
+	}
     }
   #+end_src
 
 * Figures, Captions, Images
 
-************** TODO: Reduce padding around figures for small screens
-
   Captions near figures and listings need a bit more spacing, IMO.
 
   #+begin_src css
-    .figure { padding: 1em; }
-    .figure p { text-align: center; }
+    figure {margin: 0}
+    figure p {text-align: center}
 
     caption.t-above {
 	caption-side: top;
