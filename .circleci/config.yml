@@ -27,7 +27,7 @@ jobs:
             emacs --batch
             --eval "(require 'ob-tangle)"
             --eval '(org-babel-tangle-file "etc/style.org")'
-# TODO: Tange to a different file above, and insert a "dropcss" step here to remove unnused styles
+# TODO: Tangle to a different file above, and insert a "dropcss" step here to remove unnused styles
       - run:
           name: Publish Blog
           command: >
