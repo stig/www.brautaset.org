@@ -44,7 +44,7 @@ details.  I cannot even remember whether it was my own invention or if
 I got the idea from someone else.  Nevertheless it was a fun
 experiment at the time.
 
-My endeavours was before the initial release Common UNIX Printing
+My endeavours was before the initial release of Common UNIX Printing
 System (CUPS) and its [[https://en.wikipedia.org/wiki/CUPS#Filter_system][filter system]] but it looks like it should be
 possible to do the same with that as I did back then.  (And possibly
 rather a lot simpler too!)
