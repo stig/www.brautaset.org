@@ -187,8 +187,10 @@ those colours feature heavily. Hope I'm not overdoing it!
   Captions near figures and listings need a bit more spacing, IMO.
 
   #+begin_src css
-    figure {margin: 0}
-    figure p {text-align: center}
+    figure {
+	margin: 0;
+	text-align: center
+    }
 
     caption.t-above {
 	caption-side: top;
