@@ -62,8 +62,9 @@
 	("www-pages"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :exclude "lvl-\[0-9\]\.org"
+	 :exclude ".*"
 	 :html-postamble (lambda (ignored) sb/copyright) ;; no bottom nav for pages
+	 :include ("index.org" "publications.org" "about.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 
