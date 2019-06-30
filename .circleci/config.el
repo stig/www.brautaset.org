@@ -88,3 +88,7 @@
 	 :publishing-function (org-rss-publish-to-rss)
 	 :rss-image-url "https://www.brautaset.org/etc/icon.png"
 	 :rss-extension "xml")))
+
+;; Turn off a harmless (but annoying) warning during publication.
+;; ("Can't guess python-indent-offset, using defaults 4")
+(setq python-indent-guess-indent-offset-verbose nil)
