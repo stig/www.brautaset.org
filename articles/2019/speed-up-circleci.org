@@ -46,8 +46,8 @@ gain more confidence shipping---it's a virtuous cycle.
   - Issuing =docker save= to dump the built image to a file took around
     30 seconds, and [[https://circleci.com/docs/2.0/configuration-reference/#persist_to_workspace][persisting it to the workspace]] added another 60.
 
-  - The =test_lp{usa,eu}= jobs then had to [[https://circleci.com/docs/2.0/configuration-reference/#attach_workspace][attach the workspace]] and load
-    this base image, adding 30 seconds.
+  - The test jobs then had to [[https://circleci.com/docs/2.0/configuration-reference/#attach_workspace][attach the workspace]] and load the base
+    image, adding 30 seconds.
 
   - Our test jobs started dependencies (Redis, Cassandra, and
     PostgreSQL) with =docker-compose=. This required us to use the
@@ -95,13 +95,13 @@ gain more confidence shipping---it's a virtuous cycle.
   building the base image[fn::We still build it, because we want to
   verify that we can. It is after all used in our deploy workflow
   still. But we no longer need to save it to disk, nor persist it to
-  the workspace in our PR workflow.]. We changed our =test_lp{eu,usa}=
-  jobs to launch auxiliary services using CircleCI's docker executor
-  native [[https://circleci.com/docs/2.0/configuration-reference/#docker--machine--macosexecutor][service container support]] (rather than =docker-compose=), and
-  run =tox= from the main container to install dependencies and run
-  tests. This avoids minutes of saving the image to---and restoring it
-  from---our workspace. It also eliminated the extra startup-cost of
-  the =machine= executor.
+  the workspace in our PR workflow.]. We changed our test jobs to
+  launch auxiliary services using CircleCI's docker executor native
+  [[https://circleci.com/docs/2.0/configuration-reference/#docker--machine--macosexecutor][service container support]] (rather than =docker-compose=), and run =tox=
+  from the main container to install dependencies and run tests. This
+  avoids minutes of saving the image to---and restoring it from---our
+  workspace. It also eliminated the extra startup-cost of the =machine=
+  executor.
 
   Installing dependencies in the primary container on CircleCI, rather
   than relying on our Dockerfile, also allowed us to use [[https://circleci.com/docs/2.0/language-python/#cache-dependencies][CircleCI's
