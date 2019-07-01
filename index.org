@@ -9,6 +9,16 @@ I'm Stig Brautaset.  I build infrastructure at [[https://www.laterpay.net][Later
 I hang with my family, read, play guitar, run, hack my Emacs config,
 and occasionally update this site.
 
+* [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/speed-up-circleci.html
+  :ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
+  :PUBDATE:  <2019-07-01 Mon 17:49>
+  :END:
+
+I outline how we reduced the time to run a Django application's CI
+test suite from about 13 minutes to under 4 minutes.
+
 * [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/digital-minimalism.html
