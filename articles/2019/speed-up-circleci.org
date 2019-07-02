@@ -26,51 +26,57 @@ gain more confidence shipping---it's a virtuous cycle.
   file:speed-up-circleci/wf-april.png
   # https://circleci.com/workflow-run/f54145e7-1cbd-415d-90c0-ce7047bdcfbe
 
-* What did the workflow /do/?
+** What did the workflow /do/?
 
-  The =build= job created a Docker image, containing only runtime
-  dependencies[fn::We don't want to add test dependencies to the base
-  image, as in our deploy jobs (not discussed here) we deploy this on
-  ElasticBeanstalk.]. It dumped this to a file with =docker save=, and
-  persisted it in the workspace. The two tests jobs[fn::We deploy this
-  application in two separate configurations with different feature
-  sets. Each profile runs all the tests, except a small
-  portion---about 10%---only applicable to the other profile.]
-  restored the base image from the workspace. They built on this to
-  create an image with all the extra modules required to run the
-  tests. They then started dependencies, and ran the tests.
+   The =build= job created a Docker image, containing only runtime
+   dependencies[fn::We don't want to add test dependencies to the base
+   image, as in our deploy jobs (not discussed here) we deploy this on
+   ElasticBeanstalk.]. It dumped this to a file with =docker save=, and
+   persisted it in the workspace. The two tests jobs[fn::We deploy this
+   application in two separate configurations with different feature
+   sets. Each profile runs all the tests, except a small
+   portion---about 10%---only applicable to the other profile.]
+   restored the base image from the workspace. They built on this to
+   create an image with all the extra modules required to run the
+   tests. They then started dependencies, and ran the tests.
 
-  Doing shared setup once, then /fan-out/, is a time-honoured way to
-  reduce resource usage. However our fan-out steps were expensive:
+   Doing shared setup once, then /fan-out/, is a time-honoured way to
+   reduce resource usage. However our fan-out steps were expensive:
 
-  - Issuing =docker save= to dump the built image to a file took around
-    30 seconds, and [[https://circleci.com/docs/2.0/configuration-reference/#persist_to_workspace][persisting it to the workspace]] added another 60.
+   - Issuing =docker save= to dump the built image to a file took around
+     30 seconds, and [[https://circleci.com/docs/2.0/configuration-reference/#persist_to_workspace][persisting it to the workspace]] added another 60.
 
-  - The test jobs then had to [[https://circleci.com/docs/2.0/configuration-reference/#attach_workspace][attach the workspace]] and load the base
-    image, adding 30 seconds.
+   - The test jobs then had to [[https://circleci.com/docs/2.0/configuration-reference/#attach_workspace][attach the workspace]] and load the base
+     image, adding 30 seconds.
 
-  - Our test jobs started dependencies (Redis, Cassandra, and
-    PostgreSQL) with =docker-compose=. This required us to use the
-    [[https://circleci.com/docs/2.0/executor-types/][machine executor]], which added about 30-60 second startup overhead
-    compared to the docker executors.
+   - Our test jobs started dependencies (Redis, Cassandra, and
+     PostgreSQL) with =docker-compose=. This required us to use the
+     [[https://circleci.com/docs/2.0/executor-types/][machine executor]], which added about 30-60 second startup overhead
+     compared to the docker executors.
 
-  - Because the base image from the =build= job contained only runtime
-    dependencies, we had to build a /test/ docker image, extending the
-    base to add dependencies for testing. Another 70-ish seconds.
+   - Because the base image from the =build= job contained only runtime
+     dependencies, we had to build a /test/ docker image, extending the
+     base to add dependencies for testing. Another 70-ish seconds.
 
-  That's adds up to a lot of time /not yet/ running tests! Roughly half
-  of the total time, in fact: when the tests finally started, they
-  completed in about 6 minutes 30 seconds.
+   That's adds up to a lot of time /not yet/ running tests! Roughly half
+   of the total time, in fact: when the tests finally started, they
+   completed in about 6 minutes 30 seconds.
 
-* Why was workspace interaction so slow?
+** Why was workspace interaction so slow?
 
-  Our base image is big! I think mainly because the Docker =python:2=
-  image we started with is /already/ big. This has a knock-on effect on
-  saving to, and restoring from, the workspace.
+   Our base image is big! I think mainly because the Docker =python:2=
+   image we started with is /already/ big. This has a knock-on effect on
+   saving to, and restoring from, the workspace.
 
-* Where CI and local testing differ
+* Analysis
 
-  Our CircleCI PR workflow mimiced how most of our engineers used
+  It is possible we could have sped up the workspace interaction steps
+  by basing our Dockerfiles on a slimmer =python:2= image. However this
+  would change what we deploy, and what engineers use locally. We
+  preferred to avoid that this time. (Although this is still on the
+  table for speeding up our /deploy/ jobs.)
+
+  Our CircleCI PR workflow mimicked how most of our engineers used
   =docker-compose= for local development: building a service image with
   all runtime dependencies, and a test image that extended that with
   tests and test dependencies. Using =docker-compose= was not required,
@@ -83,22 +89,16 @@ gain more confidence shipping---it's a virtuous cycle.
   every time you run tests, and you're more likely to cherry-pick
   relevant tests to run than run them all every time.
 
-* Playing to the strenghts of the platform
+* Remediation steps
 
-  It is possible we could have sped up the workspace interaction steps
-  by basing our Dockerfiles on a slimmer =python:2= image. However this
-  would change what we deploy, and what engineers use locally. We
-  preferred to avoid that this time. (Although this is still on the
-  table for speeding up our /deploy/ jobs.)
-
-  Instead we changed the CI test workflow to no longer depend on
-  building the base image[fn::We still build it, because we want to
-  verify that we can. It is after all used in our deploy workflow
-  still. But we no longer need to save it to disk, nor persist it to
-  the workspace in our PR workflow.]. We changed our test jobs to
-  launch auxiliary services using CircleCI's docker executor native
-  [[https://circleci.com/docs/2.0/configuration-reference/#docker--machine--macosexecutor][service container support]] (rather than =docker-compose=), and run =tox=
-  from the main container to install dependencies and run tests. This
+  We changed the CI test workflow to no longer depend on building the
+  base image[fn::We still build it, because we want to verify that we
+  can. It is after all used in our deploy workflow still. But we no
+  longer need to save it to disk, nor persist it to the workspace in
+  our PR workflow.]. We also changed our test jobs to launch
+  auxiliary services using CircleCI's docker executor native [[https://circleci.com/docs/2.0/configuration-reference/#docker--machine--macosexecutor][service
+  container support]] (rather than =docker-compose=), and run =tox= from
+  the main container to install dependencies and run tests. This
   avoids minutes of saving the image to---and restoring it from---our
   workspace. It also eliminated the extra startup-cost of the =machine=
   executor.
