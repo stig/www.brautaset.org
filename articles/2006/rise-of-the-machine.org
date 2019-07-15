@@ -29,13 +29,13 @@ Last Saturday, after eliminating variables and assignments in the
 hotpath and using macroes instead, I managed to get the time for the
 benchmark program down to just over two hours. A whole lot better, but
 still /way/ slower than others' VMs. From basic instrumentation I knew
-that the benchmark program does a lot of memory allocation and
+that the benchmark program did a lot of memory allocation and
 deallocation, and I surmised that this was the cause of my performance
-problems. During the course of the weekend I tried to
-speed my VM up further by caching previously allocated arrays in different
-ways. Whatever I tried, however, simply made it slower. It was a
-humbling experience that reminded me that I should have faith in the
-library implementors; they're most likely smarter than me.
+problems. During the course of the weekend I tried to speed my VM up
+further by caching previously allocated arrays in different ways.
+Whatever I tried, however, simply made it slower. It was a humbling
+experience that reminded me that I should have faith in the library
+implementors; they're most likely smarter than me.
 
 The performance of my VM continued to bug me all Monday morning. My VM
 has an array of pointers to unsigned integer arrays, which the
@@ -53,12 +53,12 @@ slots in the parent array the memory usage grew steeply to about 140
 MB, up from around 3 MB throughout the entire run previously.
 
 The morale is clear: /Find/ your bottlenecks, then eliminate them; don't
-try to eliminate imagined bottlenecks. (I already knew this, but it
-doesn't hurt to be reminded once in a while.) I originally assumed
-that memory allocation was the source of my performance issues. I was
-partly right, but it was not due to =malloc()= or =free()= being slow, as
-I had assumed. It was down to my stupid algorithm for finding
-somewhere to stash the newly allocated array.
+try to eliminate imagined bottlenecks. I already knew this, but it
+doesn't hurt (much) to be reminded. I originally assumed that memory
+allocation was the source of my performance issues. I was partly
+right, but it was not due to =malloc()= or =free()= being slow, as I had
+assumed. It was down to my stupid algorithm for finding somewhere to
+stash the newly allocated array.
 
 *Update:* By making use of C99's flexible array member and introducing
 a simple free list I've now managed to get the memory usage
