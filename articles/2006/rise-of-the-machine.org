@@ -19,10 +19,10 @@ to get a working machine. (Sorry boss, it was too addictive---I blame
 Norman.) I did most of the work alone, but I needed Norman's help to
 clarify parts of the spec and in some debugging.
 
-I was amazed when it turned out this "huge scary thing", which I'd
-imagined a VM to be, clocked in at less than 300 lines of C. It wasn't
-fast though. A self-test and benchmarking program for the UM was
-available from the [[http://icfpcontest.org/][ICFP]] website. Norman's UM ran this benchmark in
+Imagine my amazement when it turned out this "huge scary thing", which
+I'd imagined a VM to be, clocked in at less than 300 lines of C. It
+wasn't fast though. A self-test and benchmarking program for the UM
+was available from the [[http://icfpcontest.org/][ICFP]] website. Norman's UM ran this benchmark in
 minutes but mine, distressingly, took over 10 hours.
 
 Last Saturday, after eliminating variables and assignments in the
