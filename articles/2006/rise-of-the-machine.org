@@ -31,7 +31,7 @@ hotpath and using macroes instead, I managed to get the time for the
 benchmark program down to just over two hours. A whole lot better, but
 still /way/ slower than others' VMs. From basic instrumentation I knew
 that the benchmark program does a lot of memory allocation and
-deallocation, and I surmised that this the cause of my performance
+deallocation, and I surmised that this was the cause of my performance
 problems. During the course of the weekend I tried various things to
 speed my VM up further by caching previously allocated arrays in various
 ways. Whatever I tried, however, simply made it slower. It was a
