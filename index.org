@@ -813,7 +813,7 @@ it possible.
 * [[file:articles/2001/dim-sum.org][First Dim Sum]]
   :PROPERTIES:
   :ID:       C9E5D3CD-5650-4974-B441-646C9A8A9DB5
-  :PUBDATE:  <2004-11-21>
+  :PUBDATE:  <2001-10-28>
   :RSS_PERMALINK: articles/2001/dim-sum.html
   :END:
 
