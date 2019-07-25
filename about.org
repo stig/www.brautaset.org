@@ -1,13 +1,11 @@
 #+setupfile: lvl-0.org
 #+title: About Stig Brautaset
 
-I'm a software engineer working remotely as head of infrastructure at
-[[https://www.laterpay.net][LaterPay]]. I've previously worked in London and Hong Kong. Employers
-have paid me to write HTML, PHP, Perl, C, JavaScript, Java,
-Objective-C, Scala, Python, Bash and English.
-
-Outside work I hang with my family, read, play guitar, run, hack my
-Emacs config, and occasionally update this site.
+I'm an experienced software engineer, currently working remotely from
+the North East of England as head of infrastructure at [[https://www.laterpay.net][LaterPay]]. I've
+previously worked in London and Hong Kong. Employers have paid me to
+write HTML, PHP, Perl, C, JavaScript, Java, Objective-C, Scala,
+Python, Bash and English.
 
 I'm originally from Hovdebygda, in [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta]], on the west coast of Norway.
 I studied electronics and endured compulsory military service as a
