@@ -1,0 +1,101 @@
+#+title: Stig's Soapbox RSS Feed
+#+description: My most recent articles
+
+* [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/speed-up-circleci.html
+  :ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
+  :PUBDATE:  <2019-07-01 Mon 17:49>
+  :END:
+
+I outline how we reduced the time to run a Django application's CI
+test suite from about 13 minutes to under 4 minutes.
+
+* [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/digital-minimalism.html
+  :ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
+  :PUBDATE:  <2019-06-15 Sat 14:07>
+  :END:
+
+I introduce Cal Newport's book, and how it's helping me take control
+of where I spend my limited currency in today's attention economy.
+
+* [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/learning-guitar-update.html
+  :ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
+  :PUBDATE:  <2019-05-10 Fri 08:53>
+  :END:
+
+I try to keep myself honest--and on target!--by posting an update on
+my guitar learning journey.
+
+* [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
+  :ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
+  :PUBDATE:  <2019-03-21 Thu 14:39>
+  :END:
+
+I review the noise-cancelling headphones I've been using for about 3 years.
+* [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/musical-goals-january-update.html
+  :ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
+  :PUBDATE:  <2019-02-03 Sun 22:38>
+  :END:
+
+The first of (hopefully) monthly posts with updates on my musical
+goals for 2019. I cover achievements in January, and new goals for
+February.
+* [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
+  :ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
+  :PUBDATE:  <2019-01-05 Sat 16:00>
+  :END:
+
+I list my musical goals for 2019, and touch briefly on achievements in 2018.
+
+* [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/minecraft-music-extractor.html
+  :ID:       C950F98A-A473-4778-B7E0-4FF62825E751
+  :PUBDATE:  <2018-11-25 Sun 21:23>
+  :END:
+
+I create a Python script to extract music files from Minecraft's assets.
+
+* [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/submarine-sonar-hiring.html
+  :ID:       C6E26433-127A-4EDB-B9D0-DF00E00B8D3C
+  :PUBDATE:  <2018-11-25 Sun 19:43>
+  :END:
+
+This is a transcript of a lightning talk I gave at a company "all
+hands" get-together. I tell the story of my "hiring experience" as a
+sonar operator on a submarine in the Norwegian Navy. To tie it into
+work, I included a little hiring-related lesson at the end.
+
+* [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/creating-index-entry-from-post.html
+  :ID:       C410CC58-B1EB-48EE-9440-0CBC9E51F3DF
+  :PUBDATE:  <2018-08-30 Thu 21:37>
+  :END:
+
+I wanted it to be easy to create a new entry on the index page. I call
+on Emacs Lisp to help.
+
+* [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
+  :PROPERTIES:
+  :RSS_PERMALINK: articles/2018/making-team-decisions.html
+  :ID:       FC57FD1D-C212-457D-A252-C806A3D9267D
+  :PUBDATE:  <2018-08-21 Tue 18:26>
+  :END:
+
+I summarise a useful technique for making team decisions I learnt
+about at The London Lead Developer conference a couple months ago.
+

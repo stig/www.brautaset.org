@@ -54,7 +54,7 @@
 	("www-static"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :base-extension "css\\|jpg\\|png\\|pdf\\|html"
+	 :base-extension "css\\|jpg\\|png\\|pdf\\|html\\|xml"
 	 :recursive t
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-publish-attachment)
@@ -79,11 +79,10 @@
 	("www-rss"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :description "I'm Stig Brautaset, and this is my blog's RSS feed."
 	 :exclude ".*"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
-	 :include ("index.org")
+	 :include ("feed.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
 	 :rss-image-url "https://www.brautaset.org/etc/icon.png"
