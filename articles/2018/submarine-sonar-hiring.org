@@ -8,6 +8,7 @@ work, I included a little hiring-related lesson at the end.
 #+end_abstract
 #+category: Talks
 #+category: Hiring
+#+category: Popular
 
 As some of you know I spent a year on a submarine. This is the story
 about how that came about.

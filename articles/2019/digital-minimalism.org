@@ -6,6 +6,7 @@ of where I spend my limited currency in today's attention economy.
 #+end_abstract
 #+category: Lifestyle
 #+category: Reviews
+#+category: Popular
 
 My wife borrowed [[http://www.calnewport.com/books/digital-minimalism/][Digital Minimalism]] at our local library, and we both
 read it. Living a life supported---but not /lead/---by technology
