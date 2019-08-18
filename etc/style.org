@@ -80,6 +80,8 @@ those colours feature heavily. Hope I'm not overdoing it!
 	 border: 1px solid orange;
 	 padding: 0 0.5ch;
      }
+
+     .abstract p { margin: 0.3em 0 }
    #+end_src
 
 * Tables
