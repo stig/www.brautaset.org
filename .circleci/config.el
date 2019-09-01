@@ -54,7 +54,7 @@
 	("www-static"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :base-extension "css\\|jpg\\|png\\|pdf\\|html\\|xml"
+	 :base-extension "css\\|jpg\\|jpeg\\|png\\|pdf\\|html\\|xml"
 	 :recursive t
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-publish-attachment)
