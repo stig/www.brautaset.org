@@ -2,9 +2,8 @@
 #+title: Stig's Soapbox
 #+options: H:1
 
-Hi! I'm Stig, and I build infrastructure at [[https://www.laterpay.net][LaterPay]].  Outside work I
-hang with my family, read, play guitar, run, hack my Emacs config, and
-occasionally update this site.
+Hi! I'm Stig.  I like to hang with my family, read, play guitar, run,
+hack my Emacs config, and occasionally update this site.
 
 * Recent blog posts ([[file:feed.xml][RSS]])
 
