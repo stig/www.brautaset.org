@@ -1,7 +1,7 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-(setq sb/copyright "<p>Copyright &copy; 2011-2019 Stig Brautaset</p>")
+(setq sb/copyright "<p>Copyright &copy; 2001-2020 Stig Brautaset</p>")
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr><!--%s-->%s</div>")
 
