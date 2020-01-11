@@ -75,7 +75,7 @@ GitHub.]. Finally we configure this bucket to ship logs to the
   :END:
 
 Finally we set up a CloudFront distribution. This is identical to the
-setup in the [[file:ssl-enabled-s3-redirects-with-cloudformation.org::*CloudFront%20Distribution][previous post]] except our Alias now has a =www= prefix.
+setup in the [[file:ssl-enabled-s3-redirects-with-cloudformation.org::#cloudfront%0A][previous post]] except our Alias now has a =www= prefix.
 Nevertheless, this is a short post so I'll include it here for
 completeness. Note that this also uses the ~SSL~ certificate we set up
 in the previous post, since we created that with a
