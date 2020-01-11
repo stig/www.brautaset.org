@@ -32,8 +32,7 @@
 " sb/copyright))
 
 (setq common-properties
-      '(
-	:author "Stig Brautaset"
+      '(:author "Stig Brautaset"
 	:email "stig@brautaset.org"
 
 	:section-numbers nil
