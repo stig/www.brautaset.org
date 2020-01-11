@@ -4,9 +4,41 @@
 CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
 those colours feature heavily. Hope I'm not overdoing it!
 
+* Reusable snippets
+:PROPERTIES:
+:header-args:css: :tangle no
+:END:
+
+This section is contains re-usable snippets used by other templates,
+to make it easier to be consistent across all the styles.
+
+** Colours
+
+#+name: primary-colour
+#+begin_src css
+orange
+#+end_src
+
+#+name: accent-colour
+#+begin_src css
+blanchedalmond
+#+end_src
+
+** Orange Borders Everywhere
+
+This section is not exported
+
+#+name: background-box
+#+begin_src css :noweb yes
+  background-color: <<accent-colour>>;
+  border-top: 1px solid <<primary-colour>>;
+  border-bottom: 1px solid <<primary-colour>>;
+  border-radius: 1px;
+#+end_src
+
 * Set the Scene (Fonts, Margins, Headings)
 
-  #+begin_src css
+  #+begin_src css :noweb yes
     /* Tangle style.org to update this file! */
 
     .title  {
@@ -42,21 +74,21 @@ those colours feature heavily. Hope I'm not overdoing it!
     }
 
     h1, h2, h3, h4, h5, h6 {
-	color: orange;
+	color: <<primary-colour>>;
 	font-size: 1em;
     }
   #+end_src
 
 ** Preamble, Postamble and Abstract are parts of every page and post
 
-   #+begin_src css
-     #preamble,
+   #+begin_src css :noweb yes
+   #preamble,
      #postamble {font-size: smaller}
 
      #preamble nav ul,
      #postamble nav ul {
-	 padding: 0;
-	 list-style-type: none;
+         padding: 0;
+         list-style-type: none;
      }
 
      #preamble nav ul {text-align: right}
@@ -75,10 +107,8 @@ those colours feature heavily. Hope I'm not overdoing it!
      #postamble {margin-bottom: 1ch}
 
      #preamble, #postamble, .abstract, .drawer {
-	 background-color: blanchedalmond;
-	 border-radius: 3px;
-	 border: 1px solid orange;
-	 padding: 0 0.5ch;
+         <<background-box>>
+         padding: 0 0.5ch;
      }
 
      .abstract p { margin: 0.3em 0 }
@@ -120,24 +150,22 @@ those colours feature heavily. Hope I'm not overdoing it!
   My index page has tags to classify posts. This makes them look
   snazzy, I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 
-  #+begin_src css
+  #+begin_src css :noweb yes
     .tag {
-	font-family: monospace;
-	padding: 0;
-	font-size: 80%;
-	font-weight: normal;
+        font-family: monospace;
+        padding: 0;
+        font-size: 80%;
+        font-weight: normal;
     }
 
     .tag span {
-	background-clip:padding-box;
-	background-color:blanchedalmond;
-	border-radius:3px;
-	border:1px solid orange;
-	color:black;
-	float:right;
-	line-height:1;
-	margin-left:.5em;
-	padding:.3em;
+        background-clip:padding-box;
+        <<background-box>>
+        color:black;
+        float:right;
+        line-height:1;
+        margin-left:.5em;
+        padding:.3em;
     }
   #+end_src
 
@@ -173,19 +201,19 @@ those colours feature heavily. Hope I'm not overdoing it!
   These get a diminutive orange ~<hr>~ above, and have slightly lighter
   font colour to make them stand out less.
 
-  #+begin_src css
+  #+begin_src css :noweb yes
     .footpara {display: inline}
     .footdef  {margin-bottom: 1em}
 
     #footnotes {
-	color: #555;
-	font-size: smaller;
+        color: #555;
+        font-size: smaller;
     }
 
     #footnotes hr {
-	border: 0;
-	border-top: 1px solid orange;
-	width: 50%;
+        border: 0;
+        <<background-box>>
+        width: 50%;
     }
   #+end_src
 
