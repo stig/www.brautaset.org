@@ -38,50 +38,50 @@ This section is not exported
 
 * Set the Scene (Fonts, Margins, Headings)
 
-  #+begin_src css :noweb yes
-    /* Tangle style.org to update this file! */
+#+begin_src css :noweb yes
+  /* Tangle style.org to update this file! */
 
-    .title  {
-	text-align: center;
-	margin-bottom: .2em;
-	font-size: 1.2em;
-    }
-    .subtitle {
-	text-align: center;
-	margin-top:0;
-	color: orangered;
-	font-size: 1.1em;
-    }
+  .title  {
+      text-align: center;
+      margin-bottom: .2em;
+      font-size: 1.2em;
+  }
+  .subtitle {
+      text-align: center;
+      margin-top:0;
+      color: orangered;
+      font-size: 1.1em;
+  }
 
-    html {
-	font-family:
-	    Optima,
-	    -apple-system,
-	    ".SFNSText-Regular",
-	    "San Francisco",
-	    "Roboto",
-	    "Segoe UI",
-	    "Helvetica Neue",
-	    "Lucida Grande",
-	    sans-serif;
-	margin: 0 0.5ch;
-    }
+  html {
+      font-family:
+          Optima,
+          -apple-system,
+          ".SFNSText-Regular",
+          "San Francisco",
+          "Roboto",
+          "Segoe UI",
+          "Helvetica Neue",
+          "Lucida Grande",
+          sans-serif;
+      margin: 0 0.5ch;
+  }
 
-    body {
-	font-size: large;
-	max-width: 100%;
-	margin: 0;
-    }
+  body {
+      font-size: large;
+      max-width: 100%;
+      margin: 0;
+  }
 
-    h1, h2, h3, h4, h5, h6 {
-	color: <<primary-colour>>;
-	font-size: 1em;
-    }
-  #+end_src
+  h1, h2, h3, h4, h5, h6 {
+      color: <<primary-colour>>;
+      font-size: 1em;
+  }
+#+end_src
 
 ** Preamble, Postamble and Abstract are parts of every page and post
 
-   #+begin_src css :noweb yes
+#+begin_src css :noweb yes
    #preamble,
      #postamble {font-size: smaller}
 
@@ -112,133 +112,133 @@ This section is not exported
      }
 
      .abstract p { margin: 0.3em 0 }
-   #+end_src
+#+end_src
 
 * Tables
 
-  Most of this is straight out of Org's default CSS, but I like me
-  some borders!
+Most of this is straight out of Org's default CSS, but I like me some
+borders!
 
-  #+begin_src css
-    table {border-collapse:collapse}
-    td, th {vertical-align:top}
-    th.org-right  {text-align: center}
-    th.org-left   {text-align: center}
-    th.org-center {text-align: center}
-    td.org-right  {text-align: right}
-    td.org-left   {text-align: left}
-    td.org-center {text-align: center}
+#+begin_src css
+  table {border-collapse:collapse}
+  td, th {vertical-align:top}
+  th.org-right  {text-align: center}
+  th.org-left   {text-align: center}
+  th.org-center {text-align: center}
+  td.org-right  {text-align: right}
+  td.org-left   {text-align: left}
+  td.org-center {text-align: center}
 
-    td + td, th + th {border-left: 1px solid orange}
-    thead + tbody, tbody + tbody {border-top: 1px solid orange}
-  #+end_src
+  td + td, th + th {border-left: 1px solid orange}
+  thead + tbody, tbody + tbody {border-top: 1px solid orange}
+#+end_src
 
 * Drawers
 
-   I style these like pre-/postamble and abstract, but add a heading.
-   [[https://pavpanchekha.com/blog/org-mode-publish.html][Credit]].
+I style these like pre-/postamble and abstract, but add a heading.
+[[https://pavpanchekha.com/blog/org-mode-publish.html][Credit]].
 
-  #+begin_src css
-    .drawer h6 {
-	font-size: 100%;
-	margin: 1em 0;
-    }
-  #+end_src
+#+begin_src css
+  .drawer h6 {
+      font-size: 100%;
+      margin: 1em 0;
+  }
+#+end_src
 
 * Tags
 
-  My index page has tags to classify posts. This makes them look
-  snazzy, I think. [[https://gongzhitaao.org/orgcss/][Credit]].
+My index page has tags to classify posts. This makes them look snazzy,
+I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 
-  #+begin_src css :noweb yes
-    .tag {
-        font-family: monospace;
-        padding: 0;
-        font-size: 80%;
-        font-weight: normal;
-    }
+#+begin_src css :noweb yes
+  .tag {
+      font-family: monospace;
+      padding: 0;
+      font-size: 80%;
+      font-weight: normal;
+  }
 
-    .tag span {
-        background-clip:padding-box;
-        <<background-box>>
-        color:black;
-        float:right;
-        line-height:1;
-        margin-left:.5em;
-        padding:.3em;
-    }
-  #+end_src
+  .tag span {
+      background-clip:padding-box;
+      <<background-box>>
+      color:black;
+      float:right;
+      line-height:1;
+      margin-left:.5em;
+      padding:.3em;
+  }
+#+end_src
 
 * Styling source code
 
-  By setting ~(setq org-html-htmlize-output-type "css")~ Org will
-  publish source code markup with semantic CSS selectors rather than
-  inline CSS. This allows us to get nice-looking output even when
-  Emacs is publishing in ~--batch~ mode.
+By setting ~(setq org-html-htmlize-output-type "css")~ Org will publish
+source code markup with semantic CSS selectors rather than inline CSS.
+This allows us to get nice-looking output even when Emacs is
+publishing in ~--batch~ mode.
 
-  #+begin_src css
-    .org-builtin {color: #483d8b}
-    .org-clojure-keyword {color: #008b8b}
-    .org-comment {color: #b22222}
-    .org-comment-delimiter {color: #b22222}
-    .org-doc {color: #8b2252}
-    .org-function-name {color: #0000ff}
-    .org-keyword {color: #a020f0}
-    .org-string {color: #8b2252}
-    .org-type {color: #228b22}
-    .org-variable-name {color: #a0522d}
-  #+end_src
+#+begin_src css
+  .org-builtin {color: #483d8b}
+  .org-clojure-keyword {color: #008b8b}
+  .org-comment {color: #b22222}
+  .org-comment-delimiter {color: #b22222}
+  .org-doc {color: #8b2252}
+  .org-function-name {color: #0000ff}
+  .org-keyword {color: #a020f0}
+  .org-string {color: #8b2252}
+  .org-type {color: #228b22}
+  .org-variable-name {color: #a0522d}
+#+end_src
 
-  When asking Org to number source code examples it uses these classes.
+When asking Org to number source code examples it uses these classes.
 
-  #+begin_src css
-    .linenr {font-size: smaller}
-    .code-highlighted {background-color: #ffff00}
-  #+end_src
+#+begin_src css
+  .linenr {font-size: smaller}
+  .code-highlighted {background-color: #ffff00}
+#+end_src
 
 * Footnotes in HTML
 
-  These get a diminutive orange ~<hr>~ above, and have slightly lighter
-  font colour to make them stand out less.
+These get a diminutive orange ~<hr>~ above, and have slightly lighter
+font colour to make them stand out less.
 
-  #+begin_src css :noweb yes
-    .footpara {display: inline}
-    .footdef  {margin-bottom: 1em}
+#+begin_src css :noweb yes
+  .footpara {display: inline}
+  .footdef  {margin-bottom: 1em}
 
-    #footnotes {
-        color: #555;
-        font-size: smaller;
-    }
+  #footnotes {
+      color: #555;
+      font-size: smaller;
+  }
 
-    #footnotes hr {
-        border: 0;
-        <<background-box>>
-        width: 50%;
-    }
-  #+end_src
+  #footnotes hr {
+      border: 0;
+      <<background-box>>
+      width: 50%;
+  }
+#+end_src
 
 * Figures, Captions, Images
 
-  Captions near figures and listings need a bit more spacing, IMO.
+Captions near figures and listings need a bit more spacing, IMO.
 
-  #+begin_src css
-    figure {
-	margin: 0;
-	text-align: center
-    }
+#+begin_src css
+  figure {
+      margin: 0;
+      text-align: center
+  }
 
-    caption.t-above {
-	caption-side: top;
-	padding: 0.5ch;
-    }
-    caption.t-bottom {caption-side: bottom}
+  caption.t-above {
+      caption-side: top;
+      padding: 0.5ch;
+  }
+  caption.t-bottom {caption-side: bottom}
 
-    img {max-width: 100%}
-  #+end_src
+  img {max-width: 100%}
+#+end_src
 
 * Pre
 
-  #+begin_src css :noweb yes
+#+begin_src css :noweb yes
   pre {
         border: 1px solid <<primary-colour>>;
         font-family: monospace;
@@ -289,70 +289,70 @@ This section is not exported
     pre.src-sh:before { content: 'shell'; }
     pre.src-shell:before { content: 'Shell Script'; }
     pre.src-sql:before { content: 'SQL'; }
-  #+end_src
+#+end_src
 
 * Equations
 
-  #+begin_src css
-    .equation-container {
-	display: table;
-	text-align: center;
-	width: 100%;
-    }
-    .equation {
-	vertical-align: middle;
-    }
-    .equation-label {
-	display: table-cell;
-	text-align: right;
-	vertical-align: middle;
-    }
-  #+end_src
+#+begin_src css
+  .equation-container {
+      display: table;
+      text-align: center;
+      width: 100%;
+  }
+  .equation {
+      vertical-align: middle;
+  }
+  .equation-label {
+      display: table-cell;
+      text-align: right;
+      vertical-align: middle;
+  }
+#+end_src
 
 * Misc default styles from Org's default set
 
-  #+begin_src css
-    .todo   { font-family: monospace; color: red; }
-    .done   { font-family: monospace; color: green; }
-    .priority { font-family: monospace; color: orange; }
-    .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-    .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-    .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-    .underline { text-decoration: underline; }
-    p.verse { margin-left: 3%; }
-    dt { font-weight: bold; }
-  #+end_src
+#+begin_src css
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  p.verse { margin-left: 3%; }
+  dt { font-weight: bold; }
+#+end_src
 
 * Cater for bigger screens
 
-  I target small screens by default, but here I make allowances for
-  larger screens.
+I target small screens by default, but here I make allowances for
+larger screens.
 
-  Increase the body's font size, and limit its width. Center the body
-  by automatically adjusting margins surrounding it.
+Increase the body's font size, and limit its width. Center the body by
+automatically adjusting margins surrounding it.
 
-  Introduce small margin & padding around figures, which looks a bit
-  nicer on big screens. Particularly when used in a columnar layout,
-  which we also activate here.
+Introduce small margin & padding around figures, which looks a bit
+nicer on big screens. Particularly when used in a columnar layout,
+which we also activate here.
 
-  #+begin_src css
-    @media (min-width: 600px) {
-	body {
-	    font-size: x-large;
-	    max-width: 65ch;
-	    margin: auto;
-	}
+#+begin_src css
+  @media (min-width: 600px) {
+      body {
+          font-size: x-large;
+          max-width: 65ch;
+          margin: auto;
+      }
 
-	h1, h2, h3 { font-size: 1.4em }
+      h1, h2, h3 { font-size: 1.4em }
 
-	.title { font-size: 2.2em }
+      .title { font-size: 2.2em }
 
-	figure {
-	    margin: 1ch;
-	    padding: 1ch;
-	}
+      figure {
+          margin: 1ch;
+          padding: 1ch;
+      }
 
-	.row {display: flex}
-	.column {flex: 50%}
-    }
-  #+end_src
+      .row {display: flex}
+      .column {flex: 50%}
+  }
+#+end_src
