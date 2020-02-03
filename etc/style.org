@@ -47,7 +47,7 @@ This section is not exported
   .subtitle {
       text-align: center;
       margin-top:0;
-      color: orangered;
+      color: var(--main);
       font-size: 1.1em;
   }
 
