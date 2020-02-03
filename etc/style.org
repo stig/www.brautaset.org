@@ -160,7 +160,6 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
   .tag span {
       background-clip:padding-box;
       <<background-box>>
-      color:black;
       float:right;
       line-height:1;
       margin-left:.5em;
