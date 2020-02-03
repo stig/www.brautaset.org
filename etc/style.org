@@ -10,7 +10,10 @@ those colours feature heavily. Hope I'm not overdoing it!
   :root {
       --accent: blanchedalmond;
       --bg: white;
+      --footnotes: gray;
+      --highlight: yellow;
       --main: orange;
+      --text: #333;
   }
 #+end_src
 
@@ -191,7 +194,7 @@ When asking Org to number source code examples it uses these classes.
 
 #+begin_src css
   .linenr {font-size: smaller}
-  .code-highlighted {background-color: #ffff00}
+  .code-highlighted {background-color: var(--highlight)}
 #+end_src
 
 * Footnotes in HTML
@@ -204,7 +207,7 @@ font colour to make them stand out less.
   .footdef  {margin-bottom: 1em}
 
   #footnotes {
-      color: #555;
+      color: var(--footnotes);
       font-size: smaller;
   }
 
