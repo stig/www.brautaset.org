@@ -1,6 +1,15 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent articles
 
+* Driving Technical Change (Review)                                 :Reviews:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2020/driving-technical-change.html
+:ID:       87FC6FA9-B6ED-421B-B190-8F83B9DF3C68
+:PUBDATE:  <2020-02-03 Mon 10:09>
+:END:
+
+I review the book /Driving Technical Change/ by Terrence Ryan.
+
 * [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/speed-up-circleci.html
