@@ -4,6 +4,10 @@
 
 These are all my articles in reverse chronological order.
 
+* [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]] :Reviews:
+
+I review the book /Driving Technical Change/ by Terrence Ryan.
+
 * [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
 
 I outline how we reduced the time to run a Django application's CI
