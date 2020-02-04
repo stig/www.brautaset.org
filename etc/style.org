@@ -373,3 +373,19 @@ which we also activate here.
       .column {flex: 50%}
   }
 #+end_src
+
+* Change colours for Dark mode
+
+#+begin_src css
+  /* Define colours for dark mode */
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --accent: darkorange;
+          --bg: #333;
+          --footnotes: gray;
+          --highlight: gold;
+          --main: orangered;
+          --text: whitesmoke;
+      }
+  }
+#+end_src
