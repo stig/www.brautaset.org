@@ -25,7 +25,7 @@ benefitted from my work, please consider a small regular contribution.
 
 What kind of work do you do, I'll pretend to hear you ask?
 
-Well, I started my best-known project [[https://github.com/stig/json-framework][SBJson]] (aka JSON-framework) in
+Well, I started my best-known project [[https://github.com/SBJson/SBJson][SBJson]] (aka JSON-framework) in
 September 2007.  It is a JSON parser and generator written in
 Objective-C, for iOS and macOS applications.  Back when I started this
 project Apple didn't provide JSON parsing, so a lot of early iOS
