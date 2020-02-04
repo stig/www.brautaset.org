@@ -11,7 +11,7 @@ the University of Westminster.  I graduated in 2003.
 
 * About SBJson
 
-  I started writing the popular [[https://github.com/stig/json-framework/][SBJson]] JSON parser/generator for
+  I started writing the popular [[https://github.com/SBJson/SBJson/][SBJson]] JSON parser/generator for
   Objective-C in 2007, and have maintained it ever since. It's now in
   its 5th major version and have over 3800 stars on GitHub.
 
