@@ -4,6 +4,19 @@
 CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
 those colours feature heavily. Hope I'm not overdoing it!
 
+* Define CSS variables for Colours
+
+#+begin_src css
+  :root {
+      --accent: blanchedalmond;
+      --bg: white;
+      --footnotes: gray;
+      --highlight: yellow;
+      --main: orange;
+      --text: #333;
+  }
+#+end_src
+
 * Reusable snippets
 :PROPERTIES:
 :header-args:css: :tangle no
@@ -12,27 +25,15 @@ those colours feature heavily. Hope I'm not overdoing it!
 This section is contains re-usable snippets used by other templates,
 to make it easier to be consistent across all the styles.
 
-** Colours
-
-#+name: primary-colour
-#+begin_src css
-orange
-#+end_src
-
-#+name: accent-colour
-#+begin_src css
-blanchedalmond
-#+end_src
-
 ** Orange Borders Everywhere
 
 This section is not exported
 
 #+name: background-box
 #+begin_src css :noweb yes
-  background-color: <<accent-colour>>;
-  border-top: 1px solid <<primary-colour>>;
-  border-bottom: 1px solid <<primary-colour>>;
+  background-color: var(--accent);
+  border-top: 1px solid var(--main);
+  border-bottom: 1px solid var(--main);
   border-radius: 1px;
 #+end_src
 
@@ -49,7 +50,7 @@ This section is not exported
   .subtitle {
       text-align: center;
       margin-top:0;
-      color: orangered;
+      color: var(--main);
       font-size: 1.1em;
   }
 
@@ -65,6 +66,8 @@ This section is not exported
           "Lucida Grande",
           sans-serif;
       margin: 0 0.5ch;
+      background-color: var(--bg);
+      color: var(--text);
   }
 
   body {
@@ -74,8 +77,23 @@ This section is not exported
   }
 
   h1, h2, h3, h4, h5, h6 {
-      color: <<primary-colour>>;
+      color: var(--main);
       font-size: 1em;
+  }
+
+  a:link {
+      color: var(--main);
+  }
+  a:visited {
+      color: var(--text);
+      background-color: transparent;
+
+  }
+  a:hover {
+      background-color: var(--highlight);
+  }
+  a:active {
+      color: var(--highlight);
   }
 #+end_src
 
@@ -129,8 +147,8 @@ borders!
   td.org-left   {text-align: left}
   td.org-center {text-align: center}
 
-  td + td, th + th {border-left: 1px solid orange}
-  thead + tbody, tbody + tbody {border-top: 1px solid orange}
+  td + td, th + th {border-left: 1px solid var(--main)}
+  thead + tbody, tbody + tbody {border-top: 1px solid var(--main)}
 #+end_src
 
 * Drawers
@@ -161,7 +179,6 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
   .tag span {
       background-clip:padding-box;
       <<background-box>>
-      color:black;
       float:right;
       line-height:1;
       margin-left:.5em;
@@ -193,7 +210,7 @@ When asking Org to number source code examples it uses these classes.
 
 #+begin_src css
   .linenr {font-size: smaller}
-  .code-highlighted {background-color: #ffff00}
+  .code-highlighted {background-color: var(--highlight)}
 #+end_src
 
 * Footnotes in HTML
@@ -206,7 +223,7 @@ font colour to make them stand out less.
   .footdef  {margin-bottom: 1em}
 
   #footnotes {
-      color: #555;
+      color: var(--footnotes);
       font-size: smaller;
   }
 
@@ -240,7 +257,7 @@ Captions near figures and listings need a bit more spacing, IMO.
 
 #+begin_src css :noweb yes
   pre {
-        border: 1px solid <<primary-colour>>;
+        border: 1px solid var(--main);
         font-family: monospace;
         overflow: auto;
         padding: 0.3em 0.1em;
@@ -252,11 +269,11 @@ Captions near figures and listings need a bit more spacing, IMO.
     pre.src:before {
         display: none;
         position: absolute;
-        background-color: <<accent-colour>>;
+        background-color: var(--accent);
         top: -10px;
         right: 10px;
         padding: 3px;
-        border: 1px solid <<primary-colour>>;
+        border: 1px solid var(--main);
     }
 
     pre.src:hover:before { display: inline;}
@@ -354,5 +371,21 @@ which we also activate here.
 
       .row {display: flex}
       .column {flex: 50%}
+  }
+#+end_src
+
+* Change colours for Dark mode
+
+#+begin_src css
+  /* Define colours for dark mode */
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --accent: darkorange;
+          --bg: #333;
+          --footnotes: gray;
+          --highlight: gold;
+          --main: orangered;
+          --text: whitesmoke;
+      }
   }
 #+end_src
