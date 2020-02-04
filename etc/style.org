@@ -67,6 +67,7 @@ This section is not exported
           sans-serif;
       margin: 0 0.5ch;
       background-color: var(--bg);
+      color: var(--text);
   }
 
   body {
@@ -78,6 +79,21 @@ This section is not exported
   h1, h2, h3, h4, h5, h6 {
       color: var(--main);
       font-size: 1em;
+  }
+
+  a:link {
+      color: var(--main);
+  }
+  a:visited {
+      color: var(--text);
+      background-color: transparent;
+
+  }
+  a:hover {
+      background-color: var(--highlight);
+  }
+  a:active {
+      color: var(--highlight);
   }
 #+end_src
 
