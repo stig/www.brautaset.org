@@ -1,13 +1,18 @@
 #+setupfile: lvl-0.org
 #+title: About Stig Brautaset
 
-I am an experienced software engineer based in the North East of
-England. I currently work (remotely) for CircleCI.
+I'm a software engineer based in the north east of England. This is my
+personal site, and opinions expressed here do not reflect those of my
+employer.
 
-I'm originally from [[https://en.wikipedia.org/wiki/%C3%98rsta][Ørsta]], on the west coast of Norway.  I studied
-electronics, and served as a sonar operator on a submarine during
-compulsory military service, before moving to London to study AI at
-the University of Westminster.  I graduated in 2003.
+I'm originally from the west coast of Norway. I studied electronics,
+and served as a sonar operator on a submarine during compulsory
+military service, before moving to London to study AI. I graduated
+from the University of Westminster in 2003, and have been working
+primarily as a backend software engineer since.
+
+You can find a more comprehensive biography [[file:articles/2016/berwick-academy-stem-talk.org][in this article]], or on my
+[[https://www.linkedin.com/in/stigbrautaset/][LinkedIn profile]].
 
 * About SBJson
 

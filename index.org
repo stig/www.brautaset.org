@@ -1,11 +1,16 @@
 #+setupfile: lvl-0.org
-#+title: Stig's Soapbox
+#+title: Stig Brautaset's Soapbox
 #+options: H:1
 
-Hi! I'm Stig.  I like to hang with my family, read, play guitar, run,
-hack my Emacs config, and occasionally update this site.
+I'm a free software author, husband, dad, and aspiring guitarist. I
+also read a lot of sci-fi & fantasy books, hack my Emacs config, and
+occasionally update this site.
 
-* Recent blog posts ([[file:feed.xml][RSS]])
+The site is primarily a blog. Three recent articles, and three of my
+favourite ones, are below. I also maintain a [[file:articles.org][full list of articles]],
+and an [[file:feed.xml][RSS]] feed.
+
+* Recent blog posts
 
 ** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                               :Reviews:
 
@@ -48,6 +53,3 @@ language---in C.
 
 I like this one because it was such a great learning experience!
 
-* Didn't find what you looked for?
-
-See the [[file:articles.org][full list of articles]].
