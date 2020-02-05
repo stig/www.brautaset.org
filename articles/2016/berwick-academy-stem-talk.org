@@ -71,9 +71,7 @@ contents.
    I thought I'd start in 1994, when I was about as old as you are now. Back
    then dinosaurs roamed the street, and people were terrified of /Y2K/.
 
-   #+BEGIN_QUOTE
-   *What was Y2K?*
-
+   :Y2K:
    Y2K stands for "Year 2000". K is short for Kilo, which means 1000.
 
    In the early days of computer programming it was common to store just the
@@ -88,7 +86,7 @@ contents.
    planes falling out of the sky. China required all its top airline bosses
    to be on a plane on new-years eve 1999, as a way to make sure they would
    make flying safe for everyone.
-   #+END_QUOTE
+   :END:
 
    Anyway, in 1994 I had just finished my compulsory education, and was
    fretting about what to do. A-level equivalent education had two tracks:
@@ -138,13 +136,8 @@ contents.
    In Norway we still have compulsory military service, where you serve for
    about one year. You can choose between land, sea and air, and I chose to
    serve as a sonar operator on a submarine.
-
-   #+BEGIN_QUOTE
-   *Why a submarine?*
-
    I had watched the film "The Hunt for Red October" a few
    years earlier and thought sonars were pretty cool.
-   #+END_QUOTE
 
    My submarine went to a two-week NATO military exercise in the
    Mediterranean in March 2000. Diesel/electric submarines are not very
@@ -158,23 +151,17 @@ contents.
 
    On Sunday morning I had run out of money and went to the train station to
    wait for my train. I was surprised to find it there an hour early, and
-   more surprised when when it left as soon as I had sat down. I panicked,
+   more surprised when it left as soon as I had sat down. I panicked,
    because I thought I was on the wrong train, but I was not.
 
-   #+BEGIN_QUOTE
-   *Can anybody guess what had happened?*
-
-   Daylight savings. Daylight /bloody/ savings. The clocks had changed
+   It took me several minutes to realise what had happened:
+   daylight savings. Daylight /bloody/ savings. The clocks had changed
    during the night, and nearly caused me to miss my train.
-   #+END_QUOTE
 
    Daylight savings is a massive headache in computing. Imagine you have an
    important program that runs at the same time every night, and should only
    run once. Let's say it sends emails to lots of individuals and you don't
    want to send duplicates.
-
-   #+BEGIN_QUOTE
-   *What could happen if your program is supposed to run at 1:30am every night?*
 
    Here's a couple things that /could/ happen:
 
@@ -182,7 +169,6 @@ contents.
      hour between 1 and 2 /doesn't exist/.
    - The program might run twice, and could send duplicate emails. Not
      good.
-   #+END_QUOTE
 
    I left the navy in July 2000 and moved to London the following September.
 
@@ -266,27 +252,18 @@ contents.
    a new job, and in the meantime I could do pretty much what I wanted.
 
    I decided to learn Objective-C programming.
-
-   #+BEGIN_QUOTE
-   *Who knows which big company uses Objective-C?*
-
    Apple uses it. I decided to learn Objective-C programming because I
    wanted to do Mac OS X programming for a bit, rather than website
    backends.
-   #+END_QUOTE
 
    In addition to learning Objective-C, I wanted to learn about a new
    database, called CouchDB. There was one catch: you had to use JSON to
    it, and I couldn't find a good JSON library for Objective-C.
 
-   #+BEGIN_QUOTE
-   *What is JSON?*
-
    If two people want to understand eachother they have to talk the same
    language. It's the same with computers. JSON is one of the many languages
    a computer program can use to talk to another computer programs, and is
    commonly used by webapps.
-   #+END_QUOTE
 
    I couldn't find a good JSON library I could use, so I decided to write
    one. I expected to spend a couple days on it, but I have probably never
@@ -347,9 +324,7 @@ contents.
    years. This was a massive boost to morale for the team. To achieve it, we
    mainly added lots and lots of /caching/.
 
-   #+BEGIN_QUOTE
-   *What /is/ caching, you ask?*
-
+   :CACHING:
    Let's say Bernie asks Alex what the time is. Alex doesn't have a
    wristwatch (who has nowadays?) so has to take their phone out of their
    pocket, turn it on and read out the time. Bernie is happy that it's
@@ -374,7 +349,7 @@ contents.
    Finally Finley comes along to ask what /year/ it is, and Alex says to
    jump out the window. Even saints have their limits. It's a good thing
    they were on the ground floor, really.
-   #+END_QUOTE
+   :END:
 
    Timeouts & cache invalidation, by the way, are two fundamental problems
    in computer science that go hand in hand. /What/ do you cache? /How much
