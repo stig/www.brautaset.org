@@ -7,6 +7,10 @@ hack my Emacs config, and occasionally update this site.
 
 * Recent blog posts ([[file:feed.xml][RSS]])
 
+** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                               :Reviews:
+
+I review the book /Driving Technical Change/ by Terrence Ryan.
+
 ** [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
 
    I outline how we reduced the time to run a Django application's CI
@@ -17,11 +21,6 @@ hack my Emacs config, and occasionally update this site.
    I introduce Cal Newport's book, and how it's helping me take
    control of where I spend my limited currency in today's attention
    economy.
-
-** [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                             :Music:
-
-   I try to keep myself honest--and on target!--by posting an update
-   on my guitar learning journey.
 
 * Articles I'm particularly fond of
 
