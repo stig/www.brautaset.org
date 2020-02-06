@@ -1,5 +1,5 @@
 #+setupfile: ../../lvl-2.org
-#+title: Driving Technical Change (Review)
+#+title: Driving Technical Change
 
 #+begin_abstract
 I review the book /Driving Technical Change/ by Terrence Ryan.
