@@ -2,9 +2,9 @@
 #+title: Stig Brautaset's Soapbox
 #+options: H:1
 
-I'm a free software author, husband, dad, and aspiring guitarist. I
-also read a lot of sci-fi & fantasy books, hack my Emacs config, and
-occasionally update this site.
+I'm a free software author, husband, dad, and guitarist. I also read a
+lot of sci-fi & fantasy books, hack my Emacs config, and occasionally
+update this site.
 
 The site is primarily a blog. Three recent articles, and three of my
 favourite ones, are below. I also maintain a [[file:articles.org][full list of articles]],
