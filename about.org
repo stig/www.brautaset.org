@@ -28,7 +28,7 @@ You can find a more comprehensive biography [[file:articles/2016/berwick-academy
 
   Code examples are by me, unless otherwise specified, and available
   under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
-  lisence.
+  license.
 
 * Contact
   :PROPERTIES:
