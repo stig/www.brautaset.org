@@ -1,14 +1,14 @@
 #+setupfile: lvl-0.org
-#+title: Stig Brautaset's Soapbox
+#+title: Stig's Soapbox
 #+options: H:1
 
-I'm a free software author, husband, dad, and guitarist. I also read a
-lot of sci-fi & fantasy books, hack my Emacs config, and occasionally
-update this site.
+I'm a software engineer, husband, dad, and guitarist. I read a lot of
+sci-fi & fantasy books, hack my Emacs config, and occasionally update
+this site.
 
-The site is primarily a blog. Three recent articles, and three of my
-favourite ones, are below. I also maintain a [[file:articles.org][full list of articles]],
-and an [[file:feed.xml][RSS]] feed.
+The site is primarily a blog: three recent articles, and three of my
+favourites, are below. I also maintain a [[file:articles.org][full list of articles]], and an
+[[file:feed.xml][RSS]] feed.
 
 * Recent articles
 
