@@ -1,6 +1,15 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent articles
 
+* Dark Mode                                                           :Hacks:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2020/dark-mode.html
+:ID:       2787CA53-53D8-4EBC-A011-6FA4E6C2A95C
+:PUBDATE:  <2020-02-10 Mon 09:18>
+:END:
+
+A /really/ short post about adding Dark Mode to this site.
+
 * Driving Technical Change (Review)                                 :Reviews:
 :PROPERTIES:
 :RSS_PERMALINK: articles/2020/driving-technical-change.html

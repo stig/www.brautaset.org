@@ -4,6 +4,10 @@
 
 These are all my articles in reverse chronological order.
 
+* [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
+
+A /really/ short post about adding Dark Mode to this site.
+
 * [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]] :Reviews:
 
 I review the book /Driving Technical Change/ by Terrence Ryan.

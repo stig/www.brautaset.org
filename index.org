@@ -12,6 +12,11 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 
 * Recent articles
 
+* [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
+
+A /really/ short post about adding Dark Mode to this site.
+
+
 ** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                               :Reviews:
 
 I review the book /Driving Technical Change/ by Terrence Ryan.
@@ -20,11 +25,6 @@ I review the book /Driving Technical Change/ by Terrence Ryan.
 
 I outline how we reduced the time to run a Django application's CI
 test suite from about 13 minutes to under 4 minutes.
-
-** [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                             :Lifestyle:Reviews:Popular:
-
-I introduce Cal Newport's book, and how it's helping me take control
-of where I spend my limited currency in today's attention economy.
 
 * Older articles I'm fond of
 
