@@ -97,23 +97,3 @@ hands" get-together. I tell the story of my "hiring experience" as a
 sonar operator on a submarine in the Norwegian Navy. To tie it into
 work, I included a little hiring-related lesson at the end.
 
-* [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2018/creating-index-entry-from-post.html
-  :ID:       C410CC58-B1EB-48EE-9440-0CBC9E51F3DF
-  :PUBDATE:  <2018-08-30 Thu 21:37>
-  :END:
-
-I wanted it to be easy to create a new entry on the index page. I call
-on Emacs Lisp to help.
-
-* [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2018/making-team-decisions.html
-  :ID:       FC57FD1D-C212-457D-A252-C806A3D9267D
-  :PUBDATE:  <2018-08-21 Tue 18:26>
-  :END:
-
-I summarise a useful technique for making team decisions I learnt
-about at The London Lead Developer conference a couple months ago.
-
