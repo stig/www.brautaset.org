@@ -12,7 +12,7 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 
 * Recent articles
 
-* [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
+** [[file:articles/2020/dark-mode.org][Dark Mode]]                                                         :Hacks:
 
 A /really/ short post about adding Dark Mode to this site.
 
