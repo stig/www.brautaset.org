@@ -12,6 +12,11 @@ SSL. But as [[https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal
 encrypted]], and with [[https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure][Chrome marking HTTP as non-secure]], I figure it's
 time to do something about that.
 
+:NOTE:
+Since writing this post series I [[../2018/no-more-superloopy.org][changed the domain of this site]] from
+superloopy.io back to brautaset.org.
+:END:
+
 GitHub Pages, where this site is currently hosted, regretfully [[https://github.com/isaacs/github/issues/156][doesn't
 support HTTPS for custom domains]]. (It does, however, support it for
 [[https://github.com/blog/2186-https-for-github-pages][=$username.github.io=]] domains.) At work I was recently pleasantly
