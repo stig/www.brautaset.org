@@ -109,10 +109,10 @@ oriented:
   actually write some good ones eventually.
 
 
-So, these are my musical goals for the year. In the spirit of [[https://www.azquotes.com/quote/650861][Benjamin
-Franklin]], I'm hoping that if I keep working on the basics, and
-building good practice habits, I'll eventually reap compound interest
-and become a good musician.
+So, these are my musical goals for the year. I'm hoping that if I keep
+working on the basics, and building good practice habits, I'll
+eventually reap compound interest and become a good musician. In the
+words of [[https://www.azquotes.com/quote/650861][Benjamin Franklin]]:
 
 #+begin_quote
 Watch the pennies and the dollars will take care of themselves.
