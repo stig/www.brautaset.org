@@ -139,15 +139,19 @@ borders!
 
 #+begin_src css
   table {border-collapse:collapse}
-  td, th {vertical-align:top}
+  td, th {
+      vertical-align:top;
+      padding: 0 0.5em;
+  }
   th.org-right  {text-align: center}
   th.org-left   {text-align: center}
   th.org-center {text-align: center}
   td.org-right  {text-align: right}
   td.org-left   {text-align: left}
   td.org-center {text-align: center}
-
-  td + td, th + th {border-left: 1px solid var(--main)}
+  td + td, th + th {
+      border-left: 1px solid var(--main);
+  }
   thead + tbody, tbody + tbody {border-top: 1px solid var(--main)}
 #+end_src
 
@@ -251,6 +255,25 @@ Captions near figures and listings need a bit more spacing, IMO.
   caption.t-bottom {caption-side: bottom}
 
   img {max-width: 100%}
+#+end_src
+
+* Checkboxes
+
+#+begin_src css
+  .off > code { font-family: monospace; color: red; }
+  .on > code { font-family: monospace; color: green; }
+  .trans > code { font-family: monospace; color: orange; }
+#+end_src
+
+* Blockquote
+
+#+begin_src css
+  blockquote {
+      margin: 1em 0;
+      padding: 0.2em 1em;
+      border-left: 1em solid var(--main);
+      background-color: var(--accent);
+  }
 #+end_src
 
 * Pre

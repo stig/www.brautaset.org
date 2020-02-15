@@ -1,0 +1,143 @@
+#+include: ../../lvl-2.org
+#+title: Musical Goals
+
+#+begin_abstract
+I review how I did on my musical goals for 2019, and try to outline some new goals for 2020.
+#+end_abstract
+#+category: Music
+
+I'll first review my 2019 goals, then cover goals for 2020, before
+finally give an overview of my current practice routine.
+
+* 2019 goals vs reality
+
+I ticked fewer than half the boxes on my list of 2019 goals:
+
+1. [ ] Jam with other people at least six times
+2. [X] Start and complete Justin's "Green" grade
+3. [ ] Record myself playing once a month to track progress
+4. [ ] Learn 10 new songs
+5. [ ] Stretch goal: complete Justin's "Blue" grade
+6. [X] Stretch goal/treat: start building a pedal board
+
+
+I found the recording really distracting, and quickly got frustrated
+that the transcribing of the songs took too much time away from the
+guitar. This was the most visible (and painful) failure.
+
+That said, I am really happy with my progress overall. It just wasn't
+on the arbitrary goals I've set myself at the start of the year! For
+example, I established good practice habits by:
+
+- Keeping a practice journal, which has helped me track progress and
+  focus my practice effort
+
+- Buying Justin Sandercoe's [[https://thejustinguitarstore.com/collections/books/products/the-justinguitar-rhythm-reading-for-guitarists-book][Rhythm Reading]] and working hard on that
+  for 7 months, as I struggled keeping and /working out/ rhythms
+
+- Started learning to read music, using Frederick Noad's [[https://www.amazon.co.uk/Solo-Guitar-Playing-Fourth-Gtr/dp/0825636795/ref=sr_1_1?hvadid=80607977866938&hvbmt=be&hvdev=c&hvqmt=e&keywords=noad+solo+guitar+playing&qid=1581024624&sr=8-1][Solo Guitar
+  Playing]]
+
+- Working on ear training, and basics like learning the names of notes
+  on the fretboard
+
+
+The ear training has really paid off. I have noticed that it's /much/
+easier now to work out songs by ear. Sometimes it falls into place
+without me even trying!
+
+I ticked the "start building a pedal board", as I bought my first
+effects pedal: a Tube Screamer mini. This to make it easier to
+practice soloing over a chord progression. It sounds /soo/ good with
+Yamaha THR 10 amp. I love it!
+
+I did buy a travel guitar, aiming to take it places and jam with other
+people. Unfortunately it didn't [[https://konmari.com/][spark joy]], so I traded it in (along
+with my son's unused drums kit) for a Faith Earth Legacy acoustic. It
+is amazing, and is my primary guitar now.
+
+* My goals for 2020
+
+I'm currently reading /Atomic Habits/, and one of the first things
+covered is that outcome-oriented goals are a poor idea. If you instead
+change how you /identify/, the good habits should come more naturally. I
+think I have had some success with this already: at some point I
+started identifying as a /guitarist/, rather than /someone who wants to
+learn to play guitar/. Perhaps that's why practicing an hour every day
+hasn't felt like a slog at all---I've really enjoyed it and look
+forward to it every day.
+
+So, goals for 2020 are going to be process oriented rather than goal
+oriented:
+
+- *Continue keeping a practice journal.* Rather than the dead-tree book
+  I used last year I'm going to use Justin's practice assistant app;
+  free from [[https://www.justinguitar.com][his website]] for registered users. I like that it has
+  built-in timers, metronome, and keeps track of stats so I can track
+  improvements & practice time.
+
+- *Aim for at least 1 hour of dedicated practice a day.* I don't own a
+  guitar I'm happy to take travelling, and I don't travel enough that
+  I can justify getting one, so I'm going to qualify this with /unless
+  I'm travelling/.
+
+- *Regularly record myself playing and listen critically.* The goal here
+  is to determine where I need to focus my practice. Producing high
+  quality or long-lived recordings is not part of this goal: using my
+  phone's voice recorder app is fine.
+
+- *Adapt my practice schedule to keep it fun and relevant.* Being a
+  guitarist is who I /am/ now, but there's no point in keeping to
+  practice if I don't get enjoyment from it.
+
+- *Seek out opportunities to make music with other people.* This could
+  mean playing simple songs with someone else singing, playing known
+  songs with other people on instruments, or all-out jamming. I've
+  really enjoyed playing with others when I've had the opportunity,
+  and it's motivated me to learn more songs & get better.
+
+- *Try to work songwriting into my regular practice.* I have been
+  noodling around with some chord progressions slowly coalescing into
+  a song for months, if not a year. I've not gone about it in a
+  structured way, however: it's mainly been taking shape during my
+  "play" sessions, rather than my "practice" ones. The idea is that if
+  I manage to start practice writing songs, then I'll be able to
+  actually write some good ones eventually.
+
+
+So, these are my musical goals for the year. In the spirit of [[https://www.azquotes.com/quote/650861][Benjamin
+Franklin]], I'm hoping that if I keep working on the basics, and
+building good practice habits, I'll eventually reap compound interest
+and become a good musician.
+
+#+begin_quote
+Watch the pennies and the dollars will take care of themselves.
+#+end_quote
+
+* TODO Snapshot of my current practice schedule
+
+To round off this post, let me share a snapshot of my current practice
+schedule. I usually do the first three while pottering around in the
+kitchen & making coffee, before getting my guitar out for the rest.
+
+| Mins | Exercise                                                   | Metronome |
+|------+------------------------------------------------------------+-----------|
+|    3 | /Find the Note/ exercise in Justin's /Guitar Note Trainer/ app |           |
+|    3 | /Name the Note/ exercise in Justin's /Guitar Note Trainer/ app |           |
+|    5 | Aural Interval Training with Justin's /Ear Trainer/ app      |           |
+|    5 | "Old Faithful" strumming & changing chords mid-bar         | 84 bpm    |
+|   10 | Rhythm Reading: playing major scale in G to exercise 4.3   | 66 bpm    |
+|   10 | Solo Guitar Playing                                        | 54 bpm    |
+|    5 | Picking the intro to /Behind Blue Eyes/                      | 80 bpm    |
+|    5 | Triad Arpeggios in A Major                                 | 96 bpm    |
+|    5 | Picking the verse of /Behind Blue Eyes/                      | 40 bpm    |
+|   10 | Playing the verse of /Nothing Else Matters/ with a pick      | 76 bpm    |
+
+The "Old Faithful" strumming exercise acts partly as a warm-up, before
+I tackle the most mentally challenging parts: rhythm reading and note
+reading.
+
+Some days I get through the full routine before the rest of my family
+wakes up. Occasionally I get distracted and manage almost nowt. /Most/
+days, however, I manage a good chunk of my practice routine in the
+morning.
