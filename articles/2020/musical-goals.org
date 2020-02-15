@@ -2,7 +2,9 @@
 #+title: Musical Goals
 
 #+begin_abstract
-I review how I did on my musical goals for 2019, and try to outline some new goals for 2020.
+I review how I did on my musical goals for 2019, and try to outline
+some new goals for 2020, before rounding off with sharing a snapshot
+of my current practice routine.
 #+end_abstract
 #+category: Music
 
