@@ -118,11 +118,14 @@ words of [[https://www.azquotes.com/quote/650861][Benjamin Franklin]]:
 Watch the pennies and the dollars will take care of themselves.
 #+end_quote
 
-* TODO Snapshot of my current practice schedule
+* A snapshot of my practice schedule
 
 To round off this post, let me share a snapshot of my current practice
-schedule. I usually do the first three while pottering around in the
-kitchen & making coffee, before getting my guitar out for the rest.
+schedule, and how I go about it[fn::/Atomic Habits/ points to research
+that shows that people who are asked to detail /how/ they're going to
+change their habits are more likely to do so.]. I usually do the first
+three while pottering around in the kitchen & making coffee, before
+getting my guitar out for the rest.
 
 | Mins | Exercise                                                   | Metronome |
 |------+------------------------------------------------------------+-----------|
