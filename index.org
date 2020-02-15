@@ -12,6 +12,12 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 
 * Recent articles
 
+** [[file:articles/2020/musical-goals.org][Musical Goals]]                                                     :Music:
+
+I review how I did on my musical goals for 2019, and try to outline
+some new goals for 2020, before rounding off with sharing a snapshot
+of my current practice routine.
+
 ** [[file:articles/2020/dark-mode.org][Dark Mode]]                                                         :Hacks:
 
 A /really/ short post about adding Dark Mode to this site.
@@ -20,11 +26,6 @@ A /really/ short post about adding Dark Mode to this site.
 ** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                               :Reviews:
 
 I review the book /Driving Technical Change/ by Terrence Ryan.
-
-** [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
-
-I outline how we reduced the time to run a Django application's CI
-test suite from about 13 minutes to under 4 minutes.
 
 * Older articles I'm fond of
 

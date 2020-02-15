@@ -4,6 +4,12 @@
 
 These are all my articles in reverse chronological order.
 
+* [[file:articles/2020/musical-goals.org][Musical Goals]]             :Music:
+
+I review how I did on my musical goals for 2019, and try to outline
+some new goals for 2020, before rounding off with sharing a snapshot
+of my current practice routine.
+
 * [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
 
 A /really/ short post about adding Dark Mode to this site.
