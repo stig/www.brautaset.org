@@ -12,7 +12,7 @@ those colours feature heavily. Hope I'm not overdoing it!
       --bg: white;
       --footnotes: gray;
       --highlight: yellow;
-      --main: orange;
+      --main: darkorange;
       --text: #333;
   }
 #+end_src
