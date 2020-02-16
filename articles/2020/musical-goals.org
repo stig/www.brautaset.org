@@ -78,7 +78,7 @@ oriented:
 
 - Continue keeping a practice journal :: Rather than the dead-tree
   book I used last year I'm going to use Justin's practice assistant
-  app; free from [[https://www.justinguitar.com][his website]] for registered users. I like that it has
+  app, free from [[https://www.justinguitar.com][his website]] for registered users. I like that it has
   built-in timers, metronome, and keeps track of stats so I can track
   improvements & practice time.
 
