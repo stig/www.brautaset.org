@@ -15,7 +15,6 @@ executors:
 commands:
   configure-emacs:
     steps:
-      - run: apt-get install git
       - run:
           name: "Checkout Emacs Config"
           command: git clone https://github.com/stig/.emacs.d.git ~/emacs.d
