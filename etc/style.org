@@ -219,7 +219,7 @@ When asking Org to number source code examples it uses these classes.
 
 * Footnotes in HTML
 
-These get a diminutive orange ~<hr>~ above, and have slightly lighter
+These get a diminutive orange ~<hr/>~ above, and have slightly lighter
 font colour to make them stand out less.
 
 #+begin_src css :noweb yes

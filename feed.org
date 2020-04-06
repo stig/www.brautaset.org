@@ -8,9 +8,7 @@
 :PUBDATE:  <2020-02-15 Sat 14:55>
 :END:
 
-I review how I did on my musical goals for 2019, and try to outline
-some new goals for 2020, before rounding off with sharing a snapshot
-of my current practice routine.
+#+include: articles/2020/musical-goals.org :lines "2-"
 * Dark Mode                                                           :Hacks:
 :PROPERTIES:
 :RSS_PERMALINK: articles/2020/dark-mode.html
@@ -18,7 +16,7 @@ of my current practice routine.
 :PUBDATE:  <2020-02-10 Mon 09:18>
 :END:
 
-A /really/ short post about adding Dark Mode to this site.
+#+include: articles/2020/dark-mode.org :lines "2-"
 
 * Driving Technical Change (Review)                                 :Reviews:
 :PROPERTIES:
@@ -27,71 +25,66 @@ A /really/ short post about adding Dark Mode to this site.
 :PUBDATE:  <2020-02-03 Mon 10:09>
 :END:
 
-I review the book /Driving Technical Change/ by Terrence Ryan.
+#+include: articles/2020/driving-technical-change.org :lines "2-"
 
-* [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
+* Speeding up tests on CircleCI for a Python Django project :Python:CircleCI:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/speed-up-circleci.html
   :ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
   :PUBDATE:  <2019-07-01 Mon 17:49>
   :END:
 
-I outline how we reduced the time to run a Django application's CI
-test suite from about 13 minutes to under 4 minutes.
+  #+include: articles/2019/speed-up-circleci.org :lines "2-"
 
-* [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
+* Digital Minimalism                                      :Lifestyle:Reviews:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/digital-minimalism.html
   :ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
   :PUBDATE:  <2019-06-15 Sat 14:07>
   :END:
 
-I introduce Cal Newport's book, and how it's helping me take control
-of where I spend my limited currency in today's attention economy.
+  #+include: articles/2019/digital-minimalism.org :lines "2-"
 
-* [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
+* Learning Guitar Update                                              :Music:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/learning-guitar-update.html
   :ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
   :PUBDATE:  <2019-05-10 Fri 08:53>
   :END:
 
-I try to keep myself honest--and on target!--by posting an update on
-my guitar learning journey.
+  #+include: articles/2019/learning-guitar-update.org :lines "2-"
 
-* [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
+* Bose QuietComfort 35 Review                                       :Reviews:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
   :ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
   :PUBDATE:  <2019-03-21 Thu 14:39>
   :END:
 
-I review the noise-cancelling headphones I've been using for about 3 years.
-* [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
+  #+include: articles/2019/bose-quietcomfort-35-review.org :lines "2-"
+* Musical Goals January Update                                        :Music:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/musical-goals-january-update.html
   :ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
   :PUBDATE:  <2019-02-03 Sun 22:38>
   :END:
 
-The first of (hopefully) monthly posts with updates on my musical
-goals for 2019. I cover achievements in January, and new goals for
-February.
-* [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
+  #+include: articles/2019/musical-goals-january-update.org :lines "2-"
+* My Musical Goals for 2019                                           :Music:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
   :ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
   :PUBDATE:  <2019-01-05 Sat 16:00>
   :END:
 
-I list my musical goals for 2019, and touch briefly on achievements in 2018.
+  #+include: articles/2019/musical-goals-for-2019.org :lines "2-"
 
-* [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
+* Extracting Minecraft Music with Python                   :Minecraft:Python:
   :PROPERTIES:
   :RSS_PERMALINK: articles/2018/minecraft-music-extractor.html
   :ID:       C950F98A-A473-4778-B7E0-4FF62825E751
   :PUBDATE:  <2018-11-25 Sun 21:23>
   :END:
 
-I create a Python script to extract music files from Minecraft's assets.
+  #+include: articles/2018/minecraft-music-extractor.org :lines "2-"
 

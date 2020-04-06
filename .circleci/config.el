@@ -3,7 +3,7 @@
 
 (setq sb/copyright "<p>Copyright &copy; 2001-2020 Stig Brautaset</p>")
 
-(setq org-html-footnotes-section "<div id=\"footnotes\"><hr><!--%s-->%s</div>")
+(setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
 (setq org-html-format-drawer-function
       (lambda (name content)
