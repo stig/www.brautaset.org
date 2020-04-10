@@ -11,46 +11,28 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 [[file:feed.xml][RSS]] feed.
 
 * Recent articles
-
-** [[file:articles/2020/musical-goals.org][Musical Goals]]                                                     :Music:
-
-I review how I did on my musical goals for 2019, and try to outline
-some new goals for 2020, before rounding off with sharing a snapshot
-of my current practice routine.
-
-** [[file:articles/2020/dark-mode.org][Dark Mode]]                                                         :Hacks:
-
-A /really/ short post about adding Dark Mode to this site.
-
-
-** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                               :Reviews:
-
-I review the book /Driving Technical Change/ by Terrence Ryan.
-
+** [[file:articles/2020/musical-goals.org][Musical Goals]]                                                      :Music:
+   #+include: articles/2020/musical-goals.org::begin_abstract :only-contents t
+** [[file:articles/2020/dark-mode.org][Dark Mode]]                                                          :Hacks:
+   #+include: articles/2020/dark-mode.org::begin_abstract :only-contents t
+** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                                :Reviews:
+   #+include: articles/2020/driving-technical-change.org::begin_abstract :only-contents t
 * Older articles I'm fond of
 
 ** [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
+   #+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
 
-This is a transcript of a lightning talk I gave at a company "all
-hands" get-together. I tell the story of my "hiring experience" as
-a sonar operator on a submarine in the Norwegian Navy. To tie it
-into work, I included a little hiring-related lesson at the end.
-
-My first to reach the HackerNews front page. In weeks it got orders
-of magnitude more hits than the rest of my site put together.
+   My first to reach the HackerNews front page. In weeks it got orders
+   of magnitude more hits than the rest of my site put together.
 
 ** [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                    :Clojure:
-
-Detailing my trials and tribulations with the "Potter" coding dojo
-problem, with code examples in Clojure.
-
-I like it because of the amount of iterations we went though, and
-the discussions I had with coworkers about it at all-hands.
+   #+include: articles/2017/potter-coding-dojo.org::begin_abstract :only-contents t
+   
+   I like it because of the amount of iterations we went though, and
+   the discussions I had with coworkers about it at all-hands.
 
 ** [[file:articles/2006/rise-of-the-machine.org][Rise of the Machine]]                                                :Hacks:
-
-I ruminate on implementing a simple virtual machine---for a simple
-language---in C.
-
-I like this one because it was such a great learning experience!
+   #+include: articles/2006/rise-of-the-machine.org::begin_abstract :only-contents t
+   
+   I like this one because it was such a great learning experience!
 
