@@ -5,195 +5,81 @@
 These are all my articles in reverse chronological order.
 
 * [[file:articles/2020/musical-goals.org][Musical Goals]]             :Music:
-
-I review how I did on my musical goals for 2019, and try to outline
-some new goals for 2020, before rounding off with sharing a snapshot
-of my current practice routine.
-
+#+include: articles/2020/musical-goals.org::begin_abstract :only-contents t
 * [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
-
-A /really/ short post about adding Dark Mode to this site.
-
+#+include: articles/2020/dark-mode.org::begin_abstract :only-contents t
 * [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]] :Reviews:
-
-I review the book /Driving Technical Change/ by Terrence Ryan.
-
+#+include: articles/2020/driving-technical-change.org::begin_abstract :only-contents t
 * [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
-
-I outline how we reduced the time to run a Django application's CI
-test suite from about 13 minutes to under 4 minutes.
-
+#+include: articles/2019/speed-up-circleci.org::begin_abstract :only-contents t
 * [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
-
-I introduce Cal Newport's book, and how it's helping me take control
-of where I spend my limited currency in today's attention economy.
-
+#+include: articles/2019/digital-minimalism.org::begin_abstract :only-contents t
 * [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
-
-I try to keep myself honest--and on target!--by posting an update on
-my guitar learning journey.
-
+#+include: articles/2019/learning-guitar-update.org::begin_abstract :only-contents t
 * [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
-
-I review the noise-cancelling headphones I've been using for about 3 years.
+#+include: articles/2019/bose-quietcomfort-35-review.org::begin_abstract :only-contents t
 * [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
-
-The first of (hopefully) monthly posts with updates on my musical
-goals for 2019. I cover achievements in January, and new goals for
-February.
+#+include: articles/2019/musical-goals-january-update.org::begin_abstract :only-contents t
 * [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
-
-I list my musical goals for 2019, and touch briefly on achievements in 2018.
-
+#+include: articles/2019/musical-goals-for-2019.org::begin_abstract :only-contents t
 * [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
-
-I create a Python script to extract music files from Minecraft's assets.
-
+#+include: articles/2018/minecraft-music-extractor.org::begin_abstract :only-contents t
 * [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
-
-This is a transcript of a lightning talk I gave at a company "all
-hands" get-together. I tell the story of my "hiring experience" as a
-sonar operator on a submarine in the Norwegian Navy. To tie it into
-work, I included a little hiring-related lesson at the end.
-
+#+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
 * [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
-
-I wanted it to be easy to create a new entry on the index page. I call
-on Emacs Lisp to help.
-
+#+include: articles/2018/creating-index-entry-from-post.org::begin_abstract :only-contents t
 * [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
-
-I summarise a useful technique for making team decisions I learnt
-about at The London Lead Developer conference a couple months ago.
-
+#+include: articles/2018/making-team-decisions.org::begin_abstract :only-contents t
 * [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
-
-A post to announce that this site now has an RSS feed generated from
-the front page's content, and explain how I create it.
-
+#+include: articles/2018/org-mode-rss.org::begin_abstract :only-contents t
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
-
-Why this site is moving from the superloopy.io domain to brautaset.org.
-
+#+include: articles/2018/no-more-superloopy.org::begin_abstract :only-contents t
 * [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
-
-I present four ways you can support me if you have (or continue to)
-benefit from my work on Free and Open Source Software.
-
+#+include: articles/2018/support-my-foss-work.org::begin_abstract :only-contents t
 * [[file:articles/2017/printing-music.org][Printing Music (Through My Stereo!)]]                                 :Hacks:
-
-I explain how I set up MPlayer as a printer driver so I could add a
-distributed print queue for music. (AKA a JukeBox.)
-
+#+include: articles/2017/printing-music.org::begin_abstract :only-contents t
 * [[file:articles/2017/parking-in-berwick-upon-tweed.org][Open Letter to NCC about Parking in Berwick]]                       :Soapbox:
-
-I complain about the unacceptable parking situation for commuters to
-Berwick-upon-Tweed and present a few suggestions for improvement that
-might help.
-
+#+include: articles/2017/parking-in-berwick-upon-tweed.org::begin_abstract :only-contents t
 * [[file:articles/2017/dns-cloudformation-importvalue.org][Updating DNS with output of another CloudFormation stack]] (6/6) :CloudFormation:
-
-I show the changes to my Sceptre config & CloudFormation template
-required to point DNS to the two CloudFront distributions I've
-created.
-
+#+include: articles/2017/dns-cloudformation-importvalue.org::begin_abstract :only-contents t
 * [[file:articles/2017/publishing-this-blog-to-s3.org][Publishing this blog to an S3 bucket]] (5/6)
-
-I show briefly the changes I need to make to publish this blog to S3
-rather than to GitHub.
-
+#+include: articles/2017/publishing-this-blog-to-s3.org::begin_abstract :only-contents t
 * [[file:articles/2017/s3-website-with-https-using-cloudformation.org][Creating S3 website with SSL using CloudFormation]] (4/6)    :CloudFormation:
-
-I show how to create an S3 bucket set up to serve a static website,
-and expose it over HTTPS via CloudFront, using the same SSL
-certificate we created in the previous post---all via CloudFormation.
-
+#+include: articles/2017/s3-website-with-https-using-cloudformation.org::begin_abstract :only-contents t
 * [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]] (3/6) :CloudFormation:
-
-I show how to create an S3 bucket for redirecting web requests, put it
-behind a CloudFront distribution, and configured /this/ with an SSL
-certificate---all via CloudFormation.
-
+#+include: articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::begin_abstract :only-contents t
 * [[file:articles/2017/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]] (2/6)            :CloudFormation:
-
-In which I delegate DNS from Gandi to AWS Route 53, and learn how to
-configure Route 53 with CloudFormation & Sceptre.
-
+#+include: articles/2017/route-53-cloudformation.org::begin_abstract :only-contents t
 * [[file:articles/2017/adding-ssl.org][Adding SSL to this Blog]] (1/6)
-
-I outline the steps I plan to take to add SSL to this blog, leveraging
-AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
-CloudFormation.)
-
+#+include: articles/2017/adding-ssl.org::begin_abstract :only-contents t
 * [[file:articles/2017/blogging-with-org-mode-update.org][Blogging with Org mode---update]]                                     :Emacs:
-
-A short experience report about blogging with Org mode.
-
+#+include: articles/2017/blogging-with-org-mode-update.org::begin_abstract :only-contents t
 * [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                     :Clojure:
-
-Detailing my trials and tribulations with the "Potter" coding dojo
-problem, with code examples in Clojure.
-
+#+include: articles/2017/potter-coding-dojo.org::begin_abstract :only-contents t
 * [[file:articles/2017/n-queens.org][N Queens in Clojure]]                                               :Clojure:
-
-Solving the problem of putting N Queens on an /N/ by /N/ chess board
-without them being able to threaten eachother.
-
+#+include: articles/2017/n-queens.org::begin_abstract :only-contents t
 * [[file:articles/2017/electoral-reform-now.org][Electoral Reform Now!]]                                             :Soapbox:
-
-I try to show how unjust the First Past the Post system used to elect
-MPs in UK General Elections is.
-
+#+include: articles/2017/electoral-reform-now.org::begin_abstract :only-contents t
 * [[file:articles/2017/blogging-with-org-mode.org][Blogging with Org Mode]]                                              :Emacs:
-
-I describe how---and why---I changed from blogging using Markdown &
-Jekyll to using Org mode.
-
+#+include: articles/2017/blogging-with-org-mode.org::begin_abstract :only-contents t
 * [[file:articles/2017/open-letter-to-anne-marie-mp.org][Open Letter to Anne Marie MP]]                                      :Soapbox:
-
-I ask how the Conservatives can say they are "working for everyone"
-whilst giving extra tax breaks and benefits to the 15% of top earners,
-and at the same time cutting benefits for the poor.
-
+#+include: articles/2017/open-letter-to-anne-marie-mp.org::begin_abstract :only-contents t
 * [[file:articles/2017/hydra-theme-switcher.org][Hydra Theme Switcher For Emacs]]                                      :Emacs:
-
-I learnt how to quickly switch between all installed themes in Emacs.
-
+#+include: articles/2017/hydra-theme-switcher.org::begin_abstract :only-contents t
 * [[file:articles/2016/how-i-blog-this-week.org][How I Blog (This Week)]]                                              :Emacs:
-
-I share my Emacs & Org-mode setup for blogging with Jekyll.
-
+#+include: articles/2016/how-i-blog-this-week.org::begin_abstract :only-contents t
 * [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]]                                      :Talks:
-
-I went to a local school and talked to prospective computer science
-students there about my education and career. This is a transcript of
-my talk, which was organised by STEMNET.
-
+#+include: articles/2016/berwick-academy-stem-talk.org::begin_abstract :only-contents t
 * [[file:articles/2016/fizzbuzz.org][FizzBuzz]]                                                            :Hacks:
-
-Breakdown of my Tweetable FizzBuzz created using sed and xargs.
-
+#+include: articles/2016/fizzbuzz.org::begin_abstract :only-contents t
 * [[file:articles/2016/change-terminal-colour-ssh-os-x.org][Change Terminal background colour on OS X via ssh]]                   :Hacks:
-
-I show how to change Terminal.app colours automatically when logging
-into certain remote machines via SSH.
-
+#+include: articles/2016/change-terminal-colour-ssh-os-x.org::begin_abstract :only-contents t
 * [[file:articles/2016/leafnode-nntp-os-x.org][Setting up Leafnode NNTP server on OS X]]                             :Emacs:
-
-I set up the Leafnode NNTP server on OS X, for use with Emacs and the
-Gnus newsreader.
-
+#+include: articles/2016/leafnode-nntp-os-x.org::begin_abstract :only-contents t
 * [[file:articles/2016/overcoming-rsi.org][Overcoming RSI]]                                                    :Soapbox:
-
-Early 2005 I encountered a bad bout of RSI. Prompted by a comment on
-the Lobsters forum, I thought I'd share my experience.
-
+#+include: articles/2016/overcoming-rsi.org::begin_abstract :only-contents t
 * [[file:articles/2016/modsec-and-puppet.org][ModSecurity and Puppet Spelunking]]                                  :Puppet:
-
-In which I investigate how to configure =SecAuditLogParts= for
-ModSecurity with Puppet, and find I have to contribute a patch to make
-it possible.
-
+#+include: articles/2016/modsec-and-puppet.org::begin_abstract :only-contents t
 * [[file:articles/2015/response-to-haskell-lisp-philosophical-differences.org][Not so philosophically different after all?]]                       :Clojure:
 * [[file:articles/2015/benchmarking.org][A Lesson in Benchmarking]]                                      :Development:
 * [[file:articles/2015/nuisance-calls.org][Nuisance Calls]]                                                    :Soapbox:
