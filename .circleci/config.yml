@@ -35,12 +35,6 @@ jobs:
             --load .circleci/deps.el
             --load .circleci/config.el
             --funcall org-publish-all
-      - run:
-          name: Postprocessing to fix RSS feed
-          command: |
-            set -x
-            TITLE=$(awk -F': ' '/^#\+title:/ {print $2}' feed.org)
-            perl -pi -e "s{<title>$TITLE[^<]+</title>}{<title>$TITLE</title>}g" ~/public_html/feed.xml
       - store_artifacts:
           path: ~/public_html
       - save_cache:
