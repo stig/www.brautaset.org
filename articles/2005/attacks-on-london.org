@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Attacks on London
 #+date: <2005-07-09>
 

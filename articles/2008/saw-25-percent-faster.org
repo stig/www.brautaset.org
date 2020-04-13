@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Saw 25% faster!
 #+date: <2008-09-20>
 

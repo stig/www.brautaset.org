@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: No Smoking
 #+date: <2007-07-01>
 

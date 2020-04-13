@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Nuisance Calls
 #+date: <2015-02-04>
 

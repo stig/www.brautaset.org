@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Bose QuietComfort 35 Review
 #+begin_abstract
 I review the noise-cancelling headphones I've been using for about 3 years.

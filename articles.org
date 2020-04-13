@@ -1,5 +1,5 @@
 #+title: Full list of articles
-#+setupfile: lvl-0.org
+#+setupfile: ~/blog/lvl-0.org
 #+options: H:0
 
 These are all my articles in reverse chronological order.

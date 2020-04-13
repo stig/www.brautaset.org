@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Electoral Reform Now!
 #+date: <2017-06-10>
 #+begin_abstract

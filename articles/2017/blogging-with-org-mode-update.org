@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Blogging with Org mode---update!
 #+date: <2017-07-02>
 #+begin_abstract

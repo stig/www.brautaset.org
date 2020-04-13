@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: A fisherman puts down his oars
 #+date: <2004-09-21>
 

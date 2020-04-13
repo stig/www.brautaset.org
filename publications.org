@@ -1,4 +1,4 @@
-#+setupfile: lvl-0.org
+#+setupfile: ~/blog/lvl-0.org
 #+title: Publications
 
 This is a list of some of my talks & articles hosted elsewhere:

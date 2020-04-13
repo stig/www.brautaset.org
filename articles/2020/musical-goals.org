@@ -1,4 +1,4 @@
-#+include: ../../lvl-2.org
+#+include: ~/blog/lvl-2.org
 #+title: Musical Goals
 
 #+begin_abstract

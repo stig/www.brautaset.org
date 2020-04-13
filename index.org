@@ -1,4 +1,4 @@
-#+setupfile: lvl-0.org
+#+setupfile: ~/blog/lvl-0.org
 #+title: Stig's Soapbox
 #+options: H:1
 

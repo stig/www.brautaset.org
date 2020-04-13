@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Playing at the Edge of AI
 #+date: <2006-11-24>
 #+category: Reviews

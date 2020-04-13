@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: FizzBuzz
 #+date: <2016-09-09>
 #+begin_abstract

@@ -1,4 +1,4 @@
-#+setupfile: lvl-0.org
+#+setupfile: ~/blog/lvl-0.org
 #+title: About Stig Brautaset
 
 I'm a software engineer based in the north east of England. This is my

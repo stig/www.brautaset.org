@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Speeding up tests on CircleCI for a Python Django project
 #+begin_abstract
 I outline how we reduced the time to run a Django application's CI

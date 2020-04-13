@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: No More Superloopy
 #+date: <2018-06-10 Sun>
 #+begin_abstract

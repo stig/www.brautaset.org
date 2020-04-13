@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Little Brother
 #+date: <2010-01-09>
 #+category: Reviews

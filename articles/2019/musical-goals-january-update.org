@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Musical Goals January Update
 #+begin_abstract
 The first of (hopefully) monthly posts with updates on my musical

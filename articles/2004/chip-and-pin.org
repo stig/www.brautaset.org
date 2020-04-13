@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Chip And Pin
 #+date: <2004-08-28>
 #+category: Soapbox

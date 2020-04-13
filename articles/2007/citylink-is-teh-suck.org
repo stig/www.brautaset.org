@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: CityLink is teh suck!
 #+date: <2007-02-07>
 #+begin_abstract

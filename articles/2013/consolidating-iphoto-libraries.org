@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Consolidating and de-duplicating iPhoto libraries
 #+date: <2013-10-06>
 

@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Open Letter to Anne-Marie Trevelyan MP
 #+subtitle: How are the Conservatives "working for everyone"?
 #+date: <2017-05-20>

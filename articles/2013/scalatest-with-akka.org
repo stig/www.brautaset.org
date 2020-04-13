@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Using ScalaTest with Akka
 #+date: <2013-03-25>
 #+category: Scala

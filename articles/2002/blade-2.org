@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Blade 2
 #+date: <2002-04-05>
 #+category: Reviews

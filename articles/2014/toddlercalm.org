@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: ToddlerCalm
 #+date: <2014-06-26>
 #+category: Reviews

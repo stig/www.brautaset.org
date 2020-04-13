@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Extreme Programming Explained
 #+date: <2004-10-11>
 #+category: Reviews

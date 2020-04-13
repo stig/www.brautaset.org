@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Digital Minimalism
 #+begin_abstract
 I introduce Cal Newport's book, and how it's helping me take control

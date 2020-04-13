@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: What now for SBJson?
 #+date: <2013-03-05>
 #+category: SBJson

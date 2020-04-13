@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Generating Bar Charts with SQL
 #+date: <2006-11-23>
 #+category: Hacks

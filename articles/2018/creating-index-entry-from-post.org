@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Linking Org mode blog posts into the index page
 #+category: Emacs
 #+category: Org

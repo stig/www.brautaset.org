@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Creating an RSS feed with Org mode
 #+begin_abstract
 A post to announce that this site now has an RSS feed generated from

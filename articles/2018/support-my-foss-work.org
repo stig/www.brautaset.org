@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: How to Support My FOSS Work!
 #+date: <2018-01-01 Mon>
 #+begin_abstract

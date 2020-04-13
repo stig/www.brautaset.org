@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Berwick Academy STEM Talk
 #+date: <2016-10-01>
 #+begin_abstract

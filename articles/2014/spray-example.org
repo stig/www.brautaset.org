@@ -1,4 +1,4 @@
-#+setupfile: ../../lvl-2.org
+#+setupfile: ~/blog/lvl-2.org
 #+title: Spray Example
 #+date: <2014-02-16>
 #+category: Scala
