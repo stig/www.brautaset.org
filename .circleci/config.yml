@@ -20,7 +20,7 @@ jobs:
       - restore_cache:
           keys:
             - v5-org-{{ .Branch }}
-            - v5-org-master
+            - v5-org-trunk
       - run:
           name: Tangle CSS
           command: >
@@ -78,14 +78,14 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: master
+              ignore: trunk
 
   deploy:
     jobs:
       - build:
           filters:
             branches:
-              only: master
+              only: trunk
       - deploy:
           requires:
             - build

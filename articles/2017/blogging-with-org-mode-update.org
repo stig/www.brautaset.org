@@ -23,7 +23,7 @@ in it, which was easy to create & manipulate with Org mode---but there
 is no way I would have even attempted that with Markdown / Jekyll.
 
 The [[file:n-queens.org][N Queens]] post has some graphics generated with [[http://ditaa.sourceforge.net][ditaa]]---from the
-[[https://github.com/stig/stig.github.com/blob/master/articles/2017/n-queens.org#L43%0A][ASCII-art embedded in the source]] of the post. I could perhaps have
+[[https://github.com/stig/stig.github.com/blob/trunk/articles/2017/n-queens.org#L43%0A][ASCII-art embedded in the source]] of the post. I could perhaps have
 created the graphics separately, but it's much more likely that I
 would not create the post, or create it without the graphics. I think
 the post is richer for the graphics. It also has lots of code

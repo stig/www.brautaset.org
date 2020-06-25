@@ -28,16 +28,16 @@ routing layer. It also shows off three things I consider good practice:
   post on handling expected errors (e.g. 404) in the spray routing
   DSL.
 
-Let's start with the [[https://github.com/stig/spray-example/blob/master/src/main/scala/example/ModelActor.scala][ModelActor]]. It is really just a toy, because the
+Let's start with the [[https://github.com/stig/spray-example/blob/trunk/src/main/scala/example/ModelActor.scala][ModelActor]]. It is really just a toy, because the
 purpose of this example is to show how you plug an actor-based model
 into spray routing. There's just one thing I want to point out: the
-[[https://github.com/stig/spray-example/blob/master/src/main/scala/example/Model.scala][Model]] has a method =get(id: Int): Option[Item]=, but it is considered
+[[https://github.com/stig/spray-example/blob/trunk/src/main/scala/example/Model.scala][Model]] has a method =get(id: Int): Option[Item]=, but it is considered
 bad practice to send =Some[Item]= and =None= messages between actors.
 Actors have much more freedom when it comes to the types of messages
 it responds with so we transform the response from the model into =Item=
 or =ItemNotFound= as appropriate.
 
-Next let's look at the [[https://github.com/stig/spray-example/blob/master/src/main/scala/example/Service.scala][Service]]. For clarity the following examples
+Next let's look at the [[https://github.com/stig/spray-example/blob/trunk/src/main/scala/example/Service.scala][Service]]. For clarity the following examples
 focus on a single point each, but the example project puts it all
 together. First, let's look at the =onSuccess= directive that lets us
 handle two different success cases (or one success and one expected
