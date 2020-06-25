@@ -70,5 +70,5 @@ yield large memory savings if you're allocating a lot of structs
 containing short arrays. The free list simply holds indices to free
 slots in the parent array.
 
-*Update, 2007/09/03:* Here's my [[https://github.com/stig/icfp2006/blob/master/um.c][Virtual Machine]], should you wish to take
+*Update, 2007/09/03:* Here's my [[https://github.com/stig/icfp2006/blob/trunk/um.c][Virtual Machine]], should you wish to take
 a look.

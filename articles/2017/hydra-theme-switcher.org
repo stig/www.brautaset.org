@@ -197,4 +197,4 @@ For completeness here's the full source for this switcher:
                           ("RET" nil "done" :color blue)))))))
 #+END_SRC
 
-For what it's worth, here's my full [[https://github.com/stig/dot-files/blob/master/emacs.d/Themes.org][Emacs Themes Config]] on Github.
+For what it's worth, here's my full [[https://github.com/stig/.config/blob/trunk/emacs/README.org#themes][Emacs Themes Config]] on Github.

@@ -80,8 +80,8 @@ swiftly.
 If you're thinking: "that's cool. I could use that actually. What do I
 have to do?" then don't worry---I've got your back! It may be a little
 while before there's a [[https://github.com/puppetlabs/puppetlabs-apache/releases][new release]], but if you use [[http://bombasticmonkey.com/librarian-puppet/][librarian-puppet]] to
-manage your puppet modules you can easily install the tip of the
-current master branch by putting this in your =Puppetfile=:
+manage your puppet modules you can easily install the HEAD version by
+putting this in your =Puppetfile=:
 
 #+BEGIN_EXAMPLE
     mod 'puppetlabs-apache',

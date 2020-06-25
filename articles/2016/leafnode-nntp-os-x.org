@@ -7,8 +7,10 @@ I set up the Leafnode NNTP server on OS X, for use with Emacs and the
 Gnus newsreader.
 #+end_abstract
 
-*Note: Although this works, I don't actually use Leafnode any more. I
-now use the [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Agent-Basics.html][Gnus Agent]] instead.*
+:NOTE:
+I don't use Leafnode any more, nor read usenet news. Oh, and I've
+removed dead links to no-longer-existing config from this article.
+:END:
 
 #+TOC: headlines
 #+TOC: listings
@@ -24,10 +26,11 @@ to connect to the nntp server when it starts, so as a work-around I
 run the [[http://leafnode.sourceforge.net][Leafnode]] NNTP server locally. As a nice side-effect, Gnus
 starts a lot faster.
 
-I use [[http://orgmode.org][Orgmode]] and have a [[https://github.com/stig/dot-files/blob/master/Leafnode.org][Leafnode.org]] that all the configuration is
+I use [[http://orgmode.org][Orgmode]] and have a Leafnode.org that all the configuration is
 generated from. If you use Emacs, and Orgmode, you probably want to
-just look at that directly. If you use some other NNTP client you
-might want to read this post instead. No Emacs required :-)
+just look at that directly[fn::Sorry, it's long gone.]. If you use
+some other NNTP client you might want to read this post instead. No
+Emacs required :-)
 
 * Installation
   :PROPERTIES:
