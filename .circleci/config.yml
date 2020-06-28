@@ -18,21 +18,21 @@ commands:
       - run:
           name: "Checkout Emacs Config"
           command: |
-            if test -d ~/emacs.d ; then
-                cd ~/emacs.d && git pull
+            if test -d ~/.config ; then
+              cd ~/.config && git pull
             else
-                git clone https://github.com/stig/.emacs.d.git ~/emacs.d
+              git clone https://github.com/stig/.config.git ~/.config
             fi
       - run:
           name: "Tangle relevant Emacs config files"
           command: >
             emacs --batch
             --eval "(require 'ob-tangle)"
-            --eval '(org-babel-tangle-file "~/emacs.d/README.org")'
-            --eval '(org-babel-tangle-file "~/emacs.d/Blogging.org")'
+            --eval '(org-babel-tangle-file "~/.config/emacs/README.org")'
+            --eval '(org-babel-tangle-file "~/.config/emacs/Blogging.org")'
       - run:
           name: "Byte-compile emacs config"
-          command: emacs --batch --load ~/.emacs.d/init.el
+          command: emacs --batch --load ~/.config/emacs/init.el
 
 jobs:
   build:
@@ -41,8 +41,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v5-org-{{ .Branch }}
-            - v5-org-trunk
+            - v6-org-{{ .Branch }}
+            - v6-org-trunk
       - configure-emacs
       - run:
           name: Tangle CSS
@@ -55,7 +55,7 @@ jobs:
           name: Publish Blog
           command: >
             emacs --batch
-            --load ~/.emacs.d/init.el
+            --load ~/.config/emacs/init.el
             --eval "(setq clojure-mode-hook nil)"
             --eval "(setq prog-mode-hook nil)"
             --eval "(setq text-mode-hook nil)"
@@ -63,10 +63,9 @@ jobs:
       - store_artifacts:
           path: ~/public_html
       - save_cache:
-          key: v5-org-{{ .Branch }}-{{ .Revision }}
+          key: v6-org-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ~/.emacs.d
-            - ~/emacs.d
+            - ~/.config
       - persist_to_workspace:
           root: ~/public_html
           paths:
