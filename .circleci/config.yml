@@ -32,7 +32,7 @@ commands:
             --eval '(org-babel-tangle-file "~/.config/emacs/Blogging.org")'
       - run:
           name: "Byte-compile emacs config"
-          command: emacs --batch --load ~/.config/emacs/init.el
+          command: emacs --batch --eval '(setq package-archives nil)' --load ~/.config/emacs/init.el
 
 jobs:
   build:
