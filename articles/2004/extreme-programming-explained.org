@@ -21,13 +21,13 @@ to XP.
 
 Beck uses the act of driving a car as a metaphor for the XP software
 development process. Carefully pointing a car in the right direction,
-locking the steering wheel in a death-grip and flooring the accelerator
-is seldom a good way of getting from A to B. Sure, you must have the
-"big picture" idea of where you're going and how to get there, but you
-should be prepared to apply constant small adjustments to the direction,
-brake and accelerator as you go along to make sure you stay on the road.
-Additionally, you better be prepared to ask for directions unless you
-know /exactly/ where you're going.
+locking the steering wheel in a death-grip and flooring the
+accelerator is seldom a good way of getting from A to B. Sure, you
+must have the "big picture" idea of where you're going and how to get
+there; but you should be ready to apply constant small adjustments to
+the direction, brake, and accelerator as you go along to make sure you
+stay on the road. Additionally, prepare to ask for directions unless
+you know /exactly/ where you're going.
 
 One concept introduced early on is the four variables of a software
 development project: cost, time, quality and scope. To successfully
@@ -38,17 +38,17 @@ fourth. Beck explains how quality and time tends to suffer when external
 forces get to pick the value of all the four variables, leaving you with
 crappy software behind schedule.
 
-The importance of testing, refactoring, pair programming and short
-release cycles is stressed throughout the book, as is keeping a constant
-dialog with the customer. Also covered is how to manage an XP team, as
-well as the various "specialist" roles (coach, tracker, tester, etc)
-within the team itself.
+The book stresses the importance of testing, refactoring, pair
+programming, and short release cycles throughout; as well as keeping a
+constant dialogue with the customer. Also covered is how to manage an
+XP team, as well as the "specialist" roles (coach, tracker, tester,
+etc) within the team itself.
 
-One feeling I am left with after reading this book is that the term
-/Extreme Programming/ is a terrible misfit. The term, at least to me,
-conjures up an image of tireless programmers holed up in a cave of
-computers programming hard & fast for 36 hours a day. However, this is
-not at all an accurate image. In my opinion, the processes and concepts
+One feeling left after reading this book is that the term /Extreme
+Programming/ is a terrible misfit. The term, at least to me, conjures
+up an image of tireless programmers holed up in a cave of computers
+programming hard & fast for 36 hours a day. However, this is not at
+all an accurate image. In my opinion, the processes and concepts
 described in this book are better described as /Extremely Sensible
 Programming/. Hardly as catchy though.
 
