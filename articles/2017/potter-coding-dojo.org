@@ -30,18 +30,18 @@ deep and I have found myself thinking about it a lot since.
 #+TOC: headlines
 
 * A Warning
-  :PROPERTIES:
-  :CUSTOM_ID: a-warning
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: a-warning
+:END:
 
 If you are considering doing this Coding Dojo yourself, you may want
 to postpone reading this until you do because it provides not one but
 /two/ different solutions that passes all the suggested test cases.
 
 * The Problem
-  :PROPERTIES:
-  :CUSTOM_ID: the-problem
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: the-problem
+:END:
 
 (Paraphrased by yours truly; the original is over at [[http://codingdojo.org/kata/Potter/][codingdojo]].)
 
@@ -79,9 +79,9 @@ In this case, your function should pick option #3 as it is the
 cheapest.
 
 * Towards a (simplistic) solution
-  :PROPERTIES:
-  :CUSTOM_ID: simple-solution
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: simple-solution
+:END:
 
 I immediately thought that this was a combinatorial problem and scoured
 Clojure's collections library for suitable combinatorial operators. I
@@ -254,9 +254,9 @@ long time. Witness:
 It's time to try a different approach.
 
 * Finding a solution /at all/ for large purchases
-  :PROPERTIES:
-  :CUSTOM_ID: fast-approximation
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: fast-approximation
+:END:
 
 Although the simple solution works for small numbers of books, it is
 impractical for larger stacks of books. I felt that it might be
@@ -296,9 +296,9 @@ Job done! Well, sort-of. This solution is fast and finds /a/ price, but
 it does not find /the best/ price for the final edge case.
 
 * Actually passing tests for edge cases
-  :PROPERTIES:
-  :CUSTOM_ID: passing-all-tests
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: passing-all-tests
+:END:
 
 My fast solution eagerly tries to build as big partitions as possible
 from the remaining books. So if you have the following: 1 1 2 2 3 3 4
@@ -390,9 +390,9 @@ right! Change the discount amount given for four books and the pricing
 function may start to exhibit weird behaviour.
 
 * Towards a moderately fast, correct & /robust/ solution
-  :PROPERTIES:
-  :CUSTOM_ID: less-cheating
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: less-cheating
+:END:
 
 Michelle tried to show me how to solve the problem using /Maths/ but
 kept on being distracted from reaching a solution by my questions
@@ -423,9 +423,9 @@ sets that fit those constraints, and try to fit the books we have into
 these sets.
 
 ** Experimenting in a Clojure REPL
-   :PROPERTIES:
-   :CUSTOM_ID: experimenting-in-repl
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: experimenting-in-repl
+:END:
 
 I still think that ~combo/partitions~ can help me find all the different
 /shapes/ or partitions, with a bit of creative management of its input,
@@ -507,9 +507,9 @@ than trying to detail the process, let's just skip straight to a tour
 of the result...
 
 ** A tour of my final solution
-   :PROPERTIES:
-   :CUSTOM_ID: solution-tour
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: solution-tour
+:END:
 
 Let's start with the basics. We need the ~clojure.math.combinatorics~
 package, so let's import that. And let's define our book price too.
@@ -715,9 +715,9 @@ its own, which /must/ match, so there's no special cases to handle
 there.
 
 ** Potential Improvements
-   :PROPERTIES:
-   :CUSTOM_ID: potential-improvements
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: potential-improvements
+:END:
 
 This is fast enough, correct enough, and robust enough that I don't
 feel like spending any more time on it. However, if I /were/ to make it
@@ -733,9 +733,9 @@ two areas of improvement I would consider are:
    the same arguments, so it might benefit from memoization.
 
 * Epilogue
-  :PROPERTIES:
-  :CUSTOM_ID: epilogue
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: epilogue
+:END:
 
 If you want to get into more details and play with this code yourself
 you might find it easier to check out my [[https://github.com/stig/coding-dojo][coding-dojo repo]] rather than
