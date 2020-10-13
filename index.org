@@ -11,28 +11,28 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 [[file:feed.xml][RSS]] feed.
 
 * Recent articles
+** [[file:articles/2020/broken-horses-and-master-branches.org][On broken horses & master branches]]                               :Soapbox:
+#+include: articles/2020/broken-horses-and-master-branches.org::begin_abstract :only-contents t
 ** [[file:articles/2020/musical-goals.org][Musical Goals]]                                                      :Music:
-   #+include: articles/2020/musical-goals.org::begin_abstract :only-contents t
+#+include: articles/2020/musical-goals.org::begin_abstract :only-contents t
 ** [[file:articles/2020/dark-mode.org][Dark Mode]]                                                          :Hacks:
-   #+include: articles/2020/dark-mode.org::begin_abstract :only-contents t
-** [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]]                                :Reviews:
-   #+include: articles/2020/driving-technical-change.org::begin_abstract :only-contents t
+#+include: articles/2020/dark-mode.org::begin_abstract :only-contents t
 * Older articles I'm fond of
 
 ** [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
-   #+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
+#+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
 
-   My first to reach the HackerNews front page. In weeks it got orders
-   of magnitude more hits than the rest of my site put together.
+My first to reach the HackerNews front page. In weeks it got orders
+of magnitude more hits than the rest of my site put together.
 
 ** [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                    :Clojure:
-   #+include: articles/2017/potter-coding-dojo.org::begin_abstract :only-contents t
-   
-   I like it because of the amount of iterations we went though, and
-   the discussions I had with coworkers about it at all-hands.
+#+include: articles/2017/potter-coding-dojo.org::begin_abstract :only-contents t
+
+I like it because of the amount of iterations we went though, and
+the discussions I had with coworkers about it at all-hands.
 
 ** [[file:articles/2006/rise-of-the-machine.org][Rise of the Machine]]                                                :Hacks:
-   #+include: articles/2006/rise-of-the-machine.org::begin_abstract :only-contents t
-   
-   I like this one because it was such a great learning experience!
+#+include: articles/2006/rise-of-the-machine.org::begin_abstract :only-contents t
+
+I like this one because it was such a great learning experience!
 

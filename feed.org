@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent articles
 
+* On broken horses & master branches
+:PROPERTIES:
+:RSS_PERMALINK: articles/2020/broken-horses-and-master-branches.html
+:ID:       0E0EF8AA-ACC6-4FE7-981A-970C353FF9E9
+:PUBDATE:  <2020-10-13 Tue 19:28>
+:END:
+#+include: articles/2020/broken-horses-and-master-branches.org
 * Musical Goals
 :PROPERTIES:
 :RSS_PERMALINK: articles/2020/musical-goals.html
@@ -28,63 +35,54 @@
 #+include: articles/2020/driving-technical-change.org :lines "3-"
 
 * Speeding up tests on CircleCI for a Python Django project :Python:CircleCI:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/speed-up-circleci.html
-  :ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
-  :PUBDATE:  <2019-07-01 Mon 17:49>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/speed-up-circleci.html
+:ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
+:PUBDATE:  <2019-07-01 Mon 17:49>
+:END:
 
-  #+include: articles/2019/speed-up-circleci.org :lines "3-"
+#+include: articles/2019/speed-up-circleci.org :lines "3-"
 
 * Digital Minimalism                                      :Lifestyle:Reviews:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/digital-minimalism.html
-  :ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
-  :PUBDATE:  <2019-06-15 Sat 14:07>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/digital-minimalism.html
+:ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
+:PUBDATE:  <2019-06-15 Sat 14:07>
+:END:
 
-  #+include: articles/2019/digital-minimalism.org :lines "3-"
+#+include: articles/2019/digital-minimalism.org :lines "3-"
 
 * Learning Guitar Update                                              :Music:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/learning-guitar-update.html
-  :ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
-  :PUBDATE:  <2019-05-10 Fri 08:53>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/learning-guitar-update.html
+:ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
+:PUBDATE:  <2019-05-10 Fri 08:53>
+:END:
 
-  #+include: articles/2019/learning-guitar-update.org :lines "3-"
+#+include: articles/2019/learning-guitar-update.org :lines "3-"
 
 * Bose QuietComfort 35 Review                                       :Reviews:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
-  :ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
-  :PUBDATE:  <2019-03-21 Thu 14:39>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
+:ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
+:PUBDATE:  <2019-03-21 Thu 14:39>
+:END:
 
-  #+include: articles/2019/bose-quietcomfort-35-review.org :lines "3-"
+#+include: articles/2019/bose-quietcomfort-35-review.org :lines "3-"
 * Musical Goals January Update                                        :Music:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/musical-goals-january-update.html
-  :ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
-  :PUBDATE:  <2019-02-03 Sun 22:38>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/musical-goals-january-update.html
+:ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
+:PUBDATE:  <2019-02-03 Sun 22:38>
+:END:
 
-  #+include: articles/2019/musical-goals-january-update.org :lines "3-"
+#+include: articles/2019/musical-goals-january-update.org :lines "3-"
 * My Musical Goals for 2019                                           :Music:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
-  :ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
-  :PUBDATE:  <2019-01-05 Sat 16:00>
-  :END:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
+:ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
+:PUBDATE:  <2019-01-05 Sat 16:00>
+:END:
 
-  #+include: articles/2019/musical-goals-for-2019.org :lines "3-"
-
-* Extracting Minecraft Music with Python                   :Minecraft:Python:
-  :PROPERTIES:
-  :RSS_PERMALINK: articles/2018/minecraft-music-extractor.html
-  :ID:       C950F98A-A473-4778-B7E0-4FF62825E751
-  :PUBDATE:  <2018-11-25 Sun 21:23>
-  :END:
-
-  #+include: articles/2018/minecraft-music-extractor.org :lines "3-"
+#+include: articles/2019/musical-goals-for-2019.org :lines "3-"
 
