@@ -7,11 +7,6 @@ I set up the Leafnode NNTP server on OS X, for use with Emacs and the
 Gnus newsreader.
 #+end_abstract
 
-:NOTE:
-I don't use Leafnode any more, nor read usenet news. Oh, and I've
-removed dead links to no-longer-existing config from this article.
-:END:
-
 #+TOC: headlines
 #+TOC: listings
 
@@ -19,6 +14,11 @@ removed dead links to no-longer-existing config from this article.
   :PROPERTIES:
   :CUSTOM_ID: intro
   :END:
+
+:NOTE:
+I don't use Leafnode any more, nor read usenet news, and I've removed
+dead links to config from this article.
+:END:
 
 I read email and news with Gnus. I often use a laptop, and often in
 places I don't have internet access. Gnus doesn't like not being able
