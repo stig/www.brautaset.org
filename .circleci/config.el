@@ -14,18 +14,16 @@
 
 (setq org-html-preamble "
 <nav>
-  <ul>
-    <li><a accesskey=\"H\" href=\"index.html\">Home</a></li>
-    <li><a accesskey=\"A\" href=\"about.html\">About</a></li>
-  </ul>
+  <p>
+    <a accesskey=\"H\" href=\"index.html\">Home</a> | <a accesskey=\"A\" href=\"about.html\">About</a>
+  </p>
 </nav>
 ")
 
 (setq org-html-postamble (concat "
 <nav>
-  <ul>
-    <li><a accesskey=\"H\" href=\"../../index.html\">Home</a></li>
-    <li><a accesskey=\"A\" href=\"../../about.html\">About</a></li>
+  <p>
+    <a accesskey=\"H\" href=\"../../index.html\">Home</a> | <a accesskey=\"A\" href=\"../../about.html\">About</a></p>
   </ul>
 </nav>
 " sb/copyright))

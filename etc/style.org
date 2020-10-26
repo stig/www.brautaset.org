@@ -92,20 +92,9 @@ a:active {
 #preamble,
 #postamble {font-size: smaller}
 
-#preamble nav ul,
-#postamble nav ul {
-    padding: 0;
-    list-style-type: none;
-}
 
-#preamble nav ul {text-align: right}
-
-#preamble nav ul li,
-#postamble nav ul li {display: inline}
-
-/* Padding between li elements in pre- /postamble nav */
-#preamble nav ul li + li,
-#postamble nav ul li + li {padding-left: 2ch}
+#preamble nav p,
+#postamble nav p {text-align: right}
 
 #postamble p,
 #preamble p {margin: 0.5ch 0}
