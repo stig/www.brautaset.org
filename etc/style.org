@@ -4,6 +4,8 @@
 CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
 those colours feature heavily. Hope I'm not overdoing it!
 
+PS: I try to exercise all the styles in [[file:style-demo.org][style-demo]].
+
 * Define CSS variables for Colours
 
 #+begin_src css

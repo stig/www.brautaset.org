@@ -1,0 +1,197 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+HTML_HEAD: <link rel="icon" type="image/png" href="icon.png" />
+#+HTML_HEAD: <meta name="referrer" content="same-origin">
+#+DESCRIPTION: Stig's Personal Soapbox
+#+title: Title of Page
+#+subtitle: Subtitle of page. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.
+#+date: <2017-06-03>
+#+begin_abstract
+This is an abstract.
+
+Nullam eu ante vel est convallis dignissim.
+#+end_abstract
+#+category: Org
+
+This is a page to showcase as much as possible of the different CSS
+styling I support.
+
+#+toc: headlines=1
+
+Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
+Etiam vel tortor sodales tellus ultricies commodo. Suspendisse
+potenti. Aenean in sem ac leo mollis blandit. Donec neque quam,
+dignissim in, mollis nec, sagittis eu, wisi. Phasellus lacus. Etiam
+laoreet quam sed arcu. Phasellus at dui in ligula mollis ultricies.
+Integer placerat tristique nisl. Praesent augue. Fusce commodo.
+
+* Top-level heading without content
+** Subheading without content
+*** Sub-subheading without content
+* Top-level heading with content
+
+Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
+Etiam vel tortor sodales tellus ultricies commodo. Suspendisse
+potenti. Aenean in sem ac leo mollis blandit. Donec neque quam,
+dignissim in, mollis nec, sagittis eu, wisi. Phasellus lacus. Etiam
+laoreet quam sed arcu. Phasellus at dui in ligula mollis ultricies.
+
+** Subheading with content
+
+Curabitur vulputate vestibulum lorem. Praesent augue. Cum sociis
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+mus. Vivamus id enim.
+
+*** Sub-subheading with content
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam
+nisl, tincidunt et, mattis eget, convallis nec, purus.
+
+* Text styles
+
+** Inline text styles
+This is /italics/, and *strong* text, as well as _underlined_, and
++stricken through+. We also have inline =monospace= and ~code~ fonts.
+
+** Block text styles
+
+*** Block quote
+#+begin_quote
+This is a quote.
+
+Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue
+ornare nulla, non luctus diam neque sit amet urna.
+#+end_quote
+
+*** Verbatim text
+
+: This text is verbatim.
+: Sed id ligula quis est convallis tempor.
+
+*** Verse
+
+#+begin_verse
+This is
+verse form,
+so will appear
+ragged right.
+
+Good for poems,
+if I ever did 'em.
+#+end_verse
+
+* What lists look like
+
+** Unordered lists
+- Item 1
+- Item 2
+  - Sub-item
+    - Sub-sub item
+** Ordered lists
+1. Item 1
+2. Item 2
+   1. Sub-item
+      1. Sub-sub item
+** Definition lists
+- Foo :: Fusce commodo.
+- Bar :: Nunc porta vulputate tellus.
+
+* Tables
+** This table has no caption
+| Foo | Bar |  Quux |
+|   1 | 2   | 23.90 |
+|   3 | Foo |     3 |
+|   1 |     |  Quux |
+** A table with a caption, but no header row
+#+caption: Table Caption
+| Foo | Bar |  Quux |
+|   1 |   2 | 23.90 |
+|   3 | Foo |     3 |
+|   1 |     |  Quux |
+** A table with header row
+#+caption: Long table caption: Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.
+| Foo | Bar |  Quux |
+|-----+-----+-------|
+|   1 | 2   | 23.90 |
+|   3 | Foo |     3 |
+|   1 |     |  Quux |
+* Checkboxes and status cookies
+- [ ] unchecked
+- [X] all subitems checked [100%] and [2/2]
+  - [X] checked
+  - [X] checked
+- [-] some sub-items checked unfinished [50%] and [1/2]
+  1. [X] checked
+  2. [ ] unchecked
+* TODO-keywords
+** PROJ This is a project
+*** TODO A TODO item
+*** DONE A closed TODO item
+CLOSED: [2020-10-26 Mon 15:00]
+*** WAITING I'm waiting for this
+
+* Code examples
+#+begin_src emacs-lisp
+(defun sb/test-style ()
+  "a string")
+#+end_src
+
+* Footnotes
+
+Nam a sapien[fn::This is an inline footnote.]. Donec posuere augue in
+quam. Nullam tempus. Nunc aliquet, augue nec adipiscing interdum,
+lacus tellus malesuada massa, quis varius mi purus non odio[fn:1].
+
+* Drawers
+
+** This heading has a PROPERTIES drawer
+:PROPERTIES:
+:DRILL_LAST_REVIEWED: [2020-10-23 Fri 22:01]
+:END:
+
+** This heading has a LOGBOOK drawer
+:LOGBOOK:
+- Note taken on [2020-10-26 Mon 15:02] \\
+  Another log entry.
+- Note taken on [2020-10-26 Mon 15:02] \\
+  This is a log entry.
+:END:
+
+** This has a custom drawer (called ASIDE)
+:ASIDE:
+This is an aside. I don't think I have specific styles for it.
+
+Nunc porta vulputate tellus.
+:END:
+
+** Properties, logbook, and custom drawer all in one
+:PROPERTIES:
+:CREATED:  20201026
+:END:
+:LOGBOOK:
+- Note taken on [2020-10-26 Mon 19:57] \\
+  I'm adding all sorts of drawers here.
+:END:
+:SAY_MY_NAME:
+This is a very custom drawer.
+:END:
+* Equations
+
+$£8 + 2 \times £8 \times (1 - 0.05) = £23.2$
+
+* Images
+** Unadorned image
+[[file:icon.png]]
+** Image with caption
+#+caption: This image has a caption
+[[file:icon.png]]
+
+* Footnotes
+
+[fn:1] A longer footnote.
+
+Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non
+orci commodo lobortis. Proin neque massa, cursus ut, gravida ut,
+lobortis eget, lacus. Sed diam. Praesent fermentum tempor tellus.
+Nullam tempus. Mauris ac felis vel velit tristique imperdiet.
+
