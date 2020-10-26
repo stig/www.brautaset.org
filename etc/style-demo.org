@@ -19,21 +19,16 @@ styling I support.
 
 Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
 Etiam vel tortor sodales tellus ultricies commodo. Suspendisse
-potenti. Aenean in sem ac leo mollis blandit. Donec neque quam,
-dignissim in, mollis nec, sagittis eu, wisi. Phasellus lacus. Etiam
-laoreet quam sed arcu. Phasellus at dui in ligula mollis ultricies.
-Integer placerat tristique nisl. Praesent augue. Fusce commodo.
+potenti. Aenean in sem ac leo mollis blandit.
 
 * Top-level heading without content
 ** Subheading without content
 *** Sub-subheading without content
 * Top-level heading with content
 
-Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
-Etiam vel tortor sodales tellus ultricies commodo. Suspendisse
-potenti. Aenean in sem ac leo mollis blandit. Donec neque quam,
-dignissim in, mollis nec, sagittis eu, wisi. Phasellus lacus. Etiam
-laoreet quam sed arcu. Phasellus at dui in ligula mollis ultricies.
+Donec at pede. Nunc rutrum turpis sed pede. Sed id ligula quis est
+convallis tempor. Nunc aliquet, augue nec adipiscing interdum, lacus
+tellus malesuada massa, quis varius mi purus non odio.
 
 ** Subheading with content
 
