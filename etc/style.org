@@ -134,7 +134,7 @@ a:active {
 .drawer {
     border-top: 3px solid var(--main);
     border-bottom: 1px solid var(--main);
-    padding: 0.5ch 0;
+    padding: 0.5ch;
 }
 
 #postamble {
