@@ -73,10 +73,10 @@ a:visited {
 }
 a:hover {
     color: var(--text);
-    background-color: var(--accent);
+    background-color: var(--highlight);
 }
 a:active {
-    color: var(--highlight);
+    color: var(--accent);
 }
 #+end_src
 
