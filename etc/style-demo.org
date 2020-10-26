@@ -8,7 +8,7 @@
 #+begin_abstract
 This is an abstract.
 
-Nullam eu ante vel est convallis dignissim.
+This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
 #+end_abstract
 #+category: Org
 
@@ -41,6 +41,18 @@ mus. Vivamus id enim.
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
 hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam
 nisl, tincidunt et, mattis eget, convallis nec, purus.
+
+* Links
+
+** Plain links
+This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
+
+** Links in a drawer
+These are the same links as above, but in a drawer.
+
+:DRAWER:
+This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
+:END:
 
 * Text styles
 
