@@ -25,18 +25,6 @@ those colours feature heavily. Hope I'm not overdoing it!
 This section is contains re-usable snippets used by other templates,
 to make it easier to be consistent across all the styles.
 
-** Orange Borders Everywhere
-
-This section is not exported
-
-#+name: background-box
-#+begin_src css :noweb yes
-background-color: var(--accent);
-border-top: 1px solid var(--main);
-border-bottom: 1px solid var(--main);
-border-radius: 1px;
-#+end_src
-
 * Set the Scene (Fonts, Margins, Headings)
 
 #+begin_src css :noweb yes
@@ -124,9 +112,24 @@ a:active {
 #preamble {margin-top: 0.5ch}
 #postamble {margin-bottom: 1ch}
 
-#preamble, #postamble, .abstract, .drawer {
-    <<background-box>>
+#preamble,
+.abstract,
+.drawer {
+    border-bottom: 1px solid var(--main);
+    border-radius: 1px;
     padding: 0 0.5ch;
+}
+
+#postamble {
+    border-top: 1px solid var(--main);
+    border-radius: 1px;
+    padding: 0 0.5ch;
+}
+
+.abstract,
+.drawer {
+    border-top: 1px solid var(--main);
+    background-color: var(--accent);
 }
 
 .abstract p { margin: 0.3em 0 }
@@ -185,7 +188,10 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 
 .tag span {
     background-clip:padding-box;
-    <<background-box>>
+    background-color: var(--accent);
+    border-top: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
+    border-radius: 1px;
     float:right;
     line-height:1;
     margin-left:.5em;
@@ -236,7 +242,8 @@ font colour to make them stand out less.
 
 #footnotes hr {
     border: 0;
-    <<background-box>>
+    border-top: 1px solid var(--main);
+    border-radius: 1px;
     width: 50%;
 }
 #+end_src
