@@ -99,9 +99,6 @@ a:active {
 #postamble p,
 #preamble p {margin: 0.5ch 0}
 
-#preamble {margin-top: 0.5ch}
-#postamble {margin-bottom: 1ch}
-
 #preamble,
 #postamble,
 .abstract,
@@ -112,30 +109,21 @@ a:active {
 
 #preamble {
     border-bottom: 3px solid var(--main);
-}
-    
-
-#postamble {
-    border-top: 3px solid var(--main);
-}
-
-.abstract,
-.drawer {
-    border-top: 3px solid var(--main);
-    border-bottom: 1px solid var(--main);
-    padding: 0.5ch;
+    margin-top: 0.5ch;
 }
 
 #postamble {
-    border-top: 1px solid var(--main);
-    border-radius: 1px;
+    border-top: 3px solid var(--main);
+    margin-bottom: 1ch;
     padding: 0 0.5ch;
 }
 
 .abstract,
 .drawer {
     border-top: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
     background-color: var(--accent);
+    padding: 0.5ch;
 }
 
 .abstract p { margin: 0.3em 0 }
