@@ -79,7 +79,7 @@ a:visited {
 }
 a:hover {
     color: var(--text);
-    background-color: var(--highlight);
+    background-color: var(--accent);
 }
 a:active {
     color: var(--highlight);
@@ -209,6 +209,7 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
     border-top: 1px solid var(--main);
     border-bottom: 1px solid var(--main);
     border-radius: 1px;
+    color: var(--text);
     float:right;
     line-height:1;
     margin-left:.5em;
