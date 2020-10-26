@@ -11,7 +11,7 @@ those colours feature heavily. Hope I'm not overdoing it!
     --accent: blanchedalmond;
     --bg: white;
     --footnotes: gray;
-    --highlight: yellow;
+    --highlight: gold;
     --main: darkorange;
     --text: black;
 }
@@ -78,6 +78,7 @@ a:visited {
 
 }
 a:hover {
+    color: var(--text);
     background-color: var(--highlight);
 }
 a:active {
@@ -113,11 +114,27 @@ a:active {
 #postamble {margin-bottom: 1ch}
 
 #preamble,
+#postamble,
 .abstract,
 .drawer {
-    border-bottom: 1px solid var(--main);
     border-radius: 1px;
-    padding: 0 0.5ch;
+    padding: 0.5ch 0;
+}
+
+#preamble {
+    border-bottom: 3px solid var(--main);
+}
+    
+
+#postamble {
+    border-top: 3px solid var(--main);
+}
+
+.abstract,
+.drawer {
+    border-top: 3px solid var(--main);
+    border-bottom: 1px solid var(--main);
+    padding: 0.5ch 0;
 }
 
 #postamble {
@@ -430,11 +447,11 @@ which we also activate here.
 /* Define colours for dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent: darkorange;
+        --accent: orangered;
         --bg: #333;
         --footnotes: gray;
         --highlight: gold;
-        --main: orangered;
+        --main: darkorange;
         --text: white;
     }
 }
