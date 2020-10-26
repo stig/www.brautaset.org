@@ -17,17 +17,9 @@ those colours feature heavily. Hope I'm not overdoing it!
 }
 #+end_src
 
-* Reusable snippets
-:PROPERTIES:
-:header-args:css: :tangle no
-:END:
-
-This section is contains re-usable snippets used by other templates,
-to make it easier to be consistent across all the styles.
-
 * Set the Scene (Fonts, Margins, Headings)
 
-#+begin_src css :noweb yes
+#+begin_src css
 /* Tangle style.org to update this file! */
 
 .title  {
@@ -88,7 +80,7 @@ a:active {
 
 ** Preamble, Postamble and Abstract are parts of every page and post
 
-#+begin_src css :noweb yes
+#+begin_src css
 #preamble,
 #postamble {font-size: smaller}
 
@@ -172,7 +164,7 @@ I style these like pre-/postamble and abstract, but add a heading.
 My index page has tags to classify posts. This makes them look snazzy,
 I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 
-#+begin_src css :noweb yes
+#+begin_src css
 .tag {
     font-family: monospace;
     padding: 0;
@@ -226,7 +218,7 @@ When asking Org to number source code examples it uses these classes.
 These get a diminutive orange ~<hr/>~ above, and have slightly lighter
 font colour to make them stand out less.
 
-#+begin_src css :noweb yes
+#+begin_src css
 .footpara {display: inline}
 .footdef  {margin-bottom: 1em}
 
@@ -300,7 +292,7 @@ blockquote p {
 
 * Pre
 
-#+begin_src css :noweb yes
+#+begin_src css
 pre {
     border: 1px solid var(--main);
     font-family: monospace;
