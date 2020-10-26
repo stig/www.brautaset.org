@@ -16,7 +16,6 @@
 <nav>
   <ul>
     <li><a accesskey=\"H\" href=\"index.html\">Home</a></li>
-    <li><a accesskey=\"p\" href=\"publications.html\">Publications</a></li>
     <li><a accesskey=\"A\" href=\"about.html\">About</a></li>
   </ul>
 </nav>
@@ -63,7 +62,7 @@
 	 :base-directory "~/blog"
 	 :exclude ".*"
 	 :html-postamble (lambda (ignored) sb/copyright) ;; no bottom nav for pages
-	 :include ("index.org" "publications.org" "articles.org" "about.org")
+	 :include ("index.org" "articles.org" "about.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 

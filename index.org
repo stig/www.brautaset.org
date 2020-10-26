@@ -13,7 +13,7 @@ favourites, are below. I also maintain a [[file:articles.org][full list of artic
 * Recent articles
 #+include: articles.org :lines "7-13"
 
-* Older articles I'm fond of
+* Favourite articles
 
 ** [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
 #+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
@@ -32,3 +32,46 @@ the discussions I had with coworkers about it at all-hands.
 
 I like this one because it was such a great learning experience!
 
+* Publications Elsewhere
+
+This is a list of some of my talks & articles hosted elsewhere:
+
+** [[http://web.archive.org/web/20160423082550/http://techblog.net-a-porter.com/author/stig/][My NET-A-PORTER TECHNICAL BLOG entries (2013--2014)]]
+
+These are my contributions to the NET-A-PORTER TECHNICAL BLOG.
+Including, but not limited to, a shell & regexp primer, maximising
+cache hit rates for REST APIs, and Akka musings.
+
+The original site is no longer online, but the WayBackMachine
+remembers.
+
+** [[https://speakerdeck.com/stig/delighting-your-users-with-sbjson-4][Delighting your users with SBJson 4 (2013)]]                   :SpeakerDeck:
+
+This is my first [[https://en.wikipedia.org/wiki/PechaKucha][Pecha Kucha]] style talk, made at NSLondon meetup. The
+sound is not great, and one of my slides is a bit misleading.
+Nevertheless I have a special fondness for this one. It was the first
+time someone I didn't know contacted me to ask me to give a talk.
+
+The video is no longer online, so I've linked to the slides instead.
+
+** [[http://skillsmatter.com/podcast/scala/overcoming-u-turns-and-dead-ends-lessons-of-using-scala-akka-spray-on-heroku][Overcoming U-turns and Dead Ends: Lessons of using Scala, Akka & Spray on Heroku (2013)]]
+
+I presented this "experience talk" at Scala eXchange 2013 with Sam
+Dean. (I'm afraid you have to log in to view the video.) It's a
+mish-mash of stuff we learnt while building the backend of The
+Netbook---NET-A-PORTER's social network offering.
+
+** [[https://web.archive.org/web/20170627125915/http://www.onlamp.com/pub/a/onlamp/2006/01/19/libtap.html][Testing C with Libtap (2006)]]
+
+I gave a talk at YAPC::NA 2005 on this topic, and a member of the
+audience approached me to write it up as an article for ONLamp
+magazine. This was the result.
+
+Sadly it is no longer online at the original URL, but the
+WayBackMachine has my back!
+
+** [[file:files/m4.pdf][Creating HTML with M4 (2002)]]
+
+A long, long time ago I used =make= and =cpp= to maintain my website.
+Later I upgraded to =m4=. I wrote an article on the subject, and Linux
+Magazine published it.
