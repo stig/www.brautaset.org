@@ -60,7 +60,7 @@
 	 :base-directory "~/blog"
 	 :exclude ".*"
 	 :html-postamble (lambda (ignored) sb/copyright) ;; no bottom nav for pages
-	 :include ("index.org" "articles.org" "about.org")
+	 :include ("index.org" "articles.org" "about.org" "styletest.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 
