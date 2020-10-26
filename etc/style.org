@@ -7,14 +7,14 @@ those colours feature heavily. Hope I'm not overdoing it!
 * Define CSS variables for Colours
 
 #+begin_src css
-  :root {
-      --accent: blanchedalmond;
-      --bg: white;
-      --footnotes: gray;
-      --highlight: yellow;
-      --main: darkorange;
-      --text: black;
-  }
+:root {
+    --accent: blanchedalmond;
+    --bg: white;
+    --footnotes: gray;
+    --highlight: yellow;
+    --main: darkorange;
+    --text: black;
+}
 #+end_src
 
 * Reusable snippets
@@ -31,105 +31,105 @@ This section is not exported
 
 #+name: background-box
 #+begin_src css :noweb yes
-  background-color: var(--accent);
-  border-top: 1px solid var(--main);
-  border-bottom: 1px solid var(--main);
-  border-radius: 1px;
+background-color: var(--accent);
+border-top: 1px solid var(--main);
+border-bottom: 1px solid var(--main);
+border-radius: 1px;
 #+end_src
 
 * Set the Scene (Fonts, Margins, Headings)
 
 #+begin_src css :noweb yes
-  /* Tangle style.org to update this file! */
+/* Tangle style.org to update this file! */
 
-  .title  {
-      text-align: center;
-      margin-bottom: .2em;
-      font-size: 2em;
-  }
-  .subtitle {
-      text-align: center;
-      margin-top:0;
-      color: var(--main);
-      font-size: 1.6em;
-  }
+.title  {
+    text-align: center;
+    margin-bottom: .2em;
+    font-size: 2em;
+}
+.subtitle {
+    text-align: center;
+    margin-top:0;
+    color: var(--main);
+    font-size: 1.6em;
+}
 
-  html {
-      font-family:
-          Optima,
-          -apple-system,
-          ".SFNSText-Regular",
-          "San Francisco",
-          "Roboto",
-          "Segoe UI",
-          "Helvetica Neue",
-          "Lucida Grande",
-          sans-serif;
-      margin: 0 0.5ch;
-      background-color: var(--bg);
-      color: var(--text);
-  }
+html {
+    font-family:
+        Optima,
+        -apple-system,
+        ".SFNSText-Regular",
+        "San Francisco",
+        "Roboto",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Lucida Grande",
+        sans-serif;
+    margin: 0 0.5ch;
+    background-color: var(--bg);
+    color: var(--text);
+}
 
-  body {
-      font-size: large;
-      max-width: 100%;
-      margin: 0;
-  }
+body {
+    font-size: large;
+    max-width: 100%;
+    margin: 0;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-      color: var(--main);
-      font-size: 1.4em;
-  }
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main);
+    font-size: 1.4em;
+}
 
-  a:link {
-      color: var(--main);
-  }
-  a:visited {
-      color: var(--text);
-      background-color: transparent;
+a:link {
+    color: var(--main);
+}
+a:visited {
+    color: var(--text);
+    background-color: transparent;
 
-  }
-  a:hover {
-      background-color: var(--highlight);
-  }
-  a:active {
-      color: var(--highlight);
-  }
+}
+a:hover {
+    background-color: var(--highlight);
+}
+a:active {
+    color: var(--highlight);
+}
 #+end_src
 
 ** Preamble, Postamble and Abstract are parts of every page and post
 
 #+begin_src css :noweb yes
-   #preamble,
-     #postamble {font-size: smaller}
+#preamble,
+#postamble {font-size: smaller}
 
-     #preamble nav ul,
-     #postamble nav ul {
-         padding: 0;
-         list-style-type: none;
-     }
+#preamble nav ul,
+#postamble nav ul {
+    padding: 0;
+    list-style-type: none;
+}
 
-     #preamble nav ul {text-align: right}
+#preamble nav ul {text-align: right}
 
-     #preamble nav ul li,
-     #postamble nav ul li {display: inline}
+#preamble nav ul li,
+#postamble nav ul li {display: inline}
 
-     /* Padding between li elements in pre- /postamble nav */
-     #preamble nav ul li + li,
-     #postamble nav ul li + li {padding-left: 2ch}
+/* Padding between li elements in pre- /postamble nav */
+#preamble nav ul li + li,
+#postamble nav ul li + li {padding-left: 2ch}
 
-     #postamble p,
-     #preamble p {margin: 0.5ch 0}
+#postamble p,
+#preamble p {margin: 0.5ch 0}
 
-     #preamble {margin-top: 0.5ch}
-     #postamble {margin-bottom: 1ch}
+#preamble {margin-top: 0.5ch}
+#postamble {margin-bottom: 1ch}
 
-     #preamble, #postamble, .abstract, .drawer {
-         <<background-box>>
-         padding: 0 0.5ch;
-     }
+#preamble, #postamble, .abstract, .drawer {
+    <<background-box>>
+    padding: 0 0.5ch;
+}
 
-     .abstract p { margin: 0.3em 0 }
+.abstract p { margin: 0.3em 0 }
 #+end_src
 
 * Tables
@@ -138,21 +138,24 @@ Most of this is straight out of Org's default CSS, but I like me some
 borders!
 
 #+begin_src css
-  table {border-collapse:collapse}
-  td, th {
-      vertical-align:top;
-      padding: 0 0.5em;
-  }
-  th.org-right  {text-align: center}
-  th.org-left   {text-align: center}
-  th.org-center {text-align: center}
-  td.org-right  {text-align: right}
-  td.org-left   {text-align: left}
-  td.org-center {text-align: center}
-  td + td, th + th {
-      border-left: 1px solid var(--main);
-  }
-  thead + tbody, tbody + tbody {border-top: 1px solid var(--main)}
+table {border-collapse:collapse}
+td,
+th {
+    vertical-align:top;
+    padding: 0 0.5em;
+}
+th.org-right  {text-align: center}
+th.org-left   {text-align: center}
+th.org-center {text-align: center}
+td.org-right  {text-align: right}
+td.org-left   {text-align: left}
+td.org-center {text-align: center}
+td + td,
+th + th {
+    border-left: 1px solid var(--main);
+}
+thead + tbody,
+tbody + tbody {border-top: 1px solid var(--main)}
 #+end_src
 
 * Drawers
@@ -161,10 +164,10 @@ I style these like pre-/postamble and abstract, but add a heading.
 [[https://pavpanchekha.com/blog/org-mode-publish.html][Credit]].
 
 #+begin_src css
-  .drawer h6 {
-      font-size: 100%;
-      margin: 1em 0;
-  }
+.drawer h6 {
+    font-size: 100%;
+    margin: 1em 0;
+}
 #+end_src
 
 * Tags
@@ -173,21 +176,21 @@ My index page has tags to classify posts. This makes them look snazzy,
 I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 
 #+begin_src css :noweb yes
-  .tag {
-      font-family: monospace;
-      padding: 0;
-      font-size: 80%;
-      font-weight: normal;
-  }
+.tag {
+    font-family: monospace;
+    padding: 0;
+    font-size: 80%;
+    font-weight: normal;
+}
 
-  .tag span {
-      background-clip:padding-box;
-      <<background-box>>
-      float:right;
-      line-height:1;
-      margin-left:.5em;
-      padding:.3em;
-  }
+.tag span {
+    background-clip:padding-box;
+    <<background-box>>
+    float:right;
+    line-height:1;
+    margin-left:.5em;
+    padding:.3em;
+}
 #+end_src
 
 * Styling source code
@@ -198,23 +201,23 @@ This allows us to get nice-looking output even when Emacs is
 publishing in ~--batch~ mode.
 
 #+begin_src css
-  .org-builtin {color: #483d8b}
-  .org-clojure-keyword {color: #008b8b}
-  .org-comment {color: #b22222}
-  .org-comment-delimiter {color: #b22222}
-  .org-doc {color: #8b2252}
-  .org-function-name {color: #0000ff}
-  .org-keyword {color: #a020f0}
-  .org-string {color: #8b2252}
-  .org-type {color: #228b22}
-  .org-variable-name {color: #a0522d}
+.org-builtin {color: #483d8b}
+.org-clojure-keyword {color: #008b8b}
+.org-comment {color: #b22222}
+.org-comment-delimiter {color: #b22222}
+.org-doc {color: #8b2252}
+.org-function-name {color: #0000ff}
+.org-keyword {color: #a020f0}
+.org-string {color: #8b2252}
+.org-type {color: #228b22}
+.org-variable-name {color: #a0522d}
 #+end_src
 
 When asking Org to number source code examples it uses these classes.
 
 #+begin_src css
-  .linenr {font-size: smaller}
-  .code-highlighted {background-color: var(--highlight)}
+.linenr {font-size: smaller}
+.code-highlighted {background-color: var(--highlight)}
 #+end_src
 
 * Footnotes in HTML
@@ -223,19 +226,19 @@ These get a diminutive orange ~<hr/>~ above, and have slightly lighter
 font colour to make them stand out less.
 
 #+begin_src css :noweb yes
-  .footpara {display: inline}
-  .footdef  {margin-bottom: 1em}
+.footpara {display: inline}
+.footdef  {margin-bottom: 1em}
 
-  #footnotes {
-      color: var(--footnotes);
-      font-size: smaller;
-  }
+#footnotes {
+    color: var(--footnotes);
+    font-size: smaller;
+}
 
-  #footnotes hr {
-      border: 0;
-      <<background-box>>
-      width: 50%;
-  }
+#footnotes hr {
+    border: 0;
+    <<background-box>>
+    width: 50%;
+}
 #+end_src
 
 * Figures, Captions, Images
@@ -243,26 +246,26 @@ font colour to make them stand out less.
 Captions near figures and listings need a bit more spacing, IMO.
 
 #+begin_src css
-  figure {
-      margin: 0;
-      text-align: center
-  }
+figure {
+    margin: 0;
+    text-align: center
+}
 
-  caption.t-above {
-      caption-side: top;
-      padding: 0.5ch;
-  }
-  caption.t-bottom {caption-side: bottom}
+caption.t-above {
+    caption-side: top;
+    padding: 0.5ch;
+}
+caption.t-bottom {caption-side: bottom}
 
-  img {max-width: 100%}
+img {max-width: 100%}
 #+end_src
 
 * Checkboxes
 
 #+begin_src css
-  .off > code { font-family: monospace; color: red; }
-  .on > code { font-family: monospace; color: green; }
-  .trans > code { font-family: monospace; color: orange; }
+.off > code { font-family: monospace; color: red; }
+.on > code { font-family: monospace; color: green; }
+.trans > code { font-family: monospace; color: orange; }
 #+end_src
 
 * Blockquote
@@ -270,114 +273,114 @@ Captions near figures and listings need a bit more spacing, IMO.
 Credit: https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 
 #+begin_src css
-  blockquote {
-      margin: 1.5em 1em;
-      padding: 0.5em 1em;
-      quotes: "\201C""\201D""\2018""\2019";
-  }
+blockquote {
+    margin: 1.5em 1em;
+    padding: 0.5em 1em;
+    quotes: "\201C""\201D""\2018""\2019";
+}
 
-  blockquote:before {
-      color: var(--main);
-      content: open-quote;
-      font-family: times;
-      font-size: 4em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.4em;
-  }
+blockquote:before {
+    color: var(--main);
+    content: open-quote;
+    font-family: times;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
 
-  blockquote p {
-      display: inline;
-      font-style: italic;
-      font-size: 1.4em;
-  }
+blockquote p {
+    display: inline;
+    font-style: italic;
+    font-size: 1.4em;
+}
 #+end_src
 
 * Pre
 
 #+begin_src css :noweb yes
-  pre {
-        border: 1px solid var(--main);
-        font-family: monospace;
-        overflow: auto;
-        padding: 0.3em 0.1em;
-    }
-    pre.src {
-        position: relative;
-        overflow: visible;
-    }
-    pre.src:before {
-        display: none;
-        position: absolute;
-        background-color: var(--accent);
-        top: -10px;
-        right: 10px;
-        padding: 3px;
-        border: 1px solid var(--main);
-    }
+pre {
+    border: 1px solid var(--main);
+    font-family: monospace;
+    overflow: auto;
+    padding: 0.3em 0.1em;
+}
+pre.src {
+    position: relative;
+    overflow: visible;
+}
+pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: var(--accent);
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid var(--main);
+}
 
-    pre.src:hover:before { display: inline;}
+pre.src:hover:before { display: inline;}
 
-    pre.src-C:before { content: 'C'; }
-    pre.src-awk:before { content: 'Awk'; }
-    pre.src-bash:before  { content: 'bash'; }
-    pre.src-calc:before { content: 'Emacs Calc'; }
-    pre.src-clojure:before { content: 'Clojure'; }
-    pre.src-conf:before { content: 'Configuration File'; }
-    pre.src-css:before { content: 'CSS'; }
-    pre.src-ditaa:before { content: 'ditaa'; }
-    pre.src-dot:before { content: 'Graphviz'; }
-    pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-    pre.src-gnuplot:before { content: 'gnuplot'; }
-    pre.src-html:before { content: 'HTML'; }
-    pre.src-java:before { content: 'Java'; }
-    pre.src-js:before { content: 'Javascript'; }
-    pre.src-latex:before { content: 'LaTeX'; }
-    pre.src-lilypond:before { content: 'Lilypond'; }
-    pre.src-lisp:before { content: 'Lisp'; }
-    pre.src-makefile:before { content: 'Makefile'; }
-    pre.src-objc:before { content: 'Objective-C';}
-    pre.src-org:before { content: 'Org mode'; }
-    pre.src-perl:before { content: 'Perl'; }
-    pre.src-plantuml:before { content: 'Plantuml'; }
-    pre.src-python:before { content: 'Python'; }
-    pre.src-scala:before { content: 'Scala'; }
-    pre.src-sed:before { content: 'Sed'; }
-    pre.src-sh:before { content: 'shell'; }
-    pre.src-shell:before { content: 'Shell Script'; }
-    pre.src-sql:before { content: 'SQL'; }
+pre.src-C:before { content: 'C'; }
+pre.src-awk:before { content: 'Awk'; }
+pre.src-bash:before  { content: 'bash'; }
+pre.src-calc:before { content: 'Emacs Calc'; }
+pre.src-clojure:before { content: 'Clojure'; }
+pre.src-conf:before { content: 'Configuration File'; }
+pre.src-css:before { content: 'CSS'; }
+pre.src-ditaa:before { content: 'ditaa'; }
+pre.src-dot:before { content: 'Graphviz'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-gnuplot:before { content: 'gnuplot'; }
+pre.src-html:before { content: 'HTML'; }
+pre.src-java:before { content: 'Java'; }
+pre.src-js:before { content: 'Javascript'; }
+pre.src-latex:before { content: 'LaTeX'; }
+pre.src-lilypond:before { content: 'Lilypond'; }
+pre.src-lisp:before { content: 'Lisp'; }
+pre.src-makefile:before { content: 'Makefile'; }
+pre.src-objc:before { content: 'Objective-C';}
+pre.src-org:before { content: 'Org mode'; }
+pre.src-perl:before { content: 'Perl'; }
+pre.src-plantuml:before { content: 'Plantuml'; }
+pre.src-python:before { content: 'Python'; }
+pre.src-scala:before { content: 'Scala'; }
+pre.src-sed:before { content: 'Sed'; }
+pre.src-sh:before { content: 'shell'; }
+pre.src-shell:before { content: 'Shell Script'; }
+pre.src-sql:before { content: 'SQL'; }
 #+end_src
 
 * Equations
 
 #+begin_src css
-  .equation-container {
-      display: table;
-      text-align: center;
-      width: 100%;
-  }
-  .equation {
-      vertical-align: middle;
-  }
-  .equation-label {
-      display: table-cell;
-      text-align: right;
-      vertical-align: middle;
-  }
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.equation {
+    vertical-align: middle;
+}
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
 #+end_src
 
 * Misc default styles from Org's default set
 
 #+begin_src css
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  p.verse { margin-left: 3%; }
-  dt { font-weight: bold; }
+.todo       { font-family: monospace; color: red; }
+.done       { font-family: monospace; color: green; }
+.priority   { font-family: monospace; color: orange; }
+.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline  { text-decoration: underline; }
+p.verse     { margin-left: 3%; }
+dt          { font-weight: bold; }
 #+end_src
 
 * Cater for bigger screens
@@ -393,39 +396,39 @@ nicer on big screens. Particularly when used in a columnar layout,
 which we also activate here.
 
 #+begin_src css
-  @media (min-width: 600px) {
-      body {
-          font-size: x-large;
-          max-width: 65ch;
-          margin: auto;
-      }
+@media (min-width: 600px) {
+    body {
+        font-size: x-large;
+        max-width: 65ch;
+        margin: auto;
+    }
 
-      h1, h2, h3 { font-size: 1.8em }
+    h1, h2, h3 { font-size: 1.8em }
 
-      .title { font-size: 3em }
+    .title { font-size: 3em }
 
-      figure {
-          margin: 1ch;
-          padding: 1ch;
-      }
+    figure {
+        margin: 1ch;
+        padding: 1ch;
+    }
 
-      .row {display: flex}
-      .column {flex: 50%}
-  }
+    .row {display: flex}
+    .column {flex: 50%}
+}
 #+end_src
 
 * Change colours for Dark mode
 
 #+begin_src css
-  /* Define colours for dark mode */
-  @media (prefers-color-scheme: dark) {
-      :root {
-          --accent: darkorange;
-          --bg: #333;
-          --footnotes: gray;
-          --highlight: gold;
-          --main: orangered;
-          --text: white;
-      }
-  }
+/* Define colours for dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: darkorange;
+        --bg: #333;
+        --footnotes: gray;
+        --highlight: gold;
+        --main: orangered;
+        --text: white;
+    }
+}
 #+end_src
