@@ -222,7 +222,7 @@ font colour to make them stand out less.
 
 #+begin_src css
 .footpara {display: inline}
-.footdef  {margin-bottom: 1em}
+.footdef {margin-bottom: 1em}
 
 #footnotes {
     color: var(--footnotes);

@@ -186,9 +186,6 @@ $£8 + 2 \times £8 \times (1 - 0.05) = £23.2$
 
 [fn:1] A footnote with its own footnote[fn:2].
 
-[fn:2] A longer footnote.
+[fn:2] A longer footnote with multiple paragraphs.
 
-Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non
-orci commodo lobortis. Proin neque massa, cursus ut, gravida ut,
-lobortis eget, lacus. Sed diam. Praesent fermentum tempor tellus.
-Nullam tempus. Mauris ac felis vel velit tristique imperdiet.
+I've not figured out how to display them separately.
