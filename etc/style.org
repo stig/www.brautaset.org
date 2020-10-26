@@ -97,6 +97,7 @@ a:active {
 #postamble,
 .abstract,
 .drawer {
+    background-color: var(--accent);
     border-radius: 1px;
     padding: 0.5ch 0;
 }
@@ -104,6 +105,7 @@ a:active {
 #preamble {
     border-bottom: 3px solid var(--main);
     margin-top: 0.5ch;
+    padding: 0 0.5ch;
 }
 
 #postamble {
@@ -413,18 +415,3 @@ which we also activate here.
 }
 #+end_src
 
-* Change colours for Dark mode
-
-#+begin_src css
-/* Define colours for dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --accent: orangered;
-        --bg: #333;
-        --footnotes: gray;
-        --highlight: gold;
-        --main: darkorange;
-        --text: white;
-    }
-}
-#+end_src
