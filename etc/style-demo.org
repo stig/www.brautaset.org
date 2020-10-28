@@ -54,15 +54,13 @@ These are the same links as above, but in a drawer.
 This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
 :END:
 
-* Text styles
-
-** Inline text styles
+* Inline text styles
 This is /italics/, and *strong* text, as well as _underlined_, and
 +stricken through+. We also have inline =monospace= and ~code~ fonts.
 
-** Block text styles
+* Block text styles
 
-*** Block quote
+** Block quote
 #+begin_quote
 This is a quote.
 
@@ -70,12 +68,19 @@ Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue
 ornare nulla, non luctus diam neque sit amet urna.
 #+end_quote
 
-*** Verbatim text
+** Examples
+
+#+begin_example
+This is an example.
+It looks the same as verbatim.
+#+end_example
+
+** Verbatim text
 
 : This text is verbatim.
 : Sed id ligula quis est convallis tempor.
 
-*** Verse
+** Verse
 
 #+begin_verse
 This is
