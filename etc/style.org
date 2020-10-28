@@ -268,29 +268,18 @@ img {max-width: 100%}
 
 * Blockquote
 
-Credit: https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
-
 #+begin_src css
 blockquote {
-    margin: 1.5em 1em;
-    padding: 0.5em 1em;
-    quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-    color: var(--main);
-    content: open-quote;
-    font-family: times;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+    margin: 0 2em;
+    padding: 1em;
+    border-left: 9px solid var(--main);
+    background-color: var(--accent);
 }
 
 blockquote p {
-    display: inline;
-    font-style: italic;
     font-size: 1.4em;
+    margin: 0.5em 0;
+    padding: 0;
 }
 #+end_src
 
