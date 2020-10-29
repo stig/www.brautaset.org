@@ -50,10 +50,10 @@ html {
     margin: 0 0.5ch;
     background-color: var(--bg);
     color: var(--text);
+    font-size: large;
 }
 
-body {
-    font-size: large;
+#content {
     max-width: 100%;
     margin: 0;
 }
@@ -86,12 +86,8 @@ a:active {
 #preamble,
 #postamble {font-size: smaller}
 
-
-#preamble nav p,
-#postamble nav p {text-align: right}
-
-#postamble p,
-#preamble p {margin: 0.5ch 0}
+#preamble p,
+#postamble p {margin: 0.5ch 0}
 
 #preamble,
 #postamble,
@@ -384,8 +380,9 @@ which we also activate here.
 
 #+begin_src css
 @media (min-width: 600px) {
-    body {
-        font-size: x-large;
+    html {font-size: x-large}
+
+    #content {
         max-width: 65ch;
         margin: auto;
     }
@@ -403,4 +400,3 @@ which we also activate here.
     .column {flex: 50%}
 }
 #+end_src
-
