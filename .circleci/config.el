@@ -12,7 +12,7 @@
 		(capitalize name)
 		content)))
 
-(setq org-html-preamble "
+(setq pagenav "
 <nav>
   <p>
     <a accesskey=\"H\" href=\"index.html\">Home</a> | <a accesskey=\"A\" href=\"about.html\">About</a>
@@ -20,13 +20,13 @@
 </nav>
 ")
 
-(setq org-html-postamble (concat "
+(setq postnav "
 <nav>
   <p>
     <a accesskey=\"H\" href=\"../../index.html\">Home</a> | <a accesskey=\"A\" href=\"../../about.html\">About</a></p>
   </ul>
 </nav>
-" sb/copyright))
+")
 
 (setq common-properties
       '(:author "Stig Brautaset"
@@ -59,7 +59,8 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
 	 :exclude ".*"
-	 :html-postamble (lambda (ignored) sb/copyright) ;; no bottom nav for pages
+	 :html-preamble ,pagenav
+	 :html-postamble ,(concat pagenav sb/copyright)
 	 :include ("index.org" "articles.org" "about.org" "etc/style-demo.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
@@ -67,7 +68,8 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-	 :html-preamble nil ;; no preamble (top nav!) for articles
+	 :html-preamble ,postnav
+	 :html-postamble ,(concat postnav sb/copyright)
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
