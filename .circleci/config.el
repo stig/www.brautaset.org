@@ -12,21 +12,14 @@
 		(capitalize name)
 		content)))
 
-(setq pagenav "
+(defun nav (parent-path)
+  (format "
 <nav>
   <p>
-    <a accesskey=\"H\" href=\"index.html\">Home</a> | <a accesskey=\"A\" href=\"about.html\">About</a>
+    <a accesskey=\"H\" href=\"%sindex.html\">Home</a> | <a accesskey=\"A\" href=\"%sabout.html\">About</a>
   </p>
 </nav>
-")
-
-(setq postnav "
-<nav>
-  <p>
-    <a accesskey=\"H\" href=\"../../index.html\">Home</a> | <a accesskey=\"A\" href=\"../../about.html\">About</a></p>
-  </ul>
-</nav>
-")
+" parent-path parent-path))
 
 (setq common-properties
       '(:author "Stig Brautaset"
@@ -59,8 +52,8 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
 	 :exclude ".*"
-	 :html-preamble ,pagenav
-	 :html-postamble ,(concat pagenav sb/copyright)
+	 :html-preamble ,(nav "")
+	 :html-postamble ,(concat (nav "") sb/copyright)
 	 :include ("index.org" "articles.org" "about.org" "etc/style-demo.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
@@ -68,8 +61,8 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-	 :html-preamble ,postnav
-	 :html-postamble ,(concat postnav sb/copyright)
+	 :html-preamble ,(nav "../../")
+	 :html-postamble ,(concat (nav "../../") sb/copyright)
 	 :publishing-directory "~/public_html/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
