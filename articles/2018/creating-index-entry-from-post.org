@@ -32,64 +32,64 @@ string, I copy it to my kill ring so it's ready for pasting into the
 index page.
 
 #+BEGIN_SRC emacs-lisp -n -r
-  (defun sb/org-kw-get (key)   (ref:macro)
-    "Return a lambda that takes an Org keyword
-  element and returns its :value property if its :key
-  property matches `key'."
-    `(lambda (kw)
-       (if (equal ,key (org-element-property :key kw))
-	   (org-element-property :value kw))))
+(defun sb/org-kw-get (key) (ref:macro)
+  "Return a lambda that takes an Org keyword
+element and returns its :value property if its :key
+property matches `key'."
+  `(lambda (kw)
+     (if (equal ,key (org-element-property :key kw))
+	 (org-element-property :value kw))))
 
-  (defun sb/parse-metadata () (ref:parse-metadata)
-    "Call in a blog post to get an entry suitable for
-  linking to this post from the index page."
-    (interactive)
-    (let* ((path (s-chop-prefix
-		  (expand-file-name "~/blog/")
-		  (buffer-file-name)))
-	   (tree (org-element-parse-buffer))
+(defun sb/parse-metadata () (ref:parse-metadata)
+  "Call in a blog post to get an entry suitable for
+linking to this post from the index page."
+  (interactive)
+  (let* ((path (s-chop-prefix
+		(expand-file-name "~/blog/")
+		(buffer-file-name)))
+	 (tree (org-element-parse-buffer))
 
-	   (title
-	    (org-element-map tree 'keyword
-	      (sb/org-kw-get "TITLE") nil t))
+	      (title
+	       (org-element-map tree 'keyword
+		 (sb/org-kw-get "TITLE") nil t))
 
-	   (categories
-	    (org-element-map tree 'keyword
-	      (sb/org-kw-get "CATEGORY")))
+	      (categories
+	       (org-element-map tree 'keyword
+		 (sb/org-kw-get "CATEGORY")))
 
-	   (abstract (ref:abstract)
-	    (org-element-interpret-data
-	     (org-element-map tree 'special-block
-	       (lambda (sb)
-		 (if (equal "abstract"
-			    (org-element-property :type sb))
-		     (org-element-contents sb)))))))))
+	      (abstract (ref:abstract)
+			(org-element-interpret-data
+			 (org-element-map tree 'special-block
+			   (lambda (sb)
+			     (if (equal "abstract"
+					(org-element-property :type sb))
+				 (org-element-contents sb)))))))))
 
-      (with-temp-buffer
-	(org-mode)   (ref:org-mode)
-	(org-insert-heading)
+(with-temp-buffer
+  (org-mode)   (ref:org-mode)
+  (org-insert-heading)
 
-	;; Would have loved to use `org-insert-link' here but
-	;; I can't stop it from presenting a prompt :-(
-	(insert "[[file:" path "][" title "]]")
+  ;; Would have loved to use `org-insert-link' here but
+  ;; I can't stop it from presenting a prompt :-(
+  (insert "[[file:" path "][" title "]]")
 
-	(insert "\n\n")
-	(insert abstract)
+  (insert "\n\n")
+  (insert abstract)
 
-	(org-set-property "PUBDATE" date)
-	(org-set-property "RSS_PERMALINK"
-			  (format "%s.html"
-				  (s-chop-suffix ".org" path)))
+  (org-set-property "PUBDATE" date)
+  (org-set-property "RSS_PERMALINK"
+		    (format "%s.html"
+			    (s-chop-suffix ".org" path)))
 
-	;; Need to go back to the first line to set tags
-	(goto-char (point-min))
-	(org-set-tags-to categories) (ref:set-tags)
-	(org-set-tags nil t) ;; adjust tags in the source
+  ;; Need to go back to the first line to set tags
+  (goto-char (point-min))
+  (org-set-tags-to categories) (ref:set-tags)
+  (org-set-tags nil t) ;; adjust tags in the source
 
-	;; Copy the contents of the temporary buffer as a string
-	;; *without properties* to my kill ring for pasting into
-	;; my index.org file
-	(copy-region-as-kill
-	 (point-min) (point-max)))))
+  ;; Copy the contents of the temporary buffer as a string
+  ;; *without properties* to my kill ring for pasting into
+  ;; my index.org file
+  (copy-region-as-kill
+   (point-min) (point-max)))
 #+END_SRC
 
