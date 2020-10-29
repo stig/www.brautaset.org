@@ -1,9 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Digital Minimalism
-#+begin_abstract
-I introduce Cal Newport's book, and how it's helping me take control
-of where I spend my limited currency in today's attention economy.
-#+end_abstract
 #+category: Lifestyle
 #+category: Reviews
 #+category: Popular
@@ -61,3 +57,7 @@ digital distractions, bit by bit. For a while I've desperately wanted
 more control over where I spend my limited currency in the attention
 economy. Reading /Digital Minimalism/ gave me the confidence to take
 action.
+* Abstract                                                         :noexport:
+
+I introduce Cal Newport's book, and how it's helping me take control
+of where I spend my limited currency in today's attention economy.

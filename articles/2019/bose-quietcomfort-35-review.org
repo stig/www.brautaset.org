@@ -1,8 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Bose QuietComfort 35 Review
-#+begin_abstract
-I review the noise-cancelling headphones I've been using for about 3 years.
-#+end_abstract
 #+category: Reviews
 
 Colleagues have asked numerous times about my experience with Bose
@@ -78,3 +75,6 @@ For my use I think the good outweigh the bad, and if my QuiteComfort
 35s broke I would /consider/ getting them again. I'm not 100% sure
 because I feel where they really shine (solo) air/train travel, and
 I'm not sure the price is worth it given I so rarely travel nowadays.
+* Abstract                                                         :noexport:
+
+I review the noise-cancelling headphones I've been using for about 3 years.

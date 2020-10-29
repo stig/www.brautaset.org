@@ -1,11 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: On broken horses & master branches
 #+category: Soapbox
-#+begin_abstract
-I explain why I chose to rename the =master= branch in my Git
-repos to =trunk=.
-#+end_abstract
-
 Every time I start learning to ride I get disillusioned and give up
 due to two things; the cost, and the /terminology/. Referring to a horse
 as /broken/[fn::Using the term /trained/ is thankfully becoming more
@@ -31,4 +26,9 @@ I don't want to deflect from tackling important systemic injustices.
 In the wider context renaming the default branch in my project repos
 is small potatoes, for sure. But it is one I /can/ do, as an
 individual, on my free time.
+
+* Abstract                                                         :noexport:
+
+I explain why I chose to rename the =master= branch in my Git
+repos to =trunk=.
 

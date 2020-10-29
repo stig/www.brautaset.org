@@ -2,11 +2,6 @@
 #+title: Setting up Leafnode on OS X
 #+date: <2016-05-12>
 #+category: Tutorial
-#+begin_abstract
-I set up the Leafnode NNTP server on OS X, for use with Emacs and the
-Gnus newsreader.
-#+end_abstract
-
 #+TOC: headlines
 #+TOC: listings
 
@@ -224,3 +219,8 @@ also have to change the above command.
 
 I hope you found this useful. I know I would have when I was trying to
 set this up a few weeks ago!
+* Abstract                                                         :noexport:
+
+I set up the Leafnode NNTP server on OS X, for use with Emacs and the
+Gnus newsreader.
+

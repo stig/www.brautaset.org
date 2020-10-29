@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Driving Technical Change
 
-#+begin_abstract
-I review the book /Driving Technical Change/ by Terrence Ryan.
-#+end_abstract
 #+category: Reviews
 
 This is a short book of about 130 pages, divided unevenly into four
@@ -43,3 +40,6 @@ against the book itself[fn::Because I'm not /Irrational/.].
 Overall I enjoyed the book, and will keep it for future reference. You
 can find other (mixed) reviews at this [[https://www.goodreads.com/book/show/15938294-driving-technical-change][Goodreads link]][fn::Here I'm
 attempting to /Create Trust/.].
+* Abstract                                                         :noexport:
+
+I review the book /Driving Technical Change/ by Terrence Ryan.

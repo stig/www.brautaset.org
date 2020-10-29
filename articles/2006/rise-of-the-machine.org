@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Rise of the Machine
 #+date: <2006-08-12>
-#+begin_abstract
-I ruminate on implementing a simple virtual machine---for a simple
-language---in C.
-#+end_abstract
 #+category: Development
 
 Last week [[http://www.google.com/search?q=Norman+Nunley][Norman Nunley]] got me interested in the [[http://icfpcontest.org/][ICFP challenge 2006]],
@@ -72,3 +68,7 @@ slots in the parent array.
 
 *Update, 2007/09/03:* Here's my [[https://github.com/stig/icfp2006/blob/trunk/um.c][Virtual Machine]], should you wish to take
 a look.
+* Abstract                                                         :noexport:
+
+I ruminate on implementing a simple virtual machine---for a simple
+language---in C.

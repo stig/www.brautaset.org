@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Money Transfer
 #+date: <2006-01-30>
-#+begin_abstract
-Wherein I rant about my unsuccessful attempt at transferring money
-from the UK HSBC account to my Norwegian (Nordea) bank account.
-#+end_abstract
 #+category: Soapbox
 
 Why, why, /why/ do the banks in this country insist on staying put in
@@ -61,3 +57,7 @@ humans/ and I could set it up in my own home at any hour I was
 comfortable with. This has been possible for at least 4 years, so it's
 nothing new; maybe in 6-7 years British banks will follow. They will
 of course claim that they are the [[file:../2004/chip-and-pin.org][among the early adopters]].
+* Abstract                                                         :noexport:
+
+Wherein I rant about my unsuccessful attempt at transferring money
+from the UK HSBC account to my Norwegian (Nordea) bank account.

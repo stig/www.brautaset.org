@@ -3,12 +3,6 @@
 #+subtitle: How are the Conservatives "working for everyone"?
 #+date: <2017-05-20>
 #+category: Soapbox
-#+begin_abstract
-I ask how the Conservatives can say they are "working for everyone"
-whilst giving extra tax breaks and benefits to the 15% of top earners,
-and at the same time cutting benefits for the poor.
-#+end_abstract
-
 Dear [[https://www.teamtrevelyan.co.uk/][Anne-Marie]],
 
 I live in your constituency and I have a question.
@@ -64,3 +58,9 @@ you should have about £20,279.68 left after tax.
 http://www.independent.co.uk/news/uk/home-news/food-bank-usage-at-record-high-reveals-trussell-trust-a6984921.html
 
 [fn:7] Source: https://en.wikipedia.org/wiki/Income_in_the_United_Kingdom#High_income
+* Abstract                                                         :noexport:
+
+I ask how the Conservatives can say they are "working for everyone"
+whilst giving extra tax breaks and benefits to the 15% of top earners,
+and at the same time cutting benefits for the poor.
+

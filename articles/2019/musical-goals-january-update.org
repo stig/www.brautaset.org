@@ -1,10 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Musical Goals January Update
-#+begin_abstract
-The first of (hopefully) monthly posts with updates on my musical
-goals for 2019. I cover achievements in January, and new goals for
-February.
-#+end_abstract
 #+category: Music
 
 A month ago I wrote about my [[file:musical-goals-for-2019.org][musical goals for 2019]], where I rounded
@@ -64,3 +59,8 @@ doesn't support well.
   4. Play [[https://www.justinguitar.com/guitar-lessons/how-to-practice-scales-sc-102][major scale pattern 1 in thirds]] at 160 bpm
   5. Learn, transcribe (rhythm part), and record [[https://www.youtube.com/watch?v=JGftIcp2SC0][Touch Too Much]] by AC/DC
 
+* Abstract                                                         :noexport:
+
+The first of (hopefully) monthly posts with updates on my musical
+goals for 2019. I cover achievements in January, and new goals for
+February.

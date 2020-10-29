@@ -1,11 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Creating an S3 website bucket exposed over HTTPS with CloudFormation
 #+date: <2017-07-22 Sat>
-#+begin_abstract
-I show how to create an S3 bucket set up to serve a static website,
-and expose it over HTTPS via CloudFront, using the same SSL
-certificate we created in the previous post---all via CloudFormation.
-#+end_abstract
 #+category: CloudFormation
 #+category: S3
 
@@ -169,3 +164,8 @@ headache today.)
 
 [fn:1] You don't have to specify a ~BucketName~, but I like to as it
 makes finding the right bucket in the S3 console a lot easier.
+* Abstract                                                         :noexport:
+
+I show how to create an S3 bucket set up to serve a static website,
+and expose it over HTTPS via CloudFront, using the same SSL
+certificate we created in the previous post---all via CloudFormation.

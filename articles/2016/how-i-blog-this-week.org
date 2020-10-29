@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: How I Blog (This Week)
 #+date: <2016-10-06>
-#+begin_abstract
-I share my Emacs & Org-mode setup for blogging with Jekyll.
-#+end_abstract
 #+category: Org
 
  I've long used [[http://jekyllrb.com][Jekyll]] to assemble my blog, and Emacs two write all my content
@@ -65,3 +62,6 @@ experience I don't do that a lot. And if I /do/ then I should be able to find
 my old source in my =~/org/Archive.org= file, where most deleted from
 =~/org/Agenda.org= ends up. This directory is in iCloud Drive.
 
+* Abstract                                                         :noexport:
+
+I share my Emacs & Org-mode setup for blogging with Jekyll.

@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Electoral Reform Now!
 #+date: <2017-06-10>
-#+begin_abstract
-I try to show how unjust the First Past the Post system used to elect
-MPs in UK General Elections is.
-#+end_abstract
 #+category: Soapbox
 
 In the 2017 UK General Election the Conservatives got just over 6
@@ -74,3 +70,7 @@ of which addresses this. The biggest challenge they face, however, is
 to get /any/ proportional system through Parliament---given the
 incumbent party would lose out massively. Nevertheless, I think it's
 important to try.
+* Abstract                                                         :noexport:
+
+I try to show how unjust the First Past the Post system used to elect
+MPs in UK General Elections is.

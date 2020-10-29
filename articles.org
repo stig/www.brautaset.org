@@ -5,83 +5,83 @@
 These are all my articles in reverse chronological order.
 
 * [[file:articles/2020/broken-horses-and-master-branches.org][On broken horses & master branches]]                                :Soapbox:
-#+include: articles/2020/broken-horses-and-master-branches.org::begin_abstract :only-contents t
+#+include: articles/2020/broken-horses-and-master-branches.org::abstract :only-contents t
 * [[file:articles/2020/musical-goals.org][Musical Goals]]             :Music:
-#+include: articles/2020/musical-goals.org::begin_abstract :only-contents t
+#+include: articles/2020/musical-goals.org::abstract :only-contents t
 * [[file:articles/2020/dark-mode.org][Dark Mode]]                     :Hacks:
-#+include: articles/2020/dark-mode.org::begin_abstract :only-contents t
+#+include: articles/2020/dark-mode.org::abstract :only-contents t
 * [[file:articles/2020/driving-technical-change.org][Driving Technical Change (Review)]] :Reviews:
-#+include: articles/2020/driving-technical-change.org::begin_abstract :only-contents t
+#+include: articles/2020/driving-technical-change.org::abstract :only-contents t
 * [[file:articles/2019/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
-#+include: articles/2019/speed-up-circleci.org::begin_abstract :only-contents t
+#+include: articles/2019/speed-up-circleci.org::abstract :only-contents t
 * [[file:articles/2019/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
-#+include: articles/2019/digital-minimalism.org::begin_abstract :only-contents t
+#+include: articles/2019/digital-minimalism.org::abstract :only-contents t
 * [[file:articles/2019/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
-#+include: articles/2019/learning-guitar-update.org::begin_abstract :only-contents t
+#+include: articles/2019/learning-guitar-update.org::abstract :only-contents t
 * [[file:articles/2019/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
-#+include: articles/2019/bose-quietcomfort-35-review.org::begin_abstract :only-contents t
+#+include: articles/2019/bose-quietcomfort-35-review.org::abstract :only-contents t
 * [[file:articles/2019/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
-#+include: articles/2019/musical-goals-january-update.org::begin_abstract :only-contents t
+#+include: articles/2019/musical-goals-january-update.org::abstract :only-contents t
 * [[file:articles/2019/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
-#+include: articles/2019/musical-goals-for-2019.org::begin_abstract :only-contents t
+#+include: articles/2019/musical-goals-for-2019.org::abstract :only-contents t
 * [[file:articles/2018/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
-#+include: articles/2018/minecraft-music-extractor.org::begin_abstract :only-contents t
+#+include: articles/2018/minecraft-music-extractor.org::abstract :only-contents t
 * [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
-#+include: articles/2018/submarine-sonar-hiring.org::begin_abstract :only-contents t
+#+include: articles/2018/submarine-sonar-hiring.org::abstract :only-contents t
 * [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
-#+include: articles/2018/creating-index-entry-from-post.org::begin_abstract :only-contents t
+#+include: articles/2018/creating-index-entry-from-post.org::abstract :only-contents t
 * [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
-#+include: articles/2018/making-team-decisions.org::begin_abstract :only-contents t
+#+include: articles/2018/making-team-decisions.org::abstract :only-contents t
 * [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
-#+include: articles/2018/org-mode-rss.org::begin_abstract :only-contents t
+#+include: articles/2018/org-mode-rss.org::abstract :only-contents t
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
-#+include: articles/2018/no-more-superloopy.org::begin_abstract :only-contents t
+#+include: articles/2018/no-more-superloopy.org::abstract :only-contents t
 * [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
-#+include: articles/2018/support-my-foss-work.org::begin_abstract :only-contents t
+#+include: articles/2018/support-my-foss-work.org::abstract :only-contents t
 * [[file:articles/2017/printing-music.org][Printing Music (Through My Stereo!)]]                                 :Hacks:
-#+include: articles/2017/printing-music.org::begin_abstract :only-contents t
+#+include: articles/2017/printing-music.org::abstract :only-contents t
 * [[file:articles/2017/parking-in-berwick-upon-tweed.org][Open Letter to NCC about Parking in Berwick]]                       :Soapbox:
-#+include: articles/2017/parking-in-berwick-upon-tweed.org::begin_abstract :only-contents t
+#+include: articles/2017/parking-in-berwick-upon-tweed.org::abstract :only-contents t
 * [[file:articles/2017/dns-cloudformation-importvalue.org][Updating DNS with output of another CloudFormation stack]] (6/6) :CloudFormation:
-#+include: articles/2017/dns-cloudformation-importvalue.org::begin_abstract :only-contents t
+#+include: articles/2017/dns-cloudformation-importvalue.org::abstract :only-contents t
 * [[file:articles/2017/publishing-this-blog-to-s3.org][Publishing this blog to an S3 bucket]] (5/6)
-#+include: articles/2017/publishing-this-blog-to-s3.org::begin_abstract :only-contents t
+#+include: articles/2017/publishing-this-blog-to-s3.org::abstract :only-contents t
 * [[file:articles/2017/s3-website-with-https-using-cloudformation.org][Creating S3 website with SSL using CloudFormation]] (4/6)    :CloudFormation:
-#+include: articles/2017/s3-website-with-https-using-cloudformation.org::begin_abstract :only-contents t
+#+include: articles/2017/s3-website-with-https-using-cloudformation.org::abstract :only-contents t
 * [[file:articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]] (3/6) :CloudFormation:
-#+include: articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::begin_abstract :only-contents t
+#+include: articles/2017/ssl-enabled-s3-redirects-with-cloudformation.org::abstract :only-contents t
 * [[file:articles/2017/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]] (2/6)            :CloudFormation:
-#+include: articles/2017/route-53-cloudformation.org::begin_abstract :only-contents t
+#+include: articles/2017/route-53-cloudformation.org::abstract :only-contents t
 * [[file:articles/2017/adding-ssl.org][Adding SSL to this Blog]] (1/6)
-#+include: articles/2017/adding-ssl.org::begin_abstract :only-contents t
+#+include: articles/2017/adding-ssl.org::abstract :only-contents t
 * [[file:articles/2017/blogging-with-org-mode-update.org][Blogging with Org mode---update]]                                     :Emacs:
-#+include: articles/2017/blogging-with-org-mode-update.org::begin_abstract :only-contents t
+#+include: articles/2017/blogging-with-org-mode-update.org::abstract :only-contents t
 * [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                     :Clojure:
-#+include: articles/2017/potter-coding-dojo.org::begin_abstract :only-contents t
+#+include: articles/2017/potter-coding-dojo.org::abstract :only-contents t
 * [[file:articles/2017/n-queens.org][N Queens in Clojure]]                                               :Clojure:
-#+include: articles/2017/n-queens.org::begin_abstract :only-contents t
+#+include: articles/2017/n-queens.org::abstract :only-contents t
 * [[file:articles/2017/electoral-reform-now.org][Electoral Reform Now!]]                                             :Soapbox:
-#+include: articles/2017/electoral-reform-now.org::begin_abstract :only-contents t
+#+include: articles/2017/electoral-reform-now.org::abstract :only-contents t
 * [[file:articles/2017/blogging-with-org-mode.org][Blogging with Org Mode]]                                              :Emacs:
-#+include: articles/2017/blogging-with-org-mode.org::begin_abstract :only-contents t
+#+include: articles/2017/blogging-with-org-mode.org::abstract :only-contents t
 * [[file:articles/2017/open-letter-to-anne-marie-mp.org][Open Letter to Anne Marie MP]]                                      :Soapbox:
-#+include: articles/2017/open-letter-to-anne-marie-mp.org::begin_abstract :only-contents t
+#+include: articles/2017/open-letter-to-anne-marie-mp.org::abstract :only-contents t
 * [[file:articles/2017/hydra-theme-switcher.org][Hydra Theme Switcher For Emacs]]                                      :Emacs:
-#+include: articles/2017/hydra-theme-switcher.org::begin_abstract :only-contents t
+#+include: articles/2017/hydra-theme-switcher.org::abstract :only-contents t
 * [[file:articles/2016/how-i-blog-this-week.org][How I Blog (This Week)]]                                              :Emacs:
-#+include: articles/2016/how-i-blog-this-week.org::begin_abstract :only-contents t
+#+include: articles/2016/how-i-blog-this-week.org::abstract :only-contents t
 * [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]]                                      :Talks:
-#+include: articles/2016/berwick-academy-stem-talk.org::begin_abstract :only-contents t
+#+include: articles/2016/berwick-academy-stem-talk.org::abstract :only-contents t
 * [[file:articles/2016/fizzbuzz.org][FizzBuzz]]                                                            :Hacks:
-#+include: articles/2016/fizzbuzz.org::begin_abstract :only-contents t
+#+include: articles/2016/fizzbuzz.org::abstract :only-contents t
 * [[file:articles/2016/change-terminal-colour-ssh-os-x.org][Change Terminal background colour on OS X via ssh]]                   :Hacks:
-#+include: articles/2016/change-terminal-colour-ssh-os-x.org::begin_abstract :only-contents t
+#+include: articles/2016/change-terminal-colour-ssh-os-x.org::abstract :only-contents t
 * [[file:articles/2016/leafnode-nntp-os-x.org][Setting up Leafnode NNTP server on OS X]]                             :Emacs:
-#+include: articles/2016/leafnode-nntp-os-x.org::begin_abstract :only-contents t
+#+include: articles/2016/leafnode-nntp-os-x.org::abstract :only-contents t
 * [[file:articles/2016/overcoming-rsi.org][Overcoming RSI]]                                                    :Soapbox:
-#+include: articles/2016/overcoming-rsi.org::begin_abstract :only-contents t
+#+include: articles/2016/overcoming-rsi.org::abstract :only-contents t
 * [[file:articles/2016/modsec-and-puppet.org][ModSecurity and Puppet Spelunking]]                                  :Puppet:
-#+include: articles/2016/modsec-and-puppet.org::begin_abstract :only-contents t
+#+include: articles/2016/modsec-and-puppet.org::abstract :only-contents t
 * [[file:articles/2015/response-to-haskell-lisp-philosophical-differences.org][Not so philosophically different after all?]]                       :Clojure:
 * [[file:articles/2015/benchmarking.org][A Lesson in Benchmarking]]                                      :Development:
 * [[file:articles/2015/nuisance-calls.org][Nuisance Calls]]                                                    :Soapbox:

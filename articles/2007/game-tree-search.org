@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: MiniMax and AlphaBeta Search
 #+date: <2007-08-17>
-#+begin_abstract
-I try to give an overview of & explain (perhaps mainly to myself) the
-MiniMax algorithm and its AlphaBeta pruning optimisation.
-#+end_abstract
 #+category: Tutorial
 
 #+TOC: headlines
@@ -233,3 +229,7 @@ algorithm can search twice as deep as the Minimax algorithm in the same
 timespan.
 
 /This post has been adapted from a section of my 2003 BSc Artificial Intelligence report on Generalised Game-Tree Search at the University of Westminster./
+* Abstract                                                         :noexport:
+
+I try to give an overview of & explain (perhaps mainly to myself) the
+MiniMax algorithm and its AlphaBeta pruning optimisation.

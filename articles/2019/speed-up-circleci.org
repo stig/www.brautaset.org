@@ -1,9 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Speeding up tests on CircleCI for a Python Django project
-#+begin_abstract
-I outline how we reduced the time to run a Django application's CI
-test suite from about 13 minutes to under 4 minutes.
-#+end_abstract
 #+category: Python
 #+category: CircleCI
 
@@ -165,3 +161,7 @@ gain more confidence shipping---it's a virtuous cycle.
 
   Thank you to [[http://slafs.net/][Sławek Ehlert]] for valuable feedback that improved this
   article.
+* Abstract                                                         :noexport:
+
+I outline how we reduced the time to run a Django application's CI
+test suite from about 13 minutes to under 4 minutes.

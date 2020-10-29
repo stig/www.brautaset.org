@@ -1,8 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Extracting Minecraft Music with Python
-#+begin_abstract
-I create a Python script to extract music files from Minecraft's assets.
-#+end_abstract
 #+category: Minecraft
 #+category: Python
 
@@ -128,3 +125,6 @@ not work if you use the [[https://multimc.org][MultiMC launcher]].]. One improve
 considered, but ultimately decided was not needed (yet) was the
 ability to specify which version to extract the music from, and the
 directory to extract the music /to/.
+* Abstract                                                         :noexport:
+
+I create a Python script to extract music files from Minecraft's assets.

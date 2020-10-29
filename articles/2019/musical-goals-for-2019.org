@@ -1,8 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: My Musical Goals for 2019
-#+begin_abstract
-I list my musical goals for 2019, and touch briefly on achievements in 2018.
-#+end_abstract
 #+category: Music
 
 2019 is going to be my "year of the guitar". I worked through most of
@@ -92,3 +89,6 @@ hoping to come back to this again this year to provide updates, but my
 blogging frequency record isn't exactly stellar, so whether I manage
 remains to be read!
 
+* Abstract                                                         :noexport:
+
+I list my musical goals for 2019, and touch briefly on achievements in 2018.

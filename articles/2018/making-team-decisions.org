@@ -1,9 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Making Team Decisions
-#+begin_abstract
-I summarise a useful technique for making team decisions I learnt
-about at The London Lead Developer conference a couple months ago.
-#+end_abstract
 #+category: Practices
 
 Sometimes you want people’s input before you make a decision that
@@ -33,3 +29,7 @@ Examples:
 - I want to prioritise feature X over feature Y. The decision will be
   mine, but I want to know how you feel about it. Fist of five polling
   in 3.. 2.. 1.. Go!
+* Abstract                                                         :noexport:
+
+I summarise a useful technique for making team decisions I learnt
+about at The London Lead Developer conference a couple months ago.

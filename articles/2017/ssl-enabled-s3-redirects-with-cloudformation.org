@@ -1,11 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Setting up SSL-enabled S3 redirection with CloudFormation
 #+date: <2017-07-21 Fri>
-#+begin_abstract
-I show how to create an S3 bucket for redirecting web requests, put it
-behind a CloudFront distribution, and configured /this/ with an SSL
-certificate---all via CloudFormation.
-#+end_abstract
 #+category: CloudFormation
 #+category: S3
 
@@ -301,3 +296,8 @@ the impression that going that route means you don't get to benefit
 from the "website hosting bucket" properties, which means no
 ~RedirectAllRequestsTo~ and no ~CustomErrorDocument~ and no ~IndexDocument~
 properties.
+* Abstract                                                         :noexport:
+
+I show how to create an S3 bucket for redirecting web requests, put it
+behind a CloudFront distribution, and configured /this/ with an SSL
+certificate---all via CloudFormation.

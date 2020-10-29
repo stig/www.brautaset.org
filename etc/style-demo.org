@@ -5,11 +5,6 @@
 #+title: Title of Page
 #+subtitle: Subtitle of page. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.
 #+date: <2017-06-03>
-#+begin_abstract
-This is an abstract.
-
-This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
-#+end_abstract
 #+category: Org
 
 This is a page to showcase as much as possible of the different CSS
@@ -206,3 +201,4 @@ $£8 + 2 \times £8 \times (1 - 0.05) = £23.2$
 [fn:2] A longer footnote with multiple paragraphs.
 
 I've not figured out how to display them separately.
+

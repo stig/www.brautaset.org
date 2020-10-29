@@ -3,11 +3,6 @@
 #+title: Parking in Berwick Needs a Rethink
 #+subtitle: An Open Letter to Northumberland County Council
 #+date: <2017-10-07 Sat>
-#+begin_abstract
-I complain about the unacceptable parking situation for commuters to
-Berwick-upon-Tweed and present a few suggestions for improvement that
-might help.
-#+end_abstract
 #+category: Soapbox
 
 I have an office at Berwick Workspaces, commuting in from a nearby
@@ -171,3 +166,8 @@ good result with no impact to the parking scheme anywhere else.
 
 I refer you to [[file:../../about.org::#contact][my contact details]] should you wish to contact me about
 this open letter.
+* Abstract                                                         :noexport:
+
+I complain about the unacceptable parking situation for commuters to
+Berwick-upon-Tweed and present a few suggestions for improvement that
+might help.

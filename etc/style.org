@@ -80,7 +80,7 @@ a:active {
 }
 #+end_src
 
-** Preamble, Postamble and Abstract are parts of every page and post
+** Preamble, Postamble are parts of every page and post
 
 #+begin_src css
 #preamble,
@@ -91,7 +91,6 @@ a:active {
 
 #preamble,
 #postamble,
-.abstract,
 .drawer {
     background-color: var(--accent);
     border-radius: 1px;
@@ -110,15 +109,12 @@ a:active {
     padding: 0 0.5ch;
 }
 
-.abstract,
 .drawer {
     border-top: 1px solid var(--main);
     border-bottom: 1px solid var(--main);
     background-color: var(--accent);
     padding: 0.5ch;
 }
-
-.abstract p { margin: 0.3em 0 }
 #+end_src
 
 * Tables
@@ -149,7 +145,7 @@ tbody + tbody {border-top: 1px solid var(--main)}
 
 * Drawers
 
-I style these like pre-/postamble and abstract, but add a heading.
+I style these like pre-/postamble, but add a heading.
 [[https://pavpanchekha.com/blog/org-mode-publish.html][Credit]].
 
 #+begin_src css

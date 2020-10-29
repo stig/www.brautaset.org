@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Dark Mode
 
-#+begin_abstract
-A /really/ short post about adding Dark Mode to this site.
-#+end_abstract
 #+category: Hacks
 
 Following [[https://kevq.uk/how-to-add-css-dark-mode-to-a-website/][Kev Quirk's instructions]], I've added an automatic Dark Mode
@@ -38,3 +35,7 @@ my theme too! The default colours I relied on for links were
 unreadable in Dark Mode, so I had to change them. This forced me to
 consider what they should be in Light Mode too, and the result looks
 more cohesive in my opinion.
+* Abstract                                                         :noexport:
+
+* Abstract                                                         :noexport:
+

@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Publishing this blog to an S3 bucket
 #+date: <2017-07-23 Sun>
-#+begin_abstract
-I show briefly the changes I need to make to publish this blog to S3
-rather than to GitHub.
-#+end_abstract
 #+category: S3
 
 This is a short post adding to the testing notes from the [[file:s3-website-with-https-using-cloudformation.org::#testing][previous
@@ -56,3 +52,7 @@ aws s3 sync \
     ~/public_html/ s3://www.superloopy.io
 #+END_SRC
 
+* Abstract                                                         :noexport:
+
+I show briefly the changes I need to make to publish this blog to S3
+rather than to GitHub.

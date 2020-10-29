@@ -1,9 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Creating an RSS feed with Org mode
-#+begin_abstract
-A post to announce that this site now has an RSS feed generated from
-the front page's content, and explain how I create it.
-#+end_abstract
 #+category: Org
 #+category: Emacs
 #+options: H:0
@@ -76,3 +72,7 @@ since adding them to the index will effectively publish them.
 So there you go! I think this was all I had to contend with to produce
 an RSS feed from this blog. I hope you enjoyed this post!  It ended up
 a bit longer than I expected, but there you go.
+* Abstract                                                         :noexport:
+
+A post to announce that this site now has an RSS feed generated from
+the front page's content, and explain how I create it.

@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: FizzBuzz
 #+date: <2016-09-09>
-#+begin_abstract
-Breakdown of my Tweetable FizzBuzz created using sed and xargs.
-#+end_abstract
 #+category: Hacks
 
 The FizzBuzz interview question has been going around a while. If for
@@ -151,3 +148,6 @@ Addendum: Is this really a valid fizzbuzz solution? You tell me! It
 conforms to the spec, but the program doesn't really look at the
 values 1 to 100 on each line. Instead of the values on each line, it
 works with the positions of the lines.
+* Abstract                                                         :noexport:
+
+Breakdown of my Tweetable FizzBuzz created using sed and xargs.

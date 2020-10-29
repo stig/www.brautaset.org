@@ -1,11 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: How to Support My FOSS Work!
 #+date: <2018-01-01 Mon>
-#+begin_abstract
-I present four ways you can support me if you have (or continue to)
-benefit from my work on Free and Open Source Software (FOSS).
-#+end_abstract
-
 I've been contributing to Free and Open Source Software (FOSS) for
 over 15 years now. I've never charged for this work, though lots of
 people have benefited from it.  You could argue I'm /absurdly/ late to
@@ -43,3 +38,8 @@ you can write in a [[http://karl-voit.at/2017/09/23/orgmode-as-markup-only/][rem
 ahem, /esoteric/ JIRA (and Confluence) markup language.
 
 Find more projects at https://github.com/stig
+* Abstract                                                         :noexport:
+
+I present four ways you can support me if you have (or continue to)
+benefit from my work on Free and Open Source Software (FOSS).
+

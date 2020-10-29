@@ -1,12 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Adding SSL to this Blog
 #+date: <2017-07-16 Sun>
-#+begin_abstract
-I outline the steps I plan to take to add SSL to this blog, leveraging
-AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
-CloudFormation.)
-#+end_abstract
-
 Because this is a basic static site I've not previously bothered with
 SSL. But as [[https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view][Chrome and Firefox will require HTTP/2 requests to be
 encrypted]], and with [[https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure][Chrome marking HTTP as non-secure]], I figure it's
@@ -67,3 +61,8 @@ to test the change to publishing.
 [fn:1] I don't want to transfer the actual domain, at least yet, as
 I've been happy with Gandi for many years and they are a bit cheaper
 than AWS for =.io= domains.
+
+* Abstract                                                         :noexport:
+I outline the steps I plan to take to add SSL to this blog, leveraging
+AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
+CloudFormation.)

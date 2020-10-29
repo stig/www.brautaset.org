@@ -2,10 +2,6 @@
 #+title: Finding unpublished drafts
 #+category: Emacs
 #+category: Org
-#+begin_abstract
-I close the loop of
-#+end_abstract
-
 Now I have a convenient way to publish my drafts, by linking them into
 the index page, I need to have a way to conveniently /find/ my drafts.
 So naturally I wrote an Emacs function for that too. I get a list of
@@ -59,4 +55,8 @@ open it in Emacs.
 	     (get-buffer-window buffer-name)))
 	(message "No drafts could be found!"))))
 #+END_SRC
+
+* Abstract                                                         :noexport:
+
+I close the loop of
 

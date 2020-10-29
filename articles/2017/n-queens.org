@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: The N Queens Problem
 #+date: <2017-06-14>
-#+begin_abstract
-Using Clojure to put $N$ Queens on an $N \times N$ chess board
-without them being able to threaten each other.
-#+end_abstract
 #+category: Clojure
 
 I read a blog post by Aphyr about solving the /N Queens/ problem called
@@ -290,3 +286,7 @@ for all $N$ where there are solutions: they all have a "mirror image".
 (This shouldn't really be a surprise.) I wonder if there's a way to
 speed up generation of solutions by stopping midway and just mirroring
 the solutions we have already got?
+* Abstract                                                         :noexport:
+
+Using Clojure to put $N$ Queens on an $N \times N$ chess board
+without them being able to threaten each other.

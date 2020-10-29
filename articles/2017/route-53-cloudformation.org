@@ -2,10 +2,6 @@
 #+title: Managing AWS Route 53 with CloudFormation
 #+date: <2017-07-19 Wed>
 #+bind: org-confirm-babel-evaluate nil
-#+begin_abstract
-In which I delegate DNS from Gandi to AWS Route 53, and learn how to
-configure Route 53 with CloudFormation & Sceptre.
-#+end_abstract
 #+category: CloudFormation
 #+category: DNS
 #+category: Popular
@@ -303,3 +299,7 @@ chance to experiment a bit more figuring out how to change this DNS
 zone to refer to CloudFront distributions while I learn how to set up
 the redirections for the Apex domain and hosting www from an S3 bucket
 behind CloudFront.
+* Abstract                                                         :noexport:
+
+In which I delegate DNS from Gandi to AWS Route 53, and learn how to
+configure Route 53 with CloudFormation & Sceptre.

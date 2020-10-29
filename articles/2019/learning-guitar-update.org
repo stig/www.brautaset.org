@@ -1,9 +1,5 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Learning Guitar Update
-#+begin_abstract
-I try to keep myself honest--and on target!--by posting an update on
-my guitar learning journey.
-#+end_abstract
 #+category: Music
 
 I [[file:musical-goals-january-update.org][hoped to do these posts]] monthly, but that went south. Thankfully
@@ -150,3 +146,7 @@ progress rather than entertaining others.
   into playing different strumming patterns, and getting my foot
   stomping along to those. I only started to put effort into that in
   April (according to my journal) and I have seen so much progress.
+* Abstract                                                         :noexport:
+
+I try to keep myself honest--and on target!--by posting an update on
+my guitar learning journey.

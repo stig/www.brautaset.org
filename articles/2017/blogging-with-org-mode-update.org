@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Blogging with Org mode---update!
 #+date: <2017-07-02>
-#+begin_abstract
-A short experience report about blogging with Org mode.
-#+end_abstract
 #+category: Org
 
 Since [[file:blogging-with-org-mode.org][changing my blog to use Emacs' Org mode]] rather than Jekyll one
@@ -45,3 +42,6 @@ are syntax-highlighted as when Emacs runs in a terminal, and this is
 
 I conclude that switching to Org mode has been an enabler for my
 blogging, and I'm happy with the switch.
+* Abstract                                                         :noexport:
+
+A short experience report about blogging with Org mode.

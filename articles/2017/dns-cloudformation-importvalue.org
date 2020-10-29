@@ -1,11 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Updating DNS with output of another CloudFormation stack
 #+date: <2017-07-23 Sun>
-#+begin_abstract
-I show the changes to my Sceptre config & CloudFormation template
-required to point DNS to the two CloudFront distributions I've
-created.
-#+end_abstract
 #+category: CloudFormation
 
 This post is part of a series where I [[file:adding-ssl.org][add SSL]] to this blog. The =www=
@@ -149,3 +144,8 @@ HTTPS-enabled blog :-)
 home routers (including my own) ignore TTLs and cache DNS servers for
 a long time. So for a week or so I'll leave the generated files in
 GitHub, and also post new content to the AWS S3 bucket. 
+* Abstract                                                         :noexport:
+
+I show the changes to my Sceptre config & CloudFormation template
+required to point DNS to the two CloudFront distributions I've
+created.

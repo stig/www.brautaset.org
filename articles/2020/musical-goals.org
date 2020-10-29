@@ -1,11 +1,6 @@
 #+include: ~/blog/lvl-2.org
 #+title: Musical Goals
 
-#+begin_abstract
-I review how I did on my musical goals for 2019, and try to outline
-some new goals for 2020, before rounding off with sharing a snapshot
-of my current practice routine.
-#+end_abstract
 #+category: Music
 
 I'll first review my 2019 goals, then cover goals for 2020, before
@@ -147,3 +142,8 @@ reading.
 Some days I get through the full routine before the rest of my family
 wakes up. Occasionally I get distracted and manage nothing. /Most/ days,
 however, I manage a good chunk of my practice routine in the morning.
+* Abstract                                                         :noexport:
+
+I review how I did on my musical goals for 2019, and try to outline
+some new goals for 2020, before rounding off with sharing a snapshot
+of my current practice routine.

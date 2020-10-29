@@ -1,10 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Printing Music
 #+date: <2017-10-23 Mon>
-#+begin_abstract
-I explain how I set up MPlayer as a printer driver so I could add a
-distributed print queue for music. (AKA a JukeBox.)
-#+end_abstract
 #+category: Hacks
 
 In this day of 3D printing it's interesting to think about what can be
@@ -64,3 +60,7 @@ in a conversation on Slack.)
 [fn:3] I /say/ other users, but I was the only Linux user in my halls of
 residence and noone else ever used it.
 
+* Abstract                                                         :noexport:
+
+I explain how I set up MPlayer as a printer driver so I could add a
+distributed print queue for music. (AKA a JukeBox.)

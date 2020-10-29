@@ -1,9 +1,6 @@
 #+setupfile: ~/blog/lvl-2.org
 #+title: Embedding Cocoa Frameworks
 #+date: <2007-09-22>
-#+begin_abstract
-I show how to embed a cocoa framework into your application.
-#+end_abstract
 #+category: ObjectiveC
 
 Cocoa has a really neat feature that allows you to embed a framework
@@ -47,3 +44,6 @@ Jonathan "Wolf" Rentzsch has a [[http://rentzsch.com/cocoa/embeddedFrameworks][s
 detail how to embed frameworks. It is for a rather older version of
 Xcode than what is available now, but it is still good. The Cocoa
 developer guide to [[http://developer.apple.com/documentation/MacOSX/Conceptual/BPFrameworks/Tasks/CreatingFrameworks.html%2523//apple_ref/doc/uid/20002258-106880-BAJJBIEF][embedding a framework]] is also good.
+* Abstract                                                         :noexport:
+
+I show how to embed a cocoa framework into your application.
