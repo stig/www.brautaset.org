@@ -54,7 +54,7 @@
 	 :exclude ".*"
 	 :html-preamble ,(nav "")
 	 :html-postamble ,(concat (nav "") sb/copyright)
-	 :include ("index.org" "articles.org" "about.org" "etc/style-demo.org")
+	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function org-html-publish-to-html)
 
@@ -76,7 +76,7 @@
 	 :include ("feed.org")
 	 :publishing-directory "~/public_html"
 	 :publishing-function (org-rss-publish-to-rss)
-	 :rss-image-url "https://www.brautaset.org/etc/icon.png"
+	 :rss-image-url "https://www.brautaset.org/icon.png"
 	 :rss-extension "xml")))
 
 ;; Turn off a harmless (but annoying) warning during publication.
