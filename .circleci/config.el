@@ -38,32 +38,24 @@
 
 (setq org-publish-project-alist
       `(("www"
-	 :components ("www-pages" "www-articles" "www-static" "www-rss"))
+	 :components ("www-pages" "www-articles" "www-rss"))
 
-	("www-static"
+        ("www-pages"
 	 ,@common-properties
 	 :base-directory "~/blog"
-	 :base-extension "css\\|jpg\\|jpeg\\|png\\|pdf\\|html\\|xml"
-	 :recursive t
-	 :publishing-directory "~/public_html"
-	 :publishing-function org-publish-attachment)
-
-	("www-pages"
-	 ,@common-properties
-	 :base-directory "~/blog"
-	 :exclude ".*"
+         :exclude ".*"
 	 :html-preamble ,(nav "")
 	 :html-postamble ,(concat (nav "") sb/copyright)
 	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
-	 :publishing-directory "~/public_html"
+	 :publishing-directory "~/blog"
 	 :publishing-function org-html-publish-to-html)
 
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-	 :html-preamble ,(nav "../../")
+         :html-preamble ,(nav "../../")
 	 :html-postamble ,(concat (nav "../../") sb/copyright)
-	 :publishing-directory "~/public_html/articles"
+	 :publishing-directory "~/blog/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
 
@@ -74,7 +66,7 @@
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
 	 :include ("feed.org")
-	 :publishing-directory "~/public_html"
+	 :publishing-directory "~/blog"
 	 :publishing-function (org-rss-publish-to-rss)
 	 :rss-image-url "https://www.brautaset.org/icon.png"
 	 :rss-extension "xml")))

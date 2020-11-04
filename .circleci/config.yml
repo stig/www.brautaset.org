@@ -36,14 +36,14 @@ jobs:
             --load .circleci/config.el
             --funcall org-publish-all
       - store_artifacts:
-          path: ~/public_html
+          path: ~/blog
           destination: html
       - save_cache:
           key: v5-org-{{ .Branch }}-{{ .Revision }}
           paths:
             - ~/.emacs.d
       - persist_to_workspace:
-          root: ~/public_html
+          root: ~/blog
           paths:
             - '*'
 
@@ -51,9 +51,9 @@ jobs:
     executor: python3
     steps:
       - attach_workspace:
-          at: ~/public_html
+          at: ~/blog
       - aws-s3/sync:
-          from: ~/public_html
+          from: ~/blog
           to: 's3://www.brautaset.org'
           arguments: >-
             --delete
