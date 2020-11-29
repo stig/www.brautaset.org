@@ -1,3 +1,5 @@
+(setq org-export-allow-bind-keywords t)
+
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
@@ -12,14 +14,15 @@
 		(capitalize name)
 		content)))
 
-(defun nav (parent-path)
-  (format "
-<nav>
-  <p>
-    <a accesskey=\"H\" href=\"%sindex.html\">Home</a> | <a accesskey=\"A\" href=\"%sabout.html\">About</a>
-  </p>
-</nav>
-" parent-path parent-path))
+(setq org-html-home/up-format "
+<div id=\"org-div-home-and-up\">
+  <nav>
+    <a accesskey=\"h\" href=\"%s\">Home</a> 
+    |
+    <a accesskey=\"H\" href=\"%s\">About</a>
+  </nav>
+</div>
+")
 
 (setq common-properties
       '(:author "Stig Brautaset"
@@ -44,8 +47,7 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
          :exclude ".*"
-	 :html-preamble ,(nav "")
-	 :html-postamble ,(concat (nav "") sb/copyright)
+	 :html-postamble ,sb/copyright
 	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
 	 :publishing-directory "~/blog"
 	 :publishing-function org-html-publish-to-html)
@@ -53,8 +55,7 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-         :html-preamble ,(nav "../../")
-	 :html-postamble ,(concat (nav "../../") sb/copyright)
+         :html-postamble ,sb/copyright
 	 :publishing-directory "~/blog/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)

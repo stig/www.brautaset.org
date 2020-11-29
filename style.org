@@ -1,5 +1,5 @@
 #+title: My Preferred CSS
-#+PROPERTY: header-args:css :tangle style.css :results silent 
+#+PROPERTY: header-args:css :tangle style.css :results silent
 
 CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
 those colours feature heavily. Hope I'm not overdoing it!
@@ -83,13 +83,15 @@ a:active {
 ** Preamble, Postamble are parts of every page and post
 
 #+begin_src css
-#preamble,
+#org-div-home-and-up,
 #postamble {font-size: smaller}
 
-#preamble p,
+nav {padding: 0.5ch}
+
+#org-div-home-and-up,
 #postamble p {margin: 0.5ch 0}
 
-#preamble,
+#org-div-home-and-up,
 #postamble,
 .drawer {
     background-color: var(--accent);
@@ -97,7 +99,7 @@ a:active {
     padding: 0.5ch 0;
 }
 
-#preamble {
+#org-div-home-and-up {
     border-bottom: 3px solid var(--main);
     margin-top: 0.5ch;
     padding: 0 0.5ch;
