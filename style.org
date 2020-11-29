@@ -262,16 +262,11 @@ img {max-width: 100%}
 
 #+begin_src css
 blockquote {
-    margin: 0 2em;
-    padding: 1em;
-    border-left: 9px solid var(--main);
-    background-color: var(--accent);
-}
-
-blockquote p {
-    font-size: 1.4em;
-    margin: 0.5em 0;
-    padding: 0;
+    margin: 0.5em;
+    padding: 0 0.5em;
+    border-left: 3px dotted var(--main);
+    font-size: 1.2em;
+    color: #555;
 }
 #+end_src
 
@@ -394,5 +389,11 @@ which we also activate here.
 
     .row {display: flex}
     .column {flex: 50%}
+
+    blockquote {
+        margin: 0 1em;
+	padding: 0.5em;
+	font-size: 1.4em;
+    }
 }
 #+end_src
