@@ -1,0 +1,33 @@
+#+setupfile: ~/blog/lvl-2.org
+#+title: How I record Guitar
+#+category: Music
+
+In my musical journey I try to record myself occasionally to track my
+progress, and be able to critically listen to myself so I can fix my
+mistakes. This is brief note on how I normally do that.
+
+I plug the guitar into my Yamaha THR-10. This has an USB output, that
+I connect to my computer. I seem to recall I had to install this
+[[https://uk.yamaha.com/en/products/musical_instruments/guitars_basses/amps_accessories/thr/downloads.html][Yamaha Steinberg USB Driver]] to get that to work.
+
+I record guitar using my Yamaha THR-10 as input device into
+Garageband. The THR-10 exposes 4 input channels:
+
+- *Channel 1 & 2*: left/right with effects
+- *Channel 3 & 4*: left/right /without/ effects
+
+I like to record clean, so I can change the effects later. I use both
+channels 3 & 4, which gives a sort of "synthetic" stereo. I think. It
+sounds pretty good, anyway!
+
+I haven't been able to disable the guitar amp effecs in GarageBand, so
+recording the clean input from the amp is the only way to avoid
+stacking the amp's and GarageBand's effects for a /truly shit/ sound.
+
+
+* Abstract                                                         :noexport:
+
+In my musical journey I try to record myself occasionally to track my
+progress, and be able to critically listen to myself so I can fix my
+mistakes. This is brief note on how I normally do that.
+

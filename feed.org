@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent articles
 
+* How I record Guitar
+:PROPERTIES:
+:RSS_PERMALINK: articles/2020/how-I-record-guitar.html
+:ID:       B3BE0FBE-B00C-46DB-9383-AAFCC9F0B658
+:PUBDATE:  <2020-12-11 Fri 23:53>
+:END:
+#+include: articles/2020/how-I-record-guitar.org
 * On broken horses & master branches
 :PROPERTIES:
 :RSS_PERMALINK: articles/2020/broken-horses-and-master-branches.html
@@ -77,12 +84,3 @@
 :END:
 
 #+include: articles/2019/musical-goals-january-update.org :lines "3-"
-* My Musical Goals for 2019                                           :Music:
-:PROPERTIES:
-:RSS_PERMALINK: articles/2019/musical-goals-for-2019.html
-:ID:       DC96E407-2FB9-486F-AF03-B89A5E4A0B87
-:PUBDATE:  <2019-01-05 Sat 16:00>
-:END:
-
-#+include: articles/2019/musical-goals-for-2019.org :lines "3-"
-

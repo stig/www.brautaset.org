@@ -4,6 +4,8 @@
 
 These are all my articles in reverse chronological order.
 
+* [[file:articles/2020/how-I-record-guitar.org][How I record Guitar]]                                                 :Music:
+#+include: articles/2020/how-I-record-guitar.org::abstract :only-contents t
 * [[file:articles/2020/broken-horses-and-master-branches.org][On broken horses & master branches]]                                :Soapbox:
 #+include: articles/2020/broken-horses-and-master-branches.org::abstract :only-contents t
 * [[file:articles/2020/musical-goals.org][Musical Goals]]             :Music:
