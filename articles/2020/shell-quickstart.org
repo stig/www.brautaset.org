@@ -1,0 +1,150 @@
+#+setupfile: ~/blog/lvl-2.org
+#+title: Shell Quickstart
+#+category: Tutorial
+#+category: Shell
+
+In 2013 I worked at NET-A-PORTER, where we ran a year-long graduate
+program. Participants did three-month rotations with four teams,
+getting experience with different parts of our business. I volunteered
+to run a workshop introducing them to shell programming, and later
+adapted the material into this blog post[fn:1].
+
+#+begin_quote
+This is the Unix philosophy: write programs that do one thing, and do
+it well. Write programs to work together. Write programs to handle
+text streams, because that is a universal interface.
+
+—Doug McIlroy
+#+end_quote
+
+Look through =/bin= and =/usr/bin= on any Unix system and you'll find
+hundreds of little tools you can glue together to accomplish complex
+tasks. If you are serious about becoming a confident command-line
+jockey, it is a good idea to skim the man pages for all the commands
+covered in those directories. You don't have to memorise them, but
+read enough to understand what each program does.
+
+To whet your appetite, I'll introduce you to some of my favourite
+shell commands. But first, let's start by quickly covering how one can
+string programs together. A Unix program generally has one input
+stream and two output streams, known respectively as:
+
+- /Standard Input/ (aka =stdin=)
+- /Standard Output/ (aka =stdout=)
+- /Standard Error/ (aka =stderr=)
+
+=stdout= and =stderr= are usually connected to the terminal that
+invokes the program. Sometimes there's a command-line switch to
+redirect output to a file instead. =stdin= is usually connected to the
+keyboard, though often programs will read input from any files given
+as command line arguments. Here are some examples:
+
+- Download a file and dump its content to the terminal
+  : curl -L http://bit.ly/13kW1yP
+
+- Save output of a URL to a file
+  : curl -L http://bit.ly/13kW1yP -o primes.txt
+
+- Dump the content of a file to the terminal
+  : cat primes.txt
+
+* Redirection
+
+Some programs don't have switches to decide where to read from, or a
+way to name files for their output. Transcribing input from a file as
+input to your program is hardly ideal. Neither would transcribing
+output from the terminal and into an output file. Your friendly shell
+can help. We can ask the shell to redirect the input, output or error
+streams for a program to or from files. We use the following symbols
+to do that:
+
+- < redirect =stdin=
+- > redirect =stdout=
+- 2> redirect =stderr=
+
+Here are some examples. (In some cases, these examples just show
+variants of the above. That is intentional. There's more than one way
+to skin a cat.)
+
+- Download a file and dump its content into a file
+  : curl -L http://bit.ly/13kW1yP > primes.txt
+
+- .. again, but redirect progress/errors to a different file
+  : curl -L http://bit.ly/13kW1yP > primes.txt 2> primes.err
+
+-  Redirect standard input
+  : cat < primes.err
+
+- Concatenate two files, dump the result in a third
+  : cat primes.txt primes.err > foo
+
+* Pipes
+
+With input and output redirection and judicious use of temporary files
+you should now be able to chain simple programs together into ad-hoc
+bigger ones. However, it's not convenient. In Unix you can use a pipe
+(=|=) to redirect a program's output directly to another program's
+input. Some examples:
+
+- Count combined characters/words/lines in two files
+  : cat primes.err primes.txt | wc
+
+- Count stuff in OUTPUT from a previous wc:
+  : wc primes.txt | wc
+
+You can, of course, combine pipes and input/output redirection:
+
+- Direct stderr to a file, count lines in stdout
+  : curl -L http://bit.ly/13kW1yP 2> errors.txt | wc -l
+
+- Meaningless (but valid) use of pipes and redirection...
+  : wc < primes.txt | wc | wc > foo
+
+* Exercises
+
+We'll be using the file you've already downloaded a few times now in
+these exercises. It contains a list of UK Prime Ministers, 1 line per
+year. You'll need the following commands:
+
+- =curl=: transfer data to or from URLs
+- =wc=: counts characters/words/lines
+- =sort=: sorts its input
+- =uniq=: removes duplicate lines from its input
+- =head= & =tail=: return the first/last /N/ lines from a file/stream
+
+Some of the exercises requires you to invoke these commands with
+command-line switches to alter their basic behaviour. You will have to
+use the man command to read about which switches are available and
+what they do. For example, =man sort= will bring up =sort='s manual
+page.
+
+OK. Ready? Go:
+
+- Download primes.txt if you haven't already
+- Count the total number of lines in primes.txt
+  - Answer: 289 (290 including final newline)
+- Count the number of unique prime ministers
+  - Answer: 53
+- Count the prime ministers that served more than one year
+  - Answer: 40
+- Count the prime ministers that served only 1 year
+  - Answer: 13
+- Return the 3 prime ministers with highest number of years, in ascending order
+  - Answer: Jenkinson, Pitt, Walpole
+  - (Returning additional information in each line is OK)
+- As the previous, but return the primes in position 2, 3 & 4 in /descending/ order
+  - Answer: Pitt, Jenkinson, Gladstone
+  - (Returning additional information in each line is OK)
+
+* Abstract                                                         :noexport:
+
+In 2013 I worked at NET-A-PORTER, where we ran a year-long graduate
+program. Participants did three-month rotations with four teams,
+getting experience with different parts of our business. I volunteered
+to run a workshop introducing them to shell programming, and later
+adapted the material into this blog post.
+
+* Footnotes
+
+[fn:1] As NET-A-PORTER's tech blog is no longer available, I obtained
+the original from the [[http://web.archive.org/web/20200927133906/http://techblog.net-a-porter.com/2013/02/shell-quickstart/#more-754][internet archive]] for reposting here.

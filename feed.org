@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent articles
 
+* Shell Quickstart                                           :Shell:Tutorial:
+:PROPERTIES:
+:RSS_PERMALINK: articles/2020/shell-quickstart.html
+:ID:       65271BDA-D659-4F6B-9985-E4B4CCBD78F3
+:PUBDATE:  <2020-12-14 Mon 23:26>
+:END:
+#+include: articles/2020/shell-quickstart.org
 * How I record Guitar
 :PROPERTIES:
 :RSS_PERMALINK: articles/2020/how-I-record-guitar.html
@@ -76,11 +83,3 @@
 :END:
 
 #+include: articles/2019/bose-quietcomfort-35-review.org :lines "3-"
-* Musical Goals January Update                                        :Music:
-:PROPERTIES:
-:RSS_PERMALINK: articles/2019/musical-goals-january-update.html
-:ID:       6E63EAA6-D887-44CF-AAD6-9A21181446EE
-:PUBDATE:  <2019-02-03 Sun 22:38>
-:END:
-
-#+include: articles/2019/musical-goals-january-update.org :lines "3-"
