@@ -1,12 +1,17 @@
 #+title: My Preferred CSS
 #+PROPERTY: header-args:css :tangle style.css :results silent
 
-CSS styles for my blog. Currently I like ~orange~ and ~blanchedalmond~, so
-those colours feature heavily. Hope I'm not overdoing it!
+CSS styles for my blog. I tangle this file to =style.css=. I try to
+exercise all the styles in [[file:style-demo.org][style-demo]].
 
-PS: I try to exercise all the styles in [[file:style-demo.org][style-demo]].
+#+begin_src css
+/* Tangle style.org to update this file! */
+#+end_src
 
 * Define CSS variables for Colours
+
+Currently I like ~orange~ and ~blanchedalmond~, so those colours
+feature heavily. Hope I'm not overdoing it!
 
 #+begin_src css
 :root {
@@ -22,8 +27,6 @@ PS: I try to exercise all the styles in [[file:style-demo.org][style-demo]].
 * Set the Scene (Fonts, Margins, Headings)
 
 #+begin_src css
-/* Tangle style.org to update this file! */
-
 .title  {
     text-align: center;
     margin-bottom: .2em;
