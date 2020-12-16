@@ -4,10 +4,6 @@
 CSS styles for my blog. I tangle this file to =style.css=. I try to
 exercise all the styles in [[file:style-demo.org][style-demo]].
 
-#+begin_src css
-/* Tangle style.org to update this file! */
-#+end_src
-
 * Define CSS variables for Colours
 
 Currently I like ~orange~ and ~blanchedalmond~, so those colours
