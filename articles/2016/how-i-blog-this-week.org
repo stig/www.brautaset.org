@@ -62,6 +62,6 @@ experience I don't do that a lot. And if I /do/ then I should be able to find
 my old source in my =~/org/Archive.org= file, where most deleted from
 =~/org/Agenda.org= ends up. This directory is in iCloud Drive.
 
-* Abstract                                                         :noexport:
+* Post-Abstract                                                    :noexport:
 
 I share my Emacs & Org-mode setup for blogging with Jekyll.

@@ -262,7 +262,7 @@ haven't managed to solve yet:
   this. Potentially I could fix this by hosting in S3 instead. That
   way I could probably enable HTTPS too, since AWS ACM gives you free
   certs.
-* Abstract                                                         :noexport:
+* Post-Abstract                                                    :noexport:
 
 I describe how---and why---I changed from blogging using Markdown &
 Jekyll to using Org mode.

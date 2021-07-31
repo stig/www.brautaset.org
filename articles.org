@@ -33,11 +33,11 @@ These are all my articles in reverse chronological order.
 * [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
 #+include: articles/2018/submarine-sonar-hiring.org::abstract :only-contents t
 * [[file:articles/2018/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
-#+include: articles/2018/creating-index-entry-from-post.org::abstract :only-contents t
+#+include: articles/2018/creating-index-entry-from-post.org::post-abstract :only-contents t
 * [[file:articles/2018/making-team-decisions.org][Making Team Decisions]]                                           :Practices:
 #+include: articles/2018/making-team-decisions.org::abstract :only-contents t
 * [[file:articles/2018/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
-#+include: articles/2018/org-mode-rss.org::abstract :only-contents t
+#+include: articles/2018/org-mode-rss.org::post-abstract :only-contents t
 * [[file:articles/2018/no-more-superloopy.org][No More Superloopy]]
 #+include: articles/2018/no-more-superloopy.org::abstract :only-contents t
 * [[file:articles/2018/support-my-foss-work.org][How to Support my FOSS Work!]]
@@ -67,13 +67,13 @@ These are all my articles in reverse chronological order.
 * [[file:articles/2017/electoral-reform-now.org][Electoral Reform Now!]]                                             :Soapbox:
 #+include: articles/2017/electoral-reform-now.org::abstract :only-contents t
 * [[file:articles/2017/blogging-with-org-mode.org][Blogging with Org Mode]]                                              :Emacs:
-#+include: articles/2017/blogging-with-org-mode.org::abstract :only-contents t
+#+include: articles/2017/blogging-with-org-mode.org::post-abstract :only-contents t
 * [[file:articles/2017/open-letter-to-anne-marie-mp.org][Open Letter to Anne Marie MP]]                                      :Soapbox:
 #+include: articles/2017/open-letter-to-anne-marie-mp.org::abstract :only-contents t
 * [[file:articles/2017/hydra-theme-switcher.org][Hydra Theme Switcher For Emacs]]                                      :Emacs:
 #+include: articles/2017/hydra-theme-switcher.org::abstract :only-contents t
 * [[file:articles/2016/how-i-blog-this-week.org][How I Blog (This Week)]]                                              :Emacs:
-#+include: articles/2016/how-i-blog-this-week.org::abstract :only-contents t
+#+include: articles/2016/how-i-blog-this-week.org::post-abstract :only-contents t
 * [[file:articles/2016/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]]                                      :Talks:
 #+include: articles/2016/berwick-academy-stem-talk.org::abstract :only-contents t
 * [[file:articles/2016/fizzbuzz.org][FizzBuzz]]                                                            :Hacks:

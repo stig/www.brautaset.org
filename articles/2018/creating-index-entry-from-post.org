@@ -53,7 +53,7 @@ linking to this post from the index page."
 	  (org-element-map tree 'keyword
 	    (sb/org-kw-get "CATEGORY")))
 
-	 (abstract 
+	 (abstract
 	  (org-element-interpret-data
 	   (org-element-map tree 'special-block
 	     (lambda (sb)
@@ -89,7 +89,7 @@ linking to this post from the index page."
    (point-min) (point-max)))
 #+END_SRC
 
-* Abstract                                                         :noexport:
+* Post-Abstract                                                    :noexport:
 
 I wanted it to be easy to create a new entry on the index page. I call
 on Emacs Lisp to help.

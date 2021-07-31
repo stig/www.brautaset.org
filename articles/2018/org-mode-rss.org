@@ -21,12 +21,11 @@ their publication year. Not a big loss, I think, as the URL of each
 post contains the year already.
 
 *I wanted the RSS feed to link to the full article page.*
-To link to the actual post from the RSS feed (rather than to the copy
-of the abstract on the index page) I had to add =RSS_PERMALINK= entries
-to each of the headings in the index page. One slightly annoying bit
-about this is that I can't use the =.org= extension like everywhere
-else, I have to change it to the =.html= extension it will be when
-published.
+To link to the actual post from the RSS feed I had to add
+=RSS_PERMALINK= entries to each of the headings in the index page. One
+slightly annoying bit about this is that I can't use the =.org=
+extension like everywhere else, I have to change it to the =.html=
+extension it will be when published.
 
 *No paragraph content is allowed before the entries.*
 Thirdly, the issue of my index page's introductory text not being
@@ -72,7 +71,8 @@ since adding them to the index will effectively publish them.
 So there you go! I think this was all I had to contend with to produce
 an RSS feed from this blog. I hope you enjoyed this post!  It ended up
 a bit longer than I expected, but there you go.
-* Abstract                                                         :noexport:
+
+* Post-Abstract                                                   :noexport:
 
 A post to announce that this site now has an RSS feed generated from
 the front page's content, and explain how I create it.
