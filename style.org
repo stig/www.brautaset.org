@@ -25,11 +25,11 @@ feature heavily. Hope I'm not overdoing it!
 #+begin_src css
 .title  {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 2em;
 }
 
 .subtitle {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 html {
@@ -383,9 +383,7 @@ which we also activate here.
         margin: auto;
     }
 
-    h1, h2, h3 { font-size: 1.8em }
-
-    .title { font-size: 3em }
+    h1, h2, h3 { font-size: 1.6em }
 
     figure {
         margin: 1ch;
