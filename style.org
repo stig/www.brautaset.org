@@ -52,7 +52,7 @@ html {
     font-size: large;
 }
 
-#content {
+body {
     max-width: 100%;
     margin: 0;
 }
@@ -381,7 +381,7 @@ which we also activate here.
 @media (min-width: 600px) {
     html {font-size: x-large}
 
-    #content {
+    body {
         max-width: 65ch;
         margin: auto;
     }
