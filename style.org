@@ -25,14 +25,11 @@ feature heavily. Hope I'm not overdoing it!
 #+begin_src css
 .title  {
     text-align: center;
-    margin-bottom: .2em;
-    font-size: 2em;
-}
-.subtitle {
-    text-align: center;
-    margin-top:0;
-    color: var(--main);
     font-size: 1.6em;
+}
+
+.subtitle {
+    font-size: 0.8em;
 }
 
 html {
