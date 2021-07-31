@@ -1,7 +1,4 @@
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
-#+HTML_HEAD: <link rel="icon" type="image/png" href="icon.png" />
-#+HTML_HEAD: <meta name="referrer" content="same-origin">
-#+DESCRIPTION: Stig's Personal Soapbox
+#+setupfile: lvl-0.org
 #+title: Title of Page
 #+subtitle: Subtitle of page. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.
 #+date: <2017-06-03>
@@ -201,4 +198,3 @@ $£8 + 2 \times £8 \times (1 - 0.05) = £23.2$
 [fn:2] A longer footnote with multiple paragraphs.
 
 I've not figured out how to display them separately.
-
