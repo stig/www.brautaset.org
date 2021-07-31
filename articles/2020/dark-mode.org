@@ -36,6 +36,5 @@ unreadable in Dark Mode, so I had to change them. This forced me to
 consider what they should be in Light Mode too, and the result looks
 more cohesive in my opinion.
 * Abstract                                                         :noexport:
-
-* Abstract                                                         :noexport:
-
+I experiment with adding an automatic Dark Mode to this site, if your
+browser requests it.
