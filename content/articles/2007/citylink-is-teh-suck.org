@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: CityLink is teh suck!
 #+date: <2007-02-07>
 Never, ever, deal with [[http://www.city-link.co.uk/][ShittyLink]] if you can avoid it. They were

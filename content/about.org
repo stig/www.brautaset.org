@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-0.org
 #+title: About Stig Brautaset
 
 I'm a software engineer, husband, dad, and guitarist; based in the

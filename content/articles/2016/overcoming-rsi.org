@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Overcoming RSI
 #+date: <2016-05-02>
 #+category: Soapbox

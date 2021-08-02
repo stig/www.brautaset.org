@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: On broken horses & master branches
 #+category: Soapbox
 Every time I start learning to ride I get disillusioned and give up

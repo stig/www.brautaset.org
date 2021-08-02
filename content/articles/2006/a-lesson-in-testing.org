@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: A lesson in testing
 #+date: <2006-10-28>
 #+category: Testing

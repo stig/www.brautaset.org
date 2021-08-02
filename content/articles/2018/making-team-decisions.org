@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Making Team Decisions
 #+category: Practices
 

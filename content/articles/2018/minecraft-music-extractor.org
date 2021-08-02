@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Extracting Minecraft Music with Python
 #+category: Minecraft
 #+category: Python

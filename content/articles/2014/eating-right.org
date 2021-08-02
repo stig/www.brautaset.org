@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Losing weight by eating right
 #+date: <2014-02-17>
 

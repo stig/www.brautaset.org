@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Hydra Theme Switcher for Emacs
 #+date: <2017-02-16>
 #+category: Emacs

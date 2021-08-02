@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: A Lesson in Benchmarking
 #+date: <2015-02-24>
 #+category: Development

@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: My Musical Goals for 2019
 #+category: Music
 

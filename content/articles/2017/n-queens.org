@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: The N Queens Problem
 #+date: <2017-06-14>
 #+category: Clojure

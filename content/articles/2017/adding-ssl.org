@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Adding SSL to this Blog
 #+date: <2017-07-16 Sun>
 Because this is a basic static site I've not previously bothered with

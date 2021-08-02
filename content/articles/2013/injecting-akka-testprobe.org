@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Injecting Akka's TestProbe in place of child actors
 #+date: <2013-03-24>
 #+category: Scala

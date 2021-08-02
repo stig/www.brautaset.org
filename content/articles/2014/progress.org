@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Resolutions Progress
 #+date: <2014-06-25>
 #+category: Resolutions

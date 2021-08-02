@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Hippies
 #+date: <2006-08-13>
 

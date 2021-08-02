@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: How to Support My FOSS Work!
 #+date: <2018-01-01 Mon>
 I've been contributing to Free and Open Source Software (FOSS) for

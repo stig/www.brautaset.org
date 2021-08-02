@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Tinker Bell (2008)
 #+date: <2015-02-03>
 #+category: Reviews

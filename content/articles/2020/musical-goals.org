@@ -1,4 +1,3 @@
-#+include: ~/blog/lvl-2.org
 #+title: Musical Goals
 
 #+category: Music

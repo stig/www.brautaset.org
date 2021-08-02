@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: No More Superloopy
 #+date: <2018-06-10 Sun>
 I've decided to end the experiment with a separate vanity domain

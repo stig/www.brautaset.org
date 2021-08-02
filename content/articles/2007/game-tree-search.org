@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: MiniMax and AlphaBeta Search
 #+date: <2007-08-17>
 #+category: Tutorial

@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Printing Music
 #+date: <2017-10-23 Mon>
 #+category: Hacks

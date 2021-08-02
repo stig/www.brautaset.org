@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Objective-C syntax sugar wish list
 #+date: <2008-08-25>
 #+category: ObjectiveC

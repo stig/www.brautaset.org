@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Money Transfer
 #+date: <2006-01-30>
 #+category: Soapbox

@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Rise of the Machine
 #+date: <2006-08-12>
 #+category: Development

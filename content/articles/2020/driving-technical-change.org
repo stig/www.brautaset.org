@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Driving Technical Change
 
 #+category: Reviews

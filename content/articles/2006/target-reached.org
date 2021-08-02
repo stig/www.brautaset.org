@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Target Reached!
 #+date: <2006-03-15>
 

@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Finding unpublished drafts
 #+category: Emacs
 #+category: Org

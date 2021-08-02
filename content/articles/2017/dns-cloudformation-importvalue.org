@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Updating DNS with output of another CloudFormation stack
 #+date: <2017-07-23 Sun>
 #+category: CloudFormation

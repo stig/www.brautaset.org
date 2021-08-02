@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Managing AWS Route 53 with CloudFormation
 #+date: <2017-07-19 Wed>
 #+bind: org-confirm-babel-evaluate nil

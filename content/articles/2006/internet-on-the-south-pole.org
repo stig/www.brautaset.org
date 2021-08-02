@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Internet on the South Pole
 #+date: <2006-08-17>
 

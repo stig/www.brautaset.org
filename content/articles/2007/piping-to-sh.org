@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Piping to sh -
 #+date: <2007-06-15>
 #+category: Tutorial

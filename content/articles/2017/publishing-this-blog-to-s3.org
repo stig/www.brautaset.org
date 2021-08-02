@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Publishing this blog to an S3 bucket
 #+date: <2017-07-23 Sun>
 #+category: S3

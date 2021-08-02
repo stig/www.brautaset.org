@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Creating an RSS feed with Org mode
 #+category: Org
 #+category: Emacs

@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: How I Blog (This Week)
 #+date: <2016-10-06>
 #+category: Org

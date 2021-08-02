@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: ModSecurity and Puppet Spelunking
 #+date: <2016-03-16>
 #+category: Development

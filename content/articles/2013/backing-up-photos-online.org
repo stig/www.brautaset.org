@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Backing Up Photos Online
 #+date: <2013-03-06>
 #+index: Hacks

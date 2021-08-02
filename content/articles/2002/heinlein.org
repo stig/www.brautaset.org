@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Heinlein's list of skills
 #+date: <2002-09-11>
 

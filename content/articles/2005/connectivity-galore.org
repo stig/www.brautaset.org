@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Connectivity Galore
 #+date: <2005-07-25>
 

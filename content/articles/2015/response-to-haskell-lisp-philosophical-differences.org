@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Not so philosophically different after all?
 #+date: <2015-12-23>
 #+category: Clojure

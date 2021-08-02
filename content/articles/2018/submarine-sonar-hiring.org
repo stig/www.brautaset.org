@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: My hiring experience as a submarine sonar operator in the Norwegian Navy
 #+category: Talks
 #+category: Hiring

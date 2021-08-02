@@ -28,6 +28,8 @@
 
 (setq org-html-head
       (with-temp-buffer
+	(insert-file-contents "templates/head.html")
+	(goto-char (point-max))
 	(insert org-html-style-default)
 	(goto-char (point-max))
 	(insert "<style type=\"text/css\">\n")
@@ -37,6 +39,9 @@
 	(buffer-substring-no-properties
 	 (point-min)
 	 (point-max))))
+
+(defun sb/html-head-extra (prefix)
+  (format "<link rel=\"icon\" type=\"image/png\" href=\"%sicon.png\" />\n" prefix))
 
 (setq common-properties
       '(:author "Stig Brautaset"
@@ -67,6 +72,7 @@
 	 ,@common-properties
 	 :base-directory "~/blog/content"
          :exclude "feed.org"
+	 :html-head-extra ,(sb/html-head-extra "")
 	 :html-link-up "index.html"
 	 :html-link-home "about.html"
 	 :publishing-directory "~/blog/_site"
@@ -77,6 +83,7 @@
 	 :base-directory "~/blog/content/articles"
 	 :html-link-up "../../index.html"
 	 :html-link-home "../../about.html"
+	 :html-head-extra ,(sb/html-head-extra "../../")
 	 :publishing-directory "~/blog/_site/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)

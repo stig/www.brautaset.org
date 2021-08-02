@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: The "Potter" Coding Dojo (in Clojure)
 #+date: <2017-06-22>
 #+category: Clojure

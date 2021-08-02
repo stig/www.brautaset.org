@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Introducing Statistics for Objective-C
 #+date: <2008-02-23>
 #+category: ObjectiveC

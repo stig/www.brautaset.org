@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Setting up SSL-enabled S3 redirection with CloudFormation
 #+date: <2017-07-21 Fri>
 #+category: CloudFormation

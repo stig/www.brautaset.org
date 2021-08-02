@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Creating an S3 website bucket exposed over HTTPS with CloudFormation
 #+date: <2017-07-22 Sat>
 #+category: CloudFormation

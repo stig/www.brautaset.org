@@ -1,4 +1,3 @@
-#+setupfile: ~/blog/lvl-2.org
 #+title: Speeding up tests on CircleCI for a Python Django project
 #+category: Python
 #+category: CircleCI
