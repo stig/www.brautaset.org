@@ -1,3 +1,5 @@
+(require 'ox-publish)
+
 (setq org-export-allow-bind-keywords t)
 
 ;; Don't use inline CSS for source code
