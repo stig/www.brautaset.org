@@ -17,7 +17,7 @@
 (setq org-html-home/up-format "
 <div id=\"org-div-home-and-up\">
   <nav>
-    <a accesskey=\"h\" href=\"%s\">Home</a> 
+    <a accesskey=\"h\" href=\"%s\">Home</a>
     |
     <a accesskey=\"H\" href=\"%s\">About</a>
   </nav>
