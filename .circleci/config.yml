@@ -4,23 +4,23 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 
 executors:
-  emacs26:
+  emacs27:
     working_directory: ~/blog
     docker:
-      - image: silex/emacs:master
+      - image: silex/emacs:27.2-ci
   python3:
     docker:
       - image: circleci/python:3.7
 
 jobs:
   build:
-    executor: emacs26
+    executor: emacs27
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v5-org-{{ .Branch }}
-            - v5-org-trunk
+            - v6-org-{{ .Branch }}
+            - v6-org-trunk
       - run:
           name: Tangle CSS
           command: >
@@ -39,7 +39,7 @@ jobs:
           path: ~/blog
           destination: html
       - save_cache:
-          key: v5-org-{{ .Branch }}-{{ .Revision }}
+          key: v6-org-{{ .Branch }}-{{ .Revision }}
           paths:
             - ~/.emacs.d
       - persist_to_workspace:
