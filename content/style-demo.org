@@ -1,4 +1,4 @@
-#+setupfile: lvl-0.org
+#+setupfile: ~/blog/lvl-0.org
 #+title: Title of Page
 #+subtitle: Subtitle of page. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.
 #+date: <2017-06-03>

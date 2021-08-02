@@ -21,7 +21,7 @@
   <nav>
     <a accesskey=\"h\" href=\"%s\">Home</a>
     |
-    <a accesskey=\"H\" href=\"%s\">About</a>
+    <a accesskey=\"a\" href=\"%s\">About</a>
   </nav>
 </div>
 ")
@@ -54,35 +54,41 @@
 
 (setq org-publish-project-alist
       `(("www"
-	 :components ("www-pages" "www-articles" "www-rss"))
+	 :components ("static" "pages" "articles" "rss"))
 
-        ("www-pages"
+	("static"
+	 :base-directory "~/blog/content"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	 :publishing-directory "~/blog/_site"
+	 :recursive t
+	 :publishing-function org-publish-attachment)
+
+        ("pages"
 	 ,@common-properties
-	 :base-directory "~/blog"
-         :exclude ".*"
+	 :base-directory "~/blog/content"
+         :exclude "feed.org"
 	 :html-link-up "index.html"
 	 :html-link-home "about.html"
-	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
-	 :publishing-directory "~/blog"
+	 :publishing-directory "~/blog/_site"
 	 :publishing-function org-html-publish-to-html)
 
-	("www-articles"
+	("articles"
 	 ,@common-properties
-	 :base-directory "~/blog/articles"
+	 :base-directory "~/blog/content/articles"
 	 :html-link-up "../../index.html"
 	 :html-link-home "../../about.html"
-	 :publishing-directory "~/blog/articles"
+	 :publishing-directory "~/blog/_site/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
 
-	("www-rss"
+	("rss"
 	 ,@common-properties
-	 :base-directory "~/blog"
+	 :base-directory "~/blog/content"
 	 :exclude ".*"
 	 :html-link-home "https://www.brautaset.org"
 	 :html-link-use-abs-url t
 	 :include ("feed.org")
-	 :publishing-directory "~/blog"
+	 :publishing-directory "~/blog/_site"
 	 :publishing-function (org-rss-publish-to-rss)
 	 :rss-image-url "https://www.brautaset.org/icon.png"
 	 :rss-extension "xml")))

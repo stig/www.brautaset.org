@@ -2,7 +2,7 @@
 #+PROPERTY: header-args:css :tangle style.css :results silent
 
 CSS styles for my blog. I tangle this file to =style.css=. I try to
-exercise all the styles in [[file:style-demo.org][style-demo]].
+exercise all the styles in [[file:content/style-demo.org][style-demo]].
 
 * Define CSS variables for Colours
 
