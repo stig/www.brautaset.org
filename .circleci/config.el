@@ -26,6 +26,16 @@
 </div>
 ")
 
+(setq org-html-head
+      (with-temp-buffer
+	(insert "<style type=\"text/css\">\n")
+	(insert-file-contents "style.css")
+	(goto-char (point-max))
+	(insert "</style>\n")
+	(buffer-substring-no-properties
+	 (point-min)
+	 (point-max))))
+
 (setq common-properties
       '(:author "Stig Brautaset"
 	:email "stig@brautaset.org"
