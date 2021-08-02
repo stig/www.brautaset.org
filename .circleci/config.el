@@ -28,6 +28,8 @@
 
 (setq org-html-head
       (with-temp-buffer
+	(insert org-html-style-default)
+	(goto-char (point-max))
 	(insert "<style type=\"text/css\">\n")
 	(insert-file-contents "style.css")
 	(goto-char (point-max))
