@@ -3,7 +3,7 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-(setq sb/copyright "<p>Copyright &copy; 2001-2020 Stig Brautaset</p>")
+(setq org-html-postamble "<p>Copyright &copy; 2001-2021 Stig Brautaset</p>")
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
@@ -46,7 +46,6 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
          :exclude ".*"
-	 :html-postamble ,sb/copyright
 	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
 	 :publishing-directory "~/blog"
 	 :publishing-function org-html-publish-to-html)
@@ -54,7 +53,6 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
-         :html-postamble ,sb/copyright
 	 :publishing-directory "~/blog/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)
