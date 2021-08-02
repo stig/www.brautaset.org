@@ -3,5 +3,3 @@
 #+HTML_HEAD: <link rel="alternative" type="application/rss+xml" href="https://www.brautaset.org/feed.xml" title="Stig's Soapbox RSS Feed" />
 #+HTML_HEAD: <meta name="referrer" content="same-origin">
 #+DESCRIPTION: Stig's Personal Soapbox
-#+BIND: org-html-link-home "about.html"
-#+BIND: org-html-link-up "index.html"

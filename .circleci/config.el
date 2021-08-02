@@ -46,6 +46,8 @@
 	 ,@common-properties
 	 :base-directory "~/blog"
          :exclude ".*"
+	 :html-link-up "index.html"
+	 :html-link-home "about.html"
 	 :include ("index.org" "articles.org" "about.org" "style-demo.org")
 	 :publishing-directory "~/blog"
 	 :publishing-function org-html-publish-to-html)
@@ -53,6 +55,8 @@
 	("www-articles"
 	 ,@common-properties
 	 :base-directory "~/blog/articles"
+	 :html-link-up "../../index.html"
+	 :html-link-home "../../about.html"
 	 :publishing-directory "~/blog/articles"
 	 :publishing-function org-html-publish-to-html
 	 :recursive t)

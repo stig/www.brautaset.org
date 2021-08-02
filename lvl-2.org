@@ -1,3 +1,1 @@
 #+SETUPFILE: lvl-0.org
-#+BIND: org-html-link-home "../../about.html"
-#+BIND: org-html-link-up "../../index.html"
