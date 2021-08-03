@@ -184,6 +184,7 @@ Let's also outline our code blocks with our favourite colour:
 #+begin_src css
 pre {
     border: 1px solid var(--accent);
+    box-shadow: 3px 3px 3px var(--alt-accent);
 }
 
 pre.src:before {
