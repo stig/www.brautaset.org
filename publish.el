@@ -16,15 +16,12 @@
 		(capitalize name)
 		content)))
 
-(setq org-html-home/up-format "
-<div id=\"org-div-home-and-up\">
-  <nav>
-    <a accesskey=\"h\" href=\"%s\">Home</a>
-    |
-    <a accesskey=\"a\" href=\"%s\">About</a>
-  </nav>
-</div>
-")
+(setq org-html-home/up-format
+      (with-temp-buffer
+	(insert-file-contents "templates/nav.html")
+        (buffer-substring-no-properties
+	 (point-min)
+	 (point-max))))
 
 (setq org-html-head
       (with-temp-buffer

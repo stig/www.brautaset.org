@@ -5,9 +5,7 @@ This is a personal blog. Opinions expressed here do not reflect those
 of my employer.
 
 
-* Most recent articles
-
-I also maintain a [[file:articles.org][full list of articles]], and an [[file:feed.xml][RSS]] feed.
+* Recent articles
 
 #+include: articles.org :lines "7-13"
 
