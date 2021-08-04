@@ -10,7 +10,7 @@ military service, before moving to London to study AI. I graduated
 from the University of Westminster in 2003, and have been working
 primarily as a backend software engineer since.
 
-You can find a more comprehensive biography [[file:articles/2016/berwick-academy-stem-talk.org][in this article]], or on my
+You can find a more comprehensive biography [[file:posts/berwick-academy-stem-talk.org][in this article]], or on my
 [[https://www.linkedin.com/in/stigbrautaset/][LinkedIn profile]].
 
 * About SBJson

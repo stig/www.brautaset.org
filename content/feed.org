@@ -3,83 +3,83 @@
 
 * Shell Quickstart                                           :Shell:Tutorial:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/shell-quickstart.html
+:RSS_PERMALINK: posts/shell-quickstart.html
 :ID:       65271BDA-D659-4F6B-9985-E4B4CCBD78F3
 :PUBDATE:  <2020-12-14 Mon 23:26>
 :END:
-#+include: articles/2020/shell-quickstart.org
+#+include: posts/shell-quickstart.org
 * How I record Guitar
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/how-I-record-guitar.html
+:RSS_PERMALINK: posts/how-I-record-guitar.html
 :ID:       B3BE0FBE-B00C-46DB-9383-AAFCC9F0B658
 :PUBDATE:  <2020-12-11 Fri 23:53>
 :END:
-#+include: articles/2020/how-I-record-guitar.org
+#+include: posts/how-I-record-guitar.org
 * On broken horses & master branches
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/broken-horses-and-master-branches.html
+:RSS_PERMALINK: posts/broken-horses-and-master-branches.html
 :ID:       0E0EF8AA-ACC6-4FE7-981A-970C353FF9E9
 :PUBDATE:  <2020-10-13 Tue 19:28>
 :END:
-#+include: articles/2020/broken-horses-and-master-branches.org
+#+include: posts/broken-horses-and-master-branches.org
 * Musical Goals
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/musical-goals.html
+:RSS_PERMALINK: posts/musical-goals.html
 :ID:       92C590D8-F1D9-4258-AD9F-C5361E08674C
 :PUBDATE:  <2020-02-15 Sat 14:55>
 :END:
 
-#+include: articles/2020/musical-goals.org :lines "3-"
+#+include: posts/musical-goals.org :lines "3-"
 * Dark Mode                                                           :Hacks:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/dark-mode.html
+:RSS_PERMALINK: posts/dark-mode.html
 :ID:       2787CA53-53D8-4EBC-A011-6FA4E6C2A95C
 :PUBDATE:  <2020-02-10 Mon 09:18>
 :END:
 
-#+include: articles/2020/dark-mode.org :lines "3-"
+#+include: posts/dark-mode.org :lines "3-"
 
 * Driving Technical Change (Review)                                 :Reviews:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2020/driving-technical-change.html
+:RSS_PERMALINK: posts/driving-technical-change.html
 :ID:       87FC6FA9-B6ED-421B-B190-8F83B9DF3C68
 :PUBDATE:  <2020-02-03 Mon 10:09>
 :END:
 
-#+include: articles/2020/driving-technical-change.org :lines "3-"
+#+include: posts/driving-technical-change.org :lines "3-"
 
 * Speeding up tests on CircleCI for a Python Django project :Python:CircleCI:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2019/speed-up-circleci.html
+:RSS_PERMALINK: posts/speed-up-circleci.html
 :ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
 :PUBDATE:  <2019-07-01 Mon 17:49>
 :END:
 
-#+include: articles/2019/speed-up-circleci.org :lines "3-"
+#+include: posts/speed-up-circleci.org :lines "3-"
 
 * Digital Minimalism                                      :Lifestyle:Reviews:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2019/digital-minimalism.html
+:RSS_PERMALINK: posts/digital-minimalism.html
 :ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
 :PUBDATE:  <2019-06-15 Sat 14:07>
 :END:
 
-#+include: articles/2019/digital-minimalism.org :lines "3-"
+#+include: posts/digital-minimalism.org :lines "3-"
 
 * Learning Guitar Update                                              :Music:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2019/learning-guitar-update.html
+:RSS_PERMALINK: posts/learning-guitar-update.html
 :ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
 :PUBDATE:  <2019-05-10 Fri 08:53>
 :END:
 
-#+include: articles/2019/learning-guitar-update.org :lines "3-"
+#+include: posts/learning-guitar-update.org :lines "3-"
 
 * Bose QuietComfort 35 Review                                       :Reviews:
 :PROPERTIES:
-:RSS_PERMALINK: articles/2019/bose-quietcomfort-35-review.html
+:RSS_PERMALINK: posts/bose-quietcomfort-35-review.html
 :ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
 :PUBDATE:  <2019-03-21 Thu 14:39>
 :END:
 
-#+include: articles/2019/bose-quietcomfort-35-review.org :lines "3-"
+#+include: posts/bose-quietcomfort-35-review.org :lines "3-"

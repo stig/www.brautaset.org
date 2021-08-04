@@ -5,28 +5,28 @@ This is a personal blog. Opinions expressed here do not reflect those
 of my employer.
 
 
-* Recent articles
+* Recent posts
 
-#+include: articles.org :lines "7-13"
+#+include: posts.org :lines "6-12"
 
-* Favourite articles
+* Favourite posts
 
-These are my three all-time favourite articles.
+These are my three all-time favourite posts.
 
-** [[file:articles/2018/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
-#+include: articles/2018/submarine-sonar-hiring.org::abstract :only-contents t
+** [[file:posts/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
+#+include: posts/submarine-sonar-hiring.org::abstract :only-contents t
 
 My first to reach the HackerNews front page. In weeks it got orders of
 magnitude more hits than the rest of my site put together.
 
-** [[file:articles/2017/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                    :Clojure:
-#+include: articles/2017/potter-coding-dojo.org::abstract :only-contents t
+** [[file:posts/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                    :Clojure:
+#+include: posts/potter-coding-dojo.org::abstract :only-contents t
 
 I like it because of the amount of iterations I went through, and the
 discussions I had with coworkers about it at all-hands.
 
-** [[file:articles/2006/rise-of-the-machine.org][Rise of the Machine]]                                                :Hacks:
-#+include: articles/2006/rise-of-the-machine.org::abstract :only-contents t
+** [[file:posts/rise-of-the-machine.org][Rise of the Machine]]                                                :Hacks:
+#+include: posts/rise-of-the-machine.org::abstract :only-contents t
 
 I like this one because it was such a great learning experience!
 
