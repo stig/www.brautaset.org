@@ -1,0 +1,763 @@
+#+title: The "Potter" Coding Dojo (in Clojure)
+#+date: <2017-06-22>
+#+category: Clojure
+
+At the end of May our remote-first company met up for one of our
+thrice-yearly week-long meetups. One of the objectives is to socialise
+and do group activites that build psychological safety so that we feel
+safe to take risks and feel vulnerable in front of each other. This
+means we can communicate more confidently & efficiently when we are
+back in our remote offices.
+
+This time we met up in Majorca[fn:1] and sessions included
+ice-breakers (people-bingo; building a tower with marshmallow, tape
+and spaghetti; etc), building a Technology Radar, Coding Dojo, How To
+Master Git, Biomechanics For Desk People, and lightning talks---to
+mention a few. (We also celebrated a product launch
+and---yes---managed to find time for some bathing, paddling—and even a
+couple morning runs.)
+
+It is the Coding Dojo I want to talk about in this post. Or; not
+actually the session itself, but my efforts to solve one of the
+problems featured in it. It was briefly stated but surprisingly
+deep and I have found myself thinking about it a lot since.
+
+#+TOC: headlines
+
+* A Warning
+:PROPERTIES:
+:CUSTOM_ID: a-warning
+:END:
+
+If you are considering doing this Coding Dojo yourself, you may want
+to postpone reading this until you do because it provides not one but
+/two/ different solutions that passes all the suggested test cases.
+
+* The Problem
+:PROPERTIES:
+:CUSTOM_ID: the-problem
+:END:
+
+(Paraphrased by yours truly; the original is over at [[http://codingdojo.org/kata/Potter/][codingdojo]].)
+
+- There is a bookshop that has only five distinct books; Let's call
+  them 1--5
+- The shop has unlimited quantities of each book
+- Each book costs £8
+- You can get a discount for buying several /distinct/ books as a unit
+- There is /no/ discount for buying two (or more) copies of the same
+  book as a unit
+- A purchase can contain multiple units, thus you can get multiple
+  discounts for a single purchase
+
+These are the discounts:
+
+| distinct books   | discount % |
+|------------------+------------|
+| 2 distinct books |          5 |
+| 3 distinct books |         10 |
+| 4 distinct books |         20 |
+| 5 distinct books |         25 |
+
+
+Your mission: write a function to calculate the price of a purchase,
+such that the customer always pays the minimum available price.
+
+Example: Buying the books 1, 2 & 3 can be put through the till in
+several different ways:
+
+| #1 | Individually (no discounts)         | $£8 \times 3 = £24$                          |
+| #2 | Discount for two of the books[fn:1] | $£8 + 2 \times £8 \times (1 - 0.05) = £23.2$ |
+| #3 | Discount for three books            | $3 \times £8 \times (1 - 0.1) = £21.6$       |
+
+In this case, your function should pick option #3 as it is the
+cheapest.
+
+* Towards a (simplistic) solution
+:PROPERTIES:
+:CUSTOM_ID: simple-solution
+:END:
+
+I immediately thought that this was a combinatorial problem and scoured
+Clojure's collections library for suitable combinatorial operators. I
+didn't find what I wanted in the standard library, but
+~clojure.math.combinatorics~ appeared to have what I needed.
+
+~clojure.math.combinatorics/partitions~ return all the different ways to
+partition the input into subsets, which sounds like it might work. I
+felt I was ready to start coding.
+
+Let's start easy, with an import statement for
+~clojure.math.combinatorics~, a ~def~ for our book price, and a map of
+available discounts:
+
+#+BEGIN_SRC clojure
+(ns potter.core
+  (:require [clojure.math.combinatorics :as combo]))
+
+(def book-price 8)
+
+(def discount {2 0.95
+               3 0.9
+               4 0.8
+               5 0.75})
+#+END_SRC
+
+Then let's try to price a single partition. Because ~combo/partitions~
+returns /all/ possible partitions, some have the same book twice in it.
+This makes no sense with our discount structure. However, we can just
+price superfluous books as if they were bought on their own, and the
+price attempts should be discarded by more optimal sets of partitions.
+
+#+BEGIN_SRC clojure
+  (defn price-partition
+    [books]
+    (let [unique (count (distinct books))
+          mult (or (discount unique) 1)]
+      (* book-price
+         (+ (* unique mult)
+            (* (- (count books) unique))))))
+#+END_SRC
+
+We're ready to price a /sequence/ of partitions, each with their own
+discount applied, to make up a whole purchase.
+
+#+BEGIN_SRC clojure
+  (defn price-partition-seq
+    [partitions]
+    (->> partitions
+         (map price-partition)
+         (reduce +)))
+#+END_SRC
+
+Now, all we need to do is make our top-level price function that takes
+our input and returns the best price we can give. It is a brute force
+solution that takes the input and first calculates all possible ways
+to partition that into subsets, then calculates the /price/ for each of
+those subsets, sorts the list of prices and grabs the lowest one.
+Simples!
+
+#+BEGIN_SRC clojure
+  (defn price
+    [books]
+    (->> books
+         combo/partitions
+         (map price-partition-seq)
+         sort
+         first))
+#+END_SRC
+
+Looks great! Let's try it out against some of the provided test
+cases[fn:2]:
+
+#+BEGIN_SRC clojure
+  (testing "no discounts"
+    (are [total books]
+        (= total (price books))
+      0 []
+      8 [1]
+      16 [2 2]
+      24 [3 3 3]
+      32 [4 4 4 4]
+      40 [5 5 5 5 5]))
+#+END_SRC
+
+Alright!
+
+#+BEGIN_SRC clojure
+  (testing "Simple discounts"
+    (are [total books]
+        (= total (price books))
+      (* 16 95/100) [1 2]
+      (* 16 95/100) [1 3]
+      (* 16 95/100) [1 4]
+      (* 16 95/100) [1 5]
+      (* 8 3 9/10) [1 3 5]
+      (* 8 4 8/10) [1 2 3 5]
+      (* 8 5 75/100) [1 2 3 4 5]))
+#+END_SRC
+
+Winning!
+
+#+BEGIN_SRC clojure
+  (testing "Multiple discounts"
+    (are [total books]
+        (= total (price books))
+      (+ 8 (* 2 8 95/100)) [1 1 2]
+      (* 2 (* 2 8 95/100)) [1 1 2 2]
+      (+ (* 8 4 8/10) (* 8 2 95/100)) [1 1 2 3 3 4]
+      (+ 8 (* 5 8 75/100)) [1 2 2 3 4 5]))
+#+END_SRC
+
+Still got it!
+
+#+BEGIN_SRC clojure
+  (testing "Edge cases"
+    (are [total books]
+        (= total (price books))
+      (* 2 (* 8 4 8/10)) [1 1 2 2 3 3 4 5]
+      (+ (* 3 (* 8 5 75/100)) (* 2 8 4 8/10)) [1 1 1 1 1
+                                               2 2 2 2 2
+                                               3 3 3 3
+                                               4 4 4 4 4
+                                               5 5 5 5]))
+#+END_SRC
+
+/BOOOOOO! Failed!/
+
+That last edge case has 23 books in it, and finding all the possible
+partitions is a function whose time consumption grows rapidly with the
+number of books. For 13 to 15 books the time taken for this function
+roughly triples for each book added, so 23 books will take rather a
+long time. Witness:
+
+#+BEGIN_SRC clojure
+  potter.core> (time
+                (count
+                 (combo/partitions
+                  [1 1 1
+                   2 2 2
+                   3 3 3
+                   4 4
+                   5 5])))
+  "Elapsed time: 1487.052629 msecs"
+  ;; => 200549
+
+  potter.core> (time
+                (count
+                 (combo/partitions
+                  [1 1 1
+                   2 2 2
+                   3 3 3
+                   4 4 4
+                   5 5])))
+  "Elapsed time: 4089.57496 msecs"
+  ;; => 573003
+
+  potter.core> (time
+                (count
+                 (combo/partitions
+                  [1 1 1
+                   2 2 2
+                   3 3 3
+                   4 4 4
+                   5 5 5])))
+  "Elapsed time: 12744.500346 msecs"
+  ;; => 1688360
+#+END_SRC
+
+It's time to try a different approach.
+
+* Finding a solution /at all/ for large purchases
+:PROPERTIES:
+:CUSTOM_ID: fast-approximation
+:END:
+
+Although the simple solution works for small numbers of books, it is
+impractical for larger stacks of books. I felt that it might be
+possible to break the problem down somewhat, or at least approximate
+the solution for larger problems. I renamed my ~price~ function to
+~best-price~ and added a new ~fast-price~ function[fn:4]:
+
+#+BEGIN_SRC clojure
+  (defn fast-price
+    [books]
+    (loop [counts (->> books frequencies vals sort)
+           total 0]
+      (if (seq counts)
+        (let [c (first counts)
+              n (count counts)
+              p (* c (price-partition (take n (iterate inc 1))))]
+          (recur (->> counts
+                      (map #(- % c))
+                      (remove zero?))
+                 (+ total p)))
+        total)))
+#+END_SRC
+
+Then it was a case of finding a suitable threshold to switch from one
+to the other. I checked the wind direction, phases of the moon, read
+my tea leaves and goat entrails and came up with:
+
+#+BEGIN_SRC clojure
+  (defn price
+    [books]
+    (if (< (count books) 10)
+      (best-price books)
+      (fast-price books)))
+#+END_SRC
+
+Job done! Well, sort-of. This solution is fast and finds /a/ price, but
+it does not find /the best/ price for the final edge case.
+
+* Actually passing tests for edge cases
+:PROPERTIES:
+:CUSTOM_ID: passing-all-tests
+:END:
+
+My fast solution eagerly tries to build as big partitions as possible
+from the remaining books. So if you have the following: 1 1 2 2 3 3 4
+5 it will price that as:
+
+$£8 \times 5 \times (1 - 0.25) + £8 \times 3 \times (1 - 0.9) = £51.60$
+
+However, it's actually cheaper to price that as two partitions of four
+books:
+
+$2 \times £8 \times 4 \times (1 - 0.2) = £51.20$
+
+After a bit of trial-and-error in the Clojure REPL I felt confident
+that this was the only such edge case, and decided to just build my
+solution around that. I deleted most of the code I had, along the way
+micro-optimised[fn:3] fast price lookup for a unit of books. This map
+directly gave the price for a stack of 1-5 unique books, having the
+discount already added to it.
+
+#+BEGIN_SRC clojure
+  (def fast-price-lookup
+    "Pre-calculated prices (with discount)
+    for a stack of up to 5 distinct books."
+    {1 book-price
+     2 (* 2 book-price 95/100)
+     3 (* 3 book-price 9/10)
+     4 (* 4 book-price 8/10)
+     5 (* 5 book-price 75/100)})
+#+END_SRC
+
+I then did a variety of my previous ~fast-price~ function. I separated
+all the books into piles of distinct books, then built the biggest
+sets of unique books I could (by taking one from each pile) and priced
+them as a unit /unless/ I reached a state that I recognised I could
+more beneficially price as $4 + 4$ than $5 + 3$ books. Here's the code
+for that:
+
+#+BEGIN_SRC clojure
+  (defn price
+    [books]
+
+    ;; Separate the books into piles of
+    ;; individual books
+    (loop [book-piles (->> books
+                           frequencies
+                           vals
+                           sort)
+           total 0]
+
+      ;; Any more piles of books left?
+      (if (seq book-piles)
+
+        ;; Do we hit the special case
+        ;; where two four-book stacks are
+        ;; cheaper than two stacks of
+        ;; three and five unique books
+        ;; each?
+        (if (= '(1 1 2 2 2) book-piles)
+
+          ;; Return current total plus the
+          ;; cost of two stacks of four
+          ;; unique books.
+          (+ total (* 2 (fast-price-lookup 4)))
+
+          ;; Take one book from each
+          ;; remaining pile & add the cost
+          ;; of this stack of books to the
+          ;; running total.
+          (recur (->> book-piles
+                      (map dec)
+                      (remove zero?))
+                 (+ total
+                    (fast-price-lookup
+                     (count book-piles)))))
+
+        ;; No more piles of books left;
+        ;; return total.
+        total)))
+#+END_SRC
+
+There's a lot to like about this. It's dirt simple, and /fast/. I can
+price millions of books with this, no problems.
+
+I was very, very pleased with myself until [[https://michtran.ca][Michelle]], a colleague,
+pointed out that it is highly sensitive to changes in the discount
+amounts. She even went as far as calling it /cheating/ which made me
+feel like taking a few deep breaths into a paper bag. But she is
+right! Change the discount amount given for four books and the pricing
+function may start to exhibit weird behaviour.
+
+* Towards a moderately fast, correct & /robust/ solution
+:PROPERTIES:
+:CUSTOM_ID: less-cheating
+:END:
+
+Michelle tried to show me how to solve the problem using /Maths/ but
+kept on being distracted from reaching a solution by my questions
+about her notation[fn:5]. We did manage to satisfy ourselves that
+given a huge amount of books we can break the problem into smaller
+chunks, of size at most $N \times N$ where $N$ is the biggest number
+of books we offer a lump discount for. The problem is that in our case
+$N = 5$ and $5 \times 5 = 25$ is more books than we have in the edge
+case that we /already/ failed to handle.
+
+This was as far as I got at this work trip, but I've been thinking
+about the problem (too much) since. Is it possible to make a solution
+that is correct, fast enough to handle all the provided edge cases,
+and /robust/ against changes in the discounts? It feels like it should
+be.
+
+I think there will still be a combinatorical element to the solution.
+My hope is to add some domain-informed restrictions such that we can
+pass all the suggested test cases in a reasonable time span. I believe
+it should be possible. I can think of some restrictions:
+
+- Don't generate partitions with more than N items, where N is max
+  number of books we offer a discount for (i.e. 5)
+- Don't generate partitions with duplicates
+
+One approach I thought of was to generate a set of different /shapes/ of
+sets that fit those constraints, and try to fit the books we have into
+these sets.
+
+** Experimenting in a Clojure REPL
+:PROPERTIES:
+:CUSTOM_ID: experimenting-in-repl
+:END:
+
+I still think that ~combo/partitions~ can help me find all the different
+/shapes/ or partitions, with a bit of creative management of its input,
+so let's swap to a REPL and try just that.
+
+#+BEGIN_SRC clojure
+  potter.core> (combo/partitions [1 1 1])
+  ;; => (([1 1 1]) ([1 1] [1]) ([1] [1] [1]))
+#+END_SRC
+
+Great! That looks like just the ticket. Let's print each set of
+partitions on a separate line, and count all the different solutions
+for, say, 6 books.
+
+#+BEGIN_SRC clojure
+  potter.core> (count
+                (map prn
+                     (combo/partitions
+                      (repeat 6 1))))
+  ([1 1 1 1 1 1])
+  ([1 1 1 1 1] [1])
+  ([1 1 1 1] [1 1])
+  ([1 1 1 1] [1] [1])
+  ([1 1 1] [1 1 1])
+  ([1 1 1] [1 1] [1])
+  ([1 1 1] [1] [1] [1])
+  ([1 1] [1 1] [1 1])
+  ([1 1] [1 1] [1] [1])
+  ([1 1] [1] [1] [1] [1])
+  ([1] [1] [1] [1] [1] [1])
+  ;; => 11
+#+END_SRC
+
+Ah, looking good, except we have to get rid of any solutions with
+subsets of more than N elements. Remove takes care of that:
+
+#+BEGIN_SRC clojure
+  potter.core> (count
+                (map prn
+                     (remove #(> (count (first %)) 5)
+                             (combo/partitions
+                              (repeat 6 1)))))
+  ([1 1 1 1 1] [1])
+  ([1 1 1 1] [1 1])
+  ([1 1 1 1] [1] [1])
+  ([1 1 1] [1 1 1])
+  ([1 1 1] [1 1] [1])
+  ([1 1 1] [1] [1] [1])
+  ([1 1] [1 1] [1 1])
+  ([1 1] [1 1] [1] [1])
+  ([1 1] [1] [1] [1] [1])
+  ([1] [1] [1] [1] [1] [1])
+  ;; => 10
+#+END_SRC
+
+Success! And now I realised that we can rank those patterns by their
+price, so that when we try to fit our actual set of books we can stop
+as soon as we find our first match---because any later matches we find
+/must/ be more expensive. Let's just check that we can call this with a
+value bigger than 23:
+
+#+BEGIN_SRC clojure
+potter.core> (time
+              (count
+               (remove #(> (count (first %)) 5)
+                       (combo/partitions
+                        (repeat 25 1)))))
+"Elapsed time: 54.559845 msecs"
+;; => 377
+#+END_SRC
+
+Alright! I think that will suffice. Now let's get to work on this
+solution.
+
+/Days later/
+
+Oh boy. I just came back from a very, very deep rabbit-hole. Rather
+than trying to detail the process, let's just skip straight to a tour
+of the result...
+
+** A tour of my final solution
+:PROPERTIES:
+:CUSTOM_ID: solution-tour
+:END:
+
+Let's start with the basics. We need the ~clojure.math.combinatorics~
+package, so let's import that. And let's define our book price too.
+You'll notice that this time I'm back to defining the discounts more
+simply, because I imagine that's the most frequent changes one would
+make.
+
+#+BEGIN_SRC clojure
+  (ns potter.core
+    (:require
+     [clojure.math.combinatorics :as combo]))
+
+  (def book-price 8)
+
+  (def discounts
+    {2 5/100
+     3 10/100
+     4 20/100
+     5 25/100})
+#+END_SRC
+
+We know we'll price /partitions/ of books, so let's make a function to
+price each partition, and one to price a /collection/ of partitions.
+These don't need to be terribly efficient, because we won't be
+calling them very often.
+
+#+BEGIN_SRC clojure
+  (defn- price-partition
+    "Price a partition of N distinct books."
+    [n]
+    (let [discount (or (discounts n) 0)
+          multiplier (- 1 discount)]
+      (* book-price n multiplier)))
+
+  (defn- sum-price-partitions
+    "Calculate the sum of a sequence of
+    book partitions."
+    [parts]
+    (->> parts
+         (map price-partition)
+         (reduce +)))
+#+END_SRC
+
+Now we need a way to create all the possible ways to partition our
+number of books into parts. There is never a point in considering any
+parts larger than the max number of books we offer a discount for, so
+let's find that first. ~partitions~ returns a nested sequence of
+integers, where each integer is a count of books.
+
+#+BEGIN_SRC clojure
+  (defn- max-partition-size
+    "Given a map of discounts picks
+    the max partition size to consider."
+    [discounts]
+    (->> discounts keys sort last))
+
+  (defn- partitions
+    "Produce a sequence of possible
+    partitions representing N number of
+    books, constrained by a max size for
+    each partition."
+    [n max-part-size]
+    (->> (repeat n 1)
+         combo/partitions
+         (map #(map count %))
+         (remove #(> (first %) max-part-size))))
+#+END_SRC
+
+We don't need to know the actual books to price them (because all
+books cost the same). Since we now have all the possible partitions of
+books we can calculate the price of all those partitions, and rank
+them so that the "best" partitions go first. We now have a sorted list
+of prices that we will pay, mapped to a set of partitions we have to
+separate the books in to pay that price. Though, we don't know /which/
+of those prices we'll end up paying yet.
+
+#+BEGIN_SRC clojure
+  (defn- sort-partitions-by-price
+    "Zip sequences of prices & partitions
+    together, and sort by price so the
+    cheapest sequence of partitions comes
+    first."
+    [prices parts]
+    (->> (map vector prices parts)
+         (sort-by first)))
+#+END_SRC
+
+I'm going to borrow an element from my previous solution and separate
+the entire purchase into stacks of distinct books. This is represented
+as a vector of integers, where each integer is the count of books in
+that stack. We then need a function to pick a selection (partition) of
+books from these stacks and return the new stack. We also need a
+function to find all the different ways to pick /N/ books from /M/ stacks
+of books. Here are both of those.
+
+#+BEGIN_SRC clojure
+  (defn- pick-books
+    "Pick books from the given stacks
+    according to indices given; return
+    remaining stacks of books."
+    [stacks indices]
+    ;; update-in *really* doesn't like seqs,
+    ;; hence we ensure stacks is a vector here
+    (loop [stacks (vec stacks)
+           [x & xs] indices]
+      (if-not x
+        (remove zero? stacks)
+        (recur
+         (update-in stacks [x] dec) xs))))
+
+
+  (defn- pick-combinations
+    "All the unique ways to pick N
+    books from a set of stacks."
+    [stacks n]
+    (combo/combinations
+     (range (count stacks)) n))
+#+END_SRC
+
+We are now arriving at the difficult bit... We need a function to
+check if it's possible to map our desired purchase of books to a
+particular set of partitions of books. Or put another way, given a seq
+of partition sizes can we pick all of them (depleeting the set of
+books) such that each partition contains distinct books? This is
+essentially a depth-first search.
+
+#+BEGIN_SRC clojure
+  (defn- picks-completely?
+    "Is it possible to pick the given 
+    partitions from the stacks of books,
+    such that all the stacks are used up?"
+    [parts stacks]
+    (loop [stacks stacks
+           potential-picks (pick-combinations
+                            stacks (first parts))
+           remaining-parts (rest parts)
+           backtrack-stack []]
+
+      ;; Have we reached a dead end?
+      (if (empty? potential-picks)
+
+        ;; Can we backtrack to try
+        ;; a different path?
+        (if (empty? backtrack-stack)
+          false
+          (let [prev (peek backtrack-stack)
+                stacks (nth prev 0)
+                potential-picks (nth prev 1)
+                parts (nth prev 2)]
+            (recur stacks
+                   (rest potential-picks)
+                   parts
+                   (pop backtrack-stack))))
+
+        (let [remaining-stacks
+              (pick-books stacks (first potential-picks))]
+          ;; Have we depleted our stacks of books?
+          (if (empty? remaining-stacks)
+            true
+            (recur remaining-stacks
+                   (pick-combinations
+                    remaining-stacks
+                    (first remaining-parts))
+                   (rest remaining-parts)
+                   (conj backtrack-stack
+                         [stacks
+                          potential-picks
+                          remaining-parts])))))))
+#+END_SRC
+
+OK, that was /hard/ & took me many hours to get right. (Plus at least
+one to clean up to a point where I would consider showing it to anyone
+else.) However, now we have all the pieces and it's relatively easy to
+put it all together in our public ~price~ function:
+
+#+BEGIN_SRC clojure
+  (defn price
+    "Calculates the best price you can get
+    for a collection of books, by splitting
+    it into different partitions and getting
+    the optimal discount achievable."
+    [books]
+    (if (empty? books)
+      0
+      (let [n (count books)
+            max-part-size (max-partition-size
+                           discounts)
+            parts (partitions n max-part-size)
+            prices (map sum-price-partitions parts)
+            price-parts (sort-partitions-by-price
+                         prices parts)
+            stacks (-> books frequencies vals)]
+        (loop [[[price parts] & rest] price-parts]
+          (if (picks-completely? parts stacks)
+            price
+            (recur rest))))))
+#+END_SRC
+
+Basically we're just looping over all our candidate set of partitions,
+cheapest first, and stopping as soon as we find a partition we can
+use. The last candiate partition has every book in a partition of
+its own, which /must/ match, so there's no special cases to handle
+there.
+
+** Potential Improvements
+:PROPERTIES:
+:CUSTOM_ID: potential-improvements
+:END:
+
+This is fast enough, correct enough, and robust enough that I don't
+feel like spending any more time on it. However, if I /were/ to make it
+work for even bigger inputs (it currently takes 16 seconds to price 53
+books on my machine, which is rather longer than I'd like) I think the
+two areas of improvement I would consider are:
+
+1. Finding a better way to calculate suitable partitions than
+   calculating all partitions and throwing away the unsuitable ones,
+   and without having to create all those intermediate vectors that we
+   end up throwing away.
+2. The ~pick-combinations~ function is called over and over again with
+   the same arguments, so it might benefit from memoization.
+
+* Epilogue
+:PROPERTIES:
+:CUSTOM_ID: epilogue
+:END:
+
+If you want to get into more details and play with this code yourself
+you might find it easier to check out my [[https://github.com/stig/coding-dojo][coding-dojo repo]] rather than
+piece it together from this blog post.
+
+I hope I'm /done/ with this problem now. It's been praying on my mind
+for a month, hence I decided to try "writing it out of my
+system"---and the result is this article. I hope you're happy, whoever
+you are who came up with this exercise :-)
+
+* Footnotes
+
+[fn:5] I am for some reason unable to remember how to read
+mathematical notation so have to re-learn it every time I encounter
+it.
+
+[fn:4] I make this sound easy, but it took me /hours/ which probably
+would have been better of spent sleeping. (It was the middle of the
+night, after all.)
+
+[fn:3] Unnecessarily, no doubt.
+
+[fn:2] Transcribed into Clojure from http://codingdojo.org/kata/Potter/
+
+[fn:1] There are several configurations this discount could apply,
+e.g. ((1 + 2) (3)), ((1) (2 + 3)), ((1 + 3) (2)).
+* Abstract                                                         :noexport:
+
+Detailing my trials and tribulations with the "Potter" coding dojo
+problem, with code examples in Clojure.

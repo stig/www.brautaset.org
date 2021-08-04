@@ -1,0 +1,225 @@
+#+title: Setting up Leafnode on OS X
+#+date: <2016-05-12>
+#+category: Tutorial
+#+TOC: headlines
+#+TOC: listings
+
+* Introduction
+  :PROPERTIES:
+  :CUSTOM_ID: intro
+  :END:
+
+:NOTE:
+I don't use Leafnode any more, nor read usenet news, and I've removed
+dead links to config from this article.
+:END:
+
+I read email and news with Gnus. I often use a laptop, and often in
+places I don't have internet access. Gnus doesn't like not being able
+to connect to the nntp server when it starts, so as a work-around I
+run the [[http://leafnode.sourceforge.net][Leafnode]] NNTP server locally. As a nice side-effect, Gnus
+starts a lot faster.
+
+I use [[http://orgmode.org][Orgmode]] and have a Leafnode.org that all the configuration is
+generated from. If you use Emacs, and Orgmode, you probably want to
+just look at that directly[fn::Sorry, it's long gone.]. If you use
+some other NNTP client you might want to read this post instead. No
+Emacs required :-)
+
+* Installation
+  :PROPERTIES:
+  :CUSTOM_ID: installation
+  :END:
+
+First we have to install Leafnode. This is dirt simple with [[http://brew.sh][homebrew]]:
+
+#+BEGIN_SRC sh
+    brew install leafnode
+#+END_SRC
+
+* Configuration
+  :PROPERTIES:
+  :CUSTOM_ID: configuration
+  :END:
+
+Configuring Leafnode is also quite simple really. The action all takes
+place in the =/usr/local/etc/leafnode/config= file. You have to create
+this file, but there's very few required settings and there's a
+well-commented example at =/usr/local/etc/leafnode/config.example= that
+we can use as a reference. I'll omit comments from my example, which
+you can view in listing [[lst:leafnode.cfg]]. (You obviously have to
+change =hostname= to suit you.)
+
+#+caption: Example =/usr/local/etc/leafnode/config=
+#+name: lst:leafnode.cfg
+#+BEGIN_SRC conf
+    expire = 20
+    server = news.gmane.org
+    initialfetch = 100
+    hostname = yourhost.yourdomain.com
+#+END_SRC
+
+* A note on users
+  :PROPERTIES:
+  :CUSTOM_ID: a-note-on-users
+  :END:
+
+Leafnode keeps going on about having to create a separate user to run
+Leafnode. This might make sense in a multi-user setup, but for a
+single-user case on my laptop it's overkill---so I don't bother.
+
+* Scheduling
+  :PROPERTIES:
+  :CUSTOM_ID: scheduling
+  :END:
+
+Leafnode is not just one program, but a collection of programs. The
+three important daemons (programs) are:
+
+-  *fetchnews:* posts to and fetches articles from upstream.
+-  *leafnode:* the nntp server that Gnus interacts with.
+-  *texpire:* a periodic job that cleans up old / obsolete news.
+
+We need to configure these to run periodically. Since we're on OS X
+we'll use launchd. I've cribbed heavily from [[https://trac.macports.org/browser/trunk/dports/news/leafnode/files][the Leafnode macports
+package]] for these config files.
+
+The files below all go in the =~/Library/LaunchAgents= directory.
+
+** Fetchnews
+   :PROPERTIES:
+   :CUSTOM_ID: fetchnews
+   :INDEX:    Fetchnews
+   :END:
+
+Let's run this every 30 minutes to push outgoing posts to and fetch new
+articles from upstream. This is in listing [[lst:fetchnews]].
+
+#+caption: =org.brautaset.fetchnews.plist=
+#+name: lst:fetchnews
+#+BEGIN_SRC xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>KeepAlive</key>
+        <false/>
+        <key>Label</key>
+        <string>org.brautaset.fetchnews</string>
+        <key>Program</key>
+        <string>/usr/local/sbin/fetchnews</string>
+        <key>StartInterval</key>
+        <integer>1800</integer>
+        <key>WorkingDirectory</key>
+        <string>/usr/local/var/spool/news</string>
+      </dict>
+    </plist>
+#+END_SRC
+
+** Leafnode
+   :PROPERTIES:
+   :CUSTOM_ID: leafnode
+   :INDEX:    Leafnode
+   :END:
+
+Next we need to make sure that Leafnode runs when anyone (Gnus)
+attempts to connect to the news server. It is best to launch it on
+demand, so it does not require resources when we are not reading news.
+Find it in listing [[lst:leafnode]].
+
+#+caption: =org.brautaset.leafnode.plist=
+#+name: lst:leafnode
+#+BEGIN_SRC xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>OnDemand</key>
+        <true/>
+        <key>Label</key>
+        <string>org.brautaset.leafnode</string>
+        <key>WorkingDirectory</key>
+        <string>/usr/local/var/spool/news</string>
+        <key>Program</key>
+        <string>/usr/local/sbin/leafnode</string>
+        <key>Sockets</key>
+        <dict>
+          <key>Listeners</key>
+          <dict>
+            <key>SockServiceName</key>
+            <string>nntp</string>
+          </dict>
+        </dict>
+        <key>inetdCompatibility</key>
+        <dict>
+          <key>Wait</key>
+          <false/>
+        </dict>
+      </dict>
+    </plist>
+#+END_SRC
+
+** Texpire
+   :PROPERTIES:
+   :CUSTOM_ID: texpire
+   :INDEX:    Texpire
+   :END:
+
+We'll run it about every 7 hours, which means that on successive days it
+should run at different times of day. I do this so that there's a bigger
+chance it /eventually/ will run at a time the computer is on. The file
+is in listing [[lst:texpire]].
+
+#+caption: =org.brautaset.texpire.plist=
+#+name: lst:texpire
+#+BEGIN_SRC xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>KeepAlive</key>
+        <false/>
+        <key>Label</key>
+        <string>org.brautaset.texpire</string>
+        <key>Program</key>
+        <string>/usr/local/sbin/texpire</string>
+        <key>StartInterval</key>
+        <integer>25000</integer>
+        <key>WorkingDirectory</key>
+        <string>/usr/local/var/spool/news</string>
+      </dict>
+    </plist>
+#+END_SRC
+
+** Start the services
+   :PROPERTIES:
+   :CUSTOM_ID: start-the-services
+   :END:
+
+Because we put the launchd config files in =~/Library/LaunchAgents= they
+should be automatically loaded at login, so you shouldn't have to
+think about it. However, you probably don't want to logout and back in
+again just to load them. Luckily you can run this command to load them
+manually now using the command in listing [[lst:launchctl]].
+
+#+caption: Starting the services with the =launchctl= command
+#+name: lst:launchctl
+#+BEGIN_SRC sh
+    launchctl load ~/Library/LaunchAgents/org.brautaset.{fetchnews,texpire,leafnode}.plist
+#+END_SRC
+
+If you used your own domain name in the name of the files you obviously
+also have to change the above command.
+
+* Closing notes
+  :PROPERTIES:
+  :CUSTOM_ID: closing-notes
+  :END:
+
+I hope you found this useful. I know I would have when I was trying to
+set this up a few weeks ago!
+* Abstract                                                         :noexport:
+
+I set up the Leafnode NNTP server on OS X, for use with Emacs and the
+Gnus newsreader.
+

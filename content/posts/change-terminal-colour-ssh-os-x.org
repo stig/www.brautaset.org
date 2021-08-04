@@ -1,0 +1,82 @@
+#+title: Change Terminal background colour on OS X via ssh
+#+date: <2016-09-09>
+#+category: Hacks
+
+I spend most of my work days in Emacs, Slack, Safari & Terminal. Some
+of the Terminals I've got open, such as those connected to a machine
+in the production environment, requires a more elevated attention than
+others. It would be nice if these "high risk" terminals were visually
+distinct. A colleague shared [[http://superuser.com/questions/603909/how-to-change-terminal-colors-when-connecting-to-ssh-hosts][How to change terminal colors change when
+connecting to SSH hosts]] and it inspired me to finally implement this.
+
+The solution presented there does not work on OS X Terminal, so I had
+to roll my own. My first hurdle was how to change the Terminal
+background from a script. The only solution I could find was with
+AppleScript. The next issue I had was that the solution given in that
+post changes the background for all tabs in that terminal window,
+which is not what I want. I can't remember where I found how to affect
+only one tab, but here is the code I'm using now:
+
+#+BEGIN_SRC apples
+on run desiredColour
+    if length of desiredColour > 0
+        set colour to desiredColour
+    else
+        # The RGB colour of the "Novel" profile I'm using;
+        # This is the default I want to get back to.
+        set colour to { 52007, 48990, 29970 }
+    end
+
+   tell application "Terminal"
+        tell selected tab of front window
+          set background color to colour
+     end tell
+  end tell
+end run
+#+END_SRC
+
+I put the above in =~/Dotfiles/termcolours.scpt=, and invoke it from the
+commandline like so:
+
+#+BEGIN_SRC sh
+osascript ~/Dotfiles/termcolours.scpt red
+#+END_SRC
+
+That changes the background colour of the current tab to red. (Orange,
+yellow, blue, green also works. Try it! Go wild!) Calling the script
+with no arguments resets the terminal background back to its default
+colour:
+
+#+BEGIN_SRC sh
+osascript ~/Dotfiles/termcolours.scpt
+#+END_SRC
+
+Now, after adding ~PermitLocalCommand yes~ to my =/etc/ssh/ssh_config= I
+can put the following in my =~/.ssh/config=:
+
+#+BEGIN_SRC ssh
+Host my-live-machine.example.com
+    LocalCommand osascript ~/Dotfiles/termcolours.scpt red
+#+END_SRC
+
+The current Terminal tab now changes to red when I ssh to that
+machine. Result!
+
+Ah, but wait! When I exit the remote machine the background of that
+tab is not reset to its original colour. For that, if you use Bash/Zsh
+you could just use the solution from the post I linked to above. But I
+use fish, and it uses functions instead of aliases. I put the
+following in =~/.config/fish/functions/ssh.fish=:
+
+#+BEGIN_SRC fish
+function ssh --description 'wrapper around ssh to reset term colours after exit'
+        /usr/bin/ssh $argv
+        osascript ~/Dotfiles/termcolours.scpt
+end
+#+END_SRC
+
+And there you have it!
+* Abstract                                                         :noexport:
+
+I show how to change Terminal.app colours automatically when logging
+into certain remote machines via SSH

@@ -1,0 +1,44 @@
+#+title: Driving Technical Change
+
+#+category: Reviews
+
+This is a short book of about 130 pages, divided unevenly into four
+parts.
+
+The first part is a brief introduction, with an important message.
+Make sure you /solve a problem/, rather than just pushing a solution
+looking for a problem. The latter is neutral at best, and usually
+detrimental.
+
+Part two is a pattern catalogue of sceptics: The Uninformed, The Herd,
+The Cynic, The Burned, The Time Crunched, The Boss, and The
+Irrational. I have encountered all in the past. I even am, or have
+been, a handful. This was a slightly uncomfortable realisation---but a
+valuable one I feel.
+
+The third part is the largest, and contains nine chapters each
+describing a technique for dealing with sceptics: Gain Expertise,
+Deliver Your Message, Demonstrate Your Technique, Propose Compromise,
+Create Trust, Get Publicity, Focus on Synergy, Build a Bridge, and
+Create Something Special. Each has a brief section on why it works,
+and which types of sceptics it counters. There's nothing particularly
+new in this section, and I have used some of the techniques in the
+past. Though I think naming and outlining them is useful, and makes it
+easier to remember them as discrete tools.
+
+The (brief) fourth part details a strategy for when you have multiple
+types of sceptics to convince. Sections include /Ignore the Irrational/,
+/Target the Willing/, /Harness the Converted/ and /Sway Management/.
+
+The book would be stronger if it referenced research rather than
+anecdotes. I accept this might have been a /Compromise/ to make it more
+accessible. Moreover, I'm /Burned/ by multiple ORMs and found the
+recurring example of Hibernate adoption grating, but I don't hold this
+against the book itself[fn::Because I'm not /Irrational/.].
+
+Overall I enjoyed the book, and will keep it for future reference. You
+can find other (mixed) reviews at this [[https://www.goodreads.com/book/show/15938294-driving-technical-change][Goodreads link]][fn::Here I'm
+attempting to /Create Trust/.].
+* Abstract                                                         :noexport:
+
+I review the book /Driving Technical Change/ by Terrence Ryan.

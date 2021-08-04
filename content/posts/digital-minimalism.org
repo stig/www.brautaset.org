@@ -1,0 +1,62 @@
+#+title: Digital Minimalism
+#+category: Lifestyle
+#+category: Reviews
+#+category: Popular
+
+My wife borrowed [[http://www.calnewport.com/books/digital-minimalism/][Digital Minimalism]] at our local library, and we both
+read it. Living a life supported---but not /lead/---by technology
+resonates with me. Technology is not intrinsically good or bad, but we
+should carefully evaluate whether every piece of technology you allow
+yourself to use enhances your quality of life or not.
+
+Not everything in the book was new to me. I wrote about my [[file:smartphone-addiction.org][smartphone
+addiction]] nearly 5 years ago, and although I haven't given up my
+smartphone my situation has improved. My phone currently has no:
+
+- Social media apps
+- Slack (despite using it at work)
+- Mail (yeah, you read that right)
+- News app
+- Safari[fn::You can't delete Safari, but you can use Screen Time
+  settings to hide it.]
+- YouTube
+
+This has certainly helped, and I've weaned myself off compulsively
+looking at stuff on my phone whenever I'm not at my computer. (E.g.
+while brushing my teeth.) I'm even comfortable leaving the house
+without my phone. However, it is /not enough/.
+
+Twitter and Facebook still steals my attention when I'm in front of my
+computer. I tried paring down the number of people I followed, and
+installing browser plugins to remove their worst distractions. I still
+found myself compulsively checking the services. I spent more time
+than I indented on these services, and I never came away feeling this
+time was well spent!
+
+Additionally it's clear by now that Twitter and Facebook are only
+interested in maximising your time on the site so they can get your
+eyeballs in front of more ads, and damn the consequences. I don't want
+to line Dorsey and Zuckerberg's pockets any more.
+
+I deleted my Twitter account last week, and my Google account (used
+solely for YouTube) today. I've scheduled my Facebook account deletion
+for July 1st. This is the only service I've used to communicate with
+wider family and childhood friends, and I wanted to give them a bit of
+a heads up before disappearing.
+
+What's next? One of the most distracting habits left is reading news
+online. I currently get most of my news from the BBC, but I'm
+considering re-subscribing to The Economist. I cancelled because I
+never managed to read their entire issue, but I miss their more
+in-depth reporting and lack of celebrity worship and single-paragraph
+"stories" without any substance.
+
+Essentially, I'm extricating myself from social media and unwanted
+digital distractions, bit by bit. For a while I've desperately wanted
+more control over where I spend my limited currency in the attention
+economy. Reading /Digital Minimalism/ gave me the confidence to take
+action.
+* Abstract                                                         :noexport:
+
+I introduce Cal Newport's book, and how it's helping me take control
+of where I spend my limited currency in today's attention economy.

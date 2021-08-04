@@ -1,0 +1,137 @@
+#+title: Learning Clojure by Solving Euler Problems
+#+date: <2014-02-10>
+#+category: Clojure
+
+I'm always interested in new technologies and languages. We're using
+Scala at work, and I really quite like the language. I really do like
+static (inferred) types. But on the other hand, as an AI graduate Lisp
+holds a certain allure and is a language I've wanted to learn for a
+long time but somehow never really gotten around to. One (for me)
+silly roadblock has been the stupid names of functions like =cdr= and
+=car= rather than =first= and =rest=. Clojure actually fixes this deficiency
+in Lisp, so I decided to give it a go.
+
+Since I didn't have a particular project in mind I started out by
+trying to solve problems from [[https://projecteuler.net][Project Euler]]. The first 2 were simple,
+but for the third I needed a pretty fast prime generator. My first
+attempt was very simple and produced a correct sequence, but it is
+incredibly slow. Here it is:
+
+#+BEGIN_SRC clojure
+  (defn naive-primes-seq
+    "Stig's first naive prime number sequence generator."
+    []
+    (defn odd-seq []
+      (filter odd? (iterate inc 3)))
+    (defn naive-prime? [n]
+      (every?
+       (fn [x] (not= (mod n x) 0))
+       (cons 2 (take-while
+                (fn [x] (< (* x x) (inc n)))
+                (odd-seq)))))
+    (cons 2
+          (filter naive-prime?
+                  (odd-seq))))
+#+END_SRC
+
+The silliest thing about it is that it's generating a list of all
+numbers, then filtering out the even ones, and testing all of those.
+That was easy to fix, and as you can see I learnt about the =#= macro as
+well in the process. This version is about twice as fast as the above:
+
+#+BEGIN_SRC clojure
+  (defn naive-primes-seq4
+    "Stig's 4th naive prime number sequence generator."
+    []
+    (let [odd-seq (iterate #(+ %1 2) 3)]
+      (defn prime? [n]
+        (every?
+         #(not= (mod n %1) 0)
+         (take-while
+          #(< (* %1 %1) (inc n))
+          odd-seq)))
+      (cons 2
+            (filter prime?
+                    odd-seq))))
+#+END_SRC
+
+It still an incredibly naive implementation though, and about a
+gazillion times slower than the version by [[http://clj-me.cgrand.net/2009/07/30/everybody-loves-the-sieve-of-eratosthenes/][Christophe Grand]]. My
+understanding of Clojure was not deep enough to completely understand
+how that implementation works. But, I was able to learn some things
+(for example the =letfn= construct) from it and I set out to explore an
+idea I had for a fast, lazy Sieve of Eratosthenes.
+
+My idea was to keep a set containing prime multiples for fast checking,
+and a map where the keys are the primes found so far, and the values
+were the highest multiple of it in the set. The set would continually be
+pruned for values lower than the current candidate, and the set would be
+updated from the keys and values in the map. I even did
+micro-optimisations like tripling each prime's value as the initial
+value in the set (because even values would never be candidates) and
+adding "its" prime to this value twice each time we subsequently updated
+the set. My last attempt is shown below.
+
+#+BEGIN_SRC clojure
+  (defn sprimes
+    "Stream of prime numbers using a streaming
+    version of the Sieve of Eratosthenes. Take 2!"
+    []
+    (letfn [(thrice [x] (* x 3))
+            (bump-vals [kv]
+              (let [key (key kv)]
+                [key (+ (val kv) (* 2 key))]))
+            (map-updates [m c]
+              (->> m
+                   (filter
+                    (fn [entry] (> c (val entry))))
+                   (map bump-vals)
+                   (into {})))
+            (next-prime [m s c]
+              (if (s c)
+                (recur m s (+ 2 c))
+                (let [updates (map-updates m c)]
+                  (if-not (empty? updates)
+                    (recur (into m updates)
+                           (into s (vals updates))
+                           c)
+                    (let [tc (thrice c)]
+                      (cons c
+                            (lazy-seq
+                             (next-prime
+                              (assoc m c tc)
+                              (conj s tc)
+                              (+ 2 c)))))))))]
+      (cons 2 (next-prime {} #{} 3))))
+#+END_SRC
+
+It is a moderate improvement on my naive solutions, but it's still
+damn slow! However, at this point I have learnt enough Clojure to
+actually understand Christophe's version. And it is sublime! It
+accomplishes exactly my goals, but so much more elegantly and
+efficiently I hardly know where to start. So I won't! Now, there's not
+much I can do to improve the efficiency or elegance of his algorithm,
+but I /can/ improve the run speed by making the map [[http://clojure.org/transients][transient]]. By that
+minimal change Christophe's algorithm was speeded up by a hefty
+factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
+
+#+BEGIN_SRC clojure
+  user=> (time
+          (doall
+           (take 1
+                 (drop 1000000
+                       (grand-lazy-primes)))))
+  "Elapsed time: 18665.168 msecs"
+  (15485867)
+
+  user=> (time
+          (doall
+           (take 1
+                 (drop 1000000
+                       (grand-lazy-primes2)))))
+  "Elapsed time: 13422.726 msecs"
+  (15485867)
+#+END_SRC
+
+I think it's fast enough for now, so now I'll continue onto Euler
+Problem 4...

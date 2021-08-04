@@ -1,0 +1,57 @@
+#+title: Publishing this blog to an S3 bucket
+#+date: <2017-07-23 Sun>
+#+category: S3
+
+This is a short post adding to the testing notes from the [[file:s3-website-with-https-using-cloudformation.org::#testing][previous
+post]] where I created an S3 bucket to host my static site. To test that
+it worked I had to upload /something/ and ended up doing most of what I
+had intended for this blog post. If you're reading my [[file:adding-ssl.org][adding SSL
+series]] but are only interested in the CloudFormation bits you can skip
+this post as it doesn't contain any.
+
+For the tests in my previeous post I relied on all =.html= pages being
+generated in the same base directory as their sources. But as I don't
+intend to check in the generated files, I don't want to continue that!
+Instead I want the generated files to end up in =~/public_html= on my
+machine, so I can preview them. I intend to do much like what I do
+now: =cd= into the root directory containing the generated blog and
+issue the command ~python -m SimpleHTTPServer~.
+
+So, I have to change my publishing setup. For the processing of the
+Org files I just have to change the =:publishing-directory= setting from
+=~/blog= to =~/public_html= but I have to add a new project to deal with
+static files. This project looks like so:
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-publish-project-alist
+        '(("superloopy_static"
+           :base-directory "~/blog"
+           :publishing-directory "~/public_html"
+           :base-extension "css\\|jpg\\|png\\|pdf"
+           :recursive t
+           :publishing-function org-publish-attachment)
+          ("superloopy_html"
+           ...)
+#+END_SRC
+
+Now, after I have reviewed the changes to the generated files (by
+browsing to http://127.0.0.1:8000) I have to upload the generated
+files to S3. This is similar to how I uploaded the test files in the
+previous post, but now that the directory only contains generated
+files I can shorten it to make the =--exclude= line more specific and
+contain fewer =--include= lines. My =upload.fish= script looks like this:
+
+#+BEGIN_SRC fish
+#!/usr/local/bin/fish
+
+set -gx AWS_PROFILE stig
+aws s3 sync \
+    --acl public-read \
+    --exclude '.DS_Store' \
+    ~/public_html/ s3://www.superloopy.io
+#+END_SRC
+
+* Abstract                                                         :noexport:
+
+I show briefly the changes I need to make to publish this blog to S3
+rather than to GitHub.

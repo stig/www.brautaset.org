@@ -73,6 +73,14 @@
 	 :publishing-directory "~/blog/_site"
 	 :publishing-function org-html-publish-to-html)
 
+        ("posts"
+	 ,@common-properties
+	 :base-directory "~/blog/content/posts"
+         :nav-at "../"
+	 :html-head-extra ,(sb/html-head-extra "../")
+	 :publishing-directory "~/blog/_site/posts"
+	 :publishing-function org-html-publish-to-html)
+
 	("articles"
 	 ,@common-properties
 	 :base-directory "~/blog/content/articles"

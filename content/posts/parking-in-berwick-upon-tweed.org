@@ -1,0 +1,172 @@
+#+options: h:1
+#+title: Parking in Berwick Needs a Rethink
+#+subtitle: An Open Letter to Northumberland County Council
+#+date: <2017-10-07 Sat>
+#+category: Soapbox
+
+I have an office at Berwick Workspaces, commuting in from a nearby
+village about 15-20 minutes away by car. In the last six months it has
+taken me almost as long again each day to find all-day parking. I
+cannot use short-stay car parks as I cannot interrupt my work to move
+my car.
+
+#+toc: headlines 1
+
+* Introduction
+
+I usually drive across Pudding Lane around 11am and visit all the
+long-stay car parks inside the walls: Hatters Lane, Coxons Lane,
+Parade & Foul Ford. More often than not these are all busy, so I head
+for the Quayside: usually this too is busy. Thus most days I resort to
+parking "on the grass" in Castlegate Overspill Carpark. The reason for
+my reluctance is that---as you no doubt know---it more resembles a
+muddy bog than a car park this this time of year.
+
+The situation was just about tolerable until building work started on
+the Greaves West & Ayre (GWA) offices on Walkergate. Until then I was
+regularly able to find parking in Coxons Lane when I arrived, but
+since that work started being able to find a slot there has become the
+exception rather than the rule. As work started it was initially
+filled with builders' lorries and vans, and later (presumably) by GWA
+staff.
+
+* Problems
+
+I think there are several elements that need to be addressed:
+
+** Two (and three) hour parking is too short
+
+Thus visitors or anyone driving in for lunch / cafe visit & an errand
+end up using all day parking instead. The two hour parking by the
+Maltings particularly rankles, as it is impossible to use for a
+matinee or day-time play.
+
+** People often don't park fully inside the parking bays
+
+Thus take up more space than necessary. This is particularly the case
+in Foul Ford and Castlegate car parks.
+
+** Carks parked for weeks at a time in the long stay car parks
+
+In particular I'm convinced Hatters Lane and Coxons Lane are used by
+local residents who should be using resident parking instead, but no
+doubt find it cheaper and more convenient than obtaining a resident
+parking permit.
+
+** Too much parking reserved for busses
+
+The one-hour car park next to the library was made into a bus car park
+but seems to go unnused. At least I have never noticed any busses
+parked there.
+
+** Use of long-stay parking is more convenient than short-stay
+
+You don't have to worry about obtaining or displaying the disk, nor
+about remembering to be back at a certain time. I have myself been
+guilty of (ab-)using long-stay car parks for this reason, and doubt
+I'm the only one.
+
+** Castlegate long stay and overspill car park is often a mudbath
+
+I often end up parking here because I can't find suitable parking
+inside the walls. Yet, it's not the distance of walking I object to:
+it's having to wade through mud, and risk a fall on the slippery
+surface that is the problem.
+
+* Recommendations
+
+I posit that we need a thorough overhaul of parking in Berwick. Here
+are some suggestions for your consideration:
+
+** Introduce commuter friendly parking in town
+
+One way could be introduce a comumter disk, mimicing the existing
+short-stay parking disk but with days of the week on it rather than
+hours. It would be valid for a single day, but not multiple days in a
+row. There could either be a separate car park where these would be
+valid, or their users could park in the existing short-stay parking
+ones. (The latter would require the commuter disks to be rather more
+expensive than the existing disk to discourage misuse, or be something
+you have to apply for like the resident permits.) Ideally you should
+have to show that you work in town to qualify.
+
+Another way to do this would be extending the existing [[http://www.northumberland.gov.uk/NorthumberlandCountyCouncil/media/Parking-documents/1518-Northumberland-Pay-and-Display-Parking-permit-Terms-and-Conditons.pdf][Pay & Display]]
+scheme to a location inside the walls, suitable for commuting.
+However, this solution does not address the problem of cars parked for
+weeks at a time.
+
+** Introduce half-day parking
+
+Some of the two and three hour parking could be made into four hour
+parking so that people would have enough time to go to the cafe, make
+an errand or two, and then leave. I have noticed that a lot of the
+all-day car parking frees up in the early afternoon, meaning it's
+taken by cars that could have used half-day parking instead. Thus
+allocating some of the short stay to slightly longer parking should
+stop these people hogging long-term parking unnecessarily.
+
+** Firm up the markings in the parking bays
+
+Particularly in Castlegate and Foul Ford, and start fining cars that
+flout the markings. This would free up many spaces each day, as I
+often see two cars parked in space that would suffice for three.
+
+** Properly develop Castlegate Long Stay overspill car park
+
+Make it suitable for parking in all weather and footwear.
+
+This would be particularly effective in combination with improved
+access from Castlegate Long stay and overspill car parks to the town.
+This could take the form of a tunnel through the walls, or a set of
+stairs to the top of the walls from Castlegate long stay car park,
+providing access from Castlegate to Wallace Green, Coxons Lane, or
+Hatters Lane.
+
+** Incentivise people to use short-term parking when appropriate
+
+This could perhaps be done by requiring a parking disk for long stay
+parking too, and perhaps by making this disk more expensive.
+
+** Make the bus car park by the Library back into a car park
+
+It should be at least two hours, since many events you may want to
+attend to at the library last an hour.
+
+** Incentivise residents to use resident parking
+
+This could be done by requiring a permit/disk for long-stay parking,
+and setting the price for this slightly higher than the fee to obtain
+a resident parking permit.
+
+** Introduce a park-and-ride scheme
+
+Particularly for the tourist season, when the parking problem is
+particularly acute.
+
+* Conclusion
+
+I don't think that any of the above recommendations will fix the
+parking problem on their own. Nor do I necessarily think adding more
+parking is the right solution. Rather, I believe a multi-pronged
+approach is required.
+
+I realise that the existing parking disk is a County wide scheme, and
+the particular problem I describe is perhaps localised to Berwick. (I
+have no experience with other towns in the county, so cannot speak for
+them.) Thus introducing a disk, or additional charges, for long-stay
+parking could be a problem. However, it feels like introducing a
+commuter disk, and dedicated parking for carriers of such a disk, as a
+specific solution to a specific problem we have here that will have
+little impact to the rest of the county. Improving the quality of the
+surface and bay markings of existing parking sites should also give
+good result with no impact to the parking scheme anywhere else.
+
+* Contact
+
+I refer you to [[file:../about.org::#contact][my contact details]] should you wish to contact me about
+this open letter.
+* Abstract                                                         :noexport:
+
+I complain about the unacceptable parking situation for commuters to
+Berwick-upon-Tweed and present a few suggestions for improvement that
+might help.

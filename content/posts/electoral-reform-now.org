@@ -1,0 +1,75 @@
+#+title: Electoral Reform Now!
+#+date: <2017-06-10>
+#+category: Soapbox
+
+In the 2017 UK General Election the Conservatives got just over 6
+percent more of the votes than Labour, but got 21 percent more
+MPs ([[http://www.bbc.co.uk/news/election/2017/results][source]]). The Scottish Nationalist Party got fewer than half the
+votes of the Liberal Democrats---yet got nearly three times the MPs.
+The Democratic Unionist Party (DUP) got ten MPs, with a little more
+than half the Green Party's votes (1 MP)---and a little less than half
+of UKIP's (0---zero!---MPs).
+
+This is not fair. This is not a good representation of the electorate.
+This is the result of the [[https://www.electoral-reform.org.uk/voting-systems/types-of-voting-system/first-past-the-post/][First Past the Post]] (FPTP) voting system
+used in UK General Elections---and in many former British colonies.
+This needs to change. We need to improve our democratic process and
+ensure that every vote counts.
+
+One way to redress this imbalance between vote ratio and MPs is to
+switch to a system of proportional representation (PR). In the table
+below I've calculated what the number of MPs would be for each party
+if we used PR. Note that I've rounded up to the nearest MP, as
+electing 76% of an MP could be deeply traumatic for those involved and
+could discourage people from standing. (You could just as well round
+down and get a slightly lower number of MPs.)
+
+#+caption: Number of MPs for each party with First Past the Post in the UK 2017 General Election, vs hypothetical numbers with Proportional Representation
+#+name: tbl:fptp-vs-pr
+#+attr_html: :id fptp-vs-pr
+| Party                            |    Votes | % of the vote | MPs  currently | MPs with PR | Gain/Loss in MPs |
+|----------------------------------+----------+---------------+----------------+-------------+------------------|
+| Conservative                     | 13667213 |         42.45 |            318 |         276 |              -42 |
+| Labour                           | 12874985 |         39.99 |            262 |         260 |               -2 |
+| Scottish National Party          |   977569 |          3.04 |             35 |          20 |              -15 |
+| Liberal Democrat                 |  2371772 |          7.37 |             12 |          48 |               36 |
+| Democratic Unionist Party        |   292316 |          0.91 |             10 |           6 |               -4 |
+| Sinn Fein                        |   238915 |          0.74 |              7 |           5 |               -2 |
+| Plaid Cymru                      |   164466 |          0.51 |              4 |           3 |               -1 |
+| Green Party                      |   525371 |          1.63 |              1 |          11 |               10 |
+| UKIP                             |   593852 |          1.84 |              0 |          12 |               12 |
+| Social Democratic & Labour Party |    95419 |          0.30 |              0 |           2 |                2 |
+| Ulster Unionist Party            |    83280 |          0.26 |              0 |           2 |                2 |
+| Alliance Party                   |    64553 |          0.20 |              0 |           1 |                1 |
+| The Yorkshire Party              |    20958 |          0.07 |              0 |           0 |                0 |
+| National Health Action           |    16119 |          0.05 |              0 |           0 |                0 |
+| Christian Peoples Alliance       |     5869 |          0.02 |              0 |           0 |                0 |
+| British National Party           |     4642 |          0.01 |              0 |           0 |                0 |
+| Monster Raving Loony Party       |     3890 |          0.01 |              0 |           0 |                0 |
+| Women's Equality Party           |     3580 |          0.01 |              0 |           0 |                0 |
+| Pirate Party                     |     2321 |          0.01 |              0 |           0 |                0 |
+| English Democrats                |     1913 |          0.01 |              0 |           0 |                0 |
+| Workers Revolutionary Party      |      771 |          0.00 |              0 |           0 |                0 |
+| Social Democratic Party          |      469 |          0.00 |              0 |           0 |                0 |
+| Others                           |   186675 |          0.58 |              1 |           4 |                3 |
+|----------------------------------+----------+---------------+----------------+-------------+------------------|
+| Total                            | 32196918 |           100 |            650 |         650 |                0 |
+#+TBLFM: $3=$2*100/@>$2;%.2f::$5=$3*650/100+0.5;%d::$6=$5-$4;%d::@25$2=vsum(@I..@II)::@25$3=vsum(@I..@II);%d::@25$4=vsum(@I..@II)::@25$5=vsum(@I..@II)
+
+One challenge is to get a good balance of MPs with a local connection
+to the area they represent, and proportionate representation for the
+country as a whole. Another toughie---at least for me personally---is
+that under proportional representation UKIP would have 12 MPs. But
+this is the cost of democracy: we cannot simply silence the voices we
+don't like.
+
+The [[https://www.electoral-reform.org.uk][Electoral Reform Society]] is the UK's leading voice for democratic
+reform. They have a list of [[https://www.electoral-reform.org.uk/voting-systems/][voting systems]] on their website, several
+of which addresses this. The biggest challenge they face, however, is
+to get /any/ proportional system through Parliament---given the
+incumbent party would lose out massively. Nevertheless, I think it's
+important to try.
+* Abstract                                                         :noexport:
+
+I try to show how unjust the First Past the Post system used to elect
+MPs in UK General Elections is.

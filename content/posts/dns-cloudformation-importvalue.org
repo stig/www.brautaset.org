@@ -1,0 +1,150 @@
+#+title: Updating DNS with output of another CloudFormation stack
+#+date: <2017-07-23 Sun>
+#+category: CloudFormation
+
+This post is part of a series where I [[file:adding-ssl.org][add SSL]] to this blog. The =www=
+template I created in two [[file:ssl-enabled-s3-redirects-with-cloudformation.org][previous]] [[file:s3-website-with-https-using-cloudformation.org][posts]] had two outputs defined for
+the CloudFront distributions created, so that I could import these
+values in my =dns= template and avoid hard-coding their domain names.
+This post shows the changes required to do just that.
+
+#+toc: headlines
+
+* Updated Outputs
+  :PROPERTIES:
+  :CUSTOM_ID: out-updates
+  :END:
+
+Let's dive right in. According to the [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html][Outputs]] documentation you need
+to add the optional ~Export~ object to the output, giving the fully
+qualified ~Name~ to be used for the variable. It is heavily implied that
+you should try to work the /StackName/ into this names somehow. That's
+what we're doing on lines [[(exp1)]] and [[(exp2)]]. I've also added a new
+variable, [[(sn)][~StackName~]], which I'll get back to in a moment.
+
+#+BEGIN_SRC yaml -n -r
+  Outputs:
+    RedirDomain:
+      Description: >-
+        The CloudFront domain name for our Apex domain that we use to
+        redirect to our SiteDomain. We will use this to add a CNAME from
+        our DNS template.
+      Value: !GetAtt ApexCloudFront.DomainName
+      Export:
+        Name: !Sub "${AWS::StackName}-RedirDomain" (ref:exp1)
+    SiteDomain:
+      Description: >-
+        The CloudFront domain name for our site. We will use this to add
+        a CNAME from our DNS template.
+      Value: !GetAtt SiteCloudFront.DomainName
+      Export:
+        Name: !Sub "${AWS::StackName}-SiteDomain" (ref:exp2)
+    StackName:
+      Description: >-
+        The stack name to use for templates that depend on this one.
+      Value: !Ref 'AWS::StackName' (ref:sn)
+#+END_SRC
+
+Now, the required changes to the DNS template from [[file:route-53-cloudformation.org::#full-template][a previous post]]. We
+start by removing the ~ApexRecords~ and ~WwwRecord~, as we'll get these
+from the WWW template. We'll add a new ~DependentStackName~ parameter,
+like so:
+
+#+BEGIN_SRC yaml
+  Parameters:
+    [...]
+    DependentStackName:
+      Type: String
+      Description: >-
+        Name of stack we depend on and will grab exported values from.
+        Computed by Sceptre.
+#+END_SRC
+
+* Config file update
+  :PROPERTIES:
+  :CUSTOM_ID: cfg-updates
+  :END:
+
+As you can infer from the comment in the previous section, [[https://sceptre.cloudreach.com][Sceptre]]
+provides a bit of magic to obtain the stack name from the WWW template
+as an input to the DNS one. To make use of that I added the below
+~!stack_output~ Sceptre fragment to =config/superloopy/dns.yaml=. This
+file is so short that I'm just showing it in its entirety here:
+
+#+BEGIN_SRC yaml
+  template_path: templates/dns.yaml
+  parameters:
+    DomainName: superloopy.io
+    DependentStackName: !stack_output www::StackName
+#+END_SRC
+
+* RecordSet updates
+  :PROPERTIES:
+  :CUSTOM_ID: recordset-updates
+  :END:
+
+Let's start with the ~WwwRecordSet~ since that's the simplest change.
+The only thing we /need/ to change here is the ~ResourceRecord~ list.
+Instead of ~!Ref WwwRecord~ we'll replace it with our imported value
+from our dependent stack. (While researching how to do this I found
+examples of using the ~!Sub~ function which resulted in a much nicer way
+to produce the fqdn from the apex domain; see [[(name)]].) The
+~WwwRecordSet~ now looks like this:
+
+#+BEGIN_SRC yaml -n -r
+  WwwRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      Name: !Sub "www.${DomainName}" (ref:name)
+      HostedZoneId: !Ref Zone
+      Type: CNAME
+      TTL: !Ref TTL
+      ResourceRecords:
+        - Fn::ImportValue: !Sub "${DependentStackName}-SiteDomain"
+#+END_SRC
+
+The ~ApexRecordSet~ requires a different change. You can't CNAME the
+Apex domain, but AWS Route 53 supports an [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-aliastarget][~AliasTarget~]] extension that
+we can use instead. This is handy since we don't want to hard-code all
+of CloudFront's IP addresses like we did previously with GitHub. The
+new resource is in the next snippet. Note that I found the "magic"
+~HostedZoneId~ on line [[(magic)]] in the [[http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid][AliasTarget documentation]][fn::I
+didn't see much reason to make it a template property as it is used
+/everywhere/ you create an ~AliasTarget~ for a CloudFront domain.].
+
+#+BEGIN_SRC yaml -n -r
+  ApexRecordSet:
+    Type: 'AWS::Route53::RecordSet'
+    Properties:
+      Name: !Ref DomainName
+      HostedZoneId: !Ref Zone
+      Type: A
+      AliasTarget:
+        DNSName:
+          Fn::ImportValue: !Sub "${DependentStackName}-RedirDomain"
+        HostedZoneId: Z2FDTNDATAQYW2  (ref:magic)
+#+END_SRC
+
+* Conclusion
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
+
+This change concludes the work to add SSL to my blog. The only bit I
+haven't shown is how to tell Gandi to use the name servers I've
+configured on AWS Route 53 rather than the default ones, but I feel
+that is outside the scope of this blog series. It's now done, however,
+and if you're reading this you're getting[fn:1] the full experience of my
+HTTPS-enabled blog :-)
+
+* Footnotes
+
+[fn:1] Or, as it happens, maybe not yet. Because it turns out lots of
+home routers (including my own) ignore TTLs and cache DNS servers for
+a long time. So for a week or so I'll leave the generated files in
+GitHub, and also post new content to the AWS S3 bucket. 
+* Abstract                                                         :noexport:
+
+I show the changes to my Sceptre config & CloudFormation template
+required to point DNS to the two CloudFront distributions I've
+created.

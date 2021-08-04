@@ -1,0 +1,34 @@
+#+title: Making Team Decisions
+#+category: Practices
+
+Sometimes you want people’s input before you make a decision that
+affects the team. Other times it can be appropriate for the team to
+make the decision together. It’s important to distinguish the two
+situations, and Kevin Goldsmith shows a great [[https://www.youtube.com/watch?v=Atfxtk2Q90k&amp=&t=168s&amp=&index=19][Polling vs Voting
+Technique]] he uses for this purpose.
+
+Use Polling when you will own the decision, but you’d like to know how
+other people feel. Kevin recommends a “Fist of Five” approach. People
+present 0 fingers (fist) if they are against the thing, 5 fingers if
+they love it, or any appropriate number of fingers in between.
+
+For Voting he recommends a simple thumb up for aye, thumb down for
+nay. (Aka “roman voting”.) This is useful when you’re happy to
+outsource the decision to the majority of the vote, and also defend
+the team decision from above if necessary.
+
+Note it’s extremely important that you’re crystal clear up front
+whether you intend a poll or a vote. Usually you also want to act on
+“count of 3” so people don’t get unduly biased by each other.
+
+Examples:
+
+- Team, let’s go to {restaurant serving delicious food} for
+  lunch. Roman voting in 3.. 2.. 1.. Go!
+- I want to prioritise feature X over feature Y. The decision will be
+  mine, but I want to know how you feel about it. Fist of five polling
+  in 3.. 2.. 1.. Go!
+* Abstract                                                         :noexport:
+
+I summarise a useful technique for making team decisions I learnt
+about at The London Lead Developer conference a couple months ago.
