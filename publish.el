@@ -16,26 +16,22 @@
 		(capitalize name)
 		content)))
 
+(defun slurp (path)
+  (with-temp-buffer
+    (insert-file-contents path)
+    (buffer-substring-no-properties
+     (point-min)
+     (point-max))))
+
 (setq org-html-home/up-format
-      (with-temp-buffer
-	(insert-file-contents "templates/nav.html")
-        (buffer-substring-no-properties
-	 (point-min)
-	 (point-max))))
+      (slurp "templates/nav.html"))
 
 (setq org-html-head
-      (with-temp-buffer
-	(insert-file-contents "templates/head.html")
-	(goto-char (point-max))
-	(insert org-html-style-default)
-	(goto-char (point-max))
-	(insert "<style type=\"text/css\">\n")
-	(insert-file-contents "style.css")
-	(goto-char (point-max))
-	(insert "</style>\n")
-	(buffer-substring-no-properties
-	 (point-min)
-	 (point-max))))
+      (concat (slurp "templates/head.html")
+	      org-html-style-default
+	      "<style type=\"text/css\">\n"
+	      (slurp "style.css")
+	      "</style>\n"))
 
 (defun sb/html-head-extra (prefix)
   (format "<link rel=\"icon\" type=\"image/png\" href=\"%sicon.png\" />\n" prefix))
