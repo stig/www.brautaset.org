@@ -1,0 +1,166 @@
+#+title: All posts
+#+options: H:0
+
+All my posts, in reverse chronological order.
+
+* [[file:posts/shell-quickstart.org][Shell Quickstart]]                                           :Tutorial:Shell:
+#+include: posts/shell-quickstart.org::abstract :only-contents t
+* [[file:posts/how-I-record-guitar.org][How I record Guitar]]                                                 :Music:
+#+include: posts/how-I-record-guitar.org::abstract :only-contents t
+* [[file:posts/broken-horses-and-master-branches.org][On broken horses & master branches]]                                :Soapbox:
+#+include: posts/broken-horses-and-master-branches.org::abstract :only-contents t
+* [[file:posts/musical-goals.org][Musical Goals]]                                                       :Music:
+#+include: posts/musical-goals.org::abstract :only-contents t
+* [[file:posts/dark-mode.org][Dark Mode]]                                                           :Hacks:
+#+include: posts/dark-mode.org::abstract :only-contents t
+* [[file:posts/driving-technical-change.org][Driving Technical Change (Review)]]                                 :Reviews:
+#+include: posts/driving-technical-change.org::abstract :only-contents t
+* [[file:posts/speed-up-circleci.org][Speeding up tests on CircleCI for a Python Django project]] :Python:CircleCI:
+#+include: posts/speed-up-circleci.org::abstract :only-contents t
+* [[file:posts/digital-minimalism.org][Digital Minimalism]]                                      :Lifestyle:Reviews:
+#+include: posts/digital-minimalism.org::abstract :only-contents t
+* [[file:posts/learning-guitar-update.org][Learning Guitar Update]]                                              :Music:
+#+include: posts/learning-guitar-update.org::abstract :only-contents t
+* [[file:posts/bose-quietcomfort-35-review.org][Bose QuietComfort 35 Review]]                                       :Reviews:
+#+include: posts/bose-quietcomfort-35-review.org::abstract :only-contents t
+* [[file:posts/musical-goals-january-update.org][Musical Goals January Update]]                                        :Music:
+#+include: posts/musical-goals-january-update.org::abstract :only-contents t
+* [[file:posts/musical-goals-for-2019.org][My Musical Goals for 2019]]                                           :Music:
+#+include: posts/musical-goals-for-2019.org::abstract :only-contents t
+* [[file:posts/minecraft-music-extractor.org][Extracting Minecraft Music with Python]]                   :Minecraft:Python:
+#+include: posts/minecraft-music-extractor.org::abstract :only-contents t
+* [[file:posts/submarine-sonar-hiring.org][My hiring experience as a submarine sonar operator in the Norwegian Navy]] :Talks:Hiring:
+#+include: posts/submarine-sonar-hiring.org::abstract :only-contents t
+* [[file:posts/creating-index-entry-from-post.org][Linking Org mode blog posts into the index page]] :Emacs:Org:
+#+include: posts/creating-index-entry-from-post.org::post-abstract :only-contents t
+* [[file:posts/making-team-decisions.org][Making Team Decisions]] :Practices:
+#+include: posts/making-team-decisions.org::abstract :only-contents t
+* [[file:posts/org-mode-rss.org][Creating an RSS feed with Org mode]]                              :Org:Emacs:
+#+include: posts/org-mode-rss.org::post-abstract :only-contents t
+* [[file:posts/no-more-superloopy.org][No More Superloopy]]
+#+include: posts/no-more-superloopy.org::abstract :only-contents t
+* [[file:posts/support-my-foss-work.org][How to Support my FOSS Work!]]
+#+include: posts/support-my-foss-work.org::abstract :only-contents t
+* [[file:posts/printing-music.org][Printing Music (Through My Stereo!)]]                                 :Hacks:
+#+include: posts/printing-music.org::abstract :only-contents t
+* [[file:posts/parking-in-berwick-upon-tweed.org][Open Letter to NCC about Parking in Berwick]]                       :Soapbox:
+#+include: posts/parking-in-berwick-upon-tweed.org::abstract :only-contents t
+* [[file:posts/dns-cloudformation-importvalue.org][Updating DNS with output of another CloudFormation stack]] (6/6) :CloudFormation:
+#+include: posts/dns-cloudformation-importvalue.org::abstract :only-contents t
+* [[file:posts/publishing-this-blog-to-s3.org][Publishing this blog to an S3 bucket]] (5/6)
+#+include: posts/publishing-this-blog-to-s3.org::abstract :only-contents t
+* [[file:posts/s3-website-with-https-using-cloudformation.org][Creating S3 website with SSL using CloudFormation]] (4/6)    :CloudFormation:
+#+include: posts/s3-website-with-https-using-cloudformation.org::abstract :only-contents t
+* [[file:posts/ssl-enabled-s3-redirects-with-cloudformation.org][Adding SSL to S3 Redirect Bucket with CloudFormation]] (3/6) :CloudFormation:
+#+include: posts/ssl-enabled-s3-redirects-with-cloudformation.org::abstract :only-contents t
+* [[file:posts/route-53-cloudformation.org][Managing AWS Route 53 with CloudFormation]] (2/6)            :CloudFormation:
+#+include: posts/route-53-cloudformation.org::abstract :only-contents t
+* [[file:posts/adding-ssl.org][Adding SSL to this Blog]] (1/6)
+#+include: posts/adding-ssl.org::abstract :only-contents t
+* [[file:posts/blogging-with-org-mode-update.org][Blogging with Org mode---update]]                                     :Emacs:
+#+include: posts/blogging-with-org-mode-update.org::abstract :only-contents t
+* [[file:posts/potter-coding-dojo.org][Potter Coding Dojo in Clojure]]                                     :Clojure:
+#+include: posts/potter-coding-dojo.org::abstract :only-contents t
+* [[file:posts/n-queens.org][N Queens in Clojure]]                                               :Clojure:
+#+include: posts/n-queens.org::abstract :only-contents t
+* [[file:posts/electoral-reform-now.org][Electoral Reform Now!]]                                             :Soapbox:
+#+include: posts/electoral-reform-now.org::abstract :only-contents t
+* [[file:posts/blogging-with-org-mode.org][Blogging with Org Mode]]                                              :Emacs:
+#+include: posts/blogging-with-org-mode.org::post-abstract :only-contents t
+* [[file:posts/open-letter-to-anne-marie-mp.org][Open Letter to Anne Marie MP]]                                      :Soapbox:
+#+include: posts/open-letter-to-anne-marie-mp.org::abstract :only-contents t
+* [[file:posts/hydra-theme-switcher.org][Hydra Theme Switcher For Emacs]]                                      :Emacs:
+#+include: posts/hydra-theme-switcher.org::abstract :only-contents t
+* [[file:posts/how-i-blog-this-week.org][How I Blog (This Week)]]                                              :Emacs:
+#+include: posts/how-i-blog-this-week.org::post-abstract :only-contents t
+* [[file:posts/berwick-academy-stem-talk.org][Berwick Academy STEM Talk]]                                           :Talks:
+#+include: posts/berwick-academy-stem-talk.org::abstract :only-contents t
+* [[file:posts/fizzbuzz.org][FizzBuzz]]                                                            :Hacks:
+#+include: posts/fizzbuzz.org::abstract :only-contents t
+* [[file:posts/change-terminal-colour-ssh-os-x.org][Change Terminal background colour on OS X via ssh]]                   :Hacks:
+#+include: posts/change-terminal-colour-ssh-os-x.org::abstract :only-contents t
+* [[file:posts/leafnode-nntp-os-x.org][Setting up Leafnode NNTP server on OS X]]                             :Emacs:
+#+include: posts/leafnode-nntp-os-x.org::abstract :only-contents t
+* [[file:posts/overcoming-rsi.org][Overcoming RSI]]                                                    :Soapbox:
+#+include: posts/overcoming-rsi.org::abstract :only-contents t
+* [[file:posts/modsec-and-puppet.org][ModSecurity and Puppet Spelunking]]                                  :Puppet:
+#+include: posts/modsec-and-puppet.org::abstract :only-contents t
+* [[file:posts/response-to-haskell-lisp-philosophical-differences.org][Not so philosophically different after all?]]                       :Clojure:
+* [[file:posts/benchmarking.org][A Lesson in Benchmarking]]                                      :Development:
+* [[file:posts/nuisance-calls.org][Nuisance Calls]]                                                    :Soapbox:
+* [[file:posts/tinkerbell.org][Tinker Bell (2008)]]                                                :Reviews:
+* [[file:posts/2015-resolutions.org][2015 Resolutions]]
+* [[file:posts/passwordless-registration-and-login.org][Passwordless registration and login]]                               :Soapbox:
+* [[file:posts/good-ideas.org][Good Ideas]]                                                        :Soapbox:
+* [[file:posts/optimising-http-cache-hit-rate.org][Optimising HTTP Cache Hit Rate]]                                :Development:
+* [[file:posts/smartphone-addiction.org][Smartphone Addiction]]
+* [[file:posts/progress.org][Resolutions Progress]]
+* [[file:posts/toddlercalm.org][ToddlerCalm]]                                                       :Reviews:
+* [[file:posts/eating-right.org][Losing weight by eating right]]
+* [[file:posts/spray-example.org][Spray Example]]                                                       :Scala:
+* [[file:posts/delighting-users-with-sbjson-4.org][Delighting your users with SBJson 4]]                          :SBJson:Talks:
+* [[file:posts/learning-clojure.org][Learning Clojure by Solving Euler Problems]]                        :Clojure:
+* [[file:posts/resolutions.org][Resolutions]]
+* [[file:posts/consolidating-iphoto-libraries.org][Consolidating and de-duplicating iPhoto libraries]]                   :Hacks:
+* [[file:posts/spray-routing-error-handling.org][Spray Routing Error Handling]]                                        :Scala:
+* [[file:posts/scala-slick-postgresql-unit-tests.org][Scala, Slick & PostgreSQL Unit Tests]]                                :Scala:
+* [[file:posts/re-designing-for-readers.org][Re-designing for readers]]
+* [[file:posts/scalatest-with-akka.org][Using ScalaTest with Akka]]                                      :Scala:Akka:
+* [[file:posts/injecting-akka-testprobe.org][Injecting Akka's TestProbe in place of child actors]]            :Scala:Akka:
+* [[file:posts/dairy-free-bread-pudding.org][Dairy-free bread and "butter" pudding]]
+* [[file:posts/backing-up-photos-online.org][Backing Up Photos Online]]                                            :Hacks:
+* [[file:posts/what-now-for-sbjson.org][What now for SBJson?]]                                               :SBJson:
+* [[file:posts/real-custom-rank-keys.org][Real custom rank keys]]                                               :Hacks:
+* [[file:posts/little-brother.org][Little Brother]]                                                    :Reviews:
+* [[file:posts/resizable-grid-of-calayers.org][Creating a resizable grid of CALayers]]                          :ObjectiveC:
+* [[file:posts/saw-25-percent-faster.org][Saw 25% faster!]]
+* [[file:posts/objective-c-syntax-sugar-wish-list.org][Objective-C syntax sugar wish list]]                             :ObjectiveC:
+* [[file:posts/objective-c-feature-request.org][Objective-C Feature Request]]                                    :ObjectiveC:
+* [[file:posts/avenue-que.org][Avenue Que?]]                                                       :Reviews:
+* [[file:posts/introducing-statistics-for-objective-c.org][Introducing Statistics for Objective-C]]                         :ObjectiveC:
+* [[file:posts/embedding-cocoa-frameworks.org][Embedding Cocoa Frameworks]]                                     :ObjectiveC:
+* [[file:posts/gpl-vs-bsd-license.org][Goodbye GPL, hello BSD?]]                                           :Soapbox:
+* [[file:posts/game-tree-search.org][MiniMax and AlphaBeta Search]]                                     :Tutorial:
+* [[file:posts/no-smoking.org][No Smoking]]
+* [[file:posts/the-orient-express.org][The Orient Express]]
+* [[file:posts/piping-to-sh.org][Piping to sh -]]                                                   :Tutorial:
+* [[file:posts/renaming-lots-of-files.org][Renaming lots of files]]                                           :Tutorial:
+* [[file:posts/can-of-worms.org][A Can of Worms]]
+* [[file:posts/well-done-is.org][Well done is]]
+* [[file:posts/quiet-please.org][Quiet Please]]
+* [[file:posts/citylink-is-teh-suck.org][CityLink is teh suck!]]                                             :Soapbox:
+* [[file:posts/rice-instruction-craziness.org][Rice instruction craziness]]
+* [[file:posts/abandon-all-hope-the-terrorists-and-retailers-have-won.org][Abandon all hope]]                                                  :Soapbox:
+* [[file:posts/bad-typesetting.org][Bad Typesetting]]                                                   :Soapbox:
+* [[file:posts/playing-at-the-edge-of-ai.org][Playing at the Edge of AI]]                                         :Reviews:
+* [[file:posts/generating-bar-charts-with-sql.org][Generating Bar Charts with SQL]]                                      :Hacks:
+* [[file:posts/a-lesson-in-testing.org][A lesson in testing]]                                               :Testing:
+* [[file:posts/internet-on-the-south-pole.org][Internet on the South Pole]]
+* [[file:posts/hippies.org][Hippies]]
+* [[file:posts/rise-of-the-machine.org][Rise of the Machine]]                                                 :Hacks:
+* [[file:posts/in-sewer-ants.org][In-sewer Ants]]
+* [[file:posts/regular-expressions.org][Regular Expressions]]                                                 :Hacks:
+* [[file:posts/connected.org][Connected!]]
+* [[file:posts/moving-in.org][Moving in]]
+* [[file:posts/moving-in-party.org][Moving-in Party]]
+* [[file:posts/what-i-want-for-my-birthday.org][What I want for my Birthday]]
+* [[file:posts/perpetual-mid-season.org][Perpetual mid-season]]
+* [[file:posts/target-reached.org][Target Reached!]]
+* [[file:posts/money-transfer.org][Money Transfer]]                                                    :Soapbox:
+* [[file:posts/new-headphones.org][New Headphones]]                                                    :Reviews:
+* [[file:posts/blade-trinity.org][Blade Trinity]]                                                     :Reviews:
+* [[file:posts/untraditional-refactoring-technique.org][Untraditional Refactoring Technique]]                                 :Hacks:
+* [[file:posts/connectivity-galore.org][Connectivity Galore]]
+* [[file:posts/attacks-on-london.org][Attacks on London]]
+* [[file:posts/test-driven-development.org][Test Driven Development]]                                           :Reviews:
+* [[file:posts/water-please.org][Can I have some Water please?]]
+* [[file:posts/extreme-programming-explained.org][Extreme Programming Explained]]                                     :Reviews:
+* [[file:posts/down-oars.org][A fisherman puts down his oars]]
+* [[file:posts/chip-and-pin.org][Chip And Pin]]                                                      :Soapbox:
+* [[file:posts/banking-trouble.org][Co-operative Banking Trouble]]                                      :Soapbox:
+* [[file:posts/heinlein.org][Heinlein's list of skills]]
+* [[file:posts/blade-2.org][Blade 2]]                                                           :Reviews:
+* [[file:posts/dim-sum.org][First Dim Sum]]
+
+
+# TODO: Make the Tags / Keywords clickable filters that hides all other posts?
