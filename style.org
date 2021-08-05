@@ -29,14 +29,14 @@ html {font-family: Optima, -apple-system, sans-serif}
 
 h1, h2, h3, h4, h5, h6 {color: var(--accent)}
 
-#org-div-home-and-up,
+#preamble,
 #postamble {
     font-size: smaller;
     background-color: var(--alt-accent);
     border-radius: 1px;
 }
 
-#org-div-home-and-up {border-bottom: 3px solid var(--accent)}
+#preamble {border-bottom: 3px solid var(--accent)}
 
 #postamble {border-top: 3px solid var(--accent)}
 #+end_src

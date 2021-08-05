@@ -23,8 +23,11 @@
      (point-min)
      (point-max))))
 
-(setq org-html-home/up-format
-      (slurp "templates/nav.html"))
+(setq nav-template (slurp "templates/nav.html"))
+(setq org-html-preamble
+      (lambda (props)
+	(let ((path (plist-get props :nav-at)))
+	  (format nav-template path path path path))))
 
 (setq org-html-head
       (concat (slurp "templates/head.html")
@@ -66,16 +69,14 @@
 	 :base-directory "~/blog/content"
          :exclude "feed.org"
 	 :html-head-extra ,(sb/html-head-extra "")
-	 :html-link-up "index.html"
-	 :html-link-home "about.html"
+	 :nav-at ""
 	 :publishing-directory "~/blog/_site"
 	 :publishing-function org-html-publish-to-html)
 
 	("articles"
 	 ,@common-properties
 	 :base-directory "~/blog/content/articles"
-	 :html-link-up "../../index.html"
-	 :html-link-home "../../about.html"
+         :nav-at "../../"
 	 :html-head-extra ,(sb/html-head-extra "../../")
 	 :publishing-directory "~/blog/_site/articles"
 	 :publishing-function org-html-publish-to-html
