@@ -1,43 +1,44 @@
-#+title: About Stig Brautaset
+#+title: About
 
-I'm a software engineer, husband, dad, and guitarist; based in the
-north east of England. I read a lot of sci-fi & fantasy books, hack my
-Emacs config, and occasionally update this site.
+* Stig Brautaset
 
-I'm originally from the west coast of Norway. I studied electronics,
-and served as a sonar operator on a submarine during compulsory
-military service, before moving to London to study AI. I graduated
-from the University of Westminster in 2003, and have been working
-primarily as a backend software engineer since.
+I'm a Norwegian and British software engineer, husband, dad, and
+guitarist. I read a lot of sci-fi & fantasy books, hack my Emacs
+config, and occasionally update this site. I'm based in the north east
+of England.
 
-You can find a more comprehensive biography [[file:posts/berwick-academy-stem-talk.org][in this article]], or on my
-[[https://www.linkedin.com/in/stigbrautaset/][LinkedIn profile]].
+I hail from the west coast of Norway, where I studied electronics
+before my (compulsory) military service as a [[file:posts/submarine-sonar-hiring.org][sonar operator on a
+submarine]]. After a year of that I moved to London to study, and
+graduated with a BSc in AI from the University of Westminster in 2003.
+I have been working as a software engineer for a [[https://www.linkedin.com/in/stigbrautaset/][range of companies]]
+since.
 
-* About SBJson
+* SBJson
 
-  I started writing the popular [[https://github.com/SBJson/SBJson/][SBJson]] JSON parser/generator for
-  Objective-C in 2007, and have maintained it ever since. It's now in
-  its 5th major version and have over 3800 stars on GitHub.
+I started writing the popular [[https://github.com/SBJson/SBJson/][SBJson]] JSON parser/generator for
+Objective-C in 2007, and have maintained it ever since. It's now in
+its 5th major version and have over 3800 stars on GitHub.
 
-* About this website
+* This website
 
-  I build this website in Emacs' Org mode, which can publish static
-  HTML files. Those I deploy on Amazon S3 behind a CloudFront
-  distribution and a free SSL certificate.
+I build this website in Emacs' Org mode, which can publish static
+HTML files. Those I deploy on Amazon S3 behind a CloudFront
+distribution and a free SSL certificate.
 
-  Code examples are by me, unless otherwise specified, and available
-  under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
-  license.
+Code examples are by me, unless otherwise specified, and available
+under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
+license.
 
 * Contact
-  :PROPERTIES:
-  :CUSTOM_ID: contact
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: contact
+:END:
 
-  If you want to contact me about one of my software projects I ask
-  that you do so by filing an issue on [[https://github.com/stig][GitHub]].
+If you want to contact me about one of my software projects I ask
+that you do so by filing an issue on [[https://github.com/stig][GitHub]].
 
-  Otherwise the best way of contacting me is via email. I used to give
-  my email address here, but in a (most likely futile) attempt to
-  limit spam I've removed it. Don't worry: I'm sure you'll be able to
-  figure it out.
+Otherwise the best way of contacting me is via email. I used to give
+my email address here, but in a (most likely futile) attempt to limit
+spam I've removed it. It's my first name at this domain: I'm sure
+you'll be able to figure it out.
