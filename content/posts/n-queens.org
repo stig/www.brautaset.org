@@ -131,6 +131,9 @@ zero.
   +---+---+---+---+
 #+END_SRC
 
+#+RESULTS:
+[[file:n-queens/vector.png]]
+
 When experimenting with the algorithm I realised that we don't need to
 check if every Queen can capture any others all the time: since the
 queens capture in all eight directions it's enough to check if the
@@ -142,8 +145,7 @@ is still empty. This leaves checking three directions: directly west,
 southwest, and northwest. Now we're ready to dive into Clojure.
 
 Let's check if directly west is safe first. This is easy: just check
-that any of the existing vector locations does not contain our row
-index. Job done!
+that the vector does not already contain our row index. Job done!
 
 #+BEGIN_SRC clojure
   (defn- safe-west?
