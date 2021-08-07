@@ -1,4 +1,5 @@
 #+title: Creating an RSS feed with Org mode
+#+date: <2018-06-22>
 #+category: Org
 #+category: Emacs
 #+options: H:0

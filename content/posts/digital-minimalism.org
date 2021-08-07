@@ -1,4 +1,5 @@
 #+title: Digital Minimalism
+#+date: <2019-06-14>
 #+category: Lifestyle
 #+category: Reviews
 #+category: Popular

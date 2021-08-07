@@ -1,5 +1,5 @@
 #+title: Dark Mode
-
+#+date: <2020-02-10>
 #+category: Hacks
 
 Following [[https://kevq.uk/how-to-add-css-dark-mode-to-a-website/][Kev Quirk's instructions]], I've added an automatic Dark Mode

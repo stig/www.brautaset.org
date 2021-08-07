@@ -1,4 +1,5 @@
 #+title: Finding unpublished drafts
+#+date: <2018-06-25>
 #+category: Emacs
 #+category: Org
 Now I have a convenient way to publish my drafts, by linking them into
@@ -58,4 +59,3 @@ open it in Emacs.
 * Abstract                                                         :noexport:
 
 I close the loop of
-

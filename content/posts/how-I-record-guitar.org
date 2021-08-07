@@ -1,4 +1,5 @@
 #+title: How I record Guitar
+#+date: <2020-12-11>
 #+category: Music
 
 In my musical journey I try to record myself occasionally to track my
@@ -28,4 +29,3 @@ a /truly shit/ sound.)
 In my musical journey I try to record myself occasionally to track my
 progress, and be able to critically listen to myself so I can fix my
 mistakes. This is brief note on how I normally do that.
-

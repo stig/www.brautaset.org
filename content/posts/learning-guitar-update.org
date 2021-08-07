@@ -1,4 +1,5 @@
 #+title: Learning Guitar Update
+#+date: <2019-05-10>
 #+category: Music
 
 I [[file:musical-goals-january-update.org][hoped to do these posts]] monthly, but that went south. Thankfully
@@ -45,7 +46,7 @@ can keep it permanently plugged in.
 
 I haven't really done much with regards to recording video. For now
 I'm satisfied sticking to audio, since I'm really just tracking
-progress rather than entertaining others. 
+progress rather than entertaining others.
 
 * Transcribing & Recording to Track Progress
 

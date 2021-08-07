@@ -1,4 +1,5 @@
 #+title: Linking Org mode blog posts into the index page
+#+date: <2018-06-25>
 #+category: Emacs
 #+category: Org
 As mentioned when I [[../2017/blogging-with-org-mode.org][first moved to use Org mode for blogging]] I haven't

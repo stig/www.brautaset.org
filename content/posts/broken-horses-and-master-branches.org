@@ -1,4 +1,5 @@
 #+title: On broken horses & master branches
+#+date: <2020-10-13>
 #+category: Soapbox
 Every time I start learning to ride I get disillusioned and give up
 due to two things; the cost, and the /terminology/. Referring to a horse
@@ -30,4 +31,3 @@ individual, on my free time.
 
 I explain why I chose to rename the =master= branch in my Git
 repos to =trunk=.
-
