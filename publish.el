@@ -13,7 +13,11 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-(setq org-html-postamble "<p>Copyright &copy; 2001-2021 Stig Brautaset</p>")
+;; Pages get this
+(setq org-html-postamble (format-time-string (slurp "templates/postamble.html")))
+
+;; Posts get this format
+(setq org-html-postamble-format `(("en" ,(slurp "templates/post_postamble.html"))))
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
@@ -79,6 +83,7 @@
 	 :base-directory "~/blog/content/posts"
          :nav-at "../"
 	 :html-head-extra ,(sb/html-head-extra "../")
+	 :html-postamble t
 	 :publishing-directory "~/blog/_site/posts"
 	 :publishing-function org-html-publish-to-html)
 
