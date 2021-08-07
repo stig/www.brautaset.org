@@ -1,5 +1,13 @@
 (require 'ox-publish)
 
+;; Utility function used to pull in templates
+(defun slurp (path)
+  (with-temp-buffer
+    (insert-file-contents path)
+    (buffer-substring-no-properties
+     (point-min)
+     (point-max))))
+
 (setq org-export-allow-bind-keywords t)
 
 ;; Don't use inline CSS for source code
@@ -15,13 +23,6 @@
 		(downcase name)
 		(capitalize name)
 		content)))
-
-(defun slurp (path)
-  (with-temp-buffer
-    (insert-file-contents path)
-    (buffer-substring-no-properties
-     (point-min)
-     (point-max))))
 
 (setq nav-template (slurp "templates/nav.html"))
 (setq org-html-preamble
