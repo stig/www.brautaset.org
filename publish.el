@@ -56,7 +56,7 @@
 
 (setq org-publish-project-alist
       `(("www"
-	 :components ("static" "pages" "articles" "rss"))
+	 :components ("static" "pages" "posts"))
 
 	("static"
 	 :base-directory "~/blog/content"
