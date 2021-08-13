@@ -19,8 +19,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v6-org-{{ .Branch }}
-            - v6-org-trunk
+            - v7-org-{{ .Branch }}
+            - v7-org-trunk
       - run:
           name: Tangle CSS
           command: >
@@ -30,14 +30,14 @@ jobs:
       - run:
           name: Publish Blog
           command: |
-            emacs --batch --load deps.el --load publish.el --eval '(org-publish-all t)'
+            emacs --batch --quick --load publish.el --eval '(org-publish-all t)'
       - store_artifacts:
           path: ~/blog/_site
           destination: html
       - save_cache:
-          key: v6-org-{{ .Branch }}-{{ .Revision }}
+          key: v7-org-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ~/.emacs.d
+            - ~/blog/elpa
       - persist_to_workspace:
           root: ~/blog
           paths:

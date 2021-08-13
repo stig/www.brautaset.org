@@ -1,4 +1,33 @@
+;; Where to put installed packages
+(setq package-user-dir "~/blog/elpa")
+
+;; Turn off backup-files for my blog-publishing
+(setq make-backup-files nil)
+
+(package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+(package-refresh-contents)
+
+(setq package-selected-packages
+      '(org-plus-contrib
+	htmlize
+	clojure-mode
+	scala-mode))
+
+;; Install packages
+(mapc (lambda (p)
+	(unless (package-installed-p p)
+	  (package-install p)))
+      package-selected-packages)
+
+(require 'org)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t)))
+
 (require 'ox-publish)
+(require 'ox-rss)
 
 ;; Utility function used to pull in templates
 (defun slurp (path)
