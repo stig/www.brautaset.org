@@ -17,7 +17,7 @@ three main reasons:
   deployed in a hostile situation.
 - Thirdly I had seen the film [[https://itunes.apple.com/GB/movie/id211292501][The Hunt for Red October]] and for some
   reason the role of sonar operator on a submarine seemed really
-  glamourous to me.
+  glamorous to me.
 
 Everyone that enters the Norwegian Navy starts with six weeks basic
 training on the same base. We received training, a fitness regime, and
@@ -34,7 +34,7 @@ operator, and was accepted. I spent the next six weeks on a more
 specific submarine training course.
 
 - All submariners had to learn to escape from a submerged submarine
-  through an airlock. We practiced this in a 20-metre deep swimming
+  through an airlock. We practised this in a 20-metre deep swimming
   pool at the base.
 - We also had to memorise the location of all the valves on pipes
   penetrating the hull, so we could close these in an emergency.
@@ -62,7 +62,7 @@ to ever attend a NATO exercise in the Mediterranean.
 
 When I wrote up this story I realised it confirmed a lesson relevant
 to hiring: sometimes people will disqualify themselves from applying
-to your job because they don't fulfill all the requirements in your
+to your job because they don't fulfil all the requirements in your
 job ad. If I had qualified for /any/ of the other options available at
 the end of my basic training I would have applied to that
 instead.
@@ -84,7 +84,7 @@ in a line about advanced driving qualifications too, if you're hiring
 a getaway driver. That candidates must be martial artists and have a
 passing likeness to Jason Statham is heavily in "nice to have"
 territory though, unless you are the casting director for the next
-installment of [[https://en.wikipedia.org/wiki/Transporter_(franchise)][The Transporter]] franchise.
+instalment of [[https://en.wikipedia.org/wiki/Transporter_(franchise)][The Transporter]] franchise.
 
 * Acknowledgements
 
@@ -102,3 +102,5 @@ This is a transcript of a lightning talk I gave at a company "all
 hands" get-together. I tell the story of my "hiring experience" as a
 sonar operator on a submarine in the Norwegian Navy. To tie it into
 work, I included a little hiring-related lesson at the end.
+
+#  LocalWords:  Statham Kristian

@@ -21,7 +21,7 @@ songs well enough to have a lot of fun.
 
 For my birthday in April 2018 I upgraded my guitar amp to a [[https://usa.yamaha.com/products/musical_instruments/guitars_basses/amps_accessories/thr/index.html][Yamaha THR
 10]], to make it easier to practice. Part of this was because my old amp
-(a Fender Frontman 25 DSP) was impossible to set to a useable volume
+(a Fender Frontman 25 DSP) was impossible to set to a usable volume
 settings. The only ones I could find was /not audible/ and /WAY too
 loud/. It was also too big and ugly for the living room. On the other
 hand, the THR works even on batteries, and fits on a shelf when not in
@@ -67,7 +67,7 @@ to complete the following by the start of July:
 3. Finish Justin's beginner/consolidation modules
 4. Complete two modules of Justin's "Green" grade
 5. Learn 5 new songs
-6. Become more procifient using my looper pedal
+6. Become more proficient using my looper pedal
 7. Research how to record myself on video
 
 Finally, here are my goals for January:
@@ -92,3 +92,6 @@ remains to be read!
 * Abstract                                                         :noexport:
 
 I list my musical goals for 2019, and touch briefly on achievements in 2018.
+
+#  LocalWords:  Sandercoe's JustinGuitar THR Frontman DSP GarageBand
+#  LocalWords:  Gumtree Hofner

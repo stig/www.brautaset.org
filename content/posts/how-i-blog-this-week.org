@@ -64,3 +64,5 @@ my old source in my =~/org/Archive.org= file, where most deleted from
 * Post-Abstract                                                    :noexport:
 
 I share my Emacs & Org-mode setup for blogging with Jekyll.
+
+#  LocalWords:  jekyll tpl SRC Subtree iCloud

@@ -8,7 +8,7 @@ it for ages.
 
 Nadia had roast whole plaice with baby vegetables and champagne sauce,
 while I went for halibut with lentils and green beans. Nadia found the
-plaice a bit bland and undercooked, while I really enjoyed the halibut.
+plaice a bit bland and under-cooked, while I really enjoyed the halibut.
 It was dry in places and juicy in others, but very tasty all the way
 through.
 
@@ -20,3 +20,6 @@ eating about half of each other's, and we found that the dishes were a
 One downside was that they've stopped doing Peetermans, but this was
 compensated a bit by me finding out that they had both Früli and
 Kriek---albeit bottled.
+
+#  LocalWords:  Northgate Northchurch Southgate marnier panacotta
+#  LocalWords:  Peetermans Früli Kriek

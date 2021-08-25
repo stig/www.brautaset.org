@@ -20,7 +20,7 @@ Ingredients:
 
 Steps:
 
-1. Use a little of the margarine to grease a 2-litre pyrex dish. Gently
+1. Use a little of the margarine to grease a 2-litre Pyrex dish. Gently
    melt the rest of the margarine in a pan. Once melted, set aside to
    cool. Meanwhile, mix raisins and caster sugar.
 
@@ -33,6 +33,8 @@ Steps:
 3. Mix Oatley, eggs and vanilla seeds to form a custard. Pour the
    custard into the dish; make sure to fill all the nooks and crannies.
 
-4. Sprinkle demerara suger on top & let the pudding soak for 30 minutes.
+4. Sprinkle demerara sugar on top & let the pudding soak for 30 minutes.
 
-5. Cook in oven at 180 Centigrades for 35--40 minutes.
+5. Cook in oven at 180 degrees C for 35--40 minutes.
+
+#  LocalWords:  attr demerara Oatley

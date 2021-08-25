@@ -23,7 +23,7 @@ fast-moving data, because you can either have the same item in two
 pages, or you may miss items.
 
 I believe it may not always be necessary to put up with the above
-tradeoffs. I assert that users usually care about time to first record,
+trade offs. I assert that users usually care about time to first record,
 not time to last. With SBJson you can get all records in one big list
 (and therefore save yourself the connection overhead and other headaches
 associated with doing multiple requests) but start parsing the stream
@@ -63,3 +63,9 @@ when unwrapping root arrays. Normally a JSON parser would parse and
 validate a complete document; however, that forces you to have seen the
 entire document before parsing so when parsing streams we have to relax
 that requirement.
+
+#  LocalWords:  Kucha multiRootParserWithBlock errorHandler SRC objc
+#  LocalWords:  unwrapRootArrayParserWithBlock didReceiveData dt
+#  LocalWords:  NSURLConnectionDataDelegate NSURLSessionDataDelegate
+#  LocalWords:  URLSession NSURLSession dataTask NSURLSessionDataTask
+#  LocalWords:  NSData

@@ -20,11 +20,11 @@ review how I did on my [[file:resolutions.org][2014 resolutions]]:
 - Socialising: success! Though I didn't manage to arrange a meet with
   old friends 12 times last year, as I intended, I'll count this as a
   success as I've met up with /new/ friends my son and I have made at
-  the playpark.
+  the play park.
 
 Overall I'm quite pleased. It was a busy year, but one where my health
-and wellbeing took a massive turn for the better. I weigh less now than
-I've done since I did competetive Judo in my teens.
+and well-being took a massive turn for the better. I weigh less now than
+I've done since I did competitive Judo in my teens.
 
 My resolutions for 2015 are to:
 
@@ -32,7 +32,7 @@ My resolutions for 2015 are to:
    twelve posts on this blog.
 2. Improve my [[http://stackoverflow.com/users/5950/stig-brautaset][StackOverflow reputation]] from current 1808 to at
    least 2500.
-3. Continue learning Clojure (a Lisp targetting the JVM) by writing a
+3. Continue learning Clojure (a Lisp targeting the JVM) by writing a
    web application and getting at least ten users.
 4. Make an attempt at improving my guitar playing by going through the
    first ten chapters of [[http://www.noad.com/SGP1ndx.html][Solo Guitar Playing]] by Frederick Noad.
@@ -41,3 +41,5 @@ My resolutions for 2015 are to:
 All realistic & achievable goals, I think, but not without putting in a
 little effort. I am looking forward to the challenge! Please do feel
 free to prod me about progress on any of these!
+
+#  LocalWords:  CodeClub Noad

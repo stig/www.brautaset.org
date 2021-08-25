@@ -2,7 +2,7 @@
 #+date: <2006-08-17>
 
 I've occasionally wondered how they manage to get Internet to research
-bases at the North or South pole. You migth think they'd use satellites,
+bases at the North or South pole. You might think they'd use satellites,
 but to communicate with a satellite you need direct line of sight;
 communications satellites in geostationary orbits, due to the curvaceous
 nature of our planet, are under the horizon and cannot be seen from the
@@ -25,3 +25,5 @@ just seen part of the day...
   Oh yes, and at the pole:
   [[http://antarctica.computerworld.com.au/index.php?id=707148905&fp=4&fpid=5]]
 #+END_QUOTE
+
+#  LocalWords:  uplink

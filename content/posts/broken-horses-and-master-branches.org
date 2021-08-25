@@ -4,7 +4,7 @@
 Every time I start learning to ride I get disillusioned and give up
 due to two things; the cost, and the /terminology/. Referring to a horse
 as /broken/[fn::Using the term /trained/ is thankfully becoming more
-common, including on [[https://en.wikipedia.org/wiki/Horse_training][wikipedia]].] is still common, and it troubles me.
+common, including on [[https://en.wikipedia.org/wiki/Horse_training][Wikipedia]].] is still common, and it troubles me.
 
 My own field has its own [[https://tools.ietf.org/id/draft-knodel-terminology-00.html][problematic terminology]]. I've been
 uncomfortable using =master= as the default branch in my Git
@@ -31,3 +31,5 @@ individual, on my free time.
 
 I explain why I chose to rename the =master= branch in my Git
 repos to =trunk=.
+
+#  LocalWords:  repos VCSs

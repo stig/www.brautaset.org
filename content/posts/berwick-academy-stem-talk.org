@@ -27,10 +27,10 @@ in England most of my adult life I feel more Brit /ish/.
 - I studied Artificial Intelligence at University in London
 - Since 2003 I have worked in the software industry:
   - in the personal finance sector
-  - at Canon's photosharing website
+  - at Canon's photo sharing website
   - in a big American Investment bank, in London & Hong Kong
   - in luxury fashion online shops
-  - from home for a German micropayments startup company
+  - from home for a German micro payments startup company
 - In 2007 I accidentally became internet famous---among iPhone
   developers---because of a library I made to connect to a database
 - In April last year I moved here from London with my wife and son
@@ -93,7 +93,7 @@ but I didn't like the idea of becoming a mechanic and working in an
 unheated workshop during Norway's -10C winters. I chose to become a Radio
 and TV repairman instead.
 
-After three years I passed my exams, and become a certicified TV
+After three years I passed my exams, and become a certified TV
 repairman. However, at this point I'd also decided that this life was not
 for me. I wanted to become an Electronics Engineer instead. Now I had a
 bit of a dilemma: because I didn't take the academic track, I didn't have
@@ -101,7 +101,7 @@ enough Maths, Physics and Chemistry to get in to College to study more
 electronics. And I was so far behind compared to the academic track that
 a single year of top-up schooling would not be enough to catch up.
 
-In order to get in to University Collegue, I first took a two-year HND
+In order to get in to University, I first took a two-year HND
 equivalent electronics degree.
 
 * 2 years HND equivalent, 1997-1999
@@ -179,11 +179,11 @@ and here's the best recipe I can give you for succeeding at University:
 
 - Go to all the lectures & labs
 - Pay attention & take notes
-- Make a decent effort doing the can on courseworks. I believe
+- Make a decent effort doing the best you can on coursework. I believe
   this is where you'll actually be learning to understand the subject
 - Don't forget to have fun
 
-There's only 8 hours of lectures and another 8. labs, at least there was
+There's only 8 hours of lectures and another 8 of labs, at least there was
 when I did my degree, so there's loads of free time for coursework and
 other stuff.
 
@@ -257,10 +257,10 @@ In addition to learning Objective-C, I wanted to learn about a new
 database, called CouchDB. There was one catch: you had to use JSON to
 it, and I couldn't find a good JSON library for Objective-C.
 
-If two people want to understand eachother they have to talk the same
+If two people want to understand each other they have to talk the same
 language. It's the same with computers. JSON is one of the many languages
 a computer program can use to talk to another computer programs, and is
-commonly used by webapps.
+commonly used by web apps.
 
 I couldn't find a good JSON library I could use, so I decided to write
 one. I expected to spend a couple days on it, but I have probably never
@@ -311,7 +311,7 @@ should hire me to /his/ team instead, and use me to help her mobile team.
 He agreed.
 
 For the next two years I worked with different teams to help them
-integrate with the mobile team's apps. After that I becames tech lead for
+integrate with the mobile team's apps. After that I became tech lead for
 the product service team. They had a problem: every year during the
 Christmas sale the website would become too busy and crash because of all
 the traffic.
@@ -351,7 +351,7 @@ they were on the ground floor, really.
 Timeouts & cache invalidation, by the way, are two fundamental problems
 in computer science that go hand in hand. /What/ do you cache? /How much
 storage/ do you use for your cache, and /how long/ do you cache for?
-There are always tradeoffs---it's never a clear-cut situation.
+There are always trade offs---it's never a clear-cut situation.
 
 I really liked this team, and the company, but my wife and I wanted to
 move to Northumberland. I asked the company if I could work from home up
@@ -374,10 +374,10 @@ Berwick because my home broadband is not fast enough.
 
 We "talk" mainly via a text-based chat, but we also use video and audio
 calls when that is more convenient. The main drawback of working
-remotely, or from home, is that we don't get to see eachother's faces
+remotely, or from home, is that we don't get to see each other's faces
 very often and there's no chit-chat by the coffee machine in the kitchen,
 so a few times a year we all meet up in Munich, Germany, to learn a bit
-more about eachother.
+more about each other.
 
 * Conclusion
 :PROPERTIES:
@@ -408,3 +408,5 @@ Thank you.
 I went to [[http://www.berwickacademy.org][Berwick Academy]] and talked to prospective computer science
 students there about my education and career. This is a transcript of
 my talk, organised by [[https://en.wikipedia.org/wiki/Science,_Technology,_Engineering_and_Mathematics_Network][STEMNET]].
+
+#  LocalWords:  Berwick STEMNET HND hnd

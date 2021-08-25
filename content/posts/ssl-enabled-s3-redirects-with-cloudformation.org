@@ -300,3 +300,16 @@ properties.
 I show how to create an S3 bucket for redirecting web requests, put it
 behind a CloudFront distribution, and configured /this/ with an SSL
 certificate---all via CloudFormation.
+
+#  LocalWords:  ApexCloudFrontDomain GetAtt DomainName SANs HostName
+#  LocalWords:  SubjectAlternativeName SubjectAlternativeNames https
+#  LocalWords:  ApexBucket BucketName RedirectAllRequestsTo ing http
+#  LocalWords:  redirbucket WebsiteConfiguration cloudfront Kristian
+#  LocalWords:  DistributionConfig WebsiteURL customorigincfg MaxTTL
+#  LocalWords:  CustomOriginConfig defaultcache DefaultCacheBehaviour
+#  LocalWords:  viewercert ViewerCertificate ApexCloudFront sni tpl
+#  LocalWords:  OriginProtocolPolicy DefaultCacheBehavior DefaultTTL
+#  LocalWords:  TargetOriginId ForwardedValues QueryString OutputKey
+#  LocalWords:  ViewerProtocolPolicy AcmCertificateArn Hostname
+#  LocalWords:  SslSupportMethod OutputValue AWSTemplateFormatVersion
+#  LocalWords:  OriginConfig CustomErrorDocument IndexDocument

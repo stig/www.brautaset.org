@@ -44,7 +44,7 @@ for indices than for actual storage.)
 
 Where Float vs Double matter is how many re-order (averaging) operations
 they can handle before the difference between one number and the next is
-less than the smallest representable number. The worst-case, assuming an
+less than the smallest possible delta. The worst-case, assuming an
 initial gap of 1, is:
 
 -  Float: 150
@@ -68,3 +68,5 @@ you go. This is left as an exercise to the reader.
 
 /Disclaimer: I have only theorised about this technique; I have not used
 it in anger yet./
+
+#  LocalWords:  BigInts representable lim MinPositiveValue

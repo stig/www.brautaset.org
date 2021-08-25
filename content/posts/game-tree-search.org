@@ -36,7 +36,7 @@ Minimax game-tree search algorithm is designed to do just this, and
 alpha-beta pruning improves on it. This article tries to explain how
 both works.
 
-** The Minimax algorithm
+** The MiniMax algorithm
    :PROPERTIES:
    :CUSTOM_ID: the-minimax-algorithm
    :INDEX:    MiniMax search
@@ -137,7 +137,7 @@ there are atoms in the known universe. Suffice to say that waiting for a
 search of that magnitude to finish becomes impractical.
 
 A simple way of ensuring that the search will terminate in a practical
-timespan is to set a maximum limit on the depth of the search. The
+time span is to set a maximum limit on the depth of the search. The
 following method shows how the Minimax algorithm presented earlier can
 be amended to unconditionally stop after reaching a certain depth.
 Notice that the initial value for score has changed.
@@ -182,8 +182,8 @@ In the late 50s it was realised that it was not necessary to visit all
 the nodes in a game-tree to correctly deduce its Minimax value.
 Uninteresting branches of the tree can be pruned away. Remember that the
 Minimax algorithm produces the value of the best worst-case. Alpha-Beta
-pruning terminates the search of a subtree as soon as it knows that the
-worst-case for the subtree is worse than previously searched paths. The
+pruning terminates the search of a sub-tree as soon as it knows that the
+worst-case for the sub-tree is worse than previously searched paths. The
 idea is that if a path is worse than the current best path, time is not
 wasted trying to find out /how/ bad it is.
 
@@ -225,10 +225,17 @@ occurs) the Alpha-Beta algorithm visits the same number of leaf nodes as
 Minimax. On average it performs a lot better. Given a perfectly ordered
 tree, where the branches are pruned as early as possible, the Alpha-Beta
 algorithm can search twice as deep as the Minimax algorithm in the same
-timespan.
+time span.
 
 /This post has been adapted from a section of my 2003 BSc Artificial Intelligence report on Generalised Game-Tree Search at the University of Westminster./
 * Abstract                                                         :noexport:
 
 I try to give an overview of & explain (perhaps mainly to myself) the
 MiniMax algorithm and its AlphaBeta pruning optimisation.
+
+#  LocalWords:  MiniMax AlphaBeta Tac Yatzee Jenga Minimax objc sc
+#  LocalWords:  minimaxWithState isEndOfGame evaluateWithPlayer SRC
+#  LocalWords:  NSArray movesAvailable objectEnumerator minimax
+#  LocalWords:  nextObjnextObject successorStateWithMove bestmove
+#  LocalWords:  minimaxRootWithState nextObject alphabeta
+#  LocalWords:  alphaBetaWithState

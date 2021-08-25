@@ -60,7 +60,7 @@ current behaviour though.
 
 Moving on! I now had a plan. All I had to do was remove the =I= part
 selector from the =SecAuditLogParts= directive. Unfortunately this was
-not configurable through =puppetlabs-apache=. It was hardcoded in the
+not configurable through =puppetlabs-apache=. It was hard coded in the
 =security.conf.erb= template. The plan now became "moaning to friends"
 about my situation. In private[fn:2].
 
@@ -119,3 +119,7 @@ warnings or errors were logged about corrupt config.
 In which I investigate how to configure SecAuditLogParts for
 ModSecurity with Puppet, and find I have to contribute a patch to make
 it possible.
+
+#  LocalWords:  ModSecurity README puppetlabs apache PCI DSS Simples
+#  LocalWords:  SecAuditLogParts teeeny ABIJDEFHZ ABCFHZ SecAuditLog
+#  LocalWords:  urlencoded modsec Puppetfile hiera ABZ

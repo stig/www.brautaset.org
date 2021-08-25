@@ -10,18 +10,18 @@
   :END:
 
 :NOTE:
-I don't use Leafnode any more, nor read usenet news, and I've removed
+I don't use Leafnode any more, nor read Usenet news, and I've removed
 dead links to config from this article.
 :END:
 
 I read email and news with Gnus. I often use a laptop, and often in
 places I don't have internet access. Gnus doesn't like not being able
-to connect to the nntp server when it starts, so as a work-around I
+to connect to the NNTP server when it starts, so as a work-around I
 run the [[http://leafnode.sourceforge.net][Leafnode]] NNTP server locally. As a nice side-effect, Gnus
 starts a lot faster.
 
-I use [[http://orgmode.org][Orgmode]] and have a Leafnode.org that all the configuration is
-generated from. If you use Emacs, and Orgmode, you probably want to
+I use [[http://orgmode.org][Org mode]] and have a Leafnode.org that all the configuration is
+generated from. If you use Emacs, and Org mode, you probably want to
 just look at that directly[fn::Sorry, it's long gone.]. If you use
 some other NNTP client you might want to read this post instead. No
 Emacs required :-)
@@ -31,7 +31,7 @@ Emacs required :-)
   :CUSTOM_ID: installation
   :END:
 
-First we have to install Leafnode. This is dirt simple with [[http://brew.sh][homebrew]]:
+First we have to install Leafnode. This is dirt simple with [[http://brew.sh][Homebrew]]:
 
 #+BEGIN_SRC sh
     brew install leafnode
@@ -77,7 +77,7 @@ Leafnode is not just one program, but a collection of programs. The
 three important daemons (programs) are:
 
 -  *fetchnews:* posts to and fetches articles from upstream.
--  *leafnode:* the nntp server that Gnus interacts with.
+-  *leafnode:* the NNTP server that Gnus interacts with.
 -  *texpire:* a periodic job that cleans up old / obsolete news.
 
 We need to configure these to run periodically. Since we're on OS X
@@ -223,3 +223,9 @@ set this up a few weeks ago!
 I set up the Leafnode NNTP server on OS X, for use with Emacs and the
 Gnus newsreader.
 
+
+#  LocalWords:  Leafnode NNTP Homebrew SRC leafnode hostname conf lst
+#  LocalWords:  initialfetch fetchnews nntp texpire launchd macports
+#  LocalWords:  xml UTF DOCTYPE plist KeepAlive StartInterval
+#  LocalWords:  WorkingDirectory OnDemand SockServiceName launchctl
+#  LocalWords:  inetdCompatibility

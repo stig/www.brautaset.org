@@ -11,7 +11,7 @@ little effort. Let's remind ourselves how the one-liner looks:
 
 Imagine that you /haven't/ done that kind of transformation a thousand
 times and so feel a bit apprehensive about diving right in. The standard
-way to get around that is to pre-pend the command with echo:
+way to get around that is to prepend the command with echo:
 
 #+BEGIN_SRC sh
     for f in *.doc ; do echo mv $f ${f%.doc}.txt ; done
@@ -31,5 +31,5 @@ The pipe, for those who haven't encountered it, means that the output of
 the command to the left of it is used as input for the command to the
 right. The =sh= command is just a shell (similar to the one you're
 typing these commands into; on your system, it's probably an alias for
-bash or zsh), and invoking it with the argument '-' means that it should
+bash or Zsh), and invoking it with the argument '-' means that it should
 read commands from its standard input and execute each line. Simple!

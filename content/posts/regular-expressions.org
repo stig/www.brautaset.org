@@ -22,7 +22,7 @@ egrep '(.)\1(.)\2(.)\3' /usr/share/dict/words
 
 
 So, it turned out he was right. (At the time this post was written, he
-was; subbokkeeper has been added later, and I'll allow bookkeeping as
+was; subbookkeeper was added later, and I'll allow bookkeeping as
 a variant of bookkeeper.) Then I got curious; what if the groups don't
 have to be consecutive? That's easy enough to check, so let's do that:
 
@@ -45,3 +45,6 @@ egrep '(.)\1.*(.)\2.*(.)\3.*(.)\4' /usr/share/dict/words
 : successlessness
 
 Those sure are some funny words...
+
+#  LocalWords:  subbookkeeper wc killeekillee
+#  LocalWords:  possessionlessness successlessness

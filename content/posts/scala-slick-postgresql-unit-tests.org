@@ -115,3 +115,9 @@ I would have preferred to run each test in a transaction and roll back
 afterwards, but I couldn't figure out how to make Slick do that. So I
 went for the next best thing and dropped & re-created the tables for
 each test.
+
+#  LocalWords:  DAO afterAll PostgresSpec BeforeAndAfterAll dbname
+#  LocalWords:  postgres forURL withSession updateNA FlatSpec dao
+#  LocalWords:  BeforeAndAfter PostgresUserDaoSpec MustMatchers UUID
+#  LocalWords:  PostgresUserDao DatabaseProvider randomUUID DateTime
+#  LocalWords:  queryNA

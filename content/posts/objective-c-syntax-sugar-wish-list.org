@@ -72,3 +72,7 @@ man can dream...
 
 *Update: in 2012, Apple /did/ heed this request and implemented static
 initialisers for many different types. I only had to wait 4 years :-)*
+
+#  LocalWords:  objc arrayWithObjects dictionaryWithObjectsAndKeys
+#  LocalWords:  NSNumber numberWithInteger numberWithBool NSNumbers
+#  LocalWords:  NSInteger BOOL initialisers

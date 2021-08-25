@@ -65,3 +65,5 @@ than AWS for =.io= domains.
 I outline the steps I plan to take to add SSL to this blog, leveraging
 AWS Certificate Manager, CloudFront, S3 and Route 53. (And potentially
 CloudFormation.)
+
+#  LocalWords:  superloopy io brautaset fn ACM noexport

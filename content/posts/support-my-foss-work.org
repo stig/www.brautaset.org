@@ -15,24 +15,24 @@ experiments. You can still use the Amazon Wishlist and PayPal options.
 
 I only expect to recover a /small fraction/ of the time, effort and
 money I've spent developing and supporting FOSS software.  If you have
-benefitted from my work, please consider a small regular contribution.
+benefited from my work, please consider a small regular contribution.
 
 What kind of work do you do, I'll pretend to hear you ask?
 
 Well, I started my best-known project [[https://github.com/SBJson/SBJson][SBJson]] (aka JSON-framework) in
 September 2007.  It is a JSON parser and generator written in
-Objective-C, for iOS and macOS applications.  Back when I started this
+Objective-C, for iOS and MacOS applications.  Back when I started this
 project Apple didn't provide JSON parsing, so a lot of early iOS
 applications used it. Even Apple has been using it to enhance iOS
 since iOS 3.  SBJson is now very mature, so doesn't require a lot of
-work.  But it received several important bugfix releases and a major
+work.  But it received several important bug fix releases and a major
 version release as recently as 2016, and I still try to answer
 SBJson-related questions on StackOverflow.  This takes time and
 energy, and incurs sundry costs related to hosting, which is getting
 increasingly difficult to justify.
 
 Recently I write mostly in Emacs Lisp, of which my most popular
-project is [[https://github.com/stig/ox-jira.el][ox-jira.el]]. This is an Emacs Org mode export backend, so
+project is [[https://github.com/stig/ox-jira.el][ox-jira.el]]. This is an Emacs Org mode export back end, so
 you can write in a [[http://karl-voit.at/2017/09/23/orgmode-as-markup-only/][remarkably sane markup language]] and export to the,
 ahem, /esoteric/ JIRA (and Confluence) markup language.
 
@@ -42,3 +42,5 @@ Find more projects at https://github.com/stig
 I present four ways you can support me if you have (or continue to)
 benefit from my work on Free and Open Source Software (FOSS).
 
+
+#  LocalWords:  FOSS Patreon Liberapay Wishlist jira el

@@ -69,3 +69,9 @@ You use it like this (extending the test part of my previous post on
 #+END_SRC
 
 I find this makes testing of Akka actors quite nice and clean.
+
+#  LocalWords:  Heiko Seeberger ImplicitSender TestKit WordSpec
+#  LocalWords:  BeforeAndAfterAll TestKitSpec ActorSystem afterAll
+#  LocalWords:  MustMatchers Akka's BarSpec TestCase ChildrenProvider
+#  LocalWords:  TestChildrenProvider newBar SomeMessage expectMsg
+#  LocalWords:  MessageToChild ReplyFromChild ReplyFromParent

@@ -32,7 +32,7 @@ also important. You can use BSD-licensed code in any closed-source
 applications---be it a commercial application or binary-only freeware.
 (Maybe you're too embarrassed of the code to release it?)
 
-More users means increased likelyhood of receiving feedback---in the
+More users means increased likelihood of receiving feedback---in the
 form of code, bug reports or otherwise---that benefit all users. Thus
 I'd rather have a larger pool of "free" and "non-free" users than a
 smaller pool of "free" users of my software, even if the "non-free" ones

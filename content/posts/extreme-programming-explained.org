@@ -52,3 +52,5 @@ described in this book are better described as /Extremely Sensible
 Programming/. Hardly as catchy though.
 
 Should you read this book? Yes, I think so.
+
+#  LocalWords:  XP

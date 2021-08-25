@@ -33,7 +33,7 @@ allowed in RSS. Solving this was a bit tricky, but I know that Org has
 a way to tag sections with =:noexport:= to omit it from being included,
 and with a bit of searching I found a promising [[https://emacs.stackexchange.com/a/7578][Emacs StackExchange
 Answer]] with a macro I was able to adapt to my use. (The macro should
-be all on one line, but I added linebreaks for readability.)
+be all on one line, but I added line breaks for readability.)
 
 #+BEGIN_SRC org
   ,#+MACRO: no-rss (eval
@@ -76,3 +76,5 @@ a bit longer than I expected, but there you go.
 
 A post to announce that this site now has an RSS feed generated from
 the front page's content, and explain how I create it.
+
+#  LocalWords:  contrib PERMALINK StackExchange backend PUBDATE

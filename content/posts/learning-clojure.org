@@ -135,3 +135,6 @@ factor: from 18 to 13 seconds to retrieve the 1M + 1 prime:
 
 I think it's fast enough for now, so now I'll continue onto Euler
 Problem 4...
+
+#  LocalWords:  cdr SRC clojure defn Stig's fn th Christophe letfn kv
+#  LocalWords:  sprimes vals tc Christophe's speeded doall msecs

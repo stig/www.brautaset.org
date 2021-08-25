@@ -98,3 +98,9 @@ the stub to facilitate other tests. It also makes it easier to add
 another test by copying and slightly tweaking an existing one. (You
 should normally strive to DRY in code, but I believe some duplication is
 OK in tests.)
+
+#  LocalWords:  Akka's TestProbe ren SRC ChildrenProvider newFoo
+#  LocalWords:  ProductionChildrenProvider withRouter FromConfig
+#  LocalWords:  TestProbes TestChildrenProvider TestKit TestProbe's
+#  LocalWords:  TestCase SomeMessage expectMsg MessageToChild
+#  LocalWords:  ReplyFromChild ReplyFromParent

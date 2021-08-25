@@ -9,7 +9,7 @@ the next time I'm asked.
 
 * The good
 
-- I love that they can connect to two devices via bluetooth (both my
+- I love that they can connect to two devices via Bluetooth (both my
   phone and computer). This is important to avoid me missing phone
   calls if I'm connected to computer or meeting/slack notifications if
   I'm connected to the phone.
@@ -31,7 +31,7 @@ the next time I'm asked.
   on - and a warning when they're getting low.
 
 - They're very comfortable, even after 3 years use. (This in stark
-  contrast to a previous pair of Shure ones I had where the earpads
+  contrast to a previous pair of Shure ones I had where the ear pads
   hardened and became uncomfortable pretty quickly.)
 
 - They fold up compactly into a superb travel case that protects them
@@ -60,21 +60,23 @@ the next time I'm asked.
 
 - They are expensive.
 
-- They're not great in windy/drafty conditions. I think this is
+- They're not great in windy/draughty conditions. I think this is
   because they try to cancel out "phantom wind" that's blowing on the
   ambient mics.
 
 - It's not possible to turn off the noise cancelling without plugging
-  in a cable, which also turns off the bluetooth.
+  in a cable, which also turns off the Bluetooth.
 
 - Did I mention they're not cheap?
 
 * Verdict
 
-For my use I think the good outweigh the bad, and if my QuiteComfort
+For my use I think the good outweigh the bad, and if my QuietComfort
 35s broke I would /consider/ getting them again. I'm not 100% sure
 because I feel where they really shine (solo) air/train travel, and
 I'm not sure the price is worth it given I so rarely travel nowadays.
 * Abstract                                                         :noexport:
 
 I review the noise-cancelling headphones I've been using for about 3 years.
+
+#  LocalWords:  QuietComfort Shure drafty noexport

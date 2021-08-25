@@ -16,8 +16,8 @@ documentation for that function, and this has a link to the source at
 the top. I clicked that, and quickly found that it calls
 ~custom-available-themes~.
 
-Next I needed to generate the Hydra docstring/menu. My biggest
-annoyance with the manual process was modifying the docstring to add
+Next I needed to generate the Hydra doc-string/menu. My biggest
+annoyance with the manual process was modifying the doc-string to add
 the key & hint. So initially I thought about automating this in some
 way, perhaps by listing light & dark & "other" themes separately. But
 it would still be annoying. I thought about chaining hydras too, but
@@ -29,7 +29,7 @@ I now needed to come up with a strategy for how to select KEYs to
 select each theme. First I thought about using mnemonics for the
 themes themselves, but I have both =leuven=, =leuven-dark=,
 =light-blue=, and =liso= all starting with =l=. I then thought about
-using shortest unique substring, but that would mean variable-length
+using shortest unique sub-string, but that would mean variable-length
 keys which I didn't want; as much as possible I wanted
 single-keystroke keys. So I decided to go with an alphabet of 62
 candidate keys:
@@ -51,7 +51,7 @@ looks like this:
   (defun sb/sort-themes (themes)
     (sort themes
           (lambda (a b)
-            (string< (symbol-name a) 
+            (string< (symbol-name a)
                      (symbol-name b)))))
 #+END_SRC
 
@@ -60,7 +60,7 @@ form ~(KEY ACTION HINT)~. I had a list of candidate KEYs, and a list
 of themes to build the action and hint, but I needed to piece it
 together. I struggled to figure out how to correlate the KEY and THEME
 using ~mapcar~, but then I noticed ~mapcar*~ (final ~*~ is
-significant) among the autocomplete candidates. This is very similar
+significant) among the auto-complete candidates. This is very similar
 to ~mapcar~ but takes multiple lists and passes a value from each to
 the mapping function. Just what I needed! As a bonus it stops when
 /either/ list runs out of items.
@@ -74,14 +74,14 @@ the mapping function. Just what I needed! As a bonus it stops when
              sb/hydra-selectors themes))
 #+END_SRC
 
-The [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Backquote][backquote]] (~`~) in that snippet is similar to quoting with ~'~ or
+The [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Back-quote][back-quote]] (~`~) in that snippet is similar to quoting with ~'~ or
 ~quote~, but allows you to selectively /unquote/ bits inside with ~,~.
 I need it because I needed to quote the argument to ~sb/load-theme~.
 
 ~defhydra~ doesn't take a list of heads, but I thought I might find a
 related function that would, perhaps ~defhydra*~. Unfortunately, I had
 no such luck. However, this is Lisp so there are ways. We'll reach for
-backquote again, but this time instead of a simple unquote we [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Backquote][splice]]
+back-quote again, but this time instead of a simple unquote we [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Backquote][splice]]
 our heads into the ~defhydra~ argument list with ~,@~. This now looked
 like so:
 
@@ -192,8 +192,12 @@ For completeness here's the full source for this switcher:
                           ("RET" nil "done" :color blue)))))))
 #+END_SRC
 
-For what it's worth, here's my full [[https://github.com/stig/.config/blob/trunk/emacs/README.org#themes][Emacs Themes Config]] on Github.
+For what it's worth, here's my full [[https://github.com/stig/.config/blob/trunk/emacs/README.org#themes][Emacs Themes Config]] on GitHub.
 * Abstract                                                         :noexport:
 
 I learnt how to quickly switch between all installed themes in Emacs
 using Hydra.
+
+#  LocalWords:  Hendershott's RET KEYs leuven liso SRC defhydra color
+#  LocalWords:  abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+#  LocalWords:  Backquote commandp issuecomment mapc

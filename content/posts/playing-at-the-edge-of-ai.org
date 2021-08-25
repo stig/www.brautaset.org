@@ -49,3 +49,5 @@ AI inferior to that in the previous version, and I am currently
 experimenting with a few possible ways to improve the training of the
 neural net. Rest assured any progress I make will be the topic of future
 posts.
+
+#  LocalWords:  GGTL Fogel Kumar Chellapilla

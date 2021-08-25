@@ -15,7 +15,7 @@ really biting me in the ass now.
 I ended up reverting all the changes I had made and completely rewriting
 the test suite to only use the provided interface of the class, adding
 to the interface as needed. After cleaning up the test suite (this had
-the unforseen side-effect of making the interface a lot nicer to work
+the unforeseen side-effect of making the interface a lot nicer to work
 with) I rewrote the internals as I had planned and managed to get a
 five-fold speed increase, without changing any of the tests at all.
 

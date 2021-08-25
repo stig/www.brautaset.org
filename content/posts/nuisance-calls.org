@@ -58,3 +58,5 @@ PS: I've found out that Windows phones allow you to block callers with
 no caller id. This is something that I've wanted for a long time.
 Hopefully Apple will implement this as well. Or maybe I'll be buying a
 Windows phone next...?
+
+#  LocalWords:  PPI dialler diallers

@@ -7,11 +7,11 @@ Heinlein's list of skills:
 
 #+BEGIN_QUOTE
   A Man should be able to change a diaper, plan an invasion, butcher a
-  hog, conn a ship, design a building, write a sonnet, balance accounts,
+  hog, Conn a ship, design a building, write a sonnet, balance accounts,
   build a wall, set a bone, comfort the dying, take orders, give orders,
-  cooperate, act alone, solve equations, analyze a new problem, pitch
+  cooperate, act alone, solve equations, analyse a new problem, pitch
   manure, program a computer, cook a tasty meal, fight efficiently and
-  die gallantly. Specialization is for insects.
+  die gallantly. Specialisation is for insects.
 #+END_QUOTE
 
 Let's break it down and see how I compare:
@@ -25,13 +25,13 @@ Let's break it down and see how I compare:
 7.  Balance accounts: Unfortunately, no. Not my accounts anyway.
 8.  Build a wall: Yes.
 9.  Set a bone: I should think so.
-10. Comfort the dying: Alas, I would probably be at loss here.
+10. Comfort the dying: Alas, I would probably be at a loss here.
 11. Take orders: Yes, grudgingly.
 12. Give orders: Yes, unwillingly.
 13. Cooperate: Yes.
 14. Act alone: Yes.
 15. Solve equations: Yes.
-16. Analyze a new problem: Yes.
+16. Analyse a new problem: Yes.
 17. Pitch manure: Ugh. If I had too...
 18. Program a computer: Yes, most willingly :D
 19. Cook a tasty meal: Occasionally.

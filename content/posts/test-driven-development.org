@@ -45,3 +45,5 @@ TDD is quite possibly the most influential concept I have come across. I
 wish I came across these ideas several years ago, as I believe it would
 have saved me an awful lot of grief. I strongly suggest you give this
 book a chance.
+
+#  LocalWords:  xUnit refactorings

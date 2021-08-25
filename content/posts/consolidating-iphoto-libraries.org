@@ -65,7 +65,7 @@ Here it is:
 #+END_SRC
 
 Since I didn't have enough disk space to duplicate all the images, I
-used hardlinks. This essentially means you just create a new filename
+used hard links. This essentially means you just create a new filename
 pointing to the same data on disk, without taking up extra data. I also
 made the program create a log file containing the location of each file
 and its MD5 hash so I could find out how many files were processed and
@@ -98,7 +98,7 @@ losing edits to images, but I was OK with this.
 
 In the end I had 255 directories with on average 130 files in each. I
 imported these directories into a brand new iPhoto library roughly ten
-at a time. Since iPhoto doesn't use hardlinks but copies the photos into
+at a time. Since iPhoto doesn't use hard links but copies the photos into
 its library (to avoid nasty surprises if someone decided to edit the
 file in a different location, no doubt) this ate up disk fast; and I had
 to delete the existing libraries under the different accounts to make
@@ -114,8 +114,8 @@ I asked if I could reproduce it here.
 #+BEGIN_QUOTE
   Hello and thanks for the post about your iPhoto consolidation and
   de-duping. I'd love to do something similar. We have three Apple
-  laptops (two MacBooks from 2008 and 2009) and a new Macbook Pro
-  Retina. In all, about 3-5 iPHoto libraries, I think. Your project
+  laptops (two MacBooks from 2008 and 2009) and a new MacBook Pro
+  Retina. In all, about 3-5 iPhoto libraries, I think. Your project
   seems to be what we'd like to do. However, I'm not sure how to do it.
   If you have a minute, could you please tell me how I can use your
   code, or do this a different way, without the program? I am not a
@@ -178,3 +178,7 @@ data in the image itself. The structure will be like so:
     2010/01/baz.jpg
     2010/01/qux.jpg
 #+END_EXAMPLE
+
+#  LocalWords:  de iPhoto SRC src dst chksum md dir awk tolower mkdir
+#  LocalWords:  EXIF Imagemagick MacBooks dedupe chmod fe exiftool
+#  LocalWords:  datetimeoriginal Exif

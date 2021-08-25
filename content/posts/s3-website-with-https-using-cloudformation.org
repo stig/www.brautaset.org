@@ -168,3 +168,15 @@ makes finding the right bucket in the S3 console a lot easier.
 I show how to create an S3 bucket set up to serve a static website,
 and expose it over HTTPS via CloudFront, using the same SSL
 certificate we created in the previous post---all via CloudFormation.
+
+#  LocalWords:  logbucket AccessControl LogDeliveryWrite LogBucket
+#  LocalWords:  BucketName DomainName sitebucket SiteBucket GetAtt
+#  LocalWords:  WebsiteConfiguration IndexDocument ErrorDocument http
+#  LocalWords:  LoggingConfiguration DestinationBucketName cloudfront
+#  LocalWords:  SubjectAlternativeName SiteCloudFront WebsiteURL sni
+#  LocalWords:  DistributionConfig CustomOriginConfig TargetOriginId
+#  LocalWords:  OriginProtocolPolicy DefaultCacheBehavior DefaultTTL
+#  LocalWords:  MaxTTL ForwardedValues QueryString https aws png css
+#  LocalWords:  ViewerProtocolPolicy ViewerCertificate acl
+#  LocalWords:  AcmCertificateArn SslSupportMethod
+#  LocalWords:  SiteCloudFrontDomain

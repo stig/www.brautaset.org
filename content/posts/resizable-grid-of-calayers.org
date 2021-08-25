@@ -1,4 +1,4 @@
-#+title: Creating a resizable grid of CALayers
+#+title: Creating a re-sizeable grid of CALayers
 #+date: <2008-10-01>
 #+category: ObjectiveC
 The last few days I've been poring over the [[http://developer.apple.com/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html][Core Animation Programming
@@ -20,7 +20,7 @@ Then I discovered the scale-argument form of the =NSConstraint=. With
 this I can specify the size of a cell and its position in the grid only
 in terms of the super layer. This is /much/ simpler. Have a look at the
 example code below. Paste it into a custom view, and it should display a
-gray grid on a pleasant blue background:
+grey grid on a pleasant blue background:
 
 #+BEGIN_SRC objc
   - (void)awakeFromNib {
@@ -127,6 +127,16 @@ adding the 0.5 to c & r in the scale:
 #+END_SRC
 * Abstract                                                         :noexport:
 
-I demonstrate how to create a resizable grid of equally-sized cells in
+I demonstrate how to create a re-sizeable grid of equally-sized cells in
 Core Animation, using a CAConstraintLayoutManager.
 
+
+#  LocalWords:  CALayers CAConstraintLayoutManager NSConstraint objc
+#  LocalWords:  awakeFromNib wantsLayer CALayer backgroundColor del
+#  LocalWords:  CGColorCreateGenericRGB layoutManager borderColor
+#  LocalWords:  CGColorCreateGenericGray borderWidth cornerRadius
+#  LocalWords:  stringWithFormat addConstraint CAConstraint
+#  LocalWords:  constraintWithAttribute kCAConstraintWidth relativeTo
+#  LocalWords:  superlayer kCAConstraintHeight kCAConstraintMinX
+#  LocalWords:  kCAConstraintMaxX kCAConstraintMinY kCAConstraintMaxY
+#  LocalWords:  addSublayer kCAConstraintMidX kCAConstraintMidY

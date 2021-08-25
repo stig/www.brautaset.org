@@ -19,7 +19,7 @@ I record clean. Using both channels 3 & 4 gives a sort of "synthetic"
 stereo. I think. It sounds pretty good, anyway! Recording clean means
 I can change the amp later; adding or removing distortion, delay,
 reverb or chorus; say. (Also I haven't been able to disable the guitar
-amp effecs in Garageband, so recording the clean input from the amp is
+amp effects in Garageband, so recording the clean input from the amp is
 the only way to avoid stacking the amp's and GarageBand's effects for
 a /truly shit/ sound.)
 
@@ -29,3 +29,5 @@ a /truly shit/ sound.)
 In my musical journey I try to record myself occasionally to track my
 progress, and be able to critically listen to myself so I can fix my
 mistakes. This is brief note on how I normally do that.
+
+#  LocalWords:  THR Steinberg Garageband GarageBand's

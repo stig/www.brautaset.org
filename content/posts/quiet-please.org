@@ -8,7 +8,7 @@ don't mean that it [[http://en.wikipedia.org/wiki/Up_to_eleven][goes to 11]], bu
 already around 2: below is too quiet, above too high, and the optimal
 setting in the middle is too hard to find.
 
-There's simply not enough (useable) dynamic range. I could turn down the
+There's simply not enough (usable) dynamic range. I could turn down the
 input volume from my guitar, but that changes the sound unfavourably (I
 get lower signal-to-noise ratio, and many of the effects rely on high
 input level to work satisfactorily).

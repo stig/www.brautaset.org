@@ -4,7 +4,7 @@
 
 We use Time Machine to back up our main computer. We have two 1GB USB
 drives that we rotate. Every so often I take the drive currently plugged
-into the computer to work and swap it with an HD I store there. (Order
+into the computer to work and swap it with an HDD I store there. (Order
 is important; I /never/ take both backup disks home at the same time for
 any length of time, not even just to swap them around.) I plug this in
 when I get home and continue backing up. This means we have three copies
@@ -127,3 +127,6 @@ with Flickr, though, we would probably have been tempted to try SmugMug.
 It's a bit more expensive, but it's a stand-alone company and they are
 not burdened with Yahoo! accounts; these are infuriating and in my
 opinion counts against Flickr.
+
+#  LocalWords:  Backblaze AppStore iPhoto Flickr flickr iPhones ish
+#  LocalWords:  dropbox Picasa picasa iCloud icloud SmugMug smugmug

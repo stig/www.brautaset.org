@@ -9,7 +9,7 @@ had intended for this blog post. If you're reading my [[file:adding-ssl.org][add
 series]] but are only interested in the CloudFormation bits you can skip
 this post as it doesn't contain any.
 
-For the tests in my previeous post I relied on all =.html= pages being
+For the tests in my previous post I relied on all =.html= pages being
 generated in the same base directory as their sources. But as I don't
 intend to check in the generated files, I don't want to continue that!
 Instead I want the generated files to end up in =~/public_html= on my
@@ -55,3 +55,6 @@ aws s3 sync \
 
 I show briefly the changes I need to make to publish this blog to S3
 rather than to GitHub.
+
+#  LocalWords:  cd SimpleHTTPServer alist css jpg png pdf gx stig aws
+#  LocalWords:  acl DS

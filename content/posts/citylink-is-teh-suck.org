@@ -4,7 +4,7 @@ Never, ever, deal with [[http://www.city-link.co.uk/][ShittyLink]] if you can av
 supposed to deliver my new TV on Saturday, but failed to do so.
 Yesterday I got a card from them in my mailbox, saying they attempted
 delivery and can I please call this 0870 number to arrange re-delivery
-(this was odd, since I'd asked the merchant to arrange redelivery for
+(this was odd, since I'd asked the merchant to arrange re-delivery for
 next Saturday, but that's another rant)?
 
 I call the number. It's, surprise surprise, an automatic phone service.
@@ -15,7 +15,7 @@ depot. I'm not prepared to pick up a 32 inch TV and lug it across London
 when the people that try to make me do so are paid to deliver it to me.
 So I persevere.
 
-I pick "arrange for redelivery" from their phone service and don't know
+I pick "arrange for re-delivery" from their phone service and don't know
 whether to laugh or cry when I hear that they don't offer Saturday as an
 option. I decide to go for the third option, leave your name and number
 and they will call you back. Do they fuck.
@@ -39,13 +39,13 @@ The final straw comes when the lady on the other end tells me that I
 cannot arrange to have the parcel redelivered on Saturday. So, let's
 see. First they fail to deliver the package when they're supposed to.
 Then they try to bully me into picking up the package at their depot,
-doing their job for them. Then they won't let me arrange a redelivery on
+doing their job for them. Then they won't let me arrange a re-delivery on
 a day of the week that's convenient for me, and indeed is the same day
 of the week they were supposed to deliver the package in the first
 place.
 
 Adding insult to injury, this experience is not a one-off thing either.
-It has awaken memories from times past of a Mac Powerbook that was
+It has awaken memories from times past of a Mac PowerBook that was
 supposed to be delivered to $WORK and spent more than two months in
 transit between ShittyLink's London depot and our Old Street office.
 
@@ -56,3 +56,5 @@ ShittyLink. That way I may get my TV sometime this spring.
 
 I rant about CityLink's attempt at delivering my new TV.
 
+
+#  LocalWords:  CityLink teh ShittyLink ShittyLink's CityLink's

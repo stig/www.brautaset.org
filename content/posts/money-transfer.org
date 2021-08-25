@@ -6,7 +6,7 @@ Why, why, /why/ do the banks in this country insist on staying put in
 the dark ages?
 
 I make regular payment from my Norwegian bank account (student loan
-installments and misc other tidbits). I have to occasionally top that
+instalments and misc other tidbits). I have to occasionally top that
 account up to avoid them coming after me with crowbars and bicycle
 chains. Visiting an HSBC branch in Clerkenwell today I asked about
 arranging a money transfer to Norway at regular intervals. This wasn't
@@ -48,7 +48,7 @@ I guess I get so worked up about these things because I know it
 doesn't /have/ to be this way: having money transferred here /from/ my
 Norwegian account (with [[http://nordea.no][Nordea]] if anybody's interested) was a breeze.
 When my student loan arrived I just logged into my online banking
-account and set up the transfer to my UK account. Ok, so there was an
+account and set up the transfer to my UK account. OK, so there was an
 additional fee. Oh, and I needed some extra codes to identify the
 foreign bank and country, but all that information was available on
 their site. The important bit is that /I didn't have to talk to any
@@ -60,3 +60,5 @@ of course claim that they are the [[file:chip-and-pin.org][among the early adopt
 
 Wherein I rant about my unsuccessful attempt at transferring money
 from the UK HSBC account to my Norwegian (Nordea) bank account.
+
+#  LocalWords:  tidbits Clerkenwell Nordea

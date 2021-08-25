@@ -6,7 +6,7 @@ I spend most of my work days in Emacs, Slack, Safari & Terminal. Some
 of the Terminals I've got open, such as those connected to a machine
 in the production environment, requires a more elevated attention than
 others. It would be nice if these "high risk" terminals were visually
-distinct. A colleague shared [[http://superuser.com/questions/603909/how-to-change-terminal-colors-when-connecting-to-ssh-hosts][How to change terminal colors change when
+distinct. A colleague shared [[http://superuser.com/questions/603909/how-to-change-terminal-colors-when-connecting-to-ssh-hosts][How to change terminal colours change when
 connecting to SSH hosts]] and it inspired me to finally implement this.
 
 The solution presented there does not work on OS X Terminal, so I had
@@ -36,7 +36,7 @@ end run
 #+END_SRC
 
 I put the above in =~/Dotfiles/termcolours.scpt=, and invoke it from the
-commandline like so:
+command line like so:
 
 #+BEGIN_SRC sh
 osascript ~/Dotfiles/termcolours.scpt red
@@ -80,3 +80,6 @@ And there you have it!
 
 I show how to change Terminal.app colours automatically when logging
 into certain remote machines via SSH
+
+#  LocalWords:  AppleScript SRC desiredColour RGB color osascript Zsh
+#  LocalWords:  PermitLocalCommand LocalCommand argv

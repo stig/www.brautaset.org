@@ -18,7 +18,7 @@ I usually drive across Pudding Lane around 11am and visit all the
 long-stay car parks inside the walls: Hatters Lane, Coxons Lane,
 Parade & Foul Ford. More often than not these are all busy, so I head
 for the Quayside: usually this too is busy. Thus most days I resort to
-parking "on the grass" in Castlegate Overspill Carpark. The reason for
+parking "on the grass" in Castlegate Overspill Car park. The reason for
 my reluctance is that---as you no doubt know---it more resembles a
 muddy bog than a car park this this time of year.
 
@@ -56,7 +56,7 @@ parking permit.
 ** Too much parking reserved for busses
 
 The one-hour car park next to the library was made into a bus car park
-but seems to go unnused. At least I have never noticed any busses
+but seems to go unused. At least I have never noticed any busses
 parked there.
 
 ** Use of long-stay parking is more convenient than short-stay
@@ -66,7 +66,7 @@ about remembering to be back at a certain time. I have myself been
 guilty of (ab-)using long-stay car parks for this reason, and doubt
 I'm the only one.
 
-** Castlegate long stay and overspill car park is often a mudbath
+** Castlegate long stay and over-spill car park is often a mud-bath
 
 I often end up parking here because I can't find suitable parking
 inside the walls. Yet, it's not the distance of walking I object to:
@@ -80,7 +80,7 @@ are some suggestions for your consideration:
 
 ** Introduce commuter friendly parking in town
 
-One way could be introduce a comumter disk, mimicing the existing
+One way could be introduce a commuter disk, mimicking the existing
 short-stay parking disk but with days of the week on it rather than
 hours. It would be valid for a single day, but not multiple days in a
 row. There could either be a separate car park where these would be
@@ -111,12 +111,12 @@ Particularly in Castlegate and Foul Ford, and start fining cars that
 flout the markings. This would free up many spaces each day, as I
 often see two cars parked in space that would suffice for three.
 
-** Properly develop Castlegate Long Stay overspill car park
+** Properly develop Castlegate Long Stay over-spill car park
 
 Make it suitable for parking in all weather and footwear.
 
 This would be particularly effective in combination with improved
-access from Castlegate Long stay and overspill car parks to the town.
+access from Castlegate Long stay and over-spill car parks to the town.
 This could take the form of a tunnel through the walls, or a set of
 stairs to the top of the walls from Castlegate long stay car park,
 providing access from Castlegate to Wallace Green, Coxons Lane, or
@@ -170,3 +170,6 @@ this open letter.
 I complain about the unacceptable parking situation for commuters to
 Berwick-upon-Tweed and present a few suggestions for improvement that
 might help.
+
+#  LocalWords:  Workspaces Coxons Castlegate Overspill Greaves Ayre
+#  LocalWords:  GWA Walkergate Maltings Carks Incentivise

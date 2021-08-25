@@ -13,7 +13,7 @@ playing MP3s and Ogg Vorbis files, but couldn't find any software to
 do that.  (That I liked, anyway.)  I seem to remember that with the
 best Linux-based player it was possible to list music to "play next",
 but that added things to the /top/ of the playlist rather than at the
-bottom of the queue. It was also only useable locally.
+bottom of the queue. It was also only usable locally.
 
 Enter the [[https://en.wikipedia.org/wiki/Line_Printer_Daemon_protocol][Line Printer Daemon]]. This manages a queue of files for
 printing. You can use the =lpr= utility (it's what I used) to queue
@@ -21,7 +21,7 @@ files to be printed, or to alter a previously submitted request.  It's
 also networked, and provides an admin with the ability to manage the
 queue.  (For example deleting repeated jobs.)  I ended up writing =lpd=
 configuration and a few lines of shell script that acted as a printer.
-This "printer" would read files off the print que and use
+This "printer" would read files off the print queue and use
 MPlayer[fn:1] to "print" them[fn:2].  Voilá!  I and other users[fn:3]
 could now "print" music through my stereo.
 
@@ -57,9 +57,12 @@ in a conversation on Slack.)
 [fn:2] I.e. play music.
 
 [fn:3] I /say/ other users, but I was the only Linux user in my halls of
-residence and noone else ever used it.
+residence and no one else ever used it.
 
 * Abstract                                                         :noexport:
 
 I explain how I set up MPlayer as a printer driver so I could add a
 distributed print queue for music. (AKA a JukeBox.)
+
+#  LocalWords:  Ogg Vorbis lpr lpd MPlayer Voilá MPlayer's ogg
+#  LocalWords:  Kristian MPlayerX JukeBox

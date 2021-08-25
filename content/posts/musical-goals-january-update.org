@@ -64,3 +64,6 @@ doesn't support well.
 The first of (hopefully) monthly posts with updates on my musical
 goals for 2019. I cover achievements in January, and new goals for
 February.
+
+#  LocalWords:  GarageBand iframe frameborder autoplay src LilyPond
+#  LocalWords:  tabulature CGDAEBF

@@ -23,3 +23,5 @@ the stand-alone AP to it, so after some careful vetting of tech they now
 have 2 ADSL routers to send back to their provider.
 
 Gah!
+
+#  LocalWords:  ISDN ADSL Gah

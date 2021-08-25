@@ -25,7 +25,7 @@ file:light-mode.png
 I had to set the colours for my normal Light Mode theme using CSS
 variables, and then reset these variables to different colours using
 the following CSS media query ~prefers-color-scheme: dark~. I've tested
-that it works for my site on macOS with the current version of Firefox
+that it works for my site on MacOS with the current version of Firefox
 & Safari, and in mobile Safari on iOS.
 
 The thing I like /best/ about the exercise is not the Dark Mode itself,
@@ -37,3 +37,5 @@ more cohesive in my opinion.
 * Abstract                                                         :noexport:
 I experiment with adding an automatic Dark Mode to this site, if your
 browser requests it.
+
+#  LocalWords:  Kev Kev's attr color macOS

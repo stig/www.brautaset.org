@@ -105,3 +105,7 @@ alone finish those bindings. I was never paid a single pence, directly,
 for this development; however, I did land a job in part due to being its
 author. Also, I had a couple of free beers at a London iOS developers
 meeting that ended up in a pub. So I consider myself well rewarded.
+
+#  LocalWords:  CouchDB NSScanner OO SBJsonParser SBJsonWriter APIs
+#  LocalWords:  booboo NSJSONSerialisation NSData NSURLConnection
+#  LocalWords:  objectWithString JSONValue json

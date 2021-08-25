@@ -18,7 +18,7 @@ routing layer. It also shows off three things I consider good practice:
   tailoring a resource's =max-age= to avoid over- or under-caching
   individual resources.
 
-- Separate on-the-wire protocol. I've see codebases where the domain
+- Separate on-the-wire protocol. I've seen code bases where the domain
   objects contain more annotations than code---often for both JSON and
   ORM mappings. I think this is bad practice and prefer to use
   different classes.
@@ -57,7 +57,7 @@ create routing tests very naturally.
 
 As mentioned I like to use a separate on-the-wire protocol---in other
 words: separate DTO classes from the model classes. The counter-argument
-I've usually heard is that it's "unecessary" work; but if you're dealing
+I've usually heard is that it's "unnecessary" work; but if you're dealing
 with immutable objects you're probably just copying the pointers to the
 members, so you're not copying that much data around. On the other hand
 it becomes a lot simpler to avoid accidental leakage of your model
@@ -77,3 +77,6 @@ level in the list/ to use for the cache decider.
 I think this gives a clean separation between the model / controller
 layer and the service layer. The model layer doesn't need to know that
 it is being exposed by a REST API at all.
+
+#  LocalWords:  onSuccess ModelActor ItemNotFound NotFound InStock
+#  LocalWords:  ServiceActor LowStock SoldOut

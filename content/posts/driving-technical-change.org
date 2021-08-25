@@ -42,3 +42,5 @@ attempting to /Create Trust/.].
 * Abstract                                                         :noexport:
 
 I review the book /Driving Technical Change/ by Terrence Ryan.
+
+#  LocalWords:  ORMs

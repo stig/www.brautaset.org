@@ -118,7 +118,7 @@ gain more confidence shipping---it's a virtuous cycle.
   test runner. At first this resulted in lots of test failures related
   to our Cassandra integration[fn::I then tried using CircleCI's [[https://circleci.com/docs/2.0/parallelism-faster-jobs/#splitting-test-files][test
   splitting]] instead. This showed promise, but it had problems: it was
-  difficult to achive an even split of the test files, since Django's
+  difficult to achieve an even split of the test files, since Django's
   test runner only accepts test module names. However, it prompted one
   of my colleagues to take a hard look at /why/ the tests failed when
   running in parallel using Django's native method.], but a couple of
@@ -128,7 +128,7 @@ gain more confidence shipping---it's a virtuous cycle.
   default CircleCI gives you only 2 CPUs, but by upgrading to their
   new [[https://circleci.com/pricing/usage/][Performance Plan]] we were able to specify different [[https://circleci.com/docs/2.0/configuration-reference/#resource_class][resource
   classes]] for our jobs. This plan even saves us about one third off
-  our monthly CircleCI bill! How? We hate queueing and on the old plan
+  our monthly CircleCI bill! How? We hate queuing and on the old plan
   paid CircleCI for many containers. Most of our engineers are
   primarily based in one region, and all the containers were idle at
   night and all weekend. Paying only for what we /use/ makes so much
@@ -165,3 +165,6 @@ gain more confidence shipping---it's a virtuous cycle.
 
 I outline how we reduced the time to run a Django application's CI
 test suite from about 13 minutes to under 4 minutes.
+
+#  LocalWords:  april ElasticBeanstalk Tox macosexecutor june awek
+#  LocalWords:  Ehlert

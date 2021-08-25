@@ -63,7 +63,7 @@ Then, yesterday I got a letter saying this (errors and all):
 By now I was really annoyed. This wasn't lessened when I called them up
 to query them about it; turned out the application number they had
 quoted me on this last letter /was not my application number/ but
-belonged to someone else. Ok, I thought, this was the drop; now I'm
+belonged to someone else. OK, I thought, this was the drop; now I'm
 furious. Mixing up my details with someone else's is not to be taken
 lightly when done by a bank. I decided to not bank with them.
 
@@ -84,3 +84,5 @@ me worked up.
 
 In which I regale you with my attempt to get a current account with
 the Co-operative bank.
+
+#  LocalWords:  Islington GLLUG

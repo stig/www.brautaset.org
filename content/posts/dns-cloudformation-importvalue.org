@@ -142,9 +142,17 @@ HTTPS-enabled blog :-)
 [fn:1] Or, as it happens, maybe not yet. Because it turns out lots of
 home routers (including my own) ignore TTLs and cache DNS servers for
 a long time. So for a week or so I'll leave the generated files in
-GitHub, and also post new content to the AWS S3 bucket. 
+GitHub, and also post new content to the AWS S3 bucket.
 * Abstract                                                         :noexport:
 
 I show the changes to my Sceptre config & CloudFormation template
 required to point DNS to the two CloudFront distributions I've
 created.
+
+#  LocalWords:  dns StackName sn SRC yaml RedirDomain SiteDomain cfg
+#  LocalWords:  GetAtt ApexCloudFront DomainName SiteCloudFront io fn
+#  LocalWords:  ApexRecords WwwRecord DependentStackName superloopy
+#  LocalWords:  RecordSet recordset WwwRecordSet ResourceRecord fqdn
+#  LocalWords:  HostedZoneId TTL ResourceRecords ApexRecordSet cfn
+#  LocalWords:  aliastarget AliasTarget CloudFront's hostedzoneid
+#  LocalWords:  DNSName FDTNDATAQYW TTLs

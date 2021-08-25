@@ -2,7 +2,7 @@
 #+date: <2005-09-30>
 #+category: Development
 
-Bizzarely, today I found myself deleting a test script preparing to
+Bizarrely, today I found myself deleting a test script preparing to
 refactor the code it tested. Really.
 
 Before you proceed to tear your hair out, let me just say that it's not

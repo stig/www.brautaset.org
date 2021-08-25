@@ -6,14 +6,14 @@ indian with horrific injuries goes to visit his witch-doctor:
 
 #+BEGIN_VERSE
 --- What brought this on?
---- I was out hunting when an eagle attacked me, but luckily it dropped me in front of a flock of runaway buffallo!
+--- I was out hunting when an eagle attacked me, but luckily it dropped me in front of a flock of runaway buffalo!
 --- Luckily?
 --- Yes, it's the only thing my medical insurance covers!
 #+END_VERSE
 
 I used to find it hilarious back then, but having now started looking
-into insurance I realize that the joke's on me, and I don't find it so
-funny anymore. Here's an exerpt from the exclusion clause in Abbey's
+into insurance I realise that the joke's on me, and I don't find it so
+funny anymore. Here's an excerpt from the exclusion clause in Abbey's
 accident cover:
 
 #+BEGIN_QUOTE
@@ -33,14 +33,16 @@ accident cover:
   -  your suicide, your own illegal acts, your intentional
      self-inflicted injury, whether you are sane or insane;
   -  being under the influence of or being affected by alcohol or drugs
-     unless under the advice of a doctor for a conditon other than
+     unless under the advice of a doctor for a condition other than
      alcohol or drug addiction;
-  -  radiaton or contamination or the effects of radiation;
+  -  radiation or contamination or the effects of radiation;
   -  HIV, AIDS or any related condition or disease
   -  you having any sickness, disease, naturally occurring condition,
      injury or degenerative process.
 #+END_QUOTE
 
 If the poor red indian in the joke above had had this insurance, I'm
-pretty sure the cretins would have managed to weazel their way out of
+pretty sure the cretins would have managed to weasel their way out of
 paying for his claim.
+
+#  LocalWords:  indian

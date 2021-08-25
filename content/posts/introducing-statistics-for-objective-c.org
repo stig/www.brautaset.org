@@ -14,3 +14,5 @@ return a new statistics object seeded with the same data *but with
 outliers discarded*. Perfect if you're interested in the trimmed mean.
 
 The code is released under the BSD license.
+
+#  LocalWords:  mindex maxdex

@@ -10,14 +10,14 @@ credits to listen. We wanted to be able to play this music at his
 upcoming birthday party, without having to bring a computer and have
 Minecraft running.
 
-#+CAPTION: This is the two of us playing the Minecraft Minigame "Raft Clash"
+#+CAPTION: This is the two of us playing the Minecraft Mini-game "Raft Clash"
 [[file:minecraft-raft-clash.png]]
 
 My wife found [[https://minecraft.gamepedia.com/Tutorials/Sound_directory][a tutorial]] for extracting the music, but we couldn't get
 the example code to run on our Macs. /However/, I could understand what
 it was trying to do sufficiently to write my own version. I decided to
 write it in Python, because parsing JSON with =grep= offends my
-sensibilites[fn::That, and my wife's computer doesn't have [[https://stedolan.github.io/jq/][jq]]
+sensibilities[fn::That, and my wife's computer doesn't have [[https://stedolan.github.io/jq/][jq]]
 installed.]. I'm not a Python expert though, so please don't use this
 as an example of how you should write Python!
 
@@ -119,7 +119,7 @@ The full code is below.
 	  copyfile(asset_path, outfile)
 #+END_SRC
 
-There you have it! You can use this on macOS to extract the music from
+There you have it! You can use this on MacOS to extract the music from
 Vanilla Minecraft[fn::I know from first-hand experience that it does
 not work if you use the [[https://multimc.org][MultiMC launcher]].]. One improvement I
 considered, but ultimately decided was not needed (yet) was the
@@ -128,3 +128,7 @@ directory to extract the music /to/.
 * Abstract                                                         :noexport:
 
 I create a Python script to extract music files from Minecraft's assets.
+
+#  LocalWords:  Minigame jq SHA bdf ef bbb minecraft ee eabe noext os
+#  LocalWords:  makedirs Pythonic shutil copyfile dir listdir dirs
+#  LocalWords:  outfile

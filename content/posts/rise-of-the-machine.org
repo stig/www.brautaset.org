@@ -16,21 +16,21 @@ clarify parts of the spec and in some debugging.
 
 Imagine my amazement when it turned out this "huge scary thing", which
 I'd imagined a VM to be, clocked in at less than 300 lines of C. It
-wasn't fast though. A self-test and benchmarking program for the UM
+wasn't fast though. A self-test and benchmark program for the UM
 was available from the [[http://icfpcontest.org/][ICFP]] website. Norman's UM ran this benchmark in
 minutes but mine, distressingly, took over 10 hours.
 
 Last Saturday, after eliminating variables and assignments in the
-hotpath and using macroes instead, I managed to get the time for the
+hot path and using macros instead, I managed to get the time for the
 benchmark program down to just over two hours. A whole lot better, but
 still /way/ slower than others' VMs. From basic instrumentation I knew
 that the benchmark program did a lot of memory allocation and
-deallocation, and I surmised that this was the cause of my performance
+de-allocation, and I surmised that this was the cause of my performance
 problems. During the course of the weekend I tried to speed my VM up
 further by caching previously allocated arrays in different ways.
 Whatever I tried, however, simply made it slower. It was a humbling
 experience that reminded me that I should have faith in the library
-implementors; they're most likely smarter than me.
+authors; they're most likely smarter than me.
 
 The performance of my VM continued to bug me all Monday morning. My VM
 has an array of pointers to unsigned integer arrays, which the
@@ -71,3 +71,5 @@ a look.
 
 I ruminate on implementing a simple virtual machine---for a simple
 language---in C.
+
+#  LocalWords:  Nunley ICFP VM VMs de malloc Powerbook struct structs

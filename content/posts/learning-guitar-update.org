@@ -14,7 +14,7 @@ Here's a quick recap of my goals to complete by July 2019.
 | 3. |   ✔   | Finish Justin's beginner/consolidation modules |
 | 4. |   ✔   | Complete two modules of Justin's "Green" grade |
 | 5. |   ✔   | Learn 5 new songs                              |
-| 6. |   ✔   | Become more procifient with my looper pedal    |
+| 6. |   ✔   | Become more proficient with my looper pedal    |
 | 7. |       | Research how to record myself on video         |
 
 
@@ -32,7 +32,7 @@ score.
 
 As for learning 5 new songs, I've got three AC/DC songs I can play
 along to. For two of them I can do a passable solo. I've also been
-practicing /Layla (Unplugged)/ by Clapton and /The House of the Rising
+practising /Layla (Unplugged)/ by Clapton and /The House of the Rising
 Sun/ by The Animals. They're not entirely new to me, but I wasn't happy
 with my performance previously. Now I'm getting to a point where I can
 sing and play at the same time.
@@ -138,7 +138,7 @@ progress rather than entertaining others.
 
   While not as far as I had hoped with the transcribing (and
   recording) I am happy with my progress, and think I'm on track for
-  completing my goals for the year. More importantly, practicing is
+  completing my goals for the year. More importantly, practising is
   becoming more enjoyable and it's getting a lot easier to pick up new
   songs.
 
@@ -150,3 +150,5 @@ progress rather than entertaining others.
 
 I try to keep myself honest--and on target!--by posting an update on
 my guitar learning journey.
+
+#  LocalWords:  looper BPMs Lilypond PDFs PBs

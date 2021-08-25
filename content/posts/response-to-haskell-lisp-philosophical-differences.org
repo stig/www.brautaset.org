@@ -73,7 +73,7 @@ The problem that his code examples solve I would do like this:
   [2 4]
 #+END_SRC
 
-Ok, that was cheeky, so let's show it with code too:
+OK, that was cheeky, so let's show it with code too:
 
 #+BEGIN_SRC clojure
   (filter even? (range 5))
@@ -118,3 +118,5 @@ composable functions. Perhaps all this shows is the problem of trying
 to divine a philosophical difference between a single language and
 /family of languages/ twice its age [[https://en.wikipedia.org/wiki/Lisp_(programming_language)][with over 25 dialects listed on
 Wikipedia]].
+
+#  LocalWords:  Done's composability monolithism nums composable

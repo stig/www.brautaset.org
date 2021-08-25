@@ -83,3 +83,7 @@ that its callers will be using the ask pattern, and that the service
 layer should chose the exceptions to throw in response to failure
 messages. I would argue it makes the =register= actor more reusable from
 non-REST contexts.
+
+#  LocalWords:  Eigengo exceptionHandler LoggingContext ctx mapTo req
+#  LocalWords:  NotRegisteredException ClassCastException
+#  LocalWords:  NotRegistered

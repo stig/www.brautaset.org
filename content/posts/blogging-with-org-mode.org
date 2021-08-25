@@ -8,7 +8,7 @@ Markdown Jekyll was starting to chafe. I wanted to write my blog posts
 in Org mode instead. I looked around to find a Jekyll plugin that
 would allow that, campaigned to have it updated to Jekyll 3, and
 opened a [[https://github.com/github/pages-gem/pull/335][pull request against pages-gem]] to whitelist this plugin for
-use with Github Pages. Unfortunately, this PR was given the silent
+use with GitHub Pages. Unfortunately, this PR was given the silent
 treatment and I ended up closing it: given all the attention my
 one-line change was not getting, it was clear they were not keen to
 merge it. Thus I decided to transform by blog into an Org mode
@@ -81,7 +81,7 @@ and the function to prompt for the slug in listing [[lst:slug-prompt]].
 #+END_SRC
 
 Finally, the code to build the blog are available in a script called
-=build.el= in my blog's root. It can be run from the commandline with
+=build.el= in my blog's root. It can be run from the command line with
 Emacs in batch mode, or I could eval the configuration into my running
 Emacs instance and publish individual pages while I'm working on them.
 The current version of this script can be seen in listing [[lst:build]].
@@ -189,7 +189,7 @@ been exported to HTML for publication as per [[../2016/how-i-blog-this-week.org]
 blogging]]. Those were easy to convert, and required only minor edits.
 Once it was clear that the concept would work, I wrote a script that
 did a decent first pass of transforming the existing articles from
-Markdown to Org using [[http://pandoc.org][Pandoc]], and then fixed the remaining doodaahs
+Markdown to Org using [[http://pandoc.org][Pandoc]], and then fixed the remaining doodahs
 manually. You can see my hacky conversion script in listing
 [[lst:convert]].
 
@@ -265,3 +265,11 @@ haven't managed to solve yet:
 
 I describe how---and why---I changed from blogging using Markdown &
 Jekyll to using Org mode.
+
+#  LocalWords:  nokogiri lst SRC emacs tpl defun downcase el concat
+#  LocalWords:  html doctype img src Superloopy nav ul li accesskey
+#  LocalWords:  href stylesheet css png javascript createElement ga
+#  LocalWords:  GoogleAnalyticsObject UA pageview toc postamble alist
+#  LocalWords:  jpg pdf makeindex Pandoc hacky YAML frontmatter md cd
+#  LocalWords:  argv mkdir sed pandoc backtick SimpleHTTPServer ACM
+#  LocalWords:  noexport

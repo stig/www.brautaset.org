@@ -12,7 +12,7 @@ more Emacs lisp, and experiment with the Org APIs.
 First and foremost I wanted a function that I could execute when
 visiting a blog post that generated the index entry for me, ready to
 paste into the index page. The ~parse-metadata~ function below is what
-I came up with. I query the Org parsetree for the title, date and
+I came up with. I query the Org parse tree for the title, date and
 category keywords, and the =abstract= special block. I created a
 little helper ~sb/org-kw-get~ function to avoid repetition, since I
 expected to extract three different keywords in the same way. (I've
@@ -93,3 +93,5 @@ linking to this post from the index page."
 
 I wanted it to be easy to create a new entry on the index page. I call
 on Emacs Lisp to help.
+
+#  LocalWords:  TAGs RSS PERMALINK APIs sb SRC PUBDATE goto

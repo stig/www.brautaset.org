@@ -41,7 +41,7 @@ Unix geeks are lazy typists, hence "move" was shortened to "mv") the
 file named =$f= (in shell programming we put a =$= in front of the
 variable name when it can be confused with a literal string) to the
 result of the following expression: =${f%.doc}.txt=. Of that =${f%.doc}=
-is the parameter expansion part. From the zsh man page:
+is the parameter expansion part. From the Zsh man page:
 
 #+BEGIN_QUOTE
   #+BEGIN_SRC sh
