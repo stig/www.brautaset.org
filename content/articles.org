@@ -89,7 +89,7 @@ These are all my articles in reverse chronological order.
 * [[file:posts/benchmarking.org][A Lesson in Benchmarking]]                                      :Development:
 * [[file:posts/nuisance-calls.org][Nuisance Calls]]                                                    :Soapbox:
 * [[file:posts/tinkerbell.org][Tinker Bell (2008)]]                                                :Reviews:
-* [[file:posts/resolutions.org][2015 Resolutions]]
+* [[file:posts/2015-resolutions.org][2015 Resolutions]]
 * [[file:posts/passwordless-registration-and-login.org][Passwordless registration and login]]                               :Soapbox:
 * [[file:posts/good-ideas.org][Good Ideas]]                                                        :Soapbox:
 * [[file:posts/optimising-http-cache-hit-rate.org][Optimising HTTP Cache Hit Rate]]                                :Development:
