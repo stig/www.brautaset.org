@@ -32,7 +32,7 @@ I like this one because it was such a great learning experience!
 
 * Publications Elsewhere
 
-This is a list of some of my talks & articles hosted elsewhere:
+This is a list of some of my talks & blog posts elsewhere:
 
 ** [[http://web.archive.org/web/20160423082550/http://techblog.net-a-porter.com/author/stig/][My NET-A-PORTER TECHNICAL BLOG entries (2013--2014)]]
 

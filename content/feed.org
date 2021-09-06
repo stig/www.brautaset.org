@@ -1,5 +1,5 @@
 #+title: Stig's Soapbox RSS Feed
-#+description: My most recent articles
+#+description: My most recent posts
 
 * Shell Quickstart                                           :Shell:Tutorial:
 :PROPERTIES:

@@ -116,15 +116,6 @@
 	 :publishing-directory "~/blog/_site/posts"
 	 :publishing-function org-html-publish-to-html)
 
-	("articles"
-	 ,@common-properties
-	 :base-directory "~/blog/content/articles"
-         :nav-at "../../"
-	 :html-head-extra ,(sb/html-head-extra "../../")
-	 :publishing-directory "~/blog/_site/articles"
-	 :publishing-function org-html-publish-to-html
-	 :recursive t)
-
 	("rss"
 	 ,@common-properties
 	 :base-directory "~/blog/content"

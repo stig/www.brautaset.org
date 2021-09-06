@@ -46,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {color: var(--accent)}
 
 These are blocks that show up a bit differently. I use them for
 jumping out of the text a bit, for example to mark a post as outdated,
-cf [[file:content/articles/2016/leafnode-nntp-os-x.org][my leafnode post]].
+cf [[file:content/posts/leafnode-nntp-os-x.org
+][my leafnode post]].
 
 #+begin_src css
 .drawer {
