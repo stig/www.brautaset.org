@@ -1,0 +1,78 @@
+#+title: The Scout Mindset
+#+subtitle: Reviewing the book by Julia Galef
+#+date: <2021-10-07 Thu>
+#+category: Reviews
+
+[[https://www.goodreads.com/book/show/54181287-the-scout-mindset][The Scout Mindset]] describes the motivation to see things as they are,
+rather than as you wish they were. Nobody embodies the Scout more than
+[[https://discworld.fandom.com/wiki/Tiffany_Aching][Tiffany Aching]], observed by [[https://discworld.fandom.com/wiki/Miss_Perspicacia_Tick][Miss Tick]] to have both /first sight/---the
+ability to see what's /really there/[fn:1]---and /second thoughts/:
+the thoughts you think about the way you think. Contrast this with the
+mindset of the /Soldier/, who---Galef argues---employs [[https://en.wikipedia.org/wiki/Motivated_reasoning][motivated
+reasoning]] to aggressively defend their existing beliefs and ignore
+contradicting evidence.
+
+An illustrative example in the book is the London Homeopathic Hospital
+reporting a Cholera mortality rate of 18 percent---less than half of
+mainstream hospitals---during the 1850s [[https://en.wikipedia.org/wiki/1846%E2%80%931860_cholera_pandemic][Cholera pandemic]]. The council
+didn't believe in homeopathy and /soldiering on/ excluded this result
+from their survey data; yet the homeopaths' success was real---it just
+had nothing to do with homeopathy. If the council had instead
+investigated and understood /how/ the homeopaths' got their result,
+they would have saved many lives.
+
+Dealing with uncertainty is an important tool in the Scout's toolbox,
+and Star Trek's Spock got a harsh---but fair---treatment in the
+book---as Julia shows his predictions are anti-correlated with
+reality[fn:2]. To drive the point home she includes an exercise to
+test your own confidence calibration; it involves answering 40
+questions and note your confidence level, checking the answers and
+calculate your success rate. I'm overly cautious[fn:3]---but better
+calibrated than Spock! When my confidence was:
+
+- 55%, I was correct 91% of the time;
+- 75%, I was correct 95% of the time;
+- 95%, I was correct 100% of the time.
+
+Finding your confidence level is a skill you can learn, and I really
+liked Julia's "ball bet" trick in this regard: imagine a box of four
+balls, one of which is grey. If you think your chances of blindly
+pulling the grey ball out of the box without looking is better than a
+business bet you're about to make, your confidence in that business
+bet is less than 25%.
+
+My chief complaint of the book is that /Scout/ vs /Soldier/ is a
+clumsy metaphor, since Scouts are also Soldiers; at least in a
+military context, which the example at the start of the book implies.
+
+Julia weaves characters' stories throughout the book, and use them to
+display different aspects of the scout---an effective way to hold the
+reader's attention. Examples include a journalist that corrected their
+own popular tweet, and an author who ended up denouncing /their own/
+best-selling book---after realising it did more harm than good.
+
+There's a whole bunch more I loved about the book, for example the
+discussions of identity, and leaning in to confusion; but any summary
+I'd make would either be a pale imitation, or a copyright violation,
+so I can only recommend you read the book.
+
+My rating: 5/5.
+
+* Abstract                                                         :noexport:
+
+I review the book by Julia Galef---about the motivation to see things
+as they /are/, not as you /wish they were/.
+
+* Footnotes
+
+[fn:1] And hit [[https://discworld.fandom.com/wiki/Jenny_Greenteeth][it]] with a frying pan.
+
+[fn:2] When Spock thinks something is /impossible/, it happens 83% of
+the time. And when he thinks it's /more than 99.5% likely/, it happens
+only 17% of the time.
+
+[fn:3] I had 10 correct and 1 wrong answers at 55% confidence, 18
+correct and 1 wrong at 75% confidence, and 10 correct at 95%
+confidence.
+
+#  LocalWords:  Galef

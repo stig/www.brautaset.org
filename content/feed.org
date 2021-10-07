@@ -1,6 +1,19 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* The Scout Mindset                                                 :Reviews:
+:PROPERTIES:
+:RSS_PERMALINK: content/posts/the-scout-mindset.html
+:ID:       4823CC4D-89F7-4AA6-B63D-5DE9B594AE4C
+:PUBDATE:  <2021-10-07 Thu 21:08>
+:END:
+#+include: posts/the-scout-mindset.org::abstract :only-contents t
+* Polite notice                                                        :Meta:
+:PROPERTIES:
+:ID:       920A40CD-AF0A-4115-AF6C-D28181800B81
+:PUBDATE:  <2021-10-07 Thu>
+:END:
+From now on there will be only abstracts in the RSS feed. Sorry.
 * Shell Quickstart                                           :Shell:Tutorial:
 :PROPERTIES:
 :RSS_PERMALINK: posts/shell-quickstart.html
@@ -74,12 +87,3 @@
 :END:
 
 #+include: posts/learning-guitar-update.org :lines "3-"
-
-* Bose QuietComfort 35 Review                                       :Reviews:
-:PROPERTIES:
-:RSS_PERMALINK: posts/bose-quietcomfort-35-review.html
-:ID:       7FDDCAF2-AE1B-4A8F-88AE-63C048BAD3CB
-:PUBDATE:  <2019-03-21 Thu 14:39>
-:END:
-
-#+include: posts/bose-quietcomfort-35-review.org :lines "3-"
