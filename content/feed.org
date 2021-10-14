@@ -20,21 +20,21 @@ From now on there will be only abstracts in the RSS feed. Sorry.
 :ID:       65271BDA-D659-4F6B-9985-E4B4CCBD78F3
 :PUBDATE:  <2020-12-14 Mon 23:26>
 :END:
-#+include: posts/shell-quickstart.org
+#+include: posts/shell-quickstart.org :lines "3-"
 * How I record Guitar
 :PROPERTIES:
 :RSS_PERMALINK: posts/how-I-record-guitar.html
 :ID:       B3BE0FBE-B00C-46DB-9383-AAFCC9F0B658
 :PUBDATE:  <2020-12-11 Fri 23:53>
 :END:
-#+include: posts/how-I-record-guitar.org
+#+include: posts/how-I-record-guitar.org :lines "3-"
 * On broken horses & master branches
 :PROPERTIES:
 :RSS_PERMALINK: posts/broken-horses-and-master-branches.html
 :ID:       0E0EF8AA-ACC6-4FE7-981A-970C353FF9E9
 :PUBDATE:  <2020-10-13 Tue 19:28>
 :END:
-#+include: posts/broken-horses-and-master-branches.org
+#+include: posts/broken-horses-and-master-branches.org :lines "3-"
 * Musical Goals
 :PROPERTIES:
 :RSS_PERMALINK: posts/musical-goals.html
