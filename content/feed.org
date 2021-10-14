@@ -78,12 +78,3 @@ From now on there will be only abstracts in the RSS feed. Sorry.
 :END:
 
 #+include: posts/digital-minimalism.org :lines "3-"
-
-* Learning Guitar Update                                              :Music:
-:PROPERTIES:
-:RSS_PERMALINK: posts/learning-guitar-update.html
-:ID:       BEF14C4A-CD89-4EAF-A805-042652786EEC
-:PUBDATE:  <2019-05-10 Fri 08:53>
-:END:
-
-#+include: posts/learning-guitar-update.org :lines "3-"
