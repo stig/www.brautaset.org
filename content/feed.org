@@ -10,10 +10,15 @@
 #+include: posts/the-scout-mindset.org::abstract :only-contents t
 * Polite notice                                                        :Meta:
 :PROPERTIES:
+:RSS_PERMALINK: posts.html
 :ID:       920A40CD-AF0A-4115-AF6C-D28181800B81
 :PUBDATE:  <2021-10-07 Thu>
 :END:
 From now on there will be only abstracts in the RSS feed. Sorry.
+
+Update: I've tried to assign a permalink, despite the RSS-only
+announcement, in the hope this post won't show up as a new item every
+time I update the site.
 * Shell Quickstart                                           :Shell:Tutorial:
 :PROPERTIES:
 :RSS_PERMALINK: posts/shell-quickstart.html
