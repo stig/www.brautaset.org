@@ -3,6 +3,8 @@
 
 All my posts, in reverse chronological order.
 
+* [[file:posts/personal-retrospectives.org][Personal Retrospectives]]                                           :Reviews:
+#+include: posts/personal-retrospectives.org::abstract :only-contents t
 * [[file:posts/the-scout-mindset.org][The Scout Mindset]]                                                 :Reviews:
 #+include: posts/the-scout-mindset.org::abstract :only-contents t
 * [[file:posts/shell-quickstart.org][Shell Quickstart]]                                           :Tutorial:Shell:

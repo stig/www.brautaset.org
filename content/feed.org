@@ -1,9 +1,16 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* Personal Retrospectives                                           :Reviews:
+:PROPERTIES:
+:RSS_PERMALINK: posts/personal-retrospectives.html
+:ID:       1CFBDDD5-FF4A-4047-8ADA-F3055DC50F00
+:PUBDATE:  <2021-11-01 Mon 23:04>
+:END:
+#+include: posts/personal-retrospectives.org::abstract :only-contents t
 * The Scout Mindset                                                 :Reviews:
 :PROPERTIES:
-:RSS_PERMALINK: content/posts/the-scout-mindset.html
+:RSS_PERMALINK: posts/the-scout-mindset.html
 :ID:       4823CC4D-89F7-4AA6-B63D-5DE9B594AE4C
 :PUBDATE:  <2021-10-07 Thu 21:08>
 :END:
@@ -74,12 +81,3 @@ time I update the site.
 :END:
 
 #+include: posts/speed-up-circleci.org :lines "3-"
-
-* Digital Minimalism                                      :Lifestyle:Reviews:
-:PROPERTIES:
-:RSS_PERMALINK: posts/digital-minimalism.html
-:ID:       7F0B6E1D-AB1B-4F99-8F2C-80B480FAD77D
-:PUBDATE:  <2019-06-15 Sat 14:07>
-:END:
-
-#+include: posts/digital-minimalism.org :lines "3-"

@@ -34,6 +34,10 @@ I like this one because it was such a great learning experience!
 
 This is a list of some of my talks & blog posts elsewhere:
 
+** [[https://web.archive.org/web/20211031135027/https://circleci.com/blog/a-guide-to-personal-retrospectives-in-engineering/][A Guide To Personal Retrospectives in Engineering]]
+
+A blog post co-written with Cian. I wrote [[file:posts/personal-retrospectives.org][a brief post introducing it]].
+
 ** [[http://web.archive.org/web/20160423082550/http://techblog.net-a-porter.com/author/stig/][My NET-A-PORTER TECHNICAL BLOG entries (2013--2014)]]
 
 These are my contributions to the NET-A-PORTER TECHNICAL BLOG.

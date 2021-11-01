@@ -1,0 +1,26 @@
+#+title: Personal Retrospectives
+#+date: <2021-11-01 Mon>
+#+category: Reviews
+
+I did a /personal retrospective/ for a work project recently, on my
+colleague [[https://emauton.org/about/][Cian]]'s advice, and shared it internally at work. The
+experience---and resulting feedback---was positive enough that I
+wanted to write about it publicly. This culminated in us[fn:1]
+co-writing a [[https://circleci.com/blog/a-guide-to-personal-retrospectives-in-engineering/][Guide To Personal Retrospectives]] on our company blog.
+
+Cian prepared a "roughwork" document with details of /Who are we
+writing for?/ and /What do we want to communicate?/ For me these have
+always been implicit, but I liked making them explicit: doubly so
+because we were collaborating. It's a trick I plan to steal, and do
+again in future writing.
+
+A++; would do again.
+
+* Abstract                                                         :noexport:
+
+Introducing /a Guide to Personal Retrospectives/---a post on our
+company blog I co-wrote with my colleague Cian.
+
+* Footnotes
+[fn:1] Me being the "young priest" to Cian's "old priest" in this
+particular venture. Bring your own pea soup!
