@@ -1,0 +1,50 @@
+#+title: Can I Crack the Code?
+#+date: <2022-02-10 Thu>
+#+category: Music
+#+category: Guitar
+
+I’ve noodled around on guitars for close to thirty years, but only
+ever for my own pleasure. About five years ago I started practicing
+more deliberately, almost every day for 30-60 minutes, and even took
+lessons for a while. I've also tried some online courses.
+
+For the last 14 months I’ve been going through Paul Gilbert’s Rock
+Guitar ArtistWorks course, working through his fundamentals. These are
+great and I’ve improved a lot, but the thing I’m struggling with there
+is the same that I’ve always struggled with: playing at the
+required/intended speed.
+
+As a concrete example, I’ve spent months increasing my speed on the
+opening riff to AC/DC’s Thunderstruck from 80 bpm to about 100 bpm
+(maybe up to 110 on a good day, but only for a few bars). The original
+recording is 134 bpm---laughably out of reach for me. Or so I thought!
+
+Then this weekend I came across Troy Grady's [[https://www.youtube.com/watch?v=1xho69iDSnQ][Help, I Can’T Play Fast]]
+video on YouTube and it was so on the nose I'm developing two black
+eyes. Everything he's talking about applies to me. (Except maybe the
+"experienced player" part!) "Start slow and increase the speed" is the
+advice I have always followed---but it’s just not working for me. And
+after watching this video, I finally understand why.
+
+I signed up for Troy's [[https://troygrady.com][Cracking The Code]] programme, and started going
+through his Pickslanting Primer. In it he demonstrates four different
+tests to determine your potential picking speed, and when I discovered
+I could pick at more than 200 bpm on three of them I nearly wept.
+
+Troy explains in the course that when practicing slowly, /any/
+technique goes. Thus it's easy to end up with an inefficient technique
+which is impossible to make fast. This appears to be exactly what I've
+done. The fix is to instead start fast---and sloppy!---and then clean
+it up. Going fast forces you to use a more efficient technique.
+
+Two weeks week later I can comfortably pick 16th notes on a single
+string at 134 bpm for minutes at a time. An amazing feeling! While I
+have not managed to get my left/right hand coordination under control
+yet, I have renewed hope of being able to play Thunderstruck at full
+speed---and I'm super excited about it!
+
+* Abstract                                                         :noexport:
+
+I've played guitar for 25 years, but I'm unable to play fast. Can Troy
+Grady's /Cracking The Code/ change that?
+

@@ -3,6 +3,8 @@
 
 All my posts, in reverse chronological order.
 
+* [[file:posts/can-i-crack-the-code.org][Can I Crack the Code?]]                                        :Music:Guitar:
+#+include: posts/can-i-crack-the-code.org::abstract :only-contents t
 * [[file:posts/personal-retrospectives.org][Personal Retrospectives]]                                           :Reviews:
 #+include: posts/personal-retrospectives.org::abstract :only-contents t
 * [[file:posts/the-scout-mindset.org][The Scout Mindset]]                                                 :Reviews:

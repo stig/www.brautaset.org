@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* Can I Crack the Code?                                        :Guitar:Music:
+:PROPERTIES:
+:RSS_PERMALINK: posts/can-i-crack-the-code.html
+:ID:       CDE289B1-5247-4E87-9024-92252325C269
+:PUBDATE:  <2022-02-10 Thu 20:18>
+:END:
+#+include: posts/can-i-crack-the-code.org::abstract :only-contents t
 * Personal Retrospectives                                           :Reviews:
 :PROPERTIES:
 :RSS_PERMALINK: posts/personal-retrospectives.html
