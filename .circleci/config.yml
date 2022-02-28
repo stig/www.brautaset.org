@@ -19,8 +19,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v7-org-{{ .Branch }}
-            - v7-org-trunk
+            - v9-org-{{ .Branch }}
+            - v9-org-trunk
+      - run:
+          name: Install deps
+          command: |
+            emacs --batch --quick --script deps.el
       - run:
           name: Tangle CSS
           command: >
@@ -35,9 +39,9 @@ jobs:
           path: ~/blog/_site
           destination: html
       - save_cache:
-          key: v7-org-{{ .Branch }}-{{ .Revision }}
+          key: v9-org-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ~/blog/elpa
+            - ~/blog/straight
       - persist_to_workspace:
           root: ~/blog
           paths:
