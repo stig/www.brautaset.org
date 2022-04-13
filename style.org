@@ -29,17 +29,45 @@ html {font-family: Optima, -apple-system, sans-serif}
 
 h1, h2, h3, h4, h5, h6 {color: var(--accent)}
 
-#preamble,
-#postamble {
-    font-size: smaller;
+header, footer {
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--alt-accent);
     border-radius: 1px;
 }
 
-#preamble {border-bottom: 3px solid var(--accent)}
+header {border-bottom: 3px solid var(--accent)}
 
-#postamble {border-top: 3px solid var(--accent)}
-.copyright {float: right}
+.header-title {flex: 80%}
+.header-nav {flex: 20%}
+.header-title > a:link, a:visited {text-decoration: none}
+.header-title h1 {margin-left: 1ch}
+
+footer {border-top: 3px solid var(--accent)}
+
+.footer-date {flex: 30%}
+.footer-copyright {}
+
+@media (max-width: 600px) {
+    nav > ul {
+	list-style: none;
+	display: flex;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+    }
+
+    nav > ul > li + li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: var(--accent);
+    }
+
+    .header-title,
+    .header-nav,
+    .footer-date,
+    .footer-copyright {flex: 100%}
+}
 #+end_src
 
 * Drawers
@@ -58,24 +86,6 @@ cf [[file:content/posts/leafnode-nntp-os-x.org
 }
 .drawer h6 {margin: 0}
 #+end_src
-* Horizontal lists
-
-#+begin_src css
-.hlist {
-    list-style: none;
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.hlist li + li:before {
-    content: "•";
-    padding: 0 0.5em;
-    color: var(--accent);
-}
-#+end_src
-
 * Links
 
 #+begin_src css

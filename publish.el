@@ -24,10 +24,10 @@
 (setq org-html-htmlize-output-type "css")
 
 ;; Pages get this
-(setq org-html-postamble (format-time-string (slurp "templates/postamble.html")))
+(setq org-html-postamble (format-time-string (slurp "templates/footer.html")))
 
 ;; Posts get this format
-(setq org-html-postamble-format `(("en" ,(slurp "templates/post_postamble.html"))))
+(setq org-html-postamble-format `(("en" ,(slurp "templates/post_footer.html"))))
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
@@ -38,11 +38,11 @@
 		(capitalize name)
 		content)))
 
-(setq nav-template (slurp "templates/nav.html"))
+(setq header-template (slurp "templates/header.html"))
 (setq org-html-preamble
       (lambda (props)
 	(let ((path (plist-get props :nav-at)))
-	  (format nav-template path path path path))))
+	  (format header-template path path path path))))
 
 (setq org-html-head
       (concat (slurp "templates/head.html")
