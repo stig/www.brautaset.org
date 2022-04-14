@@ -25,7 +25,10 @@ feature heavily. Hope I'm not overdoing it!
 Fonts, navigation, and colourful header and footer.
 
 #+begin_src css
-html {font-family: Optima, -apple-system, sans-serif}
+html {
+    font-family: Optima, -apple-system, sans-serif;
+    font-size: x-large;
+}
 
 h1, h2, h3, h4, h5, h6 {color: var(--accent)}
 
@@ -130,7 +133,7 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
     background-clip: padding-box;
     font-family: monospace;
     padding: 0;
-    font-size: 80%;
+    font-size: smaller;
     font-weight: normal;
     background-color: var(--background);
 }
@@ -242,8 +245,6 @@ which we also activate here.
 
 #+begin_src css
 @media (min-width: 600px) {
-    html {font-size: x-large}
-
     body {
         max-width: 65ch;
         margin: auto;
