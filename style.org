@@ -29,15 +29,22 @@ html {font-family: Optima, -apple-system, sans-serif}
 
 h1, h2, h3, h4, h5, h6 {color: var(--accent)}
 
-header, footer {
-    display: flex;
-    flex-wrap: wrap;
+#preamble, #content, #postamble {
+    padding: 0.5ch;
+}
+
+#preamble, #postamble {
     background-color: var(--alt-accent);
     border-radius: 1px;
 }
 
-header {border-bottom: 3px solid var(--accent)}
-footer {border-top: 3px solid var(--accent)}
+#preamble {border-bottom: 3px solid var(--accent)}
+#postamble {border-top: 3px solid var(--accent)}
+
+header, footer {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .header-title > a:link, a:visited {text-decoration: none}
 
