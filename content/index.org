@@ -1,9 +1,5 @@
-#+title: Stig's Soapbox
+#+title: Welcome to my Soapbox
 #+options: H:1
-
-This is a personal blog. Opinions expressed here do not reflect those
-of my employer.
-
 
 * Recent posts
 
