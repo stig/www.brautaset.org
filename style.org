@@ -15,7 +15,6 @@ feature heavily. Hope I'm not overdoing it!
     --alt-accent: blanchedalmond;
     --background: white;
     --footnotes: gray;
-    --highlight: gold;
     --text: black;
 }
 #+end_src
@@ -105,8 +104,8 @@ a:visited {
     background-color: transparent;
 }
 a:hover {
-    color: var(--text);
-    background-color: var(--highlight);
+    color: var(--alt-accent);
+    background-color: var(--accent);
 }
 #+end_src
 
@@ -212,7 +211,7 @@ When asking Org to number source code examples it uses these classes.
 
 #+begin_src css
 .linenr {font-size: smaller}
-.code-highlighted {background-color: var(--highlight)}
+.code-highlighted {background-color: var(--accent)}
 #+end_src
 
 Let's also outline our code blocks with our favourite colour:
