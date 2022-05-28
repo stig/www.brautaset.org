@@ -99,7 +99,7 @@ cf [[file:content/posts/leafnode-nntp-os-x.org
 
 #+begin_src css
 a:link {color: var(--accent)}
-a:active {color: var(--alt-accent)}
+a:active {font-weight: bold}
 a:visited {
     color: var(--text);
     background-color: transparent;
