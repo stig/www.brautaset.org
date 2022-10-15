@@ -1,4 +1,4 @@
-(setq user-emacs-directory "~/blog/straight")
+(setq user-emacs-directory "~/blog")
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
