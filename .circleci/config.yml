@@ -25,6 +25,10 @@ jobs:
           name: Install deps
           command: |
             emacs --batch --quick --script deps.el
+      - save_cache:
+          key: v9-org-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ~/blog/straight
       - run:
           name: Tangle CSS
           command: >
@@ -38,10 +42,6 @@ jobs:
       - store_artifacts:
           path: ~/blog/_site
           destination: html
-      - save_cache:
-          key: v9-org-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ~/blog/straight
       - persist_to_workspace:
           root: ~/blog
           paths:
