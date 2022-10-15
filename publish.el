@@ -8,7 +8,6 @@
  '((ditaa . t)))
 
 (require 'ox-publish)
-(require 'ox-rss)
 
 ;; Utility function used to pull in templates
 (defun slurp (path)
@@ -103,7 +102,7 @@
 	 :html-link-use-abs-url t
 	 :include ("feed.org")
 	 :publishing-directory "~/blog/_site"
-	 :publishing-function (org-rss-publish-to-rss)
+	 :publishing-function org-rss-publish-to-rss
 	 :rss-image-url "https://www.brautaset.org/icon.png"
 	 :rss-extension "xml")))
 
