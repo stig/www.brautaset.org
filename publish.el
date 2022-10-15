@@ -8,6 +8,7 @@
  '((ditaa . t)))
 
 (require 'ox-publish)
+(require 'ox-rss)
 
 ;; Utility function used to pull in templates
 (defun slurp (path)

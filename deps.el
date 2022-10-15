@@ -15,6 +15,9 @@
 
 
 (straight-use-package 'org)
+(straight-use-package '(ox-rss :type git
+			       :host gitlab
+			       :repo "nsavage/ox-rss"))
 (straight-use-package 'org-contrib)
 (straight-use-package 'htmlize)
 (straight-use-package 'clojure-mode)
