@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Publish Blog
           command: |
-            emacs --batch --quick --load publish.el --eval '(org-publish-all t)'
+            emacs --batch --quick --load deps.el --load publish.el --eval '(org-publish-all t)'
       - store_artifacts:
           path: ~/blog/_site
           destination: html

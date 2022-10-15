@@ -1,5 +1,3 @@
-(load-file "deps.el")
-
 ;; Turn off backup-files for my blog-publishing
 (setq make-backup-files nil)
 
