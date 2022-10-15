@@ -1,4 +1,5 @@
-#+title: Welcome to my Soapbox
+#+title: Stig's Soapbox
+#+subtitle: A personal blog. Opinions are my own.
 #+options: H:1
 
 * Recent posts

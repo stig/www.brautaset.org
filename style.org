@@ -29,7 +29,9 @@ html {
     font-size: x-large;
 }
 
-h1, h2, h3, h4, h5, h6 {color: var(--accent)}
+h1, h2, h3, h4, h5, h6, .subtitle {color: var(--accent)}
+
+.subtitle {margin-bottom: .1em;}
 
 #preamble, #content, #postamble {
     padding: 0.5ch;
@@ -51,31 +53,31 @@ header, footer {
 
 .header-title > a:link, a:visited {text-decoration: none}
 
-.header-title {flex: 80%}
-.header-nav {flex: 20%}
-.footer-date {flex: 30%}
-.footer-copyright {}
+.header-title,
+.header-nav,
+.footer-copyright,
+.footer-nav {flex: 100%}
 
-@media (max-width: 600px) {
-    .header-title,
-    .header-nav,
-    .footer-date,
-    .footer-copyright {flex: 100%}
-
-    nav > ul {
-	list-style: none;
-	display: flex;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-    }
-
-    nav > ul > li + li:before {
-	content: "•";
-	padding: 0 0.5em;
-	color: var(--accent);
-    }
+.posted-date {
+    font-size: smaller;
+    text-align: center;
 }
+
+.header-nav > nav > ul {justify-content: center}
+.footer-nav > nav > ul {justify-content: end}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav > ul > li + li:before {
+    content: "•";
+    padding: 0 0.5em;
+    color: var(--accent);
+}
+
 #+end_src
 
 * Drawers
@@ -256,5 +258,8 @@ which we also activate here.
 
     .row {display: flex}
     .column {flex: 50%}
+
+    .footer-copyright {flex: 50%}
+    .footer-nav {flex: 50%}
 }
 #+end_src

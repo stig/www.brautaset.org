@@ -23,10 +23,12 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-;; Pages get this
+;; Pages get these pre/postambles
+(setq org-html-preamble (slurp "templates/header.html"))
 (setq org-html-postamble (format-time-string (slurp "templates/footer.html")))
 
-;; Posts get this format
+;; Posts get these pre/postambles
+(setq org-html-preamble-format `(("en" ,(slurp "templates/post_header.html"))))
 (setq org-html-postamble-format `(("en" ,(slurp "templates/post_footer.html"))))
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
@@ -37,12 +39,6 @@
 		(downcase name)
 		(capitalize name)
 		content)))
-
-(setq header-template (slurp "templates/header.html"))
-(setq org-html-preamble
-      (lambda (props)
-	(let ((path (plist-get props :nav-at)))
-	  (format header-template path path path path))))
 
 (setq org-html-head
       (concat (slurp "templates/head.html")
@@ -62,6 +58,7 @@
 	:time-stamp-file nil
 	:with-drawers t
 	:with-toc nil
+	:with-title nil
 
 	:html-doctype "html5"
 	:html-head-include-default-style nil
@@ -93,6 +90,7 @@
 	 :base-directory "~/blog/content/posts"
          :nav-at "../"
 	 :html-head-extra ,(sb/html-head-extra "../")
+         :html-preamble t
 	 :html-postamble t
 	 :publishing-directory "~/blog/_site/posts"
 	 :publishing-function org-html-publish-to-html)
