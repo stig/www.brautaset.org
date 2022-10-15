@@ -1,6 +1,4 @@
-#+title: About
-
-* About this blog
+#+title: About this blog
 
 I write about learning music, book reviews, my lifestyle choices,
 rants, wishful thinking, and some tech content.
