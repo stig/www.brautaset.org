@@ -29,12 +29,12 @@ html {
     font-size: x-large;
 }
 
+body {margin: 0}
+
 h1, h2, h3, h4, h5, h6, .subtitle {color: var(--accent)}
 
-.subtitle {margin-bottom: .1em;}
-
 #preamble, #content, #postamble {
-    padding: 0.5ch;
+    padding: 1mm;
 }
 
 #preamble, #postamble {
