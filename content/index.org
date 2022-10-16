@@ -1,6 +1,7 @@
 #+title: Stig's Soapbox
-#+subtitle: A personal blog. Opinions are my own.
 #+options: H:1
+
+This is a personal blog. Opinions here are my own, not my employer's.
 
 * Recent posts
 
