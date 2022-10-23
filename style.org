@@ -30,8 +30,6 @@ I'll pick from this and remove most of what I don't use.
 p.verse { margin-left: 3% }
 
 dt { font-weight: bold; }
-.figure { padding: 1em; }
-.figure p { text-align: center; }
 .equation-container {
     display: table;
     text-align: center;
@@ -176,6 +174,13 @@ font colour to make them stand out less.
     border-radius: 1px;
     width: 50%;
 }
+#+end_src
+
+* Figures
+
+#+begin_src css
+.figure { padding: 1em; }
+.figure p { text-align: center; }
 #+end_src
 
 * Images
