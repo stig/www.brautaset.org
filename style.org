@@ -16,14 +16,6 @@ This week I'm fond of green.
 }
 #+end_src
 
-* Org Default
-
-I'll pick from this and remove most of what I don't use.
-
-#+begin_src css
-p.verse { margin-left: 3% }
-#+end_src
-
 * Set the Scene
 
 Fonts, navigation, and colourful header and footer.
