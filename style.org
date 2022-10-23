@@ -230,7 +230,7 @@ which we also activate here.
 
 #+begin_src css
 @media (min-width: 600px) {
-    body {
+    #content {
         max-width: 65ch;
         margin: auto;
     }
