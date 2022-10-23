@@ -193,22 +193,6 @@ When asking Org to number source code examples it uses these classes.
 .code-highlighted {background-color: var(--accent)}
 #+end_src
 
-Let's also outline our code blocks with our favourite colour:
-
-#+begin_src css
-pre {
-    border: 1px solid var(--accent);
-    box-shadow: 3px 3px 3px var(--alt-accent);
-}
-
-pre.src:before {
-    background-color: var(--alt-accent);
-    border: 1px solid var(--accent);
-}
-
-pre.src-json:before {content: 'JSON'}
-#+end_src
-
 * Cater for bigger screens
 
 I target small screens by default, but here I make allowances for
