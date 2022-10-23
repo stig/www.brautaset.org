@@ -133,13 +133,6 @@ if I ever did 'em.
 - [-] some sub-items checked unfinished [50%] and [1/2]
   1. [X] checked
   2. [ ] unchecked
-* TODO-keywords
-** PROJ This is a project
-*** TODO A TODO item
-*** DONE A closed TODO item
-CLOSED: [2020-10-26 Mon 15:00]
-*** WAITING I'm waiting for this
-
 * Code examples
 #+begin_src emacs-lisp
 (defun sb/test-style ()
