@@ -31,13 +31,6 @@
 
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
-(setq org-html-format-drawer-function
-      (lambda (name content)
-	(format "<div class=\"drawer %s\"><h6>%s</h6>%s</div>"
-		(downcase name)
-		(capitalize name)
-		content)))
-
 (setq org-html-head
       (concat (slurp "templates/head.html")
 	      org-html-style-default
@@ -54,8 +47,7 @@
 
 	:section-numbers nil
 	:time-stamp-file nil
-	:with-drawers t
-	:with-toc nil
+        :with-toc nil
 	:with-title nil
 
 	:html-doctype "html5"

@@ -80,22 +80,6 @@ nav > ul > li + li:before {
 
 #+end_src
 
-* Drawers
-
-These are blocks that show up a bit differently. I use them for
-jumping out of the text a bit, for example to mark a post as outdated,
-cf [[file:content/posts/leafnode-nntp-os-x.org
-][my leafnode post]].
-
-#+begin_src css
-.drawer {
-    border: 3px dashed var(--accent);
-    background-color: var(--alt-accent);
-    margin: 1em;
-    padding: 0.5em;
-}
-.drawer h6 {margin: 0}
-#+end_src
 * Links
 
 #+begin_src css

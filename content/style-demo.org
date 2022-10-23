@@ -38,13 +38,6 @@ nisl, tincidunt et, mattis eget, convallis nec, purus.
 ** Plain links
 This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
 
-** Links in a drawer
-These are the same links as above, but in a drawer.
-
-:DRAWER:
-This is a [[http://example.com][unvisited link to example.com]]. Compare with a [[https://www.brautaset.org][visited link to brautaset.org]].
-:END:
-
 * Inline text styles
 This is /italics/, and *strong* text, as well as _underlined_, and
 +stricken through+. We also have inline =monospace= and ~code~ fonts.
@@ -160,39 +153,6 @@ quam. Nullam tempus. Nunc aliquet, augue[fn:1] nec adipiscing interdum,
 lacus tellus malesuada massa, quis varius mi purus non odio[fn:2].
 
 
-* Drawers
-
-** This heading has a PROPERTIES drawer
-:PROPERTIES:
-:DRILL_LAST_REVIEWED: [2020-10-23 Fri 22:01]
-:END:
-
-** This heading has a LOGBOOK drawer
-:LOGBOOK:
-- Note taken on [2020-10-26 Mon 15:02] \\
-  Another log entry.
-- Note taken on [2020-10-26 Mon 15:02] \\
-  This is a log entry.
-:END:
-
-** This has a custom drawer (called ASIDE)
-:ASIDE:
-This is an aside. I don't think I have specific styles for it.
-
-Nunc porta vulputate tellus.
-:END:
-
-** Properties, logbook, and custom drawer all in one
-:PROPERTIES:
-:CREATED:  20201026
-:END:
-:LOGBOOK:
-- Note taken on [2020-10-26 Mon 19:57] \\
-  I'm adding all sorts of drawers here.
-:END:
-:SAY_MY_NAME:
-This is a very custom drawer.
-:END:
 * Equations
 
 $£8 + 2 \times £8 \times (1 - 0.05) = £23.2$
