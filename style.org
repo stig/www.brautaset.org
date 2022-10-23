@@ -119,9 +119,9 @@ I think. [[https://gongzhitaao.org/orgcss/][Credit]].
 }
 #+end_src
 
-* Footnotes in HTML
+* Footnotes
 
-These get a diminutive orange ~<hr/>~ above, and have slightly lighter
+These get a diminutive ~<hr/>~ above, and have slightly lighter
 font colour to make them stand out less.
 
 #+begin_src css
@@ -152,9 +152,18 @@ img {max-width: 95%}
 * Checkboxes
 
 #+begin_src css
-.off > code { font-family: monospace; color: red; }
-.on > code { font-family: monospace; color: green; }
-.trans > code { font-family: monospace; color: orange; }
+.off > code {
+    font-family: monospace;
+    color: red;
+}
+.on > code {
+    font-family: monospace;
+    color: green;
+}
+.trans > code {
+    font-family: monospace;
+    color: orange;
+}
 #+end_src
 
 * Styling source code
@@ -227,7 +236,7 @@ which we also activate here.
     .row {display: flex}
     .column {flex: 50%}
 
-    .footer-copyright {flex: 50%}
+    .footer-copyright,
     .footer-nav {flex: 50%}
 }
 #+end_src
