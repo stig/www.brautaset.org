@@ -21,12 +21,6 @@ This week I'm fond of green.
 I'll pick from this and remove most of what I don't use.
 
 #+begin_src css
-.title  { text-align: center;
-          margin-bottom: .2em; }
-.subtitle { text-align: center;
-            font-size: medium;
-            font-weight: bold;
-            margin-top:0; }
 p.verse { margin-left: 3% }
 #+end_src
 
@@ -41,7 +35,10 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, .subtitle {color: var(--accent)}
+.title {margin-bottom: .2em}
+.title, .subtitle {text-align: center}
+
+h1, h2, h3, .subtitle {color: var(--accent)}
 
 #preamble, #content, #postamble {
     padding: 1mm;
