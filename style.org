@@ -36,13 +36,15 @@ h1, h2, h3, .subtitle {color: var(--accent)}
     padding: 1mm;
 }
 
-#preamble, #postamble {
+#preamble {
+    border-bottom: 3px solid var(--accent);
     background-color: var(--alt-accent);
-    border-radius: 1px;
 }
 
-#preamble {border-bottom: 3px solid var(--accent)}
-#postamble {border-top: 3px solid var(--accent)}
+#postamble {
+    border-top: 3px solid var(--accent);
+    background-color: var(--alt-accent);
+}
 
 header, footer {
     display: flex;
