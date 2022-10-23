@@ -28,40 +28,6 @@ I'll pick from this and remove most of what I don't use.
             font-weight: bold;
             margin-top:0; }
 p.verse { margin-left: 3% }
-pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-}
-pre.src {
-    position: relative;
-    overflow: auto;
-}
-pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-}
-pre.src:hover:before { display: inline; margin-top: 14px;}
-pre.src-C:before { content: 'C'; }
-pre.src-clojure:before { content: 'Clojure'; }
-pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-pre.src-org:before { content: 'Org mode'; }
-pre.src-sh:before { content: 'shell'; }
-pre.src-sql:before { content: 'SQL'; }
-pre.src-makefile:before { content: 'Makefile'; }
-pre.src-perl:before { content: 'Perl'; }
-pre.src-scala:before { content: 'Scala'; }
-pre.src-xml:before { content: 'XML'; }
-pre.src-conf:before { content: 'Configuration File'; }
 
 dt { font-weight: bold; }
 .footpara { display: inline; }
@@ -247,6 +213,41 @@ This allows us to get nice-looking output even when Emacs is
 publishing in ~--batch~ mode.
 
 #+begin_src css
+pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+}
+pre.src {
+    position: relative;
+    overflow: auto;
+}
+pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+}
+pre.src:hover:before { display: inline; margin-top: 14px;}
+pre.src-C:before { content: 'C'; }
+pre.src-clojure:before { content: 'Clojure'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-org:before { content: 'Org mode'; }
+pre.src-sh:before { content: 'shell'; }
+pre.src-sql:before { content: 'SQL'; }
+pre.src-makefile:before { content: 'Makefile'; }
+pre.src-perl:before { content: 'Perl'; }
+pre.src-scala:before { content: 'Scala'; }
+pre.src-xml:before { content: 'XML'; }
+pre.src-conf:before { content: 'Configuration File'; }
+
 .org-builtin {color: #483d8b}
 .org-clojure-keyword {color: #008b8b}
 .org-comment {color: #b22222}
