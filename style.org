@@ -4,15 +4,14 @@
 CSS styles for my blog. I tangle this file to =style.css=. I try to
 exercise all the styles in [[file:content/style-demo.org][style-demo]].
 
-* Define CSS variables for Colours
+* Colours
 
-Currently I like ~orange~ and ~blanchedalmond~, so those colours
-feature heavily. Hope I'm not overdoing it!
+This week I'm fond of green. 
 
 #+begin_src css
 :root {
-    --accent: darkorange;
-    --alt-accent: blanchedalmond;
+    --accent: #004400;
+    --alt-accent: #ccffcc;
     --background: white;
     --footnotes: gray;
     --text: black;
@@ -78,21 +77,6 @@ nav > ul > li + li:before {
     color: var(--accent);
 }
 
-#+end_src
-
-* Links
-
-#+begin_src css
-a:link {color: var(--accent)}
-a:active {font-weight: bold}
-a:visited {
-    color: var(--text);
-    background-color: transparent;
-}
-a:hover {
-    color: var(--alt-accent);
-    background-color: var(--accent);
-}
 #+end_src
 
 * Tables
