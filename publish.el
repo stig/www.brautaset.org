@@ -33,8 +33,7 @@
 
 (setq org-html-head
       (concat (slurp "templates/head.html")
-	      org-html-style-default
-	      "<style type=\"text/css\">\n"
+              "<style type=\"text/css\">\n"
 	      (slurp "style.css")
 	      "</style>\n"))
 
