@@ -23,12 +23,11 @@ This week I'm fond of green.
 Fonts, navigation, and colourful header and footer.
 
 #+begin_src css
-html {
-    font-family: Optima, -apple-system, sans-serif;
+body {
     font-size: x-large;
+    line-height: 1.5;
+    margin: 0;
 }
-
-body {margin: 0}
 
 h1, h2, h3, h4, h5, h6, .subtitle {color: var(--accent)}
 
