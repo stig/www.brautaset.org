@@ -28,20 +28,6 @@ I'll pick from this and remove most of what I don't use.
             font-weight: bold;
             margin-top:0; }
 p.verse { margin-left: 3% }
-
-.equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-}
-.equation {
-    vertical-align: middle;
-}
-.equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-}
 #+end_src
 
 * Set the Scene
@@ -269,6 +255,23 @@ When asking Org to number source code examples it uses these classes.
 .code-highlighted {background-color: var(--accent)}
 #+end_src
 
+* Equations
+
+#+begin_src css
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.equation {
+    vertical-align: middle;
+}
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+#+end_src
 * Cater for bigger screens
 
 I target small screens by default, but here I make allowances for
