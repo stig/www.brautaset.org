@@ -63,8 +63,10 @@ header, footer {
     text-align: center;
 }
 
-.header-nav > nav > ul {justify-content: center}
-.footer-nav > nav > ul {justify-content: end}
+.header-nav > nav > ul,
+.footer-nav > nav > ul {justify-content: center}
+
+.footer-copyright > p {text-align: center}
 
 nav > ul {
     list-style: none;
@@ -289,8 +291,5 @@ which we also activate here.
 
     .row {display: flex}
     .column {flex: 50%}
-
-    .footer-copyright,
-    .footer-nav {flex: 50%}
 }
 #+end_src
