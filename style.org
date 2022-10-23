@@ -30,8 +30,6 @@ I'll pick from this and remove most of what I don't use.
 p.verse { margin-left: 3% }
 
 dt { font-weight: bold; }
-.footpara { display: inline; }
-.footdef  { margin-bottom: 1em; }
 .figure { padding: 1em; }
 .figure p { text-align: center; }
 .equation-container {
