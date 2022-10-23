@@ -1,4 +1,12 @@
-#+title: About this blog
+#+title: About Stig Brautaset
+
+I am a Norwegian and British software engineer, husband, dad, and
+guitarist. I'm based in the north east of England. I spend my free
+time practicing guitar, playing with my family, reading sci-fi &
+fantasy books, hack my Emacs config, and occasionally update this
+site.
+
+* About this blog
 
 I write about learning music, book reviews, my lifestyle choices,
 rants, wishful thinking, and some tech content.
@@ -10,23 +18,6 @@ Amazon S3 behind a CloudFront distribution and a free SSL certificate.
 Code examples are by me, unless otherwise specified, and available
 under the [[https://creativecommons.org/licenses/by-sa/4.0/][Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)]]
 license.
-
-* About the author
-
-I (Stig Brautaset) am a Norwegian and British software engineer,
-husband, dad, and guitarist. I enjoy reading sci-fi & fantasy books,
-hack my Emacs config, and occasionally update this site. I'm based in
-the north east of England.
-
-** Contact
-:PROPERTIES:
-:CUSTOM_ID: contact
-:END:
-
-Email is the best way to contact me. I used to give my email address
-here, but in a (most likely futile) attempt to limit spam I've removed
-it. It's my first name at this domain: I'm sure you'll be able to
-figure it out.
 
 * About SBJson
 
