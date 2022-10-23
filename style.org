@@ -78,16 +78,6 @@ pre.src-scala:before { content: 'Scala'; }
 pre.src-xml:before { content: 'XML'; }
 pre.src-conf:before { content: 'Configuration File'; }
 
-table { border-collapse:collapse; }
-caption.t-above { caption-side: top; }
-caption.t-bottom { caption-side: bottom; }
-td, th { vertical-align:top;  }
-th.org-right  { text-align: center;  }
-th.org-left   { text-align: center;   }
-th.org-center { text-align: center; }
-td.org-right  { text-align: right;  }
-td.org-left   { text-align: left;   }
-td.org-center { text-align: center; }
 dt { font-weight: bold; }
 .footpara { display: inline; }
 .footdef  { margin-bottom: 1em; }
@@ -191,6 +181,17 @@ Most of this is straight out of Org's default CSS, but I like me some
 borders!
 
 #+begin_src css
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.org-right  { text-align: center;  }
+th.org-left   { text-align: center;   }
+th.org-center { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;   }
+td.org-center { text-align: center; }
+
 table, thead, tbody {border: 1px solid var(--accent)}
 thead {background-color: var(--alt-accent)}
 th, td {padding: 0em 0.5em}
