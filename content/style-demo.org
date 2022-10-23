@@ -102,10 +102,6 @@ if I ever did 'em.
 2. Item 2
    1. Sub-item
       1. Sub-sub item
-** Definition lists
-- Foo :: Fusce commodo.
-- Bar :: Nunc porta vulputate tellus.
-
 * Tables
 ** This table has no caption
 | Foo | Bar |  Quux |

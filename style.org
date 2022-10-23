@@ -29,7 +29,6 @@ I'll pick from this and remove most of what I don't use.
             margin-top:0; }
 p.verse { margin-left: 3% }
 
-dt { font-weight: bold; }
 .equation-container {
     display: table;
     text-align: center;
