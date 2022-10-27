@@ -21,14 +21,6 @@
 ;; Don't use inline CSS for source code
 (setq org-html-htmlize-output-type "css")
 
-;; Pages get these pre/postambles
-(setq org-html-preamble (slurp "templates/header.html"))
-(setq org-html-postamble (format-time-string (slurp "templates/footer.html")))
-
-;; Posts get these pre/postambles
-(setq org-html-preamble-format `(("en" ,(slurp "templates/post_header.html"))))
-(setq org-html-postamble-format `(("en" ,(slurp "templates/post_footer.html"))))
-
 (setq org-html-footnotes-section "<div id=\"footnotes\"><hr/><!--%s-->%s</div>")
 
 (setq org-html-head
@@ -67,6 +59,8 @@
 	 :base-directory "~/blog/content"
          :exclude "feed.org"
 	 :html-head-extra ,(sb/html-head-extra "")
+	 :html-preamble ,(slurp "templates/header.html")
+         :html-postamble ,(format-time-string (slurp "templates/footer.html"))
          :publishing-directory "~/blog/_site"
 	 :publishing-function org-html-publish-to-html)
 
@@ -74,8 +68,8 @@
 	 ,@common-properties
 	 :base-directory "~/blog/content/posts"
          :html-head-extra ,(sb/html-head-extra "../")
-         :html-preamble t
-	 :html-postamble t
+         :html-preamble ,(slurp "templates/post_header.html")
+	 :html-postamble ,(slurp "templates/post_footer.html")
 	 :publishing-directory "~/blog/_site/posts"
 	 :publishing-function org-html-publish-to-html)
 
