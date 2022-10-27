@@ -49,7 +49,7 @@
 	:html-doctype "html5"
 	:html-head-include-default-style nil
 	:html-head-include-scripts nil
-        :html-metadata-timestamp-format "%e %B %Y"))
+        :html-metadata-timestamp-format "%B %Y"))
 
 (setq org-publish-project-alist
       `(("www"
