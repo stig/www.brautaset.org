@@ -41,10 +41,7 @@
   (format "<link rel=\"icon\" type=\"image/png\" href=\"%sicon.png\" />\n" prefix))
 
 (setq common-properties
-      '(:author "Stig Brautaset"
-	:email "stig@brautaset.org"
-
-	:section-numbers nil
+      '(:section-numbers nil
 	:time-stamp-file nil
         :with-toc nil
 	:with-title nil
@@ -70,15 +67,13 @@
 	 :base-directory "~/blog/content"
          :exclude "feed.org"
 	 :html-head-extra ,(sb/html-head-extra "")
-	 :nav-at ""
-	 :publishing-directory "~/blog/_site"
+         :publishing-directory "~/blog/_site"
 	 :publishing-function org-html-publish-to-html)
 
         ("posts"
 	 ,@common-properties
 	 :base-directory "~/blog/content/posts"
-         :nav-at "../"
-	 :html-head-extra ,(sb/html-head-extra "../")
+         :html-head-extra ,(sb/html-head-extra "../")
          :html-preamble t
 	 :html-postamble t
 	 :publishing-directory "~/blog/_site/posts"
