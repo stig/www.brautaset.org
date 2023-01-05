@@ -6,7 +6,7 @@
 
 For a while I've been wanting to add RSS to this site. Not so much
 because I think the site really needs it, but because it intrigued me
-to figure out to do it using my existing [[../2017/blogging-with-org-mode.org][Emacs Org blogging solution]].
+to figure out to do it using my existing [[file:blogging-with-org-mode.org][Emacs Org blogging solution]].
 
 In short, I use ~ox-rss.el~ (from Org mode's contrib) to produce an
 RSS feed from the [[../../index.org][home]] page. I was delighted that tags on headlines
