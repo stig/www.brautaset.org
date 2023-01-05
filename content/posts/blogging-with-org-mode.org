@@ -185,7 +185,7 @@ The current version of this script can be seen in listing [[lst:build]].
 #+END_SRC
 
 Some of my recent posts had been written in Org mode already, but had
-been exported to HTML for publication as per [[../2016/how-i-blog-this-week.org][my previous post on
+been exported to HTML for publication as per [[file:how-i-blog-this-week.org][my previous post on
 blogging]]. Those were easy to convert, and required only minor edits.
 Once it was clear that the concept would work, I wrote a script that
 did a decent first pass of transforming the existing articles from

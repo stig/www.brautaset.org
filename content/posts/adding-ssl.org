@@ -6,7 +6,7 @@ encrypted]], and with [[https://www.chromium.org/Home/chromium-security/marking-
 time to do something about that.
 
 :NOTE:
-Since writing this post series I [[../2018/no-more-superloopy.org][changed the domain of this site]] from
+Since writing this post series I [[file:no-more-superloopy.org][changed the domain of this site]] from
 superloopy.io back to brautaset.org.
 :END:
 
