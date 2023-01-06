@@ -6,7 +6,7 @@ due to two things; the cost, and the /terminology/. Referring to a horse
 as /broken/[fn::Using the term /trained/ is thankfully becoming more
 common, including on [[https://en.wikipedia.org/wiki/Horse_training][Wikipedia]].] is still common, and it troubles me.
 
-My own field has its own [[https://tools.ietf.org/id/draft-knodel-terminology-00.html][problematic terminology]]. I've been
+My own field has its own [[https://datatracker.ietf.org/doc/id/draft-knodel-terminology.html][problematic terminology]]. I've been
 uncomfortable using =master= as the default branch in my Git
 repositories for a while. Yet, I've continued to use it in part due to
 inertia, and part analysis paralysis regarding what to use /instead/.
