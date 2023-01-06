@@ -9,7 +9,7 @@ because I think the site really needs it, but because it intrigued me
 to figure out to do it using my existing [[file:blogging-with-org-mode.org][Emacs Org blogging solution]].
 
 In short, I use ~ox-rss.el~ (from Org mode's contrib) to produce an
-RSS feed from the [[../../index.org][home]] page. I was delighted that tags on headlines
+RSS feed from the [[file:~/blog/content/index.org][home]] page. I was delighted that tags on headlines
 were automatically translated into RSS Categories, with no extra work
 from me. However, I had to jump some hoops to generate a valid and
 useful feed.
