@@ -27,7 +27,7 @@ and created a new front page that contains excerpts of the ten most
 recent posts. This was made possible by upgrading Jekyll (my blogging
 platform) to a new version that automatically grabs the first paragraph
 of each post to use for the excerpt. The old front page became the
-[[/about.html][About]] page instead. Better!
+[[file:../about.org][About]] page instead. Better!
 
 The font was already "big enough", I feel, but I shrank the line length
 slightly.
