@@ -11,12 +11,6 @@ executors:
         auth: &auth
           username: stigbra
           password: $DOCKERHUB_PASSWORD
-
-  emacs27:
-    working_directory: ~/blog
-    docker:
-      - image: silex/emacs:27.2-ci
-        auth: *auth
   python3:
     docker:
       - image: circleci/python:3.7
@@ -24,31 +18,17 @@ executors:
 
 jobs:
   build:
-    executor: emacs27
+    executor: nixos
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v9-org-{{ .Branch }}
-            - v9-org-trunk
-      - run:
-          name: Install deps
-          command: |
-            emacs --batch --quick --script deps.el
-      - save_cache:
-          key: v9-org-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ~/blog/straight
+      - run: nix-channel --update
+      - run: nix-channel --list
       - run:
           name: Tangle CSS
-          command: >
-            emacs --batch
-            --eval "(require 'ob-tangle)"
-            --eval '(org-babel-tangle-file "style.org")'
+          command: nix-shell --run tangle-css
       - run:
           name: Publish Blog
-          command: |
-            emacs --batch --quick --load deps.el --load publish.el --eval '(org-publish-all t)'
+          command: nix-shell --run publish-blog
       - store_artifacts:
           path: ~/blog/_site
           destination: html
