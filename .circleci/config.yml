@@ -21,6 +21,7 @@ jobs:
     executor: nixos
     steps:
       - checkout
+      - run: nix-channel --add https://github.com/stig/nixpkgs/archive/ox-rss.tar.gz ox-rss
       - run: nix-channel --update
       - run: nix-channel --list
       - run:

@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <ox-rss> {} }:
   pkgs.mkShell {
     buildInputs = with pkgs; [
       ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
