@@ -1,0 +1,24 @@
+#############################  Cache  ###############################
+
+# Enable link caching. This can be helpful to avoid checking the same links on
+# multiple runs.
+cache = true
+
+# Discard all cached requests older than this duration.
+max_cache_age = "7d"
+
+#############################  Exclusions  ##########################
+
+# Exclude URLs and mail addresses from checking (supports regex).
+exclude = [
+	'rdar://problem/.*',
+	'https://web\.archive\.org.*'
+]
+
+# Exclude all private IPs from checking.
+# Equivalent to setting `exclude_private`, `exclude_link_local`, and
+# `exclude_loopback` to true.
+exclude_all_private = false
+
+# Exclude all mail addresses from checking.
+exclude_mail = false

@@ -4,6 +4,10 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 
 executors:
+  nixos:
+     working_directory: ~/blog
+     docker:
+      - image: nixos/nix
   emacs27:
     working_directory: ~/blog
     docker:
@@ -47,6 +51,18 @@ jobs:
           paths:
             - '_site'
 
+  check-links:
+    executor: nixos
+    steps:
+      - attach_workspace:
+          at: ~/blog
+      - restore_cache:
+          key: v1-lychee
+      - run: nix-shell -p lychee --run "lychee -b _site _site"
+      - save_cache:
+          key: v1-lychee
+          paths: ".lycheecache"
+
   deploy:
     executor: python3
     steps:
@@ -73,6 +89,9 @@ workflows:
           filters:
             branches:
               ignore: trunk
+      - check-links:
+          requires:
+            - build
 
   deploy:
     jobs:
@@ -80,6 +99,9 @@ workflows:
           filters:
             branches:
               only: trunk
+      - check-links:
+          requires:
+            - build
       - deploy:
           requires:
             - build
