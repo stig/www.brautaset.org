@@ -3,7 +3,7 @@
 #+category: Reviews
 #+category: Development
 
-Reading [[http://www.amazon.co.uk/dp/1558607838][Blondie24]], where I got the title of this post from, got me
+Reading [[https://www.amazon.co.uk/dp/1558607838][Blondie24]], where I got the title of this post from, got me
 exited about [[http://en.wikipedia.org/wiki/Neural_network][neural nets]] and [[http://en.wikipedia.org/wiki/Genetic_algorithm][genetic algorithms]] again. I always did
 found them fascinating, but I didn't really have any practical use for
 them myself---until now.

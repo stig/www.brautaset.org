@@ -36,7 +36,7 @@ This is a list of some of my talks & blog posts elsewhere:
 
 A blog post co-written with Cian. I wrote [[file:posts/personal-retrospectives.org][a brief post introducing it]].
 
-** [[http://web.archive.org/web/20160423082550/http://techblog.net-a-porter.com/author/stig/][My NET-A-PORTER TECHNICAL BLOG entries (2013--2014)]]
+** [[https://web.archive.org/web/20160423082550/https://techblog.net-a-porter.com/author/stig/][My NET-A-PORTER TECHNICAL BLOG entries (2013--2014)]]
 
 These are my contributions to the NET-A-PORTER TECHNICAL BLOG.
 Including, but not limited to, a shell & regexp primer, maximising
@@ -61,7 +61,7 @@ Dean. (I'm afraid you have to log in to view the video.) It's a
 mish-mash of stuff we learnt while building the backend of The
 Netbook---NET-A-PORTER's social network offering.
 
-** [[https://web.archive.org/web/20170627125915/http://www.onlamp.com/pub/a/onlamp/2006/01/19/libtap.html][Testing C with Libtap (2006)]]
+** [[https://web.archive.org/web/20170627125915/https://www.onlamp.com/pub/a/onlamp/2006/01/19/libtap.html][Testing C with Libtap (2006)]]
 
 I gave a talk at YAPC::NA 2005 on this topic, and a member of the
 audience approached me to write it up as an article for ONLamp

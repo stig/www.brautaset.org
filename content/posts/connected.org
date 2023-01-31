@@ -2,8 +2,8 @@
 #+date: <2006-04-30>
 
 We finally have a network connection at the new place. Though we don't
-have ADSL yet (there's a problem transferring it here because [[http://plus.net][plus]]'s
-website thinks my flat is a business address) [[http://plus.net][plus]] kindly gives us a
+have ADSL yet (there's a problem transferring it here because Plusnet's
+website thinks my flat is a business address) they kindly gave us a
 backup phone connection. We tried to get it working yesterday but got
 no dial tone and figured the phone was not working yet (it was only
 connected on Thursday, and there was talks about a fault on the line
@@ -14,7 +14,8 @@ could call out /just fine/.
 
 Only problem is the cable is very short and the master socket is in
 the hallway. Luckily there's a small closet just across for it with
-room for a seat. It'll be great to have ADSL again though. Here's
-[[http://www.flickr.com/photos/skugg/137138509/][Nadia]] enjoying our current connection arrangement.
+room for a seat. It'll be great to have ADSL again though. +Here's
+Nadia enjoying our current connection arrangement.+ That picture no
+longer exists.
 
 #  LocalWords:  ADSL

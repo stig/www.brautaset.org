@@ -74,14 +74,14 @@ the mapping function. Just what I needed! As a bonus it stops when
              sb/hydra-selectors themes))
 #+END_SRC
 
-The [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Back-quote][back-quote]] (~`~) in that snippet is similar to quoting with ~'~ or
+The back-quote (~`~) in that snippet is similar to quoting with ~'~ or
 ~quote~, but allows you to selectively /unquote/ bits inside with ~,~.
 I need it because I needed to quote the argument to ~sb/load-theme~.
 
 ~defhydra~ doesn't take a list of heads, but I thought I might find a
 related function that would, perhaps ~defhydra*~. Unfortunately, I had
 no such luck. However, this is Lisp so there are ways. We'll reach for
-back-quote again, but this time instead of a simple unquote we [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Backquote.html#Backquote][splice]]
+back-quote again, but this time instead of a simple unquote we /splice/
 our heads into the ~defhydra~ argument list with ~,@~. This now looked
 like so:
 
@@ -192,7 +192,7 @@ For completeness here's the full source for this switcher:
                           ("RET" nil "done" :color blue)))))))
 #+END_SRC
 
-For what it's worth, here's my full [[https://github.com/stig/.config/blob/trunk/emacs/README.org#themes][Emacs Themes Config]] on GitHub.
+For what it's worth, here's my [[https://github.com/stig/dotfiles/blob/trunk/Emacs.org#hydra-theme-switching][Emacs Themes Config]] on GitHub.
 * Abstract                                                         :noexport:
 
 I learnt how to quickly switch between all installed themes in Emacs

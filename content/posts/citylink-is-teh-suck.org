@@ -1,6 +1,7 @@
 #+title: CityLink is teh suck!
 #+date: <2007-02-07>
-Never, ever, deal with [[http://www.city-link.co.uk/][ShittyLink]] if you can avoid it. They were
+Never, ever, deal with ShittyLink[fn::Update 2023: No longer a link,
+as they're no longer in business. Yay!] if you can avoid it. They were
 supposed to deliver my new TV on Saturday, but failed to do so.
 Yesterday I got a card from them in my mailbox, saying they attempted
 delivery and can I please call this 0870 number to arrange re-delivery

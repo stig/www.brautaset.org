@@ -35,7 +35,7 @@ static files. This project looks like so:
 #+END_SRC
 
 Now, after I have reviewed the changes to the generated files (by
-browsing to http://127.0.0.1:8000) I have to upload the generated
+browsing to =http://127.0.0.1:8000=) I have to upload the generated
 files to S3. This is similar to how I uploaded the test files in the
 previous post, but now that the directory only contains generated
 files I can shorten it to make the =--exclude= line more specific and

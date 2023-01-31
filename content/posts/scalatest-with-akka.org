@@ -5,7 +5,7 @@
 
 To test Actor code with ScalaTest you have to mix in a lot of traits;
 sometimes it can be difficult to remember them all. Inspired by a
-course led by [[http://www.heikoseeberger.name][Heiko Seeberger]] I made this abstract class (it cannot be
+course led by [[https://heikoseeberger.de][Heiko Seeberger]] I made this abstract class (it cannot be
 a trait because it takes constructor parameters) that you can drop
 into a project.
 

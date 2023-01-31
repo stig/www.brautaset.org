@@ -65,7 +65,7 @@ like so:
   :CUSTOM_ID: cfg-updates
   :END:
 
-As you can infer from the comment in the previous section, [[https://sceptre.cloudreach.com][Sceptre]]
+As you can infer from the comment in the previous section, [[https://docs.sceptre-project.org/][Sceptre]]
 provides a bit of magic to obtain the stack name from the WWW template
 as an input to the DNS one. To make use of that I added the below
 ~!stack_output~ Sceptre fragment to =config/superloopy/dns.yaml=. This

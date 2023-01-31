@@ -147,7 +147,7 @@ adapted the material into this blog post.
 * Footnotes
 
 [fn:1] As NET-A-PORTER's tech blog is no longer available, I obtained
-the original from the [[http://web.archive.org/web/20200927133906/http://techblog.net-a-porter.com/2013/02/shell-quickstart/#more-754][internet archive]] for re-posting here.
+the original from the [[https://web.archive.org/web/20200927133906/https://techblog.net-a-porter.com/2013/02/shell-quickstart/#more-754][internet archive]] for re-posting here.
 
 #  LocalWords:  Quickstart McIlroy stdin stdout stderr wc uniq
 #  LocalWords:  Jenkinson PORTER's
