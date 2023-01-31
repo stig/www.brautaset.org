@@ -86,7 +86,7 @@ The ones we looked at were:
     :CUSTOM_ID: picasa
     :END:
 
-Apparently dying. [[http://techcrunch.com/2013/03/05/picasa-web-albums-are-officially-dead-now-%20redirect-to-google-photos/][Users are being migrated to Google+ Photos]], which
+Apparently dying. Users are being migrated to Google+ Photos, which
 has too much integration with the Google ecosystem for what we want.
 We are looking for a /backup solution that understands photos/, not a
 plethora of ways to accidentally share pictures with all our contacts.

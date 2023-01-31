@@ -2,7 +2,7 @@
 #+date: <2006-11-23>
 #+category: Hacks
 
-[[http://jerakeen.org][jerakeen]] pointed me to a post showing how you could [[http://www.squarebits.com/blog/2006/11/generate_simple.html][Generate Simple
+jerakeen pointed me to a post showing how you could [[https://web.archive.org/web/20070127213907/https://www.squarebits.com/blog/2006/11/generate_simple.html][Generate Simple
 Bar Charts From a MySQL Prompt]]. It's a neat trick for quickly getting
 a feel for the distribution of values in a database. The post is MySQL
 centric, but you can do the same thing in any database. PostgreSQL's

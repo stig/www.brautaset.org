@@ -30,8 +30,8 @@ show any techniques for how you would go about that. They mostly use
 the AWS console for interacting with CloudFormation which I do not
 want to do.
 
-Enter [[https://sceptre.cloudreach.com/latest/about.html][Sceptre]], an unopinionated tool to drive CloudFormation. Its
-[[https://sceptre.cloudreach.com/latest/docs/get_started.html][Getting Started Guide]] starts out by explaining the directory layout
+Enter [[https://docs.sceptre-project.org/][Sceptre]], an unopinionated tool to drive CloudFormation. Its
+[[https://docs.sceptre-project.org/latest/docs/get_started.html][Getting Started Guide]] starts out by explaining the directory layout
 and config files involved, and is a good companion to the
 CloudFormation docs in my opinion.
 
@@ -71,8 +71,9 @@ With a template in place we need an environment & stack config so we
 can create a stack. Normally an "environment" is something like "dev",
 "test", "prod" but I won't bother with that for my blog so I'll use
 "superloopy" for the environment name for this blog here at
-[[http://www.superloopy.io][superloopy.io]]. I create a file called =config/superloopy/dns-zone.yaml=
-that looks like this:
+superloopy.io[fn::Update (2023): I dropped the superloopy.io vanity
+domain years ago, as I found .io domains too expensive.]. I create a
+file called =config/superloopy/dns-zone.yaml= that looks like this:
 
 #+caption: =config/superloopy/dns-zone.yaml=
 #+name: lst:cfg-zone

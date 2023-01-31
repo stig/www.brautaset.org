@@ -23,7 +23,7 @@ routing layer. It also shows off three things I consider good practice:
   ORM mappings. I think this is bad practice and prefer to use
   different classes.
 
-- The [[http://spray.io/documentation/1.2.0/spray-routing/future-%20directives/onSuccess/][onSuccess]] directive, which allows us to improve on my [[file:file:spray-routing-error-handling.org][previous]]
+- The =onSuccess= directive, which allows us to improve on my [[file:spray-routing-error-handling.org][previous]]
   post on handling expected errors (e.g. 404) in the spray routing
   DSL.
 
@@ -80,3 +80,4 @@ it is being exposed by a REST API at all.
 
 #  LocalWords:  onSuccess ModelActor ItemNotFound NotFound InStock
 #  LocalWords:  ServiceActor LowStock SoldOut
+;

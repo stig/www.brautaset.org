@@ -18,12 +18,11 @@ just seen part of the day...
 
 *Candace commented:*
 
-#+BEGIN_QUOTE
-  short answer: black island uplink.
-  long answer: [[http://www.gmra.org/n0nhj/ice99/p20.htm]]
-
-  Oh yes, and at the pole:
-  [[http://antarctica.computerworld.com.au/index.php?id=707148905&fp=4&fpid=5]]
+: short answer: black island uplink.
+: long answer: [[http://www.gmra.org/n0nhj/ice99/p20.htm]]
+:
+: Oh yes, and at the pole:
+: http://antarctica.computerworld.com.au/index.php?id=707148905&fp=4&fpid=5
 #+END_QUOTE
 
 #  LocalWords:  uplink

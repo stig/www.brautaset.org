@@ -1,7 +1,7 @@
 #+title: What I want for my Birthday
 #+date: <2006-04-03>
 
-According to the [[http://worldlandtrust.org][World Land Trust]], citing [[http://www.independent.co.uk/][The Independent]], Britons
+According to the [[https://www.worldlandtrust.org][World Land Trust]], citing [[https://www.independent.co.uk/][The Independent]], Britons
 last year spent £3.6 billion on food, healthcare and accessories for
 their pets. I realise that pets have to eat and that the occasional
 visit to the vet is in order, but a shocking £294 million alone was
@@ -14,6 +14,6 @@ and development each year; 1.5 acres a second, according to [[http://www.rain-tr
 just shy of 50 million acres.
 
 If you were thinking of buying me a present for my birthday (hint
-hint, it's the 24th of April) then I suggest you [[http://www.worldlandtrust.org/supporting/gift.htm][save an acre of
-Rain forest]]. It's only £25, so buy someone else one too. And maybe one
-for yourself.
+hint, it's the 24th of April) then I suggest you [[https://www.worldlandtrust.org/appeals/buy-an-acre/][save an acre of Rain
+forest]]. It's +only £25, so buy someone else one too. And maybe one
+for yourself+ £100.

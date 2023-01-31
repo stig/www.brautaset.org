@@ -7,7 +7,7 @@ of January 2014 and used the opportunity to try to explain why I think
 SBJson is still relevant---even after Apple added native JSON support to
 iOS 5 in 2011. This post summarises the main points of my talk.
 
--  [[https://vimeo.com/86478323][Video of the talk]]
+-  +Video of the talk+ (no longer available)
 -  [[https://speakerdeck.com/stig/delighting-your-users-with-sbjson-4][Slides]]
 
 Have you ever written an app that downloads a list of records? I believe

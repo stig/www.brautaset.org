@@ -3,7 +3,7 @@
 #+category: Scala
 #+category: Spray
 
-I've recently taken a lot of inspiration from a blog post titled [[http://blog.eigengo.com/blog_posts/akka-spray][Akka
+I've recently taken a lot of inspiration from a blog post titled [[https://web.archive.org/web/20130713112003/https://blog.eigengo.com/blog_posts/akka-spray][Akka
 and Spray]] over at the Eigengo blog. It covers a lot of ground and
 comes highly recommended if you are learning Scala, Akka & Spray. The
 only thing I didn't like was how it handled marshalling of errors, and

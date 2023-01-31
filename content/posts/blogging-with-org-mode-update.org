@@ -33,7 +33,7 @@ and use of $\rm\LaTeX{}$ formulas.
 
 I've discovered that I much prefer initiating the publishing step from
 within Emacs rather than with the =build.el= script, so yesterday I
-changed to use [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html][directory-local variables]] to set the publishing project
+changed to use /directory-local variables/ to set the publishing project
 for my blog. This also improves the syntax highlighting of code
 examples. It appears that when running in script mode code examples
 are syntax-highlighted as when Emacs runs in a terminal, and this is
