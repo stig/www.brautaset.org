@@ -1,22 +1,22 @@
 #+title: Creating a re-sizeable grid of CALayers
 #+date: <2008-10-01>
 #+category: ObjectiveC
-The last few days I've been poring over the [[http://developer.apple.com/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html][Core Animation Programming
-Guide]]. In particular, I've been trying to figure out how to create a
+The last few days I've been poring over the Core Animation Programming
+Guide. In particular, I've been trying to figure out how to create a
 grid of equally-sized cells. My initial attempt just saw me
 calculating the frames for each cell in the grid manually, and
 explicitly setting the frame for each cell. This worked, after a
 fashion, but was pretty ugly. And, if I resized the grid the cells
 didn't follow.
 
-Enter [[http://developer.apple.com/documentation/GraphicsImaging/Reference/CAConstraintLayoutManager_class/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004498-CH1][CAConstraintLayoutManager]]. I initially tried to constrain each
+Enter ~CAConstraintLayoutManager~. I initially tried to constrain each
 cell to neighbouring cells, and to the super layer for the "outer"
-cells. Not only was this messy; I [[http://lists.apple.com/archives/quartz-dev/2008/Sep/msg00044.html][couldn't make it work]] at all---not
+cells. Not only was this messy; I couldn't make it work at all---not
 even with a 1 by 5 "grid". I suspect that the layout manager is
 getting a bit confused because I don't specify the size of any
 dimension of any cell.
 
-Then I discovered the scale-argument form of the =NSConstraint=. With
+Then I discovered the scale-argument form of the ~NSConstraint~. With
 this I can specify the size of a cell and its position in the grid only
 in terms of the super layer. This is /much/ simpler. Have a look at the
 example code below. Paste it into a custom view, and it should display a

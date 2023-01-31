@@ -9,7 +9,7 @@ because I think the site really needs it, but because it intrigued me
 to figure out to do it using my existing [[file:blogging-with-org-mode.org][Emacs Org blogging solution]].
 
 In short, I use ~ox-rss.el~ (from Org mode's contrib) to produce an
-RSS feed from the [[file:~/blog/content/index.org][home]] page. I was delighted that tags on headlines
+RSS feed from the home page. I was delighted that tags on headlines
 were automatically translated into RSS Categories, with no extra work
 from me. However, I had to jump some hoops to generate a valid and
 useful feed.
@@ -54,10 +54,8 @@ the RSS feed. I have a separate keyword in the file to provide the
 alternative description (and RSS Image URL) for the feed. That looks
 like this:
 
-#+BEGIN_SRC org
-  ,#+RSS_IMAGE_URL: https://www.brautaset.org/etc/icon.png
-  ,#+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
-#+END_SRC
+: #+RSS_IMAGE_URL: https://www.brautaset.org/icon.png
+: #+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
 
 *Getting the publication dates right.*
 Getting the publication dates right was just a case of applying elbow

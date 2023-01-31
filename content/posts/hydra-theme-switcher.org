@@ -192,7 +192,7 @@ For completeness here's the full source for this switcher:
                           ("RET" nil "done" :color blue)))))))
 #+END_SRC
 
-For what it's worth, here's my full [[https://github.com/stig/.config/blob/trunk/emacs/README.org#themes][Emacs Themes Config]] on GitHub.
+For what it's worth, here's my [[https://github.com/stig/dotfiles/blob/trunk/Emacs.org#hydra-theme-switching][Emacs Themes Config]] on GitHub.
 * Abstract                                                         :noexport:
 
 I learnt how to quickly switch between all installed themes in Emacs

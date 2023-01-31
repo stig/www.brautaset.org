@@ -2,9 +2,10 @@
 #+date: <2007-06-21>
 
 Today Nadia and I took her parents on a day-trip to Folkstone on the
-[[http://www.orient-express.com/web/luxury/trains_cruises/journey_planner_uk.jsp][Orient Express]]. We left Victoria at about 11:30 and had a delicious
-three course lunch on the way down. The main course, in particular,
-was fantastic.
+[[https://www.orient-express.com][Orient Express]][fn::Update 2023 - the pictures make it seem more
+opulent than I remember it.]. We left Victoria at about 11:30 and had
+a delicious three course lunch on the way down. The main course, in
+particular, was fantastic.
 
 The train in itself was an experience. It consisted exclusively of
 British Pullman carriages; ours was the Ibis, built in 1925. We had our

@@ -37,8 +37,8 @@ Some things that helped me, /probably/ in order of importance:
 2. Getting a proper external split keyboard. The first two months at
    that job I was typing on the laptop keyboard. (MacBook Pro.) I
    switched to using a Microsoft split keyboard for a while, but I
-   found the keys too hard to press down. I soon moved to the [[https://www.amazon.co.uk/Fujitsu-Keyboard-KBPC-keyboards-CSA-C22-2/dp/B000JWEJEC?ie=UTF8&keywords=siemens%20keyboard&qid=1455117950&ref_=sr_1_2&s=electronics&sr=1-2][Fujitsu
-   Siemens Butterfly]] one and haven't looked back. A split keyboard
+   found the keys too hard to press down. I soon moved to a Fujitsu
+   Siemens Butterfly one and haven't looked back. A split keyboard
    allows a much more normal position of my arms, leading to more
    natural positions of the wrists. (For me, at least.)
 3. I joined a gym (lucky me: work sponsored gym membership across the

@@ -39,10 +39,10 @@ the embedded framework you added into it.
 
 Voilá!
 
-Jonathan "Wolf" Rentzsch has a [[http://rentzsch.com/cocoa/embeddedFrameworks][screen cast]] that shows you in more
+Jonathan "Wolf" Rentzsch has a [[https://web.archive.org/web/20071017104123/http://rentzsch.com/cocoa/embeddedFrameworks][screen cast]] that shows you in more
 detail how to embed frameworks. It is for a rather older version of
 Xcode than what is available now, but it is still good. The Cocoa
-developer guide to [[http://developer.apple.com/documentation/MacOSX/Conceptual/BPFrameworks/Tasks/CreatingFrameworks.html%2523//apple_ref/doc/uid/20002258-106880-BAJJBIEF][embedding a framework]] is also good.
+developer guide to [[https://web.archive.org/web/20090216121626/http://developer.apple.com/documentation/MacOSX/Conceptual/BPFrameworks/Tasks/CreatingFrameworks.html][embedding a framework]] is also good.
 * Abstract                                                         :noexport:
 
 I show how to embed a cocoa framework into your application.

@@ -1,13 +1,13 @@
 #+title: Re-designing for readers
 #+date: <2013-06-15>
 
-I enjoyed reading Matt Gemmell's post on [[http://mattgemmell.com/2013/05/22/designing-blogs-for-readers/][designing blogs for readers]]
+I enjoyed reading Matt Gemmell's post on [[https://web.archive.org/web/20140103002822/http://mattgemmell.com/designing-blogs-for-readers][designing blogs for readers]]
 the other week. I decided to see how well my own blog "complies" to
 his advice.
 
 I have had blogs on WordPress, Tumblr and writing my own (terrible)
 blog software on a rented VM in the past. This site is a clean break
-from those. Content & code both lives in a [[http://github.com/stig/superloopy.io][git repository]], which
+from those. Content & code both lives in a git repository, which
 appeals immensely to me as a programmer, and the site is statically
 generated and hosted on GitHub. I don't get the statistics that
 WordPress gives you, and I don't have the seamless posting from
