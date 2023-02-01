@@ -5,16 +5,22 @@ orbs:
 
 executors:
   nixos:
-     working_directory: ~/blog
-     docker:
+    working_directory: ~/blog
+    docker:
       - image: nixos/nix
+        auth: &auth
+          username: stigbra
+          password: $DOCKERHUB_PASSWORD
+
   emacs27:
     working_directory: ~/blog
     docker:
       - image: silex/emacs:27.2-ci
+        auth: *auth
   python3:
     docker:
       - image: circleci/python:3.7
+        auth: *auth
 
 jobs:
   build:
