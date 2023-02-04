@@ -12,7 +12,7 @@ max_cache_age = "7d"
 # Exclude URLs and mail addresses from checking (supports regex).
 exclude = [
 	'rdar://problem/.*',
-	'https://web\.archive\.org.*'
+	'https?://web\.archive\.org'
 ]
 
 # Exclude all private IPs from checking.
