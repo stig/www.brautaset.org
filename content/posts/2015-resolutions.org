@@ -35,7 +35,7 @@ My resolutions for 2015 are to:
 3. Continue learning Clojure (a Lisp targeting the JVM) by writing a
    web application and getting at least ten users.
 4. Make an attempt at improving my guitar playing by going through the
-   first ten chapters of [[http://www.noad.com/SGP1ndx.html][Solo Guitar Playing]] by Frederick Noad.
+   first ten chapters of /Solo Guitar Playing/ by Frederick Noad.
 5. Go hiking in Northumberland and camp out at least once.
 
 All realistic & achievable goals, I think, but not without putting in a
