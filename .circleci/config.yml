@@ -9,7 +9,7 @@ executors:
     docker:
       - image: nixos/nix
         auth: &auth
-          username: stigbra
+          username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
   python3:
     docker:
