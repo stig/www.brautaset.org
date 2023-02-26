@@ -38,11 +38,13 @@ jobs:
   check-links:
     executor: nixos
     steps:
+      - checkout
+      - enable-flakes
       - attach_workspace:
           at: ~/blog
       - restore_cache:
           key: v1-lychee
-      - run: nix-shell -p lychee --run "lychee -b _site _site"
+      - run: nix run .#check-links
       - save_cache:
           key: v1-lychee
           paths: ".lycheecache"

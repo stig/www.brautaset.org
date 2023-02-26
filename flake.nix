@@ -33,6 +33,10 @@
             ${pkgs.emacs}/bin/emacs --batch --quick --eval "(require 'ob-tangle)" --eval '(org-babel-tangle-file "style.org")'
           '';
 
+          check-links = pkgs.writeShellScriptBin "check-links" ''
+            ${pkgs.lychee}/bin/lychee -b _site _site
+          '';
+
         });
     };
 }
