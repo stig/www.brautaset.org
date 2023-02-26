@@ -35,6 +35,10 @@
             '';
           };
 
+          check-links = pkgs.writeShellScriptBin "check-links" ''
+            ${pkgs.lychee}/bin/lychee -b _site _site
+          '';
+
         });
     };
 }
