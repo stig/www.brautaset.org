@@ -39,6 +39,20 @@
             ${pkgs.lychee}/bin/lychee -b _site _site
           '';
 
+          sync-to-s3 = pkgs.writeShellScriptBin "sync-to-s3" ''
+            ${pkgs.awscli2}/bin/aws s3 sync \
+              ~/blog/_site 's3://www.brautaset.org/' \
+              --delete \
+              --acl public-read \
+              --cache-control "max-age=86400"
+          '';
+
+          cf-invalidation = pkgs.writeShellScriptBin "cf-invalidation" ''
+            ${pkgs.awscli2}/bin/aws cloudfront create-invalidation \
+              --distribution-id E2HQ2C8QF1FXUZ \
+              --paths '/*'
+          '';
+
         });
     };
 }
