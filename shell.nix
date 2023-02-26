@@ -2,7 +2,6 @@
   pkgs.mkShell {
     buildInputs = with pkgs; [
       ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
-        epkgs.org
         epkgs.ox-rss
         epkgs.htmlize
         epkgs.clojure-mode
