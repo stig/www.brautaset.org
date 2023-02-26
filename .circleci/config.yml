@@ -9,20 +9,24 @@ executors:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
 
+commands:
+  enable-flakes:
+    steps:
+      - run: mkdir -p ~/.config/nix
+      - run: echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
+
 jobs:
   build:
     executor: nixos
     steps:
       - checkout
-      - run: nix-channel --add https://github.com/stig/nixpkgs/archive/ox-rss.tar.gz ox-rss
-      - run: nix-channel --update
-      - run: nix-channel --list
+      - enable-flakes
       - run:
           name: Tangle CSS
-          command: nix-shell --run tangle-css
+          command: nix run .#tangle-css
       - run:
           name: Publish Blog
-          command: nix-shell --run publish-blog
+          command: nix run .#publish-blog
       - store_artifacts:
           path: ~/blog/_site
           destination: html
