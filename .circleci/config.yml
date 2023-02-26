@@ -52,18 +52,12 @@ jobs:
   deploy:
     executor: nixos
     steps:
+      - checkout
+      - enable-flakes
       - attach_workspace:
           at: ~/blog
-      - run: nix-env -iA nixpkgs.awscli2
-      - run: >-
-          aws s3 sync ~/blog/_site 's3://www.brautaset.org/'
-          --delete
-          --acl public-read
-          --cache-control "max-age=86400"
-      - run: >-
-          aws cloudfront create-invalidation
-          --distribution-id E2HQ2C8QF1FXUZ
-          --paths '/*'
+      - run: nix run .#sync-to-s3
+      - run: nix run .#cf-invalidation
 
 workflows:
   version: 2
