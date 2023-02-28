@@ -12,26 +12,28 @@
       packages = forAllSystems (system:
         let
           pkgs = nixpkgsFor.${system};
+          myEmacs = ((pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (epkgs: [
+            epkgs.ox-rss
+            epkgs.htmlize
+            epkgs.clojure-mode
+            epkgs.scala-mode
+          ]));
         in {
           publish-blog = pkgs.writeShellApplication {
             name = "publish-blog";
-            runtimeInputs = [
-              ((pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (epkgs: [
-                epkgs.ox-rss
-                epkgs.htmlize
-                epkgs.clojure-mode
-                epkgs.scala-mode
-              ]))
-            ];
-
+            runtimeInputs = [ myEmacs ];
             text = ''
               emacs --batch --quick --load publish.el --eval '(org-publish-all t)'
             '';
           };
 
-          tangle-css = pkgs.writeShellScriptBin "tangle-css" ''
-            ${pkgs.emacs}/bin/emacs --batch --quick --eval "(require 'ob-tangle)" --eval '(org-babel-tangle-file "style.org")'
-          '';
+          tangle-css = pkgs.writeShellApplication {
+            name = "tangle-css";
+            runtimeInputs = [ myEmacs ];
+            text = ''
+              emacs --batch --quick --eval "(require 'ob-tangle)" --eval '(org-babel-tangle-file "style.org")'
+            '';
+          };
 
           check-links = pkgs.writeShellScriptBin "check-links" ''
             ${pkgs.lychee}/bin/lychee -b _site _site
