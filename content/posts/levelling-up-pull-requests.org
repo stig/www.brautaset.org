@@ -1,0 +1,127 @@
+#+title: Levelling up Pull Requests
+#+date: [2023-03-28 Tue]
+#+category: Development
+
+My team's book club are currently reading /7 habits of highly
+effective people/. Recently we discussed the first habit, /Be
+Proactive/. Its chapter mentions the circle of influence, and names
+three classes of problems: /direct/ control, /indirect/ control, and
+/no/ control.
+
+I challenged myself to be proactive in reducing our cycle time for
+getting PRs approved. I primarily focus on work by my team, and an
+important piece of context is that we practice continuous deployment:
+every merged PR automatically kicks off the automated process for
+deploying a new version of our service to production. So having an
+effective review process is crucial.
+
+Nobody likes being pestered, nor pestering others, for reviews. It's
+especially frustrating having to request /re/-reviews. They increase
+cycle time, and thus decrease our velocity. In part this is a /direct/
+control problem: I can change how I create my own PRs to reduce the
+likelihood of colleagues bouncing them back to me for clarifications,
+changes, and having to require re-reviews. But to be really effective
+& for my team to succeed I'll have to influence my colleagues to do
+the same: it is an /indirect/ control problem.
+
+The TL;DR of how I tackle the /direct/ part of the problem is that I'm
+/really rigorous/ when filling in appropriate sections of our PR
+template[fn:1]. More specifically, I put a lot of effort into:
+
+1. *Giving good background on why the change is happening*
+
+   By all means, link to the planning/ticketing tool you use. But
+   /don't force people to follow the link to get the info they need/,
+   because they likely won't. (I primarily do when the reason for the
+   change doesn't make sense to me!)
+
+2. *Explicitly listing how to perform validation*
+
+   How do we know that this change behaves as it should? Repeat for
+   canary stage and after deploy to production.
+
+   One of my seniors mentioned this as a key tip he employs for
+   improving the quality of his PRs. He found it sometimes causes him
+   to go back and rework the PR to make it easier to validate. Since
+   adopting this practice I have found it too!
+
+   Don't be afraid to add new metrics for the purpose of validating
+   the change. You can always remove them later. I also create a
+   custom [[https://docs.datadoghq.com/notebooks/][Datadog notebook]], if there isn't a specific dashboard handy,
+   and put links to this in the PR.
+
+3. *Considering whether to use a roll-out style feature flag*
+
+   These allow us to roll out the feature in a limited way, e.g. to
+   1%, 10% or 50% of traffic. Equally importantly it allows us to back
+   out the impact immediately, without even rolling back the code.
+
+   Feature flags are useful for managing risk, but lacking the
+   discipline to clean up unused ones can get expensive[fn:2].
+
+4. *Listing deployment concerns*
+
+   Are there particular times of the day when we should or should not
+   merge this? Have affected teams been made aware? Are there impacts
+   on customers that our customer support folks need to be aware of?
+
+5. *Splitting the change into several commits to ease review*
+
+   I always try to keep a [[https://blog.sulami.xyz/posts/cleaning-up-git-history/][clean commit history]], and will sometimes go
+   back and split a single commit into several, if it improves the
+   review experience. An example is refactoring the same code in
+   multiple steps over several commits. It's not always obvious what's
+   going on if you don't review commit-by-commit in this case, so
+   point this out in the PR summary.
+
+6. *Pointing out if reviewing the PR benefits from ignoring whitespace*
+
+   If the primary change is to change indentation, viewing the PR diff
+   with whitespace changes ignored can /drastically/ reduce the burden
+   on reviewers---but it's not always obvious if you're coming at the
+   PR "cold". (And not all reviewers are aware.)
+
+
+It definitively takes more time to go through this process. But I am
+confident that it takes less time---and is less frustrating---than
+bouncing PRs back and forth between author and reviewer(s), with many
+questions and clarifications gradually being added to it. Personally I
+also feel that it's less stressful, because I spend more time doing
+planned work, and less time /reacting/.
+
+PS: Writing this post? That's part of how I attacked the /indirect
+control/ part of the problem. I also did a brief presentation to my
+team.
+
+-----
+
+Thanks to Riasat Rakin for valuable feedback on drafts of this post.
+
+
+* Abstract                                                         :noexport:
+I share how I tackled the challenge of reducing cycle time for getting
+pull requests approved within my team, using the first habit from "7
+Habits of Highly Effective People": /Be Proactive/.
+
+* Footnotes
+[fn:2] As [[https://en.wikipedia.org/wiki/Knight_Capital_Group#2012_stock_trading_disruption][Knight Capital Group]] rather shockingly found out.
+
+[fn:1] If your team doesn't have one, you could start by making one.
+Use these sections:
+
+- *Background*. Give sufficient context for reviewers to understand
+  why the change is being made.
+
+- *Proposed changes*. A short bullet list of notable changes.
+
+- *Deployment considerations*. Include sufficient context that someone
+  else could carry out the deployment in your place. E.g. Will you
+  canary the change before deploying? If not, why not?
+
+- *Validation*. Explicit steps to validate the change in
+  canary/production. Which metrics to look at, links to notebooks. If
+  you're using a roll-out flag, what are the steps? How long do you
+  let it "cook" at each step?
+
+- *Rollback*. How do you roll back this quickly in case there are
+  unforeseen problems with it?

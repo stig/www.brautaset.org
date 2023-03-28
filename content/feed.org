@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* Levelling up Pull Requests                                    :Development:
+:PROPERTIES:
+:RSS_PERMALINK: posts/levelling-up-pull-requests.html
+:ID:       9C2613DF-54B4-4143-A586-FF9C24F1E864
+:PUBDATE:  2023-03-28 Tue 16:48
+:END:
+#+include: posts/levelling-up-pull-requests.org::abstract :only-contents t
 * Can I Crack the Code?                                        :Guitar:Music:
 :PROPERTIES:
 :RSS_PERMALINK: posts/can-i-crack-the-code.html
