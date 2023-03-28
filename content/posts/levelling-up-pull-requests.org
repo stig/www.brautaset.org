@@ -102,13 +102,16 @@ Use these sections:
 - *Background*. Give sufficient context for reviewers to understand
   why the change is being made.
 
-- *Proposed changes*. A bullet list of notable changes
+- *Proposed changes*. A short bullet list of notable changes.
 
 - *Deployment considerations*. Include sufficient context that someone
   else could carry out the deployment in your place. E.g. Will you
-  canary the change before deploying? If not, why not?
+  canary the change before deploying? If not, why not? 
 
-- *Validation*. Explicit steps to validate the change in canary/production.
+- *Validation*. Explicit steps to validate the change in
+  canary/production. Which metrics to look at, links to notebooks. If
+  you're using a roll-out flag, what are the steps? How long do you
+  let it "cook" at each step?
 
 - *Rollback*. How do you roll back this quickly in case there are
   unforeseen problems with it?
