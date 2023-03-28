@@ -99,18 +99,18 @@ planned work, and less time /reacting/.
 [fn:1] If your team doesn't have one, you could start by making one.
 Use these sections:
 
-- Background :: Give sufficient context for reviewers to understand
+- *Background*. Give sufficient context for reviewers to understand
   why the change is being made.
 
-- Proposed changes :: A bullet list of notable changes
+- *Proposed changes*. A bullet list of notable changes
 
-- Deployment considerations :: Include sufficient context that someone
+- *Deployment considerations*. Include sufficient context that someone
   else could carry out the deployment in your place. E.g. Will you
   canary the change before deploying? If not, why not?
 
-- Validation :: Explicit steps to validate the change in canary/production.
+- *Validation*. Explicit steps to validate the change in canary/production.
 
-- Rollback :: How would we roll back this quickly in case there are
+- *Rollback*. How do you roll back this quickly in case there are
   unforeseen problems with it?
 
 
