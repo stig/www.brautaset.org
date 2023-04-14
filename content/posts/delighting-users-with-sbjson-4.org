@@ -34,10 +34,10 @@ SBJson supports streaming of two different types of input:
 
 1. By downloading a stream of not one, but many stand-alone JSON
    documents. (Twitter provides streams of this type.) See
-   [[http://cocoadocs.org/docsets/SBJson/4.0.0/Classes/SBJson4Parser.html#//api/name/multiRootParserWithBlock:errorHandler:][+multiRootParserWithBlock:errorHandler:]].
+   ~+multiRootParserWithBlock:errorHandler:~.
 2. By /unwrapping a root array/ and feed every top-level element inside
    the root to your application, one by one. See
-   [[http://cocoadocs.org/docsets/SBJson/4.0.0/Classes/SBJson4Parser.html#//api/name/unwrapRootArrayParserWithBlock:errorHandler:][+unwrapRootArrayParserWithBlock:errorHandler:]].
+   ~+unwrapRootArrayParserWithBlock:errorHandler:~.
 
 To see benefits for your users your app might require a bit of
 re-engineering. You would typically push the parsing into the download
