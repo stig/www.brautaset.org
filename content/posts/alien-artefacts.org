@@ -1,0 +1,133 @@
+#+title: Alien Artefacts
+#+date: <2023-04-14 Fri>
+#+category: Draft
+#+category: Development
+
+The purpose of this blog post is to introduce the concept of /alien
+artefacts/[fn:1], a subcategory of legacy code. I use the term to
+describe particularly complicated and important pieces of software
+written by very smart engineers that are no longer working for the
+company---and thus not available to support it. The software works
+really well for what it was designed to do, but it is highly resistant
+to change.
+
+/Legacy code/ is a term often used to describe code that is old,
+outdated, and difficult to maintain or modify---due to various reasons
+such as lack of documentation, obsolete technology, or changes in the
+software ecosystem. An /alien artefact/ is hard to change, yes---but
+in contrast to most legacy code engineers may describe it as elegant,
+well documented, and well tested. And it will certainly perform an
+important and not-being-replaced-anytime-soon function critical to
+your system.
+
+Engineers tasked with maintaining an alien artefact find it
+challenging to understand its workings, and extremely difficult to
+make significant changes to---but not because they are stupid or
+inexperienced. Even experienced engineers of considerable seniority
+and skill may require multiple attempts to make significant changes to
+an alien artefact.
+
+Alien artefacts are inherently complex due to the intrinsic
+complexity---and often poor defition---of the problem they are
+designed to solve. They become /legacy/ because they are so hard to
+change that people become loath to even try. One indicator you have
+alien artefact on your hands is an accretion disc of adapters or
+anti-corruption layers at the edges of it, massaging inputs or outputs
+into the right shape, because changing the artefact itself is too
+difficult.
+
+Although not an essential attribute, in addition to its /intrinsic/
+complexity the authors of your /alien artefact/ may have used an
+esoteric language, paradigm, or techniques not used elsewhere in the
+company. Perhaps they were domain experts hired or contracted
+specifically to solve a thorny problem. Moreover, the choice of
+language and techniques could be purely the authors' preference, or
+because it fits the problem domain particularly well, and you might
+not know which.
+
+* Help! I have an alien artefact: what can I do?
+
+1. *Understand the system*: Invest time in reviewing the code and any
+   available documentation, and try to identify the most critical
+   parts of the system.
+2. *Develop a comprehensive test suite*: This is essential to ensure
+   that any changes made to the alien artefact do not introduce
+   bugs or unintended consequences.
+3. *Prioritize changes carefully*: Focus on changes that are necessary
+   to maintain the system's functionality, rather than on
+   non-essential cosmetic changes.
+
+
+Finally, if you decide to attempt to replace your alien artefact, you
+may find the [[https://martinfowler.com/bliki/StranglerFigApplication.html][strangler fig pattern]] useful.
+
+* How do I avoid my team creating an alien artefact in the first place?
+
+Thank you for asking! Here are some suggestions:
+
+1. *Include junior and/or generalist engineers* on the team; avoid
+   teams staffed entirely with specialised experts with deep domain
+   knowledge.
+2. *Prioritise documentation and knowledge transfer*, and invest in
+   ongoing development to ensure the system stays adaptable to
+   changing business needs.
+3. *Use standardised coding practices* and avoid using overly esoteric
+   languages or techniques.
+
+* Acknowledgements
+
+Thanks to ChatGPT for valuable feedback and editorial input on early
+drafts of this post. It was a joy collaborating with it. It provided
+consistent and helpful feedback, and was always available to assist
+with any changes or questions I had during the collaboration
+process[fn:2].
+
+Thanks also to [[https://emauton.org][Cian Synnott]] for additional feedback on a late draft of
+this post, and to my wife for a minor readability improvement.
+
+* Abstract                                                         :noexport:
+
+The purpose of this blog post is to introduce the concept of /alien
+artefacts/, a subcategory of legacy code that is highly resistant to
+change despite being well-designed and performing a critical function.
+It provides insights into the challenges engineers face when dealing
+with such code and offers practical advice on how to effectively
+maintain it.
+
+* Suggestions for improvements by ChatGPT                          :noexport:
+
+- [ ] Consider adding more examples or anecdotes to help readers
+  understand the concept of "alien artefacts" better. You could share
+  a specific instance of when an engineering team struggled to make
+  changes to such software and why.
+- [X] Clarify the purpose of the blog post in the opening paragraph.
+  It may help to add a sentence or two about why understanding "alien
+  artefacts" is important.
+- [X] Consider defining "legacy code" in the text to help readers who
+  may not be familiar with the term.
+- [X] Add a section on strategies for preventing the creation of
+  "alien artefacts" in the first place. This could help readers avoid
+  the problem altogether, rather than just dealing with it once it
+  occurs.
+- [ ] Consider expanding on the "strangler fig" pattern and how it can
+  be used to replace an "alien artefact." Provide examples of when
+  this pattern has been successfully used, and explain how it works in
+  more detail.
+- [X] Use a more formal tone throughout the text. While some casual
+  language is okay, the use of contractions, for example, may not be
+  appropriate for a technical blog post.
+- [X] Consider rephrasing some of the sentences for clarity. For
+  example, "And even then it may take several attempts to get right"
+  could be revised to "Even experienced engineers may require multiple
+  attempts to make significant changes to the system."
+
+* Footnotes
+
+[fn:1] I am not sure where this term comes from. It is possible that
+it is my own invention, but I would not be comfortable claiming that
+with 100% certainty---though a cursory search before writing this post
+did not turn up any relevant prior art. Please send me links if you
+know of any!
+
+[fn:2] It also asked me to add this sentence to /really drive home/
+how helpful it was.
