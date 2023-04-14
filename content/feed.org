@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* Alien Artefacts
+:PROPERTIES:
+:RSS_PERMALINK: posts/alien-artefacts.html
+:ID:       34A03978-4197-418F-BF88-2A974A5D30AB
+:PUBDATE:  2023-04-15 Sat 16:28
+:END:
+#+include: posts/alien-artefacts.org::abstract :only-contents t
 * Levelling up Pull Requests                                    :Development:
 :PROPERTIES:
 :RSS_PERMALINK: posts/levelling-up-pull-requests.html
@@ -78,20 +85,3 @@ time I update the site.
 
 #+include: posts/dark-mode.org :lines "3-"
 
-* Driving Technical Change (Review)                                 :Reviews:
-:PROPERTIES:
-:RSS_PERMALINK: posts/driving-technical-change.html
-:ID:       87FC6FA9-B6ED-421B-B190-8F83B9DF3C68
-:PUBDATE:  <2020-02-03 Mon 10:09>
-:END:
-
-#+include: posts/driving-technical-change.org :lines "3-"
-
-* Speeding up tests on CircleCI for a Python Django project :Python:CircleCI:
-:PROPERTIES:
-:RSS_PERMALINK: posts/speed-up-circleci.html
-:ID:       A092F809-3184-48BB-AAB6-7DFE93A2A3FE
-:PUBDATE:  <2019-07-01 Mon 17:49>
-:END:
-
-#+include: posts/speed-up-circleci.org :lines "3-"
