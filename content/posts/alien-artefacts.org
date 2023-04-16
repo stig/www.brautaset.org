@@ -49,9 +49,9 @@ not know which.
 1. *Understand the system*: Invest time in reviewing the code and any
    available documentation, and try to identify the most critical
    parts of the system.
-2. *Develop a comprehensive test suite*: This is essential to ensure
-   that any changes made to the alien artefact do not introduce
-   bugs or unintended consequences.
+2. *Develop a comprehensive [[https://en.wikipedia.org/wiki/Characterization_test][characterisation test]] suite*: This is
+   essential to ensure that changes made to the alien artefact do not
+   introduce bugs or unintended consequences.
 3. *Prioritize changes carefully*: Focus on changes that are necessary
    to maintain the system's functionality, rather than on
    non-essential cosmetic changes.
