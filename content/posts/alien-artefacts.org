@@ -27,7 +27,7 @@ and skill may require multiple attempts to make significant changes to
 an alien artefact.
 
 Alien artefacts are inherently complex due to the intrinsic
-complexity---and often poor defition---of the problem they are
+complexity---and often poor definition---of the problem they are
 designed to solve. They become /legacy/ because they are so hard to
 change that people become loath to even try. One indicator you have
 alien artefact on your hands is an accretion disc of adapters or
