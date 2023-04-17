@@ -122,11 +122,10 @@ maintain it.
 
 * Footnotes
 
-[fn:1] I am not sure where this term comes from. It is possible that
-it is my own invention, but I would not be comfortable claiming that
-with 100% certainty---though a cursory search before writing this post
-did not turn up any relevant prior art. Please send me links if you
-know of any!
+[fn:1] The term likely comes from Jon Eaves' post [[https://joneaves.wordpress.com/2004/05/18/building_alien_artifacts/][Building Alien
+Artifacts]]. My friend [[https://rocketpoweredjetpants.com][Simon Stewart]] kindly pointed me to that after
+reading this post, which is a great outcome IMO: I got to re-discover
+a great post I must have read in the past.
 
 [fn:2] It also asked me to add this sentence to /really drive home/
 how helpful it was.
