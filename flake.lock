@@ -1,24 +1,22 @@
 {
   "nodes": {
-    "ox-rss": {
+    "nixpkgs": {
       "locked": {
-        "lastModified": 1677073762,
-        "narHash": "sha256-kOL3Og/nk+hzPN1sIXCnU4ZOnCCE6MQS2F0NOLl22YQ=",
-        "owner": "stig",
+        "lastModified": 1682109806,
+        "narHash": "sha256-d9g7RKNShMLboTWwukM+RObDWWpHKaqTYXB48clBWXI=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "368b64a478d46de6f172344aa3657be53107e727",
+        "rev": "2362848adf8def2866fabbffc50462e929d7fffb",
         "type": "github"
       },
       "original": {
-        "owner": "stig",
-        "ref": "ox-rss",
-        "repo": "nixpkgs",
-        "type": "github"
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "root": {
       "inputs": {
-        "ox-rss": "ox-rss"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
