@@ -44,7 +44,7 @@ jobs:
           at: ~/blog
       - restore_cache:
           key: v1-lychee
-      - run: nix run .#check-links
+      - run: nix-shell -p lychee --run 'lychee -b _site _site'
       - save_cache:
           key: v1-lychee
           paths: ".lycheecache"

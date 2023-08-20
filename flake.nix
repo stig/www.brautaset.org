@@ -33,10 +33,6 @@
             '';
           };
 
-          check-links = pkgs.writeShellScriptBin "check-links" ''
-            ${pkgs.lychee}/bin/lychee -b _site _site
-          '';
-
           sync-to-s3 = pkgs.writeShellScriptBin "sync-to-s3" ''
             ${pkgs.awscli2}/bin/aws s3 sync \
               ~/blog/_site 's3://www.brautaset.org/' \
