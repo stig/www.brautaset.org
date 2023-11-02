@@ -105,7 +105,7 @@ photo stream, so not suitable for what we need.
     :CUSTOM_ID: smugmug
     :END:
 
--  $60/year [[http://help.smugmug.com/customer/portal/articles/695839-which-account-is-right-for-me-][because we also want video uploads]]. This is cheap-ish, but
+-  $60/year because we also want video uploads. This is cheap-ish, but
    still 2.5x the cost of Flickr.
 -  Appear to offer most of what we want.
 -  We don't have prior experience with it.
