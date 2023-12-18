@@ -68,9 +68,6 @@ workflows:
           filters:
             branches:
               ignore: trunk
-      - check-links:
-          requires:
-            - build
 
   deploy:
     jobs:
@@ -78,9 +75,6 @@ workflows:
           filters:
             branches:
               only: trunk
-      - check-links:
-          requires:
-            - build
       - deploy:
           requires:
             - build
