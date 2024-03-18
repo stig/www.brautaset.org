@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* A Journey from Chaos to Version Control: A Developer's Tale
+:PROPERTIES:
+:RSS_PERMALINK: posts/chaos-to-vcs.html
+:ID:       2760F7D9-0AE0-4A28-B11C-36F20BA7E89C
+:PUBDATE:  2024-03-19 Tue 18:19
+:END:
+#+include: posts/chaos-to-vcs.org::abstract :only-contents t
 * Alien Artefacts
 :PROPERTIES:
 :RSS_PERMALINK: posts/alien-artefacts.html
@@ -76,12 +83,3 @@ time I update the site.
 :END:
 
 #+include: posts/musical-goals.org :lines "3-"
-* Dark Mode                                                           :Hacks:
-:PROPERTIES:
-:RSS_PERMALINK: posts/dark-mode.html
-:ID:       2787CA53-53D8-4EBC-A011-6FA4E6C2A95C
-:PUBDATE:  <2020-02-10 Mon 09:18>
-:END:
-
-#+include: posts/dark-mode.org :lines "3-"
-

@@ -194,6 +194,10 @@ This allows us to get nice-looking output even when Emacs is
 publishing in ~--batch~ mode.
 
 #+begin_src css
+code {
+    background-color: #e6e6e6;
+    font-family: monospace;
+}
 pre {
     border: 1px solid #e6e6e6;
     border-radius: 3px;

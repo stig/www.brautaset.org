@@ -1,0 +1,54 @@
+#+title: A Journey from Chaos to Version Control: A Developer's Tale
+#+date: [2024-03-19]
+#+category: Horror
+#+category: Development
+
+When I started my first programming job in 2003 they did not have version control, also known as VCS. I was horrified, and queried this with the Founder/CEO[fn::This was a tiny startup, so everyone in R&D reported directly to him.]. I was told we did not need VCS, and that was that. For a while.
+
+The usual steps to develop and release features in our product was to:
+
+1. Log in to the shared[fn::Indeed, using a shared login; thereby hangs a tale for another day.] development server
+2. Edit PHP files
+3. Tar up the application directory
+4. FTP the tar file to our "primary" production server
+5. Telnet(!) to our primary production server
+6. Untar the application directory
+7. Edit a few files to fix some hard-coded IP addresses that were different Production compared to Development
+8. Run a script to rsync the application directory to the three "replica" production servers
+
+This, as I'm sure you can appreciate, never caused any problems.
+
+Of course, I jest. It caused all sorts of problems! Some of the main ones:
+
+1. Someone else was halfway through an unrelated change when you copied their work, so that page broke when you deployed it.
+2. Someone else needed to edit the same file as you, so you kept stomping on each other's changes.
+3. You forgot to edit the IP addresses to use the production ones, which broke some pages.
+4. People decided to abandoned a change but forgot to revert their changes from one or more files, which would break those pages on the next time someone deployed.
+5. You forgot to rsync the deployment to the other production servers, so people would only see the updated page 25% of the time.
+6. The CEO liked to tinker with production on the weekend, and would sometimes forget to copy his changes back to dev, so whomever next did a deployment the usual way would blow away his changes. Worse, he would sometimes tinker with the IT infrastructure (which of course was managed by hand) such that without those changes the entire system would break.
+
+
+The last example happened to me a few months into my job, and I realised that the status quo was---despite the protestations of the CEO---unsustainable & unacceptable.
+
+First I removed the need to make any edits to the code when copying to production. I made the code detect whether it was running in production or development, and added a simple =if=-clause to select the correct IP addresses. Low-tech, but it removed a common source of errors.
+
+Next I introduced revision control. I committed the application directory full of PHP files to GNU Arch[fn::CVS didn't support atomic commits, and left CVS folders in the application directory, which I deemed unnacceptable. This might well have been motivated reasoning; perhaps the real reason I chose the upstart GNU Arch was I knew it well and wanted it to succeed, having contributed patches and money towards its development.]. This allowed me to confidently revert my changes if I changed tack. It also allowed me to check what files other folks were changing, since the last time I looked.
+
+The next step was to push the repository to the primary production server so I could use it to deploy. I also got in the habit of logging into the production system every Monday and run =tla diff= to see if the CEO had left any surprises for us. If there were I would copy those back to the dev server so the next deploy would not break our system.
+
+I then created a new release script that would do the update of the application directory on the primary production server and then do the rsync to the secondary servers, to eliminate another source of errors.
+
+At first these changes were something I did for myself, to make /my/ deployments safer. As I gained confidence with the new process I convinced the other developers to use it too. They were delighted that I had removed a few error-prone steps, and the steps I replaced were less likely to cause problems. This was the new procedure:
+
+1. Log in to the shared development server
+2. Edit PHP files
+3. Check in to VCS
+4. Push VCS to production repo
+5. Telnet(!) to our primary production server
+6. Run the =deploy-production.sh= script
+
+The moral of the story is that driving change doesn't have to be complicated or a lot of effort. It can come from the most junior developer on the team. Using a few simple steps I removed a lot of opportunities for manual errors to mess up our deployments.
+
+* Abstract                                                        :noexport:
+
+A true story from my first programming job. When I started that job in 2003 we did not have version control (VCS) for our PHP source code. I was told we did not need it, and that was that. Or was it?
