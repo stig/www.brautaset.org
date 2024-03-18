@@ -3,7 +3,7 @@
 #+category: Horror
 #+category: Development
 
-When I started my first programming job in 2003 they did not have version control, also known as VCS. I was horrified, and queried this with the Founder/CEO[fn::This was a tiny startup, so everyone in R&D reported directly to him.]. I was told we did not need VCS, and that was that. For a while.
+When I started my first programming job in 2003 they did not have version control, also known as VCS. I was horrified, and queried this with the Founder/CEO[fn::This was a tiny startup, so everyone in R&D reported directly to him. Except one. Awkward!]. I was told we did not need VCS, and that was that. For a while.
 
 The usual steps to develop and release features in our product was to:
 
