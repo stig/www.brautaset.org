@@ -23,7 +23,7 @@ Of course, I jest. It caused all sorts of problems! Some of the main ones:
 1. Someone else was halfway through an unrelated change when you copied their work, so that page broke when you deployed it.
 2. Someone else needed to edit the same file as you, so you kept stomping on each other's changes.
 3. You forgot to edit the IP addresses to use the production ones, which broke some pages.
-4. People decided to abandoned a change but forgot to revert their changes from one or more files, which would break those pages on the next time someone deployed.
+4. People would abandon a feature they were working on but forget to revert their changes from one or more files, which would break those pages on the next time someone deployed.
 5. You forgot to rsync the deployment to the other production servers, so people would only see the updated page 25% of the time.
 6. The CEO liked to tinker with production on the weekend, and would sometimes forget to copy his changes back to dev, so whomever next did a deployment the usual way would blow away his changes. Worse, he would sometimes tinker with the IT infrastructure (which of course was managed by hand) such that without those changes the entire system would break.
 
