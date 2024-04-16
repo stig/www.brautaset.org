@@ -13,7 +13,7 @@ The usual steps to develop and release features in our product was to:
 4. FTP the tar file to our "primary" production server
 5. Telnet(!) to our primary production server
 6. Untar the application directory
-7. Edit a few files to fix some hard-coded IP addresses that were different Production compared to Development
+7. Edit a few files to fix some hard-coded IP addresses that differed in Production and Development
 8. Run a script to rsync the application directory to the three "replica" production servers
 
 This, as I'm sure you can appreciate, never caused any problems.
