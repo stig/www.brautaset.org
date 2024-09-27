@@ -28,7 +28,7 @@ book.
 This book is not an easy read. The first part in particular is so
 repetitive and focuses so much on the details that it pretty much fails
 to paint the big picture. Luckily for us, Beck decided to add some
-appendices. The second of these, despite being just over two pages, the
+appendices. The second of these, despite being just over two pages, carries the
 book on its own. It shows how one could arrive at an implementation of a
 Fibonacci routine using TDD. In contrast to the rest of the book, this
 example is short and straight to the point. Halfway through part 1, when
