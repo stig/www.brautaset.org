@@ -1,0 +1,38 @@
+#+title: The YAML Exponent Problem causing chaos in your config files
+#+date: <2025-04-08>
+#+category: Development
+#+category: Horror
+
+It is by now well known that [[https://www.bram.us/2022/01/11/yaml-the-norway-problem/][YAML has a Norway problem]], where the country code ~NO~ is interpreted as boolean ~false~. But did you know about YAML's related implicit conversion of numbers footgun?
+
+Take this list of hex strings: ~[1810, 1910, 1a10, 1b10]~. Parse it with a YAML parser, e.g. Clojure's clj-yaml[fn::Which in turn uses the Java SnakeYAML library.]'s ~parse-string~ and you get:
+
+#+begin_src clojure
+(1810 1910 "1a10" "1b10")
+#+end_src
+
+*The problem.* If a string has only numerical digits, it will be converted to a number.
+
+*But wait! It gets /exponentially/ worse.* The character =e=---which can occur in hex strings---is also legal in numbers, with occasionally hilarious results. Witness: ~[1d10, 1e10, 1e99, 1e999]~, which when run through ~parse-string~, produces
+
+#+begin_src clojure
+("1d10" 1.0E10 1.0E99 ##Inf)
+#+end_src
+
+Of course there are exceptions. There are strict rules about /where/ in numbers =e= can occur, which means that not every string with digits and =e= in it becomes a number. Here are some examples that stay strings: ~[1ee99, e, 10e, e10]~. For these clj-yaml produces
+
+#+begin_src clojure
+("1ee99" "e" "10e" "e10")
+#+end_src
+
+It's all a bit of a mess. Depending on where in a string of 1-9 digits a single ~e~ occurs a hex string can be converted to a number, become infinity, or stay as a string. The latter is probably what you expect, unless you know about the implicit number conversion /and/ have internalised that numbers can be written using exponents.
+
+*Are there other pitfalls?* Yeah, different parsers and languages may not handle edge cases the same.
+
+*So what? What are the consequences?* I encountered an issue where we got an internal error in our system because a hex salt from a YAML config file was interpreted as ~##Inf~, and it broke some later type checking that expected it to be a string. It took me some time of staring at code and config to track down the root cause of that bug.
+
+*Conclusion.* What might you be able to do to avoid this problem? Firstly, avoid using YAML. Doing so is fraught with paper cuts. If you're stuck with YAML, see if your parser allows turning off implicit conversions of strings into numbers. Finally, if you can't easily turn off implicit conversions but control the input, you can avoid the issue by adding explicit quotes around strings, like so: ~['1810', '1910', '1e10', '1e99']~.
+
+* Abstract                                                        :noexport:
+
+It is well known that YAML has a Norway problem, where the country code ~NO~ is interpreted as boolean ~false~. But did you know about YAML's related implicit conversion of numbers footgun?

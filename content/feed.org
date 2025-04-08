@@ -1,7 +1,14 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
-* A Journey from Chaos to Version Control: A Developer's Tale
+* The YAML Exponent Problem causing chaos in your config files :Horror:Development:
+:PROPERTIES:
+:RSS_PERMALINK: posts/chaos-to-vcs.html
+:ID: D21FFE15-81BA-4FCB-9517-16AF58A10B18
+:PUBDATE:  2025-04-08 Tue 18:19
+:END:
+#+include: posts/yaml-exponent-problem.org::abstract :only-contents t
+* A Journey from Chaos to Version Control: A Developer's Tale :Horror:Development:
 :PROPERTIES:
 :RSS_PERMALINK: posts/chaos-to-vcs.html
 :ID:       2760F7D9-0AE0-4A28-B11C-36F20BA7E89C
@@ -75,11 +82,3 @@ time I update the site.
 :PUBDATE:  <2020-10-13 Tue 19:28>
 :END:
 #+include: posts/broken-horses-and-master-branches.org :lines "3-"
-* Musical Goals
-:PROPERTIES:
-:RSS_PERMALINK: posts/musical-goals.html
-:ID:       92C590D8-F1D9-4258-AD9F-C5361E08674C
-:PUBDATE:  <2020-02-15 Sat 14:55>
-:END:
-
-#+include: posts/musical-goals.org :lines "3-"
