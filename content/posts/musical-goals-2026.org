@@ -1,0 +1,72 @@
+#+title: Musical Goals (2026)
+#+date: <2026-01-07>
+#+category: Music
+
+It's been more than five years since my [[file:musical-goals.org][last musical goals post]], where I set some process-oriented goals, in addition to my longer-term outcome-oriented ones. Let's see how I've been faring.
+
+The outcome-oriented goals I had before were:
+
+- Within five years of 2019: be paid to play in a pub, local event, or by busking.
+- In December 2020 I set more specific medium term targets of playing with others regularly, make my own music, and play for others.
+
+
+I really didn't have an idea of how to get there though. I think that's where these  process-oriented goals shine. Here's a reminder of what they were, and I'll discuss my progress below.
+
+- Continue keeping a practice journal
+- Aim for 1 hour dedicated practice a day
+- Regularly record myself playing and listen critically
+- Adapt my practice schedule to keep it fun and relevant
+- Seek out opportunities to make music with other people
+- Try to work songwriting into my regular practice
+
+
+I fell out with using a website to track my progress, and stopped keeping a practice journal for years. However, clearing house recently I found my old paper journal, which contained my old outcome-oriented goals above---and prompted me to write this post.
+
+While I practice almost every day, and some days I practice more than an hour, I don't manage to practice for at least an hour every day, even outside of travels. However, part of that is we're no longer stuck at home due to living through a pandemic, and because I've met people through music and have a more active social life now than I did back then.
+
+I started going to a monthly local acoustic music evening[fn:1] in November 2022. I had no idea what to expect, but it turned out to be a group of people sitting in a circle in a village hall, taking turns playing a song. There was an open bar, and you put a pound in a hat to pay for rent of the venue. Up until then I had primarily focused on practicing playing the guitar. However, I don't enjoy listening to instrumental music, and I didn't want to inflict that on others, so I decided I had to play /and sing/. I had prepared one---wildly ambitious---song. I was too nervous and passed when my first chance came, but it occurred to me that if I didn't have a go now I would probably be too embarrassed to ever come back. So, despite sweating so hard I could barely hold on to my guitar I went for it---and completely butchered Clapton's Layla. My fingers didn't play ball, and I messed up the intro solo. Then I forgot the lyrics. But it didn't matter: the crowd was supportive, knew the words, and  took up singing where I could not; and I managed to muddle through the rest of the song on the guitar.
+
+I didn't love it in the moment, but I loved /having/ done it. And I kept going back, month after month. I learnt to take lyric sheets, and later upgraded to a cheap android device to hold my lyrics and chords. I still can't seem to get the hang of learning lyrics by heart.
+
+There was one fly in the ointment: after singing just 3 songs my throat felt raw. So after a bit of research I started singing lessons in December 2023. I explained that I struggled to find songs I could sing, and thought I had a weird range as I couldn't reach the high notes /nor/ the low notes of many songs. She helped me understand that this is because I have a tenor voice, but most of the songs I tried to sing were originally by baritones. I had previously tried to sing them in the original key, but once I started learning to use a Capo and sing in my range I saw  immediate improvement, despite only a handful of visits. She also thought me to sing from my belly, rather than throat, and warming up my voice. Now I can sing many songs without hurting myself, and I have even had compliments on my singing on occasion. A little knowledge goes a long way!
+
+My wife had been playing the Ukulele for a while, and in February 2024 I finally convinced her to join me at the monthly acoustic music evening. This unlocked a can of worms! Turns out she is a terrific singer, having a lot of choir experience from before we met. She also plays the ukulele. She's also a closet folk music enthusiast, and we went back to the folk music evening the next week. After just a couple months of playing together, and going to an actual Open Mic, she signed us up to play a 90 minute "Tiny Kitchen" gig at Northern Soul Kitchen, in May 2024. I spent two months learning to play 22 jazz songs, and we played our first paid[fn:2] gig for 10 people (including staff) at Northern Soul Kitchen. By August 2024 that year we had recruited a bass player and formed a band, Swefn, and played at the Berwick Food and Beer Festival. Since then we added a drummer, and have played [[https://swefnband.wordpress.com/gigs/][10+ gigs locally]].
+
+Throughout this I have been recording myself. We record our gigs, and rehearsals, and I also record brief videos of myself playing and send these to my guitar teacher on [[https://artistworks.com][ArtistWorks]]. I also record interesting riffs that I chance upon when messing about, to avoid forgetting and  with a view to using them if I am writing songs in the future.
+
+Practicing never feels like a chore. I am mostly practising /songs/ now, rather than technique. But as we get more comfortable with songs we tend to add more technical bits, to spice things up. And then I focus on technique for a bit. I've always struggled  with playing fast, and there are songs I would like to play that I simply cannot, because they're too fast, so I work a bit on speed exercises too. And now I'm back to tracking my progress in my practice journal.
+
+I have regular rehearsals with my band Swefn, and I also play for fun at home with my wife, so I don't go to the acoustic music evening every month any more. But I try to pop by from time to time. I also go to other guitar clubs, that I learnt about through that community, at pubs closer to my house.
+
+While I don't practice songwriting regularly, I wrote and recorded [[https://soundcloud.com/swefnmusic/empty-rooms][one original song]] in January 2025 while attending a songwriting workshop run by [[https://awakemusic.co.uk][Iain Petrie]]. To illustrate just /how/ slow this progress has been, the major elements of that recording were the same elements I referred to in my last post, 5 years ago. Nevertheless, I'm happy with it. And I've had several opportunities to play it live with my band. While I would love to have more original songs under my belt, I don't feel I have a lot of say. And I still very much enjoy playing /other/ people's songs. So I'm not beating myself up about this, and am sure there will be more opportunities at co-writing as I become more embedded in the local music scene.
+
+
+
+I find it interesting how those process-oriented goals helped me achieve my outcome-oriented ones, even though I had forgotten about them! And those process-oriented goals are /still relevant/, which is more than I can say for the outcome-oriented ones. I'm happy with those goals still. They're worked well for me over the last years, even if they've not been front of mind all the time. They get to stay on! But the outcome-oriented goals are outdated, and I need me some new ones. Here's some I have been thinking of.
+
+- Learn Jazz
+- Learn to play Cajon
+- Learn to play Bouzouki
+- Complete Justin's practical music theory course
+- Have an even mix of covers & original songs for Swefn gigs
+
+
+I want to improve my opportunities for joining in with local musicians. I have fallen in with a jazz-loving crowd, and I am taking a Jazz guitar course on ArtistWorks in order to (hopefully) be better able to join in with them. As that might take a while, I've been wondering if I could join in through another path. There's usually a Cajon[fn:3] available at the Open Mic I go to, and people are invited to hop on and join in when others are playing. Except... I don't have the confidence to do so, since I don't know the first thing about it. I do /have/ a Cajon, as we bought one so our drummer didn't need to bring hers. So if I can learn the basics I will have more opportunities to play with people.
+
+Learning to play the Bouzouki is definitively a bit more of a long-term and "out there" goal. I bought an Irish Bouzouki on a bit of a whim, because I picked it up at the music store when I was waiting to pay for a new set of guitar strings and fell in love with its sound. This was just after I had learnt that my wife was a folk enthusiast, which probably paid a part! And I do love it. But I don't play it, because just as I bought it we started a band and I have been too busy learning songs for our gigs to learn the Bouzouki. One day! In the meantime it looks great hanging on my living-room wall.
+
+I bought lifetime access to Justin's [[https://www.justinguitar.com/store/practical-music-theory][practical music theory]] course years ago. I find it requires a lot of painstaking practice, so I am /slowly/ working through it. The idea, again, is that if I can learn the vocabulary musicians use, and how keys and scales relate, I will be better able to join in and jam.
+
+My band Swefn currently only have two original songs, one by me and one by my wife. Eventually we'd love to have more originals, but it's very much a nice-to-have. We still enjoy playing covers!
+
+Hang on for the next instalment, hopefully sometime /before/ the next ice age!
+
+* Footnotes
+
+[fn:3] Box drum.
+[fn:2] Two tubs of coleslaw.
+[fn:1] Like an Open Mic, but without the added complications of PA, amps, and singing into a microphone. (Which is surprisingly hard, it turns out.) It's just a group of people sitting in a room taking turns playing songs. A great way in to playing live music!
+
+* Abstract                                                         :noexport:
+
+It's been more than five years since my last musical goals post, where I set some process-oriented goals, in addition to my longer-term outcome-oriented ones. I share my journey, progress on the old goals, and set some new ones.

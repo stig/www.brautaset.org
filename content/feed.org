@@ -1,6 +1,13 @@
 #+title: Stig's Soapbox RSS Feed
 #+description: My most recent posts
 
+* Musical Goals (2026)
+:PROPERTIES:
+:RSS_PERMALINK: posts/musical-goals-2026.html
+:ID:       42C75808-1046-4D01-9685-8C6A4E22A0E8
+:PUBDATE:  2026-01-08 Thu 19:52
+:END:
+#+include: posts/musical-goals-2026.org::abstract :only-contents t
 * The YAML Exponent Problem causing chaos in your config files :Horror:Development:
 :PROPERTIES:
 :RSS_PERMALINK: posts/chaos-to-vcs.html

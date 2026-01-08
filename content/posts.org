@@ -3,6 +3,8 @@
 
 All my posts, in reverse chronological order.
 
+* [[file:posts/musical-goals-2026.org][Musical Goals (2026)]]         :Music:
+#+include: posts/musical-goals-2026.org::abstract :only-contents t
 * [[file:posts/yaml-exponent-problem.org][The YAML Exponent Problem causing chaos in your config files]] :Horror:Development:
 #+include: posts/yaml-exponent-problem.org::abstract :only-contents t
 * [[file:posts/chaos-to-vcs.org][A Journey from Chaos to Version Control: A Developer's Tale]] :Horror:Development:
