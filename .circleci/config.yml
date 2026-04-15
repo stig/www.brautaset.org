@@ -35,21 +35,7 @@ jobs:
           paths:
             - '_site'
 
-  check-links:
-    executor: nixos
-    steps:
-      - checkout
-      - enable-flakes
-      - attach_workspace:
-          at: ~/blog
-      - restore_cache:
-          key: v1-lychee
-      - run: nix-shell -p lychee --run 'lychee -b _site _site'
-      - save_cache:
-          key: v1-lychee
-          paths: ".lycheecache"
-
-  deploy:
+  upload:
     executor: nixos
     steps:
       - checkout
@@ -60,8 +46,6 @@ jobs:
       - run: nix run .#cf-invalidation
 
 workflows:
-  version: 2
-
   pr:
     jobs:
       - build:
@@ -75,6 +59,6 @@ workflows:
           filters:
             branches:
               only: trunk
-      - deploy:
+      - upload:
           requires:
             - build
